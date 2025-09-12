@@ -113,6 +113,13 @@
         .chart-canvas {
             max-height: 400px;
         }
+        /* Scrollable wrapper for charts with many categories (mobile-friendly) */
+        .chart-scroll {
+            max-height: 380px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
         /* Shadcn Filter Bar - No Box (Integrated as Content) */
         .top-filter-bar {
             background: transparent;
@@ -312,7 +319,7 @@
             }
             
             .stats-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .date-range-display {
@@ -363,6 +370,16 @@
         .boat-detail {
             cursor: pointer;
             transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .boat-detail .boat-arrow {
+            margin-left: auto;
+            color: #666;
+            display: flex;
+            align-items: center;
+            line-height: 1;
         }
         .boat-detail:hover {
             background-color: #e3f2fd !important;
@@ -494,7 +511,9 @@
                 <div class="chart-header">
                     <div class="chart-title" id="boatChartTitle">Top Performing Boats</div>
                 </div>
-                <canvas id="boatChart" class="chart-canvas"></canvas>
+                <div class="chart-scroll">
+                  <canvas id="boatChart" class="chart-canvas"></canvas>
+                </div>
             </div>
 
             <div class="chart-container">
@@ -1050,7 +1069,17 @@
                 charts.boat.destroy();
             }
 
-            const ctx = document.getElementById('boatChart').getContext('2d');
+            const boatCanvasEl = document.getElementById('boatChart');
+            // Dynamically set canvas height based on number of bars so the wrapper can scroll
+            try {
+              const barHeight = 28; // px per bar
+              const padding = 80;   // space for axes/labels
+              const desired = (boatData?.length || 0) * barHeight + padding;
+              // Cap the canvas height so the scroll container handles overflow
+              boatCanvasEl.height = Math.min(Math.max(desired, 200), 1200);
+            } catch (_) { /* no-op */ }
+
+            const ctx = boatCanvasEl.getContext('2d');
             charts.boat = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -1064,6 +1093,7 @@
                     }]
                 },
                 options: {
+                    maintainAspectRatio: false,
                     indexAxis: 'y',
                     responsive: true,
                     plugins: {
@@ -1283,9 +1313,9 @@
                     boatDetailsHtml += `
                         <div class="boat-detail" id="${boatId}" style="margin: 5px 0; padding: 8px; background: white; border-radius: 3px; border-left: 3px solid #2a5298;" 
                              onclick="toggleBoatDetails('${boatId}', '${boatName}', '${date}')">
-                            <strong>${boatName}:</strong> ${data.fish} ${speciesText.toLowerCase()} 
-                            (${data.trips} trip${data.trips !== 1 ? 's' : ''}: ${tripTypesList})
-                            <span style="float: right; color: #666;">▼</span>
+                            <span><strong>${boatName}:</strong> ${data.fish} ${speciesText.toLowerCase()} 
+                            (${data.trips} trip${data.trips !== 1 ? 's' : ''}: ${tripTypesList})</span>
+                            <span class="boat-arrow">▼</span>
                         </div>
                         <div id="${boatId}-details" style="display: none;"></div>
                     `;
@@ -1311,7 +1341,7 @@
         function toggleBoatDetails(boatId, boatName, date) {
             const detailsDiv = document.getElementById(`${boatId}-details`);
             const boatDiv = document.getElementById(boatId);
-            const arrow = boatDiv.querySelector('span[style*="float: right"]');
+            const arrow = boatDiv.querySelector('.boat-arrow');
             
             if (detailsDiv.style.display === 'none') {
                 // Show details
