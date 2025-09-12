@@ -329,18 +329,22 @@
                 padding: 16px;
             }
             
-            
+            /* Two-column mobile layout: (Calendar + Species) share left half, All Boats occupies right half */
+            .top-filter-bar { padding: 16px 0; }
             .filter-container {
-                flex-direction: column;
-                align-items: stretch;
+                display: grid;                 /* override flex on mobile */
+                grid-template-columns: 1fr 1fr; /* 50% / 50% */
+                align-items: start;
                 gap: 12px;
                 padding: 0 16px;
             }
-            .filter-left,
-            .filter-right {
-                width: 100%;
-                flex: none;
+            .filter-left {
+                display: grid;                 /* split left half into two equal columns */
+                grid-template-columns: 1fr 1fr; /* Calendar | Species */
+                gap: 12px;
+                min-width: 0;                  /* allow shrinking without overflow */
             }
+            .filter-right { min-width: 0; }
             .filter-left .filter-item,
             .filter-right .filter-item,
             .filter-right .filter-select,
@@ -350,23 +354,22 @@
                 width: 100%;
             }
             
-            .filter-item {
-                flex-shrink: 0;
-            }
-            
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
             .date-range-display {
-                min-width: 120px;
+                min-width: 0;   /* allow it to fit in half width */
                 font-size: 13px;
             }
             
             .filter-select {
-                min-width: 100px;
+                min-width: 0;   /* prevent forcing overflow */
                 font-size: 13px;
             }
+            
+            /* Place Reset below and align right across both columns */
+            .reset-filters { grid-column: 1 / -1; justify-self: end; }
             /* Chart tiles align to container gutter */
             .chart-container {
                 margin-left: 0;
@@ -562,10 +565,11 @@
                 </div>
             </div>
 
-            <div class="chart-container">
+            <div class="chart-container" id="timeChartContainer">
                 <div class="chart-header">
                     <div class="chart-title" id="timeChartTitle">Daily Fish Catches Over Time</div>
                 </div>
+                <button type="button" id="timeChartClose" class="chart-close" style="display:none;" aria-label="Close">Close</button>
                 <canvas id="timeChart" class="chart-canvas"></canvas>
                 <div id="moonPhaseInfo" style="margin-top: 10px; padding: 10px; background-color: #f5f5f5; border-radius: 5px; display: none;">
                     <strong>Selected Date Info:</strong>
@@ -623,13 +627,14 @@
         }
 
         // Initialize the application
-        async function init() {
+    async function init() {
             try {
                 await loadData();
                 initializeCurrentDateState();
                 setupCalendarEventListeners();
                 calculateMoonPhases();
                 updateNextMoonPhaseBanner();
+                setupTimeChartExpansion();
                 createCharts();
                 updateStats();
                 updateDateRangeDisplay();
@@ -921,6 +926,38 @@
             createTimeChart();
         }
 
+        // Allow expanding the Daily Catches chart to fullscreen on mobile for easier date selection
+        function setupTimeChartExpansion() {
+            const container = document.getElementById('timeChartContainer');
+            const closeBtn = document.getElementById('timeChartClose');
+            if (!container || !closeBtn) return;
+
+            const open = () => {
+                container.classList.add('expanded-time');
+                closeBtn.style.display = 'inline-block';
+                // Give Chart.js a tick to resize
+                setTimeout(() => { try { charts.time && charts.time.resize(); } catch(_){} }, 50);
+            };
+            const close = () => {
+                container.classList.remove('expanded-time');
+                closeBtn.style.display = 'none';
+                setTimeout(() => { try { charts.time && charts.time.resize(); } catch(_){} }, 50);
+            };
+
+            // Click container to open (only if not already expanded)
+            container.addEventListener('click', (e) => {
+                // Don't open if clicking the close button or inside details area
+                if (e.target === closeBtn || e.target.closest('#moonPhaseInfo')) return;
+                if (!container.classList.contains('expanded-time')) open();
+            });
+            closeBtn.addEventListener('click', (e) => { e.stopPropagation(); close(); });
+
+            // Escape key to close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && container.classList.contains('expanded-time')) close();
+            });
+        }
+
         // Update charts when species changes
         function updateCharts() {
             createMoonPhaseChart();
@@ -1093,10 +1130,9 @@
                             .reduce((sum, c) => sum + c.count, 0);
                     }
                     
-                    const landingName = boat.landings ? boat.landings.name : 'Unknown';
-                    
+                    // For the Top Boats tile, show only the boat name (omit landing to prevent truncation)
                     return {
-                        name: `${boat.name} (${landingName})`,
+                        name: `${boat.name}`,
                         trips: boatTrips.length,
                         totalFish: totalFish
                     };
@@ -1277,6 +1313,7 @@
                 },
                 options: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     onClick: (event, elements) => {
                         if (elements.length > 0) {
                             const dataIndex = elements[0].index;
@@ -1320,6 +1357,23 @@
                             title: {
                                 display: true,
                                 text: 'Total Fish Caught'
+                            }
+                        }
+                    },
+                    plugins: {
+                        ...(Chart?.registry?.plugins?.get('zoom') ? { zoom: {
+                            pan: { enabled: true, mode: 'x' },
+                            zoom: { wheel: { enabled: true }, pinch: { enabled: true }, mode: 'x' }
+                        }} : {}),
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function(context) {
+                                    const data = context.parsed;
+                                    const date = sortedDates[context.dataIndex];
+                                    return [`Moon Phase: ${dailyTotals[date].moonPhase}`, 
+                                           `Trips: ${dailyTotals[date].trips}`,
+                                           `Click to see details`];
+                                }
                             }
                         }
                     }
