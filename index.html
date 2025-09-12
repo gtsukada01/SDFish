@@ -1330,6 +1330,11 @@
                                     day: 'MMM dd'
                                 }
                             },
+                            // Clamp to selected date range so it doesn't extend past today
+                            min: currentStartDate ? new Date(currentStartDate + 'T00:00:00') : undefined,
+                            max: currentEndDate ? new Date(currentEndDate + 'T23:59:59') : undefined,
+                            bounds: 'ticks',
+                            ticks: { source: 'data' },
                             title: {
                                 display: true,
                                 text: 'Date'
