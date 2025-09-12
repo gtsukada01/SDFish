@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Diego Fishing Intelligence - Premium Analytics Dashboard</title>
+    <title>SD Fishing - Premium Analytics Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
     <style>
@@ -52,6 +52,15 @@
             font-size: 16px;
             color: hsl(222.2 84% 4.9%);
             text-decoration: none;
+        }
+        .nav-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: hsl(215.4 16.3% 46.9%);
+            font-size: 14px;
+            white-space: nowrap;
         }
         
         
@@ -112,6 +121,7 @@
         
         .chart-canvas {
             max-height: 400px;
+            width: 100% !important; /* ensure full width on mobile */
         }
         /* Scrollable wrapper for charts with many categories (mobile-friendly) */
         .chart-scroll {
@@ -133,6 +143,17 @@
             display: flex;
             align-items: center;
             gap: 16px;
+        }
+        .filter-left,
+        .filter-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 1 1 0;
+            min-width: 0; /* allow flex children to shrink */
+        }
+        .filter-right .filter-select {
+            width: 100%;
         }
         
         .filter-item {
@@ -295,6 +316,7 @@
         
         /* Responsive Design */
         @media (max-width: 768px) {
+            /* Consistent mobile gutter to avoid shifting */
             .nav-container {
                 padding: 12px 16px;
             }
@@ -309,9 +331,23 @@
             
             
             .filter-container {
-                flex-wrap: wrap;
-                gap: 16px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
                 padding: 0 16px;
+            }
+            .filter-left,
+            .filter-right {
+                width: 100%;
+                flex: none;
+            }
+            .filter-left .filter-item,
+            .filter-right .filter-item,
+            .filter-right .filter-select,
+            .date-range-display,
+            #speciesSelect,
+            #boatSelect {
+                width: 100%;
             }
             
             .filter-item {
@@ -330,6 +366,12 @@
             .filter-select {
                 min-width: 100px;
                 font-size: 13px;
+            }
+            /* Chart tiles align to container gutter */
+            .chart-container {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
             }
         }
             border: 1px solid #d1d5db;
@@ -410,59 +452,63 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="#" class="logo">
-                    San Diego Fishing Intelligence
+                    SD Fishing
                 </a>
-                
-                
-                
+                <div class="nav-right">
+                    <span id="nextMoonPhaseBanner" title="Days until next lunar phase">--</span>
+                </div>
             </div>
         </nav>
         
         <!-- Compact Top Filter Bar -->
         <div class="top-filter-bar">
             <div class="filter-container">
-                <div class="filter-item">
-                    <div class="date-range-display" id="dateRangeDisplay" onclick="toggleCalendarExpansion()">
-                        Loading...
-                    </div>
-                    
-                    <!-- Shadcn-style Date Picker Popover -->
-                    <div class="date-picker-popover" id="calendarExpansion">
-                        <div class="date-picker-content">
-                            <!-- Date inputs row -->
-                            <div class="date-picker-inputs">
-                                <div class="input-group">
-                                    <input type="date" id="expandedStartDate" onchange="updateTempDates()" class="date-input">
+                <div class="filter-left">
+                    <div class="filter-item">
+                        <div class="date-range-display" id="dateRangeDisplay" onclick="toggleCalendarExpansion()">
+                            Loading...
+                        </div>
+                        
+                        <!-- Shadcn-style Date Picker Popover -->
+                        <div class="date-picker-popover" id="calendarExpansion">
+                            <div class="date-picker-content">
+                                <!-- Date inputs row -->
+                                <div class="date-picker-inputs">
+                                    <div class="input-group">
+                                        <input type="date" id="expandedStartDate" onchange="updateTempDates()" class="date-input">
+                                    </div>
+                                    <span class="date-separator">to</span>
+                                    <div class="input-group">
+                                        <input type="date" id="expandedEndDate" onchange="updateTempDates()" class="date-input">
+                                    </div>
                                 </div>
-                                <span class="date-separator">to</span>
-                                <div class="input-group">
-                                    <input type="date" id="expandedEndDate" onchange="updateTempDates()" class="date-input">
+                                
+                                <!-- Quick presets -->
+                                <div class="date-presets">
+                                    <button class="preset-btn" onclick="setQuickRange(7)">Last 7 days</button>
+                                    <button class="preset-btn" onclick="setQuickRange(30)">Last 30 days</button>
+                                    <button class="preset-btn" onclick="setQuickRange('month')">This month</button>
+                                    <button class="preset-btn" onclick="setQuickRange('all')">All time</button>
                                 </div>
-                            </div>
-                            
-                            <!-- Quick presets -->
-                            <div class="date-presets">
-                                <button class="preset-btn" onclick="setQuickRange(7)">Last 7 days</button>
-                                <button class="preset-btn" onclick="setQuickRange(30)">Last 30 days</button>
-                                <button class="preset-btn" onclick="setQuickRange('month')">This month</button>
-                                <button class="preset-btn" onclick="setQuickRange('all')">All time</button>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="filter-item">
+                        <select id="speciesSelect" class="filter-select">
+                            <option value="all">All Species</option>
+                        </select>
+                    </div>
                 </div>
-                
-                <div class="filter-item">
-                    <select id="speciesSelect" class="filter-select">
-                        <option value="all">All Species</option>
-                    </select>
+
+                <div class="filter-right">
+                    <div class="filter-item" style="flex:1 1 0; min-width:0;">
+                        <select id="boatSelect" class="filter-select">
+                            <option value="all">All Boats</option>
+                        </select>
+                    </div>
                 </div>
-                
-                <div class="filter-item">
-                    <select id="boatSelect" class="filter-select">
-                        <option value="all">All Boats</option>
-                    </select>
-                </div>
-                
+
                 <button id="resetFilters" class="reset-filters">
                     Reset
                 </button>
@@ -583,6 +629,7 @@
                 initializeCurrentDateState();
                 setupCalendarEventListeners();
                 calculateMoonPhases();
+                updateNextMoonPhaseBanner();
                 createCharts();
                 updateStats();
                 updateDateRangeDisplay();
@@ -610,6 +657,41 @@
             } catch (error) {
                 console.error('Error initializing:', error);
                 showError('Failed to load data: ' + error.message);
+            }
+        }
+
+        // Show "X days till <icon>" for the next lunar phase in the navbar
+        function updateNextMoonPhaseBanner() {
+            try {
+                const SYNODIC_MONTH = 29.530589;
+                const KNOWN_NEW_MOON = new Date('2025-07-24');
+                const now = new Date();
+                const daysSince = (now - KNOWN_NEW_MOON) / (1000 * 60 * 60 * 24);
+                const pos = ((daysSince % SYNODIC_MONTH) + SYNODIC_MONTH) % SYNODIC_MONTH;
+                const phases = [
+                    { pos: 0, name: 'New Moon', icon: '🌑' },
+                    { pos: 2, name: 'Waxing Crescent', icon: '🌒' },
+                    { pos: 7, name: 'First Quarter', icon: '🌓' },
+                    { pos: 9, name: 'Waxing Gibbous', icon: '🌔' },
+                    { pos: 14, name: 'Full Moon', icon: '🌕' },
+                    { pos: 16, name: 'Waning Gibbous', icon: '🌖' },
+                    { pos: 21, name: 'Third Quarter', icon: '🌗' },
+                    { pos: 23, name: 'Waning Crescent', icon: '🌘' },
+                    { pos: SYNODIC_MONTH, name: 'New Moon', icon: '🌑' }
+                ];
+                // Find next boundary after current position
+                let next = phases.find(p => p.pos > pos);
+                if (!next) next = phases[0];
+                let delta = next.pos - pos;
+                if (delta < 0) delta += SYNODIC_MONTH;
+                const days = Math.ceil(delta);
+                const el = document.getElementById('nextMoonPhaseBanner');
+                if (el) {
+                    // Show only the upcoming moon phase icon (no day countdown)
+                    el.innerHTML = `<span class="moon-phase-icon" title="${next.name}">${next.icon}</span>`;
+                }
+            } catch (_) {
+                // ignore
             }
         }
 
