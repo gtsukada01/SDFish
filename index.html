@@ -329,18 +329,18 @@
                 padding: 16px;
             }
             
-            /* Two-column mobile layout: (Calendar + Species) share left half, All Boats occupies right half */
+            /* Three-row mobile layout: Calendar, All Species, All Boats */
             .top-filter-bar { padding: 16px 0; }
             .filter-container {
                 display: grid;                 /* override flex on mobile */
-                grid-template-columns: 1fr 1fr; /* 50% / 50% */
-                align-items: start;
+                grid-template-columns: 1fr;    /* single column stack */
+                align-items: stretch;
                 gap: 12px;
                 padding: 0 16px;
             }
             .filter-left {
-                display: grid;                 /* split left half into two equal columns */
-                grid-template-columns: 1fr 1fr; /* Calendar | Species */
+                display: grid;                 /* stack calendar then species */
+                grid-template-columns: 1fr;
                 gap: 12px;
                 min-width: 0;                  /* allow shrinking without overflow */
             }
@@ -359,13 +359,20 @@
             }
             
             .date-range-display {
-                min-width: 0;   /* allow it to fit in half width */
+                min-width: 0;   /* fit in half width */
                 font-size: 13px;
+                white-space: nowrap;       /* prevent wrapping to 2 rows */
+                overflow: hidden;          /* clip overflow */
+                text-overflow: ellipsis;   /* show … when too long */
+                height: 36px;              /* consistent control height */
+                display: inline-flex;      /* center text vertically */
+                align-items: center;
             }
             
             .filter-select {
                 min-width: 0;   /* prevent forcing overflow */
                 font-size: 13px;
+                height: 36px;   /* match date control height */
             }
             
             /* Place Reset below and align right across both columns */
@@ -1357,23 +1364,6 @@
                             title: {
                                 display: true,
                                 text: 'Total Fish Caught'
-                            }
-                        }
-                    },
-                    plugins: {
-                        ...(Chart?.registry?.plugins?.get('zoom') ? { zoom: {
-                            pan: { enabled: true, mode: 'x' },
-                            zoom: { wheel: { enabled: true }, pinch: { enabled: true }, mode: 'x' }
-                        }} : {}),
-                        tooltip: {
-                            callbacks: {
-                                afterLabel: function(context) {
-                                    const data = context.parsed;
-                                    const date = sortedDates[context.dataIndex];
-                                    return [`Moon Phase: ${dailyTotals[date].moonPhase}`, 
-                                           `Trips: ${dailyTotals[date].trips}`,
-                                           `Click to see details`];
-                                }
                             }
                         }
                     }
