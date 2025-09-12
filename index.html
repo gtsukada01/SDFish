@@ -576,7 +576,6 @@
                 <div class="chart-header">
                     <div class="chart-title" id="timeChartTitle">Daily Fish Catches Over Time</div>
                 </div>
-                <button type="button" id="timeChartClose" class="chart-close" style="display:none;" aria-label="Close">Close</button>
                 <canvas id="timeChart" class="chart-canvas"></canvas>
                 <div id="moonPhaseInfo" style="margin-top: 10px; padding: 10px; background-color: #f5f5f5; border-radius: 5px; display: none;">
                     <strong>Selected Date Info:</strong>
@@ -641,7 +640,6 @@
                 setupCalendarEventListeners();
                 calculateMoonPhases();
                 updateNextMoonPhaseBanner();
-                setupTimeChartExpansion();
                 createCharts();
                 updateStats();
                 updateDateRangeDisplay();
@@ -933,37 +931,7 @@
             createTimeChart();
         }
 
-        // Allow expanding the Daily Catches chart to fullscreen on mobile for easier date selection
-        function setupTimeChartExpansion() {
-            const container = document.getElementById('timeChartContainer');
-            const closeBtn = document.getElementById('timeChartClose');
-            if (!container || !closeBtn) return;
-
-            const open = () => {
-                container.classList.add('expanded-time');
-                closeBtn.style.display = 'inline-block';
-                // Give Chart.js a tick to resize
-                setTimeout(() => { try { charts.time && charts.time.resize(); } catch(_){} }, 50);
-            };
-            const close = () => {
-                container.classList.remove('expanded-time');
-                closeBtn.style.display = 'none';
-                setTimeout(() => { try { charts.time && charts.time.resize(); } catch(_){} }, 50);
-            };
-
-            // Click container to open (only if not already expanded)
-            container.addEventListener('click', (e) => {
-                // Don't open if clicking the close button or inside details area
-                if (e.target === closeBtn || e.target.closest('#moonPhaseInfo')) return;
-                if (!container.classList.contains('expanded-time')) open();
-            });
-            closeBtn.addEventListener('click', (e) => { e.stopPropagation(); close(); });
-
-            // Escape key to close
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && container.classList.contains('expanded-time')) close();
-            });
-        }
+        // Removed mobile fullscreen expansion for time chart
 
         // Update charts when species changes
         function updateCharts() {
@@ -1305,7 +1273,9 @@
                 timeTitleElement.textContent = chartTitle;
             }
 
-            const ctx = document.getElementById('timeChart').getContext('2d');
+            const timeCanvas = document.getElementById('timeChart');
+            try { timeCanvas.height = 320; } catch(_) {}
+            const ctx = timeCanvas.getContext('2d');
             charts.time = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -1733,8 +1703,8 @@
             
             // Format dates for input fields (YYYY-MM-DD)
             const formatDate = (date) => date.toISOString().split('T')[0];
-            
-            // But ensure we don't go beyond available data range
+
+            // Ensure we don't go beyond available data range
             if (allTrips && allTrips.length > 0) {
                 const availableDates = allTrips.map(t => t.trip_date).sort();
                 const earliestAvailable = availableDates[0];
@@ -1749,6 +1719,21 @@
                 
                 document.getElementById('expandedStartDate').value = finalStart;
                 document.getElementById('expandedEndDate').value = finalEnd;
+
+                // Apply immediately
+                currentStartDate = finalStart;
+                currentEndDate = finalEnd;
+                updateDateRangeDisplay();
+                applyAllFilters();
+
+                // Close the popover if open
+                const expansion = document.getElementById('calendarExpansion');
+                const display = document.getElementById('dateRangeDisplay');
+                if (typeof calendarExpanded !== 'undefined' && calendarExpanded && expansion && display) {
+                    expansion.classList.remove('expanded');
+                    display.classList.remove('expanded');
+                    calendarExpanded = false;
+                }
             }
         }
         
@@ -1779,49 +1764,34 @@
         let currentEndDate = '';
         
         // Initialize current date state when data loads
+        // Default to Year-To-Date: Jan 1 of current year through today,
+        // clamped to available data range.
         function initializeCurrentDateState() {
             if (allTrips && allTrips.length > 0) {
                 const dates = allTrips.map(t => t.trip_date).sort();
-                currentStartDate = dates[0];
-                currentEndDate = dates[dates.length - 1];
+                const earliestAvailable = dates[0];
+                const latestAvailable = dates[dates.length - 1];
+
+                const today = new Date();
+                const yearStart = new Date(today.getFullYear(), 0, 1);
+                const fmt = (d) => {
+                    const y = d.getFullYear();
+                    const m = String(d.getMonth() + 1).padStart(2, '0');
+                    const day = String(d.getDate()).padStart(2, '0');
+                    return `${y}-${m}-${day}`;
+                };
+                const yearStartStr = fmt(yearStart);
+                const todayStr = fmt(today);
+
+                // Clamp to available data
+                currentStartDate = yearStartStr < earliestAvailable ? earliestAvailable : yearStartStr;
+                currentEndDate = todayStr > latestAvailable ? latestAvailable : todayStr;
             }
         }
         
-        // Apply all filters with current state
+        // Apply all filters with current state (delegate to unified updateAllCharts)
         function applyAllFilters() {
-            if (!allTrips || allTrips.length === 0) return;
-            
-            // Start with all trips
-            let filtered = [...allTrips];
-            
-            // Apply date range filter
-            if (currentStartDate && currentEndDate) {
-                filtered = filtered.filter(trip => 
-                    trip.trip_date >= currentStartDate && trip.trip_date <= currentEndDate
-                );
-            }
-            
-            // Apply species filter
-            const speciesFilter = document.getElementById('speciesSelect').value;
-            if (speciesFilter !== 'all') {
-                filtered = filtered.filter(trip => {
-                    // Check if any catch in this trip matches the selected species
-                    return trip.catches && trip.catches.some(c => c.species === speciesFilter);
-                });
-            }
-            
-            // Apply boat filter
-            const boatFilter = document.getElementById('boatSelect').value;
-            if (boatFilter !== 'all') {
-                filtered = filtered.filter(trip => trip.boat_name === boatFilter);
-            }
-            
-            // Update global filtered trips
-            filteredTrips = filtered;
-            
-            // Update all displays
-            updateStats();
-            updateCharts();
+            updateAllCharts();
         }
         
         // Update date range display text
