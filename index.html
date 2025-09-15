@@ -332,16 +332,16 @@
             .nav-container {
                 padding: 12px 16px;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .container {
                 padding: 16px;
             }
-            
-            /* Three-row mobile layout: Calendar, All Species, All Boats */
+
+            /* Three-row mobile layout: Calendar, Species+Duration, All Boats */
             .top-filter-bar { padding: 16px 0; }
             .filter-container {
                 display: grid;                 /* override flex on mobile */
@@ -351,13 +351,30 @@
                 padding: 0 16px;
             }
             .filter-left {
-                display: grid;                 /* stack calendar then species */
+                display: grid;                 /* grid for calendar and filters */
                 grid-template-columns: 1fr;
                 gap: 12px;
                 min-width: 0;                  /* allow shrinking without overflow */
             }
+
+            /* Make species and duration sit side by side on mobile */
+            .filter-left .filter-item:nth-child(2),
+            .filter-left .filter-item:nth-child(3) {
+                display: inline-block;
+                width: calc(50% - 6px);       /* Half width minus gap */
+            }
+            .filter-left .filter-item:nth-child(2) {
+                margin-right: 12px;           /* Gap between species and duration */
+            }
+            /* Ensure select elements take full width of their containers */
+            .filter-left .filter-item:nth-child(2) .filter-select,
+            .filter-left .filter-item:nth-child(3) .filter-select {
+                width: 100%;
+                min-width: 0;
+            }
+
             .filter-right { min-width: 0; }
-            .filter-left .filter-item,
+            .filter-left .filter-item:first-child,
             .filter-right .filter-item,
             .filter-right .filter-select,
             .date-range-display,
@@ -523,7 +540,7 @@
                     </div>
 
                     <div class="filter-item">
-                        <select id="durationSelect" class="filter-select" style="min-width: 150px;">
+                        <select id="durationSelect" class="filter-select">
                             <option value="all">All Durations</option>
                         </select>
                     </div>
