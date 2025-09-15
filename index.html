@@ -232,10 +232,11 @@
             border: 1px solid hsl(214.3 31.8% 91.4%);
             color: hsl(215.4 16.3% 46.9%);
             border-radius: 6px;
-            padding: 8px 16px;
+            padding: 12px 20px;  /* Increased padding for better touch target */
             font-size: 14px;
             cursor: pointer;
             transition: all 0.2s;
+            min-height: 44px;  /* Mobile touch target minimum */
         }
         
         .reset-filters:hover {
@@ -273,14 +274,16 @@
         .date-picker-inputs {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;  /* Increased gap from 8px to 12px */
             margin-bottom: 12px;
+            padding: 0 2px;  /* Add small padding to prevent edge clipping */
         }
-        
+
         .input-group {
             flex: 1;
+            min-width: 0;  /* Allow shrinking */
         }
-        
+
         .date-input {
             width: 100%;
             height: 36px;
@@ -291,17 +294,18 @@
             background: white;
             transition: border-color 0.2s;
         }
-        
+
         .date-input:focus {
             outline: none;
             border-color: hsl(221.2 83.2% 53.3%);
             box-shadow: 0 0 0 2px hsl(221.2 83.2% 53.3% / 0.2);
         }
-        
+
         .date-separator {
             font-size: 14px;
             color: hsl(215.4 16.3% 46.9%);
-            padding: 0 4px;
+            padding: 0 2px;  /* Reduced padding from 4px to 2px */
+            flex-shrink: 0;  /* Prevent "to" text from shrinking */
         }
         
         .date-presets {
@@ -311,8 +315,8 @@
         }
         
         .preset-btn {
-            padding: 8px 12px;
-            font-size: 13px;
+            padding: 12px 12px;  /* Increased vertical padding for 44px height */
+            font-size: 14px;  /* Slightly larger for better readability */
             border: none;
             background: transparent;
             color: hsl(222.2 84% 4.9%);
@@ -320,8 +324,9 @@
             cursor: pointer;
             transition: background-color 0.2s;
             text-align: left;
+            min-height: 44px;  /* Mobile touch target minimum */
         }
-        
+
         .preset-btn:hover {
             background: hsl(210 40% 98%);
         }
@@ -391,19 +396,21 @@
             
             .date-range-display {
                 min-width: 0;   /* fit in half width */
-                font-size: 13px;
+                font-size: 16px;  /* Increased for better readability */
                 white-space: nowrap;       /* prevent wrapping to 2 rows */
                 overflow: hidden;          /* clip overflow */
                 text-overflow: ellipsis;   /* show … when too long */
-                height: 36px;              /* consistent control height */
+                height: 44px;              /* Mobile touch target minimum */
                 display: inline-flex;      /* center text vertically */
                 align-items: center;
+                padding: 10px 12px;  /* Better touch padding */
             }
             
             .filter-select {
                 min-width: 0;   /* prevent forcing overflow */
-                font-size: 13px;
-                height: 36px;   /* match date control height */
+                font-size: 16px;   /* Prevent iOS zoom - increased from 13px */
+                height: 44px;   /* Mobile touch target minimum - increased from 36px */
+                padding: 10px 12px;  /* Better touch padding */
             }
             
             /* Place Reset below and align right across both columns */
@@ -413,6 +420,32 @@
                 margin-left: 0;
                 margin-right: 0;
                 width: 100%;
+            }
+
+            /* Date picker adjustments for mobile */
+            .date-picker-popover {
+                left: 8px;
+                right: 8px;
+                width: auto;
+            }
+
+            .date-picker-content {
+                padding: 10px;
+            }
+
+            .date-picker-inputs {
+                gap: 10px;  /* Slightly smaller gap on mobile */
+                padding: 0 4px;  /* More padding to prevent border clipping */
+            }
+
+            .date-input {
+                font-size: 16px;  /* Prevent zoom on iOS */
+                padding: 10px 12px;  /* Better touch padding */
+                height: 44px;  /* Mobile touch target minimum */
+            }
+
+            .date-separator {
+                padding: 0 4px;  /* More spacing around "to" on mobile */
             }
         }
             border: 1px solid #d1d5db;
