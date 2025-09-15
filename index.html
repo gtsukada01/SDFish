@@ -150,7 +150,13 @@
             align-items: center;
             gap: 16px;
         }
-        .filter-left,
+        .filter-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex: 0 1 auto;
+            min-width: 0; /* allow flex children to shrink */
+        }
         .filter-right {
             display: flex;
             align-items: center;
@@ -515,6 +521,12 @@
                             <option value="all">All Species</option>
                         </select>
                     </div>
+
+                    <div class="filter-item">
+                        <select id="durationSelect" class="filter-select" style="min-width: 150px;">
+                            <option value="all">All Durations</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="filter-right">
@@ -624,14 +636,10 @@
                 if (wholeMatch) return parseFloat(wholeMatch[1]);
             }
             
-            // Handle special cases
+            // Handle special cases (aligned with canonical rules)
             if (durationLower.includes('full day')) return 1.0;
-            if (durationLower.includes('overnight')) return 1.5;
+            if (durationLower.includes('overnight')) return 1.0; // Overnight treated as 1.0 day for analytics
             if (durationLower.includes('twilight')) return 0.25;
-            
-            // Handle hour-based trips
-            const hourMatch = durationLower.match(/(\d+)\s*hour/);
-            if (hourMatch) return parseInt(hourMatch[1]) / 24.0;
             
             // Default fallback
             console.warn(`Could not parse duration: "${duration}" - defaulting to 1 day`);
@@ -799,6 +807,31 @@
                 speciesSelect.appendChild(option);
             });
 
+            // Get unique trip durations and populate duration selector
+            const allDurations = [...new Set(allTrips.map(t => t.trip_duration).filter(d => d))].sort((a, b) => {
+                // Custom sort order for trip durations
+                const order = [
+                    '1/2 Day AM', '1/2 Day PM', '1/2 Day Twilight',
+                    '3/4 Day',
+                    'Full Day', 'Full Day (Local)', 'Full Day Offshore', 'Full Day Coronado Islands',
+                    'Overnight',
+                    '1.5 Day', '2 Day', '2.5 Day', '3 Day', '3.5 Day', '4 Day', '4.5 Day', '5 Day', '5.5 Day'
+                ];
+                const aIndex = order.indexOf(a);
+                const bIndex = order.indexOf(b);
+                if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+                if (aIndex === -1) return 1;
+                if (bIndex === -1) return -1;
+                return aIndex - bIndex;
+            });
+            const durationSelect = document.getElementById('durationSelect');
+            allDurations.forEach(duration => {
+                const option = document.createElement('option');
+                option.value = duration;
+                option.textContent = duration;
+                durationSelect.appendChild(option);
+            });
+
             // Initialize date range inputs
             initializeDateInputs();
             
@@ -815,6 +848,7 @@
             // Event listeners are now set up in initializeDateInputs()
             speciesSelect.addEventListener('change', updateCharts);
             boatSelect.addEventListener('change', updateAllCharts);
+            durationSelect.addEventListener('change', updateAllCharts);
         }
 
         // Calculate moon phases for each trip
@@ -897,10 +931,11 @@
         function getFilteredData() {
             const selectedSpecies = document.getElementById('speciesSelect').value;
             const selectedBoat = document.getElementById('boatSelect').value;
-            
+            const selectedDuration = document.getElementById('durationSelect').value;
+
             let filteredTrips = allTrips;
             let filteredCatches = allCatches;
-            
+
             // Filter by date range using current state variables
             if (currentStartDate && currentEndDate) {
                 filteredTrips = filteredTrips.filter(trip => {
@@ -909,7 +944,14 @@
                 const selectedDateTripIds = filteredTrips.map(trip => trip.id);
                 filteredCatches = filteredCatches.filter(c => selectedDateTripIds.includes(c.trip_id));
             }
-            
+
+            // Filter by duration if selected
+            if (selectedDuration !== 'all') {
+                filteredTrips = filteredTrips.filter(trip => trip.trip_duration === selectedDuration);
+                const selectedDurationTripIds = filteredTrips.map(trip => trip.id);
+                filteredCatches = filteredCatches.filter(c => selectedDurationTripIds.includes(c.trip_id));
+            }
+
             // Filter by boat if selected
             if (selectedBoat !== 'all') {
                 filteredTrips = filteredTrips.filter(trip => trip.boat_id == selectedBoat);
@@ -1895,9 +1937,12 @@
             
             // Reset species
             document.getElementById('speciesSelect').value = 'all';
-            
+
             // Reset boat
             document.getElementById('boatSelect').value = 'all';
+
+            // Reset duration
+            document.getElementById('durationSelect').value = 'all';
             
             // Apply all filters with reset values
             applyAllFilters();
