@@ -351,34 +351,36 @@
                 padding: 0 16px;
             }
             .filter-left {
-                display: grid;                 /* grid for calendar and filters */
-                grid-template-columns: 1fr;
+                display: flex;                 /* Use flexbox for better control */
+                flex-wrap: wrap;              /* Allow wrapping */
                 gap: 12px;
                 min-width: 0;                  /* allow shrinking without overflow */
+            }
+
+            /* Calendar takes full width */
+            .filter-left .filter-item:first-child {
+                width: 100%;
             }
 
             /* Make species and duration sit side by side on mobile */
             .filter-left .filter-item:nth-child(2),
             .filter-left .filter-item:nth-child(3) {
-                display: inline-block;
-                width: calc(50% - 6px);       /* Half width minus gap */
+                flex: 1 1 calc(50% - 6px);    /* Each takes half width minus gap */
+                min-width: 0;
             }
-            .filter-left .filter-item:nth-child(2) {
-                margin-right: 12px;           /* Gap between species and duration */
-            }
+
             /* Ensure select elements take full width of their containers */
-            .filter-left .filter-item:nth-child(2) .filter-select,
-            .filter-left .filter-item:nth-child(3) .filter-select {
+            .filter-left .filter-item .filter-select {
                 width: 100%;
                 min-width: 0;
             }
 
             .filter-right { min-width: 0; }
-            .filter-left .filter-item:first-child,
+
+            /* Only date and boat get full width */
             .filter-right .filter-item,
             .filter-right .filter-select,
             .date-range-display,
-            #speciesSelect,
             #boatSelect {
                 width: 100%;
             }
