@@ -268,15 +268,15 @@
         }
         
         .date-picker-content {
-            padding: 12px;
+            padding: 16px;  /* Uniform padding all around */
         }
-        
+
         .date-picker-inputs {
             display: flex;
             align-items: center;
-            gap: 12px;  /* Increased gap from 8px to 12px */
+            gap: 8px;  /* Smaller gap for tighter spacing */
             margin-bottom: 12px;
-            padding: 0 2px;  /* Add small padding to prevent edge clipping */
+            padding: 0;  /* Remove extra padding - let parent handle it */
         }
 
         .input-group {
@@ -304,10 +304,11 @@
         .date-separator {
             font-size: 14px;
             color: hsl(215.4 16.3% 46.9%);
-            padding: 0 2px;  /* Reduced padding from 4px to 2px */
+            padding: 0 8px;  /* Equal padding on both sides for centering */
             flex-shrink: 0;  /* Prevent "to" text from shrinking */
+            white-space: nowrap;  /* Prevent text wrapping */
         }
-        
+
         .date-presets {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -430,12 +431,12 @@
             }
 
             .date-picker-content {
-                padding: 12px 14px;  /* More padding on mobile for edge spacing */
+                padding: 16px;  /* Consistent padding on mobile too */
             }
 
             .date-picker-inputs {
-                gap: 16px;  /* Increased gap to prevent overlap with "to" */
-                padding: 0 8px;  /* More padding to prevent container edge clipping */
+                gap: 8px;  /* Keep same gap as desktop for consistency */
+                padding: 0;  /* No extra padding - parent handles it */
             }
 
             .date-input {
@@ -445,15 +446,15 @@
             }
 
             .date-separator {
-                padding: 0 8px;  /* More spacing around "to" on mobile */
+                padding: 0 8px;  /* Equal spacing around "to" on mobile */
                 flex-shrink: 0;  /* Prevent shrinking */
                 white-space: nowrap;
             }
 
             /* Ensure date inputs don't overflow */
             .date-picker-inputs .input-group {
-                flex: 1 1 40%;  /* Limit width to prevent overflow */
-                max-width: calc(50% - 20px);  /* Account for gap and separator */
+                flex: 1 1 45%;  /* Equal space for both inputs */
+                max-width: calc(50% - 12px);  /* Account for gap and separator */
             }
         }
             border: 1px solid #d1d5db;
@@ -1457,10 +1458,15 @@
                                     day: 'MMM dd'
                                 }
                             },
-                            // Clamp to selected date range so it doesn't extend past today
-                            min: currentStartDate ? new Date(currentStartDate + 'T00:00:00') : undefined,
-                            max: currentEndDate ? new Date(currentEndDate + 'T23:59:59') : undefined,
-                            bounds: 'ticks',
+                            // When a specific boat is selected, adjust axis to actual data range
+                            // Otherwise use the global date range filter
+                            min: selectedBoat !== 'all' && sortedDates.length > 0
+                                ? new Date(sortedDates[0] + 'T00:00:00')
+                                : (currentStartDate ? new Date(currentStartDate + 'T00:00:00') : undefined),
+                            max: selectedBoat !== 'all' && sortedDates.length > 0
+                                ? new Date(sortedDates[sortedDates.length - 1] + 'T23:59:59')
+                                : (currentEndDate ? new Date(currentEndDate + 'T23:59:59') : undefined),
+                            bounds: 'data',  // Changed from 'ticks' to 'data' for better fit
                             ticks: { source: 'data' },
                             title: {
                                 display: true,
