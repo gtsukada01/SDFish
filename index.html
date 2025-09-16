@@ -430,12 +430,12 @@
             }
 
             .date-picker-content {
-                padding: 10px;
+                padding: 12px 14px;  /* More padding on mobile for edge spacing */
             }
 
             .date-picker-inputs {
-                gap: 10px;  /* Slightly smaller gap on mobile */
-                padding: 0 4px;  /* More padding to prevent border clipping */
+                gap: 16px;  /* Increased gap to prevent overlap with "to" */
+                padding: 0 8px;  /* More padding to prevent container edge clipping */
             }
 
             .date-input {
@@ -445,7 +445,15 @@
             }
 
             .date-separator {
-                padding: 0 4px;  /* More spacing around "to" on mobile */
+                padding: 0 8px;  /* More spacing around "to" on mobile */
+                flex-shrink: 0;  /* Prevent shrinking */
+                white-space: nowrap;
+            }
+
+            /* Ensure date inputs don't overflow */
+            .date-picker-inputs .input-group {
+                flex: 1 1 40%;  /* Limit width to prevent overflow */
+                max-width: calc(50% - 20px);  /* Account for gap and separator */
             }
         }
             border: 1px solid #d1d5db;
@@ -1185,10 +1193,35 @@
 
         // Create boat analysis chart showing top boats by total fish caught
         function createBoatChart(selectedBoatId = 'all') {
+            // Get the current boat selection
+            const selectedBoat = document.getElementById('boatSelect').value;
+
+            // If a specific boat is selected, hide the chart and return
+            if (selectedBoat !== 'all') {
+                // Destroy existing chart if it exists
+                if (charts.boat) {
+                    charts.boat.destroy();
+                    charts.boat = null;
+                }
+
+                // Hide the entire chart container
+                const chartContainer = document.getElementById('boatChart').closest('.chart-container');
+                if (chartContainer) {
+                    chartContainer.style.display = 'none';
+                }
+                return;
+            }
+
+            // Show the chart container if it was hidden
+            const chartContainer = document.getElementById('boatChart').closest('.chart-container');
+            if (chartContainer) {
+                chartContainer.style.display = 'block';
+            }
+
             const filteredData = getFilteredData();
             const selectedSpecies = document.getElementById('speciesSelect').value;
             let boatData;
-            
+
             if (selectedBoatId === 'all') {
                 // Show top boats by total fish caught (simplified)
                 boatData = allBoats.map(boat => {
