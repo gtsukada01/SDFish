@@ -206,7 +206,7 @@
             background: hsl(0 0% 100%);
             border: 1px solid hsl(214.3 31.8% 91.4%);
             border-radius: 6px;
-            padding: 8px 32px 8px 12px;
+            padding: 8px 36px 8px 12px;
             font-size: 14px;
             color: hsl(222.2 84% 4.9%);
             cursor: pointer;
@@ -214,7 +214,7 @@
             transition: border-color 0.2s;
             background-image: url("data:image/svg+xml,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
             background-repeat: no-repeat;
-            background-position: right 12px center;
+            background-position: right 16px center;
             background-size: 12px;
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -411,7 +411,8 @@
                 min-width: 0;   /* prevent forcing overflow */
                 font-size: 16px;   /* Prevent iOS zoom - increased from 13px */
                 height: 44px;   /* Mobile touch target minimum - increased from 36px */
-                padding: 10px 12px;  /* Better touch padding */
+                padding: 10px 36px 10px 12px;  /* Better touch padding with room for chevron */
+                background-position: right 16px center;  /* Ensure chevron position is consistent */
             }
             
             /* Place Reset below and align right across both columns */
