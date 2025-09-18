@@ -287,12 +287,34 @@
         .date-input {
             width: 100%;
             height: 36px;
-            padding: 8px 12px;
+            padding: 8px 36px 8px 12px;
             border: 1px solid hsl(214.3 31.8% 91.4%);
             border-radius: 4px;
             font-size: 14px;
             background: white;
             transition: border-color 0.2s;
+            /* Add consistent chevron like filter-select */
+            background-image: url("data:image/svg+xml,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 12px;
+            /* Hide browser's default calendar icon */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .date-input::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            width: 36px;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .date-input::-webkit-inner-spin-button {
+            display: none;
         }
 
         .date-input:focus {
@@ -442,7 +464,7 @@
 
             .date-input {
                 font-size: 16px;  /* Prevent zoom on iOS */
-                padding: 10px 12px;  /* Better touch padding */
+                padding: 10px 36px 10px 12px;  /* Better touch padding with room for chevron */
                 height: 44px;  /* Mobile touch target minimum */
             }
 
@@ -502,10 +524,16 @@
         }
         .boat-detail .boat-arrow {
             margin-left: auto;
-            color: #666;
+            width: 12px;
+            height: 12px;
             display: flex;
             align-items: center;
             line-height: 1;
+        }
+
+        .boat-arrow svg {
+            width: 100%;
+            height: 100%;
         }
         .boat-detail:hover {
             background-color: #e3f2fd !important;
@@ -1556,7 +1584,11 @@
                              onclick="toggleBoatDetails('${boatId}', '${boatName}', '${date}')">
                             <span><strong>${boatName}:</strong> ${data.fish} ${speciesText.toLowerCase()} 
                             (${data.trips} trip${data.trips !== 1 ? 's' : ''}: ${tripTypesList})</span>
-                            <span class="boat-arrow">▼</span>
+                            <span class="boat-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5 5L9 1" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                         </div>
                         <div id="${boatId}-details" style="display: none;"></div>
                     `;
@@ -1671,12 +1703,16 @@
                 detailsDiv.innerHTML = detailsHtml;
                 detailsDiv.style.display = 'block';
                 boatDiv.classList.add('boat-expanded');
-                arrow.innerHTML = '▲';
+                arrow.innerHTML = `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 5L5 1L1 5" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
             } else {
                 // Hide details
                 detailsDiv.style.display = 'none';
                 boatDiv.classList.remove('boat-expanded');
-                arrow.innerHTML = '▼';
+                arrow.innerHTML = `<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`;
             }
         }
 
