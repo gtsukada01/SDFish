@@ -147,8 +147,16 @@
             margin: 0 auto;
             padding: 0 16px;
             display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .filter-row {
+            display: flex;
             align-items: center;
             gap: 16px;
+            flex-wrap: wrap;
+            width: 100%;
         }
         .filter-left {
             display: flex;
@@ -227,21 +235,64 @@
             box-shadow: 0 0 0 2px hsl(221.2 83.2% 53.3% / 0.2);
         }
         
-        .reset-filters {
-            background: hsl(0 0% 100%);
+        .active-filters-row {
+            display: none;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 8px 12px;
             border: 1px solid hsl(214.3 31.8% 91.4%);
+            border-radius: 8px;
+            background: hsl(210 40% 96%);
+            font-size: 13px;
             color: hsl(215.4 16.3% 46.9%);
-            border-radius: 6px;
-            padding: 12px 20px;  /* Increased padding for better touch target */
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            min-height: 44px;  /* Mobile touch target minimum */
+            transition: opacity 0.2s ease;
+            width: 100%;
         }
-        
-        .reset-filters:hover {
+
+        .active-filters-row.visible {
+            display: flex;
+        }
+
+        .filter-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            border: none;
+            background: hsl(214.3 31.8% 91.4%);
+            color: hsl(215.4 16.3% 35%);
+            font-size: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+            min-height: 32px;
+        }
+
+        .filter-chip:hover,
+        .filter-chip:focus-visible {
             background: hsl(210 40% 98%);
             color: hsl(222.2 84% 4.9%);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.25);
+        }
+
+        .filter-chip .chip-dismiss {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .filter-chip.clear-all {
+            background: transparent;
+            border: 1px dashed hsl(214.3 31.8% 85%);
+            color: hsl(215.4 16.3% 35%);
+        }
+
+        .filter-chip.clear-all:hover,
+        .filter-chip.clear-all:focus-visible {
+            background: hsl(210 40% 98%);
+            border-color: hsl(214.3 31.8% 70%);
         }
         
         /* Shadcn-style Date Picker Popover */
@@ -372,11 +423,17 @@
             /* Three-row mobile layout: Calendar, Species+Duration, All Boats */
             .top-filter-bar { padding: 16px 0; }
             .filter-container {
-                display: grid;                 /* override flex on mobile */
-                grid-template-columns: 1fr;    /* single column stack */
+                padding: 0 16px;
+            }
+
+            .filter-row {
+                flex-direction: column;
                 align-items: stretch;
                 gap: 12px;
-                padding: 0 16px;
+            }
+
+            .active-filters-row {
+                margin: 0;
             }
             .filter-left {
                 display: flex;                 /* Use flexbox for better control */
@@ -575,64 +632,71 @@
         <!-- Compact Top Filter Bar -->
         <div class="top-filter-bar">
             <div class="filter-container">
-                <div class="filter-left">
-                    <div class="filter-item">
-                        <div class="date-range-display" id="dateRangeDisplay" onclick="toggleCalendarExpansion()">
-                            Loading...
-                        </div>
-                        
-                        <!-- Shadcn-style Date Picker Popover -->
-                        <div class="date-picker-popover" id="calendarExpansion">
-                            <div class="date-picker-content">
-                                <!-- Date inputs row -->
-                                <div class="date-picker-inputs">
-                                    <div class="input-group">
-                                        <input type="date" id="expandedStartDate" onchange="updateTempDates()" class="date-input">
+                <div class="filter-row">
+                    <div class="filter-left">
+                        <div class="filter-item">
+                            <div class="date-range-display" id="dateRangeDisplay" onclick="toggleCalendarExpansion()">
+                                Loading...
+                            </div>
+                            
+                            <!-- Shadcn-style Date Picker Popover -->
+                            <div class="date-picker-popover" id="calendarExpansion">
+                                <div class="date-picker-content">
+                                    <!-- Date inputs row -->
+                                    <div class="date-picker-inputs">
+                                        <div class="input-group">
+                                            <input type="date" id="expandedStartDate" onchange="updateTempDates()" class="date-input">
+                                        </div>
+                                        <span class="date-separator">to</span>
+                                        <div class="input-group">
+                                            <input type="date" id="expandedEndDate" onchange="updateTempDates()" class="date-input">
+                                        </div>
                                     </div>
-                                    <span class="date-separator">to</span>
-                                    <div class="input-group">
-                                        <input type="date" id="expandedEndDate" onchange="updateTempDates()" class="date-input">
+                                    
+                                    <!-- Quick presets -->
+                                    <div class="date-presets">
+                                        <button class="preset-btn" onclick="setQuickRange(7)">Last 7 days</button>
+                                        <button class="preset-btn" onclick="setQuickRange(30)">Last 30 days</button>
+                                        <button class="preset-btn" onclick="setQuickRange('month')">This month</button>
+                                        <button class="preset-btn" onclick="setQuickRange('all')">All time</button>
                                     </div>
-                                </div>
-                                
-                                <!-- Quick presets -->
-                                <div class="date-presets">
-                                    <button class="preset-btn" onclick="setQuickRange(7)">Last 7 days</button>
-                                    <button class="preset-btn" onclick="setQuickRange(30)">Last 30 days</button>
-                                    <button class="preset-btn" onclick="setQuickRange('month')">This month</button>
-                                    <button class="preset-btn" onclick="setQuickRange('all')">All time</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="filter-item">
-                        <select id="speciesSelect" class="filter-select">
-                            <option value="all">All Species</option>
-                        </select>
+                        
+                        <div class="filter-item">
+                            <select id="speciesSelect" class="filter-select">
+                                <option value="all">All Species</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-item">
+                            <select id="durationSelect" class="filter-select">
+                                <option value="all">All Durations</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="filter-item">
-                        <select id="durationSelect" class="filter-select">
-                            <option value="all">All Durations</option>
-                        </select>
+                    <div class="filter-right">
+                        <div class="filter-item" style="flex:1 1 0; min-width:0;">
+                            <select id="boatSelect" class="filter-select">
+                                <option value="all">All Boats</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
-                <div class="filter-right">
-                    <div class="filter-item" style="flex:1 1 0; min-width:0;">
-                        <select id="boatSelect" class="filter-select">
-                            <option value="all">All Boats</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button id="resetFilters" class="reset-filters">
-                    Reset
-                </button>
+                <div
+                    id="activeFiltersRow"
+                    class="active-filters-row"
+                    role="region"
+                    aria-live="polite"
+                    aria-label="Active filters"
+                    aria-hidden="true"
+                ></div>
             </div>
         </div>
-        
+
         <div class="container">
 
         <div id="loading" class="loading">
@@ -747,6 +811,7 @@
                 createCharts();
                 updateStats();
                 updateDateRangeDisplay();
+                renderActiveFilters();
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('content').style.display = 'block';
                 
@@ -762,6 +827,7 @@
                             calculateMoonPhases();
                             createCharts();
                             updateStats();
+                            renderActiveFilters();
                         }
                     } catch (error) {
                         console.error('Auto-refresh error:', error);
@@ -1078,6 +1144,7 @@
             createTimeChart();
             updateStats();
             updateHeaderForSelection();
+            renderActiveFilters();
         }
 
         // Update all charts when boat or date selection changes
@@ -1087,6 +1154,7 @@
             createTimeChart();
             updateStats();
             updateHeaderForSelection();
+            renderActiveFilters();
         }
         
         // Update header when filters are applied
@@ -1487,12 +1555,12 @@
                                     day: 'MMM dd'
                                 }
                             },
-                            // When a specific boat is selected, adjust axis to actual data range
-                            // Otherwise use the global date range filter
-                            min: selectedBoat !== 'all' && sortedDates.length > 0
+                            // Always adjust axis to actual data range when there's data
+                            // This ensures the chart uses full width for the available data
+                            min: sortedDates.length > 0
                                 ? new Date(sortedDates[0] + 'T00:00:00')
                                 : (currentStartDate ? new Date(currentStartDate + 'T00:00:00') : undefined),
-                            max: selectedBoat !== 'all' && sortedDates.length > 0
+                            max: sortedDates.length > 0
                                 ? new Date(sortedDates[sortedDates.length - 1] + 'T23:59:59')
                                 : (currentEndDate ? new Date(currentEndDate + 'T23:59:59') : undefined),
                             bounds: 'data',  // Changed from 'ticks' to 'data' for better fit
@@ -1974,6 +2042,133 @@
         function applyAllFilters() {
             updateAllCharts();
         }
+
+        function renderActiveFilters() {
+            const container = document.getElementById('activeFiltersRow');
+            if (!container) return;
+
+            const chips = [];
+
+            const speciesSelect = document.getElementById('speciesSelect');
+            const boatSelect = document.getElementById('boatSelect');
+            const durationSelect = document.getElementById('durationSelect');
+
+            const hasDateRange =
+                currentStartDate &&
+                currentEndDate &&
+                dataRange.minDate &&
+                dataRange.maxDate &&
+                (currentStartDate !== dataRange.minDate || currentEndDate !== dataRange.maxDate);
+
+            if (hasDateRange) {
+                const startLabel = formatDateForDisplay(currentStartDate);
+                const endLabel = formatDateForDisplay(currentEndDate);
+
+                chips.push({
+                    id: 'dates',
+                    label: `Dates: ${startLabel} - ${endLabel}`,
+                    ariaLabel: 'Clear custom date range',
+                    onRemove: () => {
+                        if (dataRange.minDate && dataRange.maxDate) {
+                            currentStartDate = dataRange.minDate;
+                            currentEndDate = dataRange.maxDate;
+
+                            const expandedStartInput = document.getElementById('expandedStartDate');
+                            const expandedEndInput = document.getElementById('expandedEndDate');
+                            if (expandedStartInput) expandedStartInput.value = dataRange.minDate;
+                            if (expandedEndInput) expandedEndInput.value = dataRange.maxDate;
+
+                            updateDateRangeDisplay();
+                            applyAllFilters();
+                        }
+                    }
+                });
+            }
+
+            const speciesValue = speciesSelect ? speciesSelect.value : 'all';
+            if (speciesValue && speciesValue !== 'all') {
+                chips.push({
+                    id: 'species',
+                    label: `Species: ${speciesValue}`,
+                    ariaLabel: `Remove species filter ${speciesValue}`,
+                    onRemove: () => {
+                        if (!speciesSelect) return;
+                        speciesSelect.value = 'all';
+                        updateCharts();
+                    }
+                });
+            }
+
+            const durationValue = durationSelect ? durationSelect.value : 'all';
+            if (durationValue && durationValue !== 'all') {
+                chips.push({
+                    id: 'duration',
+                    label: `Duration: ${durationValue}`,
+                    ariaLabel: `Remove duration filter ${durationValue}`,
+                    onRemove: () => {
+                        if (!durationSelect) return;
+                        durationSelect.value = 'all';
+                        updateAllCharts();
+                    }
+                });
+            }
+
+            const boatValue = boatSelect ? boatSelect.value : 'all';
+            if (boatValue && boatValue !== 'all') {
+                const selectedOption = boatSelect && boatSelect.options[boatSelect.selectedIndex];
+                const boatLabel = selectedOption ? selectedOption.textContent.trim() : 'Selected boat';
+                chips.push({
+                    id: 'boat',
+                    label: `Boat: ${boatLabel}`,
+                    ariaLabel: `Remove boat filter ${boatLabel}`,
+                    onRemove: () => {
+                        if (!boatSelect) return;
+                        boatSelect.value = 'all';
+                        updateAllCharts();
+                    }
+                });
+            }
+
+            container.innerHTML = '';
+
+            if (chips.length === 0) {
+                container.classList.remove('visible');
+                container.setAttribute('aria-hidden', 'true');
+                return;
+            }
+
+            container.classList.add('visible');
+            container.removeAttribute('aria-hidden');
+
+            chips.forEach(chip => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'filter-chip';
+                button.setAttribute('aria-label', chip.ariaLabel);
+
+                const textSpan = document.createElement('span');
+                textSpan.textContent = chip.label;
+                button.appendChild(textSpan);
+
+                const dismissSpan = document.createElement('span');
+                dismissSpan.className = 'chip-dismiss';
+                dismissSpan.setAttribute('aria-hidden', 'true');
+                dismissSpan.textContent = '×';
+                button.appendChild(dismissSpan);
+
+                button.addEventListener('click', chip.onRemove);
+                container.appendChild(button);
+            });
+
+            const clearAllButton = document.createElement('button');
+            clearAllButton.type = 'button';
+            clearAllButton.className = 'filter-chip clear-all';
+            clearAllButton.textContent = 'Clear all';
+            clearAllButton.setAttribute('aria-label', 'Clear all filters');
+            clearAllButton.style.marginLeft = 'auto';
+            clearAllButton.addEventListener('click', resetAllFilters);
+            container.appendChild(clearAllButton);
+        }
         
         // Update date range display text
         function updateDateRangeDisplay() {
@@ -2060,6 +2255,10 @@
                 const dates = allTrips.map(t => t.trip_date).sort();
                 currentStartDate = dates[0];
                 currentEndDate = dates[dates.length - 1];
+                const expandedStartInput = document.getElementById('expandedStartDate');
+                const expandedEndInput = document.getElementById('expandedEndDate');
+                if (expandedStartInput) expandedStartInput.value = currentStartDate;
+                if (expandedEndInput) expandedEndInput.value = currentEndDate;
                 updateDateRangeDisplay();
             }
             
@@ -2078,14 +2277,6 @@
         
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', init);
-        
-        // Add event listener for reset button
-        document.addEventListener('DOMContentLoaded', () => {
-            const resetButton = document.getElementById('resetFilters');
-            if (resetButton) {
-                resetButton.addEventListener('click', resetAllFilters);
-            }
-        });
     </script>
 </body>
 </html>
