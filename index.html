@@ -143,39 +143,35 @@
         }
         
         .filter-container {
-            max-width: 1200px;
+            max-width: 1168px;
             margin: 0 auto;
-            padding: 0 16px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 0;
+            background: hsl(0 0% 100%);
+            border: 1px solid hsl(214 32% 94%);
+            border-radius: 12px;
+            box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
         }
 
         .filter-row {
-            display: flex;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
-            flex-wrap: wrap;
             width: 100%;
         }
         .filter-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex: 0 1 auto;
-            min-width: 0; /* allow flex children to shrink */
+            display: contents; /* Let children participate in parent grid */
         }
         .filter-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex: 1 1 0;
-            min-width: 0; /* allow flex children to shrink */
+            display: contents; /* Let children participate in parent grid */
         }
+
         .filter-right .filter-select {
             width: 100%;
         }
-        
+
         .filter-item {
             display: flex;
             align-items: center;
@@ -193,7 +189,7 @@
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: hsl(222.2 84% 4.9%);
             cursor: pointer;
-            min-width: 240px;
+            width: 100%;
             transition: border-color 0.2s, background-image 0.2s;
             background-image: url("data:image/svg+xml,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
             background-repeat: no-repeat;
@@ -218,7 +214,7 @@
             font-size: 14px;
             color: hsl(222.2 84% 4.9%);
             cursor: pointer;
-            min-width: 120px;
+            width: 100%;
             transition: border-color 0.2s;
             background-image: url("data:image/svg+xml,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%236b7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
             background-repeat: no-repeat;
@@ -240,14 +236,10 @@
             flex-wrap: wrap;
             align-items: center;
             gap: 8px;
-            margin: 0;
-            padding: 8px 12px;
-            border: 1px solid hsl(214.3 31.8% 91.4%);
-            border-radius: 8px;
-            background: hsl(210 40% 96%);
+            margin-top: 6px;
+            padding-top: 10px;
             font-size: 13px;
             color: hsl(215.4 16.3% 46.9%);
-            transition: opacity 0.2s ease;
             width: 100%;
         }
 
@@ -259,23 +251,23 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            padding: 4px 12px;
+            padding: 3px 11px;
             border-radius: 999px;
             border: none;
-            background: hsl(214.3 31.8% 91.4%);
-            color: hsl(215.4 16.3% 35%);
+            background: hsl(214 31.8% 94%);
+            color: hsl(215.4 16.3% 42%);
             font-size: 12px;
             cursor: pointer;
             transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
-            min-height: 32px;
+            min-height: 28px;
         }
 
         .filter-chip:hover,
         .filter-chip:focus-visible {
-            background: hsl(210 40% 98%);
+            background: hsl(210 40% 97%);
             color: hsl(222.2 84% 4.9%);
             outline: none;
-            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.25);
+            box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.18);
         }
 
         .filter-chip .chip-dismiss {
@@ -285,8 +277,8 @@
 
         .filter-chip.clear-all {
             background: transparent;
-            border: 1px dashed hsl(214.3 31.8% 85%);
-            color: hsl(215.4 16.3% 35%);
+            border: 1px dashed hsl(214 30% 82%);
+            color: hsl(215.4 16.3% 40%);
         }
 
         .filter-chip.clear-all:hover,
@@ -423,52 +415,19 @@
             /* Three-row mobile layout: Calendar, Species+Duration, All Boats */
             .top-filter-bar { padding: 16px 0; }
             .filter-container {
-                padding: 0 16px;
+                padding: 16px;
             }
 
             .filter-row {
-                flex-direction: column;
-                align-items: stretch;
+                grid-template-columns: 1fr;
                 gap: 12px;
             }
 
             .active-filters-row {
-                margin: 0;
+                margin-top: 6px;
+                gap: 6px;
             }
-            .filter-left {
-                display: flex;                 /* Use flexbox for better control */
-                flex-wrap: wrap;              /* Allow wrapping */
-                gap: 12px;
-                min-width: 0;                  /* allow shrinking without overflow */
-            }
-
-            /* Calendar takes full width */
-            .filter-left .filter-item:first-child {
-                width: 100%;
-            }
-
-            /* Make species and duration sit side by side on mobile */
-            .filter-left .filter-item:nth-child(2),
-            .filter-left .filter-item:nth-child(3) {
-                flex: 1 1 calc(50% - 6px);    /* Each takes half width minus gap */
-                min-width: 0;
-            }
-
-            /* Ensure select elements take full width of their containers */
-            .filter-left .filter-item .filter-select {
-                width: 100%;
-                min-width: 0;
-            }
-
-            .filter-right { min-width: 0; }
-
-            /* Only date and boat get full width */
-            .filter-right .filter-item,
-            .filter-right .filter-select,
-            .date-range-display,
-            #boatSelect {
-                width: 100%;
-            }
+            /* All filters already get full width from grid layout */
             
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -678,7 +637,7 @@
                     </div>
 
                     <div class="filter-right">
-                        <div class="filter-item" style="flex:1 1 0; min-width:0;">
+                        <div class="filter-item">
                             <select id="boatSelect" class="filter-select">
                                 <option value="all">All Boats</option>
                             </select>
