@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Fishing - Premium Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Reset and Variables */
+        :root {
+            /* shadcn/ui HSL color palette */
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 221.2 83.2% 53.3%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 222.2 47.4% 11.2%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96.1%;
+            --accent-foreground: 222.2 47.4% 11.2%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 221.2 83.2% 53.3%;
+            --radius: 0.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout Grid */
+        .app-layout {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr);
+            grid-template-rows: auto 1fr;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Header Bar */
+        .header-bar {
+            grid-column: 1 / -1;
+            background: hsl(var(--background));
+            border-bottom: 1px solid hsl(var(--border));
+            height: 56px;
+            display: flex;
+            align-items: center;
+            z-index: 40;
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 16px;
+            color: hsl(var(--foreground));
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0 16px;
+        }
+
+        .logo svg {
+            width: 20px;
+            height: 20px;
+            color: hsl(var(--primary));
+        }
+
+        /* Header Filters */
+        .header-filters-container {
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-select {
+            padding: 6px 12px;
+            border-radius: calc(var(--radius) - 2px);
+            border: 1px solid hsl(var(--input));
+            background: hsl(var(--background));
+            font-size: 13px;
+            color: hsl(var(--foreground));
+            cursor: pointer;
+            transition: border-color 0.2s;
+            height: 32px;
+            min-width: 140px;
+        }
+
+        .filter-select:hover {
+            border-color: hsl(var(--muted-foreground));
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: hsl(var(--ring));
+            box-shadow: 0 0 0 2px hsla(var(--ring), 0.2);
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            background: hsl(var(--background));
+            border-right: 1px solid hsl(var(--border));
+            padding: 12px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-section {
+            margin-bottom: 8px;
+        }
+
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 4px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 8px;
+            border-radius: calc(var(--radius) - 3px);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: hsl(var(--foreground));
+        }
+
+        .nav-item:hover {
+            background: hsl(var(--accent));
+        }
+
+        .nav-item.active {
+            background: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+
+        .nav-item-content {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-item .count {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.6;
+            margin-left: auto;
+        }
+
+        .nav-item .star-icon {
+            width: 14px;
+            height: 14px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .nav-item .star-icon.starred {
+            fill: currentColor;
+            opacity: 1;
+        }
+
+        .nav-item:hover .star-icon {
+            opacity: 1;
+        }
+
+        .nav-divider {
+            height: 1px;
+            background: hsl(var(--border));
+            margin: 8px 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            overflow-y: auto;
+            background: hsl(var(--secondary) / 0.3);
+        }
+
+        .content-container {
+            padding: 24px;
+            width: 100%;
+            max-width: none;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: hsl(var(--card));
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--border));
+            padding: 16px;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 1px 3px hsla(var(--foreground), 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .card-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: hsl(var(--foreground));
+            margin-bottom: 4px;
+        }
+
+        .card-change {
+            font-size: 12px;
+            color: hsl(var(--muted-foreground));
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .card-change.positive {
+            color: #10b981;
+        }
+
+        .card-change.negative {
+            color: #ef4444;
+        }
+
+        /* Table Styles */
+        .table-card {
+            background: hsl(var(--card));
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--border));
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .table-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid hsl(var(--border));
+            font-weight: 600;
+            font-size: 16px;
+            color: hsl(var(--foreground));
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table thead th {
+            text-align: left;
+            padding: 12px 20px;
+            font-size: 12px;
+            font-weight: 500;
+            color: hsl(var(--muted-foreground));
+            background: hsl(var(--muted) / 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table tbody td {
+            padding: 14px 20px;
+            font-size: 14px;
+            border-top: 1px solid hsl(var(--border));
+        }
+
+        .data-table tbody tr:hover {
+            background: hsl(var(--accent) / 0.5);
+        }
+
+        /* Badge Styles */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: calc(var(--radius) - 3px);
+            font-size: 11px;
+            font-weight: 500;
+            background: hsl(var(--secondary));
+            color: hsl(var(--secondary-foreground));
+        }
+
+        .badge.success {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge.warning {
+            background: #f59e0b;
+            color: white;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            padding: 16px;
+            position: relative;
+            height: 300px;
+        }
+
+        canvas {
+            max-height: 100%;
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid hsl(var(--border));
+            border-top-color: hsl(var(--primary));
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .app-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .header-content {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Header Bar -->
+        <header class="header-bar">
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="fish"></i>
+                    <span>SD Fishing Intelligence</span>
+                </div>
+                <div class="header-filters-container">
+                    <input type="date" id="startDate" class="filter-select" style="min-width: 140px;">
+                    <span style="color: hsl(var(--muted-foreground)); padding: 0 4px;">to</span>
+                    <input type="date" id="endDate" class="filter-select" style="min-width: 140px;">
+                    <select id="speciesFilter" class="filter-select">
+                        <option value="all">All Species</option>
+                    </select>
+                    <select id="durationFilter" class="filter-select">
+                        <option value="all">All Durations</option>
+                    </select>
+                    <select id="boatFilter" class="filter-select">
+                        <option value="all">All Boats</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="nav-section">
+                <div class="nav-item" data-landing-id="all" onclick="loadLandingData('all')" style="font-weight: 600;">
+                    <div class="nav-item-content">
+                        <span>All Landings</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-divider"></div>
+
+            <div class="nav-section">
+                <div class="nav-header">Pinned</div>
+                <div id="pinnedSection"></div>
+            </div>
+
+            <div class="nav-divider"></div>
+
+            <div class="nav-section">
+                <div class="nav-header">San Diego</div>
+                <div id="sanDiegoSection"></div>
+            </div>
+
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-container">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Trips</span>
+                        </div>
+                        <div class="card-value" id="totalTrips">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Fish</span>
+                        </div>
+                        <div class="card-value" id="totalFish">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Avg per Trip</span>
+                        </div>
+                        <div class="card-value" id="avgPerTrip">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Boats</span>
+                        </div>
+                        <div class="card-value" id="totalBoats">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Fishing Trips Table -->
+                <div class="table-card">
+                    <div class="table-header">
+                        Recent Fishing Trips
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>DATE</th>
+                                <th>BOAT</th>
+                                <th>LANDING</th>
+                                <th>DURATION</th>
+                                <th>ANGLERS</th>
+                                <th>FISH COUNT</th>
+                                <th>TOP SPECIES</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tripsTableBody">
+                            <tr>
+                                <td colspan="7" style="text-align: center; color: hsl(var(--muted-foreground));">
+                                    Loading recent trips...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Daily Catches Chart -->
+                <div class="table-card">
+                    <div class="table-header">
+                        Daily Fish Catches Over Time
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="dailyCatchesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Top Boats Chart -->
+                <div class="table-card">
+                    <div class="table-header">
+                        Top Boats by Total Fish Caught
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="topBoatsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Chart instances
+        let dailyCatchesChart = null;
+        let topBoatsChart = null;
+
+        // Current filters
+        let selectedLandingId = null;
+
+        // Real landing data from database (San Diego only)
+        let landingsByRegion = {
+            'san-diego': []
+        };
+
+        // Initialize navigation
+        async function initializeNavigation() {
+            const pinnedSection = document.getElementById('pinnedSection');
+            const sanDiegoSection = document.getElementById('sanDiegoSection');
+
+            // Load real landings from API
+            try {
+                const response = await fetch('http://localhost:5001/api/filters');
+                const filters = await response.json();
+
+                // Populate landings
+                landingsByRegion['san-diego'] = filters.landings.map(l => ({
+                    id: l.id,
+                    name: l.name,
+                    count: 0,  // Will be updated with real counts
+                    starred: false
+                }));
+
+                // Load starred state from localStorage
+                const starredLandings = JSON.parse(localStorage.getItem('starredLandings') || '[]');
+                landingsByRegion['san-diego'].forEach(landing => {
+                    landing.starred = starredLandings.includes(landing.id.toString());
+                });
+
+                // Get all starred landings
+                const starred = landingsByRegion['san-diego'].filter(l => l.starred);
+
+                // Render pinned section
+                pinnedSection.innerHTML = starred.length ? starred.map(landing => createNavItem(landing)).join('') :
+                    '<div style="padding: 8px; font-size: 12px; color: hsl(var(--muted-foreground)); text-align: center;">No pinned landings</div>';
+
+                // Render San Diego section
+                sanDiegoSection.innerHTML = landingsByRegion['san-diego'].map(landing => createNavItem(landing)).join('');
+
+                // Populate species filter
+                const speciesFilter = document.getElementById('speciesFilter');
+                speciesFilter.innerHTML = '<option value="all">All Species</option>';
+                filters.species.forEach(species => {
+                    speciesFilter.innerHTML += `<option value="${species}">${species}</option>`;
+                });
+
+                // Populate duration filter
+                const durationFilter = document.getElementById('durationFilter');
+                durationFilter.innerHTML = '<option value="all">All Durations</option>';
+                filters.durations.forEach(duration => {
+                    durationFilter.innerHTML += `<option value="${duration}">${duration}</option>`;
+                });
+
+                // Populate boat filter
+                const boatFilter = document.getElementById('boatFilter');
+                boatFilter.innerHTML = '<option value="all">All Boats</option>';
+                filters.boats.forEach(boat => {
+                    boatFilter.innerHTML += `<option value="${boat}">${boat}</option>`;
+                });
+            } catch (error) {
+                console.error('Error loading filters:', error);
+            }
+
+            // Add click handlers
+            document.querySelectorAll('.star-icon').forEach(star => {
+                star.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleStar(e.target.dataset.landingId);
+                });
+            });
+
+            // Add navigation click handlers
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('star-icon')) {
+                        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                        loadLandingData(item.dataset.landingId);
+                    }
+                });
+            });
+        }
+
+        function createNavItem(landing) {
+            return `
+                <div class="nav-item" data-landing-id="${landing.id}">
+                    <div class="nav-item-content">
+                        <span>${landing.name}</span>
+                    </div>
+                    <i data-lucide="star" class="star-icon ${landing.starred ? 'starred' : ''}"
+                       data-landing-id="${landing.id}"></i>
+                </div>
+            `;
+        }
+
+        function toggleStar(landingId) {
+            const landing = landingsByRegion['san-diego'].find(l => l.id.toString() === landingId);
+            if (landing) {
+                landing.starred = !landing.starred;
+            }
+
+            // Update localStorage
+            const starred = landingsByRegion['san-diego'].filter(l => l.starred).map(l => l.id.toString());
+            localStorage.setItem('starredLandings', JSON.stringify(starred));
+
+            // Re-render navigation
+            initializeNavigation();
+            lucide.createIcons();
+        }
+
+        async function loadLandingData(landingId) {
+            console.log('Loading data for landing:', landingId);
+            // Set the selected landing filter
+            selectedLandingId = landingId === 'all' ? null : landingId;
+
+            // Reload filter dropdowns based on landing selection
+            await updateFiltersForLanding();
+
+            // Reload dashboard data with the filter
+            loadDashboardData();
+        }
+
+        async function updateFiltersForLanding() {
+            try {
+                let filterUrl = 'http://localhost:5001/api/filters';
+                if (selectedLandingId) {
+                    filterUrl += `?landing=${selectedLandingId}`;
+                }
+
+                const response = await fetch(filterUrl);
+                const filters = await response.json();
+
+                // Save current selections
+                const currentSpecies = document.getElementById('speciesFilter').value;
+                const currentDuration = document.getElementById('durationFilter').value;
+                const currentBoat = document.getElementById('boatFilter').value;
+
+                // Update species filter
+                const speciesFilter = document.getElementById('speciesFilter');
+                speciesFilter.innerHTML = '<option value="all">All Species</option>';
+                filters.species.forEach(species => {
+                    speciesFilter.innerHTML += `<option value="${species}">${species}</option>`;
+                });
+                // Restore selection if still available
+                if (filters.species.includes(currentSpecies)) {
+                    speciesFilter.value = currentSpecies;
+                } else {
+                    speciesFilter.value = 'all';
+                }
+
+                // Update duration filter
+                const durationFilter = document.getElementById('durationFilter');
+                durationFilter.innerHTML = '<option value="all">All Durations</option>';
+                filters.durations.forEach(duration => {
+                    durationFilter.innerHTML += `<option value="${duration}">${duration}</option>`;
+                });
+                // Restore selection if still available
+                if (filters.durations.includes(currentDuration)) {
+                    durationFilter.value = currentDuration;
+                } else {
+                    durationFilter.value = 'all';
+                }
+
+                // Update boat filter
+                const boatFilter = document.getElementById('boatFilter');
+                boatFilter.innerHTML = '<option value="all">All Boats</option>';
+                filters.boats.forEach(boat => {
+                    boatFilter.innerHTML += `<option value="${boat}">${boat}</option>`;
+                });
+                // Restore selection if still available
+                if (filters.boats.includes(currentBoat)) {
+                    boatFilter.value = currentBoat;
+                } else {
+                    boatFilter.value = 'all';
+                }
+            } catch (error) {
+                console.error('Error updating filters:', error);
+            }
+        }
+
+        // Load dashboard data with real API integration
+        async function loadDashboardData() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const species = document.getElementById('speciesFilter').value;
+            const duration = document.getElementById('durationFilter').value;
+            const boat = document.getElementById('boatFilter').value;
+
+            console.log('Loading dashboard with filters:', { species, duration, boat, selectedLandingId, startDate, endDate });
+
+            // Build query parameters
+            const params = new URLSearchParams();
+            if (species !== 'all') params.append('species', species);
+            if (duration !== 'all') params.append('duration', duration);
+            if (boat !== 'all') params.append('boat', boat);
+            if (selectedLandingId) params.append('landing', selectedLandingId);
+
+            // Load stats
+            try {
+                let response;
+                const queryString = params.toString();
+                const queryPrefix = queryString ? '?' + queryString : '';
+
+                if (startDate && endDate) {
+                    response = await fetch(`http://localhost:5001/api/stats/date-range/${startDate}/${endDate}${queryPrefix}`);
+                } else {
+                    // Default to last 30 days
+                    response = await fetch(`http://localhost:5001/api/stats/last-30-days${queryPrefix}`);
+                }
+                const data = await response.json();
+
+                console.log('Stats response:', data);
+
+                document.getElementById('totalTrips').textContent = data.trips.toLocaleString();
+                document.getElementById('totalFish').textContent = data.fish.toLocaleString();
+                document.getElementById('avgPerTrip').textContent = data.avgPerTrip.toFixed(1);
+                document.getElementById('totalBoats').textContent = data.boats;
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+                document.getElementById('totalTrips').textContent = 'Error';
+                document.getElementById('totalFish').textContent = 'Error';
+                document.getElementById('avgPerTrip').textContent = 'Error';
+                document.getElementById('totalBoats').textContent = 'Error';
+            }
+
+            // Load charts
+            loadCharts();
+
+            // Load recent trips
+            loadRecentTrips();
+        }
+
+        async function loadCharts() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const species = document.getElementById('speciesFilter').value;
+            const duration = document.getElementById('durationFilter').value;
+            const boat = document.getElementById('boatFilter').value;
+
+            // Build query parameters for filters
+            const params = new URLSearchParams();
+            if (species !== 'all') params.append('species', species);
+            if (duration !== 'all') params.append('duration', duration);
+            if (boat !== 'all') params.append('boat', boat);
+            if (selectedLandingId) params.append('landing', selectedLandingId);
+            const queryString = params.toString();
+            const queryPrefix = queryString ? '?' + queryString : '';
+
+            // Calculate days between dates or default to 30
+            let days = 30;
+            if (startDate && endDate) {
+                const start = new Date(startDate);
+                const end = new Date(endDate);
+                days = Math.ceil((end - start) / (1000 * 60 * 60 * 24)) + 1;
+            }
+
+            // Load daily catches chart
+            try {
+                const dailyResponse = await fetch(`http://localhost:5001/api/daily-catches/${days}${queryPrefix}`);
+                const dailyData = await dailyResponse.json();
+
+                if (dailyCatchesChart) dailyCatchesChart.destroy();
+
+                const ctx = document.getElementById('dailyCatchesChart').getContext('2d');
+                dailyCatchesChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: dailyData.labels,
+                        datasets: [{
+                            label: 'Fish Caught',
+                            data: dailyData.fish,
+                            borderColor: 'hsl(var(--primary))',
+                            backgroundColor: 'hsla(var(--primary), 0.1)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            fill: true
+                        }, {
+                            label: 'Trips',
+                            data: dailyData.trips,
+                            borderColor: 'hsl(var(--accent))',
+                            backgroundColor: 'hsla(var(--accent), 0.1)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            fill: false,
+                            yAxisID: 'y1'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Fish Count'
+                                }
+                            },
+                            y1: {
+                                beginAtZero: true,
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: 'Trip Count'
+                                },
+                                grid: {
+                                    drawOnChartArea: false
+                                }
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading daily catches:', error);
+            }
+
+            // Load top boats chart
+            try {
+                let boatsUrl = `http://localhost:5001/api/top-boats/10`;
+                // Add all filters to the boats URL
+                const boatsParams = new URLSearchParams();
+                if (species !== 'all') boatsParams.append('species', species);
+                if (duration !== 'all') boatsParams.append('duration', duration);
+                if (boat !== 'all') boatsParams.append('boat', boat);
+                if (selectedLandingId) boatsParams.append('landing', selectedLandingId);
+
+                const boatsQueryString = boatsParams.toString();
+                if (boatsQueryString) {
+                    boatsUrl += '?' + boatsQueryString;
+                }
+
+                const boatsResponse = await fetch(boatsUrl);
+                const boatsData = await boatsResponse.json();
+
+                if (topBoatsChart) topBoatsChart.destroy();
+
+                const boatsCtx = document.getElementById('topBoatsChart').getContext('2d');
+                topBoatsChart = new Chart(boatsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: boatsData.labels,
+                        datasets: [{
+                            label: 'Total Fish',
+                            data: boatsData.fish,
+                            backgroundColor: 'hsla(var(--primary), 0.8)',
+                            borderColor: 'hsla(var(--primary), 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y', // This makes the bar chart horizontal
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.parsed.x.toLocaleString()} fish`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    autoSkip: false
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Don't update boat filter here - it's already populated from /api/filters with all 77 boats
+            } catch (error) {
+                console.error('Error loading top boats:', error);
+            }
+
+        }
+
+        // Load recent trips table
+        async function loadRecentTrips() {
+            const species = document.getElementById('speciesFilter').value;
+            const duration = document.getElementById('durationFilter').value;
+            const boat = document.getElementById('boatFilter').value;
+
+            try {
+                let tripsUrl = 'http://localhost:5001/api/recent-trips/10';
+                // Add all filters to the trips URL
+                const params = new URLSearchParams();
+                if (species !== 'all') params.append('species', species);
+                if (duration !== 'all') params.append('duration', duration);
+                if (boat !== 'all') params.append('boat', boat);
+                if (selectedLandingId) params.append('landing', selectedLandingId);
+
+                const queryString = params.toString();
+                if (queryString) {
+                    tripsUrl += '?' + queryString;
+                }
+
+                const response = await fetch(tripsUrl);
+                const trips = await response.json();
+
+                const tbody = document.getElementById('tripsTableBody');
+                if (trips.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="7" style="text-align: center;">No recent trips found</td></tr>';
+                    return;
+                }
+
+                tbody.innerHTML = trips.map(trip => {
+                    const date = new Date(trip.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    return `
+                        <tr>
+                            <td>${date}</td>
+                            <td>${trip.boat}</td>
+                            <td>${trip.landing}</td>
+                            <td>${trip.duration}</td>
+                            <td style="text-align: center;">${trip.anglers}</td>
+                            <td style="text-align: center;">${trip.fishCount}</td>
+                            <td>${trip.topSpecies}</td>
+                        </tr>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading recent trips:', error);
+                const tbody = document.getElementById('tripsTableBody');
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: red;">Error loading trips</td></tr>';
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Set default date range (January 1, 2025 to today)
+            const endDate = new Date();
+            const startDate = new Date('2025-01-01');
+
+            document.getElementById('startDate').value = startDate.toISOString().split('T')[0];
+            document.getElementById('endDate').value = endDate.toISOString().split('T')[0];
+
+            await initializeNavigation();
+            await loadDashboardData();
+
+            // Add filter change handlers
+            document.getElementById('startDate').addEventListener('change', loadDashboardData);
+            document.getElementById('endDate').addEventListener('change', loadDashboardData);
+            document.getElementById('speciesFilter').addEventListener('change', loadDashboardData);
+            document.getElementById('durationFilter').addEventListener('change', loadDashboardData);
+            document.getElementById('boatFilter').addEventListener('change', loadDashboardData);
+        });
+    </script>
+</body>
+</html>
