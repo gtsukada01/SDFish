@@ -1,5 +1,4 @@
 {
-  "installCommand": "echo Skipping install",
   "functions": {
     "api/**/*.js": {
       "runtime": "@vercel/node@3.0.7"
