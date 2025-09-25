@@ -1,0 +1,10 @@
+*.py
+__pycache__/
+*.pyc
+*.db
+*.log
+.env*
+test/
+scripts/test/
+*.tmp
+*.temp
