@@ -1,0 +1,242 @@
+[
+  {
+    "date": "2025-09-20",
+    "boat": "Old Glory",
+    "anglers": 25,
+    "fish_count": 0,
+    "duration": "Overnight",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20"
+  },
+  {
+    "date": "2025-09-20",
+    "boat": "Alicia",
+    "anglers": 9,
+    "fish_count": 0,
+    "duration": "Full Day Offshore",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20"
+  },
+  {
+    "date": "2025-09-19",
+    "boat": "Game Changer",
+    "anglers": 6,
+    "fish_count": 0,
+    "duration": "3.5 Day",
+    "landing": "Point Loma Sportfishing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19"
+  },
+  {
+    "date": "2025-09-19",
+    "boat": "Relentless",
+    "anglers": 15,
+    "fish_count": 0,
+    "duration": "2.5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19"
+  },
+  {
+    "date": "2025-09-16",
+    "boat": "Relentless",
+    "anglers": 9,
+    "fish_count": 0,
+    "duration": "2.5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-16"
+  },
+  {
+    "date": "2025-09-16",
+    "boat": "Tomahawk",
+    "anglers": 23,
+    "fish_count": 0,
+    "duration": "2 Day",
+    "landing": "Fisherman's Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-16"
+  },
+  {
+    "date": "2025-09-16",
+    "boat": "Constitution",
+    "anglers": 19,
+    "fish_count": 0,
+    "duration": "2 Day",
+    "landing": "Fisherman's Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-16"
+  },
+  {
+    "date": "2025-09-15",
+    "boat": "Alicia",
+    "anglers": 14,
+    "fish_count": 0,
+    "duration": "Full Day Offshore",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-15"
+  },
+  {
+    "date": "2025-09-15",
+    "boat": "Grande",
+    "anglers": 28,
+    "fish_count": 0,
+    "duration": "Full Day Offshore",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-15"
+  },
+  {
+    "date": "2025-09-15",
+    "boat": "Top Gun 80",
+    "anglers": 16,
+    "fish_count": 0,
+    "duration": "5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-15"
+  },
+  {
+    "date": "2025-09-12",
+    "boat": "Relentless",
+    "anglers": 10,
+    "fish_count": 0,
+    "duration": "3.5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-12"
+  },
+  {
+    "date": "2025-09-10",
+    "boat": "Islander",
+    "anglers": 22,
+    "fish_count": 0,
+    "duration": "3 Day",
+    "landing": "Fisherman's Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-10"
+  },
+  {
+    "date": "2025-09-10",
+    "boat": "Tomahawk",
+    "anglers": 15,
+    "fish_count": 0,
+    "duration": "1.5 Day",
+    "landing": "Fisherman's Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-10"
+  },
+  {
+    "date": "2025-09-06",
+    "boat": "Premier",
+    "anglers": 21,
+    "fish_count": 0,
+    "duration": "Full Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-06"
+  },
+  {
+    "date": "2025-09-04",
+    "boat": "Malihini",
+    "anglers": 19,
+    "fish_count": 0,
+    "duration": "Full Day Offshore",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-04"
+  },
+  {
+    "date": "2025-09-04",
+    "boat": "Poseidon",
+    "anglers": 24,
+    "fish_count": 0,
+    "duration": "2 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-04"
+  },
+  {
+    "date": "2025-09-04",
+    "boat": "Producer",
+    "anglers": 20,
+    "fish_count": 0,
+    "duration": "Overnight",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-04"
+  },
+  {
+    "date": "2025-09-03",
+    "boat": "Relentless",
+    "anglers": 14,
+    "fish_count": 0,
+    "duration": "2 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-03"
+  },
+  {
+    "date": "2025-09-02",
+    "boat": "Little G",
+    "anglers": 6,
+    "fish_count": 0,
+    "duration": "1.5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02"
+  },
+  {
+    "date": "2025-09-02",
+    "boat": "Top Gun 80",
+    "anglers": 18,
+    "fish_count": 0,
+    "duration": "3.5 Day",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02"
+  },
+  {
+    "date": "2025-09-02",
+    "boat": "New Lo-An",
+    "anglers": 23,
+    "fish_count": 0,
+    "duration": "2 Day",
+    "landing": "Point Loma Sportfishing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02"
+  },
+  {
+    "date": "2025-09-02",
+    "boat": "Sea Watch",
+    "anglers": 20,
+    "fish_count": 0,
+    "duration": "Full Day Offshore",
+    "landing": "Seaforth Sportfishing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02"
+  },
+  {
+    "date": "2025-09-01",
+    "boat": "Premier",
+    "anglers": 31,
+    "fish_count": 0,
+    "duration": "1/2 Day Twilight",
+    "landing": "H&M Landing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-01"
+  },
+  {
+    "date": "2025-09-01",
+    "boat": "Oceanside 95",
+    "anglers": 11,
+    "fish_count": 0,
+    "duration": "2.5 Day",
+    "landing": "Point Loma Sportfishing",
+    "top_species": "N/A",
+    "verification_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-01"
+  }
+]

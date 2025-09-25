@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2025-09-01",
+    "boat": "Pacific Queen",
+    "trip_id": 1742,
+    "old_fish": 0,
+    "new_fish": 98,
+    "issue": "Weight qualifier parsing failure",
+    "source": "98 Bluefin Tuna (up to 140 pounds)"
+  },
+  {
+    "date": "2025-09-18",
+    "boat": "Pacific Dawn",
+    "trip_id": 8567,
+    "old_fish": 0,
+    "new_fish": 66,
+    "issue": "Weight qualifier parsing failure",
+    "source": "66 Bluefin Tuna (up to 100 pounds)"
+  }
+]

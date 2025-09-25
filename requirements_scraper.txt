@@ -1,0 +1,31 @@
+# Enhanced Fishing Scraper Requirements
+# Install with: pip install -r requirements_scraper.txt
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Database connectivity
+supabase>=2.0.0
+sqlalchemy>=2.0.0
+
+# Data processing
+pandas>=2.0.0
+
+# Monitoring and logging
+python-json-logger>=2.0.0
+
+# Configuration management
+python-dotenv>=1.0.0
+
+# Date/time handling
+python-dateutil>=2.8.0
+
+# Testing (optional)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Marine conditions (if using separate package)
+# Note: This assumes marine_conditions is a local package or available via pip
+# If it's a local package, you may need to install it separately

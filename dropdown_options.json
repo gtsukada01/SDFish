@@ -1,0 +1,652 @@
+{
+  "dropdown_0_speciesFilter": [
+    {
+      "text": "All Species",
+      "value": "all"
+    },
+    {
+      "text": "Albacore",
+      "value": "Albacore"
+    },
+    {
+      "text": "Barracuda",
+      "value": "Barracuda"
+    },
+    {
+      "text": "Barred Sand Bass",
+      "value": "Barred Sand Bass"
+    },
+    {
+      "text": "Black Croaker",
+      "value": "Black Croaker"
+    },
+    {
+      "text": "Black Seabass",
+      "value": "Black Seabass"
+    },
+    {
+      "text": "Blacksmith",
+      "value": "Blacksmith"
+    },
+    {
+      "text": "Blacksmith Perch",
+      "value": "Blacksmith Perch"
+    },
+    {
+      "text": "Blue Perch",
+      "value": "Blue Perch"
+    },
+    {
+      "text": "Bluefin Tuna",
+      "value": "Bluefin Tuna"
+    },
+    {
+      "text": "Bocaccio",
+      "value": "Bocaccio"
+    },
+    {
+      "text": "Bonito",
+      "value": "Bonito"
+    },
+    {
+      "text": "Brown Rockfish",
+      "value": "Brown Rockfish"
+    },
+    {
+      "text": "Cabezon",
+      "value": "Cabezon"
+    },
+    {
+      "text": "Calico Bass",
+      "value": "Calico Bass"
+    },
+    {
+      "text": "California Halibut",
+      "value": "California Halibut"
+    },
+    {
+      "text": "California Sheephead",
+      "value": "California Sheephead"
+    },
+    {
+      "text": "California Yellowtail",
+      "value": "California Yellowtail"
+    },
+    {
+      "text": "Chilipepper",
+      "value": "Chilipepper"
+    },
+    {
+      "text": "Copper Rockfish",
+      "value": "Copper Rockfish"
+    },
+    {
+      "text": "Croaker",
+      "value": "Croaker"
+    },
+    {
+      "text": "Dorado",
+      "value": "Dorado"
+    },
+    {
+      "text": "Finescale Triggerfish",
+      "value": "Finescale Triggerfish"
+    },
+    {
+      "text": "Halfmoon",
+      "value": "Halfmoon"
+    },
+    {
+      "text": "Halibut",
+      "value": "Halibut"
+    },
+    {
+      "text": "Kelp Rockfish",
+      "value": "Kelp Rockfish"
+    },
+    {
+      "text": "Leopard Shark",
+      "value": "Leopard Shark"
+    },
+    {
+      "text": "Lingcod",
+      "value": "Lingcod"
+    },
+    {
+      "text": "Mackerel",
+      "value": "Mackerel"
+    },
+    {
+      "text": "Mako Shark",
+      "value": "Mako Shark"
+    },
+    {
+      "text": "Mixed Species (Unspecified)",
+      "value": "Mixed Species (Unspecified)"
+    },
+    {
+      "text": "Monchong",
+      "value": "Monchong"
+    },
+    {
+      "text": "Ocean Whitefish",
+      "value": "Ocean Whitefish"
+    },
+    {
+      "text": "Opah",
+      "value": "Opah"
+    },
+    {
+      "text": "Pacific Mackerel",
+      "value": "Pacific Mackerel"
+    },
+    {
+      "text": "Perch",
+      "value": "Perch"
+    },
+    {
+      "text": "Petrale Sole",
+      "value": "Petrale Sole"
+    },
+    {
+      "text": "Red Rock Crab",
+      "value": "Red Rock Crab"
+    },
+    {
+      "text": "Red Rockfish",
+      "value": "Red Rockfish"
+    },
+    {
+      "text": "Rock Crab",
+      "value": "Rock Crab"
+    },
+    {
+      "text": "Rock Sole",
+      "value": "Rock Sole"
+    },
+    {
+      "text": "Rockfish",
+      "value": "Rockfish"
+    },
+    {
+      "text": "Rubberlip Seaperch",
+      "value": "Rubberlip Seaperch"
+    },
+    {
+      "text": "Sand Bass",
+      "value": "Sand Bass"
+    },
+    {
+      "text": "Sand Sole",
+      "value": "Sand Sole"
+    },
+    {
+      "text": "Sanddab",
+      "value": "Sanddab"
+    },
+    {
+      "text": "Sargo",
+      "value": "Sargo"
+    },
+    {
+      "text": "Sculpin",
+      "value": "Sculpin"
+    },
+    {
+      "text": "Sheephead",
+      "value": "Sheephead"
+    },
+    {
+      "text": "Skipjack Tuna",
+      "value": "Skipjack Tuna"
+    },
+    {
+      "text": "Soupfin Shark",
+      "value": "Soupfin Shark"
+    },
+    {
+      "text": "Spanish Jack",
+      "value": "Spanish Jack"
+    },
+    {
+      "text": "Spider Crab",
+      "value": "Spider Crab"
+    },
+    {
+      "text": "Spiny Lobster",
+      "value": "Spiny Lobster"
+    },
+    {
+      "text": "Spotted Sand Bass",
+      "value": "Spotted Sand Bass"
+    },
+    {
+      "text": "Striped Marlin",
+      "value": "Striped Marlin"
+    },
+    {
+      "text": "Thresher Shark",
+      "value": "Thresher Shark"
+    },
+    {
+      "text": "Treefish",
+      "value": "Treefish"
+    },
+    {
+      "text": "Triggerfish",
+      "value": "Triggerfish"
+    },
+    {
+      "text": "Vermilion Rockfish",
+      "value": "Vermilion Rockfish"
+    },
+    {
+      "text": "Vermillion Rockfish",
+      "value": "Vermillion Rockfish"
+    },
+    {
+      "text": "White Croaker",
+      "value": "White Croaker"
+    },
+    {
+      "text": "White Seabass",
+      "value": "White Seabass"
+    },
+    {
+      "text": "Whitefish",
+      "value": "Whitefish"
+    },
+    {
+      "text": "Yellowfin Tuna",
+      "value": "Yellowfin Tuna"
+    },
+    {
+      "text": "Yellowtail",
+      "value": "Yellowtail"
+    }
+  ],
+  "dropdown_1_durationFilter": [
+    {
+      "text": "All Durations",
+      "value": "all"
+    },
+    {
+      "text": "1/2 Day AM",
+      "value": "1/2 Day AM"
+    },
+    {
+      "text": "1/2 Day PM",
+      "value": "1/2 Day PM"
+    },
+    {
+      "text": "1/2 Day Twilight",
+      "value": "1/2 Day Twilight"
+    },
+    {
+      "text": "3/4 Day",
+      "value": "3/4 Day"
+    },
+    {
+      "text": "Full Day",
+      "value": "Full Day"
+    },
+    {
+      "text": "Full Day Offshore",
+      "value": "Full Day Offshore"
+    },
+    {
+      "text": "Full Day Coronado Islands",
+      "value": "Full Day Coronado Islands"
+    },
+    {
+      "text": "Overnight",
+      "value": "Overnight"
+    },
+    {
+      "text": "1.5 Day",
+      "value": "1.5 Day"
+    },
+    {
+      "text": "1.75 Day",
+      "value": "1.75 Day"
+    },
+    {
+      "text": "2 Day",
+      "value": "2 Day"
+    },
+    {
+      "text": "2.5 Day",
+      "value": "2.5 Day"
+    },
+    {
+      "text": "3 Day",
+      "value": "3 Day"
+    },
+    {
+      "text": "3.5 Day",
+      "value": "3.5 Day"
+    },
+    {
+      "text": "4 Day",
+      "value": "4 Day"
+    },
+    {
+      "text": "5 Day",
+      "value": "5 Day"
+    }
+  ],
+  "dropdown_2_boatFilter": [
+    {
+      "text": "All Boats",
+      "value": "all"
+    },
+    {
+      "text": "Alicia",
+      "value": "Alicia"
+    },
+    {
+      "text": "Apollo",
+      "value": "Apollo"
+    },
+    {
+      "text": "Aztec",
+      "value": "Aztec"
+    },
+    {
+      "text": "Bight 23 (SD)",
+      "value": "Bight 23 (SD)"
+    },
+    {
+      "text": "Bight 28 (SD)",
+      "value": "Bight 28 (SD)"
+    },
+    {
+      "text": "Blue Horizon",
+      "value": "Blue Horizon"
+    },
+    {
+      "text": "Chubasco II",
+      "value": "Chubasco II"
+    },
+    {
+      "text": "Condor",
+      "value": "Condor"
+    },
+    {
+      "text": "Constitution",
+      "value": "Constitution"
+    },
+    {
+      "text": "Cortez",
+      "value": "Cortez"
+    },
+    {
+      "text": "Daily Double",
+      "value": "Daily Double"
+    },
+    {
+      "text": "Daiwa Pacific",
+      "value": "Daiwa Pacific"
+    },
+    {
+      "text": "Dolphin",
+      "value": "Dolphin"
+    },
+    {
+      "text": "Effishency",
+      "value": "Effishency"
+    },
+    {
+      "text": "El Capitan",
+      "value": "El Capitan"
+    },
+    {
+      "text": "El Gato Dos",
+      "value": "El Gato Dos"
+    },
+    {
+      "text": "ElectraHelgrens SportfishingOceanside, CA",
+      "value": "ElectraHelgrens SportfishingOceanside, CA"
+    },
+    {
+      "text": "Excalibur",
+      "value": "Excalibur"
+    },
+    {
+      "text": "Excel",
+      "value": "Excel"
+    },
+    {
+      "text": "Fisherman IIIHelgrens SportfishingOceanside, CA",
+      "value": "Fisherman IIIHelgrens SportfishingOceanside, CA"
+    },
+    {
+      "text": "Fortune",
+      "value": "Fortune"
+    },
+    {
+      "text": "Freeman 34",
+      "value": "Freeman 34"
+    },
+    {
+      "text": "Game Changer",
+      "value": "Game Changer"
+    },
+    {
+      "text": "Grande",
+      "value": "Grande"
+    },
+    {
+      "text": "Highliner",
+      "value": "Highliner"
+    },
+    {
+      "text": "Horizon",
+      "value": "Horizon"
+    },
+    {
+      "text": "Islander",
+      "value": "Islander"
+    },
+    {
+      "text": "Jig Strike",
+      "value": "Jig Strike"
+    },
+    {
+      "text": "Legend",
+      "value": "Legend"
+    },
+    {
+      "text": "Liberty",
+      "value": "Liberty"
+    },
+    {
+      "text": "LimitlessLimitless SportfishingSan Diego, CA",
+      "value": "LimitlessLimitless SportfishingSan Diego, CA"
+    },
+    {
+      "text": "Little G",
+      "value": "Little G"
+    },
+    {
+      "text": "Lucky B Sportfishing",
+      "value": "Lucky B Sportfishing"
+    },
+    {
+      "text": "Lucky Charm",
+      "value": "Lucky Charm"
+    },
+    {
+      "text": "Malihini",
+      "value": "Malihini"
+    },
+    {
+      "text": "Mission Belle",
+      "value": "Mission Belle"
+    },
+    {
+      "text": "Nautilus",
+      "value": "Nautilus"
+    },
+    {
+      "text": "New Lo-An",
+      "value": "New Lo-An"
+    },
+    {
+      "text": "New Seaforth",
+      "value": "New Seaforth"
+    },
+    {
+      "text": "No PatienceNo Patience Sportfishing & SeafoodSan Diego, CA",
+      "value": "No PatienceNo Patience Sportfishing & SeafoodSan Diego, CA"
+    },
+    {
+      "text": "Ocean Odyssey",
+      "value": "Ocean Odyssey"
+    },
+    {
+      "text": "Oceanside 95",
+      "value": "Oceanside 95"
+    },
+    {
+      "text": "Old Glory",
+      "value": "Old Glory"
+    },
+    {
+      "text": "Outer Limits",
+      "value": "Outer Limits"
+    },
+    {
+      "text": "Pacific Dawn",
+      "value": "Pacific Dawn"
+    },
+    {
+      "text": "Pacific Queen",
+      "value": "Pacific Queen"
+    },
+    {
+      "text": "Pacific Voyager",
+      "value": "Pacific Voyager"
+    },
+    {
+      "text": "Pacifica",
+      "value": "Pacifica"
+    },
+    {
+      "text": "Patriot (SD)",
+      "value": "Patriot (SD)"
+    },
+    {
+      "text": "Pegasus",
+      "value": "Pegasus"
+    },
+    {
+      "text": "Point Loma",
+      "value": "Point Loma"
+    },
+    {
+      "text": "Polaris Supreme",
+      "value": "Polaris Supreme"
+    },
+    {
+      "text": "Poseidon",
+      "value": "Poseidon"
+    },
+    {
+      "text": "Premier",
+      "value": "Premier"
+    },
+    {
+      "text": "Primetime",
+      "value": "Primetime"
+    },
+    {
+      "text": "Producer",
+      "value": "Producer"
+    },
+    {
+      "text": "Pronto",
+      "value": "Pronto"
+    },
+    {
+      "text": "Ranger 85",
+      "value": "Ranger 85"
+    },
+    {
+      "text": "Reel Champion",
+      "value": "Reel Champion"
+    },
+    {
+      "text": "Relentless",
+      "value": "Relentless"
+    },
+    {
+      "text": "San Diego",
+      "value": "San Diego"
+    },
+    {
+      "text": "Sea Adventure 80",
+      "value": "Sea Adventure 80"
+    },
+    {
+      "text": "Sea Star",
+      "value": "Sea Star"
+    },
+    {
+      "text": "Sea Watch",
+      "value": "Sea Watch"
+    },
+    {
+      "text": "Searcher",
+      "value": "Searcher"
+    },
+    {
+      "text": "Shogun",
+      "value": "Shogun"
+    },
+    {
+      "text": "Southern Cal",
+      "value": "Southern Cal"
+    },
+    {
+      "text": "Spirit of Adventure",
+      "value": "Spirit of Adventure"
+    },
+    {
+      "text": "Success",
+      "value": "Success"
+    },
+    {
+      "text": "T-Bird",
+      "value": "T-Bird"
+    },
+    {
+      "text": "Tomahawk",
+      "value": "Tomahawk"
+    },
+    {
+      "text": "Top Gun 80",
+      "value": "Top Gun 80"
+    },
+    {
+      "text": "Tradition",
+      "value": "Tradition"
+    },
+    {
+      "text": "Tribute",
+      "value": "Tribute"
+    },
+    {
+      "text": "Vendetta 2",
+      "value": "Vendetta 2"
+    },
+    {
+      "text": "Voodoo",
+      "value": "Voodoo"
+    },
+    {
+      "text": "Voyager",
+      "value": "Voyager"
+    }
+  ]
+}
