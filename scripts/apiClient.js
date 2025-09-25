@@ -8,7 +8,10 @@
 import performanceMonitor from './performanceMonitor.js';
 import { isFeatureEnabled } from './config/featureFlags.js';
 
-const BASE_URL = 'http://localhost:5001/api';
+// Use relative URL for production, localhost for development
+const BASE_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:5001/api'
+  : '/api';
 
 /**
  * Build query string from parameters object

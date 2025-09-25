@@ -44,8 +44,13 @@ test/
 *backup*
 *spotcheck*
 *audit*
-*.json
+*recovery*.json
+*backup*.json
+*spotcheck*.json
+*audit*.json
+*analysis*.json
 *.md
+!package.json
 
 # Python cache
 __pycache__/
