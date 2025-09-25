@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+config/secrets.js
+scripts/supabaseClient.js
+
+# Database files
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Editor directories
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+
+# Cache directories
+.cache/
+.next/
+
+# Development files
+test/
+*.test.js
+
+# Recovery and backup files
+*recovery*
+*backup*
+*spotcheck*
+*audit*
+*.json
+*.md
+
+# Python cache
+__pycache__/
+*.pyc
+
+# API keys and credentials
+*key*
+*secret*
+*credential*
