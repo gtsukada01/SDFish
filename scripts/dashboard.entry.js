@@ -246,7 +246,7 @@ const refreshFilterOptions = withErrorBoundary(async function refreshFilterOptio
 
   try {
     // Get comprehensive trips data to extract filter options
-    const response = await fetch('/api/trips?limit=500');
+    const response = await fetch('/api/trips?limit=1000');
     if (!response.ok) {
       throw new Error(`API Error: ${response.status}`);
     }
@@ -495,7 +495,7 @@ async function fetchDailyCatches(days, apiFilters) {
   }
 
   // Fallback: use /api/trips and aggregate daily catches
-  const response = await fetch('/api/trips?limit=500');
+  const response = await fetch('/api/trips?limit=1000');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -590,7 +590,7 @@ async function fetchTopBoats(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
     // Pass landing_id to server, do other filtering client-side
     const serverFilters = apiFilters.landing_id ? { landing_id: apiFilters.landing_id } : {};
-    return apiClient.fetchTrips(500, serverFilters, { cancelKey: 'top-boats' })
+    return apiClient.fetchTrips(1000, serverFilters, { cancelKey: 'top-boats' })
       .then(trips => calculateTopBoats(trips, apiFilters));
   }
 
@@ -692,13 +692,13 @@ async function loadRecentTrips(apiFilters) {
 async function fetchRecentTrips(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
     // Use existing /api/trips endpoint and apply filtering
-    const trips = await apiClient.fetchTrips(50, {}, { cancelKey: 'recent-trips' });
+    const trips = await apiClient.fetchTrips(1000, {}, { cancelKey: 'recent-trips' });
     const filtered = filterTripsData(trips, apiFilters);
     return filtered.slice(0, 10);
   }
 
   // Fallback to direct API call to working /api/trips endpoint
-  const response = await fetch('/api/trips?limit=50');
+  const response = await fetch('/api/trips?limit=1000');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }

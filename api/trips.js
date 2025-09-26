@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     // Parse query parameters
-    const { landing_id, limit = 50, offset = 0 } = req.query;
+    const { landing_id, limit = 1000, offset = 0 } = req.query;
 
     // Build query
     let query = `${SUPABASE_URL}/rest/v1/trips?select=*,boat:boats(name,landing:landings(name)),catches(*)&order=trip_date.desc&limit=${limit}&offset=${offset}`;
