@@ -491,8 +491,12 @@ async function loadCharts(filterValues, apiFilters) {
  */
 async function fetchDailyCatches(days, apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    // Use existing /api/trips and aggregate by date
-    return apiClient.fetchTrips(null, {}, { cancelKey: 'daily-catches' })
+    // Pass date range and landing_id to server, do other filtering client-side
+    const serverFilters = {};
+    if (apiFilters.landing_id) serverFilters.landing_id = apiFilters.landing_id;
+    if (apiFilters.startDate) serverFilters.startDate = apiFilters.startDate;
+    if (apiFilters.endDate) serverFilters.endDate = apiFilters.endDate;
+    return apiClient.fetchTrips(1000, serverFilters, { cancelKey: 'daily-catches' })
       .then(trips => aggregateDailyCatches(trips, days, apiFilters));
   }
 
@@ -608,15 +612,23 @@ function aggregateDailyCatches(trips, days, apiFilters) {
 
 async function fetchTopBoats(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    // Pass landing_id to server, do other filtering client-side
-    const serverFilters = apiFilters.landing_id ? { landing_id: apiFilters.landing_id } : {};
+    // Pass date range and landing_id to server, do other filtering client-side
+    const serverFilters = {};
+    if (apiFilters.landing_id) serverFilters.landing_id = apiFilters.landing_id;
+    if (apiFilters.startDate) serverFilters.startDate = apiFilters.startDate;
+    if (apiFilters.endDate) serverFilters.endDate = apiFilters.endDate;
     return apiClient.fetchTrips(1000, serverFilters, { cancelKey: 'top-boats' })
       .then(trips => calculateTopBoats(trips, apiFilters));
   }
 
   // Fallback: use /api/trips and calculate top boats
-  const landingParam = apiFilters.landing_id ? `&landing_id=${apiFilters.landing_id}` : '';
-  const response = await fetch(`/api/trips?limit=500${landingParam}`);
+  const dateParams = [];
+  if (apiFilters.startDate) dateParams.push(`startDate=${apiFilters.startDate}`);
+  if (apiFilters.endDate) dateParams.push(`endDate=${apiFilters.endDate}`);
+  const landingParam = apiFilters.landing_id ? `landing_id=${apiFilters.landing_id}` : '';
+
+  const queryParams = ['limit=1000', landingParam, ...dateParams].filter(Boolean).join('&');
+  const response = await fetch(`/api/trips?${queryParams}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -711,8 +723,12 @@ async function loadRecentTrips(apiFilters) {
  */
 async function fetchRecentTrips(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    // Use existing /api/trips endpoint and apply filtering
-    const trips = await apiClient.fetchTrips(1000, {}, { cancelKey: 'recent-trips' });
+    // Pass date range and landing_id to server, do other filtering client-side
+    const serverFilters = {};
+    if (apiFilters.landing_id) serverFilters.landing_id = apiFilters.landing_id;
+    if (apiFilters.startDate) serverFilters.startDate = apiFilters.startDate;
+    if (apiFilters.endDate) serverFilters.endDate = apiFilters.endDate;
+    const trips = await apiClient.fetchTrips(1000, serverFilters, { cancelKey: 'recent-trips' });
     const filtered = filterTripsData(trips, apiFilters);
     return filtered.slice(0, 10);
   }
