@@ -540,13 +540,15 @@ async function loadRecentTrips(apiFilters) {
   try {
     const trips = await fetchRecentTrips(apiFilters);
     const formatted = trips.map((trip) => ({
-      date: trip.date,
-      boat: trip.boat,
-      landing: trip.landing,
-      duration: trip.duration,
-      anglers: trip.anglers,
-      fishCount: trip.fishCount,
-      topSpecies: trip.topSpecies || 'N/A',
+      date: trip.trip_date || trip.date,
+      boat: trip.boat?.name || trip.boat || 'Unknown',
+      landing: trip.boat?.landing?.name || trip.landing || 'Unknown',
+      duration: trip.trip_duration || trip.duration || 'N/A',
+      anglers: trip.anglers || 'N/A',
+      fishCount: trip.total_fish || trip.fishCount || 0,
+      topSpecies: (trip.catches && trip.catches.length > 0)
+        ? trip.catches[0].species_name || trip.catches[0].species || 'N/A'
+        : trip.topSpecies || 'N/A',
     }));
 
     updateTableBody('recentTripsTable', columns, formatted, 'No recent trips found');
