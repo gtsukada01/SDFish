@@ -241,7 +241,16 @@ const refreshFilterOptions = withErrorBoundary(async function refreshFilterOptio
   showFiltersLoading();
 
   try {
-    const filters = await fetchFilters(landingId);
+    // Get comprehensive trips data to extract filter options
+    const response = await fetch('/api/trips?limit=500');
+    if (!response.ok) {
+      throw new Error(`API Error: ${response.status}`);
+    }
+    const result = await response.json();
+    const trips = result.success ? result.data : result;
+
+    // Extract filter options from trips data
+    const filters = generateFilterOptionsFromTrips(trips, landingId);
     applyFiltersToSelects(filters);
     return filters;
   } catch (error) {
@@ -260,6 +269,45 @@ const refreshFilterOptions = withErrorBoundary(async function refreshFilterOptio
     throw error;
   }
 }, { category: ERROR_CATEGORIES.NETWORK, level: ERROR_LEVELS.MEDIUM, name: 'refreshFilterOptions' });
+
+// Helper function to generate filter options from trips data
+function generateFilterOptionsFromTrips(trips, landingId) {
+  const species = new Set();
+  const durations = new Set();
+  const boats = new Set();
+
+  trips.forEach(trip => {
+    // Filter by landing if specified
+    if (landingId && landingId !== 'all' && trip.boat?.landing_id !== parseInt(landingId)) {
+      return;
+    }
+
+    // Extract species from catches
+    if (trip.catches && Array.isArray(trip.catches)) {
+      trip.catches.forEach(catch_ => {
+        if (catch_.species_name || catch_.species) {
+          species.add(catch_.species_name || catch_.species);
+        }
+      });
+    }
+
+    // Extract durations
+    if (trip.trip_duration) {
+      durations.add(trip.trip_duration);
+    }
+
+    // Extract boat names
+    if (trip.boat?.name) {
+      boats.add(trip.boat.name);
+    }
+  });
+
+  return {
+    species: Array.from(species).sort().map(name => ({ value: name, label: name })),
+    durations: Array.from(durations).sort().map(duration => ({ value: duration, label: duration })),
+    boats: Array.from(boats).sort().map(name => ({ value: name, label: name }))
+  };
+}
 
 /**
  * Wrapper to fetch filters via API client or legacy fetch
