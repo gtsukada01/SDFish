@@ -508,6 +508,12 @@ async function fetchDailyCatches(days, apiFilters) {
 // Helper function to filter trips based on API filters
 // Note: landing_id filtering is handled server-side, this handles client-side filters
 function filterTripsData(trips, apiFilters) {
+  console.log('filterTripsData DEBUG:', {
+    totalTrips: trips?.length,
+    apiFilters: apiFilters,
+    sampleTrip: trips?.[0]
+  });
+
   if (!apiFilters || Object.keys(apiFilters).length === 0) {
     return trips;
   }
@@ -531,8 +537,17 @@ function filterTripsData(trips, apiFilters) {
     }
 
     // Filter by boat
-    if (apiFilters.boat && trip.boat?.name !== apiFilters.boat) {
-      return false;
+    if (apiFilters.boat) {
+      const matches = trip.boat?.name === apiFilters.boat;
+      if (apiFilters.boat === 'Liberty') {
+        console.log('Liberty boat filter check:', {
+          tripDate: trip.trip_date,
+          tripBoat: trip.boat?.name,
+          filterBoat: apiFilters.boat,
+          matches: matches
+        });
+      }
+      if (!matches) return false;
     }
 
     // Skip landing filtering - already handled server-side via landing_id parameter
