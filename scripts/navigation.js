@@ -63,7 +63,9 @@ export async function initializeNavigation({ filters = null } = {}) {
     const filtersData =
       filters ?? (await fetchFiltersForLanding(null, { cancelKey: 'navigation-init' }));
 
-    navigationData.landingsByRegion['san-diego'] = filtersData.landings.map((landing) => ({
+    // Handle API response structure: { success: true, data: { landings: [...] } }
+    const landings = filtersData.data?.landings || filtersData.landings || [];
+    navigationData.landingsByRegion['san-diego'] = landings.map((landing) => ({
       id: landing.id,
       name: landing.name,
       count: landing.count ?? 0,
