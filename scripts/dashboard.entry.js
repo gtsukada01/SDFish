@@ -40,6 +40,7 @@ import {
 const FILTER_SELECT_IDS = ['speciesFilter', 'durationFilter', 'boatFilter'];
 let selectedLandingId = null;
 let landingIdToNameMap = {}; // Maps landing ID to landing name
+let boatNameToIdMap = {}; // Maps boat name to boat ID for filtering
 let chartsInitialized = false;
 let tableInitialized = false;
 
@@ -215,7 +216,15 @@ function buildApiFilters(values) {
   if (values.endDate) filters.endDate = values.endDate;
   if (values.species !== 'all') filters.species = values.species;
   if (values.duration !== 'all') filters.duration = values.duration;
-  if (values.boat !== 'all') filters.boat = values.boat;
+
+  // Handle boat filtering - convert boat name to boat_id for API
+  if (values.boat !== 'all') {
+    filters.boat = values.boat; // Keep for client-side filtering
+    if (boatNameToIdMap[values.boat]) {
+      filters.boat_id = boatNameToIdMap[values.boat]; // Add for server-side filtering
+    }
+  }
+
   // Send landing ID directly to API (not converted to name)
   if (selectedLandingId) {
     filters.landing_id = selectedLandingId;
@@ -302,9 +311,13 @@ function generateFilterOptionsFromTrips(trips, landingId) {
       durations.add(trip.trip_duration);
     }
 
-    // Extract boat names
+    // Extract boat names and build name-to-ID mapping
     if (trip.boat?.name) {
       boats.add(trip.boat.name);
+      // Build boat name to ID mapping for API filtering
+      if (trip.boat_id) {
+        boatNameToIdMap[trip.boat.name] = trip.boat_id;
+      }
     }
   });
 
@@ -876,9 +889,10 @@ async function initializeDashboard() {
           landingIdToNameMap[landing.id] = landing.name;
         });
 
-        // Also set the mapping in the state module if using new state
+        // Also set the mappings in the state module if using new state
         if (isFeatureEnabled('USE_NEW_STATE')) {
           state.setLandingMapping(landingIdToNameMap);
+          state.setBoatMapping(boatNameToIdMap);
         }
       }
     }

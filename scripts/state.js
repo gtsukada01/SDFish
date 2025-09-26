@@ -17,6 +17,7 @@ class StateManager {
       starredLandings: [],
       landingsData: {},
       landingIdToNameMap: {}, // Maps landing ID to landing name for filtering
+      boatNameToIdMap: {}, // Maps boat name to boat ID for filtering
       charts: {
         dailyCatchesData: null,
         topBoatsData: null,
@@ -196,7 +197,15 @@ class StateManager {
     const filters = {};
     if (this.state.filters.species !== 'all') filters.species = this.state.filters.species;
     if (this.state.filters.duration !== 'all') filters.duration = this.state.filters.duration;
-    if (this.state.filters.boat !== 'all') filters.boat = this.state.filters.boat;
+
+    // Handle boat filtering - convert boat name to boat_id for API
+    if (this.state.filters.boat !== 'all') {
+      filters.boat = this.state.filters.boat; // Keep for client-side filtering
+      if (this.state.boatNameToIdMap[this.state.filters.boat]) {
+        filters.boat_id = this.state.boatNameToIdMap[this.state.filters.boat]; // Add for server-side filtering
+      }
+    }
+
     // Send landing ID directly to API (not converted to name)
     if (this.state.selectedLanding) {
       filters.landing_id = this.state.selectedLanding;
@@ -210,6 +219,14 @@ class StateManager {
    */
   setLandingMapping(mapping) {
     this.state.landingIdToNameMap = mapping;
+  }
+
+  /**
+   * Set boat name to ID mapping for filtering
+   * @param {Object} mapping - Object mapping boat names to IDs
+   */
+  setBoatMapping(mapping) {
+    this.state.boatNameToIdMap = mapping;
   }
 
   /**
