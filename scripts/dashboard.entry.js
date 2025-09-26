@@ -48,11 +48,13 @@ let tableInitialized = false;
  */
 function getDefaultDateRange() {
   const endDate = new Date();
-  const startDate = new Date('2025-01-01');
-  return {
+  const startDate = new Date('2024-01-01'); // Changed to 2024 to get full year of data
+  const result = {
     start: startDate.toISOString().split('T')[0],
     end: endDate.toISOString().split('T')[0],
   };
+  console.log('Default date range:', result);
+  return result;
 }
 
 /**
@@ -520,8 +522,26 @@ function filterTripsData(trips, apiFilters) {
 
   return trips.filter(trip => {
     // Filter by date range
-    if (apiFilters.startDate && trip.trip_date < apiFilters.startDate) return false;
-    if (apiFilters.endDate && trip.trip_date > apiFilters.endDate) return false;
+    if (apiFilters.startDate && trip.trip_date < apiFilters.startDate) {
+      if (apiFilters.boat === 'Liberty') {
+        console.log('Liberty trip filtered out by startDate:', {
+          tripDate: trip.trip_date,
+          startDate: apiFilters.startDate,
+          comparison: `${trip.trip_date} < ${apiFilters.startDate}`
+        });
+      }
+      return false;
+    }
+    if (apiFilters.endDate && trip.trip_date > apiFilters.endDate) {
+      if (apiFilters.boat === 'Liberty') {
+        console.log('Liberty trip filtered out by endDate:', {
+          tripDate: trip.trip_date,
+          endDate: apiFilters.endDate,
+          comparison: `${trip.trip_date} > ${apiFilters.endDate}`
+        });
+      }
+      return false;
+    }
 
     // Filter by species
     if (apiFilters.species) {
