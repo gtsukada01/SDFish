@@ -518,7 +518,13 @@ function aggregateDailyCatches(trips, days) {
     }
   });
 
-  return Object.values(dailyStats).sort((a, b) => new Date(a.date) - new Date(b.date));
+  const sortedData = Object.values(dailyStats).sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  // Transform to chart format: { labels: [...], fish: [...] }
+  return {
+    labels: sortedData.map(d => d.date),
+    fish: sortedData.map(d => d.catches)
+  };
 }
 
 async function fetchTopBoats(filters) {
@@ -556,10 +562,16 @@ function calculateTopBoats(trips) {
     boatStats[boatName].tripCount += 1;
   });
 
-  return Object.values(boatStats)
+  const sortedBoats = Object.values(boatStats)
     .map(boat => ({ ...boat, avgPerTrip: Math.round(boat.totalFish / boat.tripCount) }))
     .sort((a, b) => b.totalFish - a.totalFish)
     .slice(0, 10);
+
+  // Transform to chart format: { labels: [...], fish: [...] }
+  return {
+    labels: sortedBoats.map(boat => boat.name),
+    fish: sortedBoats.map(boat => boat.totalFish)
+  };
 }
 
 async function fetchMoonPhaseData() {
