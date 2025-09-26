@@ -204,6 +204,44 @@ export async function fetchFilters(landingId = null, options = {}) {
 }
 
 /**
+ * Fetch basic statistics from working /api/stats endpoint
+ * @param {Object} filters - Additional filters (not currently used by endpoint)
+ * @param {Object} options - Fetch options
+ * @returns {Promise<Object>} - Statistics data
+ */
+export async function fetchStats(filters = {}, options = {}) {
+  return fetchWithErrorHandling(`${BASE_URL}/stats`, {
+    cancelKey: options.cancelKey ?? 'stats',
+    cancelPrevious: options.cancelPrevious ?? true,
+    timeout: options.timeout,
+    fetchOptions: options.fetchOptions,
+  });
+}
+
+/**
+ * Fetch trips from working /api/trips endpoint
+ * @param {number} limit - Optional limit for number of trips
+ * @param {Object} filters - Additional filters
+ * @param {Object} options - Fetch options
+ * @returns {Promise<Array>} - Array of trip data
+ */
+export async function fetchTrips(limit = null, filters = {}, options = {}) {
+  const params = { ...filters };
+  if (limit) params.limit = limit;
+  const queryString = buildQueryString(params);
+
+  const response = await fetchWithErrorHandling(`${BASE_URL}/trips${queryString}`, {
+    cancelKey: options.cancelKey ?? 'trips',
+    cancelPrevious: options.cancelPrevious ?? true,
+    timeout: options.timeout,
+    fetchOptions: options.fetchOptions,
+  });
+
+  // Extract trips from API response structure: { success: true, data: [...] }
+  return response.success ? response.data : response;
+}
+
+/**
  * Fetch statistics for date range
  * @param {string} startDate - Start date (YYYY-MM-DD)
  * @param {string} endDate - End date (YYYY-MM-DD)

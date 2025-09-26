@@ -350,19 +350,12 @@ const loadStats = withErrorBoundary(async function loadStats(filterValues, apiFi
  */
 async function fetchStats(startDate, endDate, filters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    return apiClient.fetchStatsForDateRange(startDate, endDate, filters, { cancelKey: 'stats' });
+    // Use the simple /api/stats endpoint that already works
+    return apiClient.fetchStats(filters, { cancelKey: 'stats' });
   }
 
-  const params = new URLSearchParams(filters);
-  const query = params.toString();
-  const queryString = query ? `?${query}` : '';
-
-  const url =
-    startDate && endDate
-      ? `http://localhost:5001/api/stats/date-range/${startDate}/${endDate}${queryString}`
-      : `http://localhost:5001/api/stats/last-30-days${queryString}`;
-
-  const response = await fetch(url);
+  // Fallback to direct API call to working /api/stats endpoint
+  const response = await fetch('/api/stats');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -444,34 +437,81 @@ async function loadCharts(filterValues, apiFilters) {
  */
 async function fetchDailyCatches(days, filters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    return apiClient.fetchDailyCatches(days, filters, { cancelKey: 'daily-catches' });
+    // Use existing /api/trips and aggregate by date
+    return apiClient.fetchTrips(null, filters, { cancelKey: 'daily-catches' })
+      .then(trips => aggregateDailyCatches(trips, days));
   }
 
-  const params = new URLSearchParams(filters);
-  const query = params.toString();
-  const queryString = query ? `?${query}` : '';
-
-  const response = await fetch(`http://localhost:5001/api/daily-catches/${days}${queryString}`);
+  // Fallback: use /api/trips and aggregate daily catches
+  const response = await fetch('/api/trips?limit=500');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
-  return response.json();
+  const result = await response.json();
+
+  const trips = result.success ? result.data : result;
+  return aggregateDailyCatches(trips, days);
+}
+
+// Helper function to aggregate daily catches from trip data
+function aggregateDailyCatches(trips, days) {
+  const dailyStats = {};
+  const cutoffDate = new Date();
+  cutoffDate.setDate(cutoffDate.getDate() - days);
+
+  trips.forEach(trip => {
+    const tripDate = new Date(trip.trip_date);
+    if (tripDate >= cutoffDate) {
+      const dateKey = trip.trip_date;
+      if (!dailyStats[dateKey]) {
+        dailyStats[dateKey] = { date: dateKey, catches: 0 };
+      }
+      dailyStats[dateKey].catches += trip.total_fish || 0;
+    }
+  });
+
+  return Object.values(dailyStats).sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
 async function fetchTopBoats(filters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    return apiClient.fetchTopBoats(10, filters, { cancelKey: 'top-boats' });
+    // Use existing /api/trips and calculate top boats
+    return apiClient.fetchTrips(null, filters, { cancelKey: 'top-boats' })
+      .then(trips => calculateTopBoats(trips));
   }
 
-  const params = new URLSearchParams(filters);
-  const query = params.toString();
-  const queryString = query ? `?${query}` : '';
-
-  const response = await fetch(`http://localhost:5001/api/top-boats/10${queryString}`);
+  // Fallback: use /api/trips and calculate top boats
+  const response = await fetch('/api/trips?limit=500');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
-  return response.json();
+  const result = await response.json();
+
+  const trips = result.success ? result.data : result;
+  return calculateTopBoats(trips);
+}
+
+// Helper function to calculate top boats from trip data
+function calculateTopBoats(trips) {
+  const boatStats = {};
+
+  trips.forEach(trip => {
+    const boatName = trip.boat?.name || 'Unknown';
+    if (!boatStats[boatName]) {
+      boatStats[boatName] = {
+        name: boatName,
+        totalFish: 0,
+        tripCount: 0
+      };
+    }
+    boatStats[boatName].totalFish += trip.total_fish || 0;
+    boatStats[boatName].tripCount += 1;
+  });
+
+  return Object.values(boatStats)
+    .map(boat => ({ ...boat, avgPerTrip: Math.round(boat.totalFish / boat.tripCount) }))
+    .sort((a, b) => b.totalFish - a.totalFish)
+    .slice(0, 10);
 }
 
 async function fetchMoonPhaseData() {
@@ -524,18 +564,20 @@ async function loadRecentTrips(apiFilters) {
  */
 async function fetchRecentTrips(filters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    return apiClient.fetchRecentTrips(10, filters, { cancelKey: 'recent-trips' });
+    // Use existing /api/trips endpoint and get first 10 trips
+    return apiClient.fetchTrips(10, filters, { cancelKey: 'recent-trips' });
   }
 
-  const params = new URLSearchParams(filters);
-  const query = params.toString();
-  const queryString = query ? `?${query}` : '';
-
-  const response = await fetch(`http://localhost:5001/api/recent-trips/10${queryString}`);
+  // Fallback to direct API call to working /api/trips endpoint
+  const response = await fetch('/api/trips?limit=50');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
-  return response.json();
+  const result = await response.json();
+
+  // Extract trips from API response and limit to 10
+  const trips = result.success ? result.data : result;
+  return Array.isArray(trips) ? trips.slice(0, 10) : [];
 }
 
 /**
