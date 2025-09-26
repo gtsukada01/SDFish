@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     // Parse query parameters
-    const { landing_id, limit = 1000, offset = 0, startDate, endDate } = req.query;
+    const { landing_id, boat_id, limit = 1000, offset = 0, startDate, endDate } = req.query;
 
     // Build query with date range filtering to avoid September windowing
     let query = `${SUPABASE_URL}/rest/v1/trips?select=*,boat:boats(name,landing:landings(name)),catches(*)`;
@@ -33,6 +33,11 @@ export default async function handler(req, res) {
     // Add landing filter to further narrow results
     if (landing_id && landing_id !== 'all') {
       query += `&landing_id=eq.${landing_id}`;
+    }
+
+    // Add boat filter for specific boat filtering (like Liberty)
+    if (boat_id && boat_id !== 'all') {
+      query += `&boat_id=eq.${boat_id}`;
     }
 
     // Apply ordering and pagination after filtering
