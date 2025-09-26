@@ -329,7 +329,7 @@ function registerHealthChecks() {
   // API health check
   registerHealthCheck('api_connectivity', async () => {
     try {
-      const response = await fetch('http://localhost:5001/api/health', {
+      const response = await fetch('/api/health', {
         method: 'GET',
         timeout: 3000
       });

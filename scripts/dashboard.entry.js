@@ -39,6 +39,7 @@ import {
 
 const FILTER_SELECT_IDS = ['speciesFilter', 'durationFilter', 'boatFilter'];
 let selectedLandingId = null;
+let landingIdToNameMap = {}; // Maps landing ID to landing name
 let chartsInitialized = false;
 let tableInitialized = false;
 
@@ -213,7 +214,10 @@ function buildApiFilters(values) {
   if (values.species !== 'all') filters.species = values.species;
   if (values.duration !== 'all') filters.duration = values.duration;
   if (values.boat !== 'all') filters.boat = values.boat;
-  if (selectedLandingId) filters.landing = selectedLandingId;
+  // Send landing ID directly to API (not converted to name)
+  if (selectedLandingId) {
+    filters.landing_id = selectedLandingId;
+  }
   return filters;
 }
 
@@ -483,11 +487,11 @@ async function loadCharts(filterValues, apiFilters) {
 /**
  * Fetch chart data via API client or legacy fetch
  */
-async function fetchDailyCatches(days, filters) {
+async function fetchDailyCatches(days, apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
     // Use existing /api/trips and aggregate by date
-    return apiClient.fetchTrips(null, filters, { cancelKey: 'daily-catches' })
-      .then(trips => aggregateDailyCatches(trips, days));
+    return apiClient.fetchTrips(null, {}, { cancelKey: 'daily-catches' })
+      .then(trips => aggregateDailyCatches(trips, days, apiFilters));
   }
 
   // Fallback: use /api/trips and aggregate daily catches
@@ -498,16 +502,56 @@ async function fetchDailyCatches(days, filters) {
   const result = await response.json();
 
   const trips = result.success ? result.data : result;
-  return aggregateDailyCatches(trips, days);
+  return aggregateDailyCatches(trips, days, apiFilters);
+}
+
+// Helper function to filter trips based on API filters
+// Note: landing_id filtering is handled server-side, this handles client-side filters
+function filterTripsData(trips, apiFilters) {
+  if (!apiFilters || Object.keys(apiFilters).length === 0) {
+    return trips;
+  }
+
+  return trips.filter(trip => {
+    // Filter by date range
+    if (apiFilters.startDate && trip.trip_date < apiFilters.startDate) return false;
+    if (apiFilters.endDate && trip.trip_date > apiFilters.endDate) return false;
+
+    // Filter by species
+    if (apiFilters.species) {
+      const hasSpecies = trip.catches && trip.catches.some(catch_ =>
+        (catch_.species_name || catch_.species) === apiFilters.species
+      );
+      if (!hasSpecies) return false;
+    }
+
+    // Filter by duration
+    if (apiFilters.duration && trip.trip_duration !== apiFilters.duration) {
+      return false;
+    }
+
+    // Filter by boat
+    if (apiFilters.boat && trip.boat?.name !== apiFilters.boat) {
+      return false;
+    }
+
+    // Skip landing filtering - already handled server-side via landing_id parameter
+    // if (apiFilters.landing_id) { /* server handles this */ }
+
+    return true;
+  });
 }
 
 // Helper function to aggregate daily catches from trip data
-function aggregateDailyCatches(trips, days) {
+function aggregateDailyCatches(trips, days, apiFilters) {
+  // Apply filtering first
+  const filteredTrips = filterTripsData(trips, apiFilters);
+
   const dailyStats = {};
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - days);
 
-  trips.forEach(trip => {
+  filteredTrips.forEach(trip => {
     const tripDate = new Date(trip.trip_date);
     if (tripDate >= cutoffDate) {
       const dateKey = trip.trip_date;
@@ -527,29 +571,35 @@ function aggregateDailyCatches(trips, days) {
   };
 }
 
-async function fetchTopBoats(filters) {
+async function fetchTopBoats(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    // Use existing /api/trips and calculate top boats
-    return apiClient.fetchTrips(null, filters, { cancelKey: 'top-boats' })
-      .then(trips => calculateTopBoats(trips));
+    // Pass landing_id to server, do other filtering client-side
+    const serverFilters = apiFilters.landing_id ? { landing_id: apiFilters.landing_id } : {};
+    return apiClient.fetchTrips(500, serverFilters, { cancelKey: 'top-boats' })
+      .then(trips => calculateTopBoats(trips, apiFilters));
   }
 
   // Fallback: use /api/trips and calculate top boats
-  const response = await fetch('/api/trips?limit=500');
+  const landingParam = apiFilters.landing_id ? `&landing_id=${apiFilters.landing_id}` : '';
+  const response = await fetch(`/api/trips?limit=500${landingParam}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
   const result = await response.json();
 
   const trips = result.success ? result.data : result;
-  return calculateTopBoats(trips);
+  return calculateTopBoats(trips, apiFilters);
 }
 
 // Helper function to calculate top boats from trip data
-function calculateTopBoats(trips) {
+function calculateTopBoats(trips, apiFilters) {
+  // Apply filtering first
+  const filteredTrips = filterTripsData(trips, apiFilters);
+
   const boatStats = {};
 
-  trips.forEach(trip => {
+  filteredTrips.forEach(trip => {
+
     const boatName = trip.boat?.name || 'Unknown';
     if (!boatStats[boatName]) {
       boatStats[boatName] = {
@@ -579,7 +629,7 @@ async function fetchMoonPhaseData() {
     return apiClient.fetchMoonPhaseData({ cancelKey: 'moon-phase' });
   }
 
-  const response = await fetch('http://localhost:5001/api/moon-phase-data');
+  const response = await fetch('/api/moon-phase-data');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -624,10 +674,12 @@ async function loadRecentTrips(apiFilters) {
 /**
  * Fetch recent trips via API client or legacy fetch
  */
-async function fetchRecentTrips(filters) {
+async function fetchRecentTrips(apiFilters) {
   if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    // Use existing /api/trips endpoint and get first 10 trips
-    return apiClient.fetchTrips(10, filters, { cancelKey: 'recent-trips' });
+    // Use existing /api/trips endpoint and apply filtering
+    const trips = await apiClient.fetchTrips(50, {}, { cancelKey: 'recent-trips' });
+    const filtered = filterTripsData(trips, apiFilters);
+    return filtered.slice(0, 10);
   }
 
   // Fallback to direct API call to working /api/trips endpoint
@@ -637,9 +689,10 @@ async function fetchRecentTrips(filters) {
   }
   const result = await response.json();
 
-  // Extract trips from API response and limit to 10
+  // Extract trips from API response, apply filtering, and limit to 10
   const trips = result.success ? result.data : result;
-  return Array.isArray(trips) ? trips.slice(0, 10) : [];
+  const filtered = filterTripsData(trips, apiFilters);
+  return Array.isArray(filtered) ? filtered.slice(0, 10) : [];
 }
 
 /**
@@ -664,6 +717,16 @@ async function loadDashboardData() {
     ? state.getApiFilters()
     : buildApiFilters(filterValues);
 
+  // Optional debug logging (can be enabled via window.__debugFilters = true)
+  if (window.__debugFilters) {
+    console.log('Filter Debug:', {
+      dom: filterValues,
+      state: isFeatureEnabled('USE_NEW_STATE') ? state.getApiFilters() : 'not using new state',
+      apiFilters: apiFilters,
+      selectedLandingId: selectedLandingId
+    });
+  }
+
   await loadStats(filterValues, apiFilters);
   await loadCharts(filterValues, apiFilters);
   await loadRecentTrips(apiFilters);
@@ -681,7 +744,11 @@ async function handleFilterChange() {
  */
 function attachFilterListeners() {
   const form = document.getElementById('filtersForm');
-  if (!form) return;
+  if (!form) {
+    if (window.__debugFilters) console.warn('filtersForm element not found');
+    return;
+  }
+  if (window.__debugFilters) console.log('Filter listeners attached to form:', form);
 
   form.addEventListener('change', (event) => {
     if (event.target.matches('select, input[type="date"]')) {
@@ -750,6 +817,19 @@ async function initializeDashboard() {
     if (landingsResponse.ok) {
       const result = await landingsResponse.json();
       landingsData = result.success ? result.data : result;
+
+      // Build the landing ID to name mapping for filtering
+      if (landingsData?.landings) {
+        landingIdToNameMap = {};
+        landingsData.landings.forEach(landing => {
+          landingIdToNameMap[landing.id] = landing.name;
+        });
+
+        // Also set the mapping in the state module if using new state
+        if (isFeatureEnabled('USE_NEW_STATE')) {
+          state.setLandingMapping(landingIdToNameMap);
+        }
+      }
     }
 
     await initializeNavigation({ filters: landingsData });

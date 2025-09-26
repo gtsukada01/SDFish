@@ -306,7 +306,7 @@ export async function fetchFiltersForLanding(landingId, options = {}) {
   }
 
   const queryString = landingId ? `?landing=${landingId}` : '';
-  const response = await fetch(`http://localhost:5001/api/filters${queryString}`);
+  const response = await fetch(`/api/filters${queryString}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
