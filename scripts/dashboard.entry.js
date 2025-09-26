@@ -729,8 +729,18 @@ async function initializeDashboard() {
   attachFilterListeners();
 
   try {
+    // Get filter options for dropdowns
     const filters = await refreshFilterOptions(null);
-    await initializeNavigation({ filters });
+
+    // Get landing locations for navigation (separate API call)
+    const landingsResponse = await fetch('/api/filters');
+    let landingsData = null;
+    if (landingsResponse.ok) {
+      const result = await landingsResponse.json();
+      landingsData = result.success ? result.data : result;
+    }
+
+    await initializeNavigation({ filters: landingsData });
   } catch (error) {
     if (error?.isCanceled) {
       return;
