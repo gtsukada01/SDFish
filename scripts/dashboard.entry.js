@@ -538,18 +538,19 @@ async function fetchDailyCatches(days, apiFilters) {
   if (apiFilters.boat_id) params.append('boat_id', apiFilters.boat_id);
 
   const url = `/api/trips?${params.toString()}`;
-  try { console.log('[filters] request', url, { apiFilters }); } catch {}
+  const reqId_daily = (()=>{ try{ return Math.random().toString(36).slice(2,8)+'-'+Date.now().toString(36).slice(-4);}catch{return Date.now().toString()}})();
+  try { console.log('[filters] request', url, { apiFilters, reqId: reqId_daily }); } catch {}
   if (window.__debugFilters) {
     console.log('🌐 Daily Catches API Call:', url, { apiFilters });
   }
 
-  const response = await fetch(url);
+  const response = await fetch(url, { headers: { 'X-Client-Request-Id': reqId_daily } });
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
   const result = await response.json();
   const trips = result.success ? result.data : result;
-  try { console.log('[filters] response', { endpoint: 'dailyCatches', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined }); } catch {}
+  try { console.log('[filters] response', { endpoint: 'dailyCatches', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined, reqId: reqId_daily, srvId: response.headers.get('X-Request-Id') || undefined }); } catch {}
   return aggregateDailyCatches(trips, days, apiFilters);
 }
 
@@ -673,14 +674,15 @@ async function fetchTopBoats(apiFilters) {
 
   const queryParams = ['limit=1000', landingParam, boatParam, ...dateParams].filter(Boolean).join('&');
 
-  try { console.log('[filters] request', `/api/trips?${queryParams}`, { apiFilters }); } catch {}
-  const response = await fetch(`/api/trips?${queryParams}`);
+  const reqId_top = (()=>{ try{ return Math.random().toString(36).slice(2,8)+'-'+Date.now().toString(36).slice(-4);}catch{return Date.now().toString()}})();
+  try { console.log('[filters] request', `/api/trips?${queryParams}`, { apiFilters, reqId: reqId_top }); } catch {}
+  const response = await fetch(`/api/trips?${queryParams}` , { headers: { 'X-Client-Request-Id': reqId_top } });
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
   const result = await response.json();
   const trips = result.success ? result.data : result;
-  try { console.log('[filters] response', { endpoint: 'topBoats', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined }); } catch {}
+  try { console.log('[filters] response', { endpoint: 'topBoats', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined, reqId: reqId_top, srvId: response.headers.get('X-Request-Id') || undefined }); } catch {}
   return calculateTopBoats(trips, apiFilters);
 }
 
@@ -824,6 +826,12 @@ async function loadDashboardData() {
   try { console.log('[filters] enter loadDashboardData'); } catch {}
   const startTime = Date.now();
   dbg('loadDashboardData() called');
+  try {
+    // main body continues below
+  } catch (err) {
+    try { console.error('[filters] loadDashboardData error', err); } catch {}
+    throw err;
+  }
 
   const filterValues = getFilterValues();
   dbg('getFilterValues() result:', filterValues);
@@ -1042,6 +1050,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Use capture to avoid being blocked by other listeners; attach once
   document.addEventListener('change', onDelegatedChange, true);
+
+  // Also handle custom select UIs that may not emit native change events
+  document.addEventListener('click', (event) => {
+    const form = (event.target && event.target.closest) ? event.target.closest('#filtersForm') : null;
+    const isCustomSelect = (event.target && event.target.closest) ? event.target.closest('[data-filter-select]') : null;
+    if (form && isCustomSelect) {
+      try { console.log('[filters] delegated select click'); } catch {}
+      if (typeof handleFilterChange === 'function') {
+        handleFilterChange();
+      } else if (typeof loadDashboardData === 'function') {
+        try { console.warn('[filters] handleFilterChange missing; calling loadDashboardData() from delegated click'); } catch {}
+        loadDashboardData();
+      }
+    }
+  }, true);
 
   try {
     console.log('[filters] Delegation attach: ready');
