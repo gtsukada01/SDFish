@@ -1,5 +1,5 @@
 ## Landing Filters Diagnostic Notes
-**Last updated:** 2025-09-27 09:41 PDT (CRID-20250927-0941)
+**Last updated:** 2025-09-27 09:42 PDT (CRID-20250927-0942)
 
 ### Current Status
 - `state.getApiFilters()` now emits `startDate`, `endDate`, `landing_id`, and resolved `boat_id` while keeping client-only keys for UI filtering.
@@ -20,3 +20,8 @@
 
 ### Follow-Ups
 - Run the full Liberty regression flow in production and capture overlay/screenshots for the recovery log.
+- Manual test run plan (prod only):
+  1. Set `localStorage.debug = '1'` and optionally `window.__featureFlags.toggle('USE_NEW_API_CLIENT', true)` in console.
+  2. Reload, select Liberty, adjust date range, and confirm overlay `requestHistory` mirrors network payloads.
+  3. Grab screenshots of overlay panels + Network tab for `/api/trips` & `/api/stats` and attach to recovery log.
+  4. Clear debug flag (`localStorage.removeItem('debug')`).
