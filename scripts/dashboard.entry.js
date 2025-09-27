@@ -548,8 +548,8 @@ async function fetchDailyCatches(days, apiFilters) {
     throw new Error(`API Error: ${response.status}`);
   }
   const result = await response.json();
-
   const trips = result.success ? result.data : result;
+  try { console.log('[filters] response', { endpoint: 'dailyCatches', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined }); } catch {}
   return aggregateDailyCatches(trips, days, apiFilters);
 }
 
@@ -679,8 +679,8 @@ async function fetchTopBoats(apiFilters) {
     throw new Error(`API Error: ${response.status}`);
   }
   const result = await response.json();
-
   const trips = result.success ? result.data : result;
+  try { console.log('[filters] response', { endpoint: 'topBoats', status: response.status, rows: Array.isArray(trips) ? trips.length : undefined }); } catch {}
   return calculateTopBoats(trips, apiFilters);
 }
 
