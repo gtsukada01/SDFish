@@ -38,6 +38,8 @@ build/
 # Development files
 test/
 *.test.js
+!tests/
+!tests/*.test.js
 
 # Recovery and backup files
 *recovery*
@@ -50,6 +52,7 @@ test/
 *audit*.json
 *analysis*.json
 *.md
+!landing.md
 !package.json
 
 # Python cache
