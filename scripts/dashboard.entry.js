@@ -821,6 +821,7 @@ function calculateDayRange(startDate, endDate) {
  * Entry point to load all dashboard data
  */
 async function loadDashboardData() {
+  try { console.log('[filters] enter loadDashboardData'); } catch {}
   const startTime = Date.now();
   dbg('loadDashboardData() called');
 
@@ -1014,7 +1015,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const onDelegatedChange = (event) => {
     const form = event.target.closest('#filtersForm');
-    if (form && event.target.matches('select, input[type="date"]')) {
+    if (form && event.target.matches('select, input[type="date"], input, textarea, [role="combobox"], [data-filter]')) {
       try {
         console.log('[filters] Delegation change:', event.target.name, '=', event.target.value);
       } catch {}
