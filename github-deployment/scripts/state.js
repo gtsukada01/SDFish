@@ -16,6 +16,8 @@ class StateManager {
       },
       starredLandings: [],
       landingsData: {},
+      landingIdToNameMap: {},
+      boatNameToIdMap: {},
       charts: {
         dailyCatchesData: null,
         topBoatsData: null,
@@ -193,11 +195,48 @@ class StateManager {
    */
   getApiFilters() {
     const filters = {};
-    if (this.state.filters.species !== 'all') filters.species = this.state.filters.species;
-    if (this.state.filters.duration !== 'all') filters.duration = this.state.filters.duration;
-    if (this.state.filters.boat !== 'all') filters.boat = this.state.filters.boat;
-    if (this.state.selectedLanding) filters.landing = this.state.selectedLanding;
+    const { filters: stateFilters, selectedLanding, boatNameToIdMap } = this.state;
+
+    if (stateFilters.startDate) filters.startDate = stateFilters.startDate;
+    if (stateFilters.endDate) filters.endDate = stateFilters.endDate;
+
+    if (stateFilters.species !== 'all') {
+      filters.species = stateFilters.species;
+    }
+
+    if (stateFilters.duration !== 'all') {
+      filters.duration = stateFilters.duration;
+    }
+
+    if (stateFilters.boat !== 'all') {
+      filters.boat = stateFilters.boat;
+      const resolvedBoatId = boatNameToIdMap?.[stateFilters.boat];
+      if (resolvedBoatId) {
+        filters.boat_id = resolvedBoatId;
+      }
+    }
+
+    if (selectedLanding) {
+      filters.landing_id = selectedLanding;
+    }
+
     return filters;
+  }
+
+  /**
+   * Persist landing mapping for downstream lookups
+   * @param {Object} mapping - Map of landing_id -> landing_name
+   */
+  setLandingMapping(mapping = {}) {
+    this.state.landingIdToNameMap = { ...mapping };
+  }
+
+  /**
+   * Persist boat mapping for downstream lookups
+   * @param {Object} mapping - Map of boat_name -> boat_id
+   */
+  setBoatMapping(mapping = {}) {
+    this.state.boatNameToIdMap = { ...mapping };
   }
 
   /**
@@ -244,6 +283,8 @@ class StateManager {
       },
       starredLandings: starred,
       landingsData: {},
+      landingIdToNameMap: {},
+      boatNameToIdMap: {},
       charts: {
         dailyCatchesData: null,
         topBoatsData: null,

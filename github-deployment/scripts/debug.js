@@ -1,5 +1,5 @@
 /**
- * Temporary Debug Helper Module - PRODUCTION VERSION
+ * Temporary Debug Helper Module
  * Enable: localStorage.setItem('debug', '1')
  * Disable: localStorage.removeItem('debug')
  *
@@ -8,7 +8,12 @@
 
 // Check if debug mode is enabled
 function isDebugEnabled() {
-  return localStorage.getItem('debug') === '1' || window.__DEBUG === true;
+  try {
+    return localStorage.getItem('debug') === '1' || window.__DEBUG === true;
+  } catch (error) {
+    console.warn('[DEBUG] Unable to read debug flag from localStorage:', error);
+    return false;
+  }
 }
 
 // Debug logging helper - only logs when debug is enabled
@@ -31,10 +36,10 @@ let debugState = {
   lastResponse: null,
   mappingStatus: {
     boatNameToIdMap: false,
-    landingIdToNameMap: false
+    landingIdToNameMap: false,
   },
   activeFilters: {},
-  requestHistory: []
+  requestHistory: [],
 };
 
 // Update debug state
@@ -45,7 +50,7 @@ export function updateDebugState(type, data) {
     case 'filterChange':
       debugState.lastFilterChange = {
         ...data,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       };
       debugState.activeFilters = data.filters || {};
       dbg('Filter Change:', data);
@@ -55,7 +60,7 @@ export function updateDebugState(type, data) {
       debugState.lastRequest = {
         ...data,
         timestamp: new Date().toISOString(),
-        requestId: data.requestId || generateRequestId()
+        requestId: data.requestId || generateRequestId(),
       };
       debugState.requestHistory.push(debugState.lastRequest);
       if (debugState.requestHistory.length > 10) {
@@ -67,7 +72,7 @@ export function updateDebugState(type, data) {
     case 'response':
       debugState.lastResponse = {
         ...data,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       };
       dbg('API Response:', data.status, `${data.rowCount} rows`, `${data.duration}ms`);
       break;
@@ -75,10 +80,13 @@ export function updateDebugState(type, data) {
     case 'mapping':
       debugState.mappingStatus = {
         ...debugState.mappingStatus,
-        ...data
+        ...data,
       };
       dbg('Mapping Status:', data);
       break;
+
+    default:
+      dbg('Unknown debug state update type:', type, data);
   }
 
   updateDebugOverlay();
@@ -192,22 +200,71 @@ function updateDebugOverlay() {
   `;
 }
 
-// Initialize debug mode if enabled
-export function initDebug() {
-  if (isDebugEnabled()) {
-    console.log('%c🔍 DEBUG MODE ENABLED', 'background: #0f0; color: #000; padding: 5px 10px; font-weight: bold;');
-    console.log('Disable with: localStorage.removeItem("debug"); location.reload()');
+// Wrap fetch to add diagnostics
+export function wrapFetch(originalFetch) {
+  return async function diagnosticFetch(url, options = {}) {
+    if (!isDebugEnabled()) {
+      return originalFetch(url, options);
+    }
 
-    // Create overlay
-    createDebugOverlay();
+    const requestId = generateRequestId();
+    const startTime = Date.now();
 
-    // Make functions available globally for testing
-    window.getDebugState = () => debugState;
-    window.dbg = dbg;
+    const urlObj = new URL(url, window.location.origin);
+    const params = Object.fromEntries(urlObj.searchParams);
 
-    return true;
-  }
-  return false;
+    updateDebugState('request', {
+      url: urlObj.pathname + urlObj.search,
+      method: options.method || 'GET',
+      params,
+      requestId,
+    });
+
+    options.headers = {
+      ...options.headers,
+      'X-Client-Request-Id': requestId,
+    };
+
+    try {
+      const response = await originalFetch(url, options);
+      const duration = Date.now() - startTime;
+
+      const cloned = response.clone();
+      let rowCount = 0;
+
+      try {
+        const data = await cloned.json();
+        if (data?.data && Array.isArray(data.data)) {
+          rowCount = data.data.length;
+        } else if (Array.isArray(data)) {
+          rowCount = data.length;
+        }
+      } catch (error) {
+        // Response not JSON or failed to parse
+      }
+
+      updateDebugState('response', {
+        status: response.status,
+        rowCount,
+        duration,
+        requestId,
+        serverRequestId: response.headers.get('X-Request-Id'),
+      });
+
+      return response;
+    } catch (error) {
+      const duration = Date.now() - startTime;
+
+      updateDebugState('response', {
+        status: 'error',
+        error: error.message,
+        duration,
+        requestId,
+      });
+
+      throw error;
+    }
+  };
 }
 
 // Check mapping population
@@ -221,26 +278,75 @@ export function checkMappings() {
     boatNameToIdMap: Object.keys(boatMap).length > 0,
     boatCount: Object.keys(boatMap).length,
     landingIdToNameMap: Object.keys(landingMap).length > 0,
-    landingCount: Object.keys(landingMap).length
+    landingCount: Object.keys(landingMap).length,
   };
 
   updateDebugState('mapping', status);
 
   if (!status.boatNameToIdMap) {
-    dbg('WARNING: boatNameToIdMap is empty!');
+    console.warn('[DEBUG] boatNameToIdMap is empty!');
   }
   if (!status.landingIdToNameMap) {
-    dbg('WARNING: landingIdToNameMap is empty!');
+    console.warn('[DEBUG] landingIdToNameMap is empty!');
   }
 
   return status;
 }
 
-// Export for use in dashboard
+// Initialize debug mode if enabled
+export function initDebug() {
+  if (isDebugEnabled()) {
+    console.log('%c🔍 DEBUG MODE ENABLED', 'background: #0f0; color: #000; padding: 5px 10px; font-weight: bold;');
+    console.log('Disable with: localStorage.removeItem("debug"); location.reload()');
+
+    createDebugOverlay();
+
+    if (typeof window.fetch !== 'undefined' && !window.fetch.__wrapped) {
+      const originalFetch = window.fetch;
+      window.fetch = wrapFetch(originalFetch);
+      window.fetch.__wrapped = true;
+      window.fetch.__original = originalFetch;
+    }
+
+    if (typeof window !== 'undefined') {
+      window.getDebugState = getDebugState;
+      window.dbg = dbg;
+    }
+
+    setTimeout(checkMappings, 2000);
+
+    return true;
+  }
+  return false;
+}
+
+// Export debug state for external access
+export function getDebugState() {
+  return debugState;
+}
+
+// Clean up debug mode
+export function cleanupDebug() {
+  const overlay = document.getElementById('debug-overlay');
+  if (overlay) {
+    overlay.remove();
+  }
+
+  if (window.fetch && window.fetch.__wrapped && window.fetch.__original) {
+    window.fetch = window.fetch.__original;
+    delete window.fetch.__wrapped;
+    delete window.fetch.__original;
+  }
+}
+
 export default {
   dbg,
   updateDebugState,
   initDebug,
   checkMappings,
-  isDebugEnabled
+  isDebugEnabled,
+  wrapFetch,
+  getDebugState,
+  cleanupDebug,
+  generateRequestId,
 };

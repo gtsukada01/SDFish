@@ -2,6 +2,7 @@
 
 import * as apiClient from './apiClient.js';
 import state from './state.js';
+import { isFeatureEnabled } from './config/featureFlags.js';
 // Import debug helper (can be removed after stabilization)
 import debugHelper from './debug.js';
 const { dbg, updateDebugState, initDebug, checkMappings } = debugHelper;
@@ -11,7 +12,7 @@ import { withErrorBoundary, withUIErrorBoundary, logError, ERROR_CATEGORIES, ERR
 import './productionMonitor.js';
 import './performanceValidator.js';
 import './rollbackManager.js';
-import { initializeNavigation, fetchFiltersForLanding } from './navigation.js';
+import { initializeNavigation } from './navigation.js';
 import { renderStatsGrid, DEFAULT_STATS_CARDS, createChartCard } from './components/cards.js';
 import {
   renderTable,
@@ -43,6 +44,8 @@ const FILTER_SELECT_IDS = ['speciesFilter', 'durationFilter', 'boatFilter'];
 let selectedLandingId = null;
 let chartsInitialized = false;
 let tableInitialized = false;
+let landingIdToNameMap = {}; // Maps landing ID to landing name
+let boatNameToIdMap = {}; // Maps boat name to boat ID
 
 /**
  * Return default date range (Jan 1, 2025 to today)
@@ -214,8 +217,21 @@ function buildApiFilters(values) {
   if (values.endDate) filters.endDate = values.endDate;
   if (values.species !== 'all') filters.species = values.species;
   if (values.duration !== 'all') filters.duration = values.duration;
-  if (values.boat !== 'all') filters.boat = values.boat;
-  if (selectedLandingId) filters.landing = selectedLandingId;
+
+  if (values.boat !== 'all') {
+    filters.boat = values.boat;
+    const resolvedBoatId = boatNameToIdMap?.[values.boat] || window.boatNameToIdMap?.[values.boat];
+    if (resolvedBoatId) {
+      filters.boat_id = resolvedBoatId;
+      dbg('buildApiFilters(): resolved boat → id', values.boat, resolvedBoatId);
+    } else {
+      dbg('buildApiFilters(): no boat_id mapping found for', values.boat);
+    }
+  }
+
+  if (selectedLandingId) {
+    filters.landing_id = selectedLandingId;
+  }
   return filters;
 }
 
@@ -243,8 +259,30 @@ const refreshFilterOptions = withErrorBoundary(async function refreshFilterOptio
   showFiltersLoading();
 
   try {
-    const filters = await fetchFilters(landingId);
+    let trips = [];
+
+    if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
+      trips = await apiClient.fetchTrips(1000, {}, { cancelKey: 'filters-trips' });
+    } else {
+      const response = await fetch('/api/trips?limit=1000');
+      if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`);
+      }
+      const result = await response.json();
+      trips = result.success ? result.data : result;
+    }
+
+    boatNameToIdMap = {};
+    const filters = generateFilterOptionsFromTrips(trips, landingId);
     applyFiltersToSelects(filters);
+
+    if (isFeatureEnabled('USE_NEW_STATE')) {
+      state.setBoatMapping(boatNameToIdMap);
+    }
+
+    window.boatNameToIdMap = boatNameToIdMap;
+    checkMappings();
+
     return filters;
   } catch (error) {
     if (error?.isCanceled) {
@@ -263,15 +301,50 @@ const refreshFilterOptions = withErrorBoundary(async function refreshFilterOptio
   }
 }, { category: ERROR_CATEGORIES.NETWORK, level: ERROR_LEVELS.MEDIUM, name: 'refreshFilterOptions' });
 
-/**
- * Wrapper to fetch filters via API client or legacy fetch
- */
-async function fetchFilters(landingId) {
-  if (isFeatureEnabled('USE_NEW_API_CLIENT')) {
-    return apiClient.fetchFilters(landingId, { cancelKey: 'filters' });
-  }
+// Build select options and mapping data from trips payload
+function generateFilterOptionsFromTrips(trips, landingId) {
+  const species = new Set();
+  const durations = new Set();
+  const boats = new Set();
 
-  return fetchFiltersForLanding(landingId, { cancelPrevious: true, cancelKey: 'filters' });
+  trips.forEach((trip) => {
+    if (landingId && landingId !== 'all' && trip.boat?.landing_id !== Number(landingId)) {
+      return;
+    }
+
+    if (Array.isArray(trip.catches)) {
+      trip.catches.forEach((entry) => {
+        const name = entry?.species_name || entry?.species;
+        if (name) {
+          species.add(name);
+        }
+      });
+    }
+
+    if (trip.trip_duration) {
+      durations.add(trip.trip_duration);
+    }
+
+    const boatName = trip.boat?.name;
+    if (boatName) {
+      boats.add(boatName);
+      if (trip.boat_id) {
+        boatNameToIdMap[boatName] = trip.boat_id;
+      }
+    }
+  });
+
+  return {
+    species: Array.from(species)
+      .sort()
+      .map((name) => ({ value: name, label: name })),
+    durations: Array.from(durations)
+      .sort()
+      .map((duration) => ({ value: duration, label: duration })),
+    boats: Array.from(boats)
+      .sort()
+      .map((name) => ({ value: name, label: name })),
+  };
 }
 
 /**
@@ -361,8 +434,8 @@ async function fetchStats(startDate, endDate, filters) {
 
   const url =
     startDate && endDate
-      ? `http://localhost:5001/api/stats/date-range/${startDate}/${endDate}${queryString}`
-      : `http://localhost:5001/api/stats/last-30-days${queryString}`;
+      ? `/api/stats/date-range/${startDate}/${endDate}${queryString}`
+      : `/api/stats/last-30-days${queryString}`;
 
   const response = await fetch(url);
   if (!response.ok) {
@@ -453,7 +526,7 @@ async function fetchDailyCatches(days, filters) {
   const query = params.toString();
   const queryString = query ? `?${query}` : '';
 
-  const response = await fetch(`http://localhost:5001/api/daily-catches/${days}${queryString}`);
+  const response = await fetch(`/api/daily-catches/${days}${queryString}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -469,7 +542,7 @@ async function fetchTopBoats(filters) {
   const query = params.toString();
   const queryString = query ? `?${query}` : '';
 
-  const response = await fetch(`http://localhost:5001/api/top-boats/10${queryString}`);
+  const response = await fetch(`/api/top-boats/10${queryString}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -481,7 +554,7 @@ async function fetchMoonPhaseData() {
     return apiClient.fetchMoonPhaseData({ cancelKey: 'moon-phase' });
   }
 
-  const response = await fetch('http://localhost:5001/api/moon-phase-data');
+  const response = await fetch('/api/moon-phase-data');
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -533,7 +606,7 @@ async function fetchRecentTrips(filters) {
   const query = params.toString();
   const queryString = query ? `?${query}` : '';
 
-  const response = await fetch(`http://localhost:5001/api/recent-trips/10${queryString}`);
+  const response = await fetch(`/api/recent-trips/10${queryString}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -555,22 +628,39 @@ function calculateDayRange(startDate, endDate) {
  * Entry point to load all dashboard data
  */
 async function loadDashboardData() {
+  const startTime = Date.now();
+  dbg('loadDashboardData() triggered');
+
   const filterValues = getFilterValues();
+  dbg('Current filter values', filterValues);
+
   syncFiltersToState(filterValues);
 
   const apiFilters = isFeatureEnabled('USE_NEW_STATE')
     ? state.getApiFilters()
     : buildApiFilters(filterValues);
 
+  dbg('Resolved API filters', apiFilters);
+
+  updateDebugState('filterChange', {
+    filters: apiFilters,
+    rawValues: filterValues,
+    source: 'loadDashboardData',
+  });
+
   await loadStats(filterValues, apiFilters);
   await loadCharts(filterValues, apiFilters);
   await loadRecentTrips(apiFilters);
+
+  const duration = Date.now() - startTime;
+  dbg(`loadDashboardData() completed in ${duration}ms`);
 }
 
 /**
  * Handle filter input changes
  */
 async function handleFilterChange() {
+  dbg('handleFilterChange() fired');
   await loadDashboardData();
 }
 
@@ -579,12 +669,26 @@ async function handleFilterChange() {
  */
 function attachFilterListeners() {
   const form = document.getElementById('filtersForm');
-  if (!form) return;
+  if (!form) {
+    dbg('attachFilterListeners(): form not found');
+    return;
+  }
+
+  dbg('attachFilterListeners(): binding form change handler');
 
   form.addEventListener('change', (event) => {
-    if (event.target.matches('select, input[type="date"]')) {
-      handleFilterChange();
+    if (!event.target.matches('select, input[type="date"]')) {
+      return;
     }
+
+    dbg('Form change detected', event.target.name, event.target.value);
+    updateDebugState('filterChange', {
+      field: event.target.name,
+      value: event.target.value,
+      source: 'form_change_event',
+    });
+
+    handleFilterChange();
   });
 }
 
@@ -593,6 +697,13 @@ function attachFilterListeners() {
  */
 async function handleLandingSelected(event) {
   selectedLandingId = event.detail.landingId ? event.detail.landingId.toString() : null;
+
+  dbg('handleLandingSelected()', selectedLandingId ?? 'all');
+  updateDebugState('filterChange', {
+    field: 'landing_id',
+    value: selectedLandingId ?? 'all',
+    source: 'landing_selected_event',
+  });
 
   try {
     await refreshFilterOptions(selectedLandingId);
@@ -643,8 +754,32 @@ async function initializeDashboard() {
   attachFilterListeners();
 
   try {
-    const filters = await refreshFilterOptions(null);
-    await initializeNavigation({ filters });
+    await refreshFilterOptions(null);
+
+    let landingsData = null;
+    const landingsResponse = await fetch('/api/filters');
+    if (landingsResponse.ok) {
+      const result = await landingsResponse.json();
+      landingsData = result.success ? result.data : result;
+
+      if (landingsData?.landings) {
+        landingIdToNameMap = {};
+        landingsData.landings.forEach((landing) => {
+          landingIdToNameMap[landing.id] = landing.name;
+        });
+
+        if (isFeatureEnabled('USE_NEW_STATE')) {
+          state.setLandingMapping(landingIdToNameMap);
+          state.setBoatMapping(boatNameToIdMap);
+        }
+
+        window.landingIdToNameMap = landingIdToNameMap;
+        window.boatNameToIdMap = boatNameToIdMap;
+        checkMappings();
+      }
+    }
+
+    await initializeNavigation({ filters: landingsData });
   } catch (error) {
     if (error?.isCanceled) {
       return;

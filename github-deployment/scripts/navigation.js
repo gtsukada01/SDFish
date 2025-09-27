@@ -8,6 +8,9 @@ import { timeRender, timeStateUpdate } from './performanceMonitor.js';
 import { isFeatureEnabled } from './config/featureFlags.js';
 import * as apiClient from './apiClient.js';
 import state from './state.js';
+import debugHelper from './debug.js';
+
+const { dbg, updateDebugState } = debugHelper;
 
 // Navigation data structure
 export const navigationData = {
@@ -256,6 +259,12 @@ function toggleStar(landingId) {
  */
 function selectLanding(landingId) {
   const normalizedLanding = landingId === 'all' ? null : landingId;
+  dbg('selectLanding()', normalizedLanding ?? 'all');
+  updateDebugState('filterChange', {
+    field: 'landing_id',
+    value: normalizedLanding ?? 'all',
+    source: 'navigation_select',
+  });
   navigationData.activeItem = normalizedLanding;
 
   applyActiveState();
@@ -304,7 +313,8 @@ export async function fetchFiltersForLanding(landingId, options = {}) {
   }
 
   const queryString = landingId ? `?landing=${landingId}` : '';
-  const response = await fetch(`http://localhost:5001/api/filters${queryString}`);
+  dbg('fetchFiltersForLanding()', landingId ?? 'all');
+  const response = await fetch(`/api/filters${queryString}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
