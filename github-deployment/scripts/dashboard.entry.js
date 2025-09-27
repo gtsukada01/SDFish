@@ -2,7 +2,9 @@
 
 import * as apiClient from './apiClient.js';
 import state from './state.js';
-import { isFeatureEnabled } from './config/featureFlags.js';
+// Import debug helper (can be removed after stabilization)
+import debugHelper from './debug.js';
+const { dbg, updateDebugState, initDebug, checkMappings } = debugHelper;
 import { createIcons } from './externals/lucide.js';
 import { timeRender, timeStateUpdate } from './performanceMonitor.js';
 import { withErrorBoundary, withUIErrorBoundary, logError, ERROR_CATEGORIES, ERROR_LEVELS } from './errorBoundary.js';
@@ -627,6 +629,10 @@ function formatAverage(value) {
  * Initialize dashboard
  */
 async function initializeDashboard() {
+  // Initialize debug mode if enabled
+  initDebug();
+  dbg('initializeDashboard() starting...');
+
   const defaultDates = getDefaultDateRange();
 
   renderFilterBar(defaultDates);
@@ -648,11 +654,59 @@ async function initializeDashboard() {
 
   await loadDashboardData();
 
+  // Check boat mapping after first load and warn if empty
+  setTimeout(() => {
+    const boatMap = window.boatNameToIdMap || {};
+    if (Object.keys(boatMap).length === 0) {
+      console.warn('[mapping] boatNameToIdMap is empty after first load - boat filtering may not work correctly');
+      console.warn('[mapping] Quick check: Object.entries(window.boatNameToIdMap || {}).slice(0,5)');
+    } else {
+      console.log('[mapping] Boat mappings loaded:', Object.keys(boatMap).length, 'boats');
+      dbg('Sample boat mappings:', Object.entries(boatMap).slice(0, 5));
+    }
+  }, 100);
+
   document.addEventListener('landingSelected', handleLandingSelected);
 }
 
 // Bootstrap when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+  // CRITICAL FIX: Event Delegation Pattern - attach to document to survive DOM replacements
+  // This ensures filter changes always work regardless of when the form is created
+  // Production-safe, always-on delegation logs
+  console.log('[filters] Delegation attach: start');
+
+  // Use capture=true to avoid being blocked and survive innerHTML replacements
+  document.addEventListener('change', (event) => {
+    const form = event.target.closest('#filtersForm');
+    if (form && event.target.matches('select, input[type="date"]')) {
+      console.log('[filters] Delegation change:', event.target.name, '=', event.target.value);
+
+      // Update debug state if available
+      if (typeof updateDebugState === 'function') {
+        updateDebugState('filterChange', {
+          field: event.target.name,
+          value: event.target.value,
+          source: 'event_delegation'
+        });
+      }
+
+      // Call the filter change handler if it exists
+      if (typeof handleFilterChange === 'function') {
+        handleFilterChange();
+      } else if (typeof loadDashboardData === 'function') {
+        // Fallback: directly call loadDashboardData if handleFilterChange is missing
+        console.warn('handleFilterChange not defined, falling back to loadDashboardData()');
+        loadDashboardData();
+      } else {
+        console.error('Neither handleFilterChange nor loadDashboardData function defined!');
+      }
+    }
+  }, true); // capture=true to survive innerHTML replacements
+
+  console.log('[filters] Delegation attach: ready');
+
+  // Initialize dashboard
   initializeDashboard().catch((error) => {
     console.error('Failed to initialize dashboard:', error);
   });
