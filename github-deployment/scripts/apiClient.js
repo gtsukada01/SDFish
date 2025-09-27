@@ -7,6 +7,9 @@
 
 import performanceMonitor from './performanceMonitor.js';
 import { isFeatureEnabled } from './config/featureFlags.js';
+import debugHelper from './debug.js';
+
+const { updateDebugState, generateRequestId } = debugHelper;
 
 const BASE_URL = '/api';
 
@@ -58,7 +61,8 @@ async function fetchWithErrorHandling(url, options = {}) {
     timeout = 10000,
     retries = 3,
     retryDelay = 1000,
-    backoffMultiplier = 2
+    backoffMultiplier = 2,
+    debugContext = null,
   } = options;
 
   // Start performance timer if enabled
@@ -67,6 +71,18 @@ async function fetchWithErrorHandling(url, options = {}) {
     : () => {};
 
   const controller = new AbortController();
+
+  const urlObj = new URL(url, window.location.origin);
+  const debugUrl = urlObj.pathname + urlObj.search;
+  const requestId = generateRequestId();
+  const startTime = Date.now();
+
+  updateDebugState('request', {
+    url: debugUrl,
+    method: fetchOptions.method || 'GET',
+    params: debugContext?.params ?? Object.fromEntries(urlObj.searchParams),
+    requestId,
+  });
 
   if (cancelKey) {
     if (cancelPrevious) {
@@ -97,10 +113,16 @@ async function fetchWithErrorHandling(url, options = {}) {
   let lastError = null;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const response = await fetch(url, {
+      const requestInit = {
         ...fetchOptions,
+        headers: {
+          ...(fetchOptions.headers || {}),
+          'X-Client-Request-Id': requestId,
+        },
         signal: controller.signal,
-      });
+      };
+
+      const response = await fetch(url, requestInit);
 
       if (timeoutId) clearTimeout(timeoutId);
 
@@ -131,6 +153,24 @@ async function fetchWithErrorHandling(url, options = {}) {
         performanceMonitor.checkThreshold(`api:${url.replace(BASE_URL, '')}`, duration, 500);
       }
 
+      let rowCount = 0;
+      if (Array.isArray(data)) {
+        rowCount = data.length;
+      } else if (data?.data && Array.isArray(data.data)) {
+        rowCount = data.data.length;
+      } else if (typeof data === 'object' && data !== null) {
+        rowCount = Object.keys(data).length;
+      }
+
+      updateDebugState('response', {
+        status: response.status,
+        rowCount,
+        duration,
+        requestId,
+        serverRequestId: response.headers.get('X-Request-Id'),
+      });
+
+      clearController();
       return data;
     } catch (error) {
       if (timeoutId) clearTimeout(timeoutId);
@@ -141,12 +181,26 @@ async function fetchWithErrorHandling(url, options = {}) {
         if (didTimeout) {
           const timeoutError = new Error('Request timeout: API took too long to respond');
           timeoutError.name = 'TimeoutError';
+          updateDebugState('response', {
+            status: 'timeout',
+            error: timeoutError.message,
+            duration: Date.now() - startTime,
+            requestId,
+          });
+          clearController();
           throw timeoutError;
         }
 
         const cancelError = new Error('Request cancelled');
         cancelError.name = 'AbortError';
         cancelError.isCanceled = true;
+        updateDebugState('response', {
+          status: 'canceled',
+          error: cancelError.message,
+          duration: Date.now() - startTime,
+          requestId,
+        });
+        clearController();
         throw cancelError;
       }
 
@@ -156,6 +210,13 @@ async function fetchWithErrorHandling(url, options = {}) {
         const apiError = new Error(error.message || 'Network error occurred');
         apiError.status = error.status || 'unknown';
         apiError.timestamp = new Date().toISOString();
+        updateDebugState('response', {
+          status: apiError.status,
+          error: apiError.message,
+          duration: Date.now() - startTime,
+          requestId,
+        });
+        clearController();
         throw apiError;
       }
 
@@ -169,6 +230,13 @@ async function fetchWithErrorHandling(url, options = {}) {
         apiError.status = error.status || 'unknown';
         apiError.timestamp = new Date().toISOString();
         apiError.attempts = retries + 1;
+        updateDebugState('response', {
+          status: apiError.status,
+          error: apiError.message,
+          duration: Date.now() - startTime,
+          requestId,
+        });
+        clearController();
         throw apiError;
       }
 
@@ -180,7 +248,14 @@ async function fetchWithErrorHandling(url, options = {}) {
   // This should never be reached, but just in case
   clearController();
   endTimer();
-  throw lastError || new Error('Unknown error occurred during retries');
+  const finalError = lastError || new Error('Unknown error occurred during retries');
+  updateDebugState('response', {
+    status: 'error',
+    error: finalError.message,
+    duration: Date.now() - startTime,
+    requestId,
+  });
+  throw finalError;
 }
 
 /**
@@ -197,6 +272,7 @@ export async function fetchFilters(landingId = null, options = {}) {
     cancelPrevious: options.cancelPrevious ?? true,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'filters', params },
   });
 }
 
@@ -219,6 +295,7 @@ export async function fetchStatsForDateRange(startDate, endDate, filters = {}, o
         cancelPrevious: options.cancelPrevious ?? true,
         timeout: options.timeout,
         fetchOptions: options.fetchOptions,
+        debugContext: { intent: 'stats', params: { ...filters, startDate, endDate } },
       }
     );
   } else {
@@ -227,6 +304,7 @@ export async function fetchStatsForDateRange(startDate, endDate, filters = {}, o
       cancelPrevious: options.cancelPrevious ?? true,
       timeout: options.timeout,
       fetchOptions: options.fetchOptions,
+      debugContext: { intent: 'stats', params: filters },
     });
   }
 }
@@ -245,6 +323,7 @@ export async function fetchDailyCatches(days, filters = {}, options = {}) {
     cancelPrevious: options.cancelPrevious ?? true,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'daily-catches', params: { ...filters, days } },
   });
 }
 
@@ -262,6 +341,7 @@ export async function fetchTopBoats(limit = 10, filters = {}, options = {}) {
     cancelPrevious: options.cancelPrevious ?? true,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'top-boats', params: { ...filters, limit } },
   });
 }
 
@@ -279,6 +359,7 @@ export async function fetchRecentTrips(limit = 10, filters = {}, options = {}) {
     cancelPrevious: options.cancelPrevious ?? true,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'recent-trips', params: { ...filters, limit } },
   });
 }
 
@@ -297,6 +378,7 @@ export async function fetchMoonPhaseData(options = {}) {
     cancelPrevious: options.cancelPrevious ?? true,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'moon-phase', params: {} },
   });
 }
 
@@ -310,6 +392,7 @@ export async function checkHealth(options = {}) {
     cancelPrevious: options.cancelPrevious ?? false,
     timeout: options.timeout,
     fetchOptions: options.fetchOptions,
+    debugContext: { intent: 'health', params: {} },
   });
 }
 
