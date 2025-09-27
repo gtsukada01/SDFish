@@ -51,9 +51,8 @@ test/
 *spotcheck*.json
 *audit*.json
 *analysis*.json
-*.md
 !landing.md
-!package.json
+!README.md
 
 # Python cache
 __pycache__/
