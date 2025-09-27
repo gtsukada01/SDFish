@@ -10,6 +10,9 @@ import './productionMonitor.js';
 import './performanceValidator.js';
 import './rollbackManager.js';
 import { initializeNavigation, fetchFiltersForLanding } from './navigation.js';
+
+// Import debug helper (can be removed after stabilization)
+import { dbg, updateDebugState, initDebug, checkMappings } from './debug.js';
 import { renderStatsGrid, DEFAULT_STATS_CARDS, createChartCard } from './components/cards.js';
 import {
   renderTable,
@@ -211,6 +214,8 @@ function getFilterValues() {
  * Build API filters object when not using state module
  */
 function buildApiFilters(values) {
+  dbg('buildApiFilters() called with values:', values);
+
   const filters = {};
   if (values.startDate) filters.startDate = values.startDate;
   if (values.endDate) filters.endDate = values.endDate;
@@ -219,9 +224,18 @@ function buildApiFilters(values) {
 
   // Handle boat filtering - convert boat name to boat_id for API
   if (values.boat !== 'all') {
+    dbg(`Processing boat filter: "${values.boat}"`);
     filters.boat = values.boat; // Keep for client-side filtering
-    if (boatNameToIdMap[values.boat]) {
-      filters.boat_id = boatNameToIdMap[values.boat]; // Add for server-side filtering
+
+    // CRITICAL FIX: Use global mapping as fallback if local mapping not populated
+    const currentMapping = boatNameToIdMap || window.boatNameToIdMap || {};
+    dbg('Available boat mappings:', Object.keys(currentMapping).length, 'boats');
+
+    if (currentMapping[values.boat]) {
+      filters.boat_id = currentMapping[values.boat]; // Add for server-side filtering
+      dbg(`Boat mapping found: ${values.boat} → boat_id=${filters.boat_id}`);
+    } else {
+      dbg(`WARNING: No boat_id mapping found for: ${values.boat}`);
     }
   }
 
@@ -513,8 +527,23 @@ async function fetchDailyCatches(days, apiFilters) {
       .then(trips => aggregateDailyCatches(trips, days, apiFilters));
   }
 
-  // Fallback: use /api/trips and aggregate daily catches
-  const response = await fetch('/api/trips?limit=1000');
+  // Fallback: use /api/trips with proper parameters and aggregate daily catches
+  // CRITICAL FIX: Build query parameters from apiFilters instead of hardcoded limit
+  const params = new URLSearchParams({ limit: '1000' });
+
+  // Add server-side filtering parameters
+  if (apiFilters.startDate) params.append('startDate', apiFilters.startDate);
+  if (apiFilters.endDate) params.append('endDate', apiFilters.endDate);
+  if (apiFilters.landing_id) params.append('landing_id', apiFilters.landing_id);
+  if (apiFilters.boat_id) params.append('boat_id', apiFilters.boat_id);
+
+  const url = `/api/trips?${params.toString()}`;
+  try { console.log('[filters] request', url, { apiFilters }); } catch {}
+  if (window.__debugFilters) {
+    console.log('🌐 Daily Catches API Call:', url, { apiFilters });
+  }
+
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -639,8 +668,12 @@ async function fetchTopBoats(apiFilters) {
   if (apiFilters.startDate) dateParams.push(`startDate=${apiFilters.startDate}`);
   if (apiFilters.endDate) dateParams.push(`endDate=${apiFilters.endDate}`);
   const landingParam = apiFilters.landing_id ? `landing_id=${apiFilters.landing_id}` : '';
+  // CRITICAL FIX: Add boat_id parameter for boat filtering
+  const boatParam = apiFilters.boat_id ? `boat_id=${apiFilters.boat_id}` : '';
 
-  const queryParams = ['limit=1000', landingParam, ...dateParams].filter(Boolean).join('&');
+  const queryParams = ['limit=1000', landingParam, boatParam, ...dateParams].filter(Boolean).join('&');
+
+  try { console.log('[filters] request', `/api/trips?${queryParams}`, { apiFilters }); } catch {}
   const response = await fetch(`/api/trips?${queryParams}`);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
@@ -746,8 +779,22 @@ async function fetchRecentTrips(apiFilters) {
     return filtered.slice(0, 10);
   }
 
-  // Fallback to direct API call to working /api/trips endpoint
-  const response = await fetch('/api/trips?limit=1000');
+  // Fallback to direct API call with proper parameters
+  // CRITICAL FIX: Build query parameters from apiFilters instead of hardcoded limit
+  const params = new URLSearchParams({ limit: '1000' });
+
+  // Add server-side filtering parameters
+  if (apiFilters.startDate) params.append('startDate', apiFilters.startDate);
+  if (apiFilters.endDate) params.append('endDate', apiFilters.endDate);
+  if (apiFilters.landing_id) params.append('landing_id', apiFilters.landing_id);
+  if (apiFilters.boat_id) params.append('boat_id', apiFilters.boat_id);
+
+  const url = `/api/trips?${params.toString()}`;
+  if (window.__debugFilters) {
+    console.log('🌐 API Call with parameters:', url, { apiFilters });
+  }
+
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`API Error: ${response.status}`);
   }
@@ -774,22 +821,26 @@ function calculateDayRange(startDate, endDate) {
  * Entry point to load all dashboard data
  */
 async function loadDashboardData() {
+  const startTime = Date.now();
+  dbg('loadDashboardData() called');
+
   const filterValues = getFilterValues();
+  dbg('getFilterValues() result:', filterValues);
+
   syncFiltersToState(filterValues);
 
   const apiFilters = isFeatureEnabled('USE_NEW_STATE')
     ? state.getApiFilters()
     : buildApiFilters(filterValues);
 
-  // Optional debug logging (can be enabled via window.__debugFilters = true)
-  if (window.__debugFilters) {
-    console.log('Filter Debug:', {
-      dom: filterValues,
-      state: isFeatureEnabled('USE_NEW_STATE') ? state.getApiFilters() : 'not using new state',
-      apiFilters: apiFilters,
-      selectedLandingId: selectedLandingId
-    });
-  }
+  dbg('Final apiFilters for API calls:', apiFilters);
+
+  // Update debug state with filter info
+  updateDebugState('filterChange', {
+    filters: apiFilters,
+    rawValues: filterValues,
+    source: 'loadDashboardData'
+  });
 
   await loadStats(filterValues, apiFilters);
   await loadCharts(filterValues, apiFilters);
@@ -800,25 +851,46 @@ async function loadDashboardData() {
  * Handle filter input changes
  */
 async function handleFilterChange() {
+  dbg('handleFilterChange() triggered');
+  const startTime = Date.now();
+
   await loadDashboardData();
+
+  const duration = Date.now() - startTime;
+  dbg(`handleFilterChange() completed in ${duration}ms`);
 }
 
 /**
  * Attach event listeners for filter controls
  */
 function attachFilterListeners() {
+  dbg('attachFilterListeners() called');
   const form = document.getElementById('filtersForm');
   if (!form) {
-    if (window.__debugFilters) console.warn('filtersForm element not found');
+    dbg('ERROR: filtersForm element NOT FOUND!');
     return;
   }
-  if (window.__debugFilters) console.log('Filter listeners attached to form:', form);
+  dbg('Found filtersForm, attaching listeners...');
 
   form.addEventListener('change', (event) => {
+    dbg('Form change event triggered:', event.target.name, '=', event.target.value);
     if (event.target.matches('select, input[type="date"]')) {
+      dbg('Calling handleFilterChange()...');
+
+      // Update debug state with the specific filter change
+      updateDebugState('filterChange', {
+        field: event.target.name,
+        value: event.target.value,
+        source: 'form_change_event'
+      });
+
       handleFilterChange();
+    } else {
+      dbg('Event target does not match select/date input');
     }
   });
+
+  dbg('Event listeners attached successfully');
 }
 
 /**
@@ -862,6 +934,10 @@ function formatAverage(value) {
  * Initialize dashboard
  */
 async function initializeDashboard() {
+  // Initialize debug mode if enabled
+  initDebug();
+  dbg('initializeDashboard() starting...');
+
   const defaultDates = getDefaultDateRange();
 
   renderFilterBar(defaultDates);
@@ -889,11 +965,29 @@ async function initializeDashboard() {
           landingIdToNameMap[landing.id] = landing.name;
         });
 
-        // Also set the mappings in the state module if using new state
+        // Always set the mappings in the state module and expose globally
         if (isFeatureEnabled('USE_NEW_STATE')) {
           state.setLandingMapping(landingIdToNameMap);
           state.setBoatMapping(boatNameToIdMap);
         }
+
+        // CRITICAL FIX: Always expose boat mapping globally for filtering system
+        window.boatNameToIdMap = boatNameToIdMap;
+        window.__boatMappingDebug = {
+          totalMappings: Object.keys(boatNameToIdMap).length,
+          libertyId: boatNameToIdMap['Liberty'],
+          allBoats: Object.keys(boatNameToIdMap)
+        };
+        dbg('Boat mapping initialized:', window.__boatMappingDebug);
+        if (!window.__boatMappingDebug.totalMappings) {
+          try {
+            console.warn('[mapping] boatNameToIdMap is empty after first load - boat filtering may not work correctly');
+            console.warn('[mapping] Quick check: Object.entries(window.boatNameToIdMap || {}).slice(0,5)');
+          } catch {}
+        }
+
+        // Check and update debug state
+        checkMappings();
       }
     }
 
@@ -912,7 +1006,50 @@ async function initializeDashboard() {
 
 // Bootstrap when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+  // CRITICAL FIX: Event Delegation Pattern - attach to document to survive DOM replacements
+  try {
+    console.log('[filters] Delegation attach: start');
+  } catch {}
+  dbg('Setting up event delegation for filter changes...');
+
+  const onDelegatedChange = (event) => {
+    const form = event.target.closest('#filtersForm');
+    if (form && event.target.matches('select, input[type="date"]')) {
+      try {
+        console.log('[filters] Delegation change:', event.target.name, '=', event.target.value);
+      } catch {}
+      dbg('Event delegation captured filter change:', event.target.name, '=', event.target.value);
+
+      // Update debug state
+      updateDebugState('filterChange', {
+        field: event.target.name,
+        value: event.target.value,
+        source: 'event_delegation'
+      });
+
+      // Call the filter change handler; fallback to direct load if missing
+      if (typeof handleFilterChange === 'function') {
+        handleFilterChange();
+      } else if (typeof loadDashboardData === 'function') {
+        try { console.warn('[filters] handleFilterChange missing; calling loadDashboardData() fallback'); } catch {}
+        loadDashboardData();
+      } else {
+        dbg('ERROR: handleFilterChange and loadDashboardData not available');
+      }
+    }
+  };
+
+  // Use capture to avoid being blocked by other listeners; attach once
+  document.addEventListener('change', onDelegatedChange, true);
+
+  try {
+    console.log('[filters] Delegation attach: ready');
+  } catch {}
+  dbg('Event delegation system active');
+
+  // Initialize dashboard
   initializeDashboard().catch((error) => {
     console.error('Failed to initialize dashboard:', error);
+    dbg('Dashboard initialization failed:', error);
   });
 });
