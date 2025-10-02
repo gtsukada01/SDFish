@@ -13,13 +13,8 @@
     "dev": "npm run dev:css & npm run dev:js",
     "dev:css": "tailwindcss -i ./src/styles/globals.css -o ./assets/styles.css --watch",
     "dev:js": "esbuild src/main.tsx --bundle --format=esm --target=es2020 --outfile=assets/main.js --sourcemap --watch --loader:.tsx=tsx --loader:.ts=ts",
-    "generate:types": "node scripts/generate-from-schemas.mjs",
-    "generate:all": "npm run generate:types && npm run test:contracts",
-    "prebuild": "npm run generate:types",
     "typecheck": "tsc --noEmit",
-    "test:contracts": "vitest run tests/contracts --run",
-    "test:ui": "playwright test",
-    "bench": "node --loader ts-node/esm tests/performance/filter.bench.ts"
+    "test:ui": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.47.2",
