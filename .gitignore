@@ -1,0 +1,14 @@
+# Spec Kit tooling
+.codex/
+.specify/
+.claude/
+
+# macOS artifacts
+.DS_Store
+
+# Local reference assets
+\[backup\] index-realdata.html
+@index
+assets/
+test-results/
+.playwright-home/
