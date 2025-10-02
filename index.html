@@ -4,55 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SD Fishing - Premium Analytics Dashboard</title>
-    <link rel="stylesheet" href="styles/realdata.css?v=17" />
-    <!-- REMOVED INLINE STYLES - NOW IN styles/realdata.css -->
+    <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <div class="app-layout">
-      <!-- Header Bar -->
-      <header class="header-bar">
-        <div class="header-content">
-          <div class="logo">
-            <span>SD Fishing Intelligence</span>
-          </div>
-          <div id="filtersMount" class="header-filters-container"></div>
-        </div>
-      </header>
+    <!-- React will mount the entire app here, including sidebar -->
+    <div id="root"></div>
 
-      <!-- Sidebar Navigation -->
-      <nav class="sidebar">
-        <div class="nav-section">
-          <div class="nav-item all-landings hover:bg-accent hover:text-accent-foreground" data-landing-id="all">
-            <div class="nav-item-content">
-              <span class="text-foreground">All Landings</span>
-            </div>
-          </div>
-        </div>
+    <!-- Environment configuration -->
+    <script>
+      // Set to true to use real Supabase data, false for mocks
+      window.USE_REAL_DATA = true;  // ✅ REAL DATA MODE ENABLED
 
-        <div class="nav-divider"></div>
+      // Legacy config (no longer used with direct Supabase client)
+      window.FISH_USE_MOCKS = true;
+      window.FISH_SUPABASE_URL = "https://ulsbtwqhwnrpkourphiq.supabase.co";
+      window.FISH_SUPABASE_ANON_KEY = "";
+    </script>
 
-        <div class="nav-section">
-          <div class="nav-header">Pinned</div>
-          <div id="pinnedSection"></div>
-        </div>
-
-        <div class="nav-divider"></div>
-
-        <div class="nav-section">
-          <div class="nav-header">San Diego</div>
-          <div id="sanDiegoSection"></div>
-        </div>
-      </nav>
-
-      <!-- Main Content -->
-      <main class="main-content">
-        <div class="content-container">
-          <section id="statsGridContainer" class="dashboard-section"></section>
-          <section id="recentTripsContainer" class="dashboard-section"></section>
-          <section id="chartsContainer" class="dashboard-section charts-grid"></section>
-        </div>
-      </main>
-    </div>
-
+    <script type="module" src="assets/main.js"></script>
   </body>
 </html>
