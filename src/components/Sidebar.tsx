@@ -168,10 +168,10 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                className={`h-6 w-6 shrink-0 transition-opacity ${pinnedLandings.has(landing) ? 'opacity-100' : 'opacity-30'}`}
                 onClick={(e) => togglePin(landing, e)}
               >
-                <Pin className={`h-3.5 w-3.5 ${pinnedLandings.has(landing) ? 'fill-current opacity-100' : ''}`} />
+                <Pin className={`h-3.5 w-3.5 ${pinnedLandings.has(landing) ? 'fill-current' : ''}`} />
               </Button>
             </Button>
           ))}
@@ -198,7 +198,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className={`h-6 w-6 shrink-0 transition-opacity ${pinnedLandings.has(landing) ? 'opacity-100' : 'opacity-30'}`}
                   onClick={(e) => togglePin(landing, e)}
                 >
                   <Pin className={`h-3.5 w-3.5 ${pinnedLandings.has(landing) ? 'fill-current opacity-100' : ''}`} />
@@ -231,7 +231,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className={`h-6 w-6 shrink-0 transition-opacity ${pinnedLandings.has(landing) ? 'opacity-100' : 'opacity-30'}`}
                   onClick={(e) => togglePin(landing, e)}
                 >
                   <Pin className={`h-3.5 w-3.5 ${pinnedLandings.has(landing) ? 'fill-current opacity-100' : ''}`} />
@@ -264,7 +264,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="h-6 w-6 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                  className={`h-6 w-6 shrink-0 transition-opacity ${pinnedLandings.has(landing) ? 'opacity-100' : 'opacity-30'}`}
                   onClick={(e) => togglePin(landing, e)}
                 >
                   <Pin className={`h-3.5 w-3.5 ${pinnedLandings.has(landing) ? 'fill-current opacity-100' : ''}`} />
