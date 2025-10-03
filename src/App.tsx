@@ -19,7 +19,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [dataSource, setDataSource] = useState<'real' | 'mock'>('mock')
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   // Default filters: last 30 days
   const [filters, setFilters] = useState<Filters>({
@@ -163,25 +163,17 @@ function App() {
     <div className="flex flex-col h-screen overflow-hidden">
       <Header
         dataSource={dataSource}
-        onMobileMenuClick={() => setIsMobileSidebarOpen(true)}
+        onMobileMenuClick={() => setIsSidebarOpen(true)}
       />
       <div className="flex flex-1 overflow-hidden">
-        {/* Desktop Sidebar */}
-        <div className="hidden md:block">
-          <Sidebar
-            selectedLandings={selectedLandings}
-            onLandingsChange={handleLandingsChange}
-          />
-        </div>
-
-        {/* Mobile Sidebar Sheet */}
-        <Sheet open={isMobileSidebarOpen} onOpenChange={setIsMobileSidebarOpen}>
+        {/* Sidebar Sheet (both mobile and desktop) */}
+        <Sheet open={isSidebarOpen} onOpenChange={setIsSidebarOpen}>
           <SheetContent side="left" className="p-0 w-[280px]">
             <Sidebar
               selectedLandings={selectedLandings}
               onLandingsChange={handleLandingsChange}
               isMobile={true}
-              onClose={() => setIsMobileSidebarOpen(false)}
+              onClose={() => setIsSidebarOpen(false)}
             />
           </SheetContent>
         </Sheet>

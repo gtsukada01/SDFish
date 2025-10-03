@@ -15,7 +15,7 @@ export function Header({ dataSource, onMobileMenuClick }: HeaderProps) {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden h-8 w-8"
+            className="h-8 w-8"
             onClick={onMobileMenuClick}
           >
             <Menu className="h-5 w-5" />
