@@ -107,14 +107,13 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
 
   return (
     <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-background p-3 flex flex-col gap-2 overflow-y-auto`}>
-      <Button
-        variant="ghost"
-        className="w-full justify-start h-8"
+      <button
+        className="w-full flex items-center justify-start h-8 px-3 text-sm font-medium"
         onClick={clearAllLandings}
       >
         <MapPin className="mr-2 h-4 w-4" />
         All Landings
-      </Button>
+      </button>
 
       <Separator />
 
