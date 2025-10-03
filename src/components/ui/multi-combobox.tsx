@@ -76,21 +76,19 @@ export function MultiCombobox({
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className={cn('justify-between', className)}
+          className={cn('justify-start', className)}
           disabled={disabled}
         >
-          {icon && <span className="mr-2 h-3.5 w-3.5 shrink-0">{icon}</span>}
-          <div className="flex gap-1 flex-wrap overflow-hidden">
+          {icon && <span className="mr-2 h-3.5 w-3.5 shrink-0 flex items-center">{icon}</span>}
+          <span className="flex-1 text-left">
             {pendingValues.length === 0 ? (
               <span className="text-muted-foreground">{placeholder}</span>
             ) : (
-              <>
-                <Badge variant="secondary" className="text-xs">
-                  {pendingValues.length} selected
-                </Badge>
-              </>
+              <Badge variant="secondary" className="text-xs">
+                {pendingValues.length} selected
+              </Badge>
             )}
-          </div>
+          </span>
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>

@@ -192,8 +192,8 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
       <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
-          <SelectTrigger className="h-8 w-full md:w-[200px]">
-            <span className="mr-2 h-3.5 w-3.5 shrink-0">
+          <SelectTrigger className="h-8 w-full md:w-[200px] justify-start">
+            <span className="mr-2 h-3.5 w-3.5 shrink-0 flex items-center">
               <CalendarIcon className="h-3.5 w-3.5" />
             </span>
             <SelectValue placeholder="Select date range" />
