@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
+import { Calendar as CalendarIcon } from 'lucide-react'
 import { Calendar } from './ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
@@ -191,6 +192,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
+            <CalendarIcon className="mr-2 h-3.5 w-3.5" />
             <SelectValue placeholder="Select date range" />
           </SelectTrigger>
           <SelectContent>
