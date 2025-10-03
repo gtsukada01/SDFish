@@ -84,20 +84,41 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   useEffect(() => {
     if (!filters.start_date || !filters.end_date) return
 
-    // Try to match the current filter dates to a preset
-    const presets: DatePreset[] = ['7d', '30d', '90d', 'ytd', 'all']
+    // Calculate the difference in days between start and end
+    const start = new Date(filters.start_date)
+    const end = new Date(filters.end_date)
+    const diffDays = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24))
 
-    for (const preset of presets) {
-      const presetDates = calculatePresetDates(preset)
-      if (presetDates.start === filters.start_date && presetDates.end === filters.end_date) {
-        console.log('🔄 Syncing selectedPreset to match filters:', preset)
-        setSelectedPreset(preset)
+    // Check if it matches a preset based on day difference and end date being today-ish
+    const today = new Date()
+    const isRecentEndDate = Math.abs(end.getTime() - today.getTime()) < 2 * 24 * 60 * 60 * 1000 // Within 2 days
+
+    if (isRecentEndDate) {
+      if (diffDays >= 6 && diffDays <= 8) {
+        setSelectedPreset('7d')
+        return
+      } else if (diffDays >= 28 && diffDays <= 31) {
+        setSelectedPreset('30d')
+        return
+      } else if (diffDays >= 88 && diffDays <= 92) {
+        setSelectedPreset('90d')
         return
       }
     }
 
+    // Check YTD
+    if (filters.start_date === '2025-01-01' && isRecentEndDate) {
+      setSelectedPreset('ytd')
+      return
+    }
+
+    // Check All Time
+    if (filters.start_date === '2024-01-01' && isRecentEndDate) {
+      setSelectedPreset('all')
+      return
+    }
+
     // If no preset matches, it's a custom range
-    console.log('🔄 Filters don\'t match any preset, setting to custom')
     setSelectedPreset('custom')
   }, [filters.start_date, filters.end_date])
 
