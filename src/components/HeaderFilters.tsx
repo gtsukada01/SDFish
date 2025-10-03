@@ -78,6 +78,27 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     setPendingSpecies(filters.species || [])
   }, [filters.boat, filters.species])
 
+  // Sync selectedPreset when filters change from parent (important!)
+  useEffect(() => {
+    if (!filters.start_date || !filters.end_date) return
+
+    // Try to match the current filter dates to a preset
+    const presets: DatePreset[] = ['7d', '30d', '90d', 'ytd', 'all']
+
+    for (const preset of presets) {
+      const presetDates = calculatePresetDates(preset)
+      if (presetDates.start === filters.start_date && presetDates.end === filters.end_date) {
+        console.log('🔄 Syncing selectedPreset to match filters:', preset)
+        setSelectedPreset(preset)
+        return
+      }
+    }
+
+    // If no preset matches, it's a custom range
+    console.log('🔄 Filters don\'t match any preset, setting to custom')
+    setSelectedPreset('custom')
+  }, [filters.start_date, filters.end_date])
+
   // Debug: Log when selectedPreset changes
   useEffect(() => {
     console.log('🟢 selectedPreset state updated to:', selectedPreset)
