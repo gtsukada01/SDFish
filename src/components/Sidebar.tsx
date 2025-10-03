@@ -8,9 +8,11 @@ import { fetchFilterOptions } from '@/lib/fetchRealData'
 interface SidebarProps {
   selectedLandings: string[]
   onLandingsChange: (landings: string[]) => void
+  isMobile?: boolean
+  onClose?: () => void
 }
 
-export function Sidebar({ selectedLandings, onLandingsChange }: SidebarProps) {
+export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, onClose }: SidebarProps) {
   const [landings, setLandings] = useState<string[]>([])
   const [pinnedLandings, setPinnedLandings] = useState<Set<string>>(new Set())
   const [isCollapsed, setIsCollapsed] = useState(false)
@@ -53,6 +55,10 @@ export function Sidebar({ selectedLandings, onLandingsChange }: SidebarProps) {
     } else {
       onLandingsChange([...selectedLandings, landing])
     }
+    // Close mobile sheet after selection
+    if (isMobile && onClose) {
+      onClose()
+    }
   }
 
   const clearAllLandings = () => {
@@ -83,7 +89,8 @@ export function Sidebar({ selectedLandings, onLandingsChange }: SidebarProps) {
     l.includes('Oceanside')
   )
 
-  if (isCollapsed) {
+  // On mobile, don't show collapse functionality - Sheet handles visibility
+  if (isCollapsed && !isMobile) {
     return (
       <aside className="w-12 border-r bg-background p-2 flex flex-col gap-2">
         <Button
@@ -99,7 +106,7 @@ export function Sidebar({ selectedLandings, onLandingsChange }: SidebarProps) {
   }
 
   return (
-    <aside className="w-72 border-r bg-background p-3 flex flex-col gap-2 overflow-y-auto">
+    <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-background p-3 flex flex-col gap-2 overflow-y-auto`}>
       <div className="flex items-center justify-between gap-2">
         <Button
           variant={selectedLandings.length === 0 ? 'secondary' : 'ghost'}
@@ -109,14 +116,16 @@ export function Sidebar({ selectedLandings, onLandingsChange }: SidebarProps) {
           <MapPin className="mr-2 h-4 w-4" />
           All Landings
         </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => setIsCollapsed(true)}
-          className="h-8 w-8 shrink-0"
-        >
-          <PanelLeftClose className="h-4 w-4" />
-        </Button>
+        {!isMobile && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsCollapsed(true)}
+            className="h-8 w-8 shrink-0"
+          >
+            <PanelLeftClose className="h-4 w-4" />
+          </Button>
+        )}
       </div>
 
       <Separator />

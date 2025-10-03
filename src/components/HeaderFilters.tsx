@@ -164,7 +164,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
       <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
-          <SelectTrigger className="h-8 w-[200px]">
+          <SelectTrigger className="h-8 w-full md:w-[200px]">
             <CalendarIcon className="mr-2 h-3.5 w-3.5" />
             <SelectValue>{getPresetLabel()}</SelectValue>
           </SelectTrigger>
@@ -232,7 +232,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           placeholder="All Boats"
           searchPlaceholder="Search boats..."
           emptyMessage="No boats found."
-          className="h-8 w-[200px]"
+          className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
         />
 
@@ -245,7 +245,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           placeholder="All Species"
           searchPlaceholder="Search species..."
           emptyMessage="No species found."
-          className="h-8 w-[200px]"
+          className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
         />
 

@@ -3,6 +3,7 @@ import { CatchRecord, SummaryMetricsResponse, Filters } from '../scripts/api/typ
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
 import { mockCatchTableResponse, mockSummaryMetricsResponse } from '../scripts/api/mocks'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
+import { Sheet, SheetContent } from './components/ui/sheet'
 import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { HeaderFilters } from './components/HeaderFilters'
@@ -16,6 +17,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [dataSource, setDataSource] = useState<'real' | 'mock'>('mock')
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
 
   // Default filters: last 30 days
   const [filters, setFilters] = useState<Filters>({
@@ -156,12 +158,31 @@ function App() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <Header dataSource={dataSource} />
+      <Header
+        dataSource={dataSource}
+        onMobileMenuClick={() => setIsMobileSidebarOpen(true)}
+      />
       <div className="flex flex-1 overflow-hidden">
-        <Sidebar
-          selectedLandings={selectedLandings}
-          onLandingsChange={handleLandingsChange}
-        />
+        {/* Desktop Sidebar */}
+        <div className="hidden md:block">
+          <Sidebar
+            selectedLandings={selectedLandings}
+            onLandingsChange={handleLandingsChange}
+          />
+        </div>
+
+        {/* Mobile Sidebar Sheet */}
+        <Sheet open={isMobileSidebarOpen} onOpenChange={setIsMobileSidebarOpen}>
+          <SheetContent side="left" className="p-0 w-[280px]">
+            <Sidebar
+              selectedLandings={selectedLandings}
+              onLandingsChange={handleLandingsChange}
+              isMobile={true}
+              onClose={() => setIsMobileSidebarOpen(false)}
+            />
+          </SheetContent>
+        </Sheet>
+
         <div className="flex flex-col flex-1 overflow-hidden">
           <HeaderFilters
             filters={filters}
@@ -181,7 +202,7 @@ function App() {
             <div className="container mx-auto p-6 space-y-6">
               {/* Summary Metrics */}
       {metrics && (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">
