@@ -180,12 +180,23 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 export async function fetchRealSummaryMetrics(params: FetchParams): Promise<SummaryMetricsResponse> {
   const records = await fetchRealCatchData(params)
 
+  // Filter species breakdown if species filter is active
+  const getFilteredSpeciesBreakdown = (breakdown: any[]) => {
+    if (params.species && params.species.length > 0) {
+      return breakdown.filter(s => params.species!.includes(s.species))
+    }
+    return breakdown
+  }
+
   // Calculate fleet totals
   const totalTrips = records.length
-  const totalFish = records.reduce((sum, r) => sum + r.total_fish, 0)
+  const totalFish = records.reduce((sum, r) => {
+    const filteredBreakdown = getFilteredSpeciesBreakdown(r.species_breakdown)
+    return sum + filteredBreakdown.reduce((s, sp) => s + sp.count, 0)
+  }, 0)
   const uniqueBoats = new Set(records.map(r => r.boat)).size
   const allSpecies = new Set(
-    records.flatMap(r => r.species_breakdown.map(s => s.species))
+    records.flatMap(r => getFilteredSpeciesBreakdown(r.species_breakdown).map(s => s.species))
   )
   const uniqueSpecies = allSpecies.size
 
@@ -202,8 +213,13 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
     }
     const boat = boatMap.get(r.boat)!
     boat.trips++
-    boat.fish += r.total_fish
-    r.species_breakdown.forEach(s => {
+
+    // Only count filtered species
+    const filteredBreakdown = getFilteredSpeciesBreakdown(r.species_breakdown)
+    const filteredFishCount = filteredBreakdown.reduce((sum, s) => sum + s.count, 0)
+    boat.fish += filteredFishCount
+
+    filteredBreakdown.forEach(s => {
       boat.topSpecies.set(s.species, (boat.topSpecies.get(s.species) || 0) + s.count)
     })
   })
@@ -222,14 +238,15 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
     })
     .sort((a, b) => b.trips - a.trips)
 
-  // Calculate per-species breakdown
+  // Calculate per-species breakdown (only for filtered species)
   const speciesMap = new Map<string, {
     fish: number
     boats: Set<string>
   }>()
 
   records.forEach(r => {
-    r.species_breakdown.forEach(s => {
+    const filteredBreakdown = getFilteredSpeciesBreakdown(r.species_breakdown)
+    filteredBreakdown.forEach(s => {
       if (!speciesMap.has(s.species)) {
         speciesMap.set(s.species, { fish: 0, boats: new Set() })
       }
