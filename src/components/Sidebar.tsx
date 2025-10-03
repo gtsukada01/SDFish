@@ -174,7 +174,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
             <Button
               key={landing}
               variant={selectedLandings.includes(landing) ? 'secondary' : 'ghost'}
-              className="w-full h-8 text-sm justify-between px-3 group"
+              className="w-full h-8 text-sm justify-between px-3 group font-normal"
               onClick={() => toggleLanding(landing)}
             >
               <span className="truncate">{landing}</span>
@@ -204,7 +204,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
               <Button
                 key={landing}
                 variant={selectedLandings.includes(landing) ? 'secondary' : 'ghost'}
-                className="w-full h-8 text-sm justify-between px-3 group"
+                className="w-full h-8 text-sm justify-between px-3 group font-normal"
                 onClick={() => toggleLanding(landing)}
               >
                 <span className="truncate">{landing}</span>
@@ -237,7 +237,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
               <Button
                 key={landing}
                 variant={selectedLandings.includes(landing) ? 'secondary' : 'ghost'}
-                className="w-full h-8 text-sm justify-between px-3 group"
+                className="w-full h-8 text-sm justify-between px-3 group font-normal"
                 onClick={() => toggleLanding(landing)}
               >
                 <span className="truncate">{landing}</span>
@@ -270,7 +270,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
               <Button
                 key={landing}
                 variant={selectedLandings.includes(landing) ? 'secondary' : 'ghost'}
-                className="w-full h-8 text-sm justify-between px-3 group"
+                className="w-full h-8 text-sm justify-between px-3 group font-normal"
                 onClick={() => toggleLanding(landing)}
               >
                 <span className="truncate">{landing}</span>
