@@ -28,6 +28,7 @@ function App() {
 
   // Load data when filters change (no debounce - filters only change when dropdowns close)
   useEffect(() => {
+    console.log('🔄 Filters changed, reloading data:', { filters, selectedLandings })
     loadData()
   }, [filters, selectedLandings])
 

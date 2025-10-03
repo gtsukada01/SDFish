@@ -116,6 +116,13 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     const typedPreset = preset as DatePreset
     setSelectedPreset(typedPreset)
     const dates = calculatePresetDates(typedPreset)
+
+    console.log('📅 Date filter changed:', {
+      preset: typedPreset,
+      dates,
+      currentFilters: filters
+    })
+
     onFiltersChange({
       ...filters,
       start_date: dates.start,
