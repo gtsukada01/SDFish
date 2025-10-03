@@ -107,26 +107,14 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
 
   return (
     <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-background p-3 flex flex-col gap-2 overflow-y-auto`}>
-      <div className="flex items-center gap-2">
-        <Button
-          variant={selectedLandings.length === 0 ? 'secondary' : 'ghost'}
-          className="flex-1 justify-start h-8"
-          onClick={clearAllLandings}
-        >
-          <MapPin className="mr-2 h-4 w-4" />
-          All Landings
-        </Button>
-        {!isMobile && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsCollapsed(true)}
-            className="h-8 w-8 shrink-0"
-          >
-            <PanelLeftClose className="h-4 w-4" />
-          </Button>
-        )}
-      </div>
+      <Button
+        variant={selectedLandings.length === 0 ? 'secondary' : 'ghost'}
+        className="w-full justify-start h-8"
+        onClick={clearAllLandings}
+      >
+        <MapPin className="mr-2 h-4 w-4" />
+        All Landings
+      </Button>
 
       <Separator />
 
