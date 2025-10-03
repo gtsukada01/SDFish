@@ -199,7 +199,7 @@ function App() {
             onClearAll={handleClearAllFilters}
           />
           <div className="flex-1 overflow-auto">
-            <div className="container mx-auto p-6 space-y-6">
+            <div className="container mx-auto p-4 md:p-6 space-y-6">
               {/* Summary Metrics */}
       {metrics && (
         <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">

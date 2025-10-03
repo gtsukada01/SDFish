@@ -13,6 +13,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Badge } from './ui/badge'
+import { TripCard } from './TripCard'
 import { CatchRecord } from '../../scripts/api/types'
 
 interface CatchTableProps {
@@ -152,67 +153,132 @@ export function CatchTable({ data }: CatchTableProps) {
     },
   })
 
+  const currentRows = table.getRowModel().rows
+
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Catch Records</CardTitle>
-        <p className="text-sm text-muted-foreground">
-          {data.length} total records · Page {table.getState().pagination.pageIndex + 1} of{' '}
-          {table.getPageCount()}
-        </p>
-      </CardHeader>
-      <CardContent>
-        <div className="rounded-md border">
-          <Table className="catch-table">
-            <TableHeader>
-              {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(header.column.columnDef.header, header.getContext())}
-                    </TableHead>
-                  ))}
-                </TableRow>
-              ))}
-            </TableHeader>
-            <TableBody>
-              {table.getRowModel().rows?.length ? (
-                table.getRowModel().rows.map((row) => (
-                  <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id}>
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </TableCell>
+    <>
+      {/* Desktop Table View */}
+      <Card className="hidden md:block">
+        <CardHeader>
+          <CardTitle>Catch Records</CardTitle>
+          <p className="text-sm text-muted-foreground">
+            {data.length} total records · Page {table.getState().pagination.pageIndex + 1} of{' '}
+            {table.getPageCount()}
+          </p>
+        </CardHeader>
+        <CardContent>
+          <div className="rounded-md border">
+            <Table className="catch-table">
+              <TableHeader>
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <TableRow key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => (
+                      <TableHead key={header.id}>
+                        {header.isPlaceholder
+                          ? null
+                          : flexRender(header.column.columnDef.header, header.getContext())}
+                      </TableHead>
                     ))}
                   </TableRow>
-                ))
-              ) : (
-                <TableRow>
-                  <TableCell colSpan={columns.length} className="h-24 text-center">
-                    No results.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
+                ))}
+              </TableHeader>
+              <TableBody>
+                {currentRows?.length ? (
+                  currentRows.map((row) => (
+                    <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell key={cell.id}>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+                ) : (
+                  <TableRow>
+                    <TableCell colSpan={columns.length} className="h-24 text-center">
+                      No results.
+                    </TableCell>
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </div>
+
+          {/* Desktop Pagination */}
+          <div className="flex items-center justify-between space-x-2 py-4">
+            <div className="text-sm text-muted-foreground">
+              Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1} to{' '}
+              {Math.min(
+                (table.getState().pagination.pageIndex + 1) * table.getState().pagination.pageSize,
+                data.length
+              )}{' '}
+              of {data.length} records
+            </div>
+            <div className="flex items-center space-x-2">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+              >
+                <ChevronLeft className="h-4 w-4 mr-1" />
+                Previous
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+              >
+                Next
+                <ChevronRight className="h-4 w-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Mobile Card List View */}
+      <div className="md:hidden space-y-4">
+        {/* Mobile Header */}
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-lg font-semibold">Catch Records</h2>
+            <p className="text-sm text-muted-foreground">
+              {data.length} total records
+            </p>
+          </div>
         </div>
 
-        {/* Pagination Controls */}
-        <div className="flex items-center justify-between space-x-2 py-4">
-          <div className="text-sm text-muted-foreground">
-            Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1} to{' '}
+        {/* Mobile Trip Cards */}
+        <div className="space-y-3">
+          {currentRows?.length ? (
+            currentRows.map((row) => (
+              <TripCard key={row.id} trip={row.original} />
+            ))
+          ) : (
+            <Card>
+              <CardContent className="p-8 text-center text-muted-foreground">
+                No results.
+              </CardContent>
+            </Card>
+          )}
+        </div>
+
+        {/* Mobile Pagination */}
+        <div className="flex flex-col gap-3">
+          <div className="text-sm text-muted-foreground text-center">
+            Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()} ·
+            Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1}-
             {Math.min(
               (table.getState().pagination.pageIndex + 1) * table.getState().pagination.pageSize,
               data.length
-            )}{' '}
-            of {data.length} records
+            )} of {data.length}
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <Button
               variant="outline"
-              size="sm"
+              className="flex-1"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
@@ -221,7 +287,7 @@ export function CatchTable({ data }: CatchTableProps) {
             </Button>
             <Button
               variant="outline"
-              size="sm"
+              className="flex-1"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
@@ -230,7 +296,7 @@ export function CatchTable({ data }: CatchTableProps) {
             </Button>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </>
   )
 }
