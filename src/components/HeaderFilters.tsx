@@ -150,22 +150,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     }
   }
 
-  const getPresetLabel = () => {
-    switch (selectedPreset) {
-      case '7d': return 'Last 7 Days'
-      case '30d': return 'Last 30 Days'
-      case 'ytd': return 'YTD'
-      case '90d': return 'Last 90 Days'
-      case 'all': return 'All Time'
-      case 'custom':
-        if (filters.start_date && filters.end_date) {
-          return `${format(new Date(filters.start_date), 'MMM d')} - ${format(new Date(filters.end_date), 'MMM d')}`
-        }
-        return 'Custom Range'
-      default: return 'Last 30 Days'
-    }
-  }
-
   return (
     <div className="border-b bg-muted/40 px-6 py-2">
       <div className="flex items-center gap-4 flex-wrap">
@@ -173,7 +157,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
             <CalendarIcon className="mr-2 h-3.5 w-3.5" />
-            <SelectValue>{getPresetLabel()}</SelectValue>
+            <SelectValue placeholder="Select date range" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="7d">Last 7 Days</SelectItem>
