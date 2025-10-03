@@ -200,6 +200,9 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
   )
   const uniqueSpecies = allSpecies.size
 
+  // Fetch moon phase data and correlate with fishing trips
+  const moonPhaseBreakdown = await fetchMoonPhaseCorrelation(params.startDate, params.endDate, records)
+
   // Calculate per-boat breakdown
   const boatMap = new Map<string, {
     trips: number
@@ -273,6 +276,7 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
     },
     per_boat: perBoat,
     per_species: perSpecies,
+    moon_phase: moonPhaseBreakdown,
     filters_applied: {
       start_date: params.startDate,
       end_date: params.endDate,
@@ -281,5 +285,69 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
       boat: params.boat !== 'all' ? params.boat || null : null
     },
     last_synced_at: new Date().toISOString()
+  }
+}
+
+/**
+ * Fetch moon phase data from ocean_conditions table and correlate with fishing trips
+ */
+async function fetchMoonPhaseCorrelation(startDate: string, endDate: string, trips: CatchRecord[]): Promise<{
+  phase_name: string
+  total_fish: number
+  trip_count: number
+  avg_fish_per_trip: number
+}[]> {
+  try {
+    // Fetch moon phase data from ocean_conditions table
+    const { data: moonData, error } = await supabase
+      .from('ocean_conditions')
+      .select('date, moon_phase_name')
+      .gte('date', startDate)
+      .lte('date', endDate)
+
+    if (error) {
+      console.error('Failed to fetch moon phase data:', error)
+      return []
+    }
+
+    if (!moonData || moonData.length === 0) {
+      console.warn('No moon phase data available for date range')
+      return []
+    }
+
+    // Create a map of date -> moon_phase_name
+    const moonPhaseMap = new Map<string, string>()
+    moonData.forEach((record: any) => {
+      moonPhaseMap.set(record.date, record.moon_phase_name)
+    })
+
+    // Aggregate trips by moon phase
+    const phaseMap = new Map<string, { total_fish: number; trip_count: number }>()
+
+    trips.forEach(trip => {
+      const moonPhase = moonPhaseMap.get(trip.trip_date)
+      if (!moonPhase) {
+        return // Skip trips without moon phase data
+      }
+
+      if (!phaseMap.has(moonPhase)) {
+        phaseMap.set(moonPhase, { total_fish: 0, trip_count: 0 })
+      }
+
+      const phase = phaseMap.get(moonPhase)!
+      phase.total_fish += trip.total_fish
+      phase.trip_count += 1
+    })
+
+    // Convert to array format
+    return Array.from(phaseMap.entries()).map(([phase_name, data]) => ({
+      phase_name,
+      total_fish: data.total_fish,
+      trip_count: data.trip_count,
+      avg_fish_per_trip: data.trip_count > 0 ? data.total_fish / data.trip_count : 0
+    }))
+  } catch (error) {
+    console.error('Error fetching moon phase correlation:', error)
+    return []
   }
 }

@@ -71,6 +71,12 @@ export interface SummaryMetricsResponse {
     total_fish: number;
     boats: number;
   }[];
+  moon_phase?: {
+    phase_name: string;
+    total_fish: number;
+    trip_count: number;
+    avg_fish_per_trip: number;
+  }[];
   filters_applied: Filters;
   last_synced_at: string;
 }

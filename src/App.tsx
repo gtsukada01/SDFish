@@ -10,6 +10,7 @@ import { Header } from './components/Header'
 import { HeaderFilters } from './components/HeaderFilters'
 import { ActiveFilters } from './components/ActiveFilters'
 import { MetricsBreakdown } from './components/MetricsBreakdown'
+import { MoonPhaseBreakdown } from './components/MoonPhaseBreakdown'
 import { CatchTable } from './components/CatchTable'
 
 function App() {
@@ -253,6 +254,11 @@ function App() {
 
               {/* Metrics Breakdown */}
               {metrics && <MetricsBreakdown metrics={metrics} />}
+
+              {/* Moon Phase Breakdown */}
+              {metrics?.moon_phase && metrics.moon_phase.length > 0 && (
+                <MoonPhaseBreakdown data={metrics.moon_phase} />
+              )}
 
               {/* Catch Data Table */}
               <CatchTable data={catchData} />

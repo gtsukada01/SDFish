@@ -57,21 +57,8 @@ interface HeaderFiltersProps {
 }
 
 export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: HeaderFiltersProps) {
-  // Initialize selectedPreset based on filters (to handle page refresh properly)
-  const getInitialPreset = (): DatePreset => {
-    if (!filters.start_date || !filters.end_date) return '30d'
-
-    const presets: DatePreset[] = ['7d', '30d', '90d', 'ytd', 'all']
-    for (const preset of presets) {
-      const presetDates = calculatePresetDates(preset)
-      if (presetDates.start === filters.start_date && presetDates.end === filters.end_date) {
-        return preset
-      }
-    }
-    return 'custom'
-  }
-
-  const [selectedPreset, setSelectedPreset] = useState<DatePreset>(getInitialPreset())
+  // Initialize selectedPreset - always start with '30d' to match App.tsx default
+  const [selectedPreset, setSelectedPreset] = useState<DatePreset>('30d')
   const [showCustomCalendar, setShowCustomCalendar] = useState(false)
   const [customStartDate, setCustomStartDate] = useState<Date | undefined>(undefined)
   const [customEndDate, setCustomEndDate] = useState<Date | undefined>(undefined)
@@ -206,7 +193,9 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
-            <CalendarIcon className="mr-2 h-3.5 w-3.5" />
+            <span className="mr-2 h-3.5 w-3.5 shrink-0">
+              <CalendarIcon className="h-3.5 w-3.5" />
+            </span>
             <SelectValue placeholder="Select date range" />
           </SelectTrigger>
           <SelectContent>
