@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
-import { Calendar as CalendarIcon, Ship, Fish } from 'lucide-react'
 import { Calendar } from './ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
@@ -213,10 +212,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
       <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
-          <SelectTrigger className="h-8 w-full md:w-[200px] justify-start">
-            <span className="mr-2 h-3.5 w-3.5 shrink-0 flex items-center">
-              <CalendarIcon className="h-3.5 w-3.5" />
-            </span>
+          <SelectTrigger className="h-8 w-full md:w-[200px]">
             <SelectValue placeholder="Select date range" />
           </SelectTrigger>
           <SelectContent>
@@ -285,7 +281,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           emptyMessage="No boats found."
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
-          icon={<Ship className="h-3.5 w-3.5" />}
         />
 
         {/* Species Filter */}
@@ -299,7 +294,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           emptyMessage="No species found."
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
-          icon={<Fish className="h-3.5 w-3.5" />}
         />
 
       </div>
