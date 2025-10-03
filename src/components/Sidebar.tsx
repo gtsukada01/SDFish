@@ -108,7 +108,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
   return (
     <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-background p-3 flex flex-col gap-2 overflow-y-auto`}>
       <Button
-        variant={selectedLandings.length === 0 ? 'secondary' : 'ghost'}
+        variant="ghost"
         className="w-full justify-start h-8"
         onClick={clearAllLandings}
       >
