@@ -1,10 +1,8 @@
 import React from 'react'
-import { ChevronDown, Moon } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible'
 import { Button } from './ui/button'
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from './ui/chart'
-import { Bar, BarChart, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts'
 
 interface MoonPhaseData {
   phase_name: string
@@ -60,10 +58,7 @@ export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
         <CardHeader className="pb-3">
           <CollapsibleTrigger asChild>
             <Button variant="ghost" className="w-full justify-between p-0 hover:bg-transparent">
-              <div className="flex items-center gap-2">
-                <Moon className="h-4 w-4" />
-                <CardTitle className="text-base">Fish Catches by Moon Phase</CardTitle>
-              </div>
+              <CardTitle className="text-base">Fish Catches by Moon Phase</CardTitle>
               <ChevronDown
                 className={`h-4 w-4 transition-transform duration-200 ${
                   isOpen ? 'rotate-180' : ''
@@ -73,66 +68,33 @@ export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
           </CollapsibleTrigger>
         </CardHeader>
         <CollapsibleContent>
-          <CardContent className="space-y-4">
-            {/* Chart Visualization */}
-            <div className="h-[300px]">
-              <ChartContainer config={chartConfig}>
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={chartData} margin={{ top: 10, right: 10, left: 10, bottom: 80 }}>
-                    <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
-                    <XAxis
-                      dataKey="phase"
-                      angle={-45}
-                      textAnchor="end"
-                      height={80}
-                      tick={{ fontSize: 12 }}
-                      className="text-muted-foreground"
-                    />
-                    <YAxis
-                      tick={{ fontSize: 12 }}
-                      className="text-muted-foreground"
-                      label={{ value: 'Total Fish', angle: -90, position: 'insideLeft' }}
-                    />
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                    <Bar
-                      dataKey="total_fish"
-                      fill="var(--color-total_fish)"
-                      radius={[4, 4, 0, 0]}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </ChartContainer>
-            </div>
+          <CardContent className="space-y-3">
+            {sortedData.map((phase) => {
+              const percentage = (phase.total_fish / maxFish) * 100
+              const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name
 
-            {/* Detailed Breakdown */}
-            <div className="space-y-3 pt-4 border-t">
-              {sortedData.map((phase) => {
-                const percentage = (phase.total_fish / maxFish) * 100
-                const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name
-
-                return (
-                  <div key={phase.phase_name} className="space-y-2">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="font-medium">{displayName}</span>
-                      <span className="text-muted-foreground">
-                        {phase.total_fish.toLocaleString()} fish · {phase.trip_count} trips · {phase.avg_fish_per_trip.toFixed(1)} avg
+              return (
+                <div key={phase.phase_name} className="space-y-2">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="font-medium">{displayName}</span>
+                    <span className="text-muted-foreground">
+                      {phase.total_fish.toLocaleString()} fish · {phase.trip_count} trips · {phase.avg_fish_per_trip.toFixed(1)} avg
+                    </span>
+                  </div>
+                  <div className="relative h-8 bg-muted rounded-md overflow-hidden">
+                    <div
+                      className="absolute inset-y-0 left-0 bg-primary transition-all duration-300"
+                      style={{ width: `${percentage}%` }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-end px-3">
+                      <span className="text-xs font-medium text-primary-foreground mix-blend-difference">
+                        {percentage.toFixed(1)}%
                       </span>
                     </div>
-                    <div className="relative h-8 bg-muted rounded-md overflow-hidden">
-                      <div
-                        className="absolute inset-y-0 left-0 bg-chart-1 transition-all duration-300"
-                        style={{ width: `${percentage}%` }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-end px-3">
-                        <span className="text-xs font-medium text-primary-foreground mix-blend-difference">
-                          {percentage.toFixed(1)}%
-                        </span>
-                      </div>
-                    </div>
                   </div>
-                )
-              })}
-            </div>
+                </div>
+              )
+            })}
           </CardContent>
         </CollapsibleContent>
       </Card>
