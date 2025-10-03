@@ -208,8 +208,9 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   }
 
   return (
-    <div className="border-b bg-muted/40 px-6 py-2">
-      <div className="flex items-center gap-4 flex-wrap">
+    <div className="border-b bg-muted/40">
+      <div className="container mx-auto p-4 md:px-6 py-2">
+        <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
@@ -295,7 +296,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
         />
-
+        </div>
       </div>
     </div>
   )
