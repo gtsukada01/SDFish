@@ -72,6 +72,17 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   )
   const [pendingSpecies, setPendingSpecies] = useState<string[]>(filters.species || [])
 
+  // Sync pending boat/species filters when filters prop changes from parent
+  useEffect(() => {
+    setPendingBoats(Array.isArray(filters.boat) ? filters.boat : filters.boat ? [filters.boat] : [])
+    setPendingSpecies(filters.species || [])
+  }, [filters.boat, filters.species])
+
+  // Debug: Log when selectedPreset changes
+  useEffect(() => {
+    console.log('🟢 selectedPreset state updated to:', selectedPreset)
+  }, [selectedPreset])
+
   // Load options on mount
   useEffect(() => {
     async function loadOptions() {
@@ -103,6 +114,9 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   }, [selectedLandings])
 
   const handlePresetChange = (preset: string) => {
+    console.log('🔵 handlePresetChange called with:', preset)
+    console.log('🔵 Current selectedPreset state:', selectedPreset)
+
     if (preset === 'custom') {
       // Use setTimeout to ensure Select closes before opening Popover
       setTimeout(() => {
@@ -113,6 +127,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     }
 
     const typedPreset = preset as DatePreset
+    console.log('🔵 Setting selectedPreset to:', typedPreset)
     setSelectedPreset(typedPreset)
     const dates = calculatePresetDates(typedPreset)
 
