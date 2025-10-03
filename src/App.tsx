@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { format } from 'date-fns'
 import { CatchRecord, SummaryMetricsResponse, Filters } from '../scripts/api/types'
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
 import { mockCatchTableResponse, mockSummaryMetricsResponse } from '../scripts/api/mocks'

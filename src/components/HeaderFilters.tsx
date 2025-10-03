@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
-import { Calendar as CalendarIcon } from 'lucide-react'
+import { Calendar as CalendarIcon, Ship, Fish } from 'lucide-react'
 import { Calendar } from './ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
@@ -57,7 +57,21 @@ interface HeaderFiltersProps {
 }
 
 export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: HeaderFiltersProps) {
-  const [selectedPreset, setSelectedPreset] = useState<DatePreset>('30d')
+  // Initialize selectedPreset based on filters (to handle page refresh properly)
+  const getInitialPreset = (): DatePreset => {
+    if (!filters.start_date || !filters.end_date) return '30d'
+
+    const presets: DatePreset[] = ['7d', '30d', '90d', 'ytd', 'all']
+    for (const preset of presets) {
+      const presetDates = calculatePresetDates(preset)
+      if (presetDates.start === filters.start_date && presetDates.end === filters.end_date) {
+        return preset
+      }
+    }
+    return 'custom'
+  }
+
+  const [selectedPreset, setSelectedPreset] = useState<DatePreset>(getInitialPreset())
   const [showCustomCalendar, setShowCustomCalendar] = useState(false)
   const [customStartDate, setCustomStartDate] = useState<Date | undefined>(undefined)
   const [customEndDate, setCustomEndDate] = useState<Date | undefined>(undefined)
@@ -261,6 +275,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           emptyMessage="No boats found."
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
+          icon={<Ship className="h-3.5 w-3.5" />}
         />
 
         {/* Species Filter */}
@@ -274,6 +289,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           emptyMessage="No species found."
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
+          icon={<Fish className="h-3.5 w-3.5" />}
         />
 
       </div>

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Check, ChevronsUpDown, X } from 'lucide-react'
+import { Check, ChevronsUpDown, X, Ship, Fish } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from './button'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from './command'
@@ -16,6 +16,7 @@ interface MultiComboboxProps {
   searchPlaceholder?: string
   className?: string
   disabled?: boolean
+  icon?: React.ReactNode
 }
 
 export function MultiCombobox({
@@ -27,7 +28,8 @@ export function MultiCombobox({
   emptyMessage = 'No results found.',
   searchPlaceholder = 'Search...',
   className,
-  disabled = false
+  disabled = false,
+  icon
 }: MultiComboboxProps) {
   const [open, setOpen] = React.useState(false)
   const [search, setSearch] = React.useState('')
@@ -77,6 +79,7 @@ export function MultiCombobox({
           className={cn('justify-between', className)}
           disabled={disabled}
         >
+          {icon && <span className="mr-2 h-3.5 w-3.5 shrink-0">{icon}</span>}
           <div className="flex gap-1 flex-wrap overflow-hidden">
             {pendingValues.length === 0 ? (
               <span className="text-muted-foreground">{placeholder}</span>
