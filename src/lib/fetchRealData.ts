@@ -1,5 +1,6 @@
 import { supabase } from './supabase'
 import { CatchRecord, SummaryMetricsResponse } from '../../scripts/api/types'
+import { groupSpeciesByNormalizedName } from './utils'
 
 export interface FetchParams {
   startDate: string
@@ -132,6 +133,7 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
   landings: string[]
   boats: string[]
   species: string[]
+  speciesVariantMap: Map<string, string[]>
   tripDurations: string[]
 }> {
   // Fetch all trips with boat/landing/species/duration data
@@ -152,11 +154,11 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
   if (error) {
     console.error('Failed to fetch filter options:', error)
-    return { landings: [], boats: [], species: [], tripDurations: [] }
+    return { landings: [], boats: [], species: [], speciesVariantMap: new Map(), tripDurations: [] }
   }
 
   if (!data || data.length === 0) {
-    return { landings: [], boats: [], species: [], tripDurations: [] }
+    return { landings: [], boats: [], species: [], speciesVariantMap: new Map(), tripDurations: [] }
   }
 
   // Extract unique values
@@ -180,10 +182,15 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
     }
   })
 
+  // Group species by normalized names for cleaner display
+  const allSpecies = Array.from(speciesSet)
+  const { normalizedNames, variantMap } = groupSpeciesByNormalizedName(allSpecies)
+
   return {
     landings: Array.from(landingSet).sort(),
     boats: Array.from(boatSet).sort(),
-    species: Array.from(speciesSet).sort(),
+    species: normalizedNames, // Return normalized names for display
+    speciesVariantMap: variantMap, // Return mapping for filtering
     tripDurations: Array.from(tripDurationSet).sort((a, b) => {
       // Custom sort: numeric day values first, then alphanumeric
       const aNum = parseFloat(a)

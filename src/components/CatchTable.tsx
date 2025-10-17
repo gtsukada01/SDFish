@@ -151,7 +151,7 @@ export function CatchTable({ data }: CatchTableProps) {
     },
     initialState: {
       pagination: {
-        pageSize: 25,
+        pageSize: 20,
       },
     },
   })
@@ -163,10 +163,9 @@ export function CatchTable({ data }: CatchTableProps) {
       {/* Desktop Table View */}
       <Card className="hidden md:block border-transparent shadow-none">
         <CardHeader>
-          <CardTitle>Catch Records</CardTitle>
+          <CardTitle>Daily Catch Report</CardTitle>
           <p className="text-sm text-muted-foreground">
-            {data.length} total records · Page {table.getState().pagination.pageIndex + 1} of{' '}
-            {table.getPageCount()}
+            {data.length} total records
           </p>
         </CardHeader>
         <CardContent>
@@ -210,7 +209,7 @@ export function CatchTable({ data }: CatchTableProps) {
           {/* Desktop Pagination */}
           <div className="flex items-center justify-between space-x-2 py-4">
             <div className="text-sm text-muted-foreground">
-              Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1} to{' '}
+              Showing {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1}–
               {Math.min(
                 (table.getState().pagination.pageIndex + 1) * table.getState().pagination.pageSize,
                 data.length
@@ -218,6 +217,9 @@ export function CatchTable({ data }: CatchTableProps) {
               of {data.length} records
             </div>
             <div className="flex items-center space-x-2">
+              <div className="text-sm text-muted-foreground">
+                Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+              </div>
               <Button
                 variant="outline"
                 size="sm"
@@ -246,7 +248,7 @@ export function CatchTable({ data }: CatchTableProps) {
         {/* Mobile Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-lg font-semibold">Catch Records</h2>
+            <h2 className="text-lg font-semibold">Daily Catch Report</h2>
             <p className="text-sm text-muted-foreground">
               {data.length} total records
             </p>

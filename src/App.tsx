@@ -261,8 +261,8 @@ function App() {
                   <CardContent>
                     <Tabs defaultValue="boats" className="w-full">
                       <TabsList className="grid w-full grid-cols-2">
-                        <TabsTrigger value="boats">Per-Boat Breakdown</TabsTrigger>
-                        <TabsTrigger value="moon">Fish Catches by Moon Phase</TabsTrigger>
+                        <TabsTrigger value="boats">Boat Breakdown</TabsTrigger>
+                        <TabsTrigger value="moon">Moon Phase Breakdown</TabsTrigger>
                       </TabsList>
                       <TabsContent value="boats" className="mt-6">
                         <MetricsBreakdown metrics={metrics} />

@@ -5,7 +5,7 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
 import { MultiCombobox } from './ui/multi-combobox'
-import { cn } from '@/lib/utils'
+import { cn, normalizeSpeciesName } from '@/lib/utils'
 import { Filters } from '../../scripts/api/types'
 import { fetchFilterOptions } from '@/lib/fetchRealData'
 
@@ -66,18 +66,27 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   const [availableBoats, setAvailableBoats] = useState<string[]>([])
   const [availableSpecies, setAvailableSpecies] = useState<string[]>([])
   const [availableTripDurations, setAvailableTripDurations] = useState<string[]>([])
+  const [speciesVariantMap, setSpeciesVariantMap] = useState<Map<string, string[]>>(new Map())
   const [loadingOptions, setLoadingOptions] = useState(true)
 
   // Temporary state for pending filter changes (before apply)
   const [pendingBoats, setPendingBoats] = useState<string[]>(
     Array.isArray(filters.boat) ? filters.boat : filters.boat ? [filters.boat] : []
   )
-  const [pendingSpecies, setPendingSpecies] = useState<string[]>(filters.species || [])
+  const [pendingSpecies, setPendingSpecies] = useState<string[]>([])
 
   // Sync pending boat/species filters when filters prop changes from parent
   useEffect(() => {
     setPendingBoats(Array.isArray(filters.boat) ? filters.boat : filters.boat ? [filters.boat] : [])
-    setPendingSpecies(filters.species || [])
+
+    // Reverse map: database variants → normalized names for display
+    const speciesArray = filters.species || []
+    const normalizedSelected = new Set<string>()
+    speciesArray.forEach(variant => {
+      const normalized = normalizeSpeciesName(variant)
+      normalizedSelected.add(normalized)
+    })
+    setPendingSpecies(Array.from(normalizedSelected))
   }, [filters.boat, filters.species])
 
   // Sync selectedPreset when filters change from parent (important!)
@@ -132,7 +141,8 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     async function loadOptions() {
       try {
         const options = await fetchFilterOptions()
-        setAvailableSpecies(options.species)
+        setAvailableSpecies(options.species) // Normalized names for display
+        setSpeciesVariantMap(options.speciesVariantMap) // Mapping for filtering
         setAvailableTripDurations(options.tripDurations)
       } catch (error) {
         console.error('Failed to load filter options:', error)
@@ -207,6 +217,28 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     if (!customStartDate || !customEndDate) {
       setSelectedPreset('30d')
     }
+  }
+
+  // Handle species filter application - expand normalized names to all variants
+  const handleSpeciesApply = (selectedNormalizedNames: string[]) => {
+    if (selectedNormalizedNames.length === 0) {
+      onFiltersChange({ ...filters, species: undefined })
+      return
+    }
+
+    // Expand normalized names to all database variants
+    const allVariants: string[] = []
+    selectedNormalizedNames.forEach(normalizedName => {
+      const variants = speciesVariantMap.get(normalizedName) || []
+      allVariants.push(...variants)
+    })
+
+    console.log('🐟 Species filter:', {
+      selected: selectedNormalizedNames,
+      expanded: allVariants
+    })
+
+    onFiltersChange({ ...filters, species: allVariants })
   }
 
   return (
@@ -293,7 +325,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           options={availableSpecies}
           values={pendingSpecies}
           onValuesChange={setPendingSpecies}
-          onApply={(values) => onFiltersChange({ ...filters, species: values.length > 0 ? values : undefined })}
+          onApply={handleSpeciesApply}
           placeholder="All Species"
           searchPlaceholder="Search species..."
           emptyMessage="No species found."
