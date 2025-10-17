@@ -9,7 +9,10 @@ interface TripCardProps {
 }
 
 export function TripCard({ trip }: TripCardProps) {
-  const date = new Date(trip.trip_date)
+  // Parse date as local timezone (not UTC) to prevent off-by-one day display bug
+  // trip.trip_date is 'YYYY-MM-DD' format representing the departure date
+  const [year, month, day] = trip.trip_date.split('-').map(Number)
+  const date = new Date(year, month - 1, day) // month is 0-indexed
   const formattedDate = date.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
@@ -47,7 +50,7 @@ export function TripCard({ trip }: TripCardProps) {
         <div className="flex items-center gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
             <Clock className="h-4 w-4" />
-            <span>{trip.trip_duration_hours}h</span>
+            <span>{trip.trip_duration_hours}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <Users className="h-4 w-4" />

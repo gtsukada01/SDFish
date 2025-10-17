@@ -39,8 +39,11 @@ export function CatchTable({ data }: CatchTableProps) {
         )
       },
       cell: ({ row }) => {
-        const date = new Date(row.getValue('trip_date'))
-        return <div className="font-medium">{date.toLocaleDateString()}</div>
+        // Parse date as local timezone (not UTC) to prevent off-by-one day display bug
+        const tripDate = row.getValue('trip_date') as string
+        const [year, month, day] = tripDate.split('-').map(Number)
+        const date = new Date(year, month - 1, day) // month is 0-indexed
+        return <div className="font-medium text-center">{date.toLocaleDateString()}</div>
       },
     },
     {
@@ -57,12 +60,12 @@ export function CatchTable({ data }: CatchTableProps) {
           </Button>
         )
       },
-      cell: ({ row }) => <div className="font-medium">{row.getValue('boat')}</div>,
+      cell: ({ row }) => <div className="font-medium text-center">{row.getValue('boat')}</div>,
     },
     {
       accessorKey: 'landing',
       header: 'Landing',
-      cell: ({ row }) => <div className="text-sm">{row.getValue('landing')}</div>,
+      cell: ({ row }) => <div className="text-sm text-center">{row.getValue('landing')}</div>,
     },
     {
       accessorKey: 'trip_duration_hours',
@@ -78,14 +81,14 @@ export function CatchTable({ data }: CatchTableProps) {
           </Button>
         )
       },
-      cell: ({ row }) => <div className="text-sm">{row.getValue('trip_duration_hours')}h</div>,
+      cell: ({ row }) => <div className="text-sm text-center">{row.getValue('trip_duration_hours')}</div>,
     },
     {
       accessorKey: 'angler_count',
       header: 'Anglers',
       cell: ({ row }) => {
         const count = row.getValue('angler_count') as number | null
-        return <div className="text-sm">{count ?? 'N/A'}</div>
+        return <div className="text-sm text-center">{count ?? 'N/A'}</div>
       },
     },
     {
@@ -103,7 +106,7 @@ export function CatchTable({ data }: CatchTableProps) {
         )
       },
       cell: ({ row }) => (
-        <div className="text-sm font-semibold">{row.getValue('total_fish')}</div>
+        <div className="text-sm font-semibold text-center">{row.getValue('total_fish')}</div>
       ),
     },
     {
@@ -113,7 +116,7 @@ export function CatchTable({ data }: CatchTableProps) {
         const species = row.getValue('top_species') as string
         const count = row.original.top_species_count
         return (
-          <div className="space-y-1">
+          <div className="space-y-1 text-center">
             <Badge variant="secondary" className="font-medium">
               {species}
             </Badge>
@@ -128,7 +131,7 @@ export function CatchTable({ data }: CatchTableProps) {
       cell: ({ row }) => {
         const notes = row.getValue('weather_notes') as string | null
         return (
-          <div className="text-sm text-muted-foreground max-w-[200px] truncate">
+          <div className="text-sm text-muted-foreground max-w-[200px] truncate text-center">
             {notes ?? 'N/A'}
           </div>
         )
@@ -158,7 +161,7 @@ export function CatchTable({ data }: CatchTableProps) {
   return (
     <>
       {/* Desktop Table View */}
-      <Card className="hidden md:block">
+      <Card className="hidden md:block border-transparent shadow-none">
         <CardHeader>
           <CardTitle>Catch Records</CardTitle>
           <p className="text-sm text-muted-foreground">
@@ -167,13 +170,13 @@ export function CatchTable({ data }: CatchTableProps) {
           </p>
         </CardHeader>
         <CardContent>
-          <div className="rounded-md border">
+          <div className="rounded-md">
             <Table className="catch-table">
               <TableHeader>
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>
                     {headerGroup.headers.map((header) => (
-                      <TableHead key={header.id}>
+                      <TableHead key={header.id} className="text-center">
                         {header.isPlaceholder
                           ? null
                           : flexRender(header.column.columnDef.header, header.getContext())}

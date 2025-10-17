@@ -1,8 +1,4 @@
 import React from 'react'
-import { ChevronDown } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible'
-import { Button } from './ui/button'
 
 interface MoonPhaseData {
   phase_name: string
@@ -49,8 +45,6 @@ const MOON_PHASE_ORDER = [
 ]
 
 export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
-  const [isOpen, setIsOpen] = React.useState(false)
-
   if (!data || data.length === 0) {
     return null
   }
@@ -62,53 +56,35 @@ export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
   const totalFish = sortedData.reduce((sum, d) => sum + d.total_fish, 0)
 
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <Card>
-        <CardHeader className="pb-3 pt-4">
-          <CollapsibleTrigger asChild>
-            <Button variant="ghost" className="w-full justify-between p-0 h-auto hover:bg-transparent">
-              <CardTitle className="text-base leading-none">Fish Catches by Moon Phase</CardTitle>
-              <ChevronDown
-                className={`h-4 w-4 transition-transform duration-200 ${
-                  isOpen ? 'rotate-180' : ''
-                }`}
-              />
-            </Button>
-          </CollapsibleTrigger>
-        </CardHeader>
-        <CollapsibleContent>
-          <CardContent className="space-y-2">
-            {sortedData.map((phase) => {
-              const percentage = (phase.total_fish / totalFish) * 100
-              const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name
-              const icon = moonIcons[phase.phase_name] || '🌑'
+    <div className="space-y-2">
+      {sortedData.map((phase) => {
+        const percentage = (phase.total_fish / totalFish) * 100
+        const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name
+        const icon = moonIcons[phase.phase_name] || '🌑'
 
-              return (
-                <div key={phase.phase_name} className="space-y-1">
-                  {/* Line 1: Icon + Progress bar + Percentage */}
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg shrink-0 leading-none">{icon}</span>
-                    <div className="relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center justify-end">
-                      <div
-                        className="absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300"
-                        style={{ width: `${percentage}%`, height: '100%' }}
-                      />
-                      <span className="relative text-xs font-medium text-foreground leading-none px-2">
-                        {percentage.toFixed(1)}%
-                      </span>
-                    </div>
-                  </div>
+        return (
+          <div key={phase.phase_name} className="space-y-1">
+            {/* Line 1: Icon + Progress bar + Percentage */}
+            <div className="flex items-center gap-2">
+              <span className="text-lg shrink-0 leading-none">{icon}</span>
+              <div className="relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center justify-end">
+                <div
+                  className="absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300"
+                  style={{ width: `${percentage}%`, height: '100%' }}
+                />
+                <span className="relative text-xs font-medium text-foreground leading-none px-2">
+                  {percentage.toFixed(1)}%
+                </span>
+              </div>
+            </div>
 
-                  {/* Line 2: Phase name + metrics */}
-                  <div className="text-xs text-muted-foreground">
-                    {displayName}  |  {phase.total_fish.toLocaleString()} fish  |  {phase.trip_count} trips  |  {phase.avg_fish_per_trip.toFixed(1)} avg
-                  </div>
-                </div>
-              )
-            })}
-          </CardContent>
-        </CollapsibleContent>
-      </Card>
-    </Collapsible>
+            {/* Line 2: Phase name + metrics */}
+            <div className="text-xs text-muted-foreground">
+              {displayName}  |  {phase.total_fish.toLocaleString()} fish  |  {phase.trip_count} trips  |  {phase.avg_fish_per_trip.toFixed(1)} avg
+            </div>
+          </div>
+        )
+      })}
+    </div>
   )
 }

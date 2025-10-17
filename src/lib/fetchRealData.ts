@@ -7,6 +7,7 @@ export interface FetchParams {
   landing?: string
   boat?: string | string[]
   species?: string[]
+  tripDuration?: string
 }
 
 /**
@@ -14,7 +15,7 @@ export interface FetchParams {
  * Handles foreign key joins: trips → boats → landings, catches
  */
 export async function fetchRealCatchData(params: FetchParams): Promise<CatchRecord[]> {
-  const { startDate, endDate, landing, boat, species } = params
+  const { startDate, endDate, landing, boat, species, tripDuration } = params
 
   // Build query with joins
   let query = supabase
@@ -45,6 +46,11 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
   // Apply landing filter (note: landing is nested in boats.landings)
   if (landing && landing !== 'all') {
     query = query.eq('boats.landings.name', landing)
+  }
+
+  // Apply trip duration filter
+  if (tripDuration) {
+    query = query.eq('trip_duration', tripDuration)
   }
 
   const { data, error } = await query
@@ -126,11 +132,13 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
   landings: string[]
   boats: string[]
   species: string[]
+  tripDurations: string[]
 }> {
-  // Fetch all trips with boat/landing/species data
+  // Fetch all trips with boat/landing/species/duration data
   let query = supabase
     .from('trips')
     .select(`
+      trip_duration,
       boats!inner(name, landings!inner(name)),
       catches!inner(species)
     `)
@@ -144,17 +152,18 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
   if (error) {
     console.error('Failed to fetch filter options:', error)
-    return { landings: [], boats: [], species: [] }
+    return { landings: [], boats: [], species: [], tripDurations: [] }
   }
 
   if (!data || data.length === 0) {
-    return { landings: [], boats: [], species: [] }
+    return { landings: [], boats: [], species: [], tripDurations: [] }
   }
 
   // Extract unique values
   const landingSet = new Set<string>()
   const boatSet = new Set<string>()
   const speciesSet = new Set<string>()
+  const tripDurationSet = new Set<string>()
 
   data.forEach((trip: any) => {
     const landingName = trip.boats?.landings?.name
@@ -162,6 +171,7 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
     if (landingName) landingSet.add(landingName)
     if (boatName) boatSet.add(boatName)
+    if (trip.trip_duration) tripDurationSet.add(trip.trip_duration)
 
     if (Array.isArray(trip.catches)) {
       trip.catches.forEach((c: any) => {
@@ -173,7 +183,14 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
   return {
     landings: Array.from(landingSet).sort(),
     boats: Array.from(boatSet).sort(),
-    species: Array.from(speciesSet).sort()
+    species: Array.from(speciesSet).sort(),
+    tripDurations: Array.from(tripDurationSet).sort((a, b) => {
+      // Custom sort: numeric day values first, then alphanumeric
+      const aNum = parseFloat(a)
+      const bNum = parseFloat(b)
+      if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum
+      return a.localeCompare(b)
+    })
   }
 }
 

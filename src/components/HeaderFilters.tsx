@@ -65,6 +65,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
 
   const [availableBoats, setAvailableBoats] = useState<string[]>([])
   const [availableSpecies, setAvailableSpecies] = useState<string[]>([])
+  const [availableTripDurations, setAvailableTripDurations] = useState<string[]>([])
   const [loadingOptions, setLoadingOptions] = useState(true)
 
   // Temporary state for pending filter changes (before apply)
@@ -132,6 +133,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
       try {
         const options = await fetchFilterOptions()
         setAvailableSpecies(options.species)
+        setAvailableTripDurations(options.tripDurations)
       } catch (error) {
         console.error('Failed to load filter options:', error)
       } finally {
@@ -214,7 +216,9 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
-            <SelectValue placeholder="Select date range" />
+            <span className="text-muted-foreground">
+              <SelectValue placeholder="Select date range" />
+            </span>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="7d">Last 7 Days</SelectItem>
@@ -296,6 +300,26 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
           className="h-8 w-full md:w-[200px]"
           disabled={loadingOptions}
         />
+
+        {/* Trip Duration Filter */}
+        <Select
+          value={filters.trip_duration || 'all'}
+          onValueChange={(value) => onFiltersChange({ ...filters, trip_duration: value === 'all' ? null : value })}
+        >
+          <SelectTrigger className="h-8 w-full md:w-[200px]">
+            <span className="text-muted-foreground">
+              <SelectValue placeholder="All Trip Durations" />
+            </span>
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All Trip Durations</SelectItem>
+            {availableTripDurations.map((duration) => (
+              <SelectItem key={duration} value={duration}>
+                {duration}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
         </div>
       </div>
     </div>

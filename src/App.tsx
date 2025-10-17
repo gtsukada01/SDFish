@@ -4,6 +4,7 @@ import { CatchRecord, SummaryMetricsResponse, Filters } from '../scripts/api/typ
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
 import { mockCatchTableResponse, mockSummaryMetricsResponse } from '../scripts/api/mocks'
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs'
 import { Sheet, SheetContent } from './components/ui/sheet'
 import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
@@ -53,7 +54,8 @@ function App() {
             endDate: filters.end_date!,
             landing: activeLanding,
             boat: filters.boat,
-            species: filters.species
+            species: filters.species,
+            tripDuration: filters.trip_duration || undefined
           }
 
           const [data, metricsData] = await Promise.all([
@@ -195,65 +197,89 @@ function App() {
           />
           <div className="flex-1 overflow-auto">
             <div className="container mx-auto p-4 md:p-6 space-y-6">
-              {/* Summary Metrics */}
-      {metrics && (
-        <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
-                Total Trips
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.fleet.total_trips.toLocaleString()}</div>
-            </CardContent>
-          </Card>
+              {/* Summary Metrics - Compact */}
+              {metrics && (
+                <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Total Trips
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-2xl font-bold">{metrics.fleet.total_trips.toLocaleString()}</div>
+                    </CardContent>
+                  </Card>
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
-                Total Fish
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.fleet.total_fish.toLocaleString()}</div>
-            </CardContent>
-          </Card>
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Total Fish
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-2xl font-bold">{metrics.fleet.total_fish.toLocaleString()}</div>
+                    </CardContent>
+                  </Card>
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
-                Active Boats
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.fleet.unique_boats}</div>
-            </CardContent>
-          </Card>
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Active Boats
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-2xl font-bold">{metrics.fleet.unique_boats}</div>
+                    </CardContent>
+                  </Card>
 
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
-                Species
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">{metrics.fleet.unique_species}</div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
-
-              {/* Metrics Breakdown */}
-              {metrics && <MetricsBreakdown metrics={metrics} />}
-
-              {/* Moon Phase Breakdown */}
-              {metrics?.moon_phase && metrics.moon_phase.length > 0 && (
-                <MoonPhaseBreakdown data={metrics.moon_phase} />
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm font-medium text-muted-foreground">
+                        Species
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-2xl font-bold">{metrics.fleet.unique_species}</div>
+                    </CardContent>
+                  </Card>
+                </div>
               )}
 
-              {/* Catch Data Table */}
+              {/* Catch Data Table - Priority Position */}
               <CatchTable data={catchData} />
+
+              {/* Analytics & Insights - Tabbed Section Below Table */}
+              {metrics && (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Analytics & Insights</CardTitle>
+                    <p className="text-sm text-muted-foreground">
+                      Explore detailed breakdowns and patterns in the fishing data
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <Tabs defaultValue="boats" className="w-full">
+                      <TabsList className="grid w-full grid-cols-2">
+                        <TabsTrigger value="boats">Per-Boat Breakdown</TabsTrigger>
+                        <TabsTrigger value="moon">Fish Catches by Moon Phase</TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="boats" className="mt-6">
+                        <MetricsBreakdown metrics={metrics} />
+                      </TabsContent>
+                      <TabsContent value="moon" className="mt-6">
+                        {metrics.moon_phase && metrics.moon_phase.length > 0 ? (
+                          <MoonPhaseBreakdown data={metrics.moon_phase} />
+                        ) : (
+                          <p className="text-muted-foreground text-center py-8">
+                            No moon phase data available for the selected date range
+                          </p>
+                        )}
+                      </TabsContent>
+                    </Tabs>
+                  </CardContent>
+                </Card>
+              )}
             </div>
           </div>
         </div>

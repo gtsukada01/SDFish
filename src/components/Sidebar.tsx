@@ -69,24 +69,29 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
     l.includes('Fisherman') ||
     l.includes('H&M') ||
     l.includes('Point Loma') ||
-    l.includes('Seaforth')
+    l.includes('Seaforth') ||
+    l.includes('Oceanside')
   )
 
   const orangeCountyLandings = landings.filter(l =>
     l.includes('Dana') ||
-    l.includes('Newport')
+    l.includes('Newport') ||
+    l.includes('Davey')
   )
 
   const losAngelesLandings = landings.filter(l =>
     l.includes('Long Beach') ||
     l.includes('San Pedro') ||
-    l.includes('Redondo')
+    l.includes('Redondo') ||
+    l.includes('Marina Del Rey') ||
+    l.includes('22nd Street') ||
+    l.includes('Pierpoint')
   )
 
   const channelIslandsLandings = landings.filter(l =>
     l.includes('Ventura') ||
     l.includes('Santa Barbara') ||
-    l.includes('Oceanside')
+    l.includes('Channel Islands')
   )
 
   // On mobile, don't show collapse functionality - Sheet handles visibility
