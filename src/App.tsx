@@ -226,17 +226,15 @@ function App() {
                 <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
                   {/* CARD 1: Total Fish - Always visible */}
                   <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                    <CardHeader className="pb-1">
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                          Total Fish
-                        </CardTitle>
-                        <Fish className="h-4 w-4 text-primary/60" />
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Fish className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm font-medium text-muted-foreground">Total Fish</span>
                       </div>
-                    </CardHeader>
-                    <CardContent className="pb-4">
-                      <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.total_fish.toLocaleString()}</div>
-                      <p className="text-xs text-muted-foreground mt-1">
+                      <div className="text-4xl font-bold tracking-tight mb-1">
+                        {metrics.fleet.total_fish.toLocaleString()}
+                      </div>
+                      <p className="text-xs text-muted-foreground">
                         {isBoatFiltered ? 'Complete catch total' : 'Fleet-wide total'}
                       </p>
                     </CardContent>
@@ -244,17 +242,15 @@ function App() {
 
                   {/* CARD 2: Total Trips - Always visible */}
                   <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                    <CardHeader className="pb-1">
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                          Total Trips
-                        </CardTitle>
-                        <Anchor className="h-4 w-4 text-primary/60" />
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Anchor className="h-4 w-4 text-muted-foreground" />
+                        <span className="text-sm font-medium text-muted-foreground">Total Trips</span>
                       </div>
-                    </CardHeader>
-                    <CardContent className="pb-4">
-                      <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.total_trips.toLocaleString()}</div>
-                      <p className="text-xs text-muted-foreground mt-1">
+                      <div className="text-4xl font-bold tracking-tight mb-1">
+                        {metrics.fleet.total_trips.toLocaleString()}
+                      </div>
+                      <p className="text-xs text-muted-foreground">
                         {isBoatFiltered ? 'For selected filter' : 'Across all boats'}
                       </p>
                     </CardContent>
@@ -265,35 +261,31 @@ function App() {
                     <>
                       {/* CARD 3 (Boat View): Avg Fish/Angler */}
                       <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                        <CardHeader className="pb-1">
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                              Avg Fish/Angler
-                            </CardTitle>
-                            <Users className="h-4 w-4 text-primary/60" />
+                        <CardContent className="pt-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Users className="h-4 w-4 text-muted-foreground" />
+                            <span className="text-sm font-medium text-muted-foreground">Avg Fish/Angler</span>
                           </div>
-                        </CardHeader>
-                        <CardContent className="pb-4">
-                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{avgFishPerAngler}</div>
-                          <p className="text-xs text-muted-foreground mt-1">Per person productivity</p>
+                          <div className="text-4xl font-bold tracking-tight mb-1">
+                            {avgFishPerAngler}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Per person productivity
+                          </p>
                         </CardContent>
                       </Card>
 
                       {/* CARD 4 (Boat View): Best Moon Phase */}
                       <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                        <CardHeader className="pb-1">
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                              Best Moon Phase
-                            </CardTitle>
-                            <Moon className="h-4 w-4 text-primary/60" />
+                        <CardContent className="pt-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Moon className="h-4 w-4 text-muted-foreground" />
+                            <span className="text-sm font-medium text-muted-foreground">Best Moon Phase</span>
                           </div>
-                        </CardHeader>
-                        <CardContent className="pb-4">
-                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">
+                          <div className="text-4xl font-bold tracking-tight mb-1">
                             {bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, ' ') : 'N/A'}
                           </div>
-                          <p className="text-xs text-muted-foreground mt-1">
+                          <p className="text-xs text-muted-foreground">
                             {bestMoonPhase
                               ? `${bestMoonPhase.avg_fish_per_trip.toFixed(1)} avg (${bestMoonPhase.trip_count} ${bestMoonPhase.trip_count === 1 ? 'trip' : 'trips'})`
                               : 'No moon phase data available'
@@ -306,33 +298,33 @@ function App() {
                     <>
                       {/* CARD 3 (Default View): Active Boats */}
                       <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                        <CardHeader className="pb-1">
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                              Active Boats
-                            </CardTitle>
-                            <Ship className="h-4 w-4 text-primary/60" />
+                        <CardContent className="pt-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Ship className="h-4 w-4 text-muted-foreground" />
+                            <span className="text-sm font-medium text-muted-foreground">Active Boats</span>
                           </div>
-                        </CardHeader>
-                        <CardContent className="pb-4">
-                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.unique_boats}</div>
-                          <p className="text-xs text-muted-foreground mt-1">Fleet vessels</p>
+                          <div className="text-4xl font-bold tracking-tight mb-1">
+                            {metrics.fleet.unique_boats}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Fleet vessels
+                          </p>
                         </CardContent>
                       </Card>
 
                       {/* CARD 4 (Default View): Species */}
                       <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
-                        <CardHeader className="pb-1">
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                              Species
-                            </CardTitle>
-                            <Layers className="h-4 w-4 text-primary/60" />
+                        <CardContent className="pt-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Layers className="h-4 w-4 text-muted-foreground" />
+                            <span className="text-sm font-medium text-muted-foreground">Species</span>
                           </div>
-                        </CardHeader>
-                        <CardContent className="pb-4">
-                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.unique_species}</div>
-                          <p className="text-xs text-muted-foreground mt-1">Unique varieties</p>
+                          <div className="text-4xl font-bold tracking-tight mb-1">
+                            {metrics.fleet.unique_species}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Unique varieties
+                          </p>
                         </CardContent>
                       </Card>
                     </>
@@ -345,7 +337,7 @@ function App() {
 
               {/* Analytics & Insights - Tabbed Section Below Table */}
               {metrics && (
-                <Card>
+                <Card className="border-0 shadow-none">
                   <CardHeader>
                     <CardTitle>Analytics & Insights</CardTitle>
                     <p className="text-sm text-muted-foreground">
