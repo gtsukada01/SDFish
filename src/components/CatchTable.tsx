@@ -14,7 +14,9 @@ import { Button } from './ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Badge } from './ui/badge'
 import { TripCard } from './TripCard'
+import { SpeciesBreakdown } from './SpeciesBreakdown'
 import { CatchRecord } from '../../scripts/api/types'
+import { normalizeSpeciesName } from '@/lib/utils'
 
 interface CatchTableProps {
   data: CatchRecord[]
@@ -111,30 +113,10 @@ export function CatchTable({ data }: CatchTableProps) {
     },
     {
       accessorKey: 'top_species',
-      header: 'Top Species',
+      header: 'Species',
       cell: ({ row }) => {
-        const species = row.getValue('top_species') as string
-        const count = row.original.top_species_count
-        return (
-          <div className="space-y-1 text-center">
-            <Badge variant="secondary" className="font-medium">
-              {species}
-            </Badge>
-            <div className="text-xs text-muted-foreground">{count} caught</div>
-          </div>
-        )
-      },
-    },
-    {
-      accessorKey: 'weather_notes',
-      header: 'Weather',
-      cell: ({ row }) => {
-        const notes = row.getValue('weather_notes') as string | null
-        return (
-          <div className="text-sm text-muted-foreground max-w-[200px] truncate text-center">
-            {notes ?? 'N/A'}
-          </div>
-        )
+        const speciesBreakdown = row.original.species_breakdown || []
+        return <SpeciesBreakdown speciesBreakdown={speciesBreakdown} variant="table" />
       },
     },
   ]

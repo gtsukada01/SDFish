@@ -1,8 +1,11 @@
 import React from 'react'
 import { Card, CardContent } from './ui/card'
 import { Badge } from './ui/badge'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet'
 import { Calendar, Ship, MapPin, Clock, Users, Fish } from 'lucide-react'
 import { CatchRecord } from '../../scripts/api/types'
+import { normalizeSpeciesName } from '@/lib/utils'
+import { SpeciesList } from './SpeciesBreakdown'
 
 interface TripCardProps {
   trip: CatchRecord
@@ -58,21 +61,58 @@ export function TripCard({ trip }: TripCardProps) {
           </div>
         </div>
 
-        {/* Top Species */}
+        {/* Species - Clean inline with Dialog */}
         <div className="pt-2 border-t">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-muted-foreground font-medium">Top Species</span>
-            <div className="flex items-center gap-2">
-              <Badge variant="outline" className="font-medium">
-                {trip.top_species}
-              </Badge>
-              <span className="text-xs text-muted-foreground">
-                {trip.top_species_count} caught
-              </span>
-            </div>
-          </div>
+          <div className="text-xs text-muted-foreground font-medium mb-1.5">Species</div>
+          <SpeciesInlineMobile speciesBreakdown={trip.species_breakdown || []} />
         </div>
       </CardContent>
     </Card>
+  )
+}
+
+/**
+ * SpeciesInlineMobile - Compact inline species display for mobile cards
+ * Shows top 2-3 species, tap for Sheet (bottom drawer) with full breakdown
+ */
+function SpeciesInlineMobile({ speciesBreakdown }: { speciesBreakdown: { species: string; count: number }[] }) {
+  if (!speciesBreakdown || speciesBreakdown.length === 0) {
+    return <div className="text-sm text-muted-foreground">No species data</div>
+  }
+
+  const sortedSpecies = [...speciesBreakdown].sort((a, b) => b.count - a.count)
+  const displayLimit = 2 // Show fewer on mobile for compactness
+  const topSpecies = sortedSpecies.slice(0, displayLimit)
+  const remainingSpecies = sortedSpecies.slice(displayLimit)
+  const hasMore = remainingSpecies.length > 0
+
+  const summaryText = topSpecies
+    .map(s => `${normalizeSpeciesName(s.species)} (${s.count})`)
+    .join(', ')
+
+  return (
+    <div className="text-sm">
+      <span className="text-foreground">{summaryText}</span>
+      {hasMore && (
+        <>
+          <span className="text-foreground">, </span>
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="text-muted-foreground hover:text-foreground underline decoration-dotted cursor-pointer transition-colors">
+                +{remainingSpecies.length}
+              </button>
+            </SheetTrigger>
+            <SheetContent side="bottom" className="max-h-[80vh]">
+              <SheetHeader>
+                <SheetTitle>Full Species Breakdown</SheetTitle>
+              </SheetHeader>
+              <div className="mt-4">
+                <SpeciesList speciesBreakdown={speciesBreakdown} />
+              </div>
+            </SheetContent>
+          </Sheet>
+        </>
+      )}
+    </div>
   )
 }

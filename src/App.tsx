@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { format } from 'date-fns'
+import { Fish, Ship, Anchor, Layers, Moon, Users } from 'lucide-react'
 import { CatchRecord, SummaryMetricsResponse, Filters } from '../scripts/api/types'
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
 import { mockCatchTableResponse, mockSummaryMetricsResponse } from '../scripts/api/mocks'
@@ -13,6 +14,7 @@ import { ActiveFilters } from './components/ActiveFilters'
 import { MetricsBreakdown } from './components/MetricsBreakdown'
 import { MoonPhaseBreakdown } from './components/MoonPhaseBreakdown'
 import { CatchTable } from './components/CatchTable'
+import { normalizeSpeciesName } from './lib/utils'
 
 function App() {
   const [catchData, setCatchData] = useState<CatchRecord[]>([])
@@ -22,16 +24,22 @@ function App() {
   const [dataSource, setDataSource] = useState<'real' | 'mock'>('mock')
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
-  // Default filters: last 30 days
+  // Default filters: last 30 days (using local timezone, not UTC)
+  const getLocalDateString = (date: Date): string => {
+    const year = date.getFullYear()
+    const month = String(date.getMonth() + 1).padStart(2, '0')
+    const day = String(date.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
+  }
+
   const [filters, setFilters] = useState<Filters>({
-    start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-    end_date: new Date().toISOString().split('T')[0],
+    start_date: getLocalDateString(new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)),
+    end_date: getLocalDateString(new Date()),
   })
   const [selectedLandings, setSelectedLandings] = useState<string[]>([])
 
   // Load data when filters change (no debounce - filters only change when dropdowns close)
   useEffect(() => {
-    console.log('🔄 Filters changed, reloading data:', { filters, selectedLandings })
     loadData()
   }, [filters, selectedLandings])
 
@@ -45,7 +53,6 @@ function App() {
       try {
         if (useRealData) {
           // Fetch real data from Supabase
-          console.log('Fetching real data from Supabase...')
           // Convert selectedLandings array to single landing for API (use first if multiple)
           const activeLanding = selectedLandings.length > 0 ? selectedLandings[0] : undefined
 
@@ -66,10 +73,8 @@ function App() {
           setCatchData(data)
           setMetrics(metricsData)
           setDataSource('real')
-          console.log(`✅ Loaded ${data.length} real trips from Supabase`)
         } else {
           // Use mock data (current behavior)
-          console.log('Using mock data (set USE_REAL_DATA=true in index.html for real data)')
           setCatchData(mockCatchTableResponse.data)
           setMetrics(mockSummaryMetricsResponse)
           setDataSource('mock')
@@ -137,9 +142,9 @@ function App() {
       // Remove all species
       setFilters(prev => ({ ...prev, species: undefined }))
     } else {
-      // Remove specific species from array
+      // Remove all variants of the normalized species name
       const currentSpecies = filters.species || []
-      const newSpecies = currentSpecies.filter(s => s !== species)
+      const newSpecies = currentSpecies.filter(s => normalizeSpeciesName(s) !== species)
       setFilters(prev => ({ ...prev, species: newSpecies.length > 0 ? newSpecies : undefined }))
     }
   }
@@ -160,6 +165,25 @@ function App() {
     setFilters(defaultFilters)
     setSelectedLandings([])
   }
+
+  // Calculate conditional metrics for boat-specific view
+  const isBoatFiltered = !!filters.boat || selectedLandings.length > 0
+
+  const totalAnglers = catchData.reduce((sum, trip) =>
+    sum + (trip.angler_count || 0), 0
+  )
+  const avgFishPerAngler = totalAnglers > 0
+    ? Math.round((metrics?.fleet.total_fish || 0) / totalAnglers)
+    : 0
+
+  // Best Moon Phase - only consider phases with minimum 1 trip for statistical validity
+  const MIN_TRIPS_FOR_MOON_PHASE = 1
+  const filteredPhases = metrics?.moon_phase?.filter(phase => phase.trip_count >= MIN_TRIPS_FOR_MOON_PHASE) || []
+  const bestMoonPhase = filteredPhases.length > 0
+    ? filteredPhases.reduce((best, current) =>
+        current.avg_fish_per_trip > best.avg_fish_per_trip ? current : best
+      )
+    : null
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
@@ -197,52 +221,122 @@ function App() {
           />
           <div className="flex-1 overflow-auto">
             <div className="container mx-auto p-4 md:p-6 space-y-6">
-              {/* Summary Metrics - Compact */}
+              {/* Summary Metrics - Conditional Cards */}
               {metrics && (
-                <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">
-                        Total Trips
-                      </CardTitle>
+                <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+                  {/* CARD 1: Total Fish - Always visible */}
+                  <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                    <CardHeader className="pb-1">
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                          Total Fish
+                        </CardTitle>
+                        <Fish className="h-4 w-4 text-primary/60" />
+                      </div>
                     </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold">{metrics.fleet.total_trips.toLocaleString()}</div>
+                    <CardContent className="pb-4">
+                      <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.total_fish.toLocaleString()}</div>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {isBoatFiltered ? 'Complete catch total' : 'Fleet-wide total'}
+                      </p>
                     </CardContent>
                   </Card>
 
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">
-                        Total Fish
-                      </CardTitle>
+                  {/* CARD 2: Total Trips - Always visible */}
+                  <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                    <CardHeader className="pb-1">
+                      <div className="flex items-center justify-between">
+                        <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                          Total Trips
+                        </CardTitle>
+                        <Anchor className="h-4 w-4 text-primary/60" />
+                      </div>
                     </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold">{metrics.fleet.total_fish.toLocaleString()}</div>
+                    <CardContent className="pb-4">
+                      <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.total_trips.toLocaleString()}</div>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {isBoatFiltered ? 'For selected filter' : 'Across all boats'}
+                      </p>
                     </CardContent>
                   </Card>
 
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">
-                        Active Boats
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold">{metrics.fleet.unique_boats}</div>
-                    </CardContent>
-                  </Card>
+                  {/* CARDS 3 & 4: Conditional based on filter */}
+                  {isBoatFiltered ? (
+                    <>
+                      {/* CARD 3 (Boat View): Avg Fish/Angler */}
+                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                        <CardHeader className="pb-1">
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                              Avg Fish/Angler
+                            </CardTitle>
+                            <Users className="h-4 w-4 text-primary/60" />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="pb-4">
+                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{avgFishPerAngler}</div>
+                          <p className="text-xs text-muted-foreground mt-1">Per person productivity</p>
+                        </CardContent>
+                      </Card>
 
-                  <Card>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-sm font-medium text-muted-foreground">
-                        Species
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold">{metrics.fleet.unique_species}</div>
-                    </CardContent>
-                  </Card>
+                      {/* CARD 4 (Boat View): Best Moon Phase */}
+                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                        <CardHeader className="pb-1">
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                              Best Moon Phase
+                            </CardTitle>
+                            <Moon className="h-4 w-4 text-primary/60" />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="pb-4">
+                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">
+                            {bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, ' ') : 'N/A'}
+                          </div>
+                          <p className="text-xs text-muted-foreground mt-1">
+                            {bestMoonPhase
+                              ? `${bestMoonPhase.avg_fish_per_trip.toFixed(1)} avg (${bestMoonPhase.trip_count} ${bestMoonPhase.trip_count === 1 ? 'trip' : 'trips'})`
+                              : 'No moon phase data available'
+                            }
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </>
+                  ) : (
+                    <>
+                      {/* CARD 3 (Default View): Active Boats */}
+                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                        <CardHeader className="pb-1">
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                              Active Boats
+                            </CardTitle>
+                            <Ship className="h-4 w-4 text-primary/60" />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="pb-4">
+                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.unique_boats}</div>
+                          <p className="text-xs text-muted-foreground mt-1">Fleet vessels</p>
+                        </CardContent>
+                      </Card>
+
+                      {/* CARD 4 (Default View): Species */}
+                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                        <CardHeader className="pb-1">
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                              Species
+                            </CardTitle>
+                            <Layers className="h-4 w-4 text-primary/60" />
+                          </div>
+                        </CardHeader>
+                        <CardContent className="pb-4">
+                          <div className="text-3xl font-bold tracking-tight leading-none mb-2">{metrics.fleet.unique_species}</div>
+                          <p className="text-xs text-muted-foreground mt-1">Unique varieties</p>
+                        </CardContent>
+                      </Card>
+                    </>
+                  )}
                 </div>
               )}
 
