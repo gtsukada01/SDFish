@@ -1,6 +1,6 @@
 import { supabase } from './supabase'
 import { CatchRecord, SummaryMetricsResponse } from '../../scripts/api/types'
-import { groupSpeciesByNormalizedName } from './utils'
+import { groupSpeciesByNormalizedName, normalizeSpeciesName } from './utils'
 
 export interface FetchParams {
   startDate: string
@@ -71,6 +71,7 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
       const catches = trip.catches || []
 
       // Filter by species if specified
+      let activeCatches = catches
       if (species && species.length > 0) {
         const matchingCatches = catches.filter((c: any) =>
           species.includes(c.species)
@@ -78,16 +79,17 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
         if (matchingCatches.length === 0) {
           return null // Will be filtered out
         }
+        activeCatches = matchingCatches // Use only matching catches for calculations
       }
 
-      // Calculate totals
-      const totalFish = catches.reduce((sum: number, c: any) => sum + (c.count || 0), 0)
+      // Calculate totals from ACTIVE catches (filtered or all)
+      const totalFish = activeCatches.reduce((sum: number, c: any) => sum + (c.count || 0), 0)
 
-      // Find top species
+      // Find top species from ACTIVE catches
       let topSpecies = 'N/A'
       let topSpeciesCount = 0
-      if (catches.length > 0) {
-        const sorted = [...catches].sort((a: any, b: any) =>
+      if (activeCatches.length > 0) {
+        const sorted = [...activeCatches].sort((a: any, b: any) =>
           (b.count || 0) - (a.count || 0)
         )
         topSpecies = sorted[0]?.species || 'N/A'
@@ -108,7 +110,7 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
         total_fish: totalFish,
         top_species: topSpecies,
         top_species_count: topSpeciesCount,
-        species_breakdown: catches.map((c: any) => ({
+        species_breakdown: activeCatches.map((c: any) => ({
           species: c.species,
           count: c.count
         })),
@@ -220,7 +222,7 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
   }, 0)
   const uniqueBoats = new Set(records.map(r => r.boat)).size
   const allSpecies = new Set(
-    records.flatMap(r => getFilteredSpeciesBreakdown(r.species_breakdown).map(s => s.species))
+    records.flatMap(r => getFilteredSpeciesBreakdown(r.species_breakdown).map(s => normalizeSpeciesName(s.species)))
   )
   const uniqueSpecies = allSpecies.size
 
@@ -313,7 +315,82 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
 }
 
 /**
+ * Estimate the actual fishing date based on trip duration
+ * Returns date when fishing likely occurred (midpoint of trip)
+ *
+ * @param tripDate - Return date from database (when boat came back)
+ * @param tripDuration - Duration string (e.g., "1.5 Day", "1/2 Day AM")
+ * @returns Estimated fishing date in YYYY-MM-DD format
+ */
+function estimateFishingDate(tripDate: string, tripDuration: string): string {
+  // Hours to subtract from return date to get fishing midpoint
+  // Using substring matching in priority order to handle all 43 variants
+
+  let hoursBack = 6 // Default fallback
+  const duration = tripDuration || ''
+
+  // CRITICAL: Check fractional/decimal days FIRST to avoid substring conflicts
+  // (e.g., "1.5 Day" contains "5 Day", so must be checked first!)
+
+  // Half day trips - check FIRST
+  if (duration.includes('1/2 Day Twilight')) hoursBack = 3
+  else if (duration.includes('1/2 Day AM')) hoursBack = 4
+  else if (duration.includes('1/2 Day PM')) hoursBack = 4
+
+  // 3/4 day trips - check BEFORE "3 Day" and "4 Day"
+  else if (duration.includes('3/4 Day Islands')) hoursBack = 7
+  else if (duration.includes('3/4 DayCoronado')) hoursBack = 7
+  else if (duration.includes('3/4 DayMexican')) hoursBack = 7
+  else if (duration.includes('3/4 Day Local')) hoursBack = 6
+  else if (duration.includes('3/4 Day')) hoursBack = 6
+
+  // Decimal day trips - check BEFORE whole number days
+  // ("1.5 Day" contains "5 Day", "2.5 Day" contains "5 Day", etc.)
+  else if (duration.includes('Extended 1.5 Day')) hoursBack = 28
+  else if (duration.includes('1.5 Day')) hoursBack = 24
+  else if (duration.includes('1.75 Day')) hoursBack = 30
+  else if (duration.includes('2.5 Day')) hoursBack = 48
+  else if (duration.includes('3.5 Day')) hoursBack = 72
+
+  // Multi-day trips - NOW safe to check whole numbers
+  else if (duration.includes('5 Day')) hoursBack = 96
+  else if (duration.includes('4 Day')) hoursBack = 84
+  else if (duration.includes('3 Day')) hoursBack = 60
+  else if (duration.includes('2 Day')) hoursBack = 36
+
+  // Overnight trips
+  else if (duration.includes('Overnight')) hoursBack = 10
+  else if (duration.includes('Reverse Overnight')) hoursBack = 10
+
+  // Full day trips
+  else if (duration.includes('Full Day Offshore')) hoursBack = 10
+  else if (duration.includes('Full Day Coronado')) hoursBack = 9
+  else if (duration.includes('Full DayCoronado')) hoursBack = 9
+  else if (duration.includes('Full Day Mexican')) hoursBack = 10
+  else if (duration.includes('Full DayMexican')) hoursBack = 10
+  else if (duration.includes('Full Day Local')) hoursBack = 7
+  else if (duration.includes('Full Day')) hoursBack = 8
+
+  // Hour-based trips
+  else if (duration.includes('12 Hour')) hoursBack = 6
+  else if (duration.includes('10 Hour')) hoursBack = 5
+  else if (duration.includes('6 Hour')) hoursBack = 3
+  else if (duration.includes('4 Hour')) hoursBack = 2
+  else if (duration.includes('2 Hour')) hoursBack = 1
+
+  // Special cases
+  else if (duration.includes('Lobster')) hoursBack = 3
+
+  // Calculate fishing date by subtracting hours from return date
+  const returnDate = new Date(tripDate + 'T12:00:00') // Assume noon return for date calculations
+  const fishingDate = new Date(returnDate.getTime() - hoursBack * 60 * 60 * 1000)
+
+  return fishingDate.toISOString().split('T')[0]
+}
+
+/**
  * Fetch moon phase data from ocean_conditions table and correlate with fishing trips
+ * Uses estimated fishing date (not return date) for accurate moon phase correlation
  */
 async function fetchMoonPhaseCorrelation(startDate: string, endDate: string, trips: CatchRecord[]): Promise<{
   phase_name: string
@@ -322,11 +399,15 @@ async function fetchMoonPhaseCorrelation(startDate: string, endDate: string, tri
   avg_fish_per_trip: number
 }[]> {
   try {
-    // Fetch moon phase data from ocean_conditions table
+    // Expand date range to account for multi-day trips
+    // Need to fetch moon data for dates earlier than startDate
+    const expandedStartDate = new Date(startDate)
+    expandedStartDate.setDate(expandedStartDate.getDate() - 5) // 5 days back to cover longest trips
+
     const { data: moonData, error } = await supabase
       .from('ocean_conditions')
       .select('date, moon_phase_name')
-      .gte('date', startDate)
+      .gte('date', expandedStartDate.toISOString().split('T')[0])
       .lte('date', endDate)
 
     if (error) {
@@ -345,13 +426,20 @@ async function fetchMoonPhaseCorrelation(startDate: string, endDate: string, tri
       moonPhaseMap.set(record.date, record.moon_phase_name)
     })
 
-    // Aggregate trips by moon phase
+    // Aggregate trips by moon phase using ESTIMATED FISHING DATE
     const phaseMap = new Map<string, { total_fish: number; trip_count: number }>()
 
     trips.forEach(trip => {
-      const moonPhase = moonPhaseMap.get(trip.trip_date)
+      // CRITICAL: Use estimated fishing date, not return date
+      // trip_duration_hours contains the string duration (e.g., "1.5 Day") despite the type annotation
+      const durationString = typeof trip.trip_duration_hours === 'string'
+        ? trip.trip_duration_hours
+        : trip.trip_duration_hours?.toString() || ''
+      const fishingDate = estimateFishingDate(trip.trip_date, durationString)
+      const moonPhase = moonPhaseMap.get(fishingDate)
+
       if (!moonPhase) {
-        return // Skip trips without moon phase data
+        return // Skip trips without moon phase data for fishing date
       }
 
       if (!phaseMap.has(moonPhase)) {

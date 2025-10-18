@@ -131,10 +131,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     setSelectedPreset('custom')
   }, [filters.start_date, filters.end_date])
 
-  // Debug: Log when selectedPreset changes
-  useEffect(() => {
-    console.log('🟢 selectedPreset state updated to:', selectedPreset)
-  }, [selectedPreset])
 
   // Load options on mount
   useEffect(() => {
@@ -169,9 +165,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
   }, [selectedLandings])
 
   const handlePresetChange = (preset: string) => {
-    console.log('🔵 handlePresetChange called with:', preset)
-    console.log('🔵 Current selectedPreset state:', selectedPreset)
-
     if (preset === 'custom') {
       // Use setTimeout to ensure Select closes before opening Popover
       setTimeout(() => {
@@ -182,15 +175,8 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     }
 
     const typedPreset = preset as DatePreset
-    console.log('🔵 Setting selectedPreset to:', typedPreset)
     setSelectedPreset(typedPreset)
     const dates = calculatePresetDates(typedPreset)
-
-    console.log('📅 Date filter changed:', {
-      preset: typedPreset,
-      dates,
-      currentFilters: filters
-    })
 
     onFiltersChange({
       ...filters,
@@ -231,11 +217,6 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     selectedNormalizedNames.forEach(normalizedName => {
       const variants = speciesVariantMap.get(normalizedName) || []
       allVariants.push(...variants)
-    })
-
-    console.log('🐟 Species filter:', {
-      selected: selectedNormalizedNames,
-      expanded: allVariants
     })
 
     onFiltersChange({ ...filters, species: allVariants })

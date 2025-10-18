@@ -19,10 +19,6 @@ export function normalizeSpeciesName(species: string): string {
   // Remove "(up to XXX pounds)" patterns (handles both integers and decimals like 6.5)
   const withoutWeight = species.replace(/\s*\(up to [\d.]+\s*pounds?\)/i, '').trim()
 
-  if (withoutWeight !== species) {
-    console.log('🐟 Normalized species:', species, '→', withoutWeight)
-  }
-
   return withoutWeight
 }
 
@@ -55,12 +51,6 @@ export function groupSpeciesByNormalizedName(allSpecies: string[]): {
     normalizedNames: Array.from(variantMap.keys()).sort(),
     variantMap
   }
-
-  console.log('🐟 Species grouping complete:', {
-    original: allSpecies.length,
-    normalized: result.normalizedNames.length,
-    sample: Array.from(variantMap.entries()).slice(0, 5)
-  })
 
   return result
 }

@@ -4,6 +4,7 @@ import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 import { Filters } from '../../scripts/api/types'
 import { format } from 'date-fns'
+import { normalizeSpeciesName } from '@/lib/utils'
 
 interface ActiveFiltersProps {
   filters: Filters
@@ -26,6 +27,15 @@ export function ActiveFilters({
 }: ActiveFiltersProps) {
   const boats = Array.isArray(filters.boat) ? filters.boat : filters.boat ? [filters.boat] : []
   const species = filters.species || []
+
+  // Normalize species names for display - only show unique normalized names
+  const normalizedSpecies = React.useMemo(() => {
+    const uniqueNormalized = new Set<string>()
+    species.forEach(sp => {
+      uniqueNormalized.add(normalizeSpeciesName(sp))
+    })
+    return Array.from(uniqueNormalized)
+  }, [species])
 
   const hasActiveFilters =
     selectedLandings.length > 0 ||
@@ -98,8 +108,8 @@ export function ActiveFilters({
             </Badge>
           ))}
 
-          {/* Species chips */}
-          {species.map((sp) => (
+          {/* Species chips - show only normalized names */}
+          {normalizedSpecies.map((sp) => (
             <Badge key={sp} variant="secondary" className="gap-1.5 pr-1 h-7">
               <Fish className="h-3 w-3" />
               <span className="max-w-[120px] truncate">{sp}</span>
