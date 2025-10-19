@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
 import { Fish, Ship, Anchor, Layers, Moon, Users, Trophy } from 'lucide-react'
 import { FishingHook } from './components/icons/FishingHook'
@@ -25,7 +25,9 @@ function App() {
   const [dataSource, setDataSource] = useState<'real' | 'mock'>('mock')
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<string>('boats')
-  const breakdownRef = React.useRef<HTMLDivElement>(null)
+  const [isFiltersCollapsed, setIsFiltersCollapsed] = useState(false)
+  const breakdownRef = useRef<HTMLDivElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   // Default filters: last 30 days (using local timezone, not UTC)
   const getLocalDateString = (date: Date): string => {
@@ -45,6 +47,33 @@ function App() {
   useEffect(() => {
     loadData()
   }, [filters, selectedLandings])
+
+  // Scroll detection for collapsing filter section on mobile
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current
+    if (!scrollContainer) return
+
+    const COLLAPSE_THRESHOLD = 50 // pixels
+    let lastScrollTop = 0
+
+    const handleScroll = () => {
+      const scrollTop = scrollContainer.scrollTop
+
+      // Scroll down >50px = collapse
+      if (scrollTop > COLLAPSE_THRESHOLD && !isFiltersCollapsed) {
+        setIsFiltersCollapsed(true)
+      }
+      // Scroll up any amount = expand
+      else if (scrollTop < lastScrollTop && isFiltersCollapsed) {
+        setIsFiltersCollapsed(false)
+      }
+
+      lastScrollTop = scrollTop
+    }
+
+    scrollContainer.addEventListener('scroll', handleScroll, { passive: true })
+    return () => scrollContainer.removeEventListener('scroll', handleScroll)
+  }, [isFiltersCollapsed])
 
   async function loadData() {
       setIsLoading(true)
@@ -222,6 +251,8 @@ function App() {
             filters={filters}
             onFiltersChange={setFilters}
             selectedLandings={selectedLandings}
+            isCollapsed={isFiltersCollapsed}
+            onToggleCollapse={() => setIsFiltersCollapsed(false)}
           />
           <ActiveFilters
             filters={filters}
@@ -232,7 +263,7 @@ function App() {
             onRemoveDateRange={handleRemoveDateRange}
             onClearAll={handleClearAllFilters}
           />
-          <div className="flex-1 overflow-auto">
+          <div ref={scrollContainerRef} className="flex-1 overflow-auto">
             <div className="container mx-auto p-4 md:p-6 space-y-6">
               {/* Summary Metrics - Conditional Cards */}
               {metrics && (

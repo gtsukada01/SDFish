@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
+import { ChevronDown } from 'lucide-react'
 import { Calendar } from './ui/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
 import { Button } from './ui/button'
@@ -53,9 +54,11 @@ interface HeaderFiltersProps {
   filters: Filters
   onFiltersChange: (filters: Filters) => void
   selectedLandings: string[]
+  isCollapsed?: boolean
+  onToggleCollapse?: () => void
 }
 
-export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: HeaderFiltersProps) {
+export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCollapsed = false, onToggleCollapse }: HeaderFiltersProps) {
   // Initialize selectedPreset - always start with '30d' to match App.tsx default
   const [selectedPreset, setSelectedPreset] = useState<DatePreset>('30d')
   const [showCustomCalendar, setShowCustomCalendar] = useState(false)
@@ -222,8 +225,52 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings }: He
     onFiltersChange({ ...filters, species: allVariants })
   }
 
+  // Helper to format compact bar filter summary
+  const getFilterSummary = () => {
+    const parts: string[] = []
+
+    // Date range
+    const presetLabels: Record<DatePreset, string> = {
+      '7d': 'Last 7 Days',
+      '30d': 'Last 30 Days',
+      'ytd': 'YTD',
+      '90d': 'Last 90 Days',
+      'all': 'All Time',
+      'custom': 'Custom'
+    }
+    parts.push(presetLabels[selectedPreset])
+
+    // Boats
+    const boats = Array.isArray(filters.boat) ? filters.boat : filters.boat ? [filters.boat] : []
+    parts.push(boats.length > 0 ? `${boats.length} Boat${boats.length > 1 ? 's' : ''}` : 'All Boats')
+
+    // Species
+    parts.push(pendingSpecies.length > 0 ? `${pendingSpecies.length} Species` : 'All Species')
+
+    // Trip duration
+    parts.push(filters.trip_duration || 'All Durations')
+
+    return parts.join(' · ')
+  }
+
+  // Compact bar for mobile (collapsed state)
+  if (isCollapsed) {
+    return (
+      <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
+        <button
+          onClick={onToggleCollapse}
+          className="w-full flex items-center gap-2 px-4 py-3 text-sm text-left hover:bg-muted/60 transition-colors"
+        >
+          <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+          <span className="text-muted-foreground truncate">{getFilterSummary()}</span>
+        </button>
+      </div>
+    )
+  }
+
+  // Full filters (expanded state)
   return (
-    <div className="border-b bg-muted/40">
+    <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
       <div className="container mx-auto p-4 md:px-6 py-2">
         <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
