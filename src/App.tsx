@@ -243,7 +243,8 @@ function App() {
                     onClick={() => handleMetricCardClick('species')}
                   >
                     <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                      <div className="absolute top-6 left-6">
+                      <div className="absolute top-6 left-6 flex items-center gap-2">
+                        <Trophy className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                         <span className="text-sm font-medium text-muted-foreground">Catch</span>
                       </div>
                       <div className="text-4xl font-bold tracking-tight">
