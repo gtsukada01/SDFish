@@ -3,22 +3,18 @@ import { SummaryMetricsResponse } from '../../scripts/api/types'
 
 interface MetricsBreakdownProps {
   metrics: SummaryMetricsResponse
+  mode?: 'boats' | 'species'
 }
 
-export function MetricsBreakdown({ metrics }: MetricsBreakdownProps) {
-  // If a boat filter is active (only 1 boat), show species breakdown instead
-  const isBoatFiltered = metrics.per_boat.length === 1
-
-  if (isBoatFiltered) {
-    // Show all species caught by this boat
+export function MetricsBreakdown({ metrics, mode = 'boats' }: MetricsBreakdownProps) {
+  // Show species breakdown if mode is 'species'
+  if (mode === 'species') {
+    // Show all species caught
     const sortedSpecies = [...metrics.per_species].sort((a, b) => b.total_fish - a.total_fish)
     const maxFish = Math.max(...sortedSpecies.map(s => s.total_fish))
 
     return (
       <div className="space-y-2">
-        <div className="text-sm text-muted-foreground mb-4">
-          Species caught by {metrics.per_boat[0].boat}
-        </div>
         {sortedSpecies.map((species) => {
           const percentage = (species.total_fish / maxFish) * 100
           return (

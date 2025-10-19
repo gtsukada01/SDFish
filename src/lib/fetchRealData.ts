@@ -188,18 +188,80 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
   const allSpecies = Array.from(speciesSet)
   const { normalizedNames, variantMap } = groupSpeciesByNormalizedName(allSpecies)
 
+  // Custom sort function for trip durations
+  const sortTripDurations = (a: string, b: string): number => {
+    // Define category order: Half-Day (incl. 2/4/6 Hour), 3/4 Day, Full Day, Overnight, Multi-Day, Special
+    const getCategory = (duration: string): number => {
+      // CRITICAL: 10 Hour = 3/4 Day, 12 Hour = Full Day
+      // 2, 4, 6 Hour = Half-Day (short trips)
+      if (duration === '12 Hour') return 3 // Full day
+      if (duration === '10 Hour') return 2 // Three-quarter day
+      if (duration.includes('Hour')) return 1 // Half-day (2, 4, 6 Hour short trips)
+      if (duration.includes('1/2 Day')) return 1 // Half-day trips
+      if (duration.includes('3/4 Day')) return 2 // Three-quarter day
+      if (duration.includes('Full Day')) return 3 // Full day
+      if (duration.includes('Overnight')) return 4 // Overnight
+      if (duration.includes('Lobster')) return 6 // Special last
+      return 5 // Multi-day trips (1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5 Day)
+    }
+
+    const catA = getCategory(a)
+    const catB = getCategory(b)
+
+    // If different categories, sort by category
+    if (catA !== catB) return catA - catB
+
+    // Within same category, sort by numeric value or alphabetically
+    if (catA === 1) {
+      // Half-Day: hour-based first (2, 4, 6 Hour), then 1/2 Day (AM, PM, Twilight)
+      const aIsHour = a.includes('Hour')
+      const bIsHour = b.includes('Hour')
+
+      if (aIsHour && bIsHour) {
+        // Both are hour-based: sort by hour value
+        const hoursA = parseInt(a.split(' ')[0])
+        const hoursB = parseInt(b.split(' ')[0])
+        return hoursA - hoursB
+      }
+
+      if (aIsHour && !bIsHour) return -1 // Hour trips before 1/2 Day
+      if (!aIsHour && bIsHour) return 1  // 1/2 Day after Hour trips
+
+      // Both are 1/2 Day: alphabetical (AM, PM, Twilight)
+      return a.localeCompare(b)
+    }
+
+    if (catA === 2) {
+      // 3/4 Day: put "3/4 Day" before "10 Hour"
+      if (a.includes('3/4 Day')) return -1
+      if (b.includes('3/4 Day')) return 1
+      return a.localeCompare(b)
+    }
+
+    if (catA === 3) {
+      // Full Day: put "Full Day" before "12 Hour"
+      if (a.includes('Full Day')) return -1
+      if (b.includes('Full Day')) return 1
+      return a.localeCompare(b)
+    }
+
+    if (catA === 5) {
+      // Multi-day: sort by day value (1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5)
+      const daysA = parseFloat(a.split(' ')[0])
+      const daysB = parseFloat(b.split(' ')[0])
+      return daysA - daysB
+    }
+
+    // For other categories (overnight, special, etc.), use alphabetical
+    return a.localeCompare(b)
+  }
+
   return {
     landings: Array.from(landingSet).sort(),
     boats: Array.from(boatSet).sort(),
     species: normalizedNames, // Return normalized names for display
     speciesVariantMap: variantMap, // Return mapping for filtering
-    tripDurations: Array.from(tripDurationSet).sort((a, b) => {
-      // Custom sort: numeric day values first, then alphanumeric
-      const aNum = parseFloat(a)
-      const bNum = parseFloat(b)
-      if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum
-      return a.localeCompare(b)
-    })
+    tripDurations: Array.from(tripDurationSet).sort(sortTripDurations)
   }
 }
 
@@ -321,10 +383,12 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
  * @param tripDate - Return date from database (when boat came back)
  * @param tripDuration - Duration string (e.g., "1.5 Day", "1/2 Day AM")
  * @returns Estimated fishing date in YYYY-MM-DD format
+ *
+ * UPDATED: Now uses standardized trip durations (16 categories after normalization)
  */
 function estimateFishingDate(tripDate: string, tripDuration: string): string {
   // Hours to subtract from return date to get fishing midpoint
-  // Using substring matching in priority order to handle all 43 variants
+  // Using standardized trip duration categories after normalization
 
   let hoursBack = 6 // Default fallback
   const duration = tripDuration || ''
@@ -338,15 +402,10 @@ function estimateFishingDate(tripDate: string, tripDuration: string): string {
   else if (duration.includes('1/2 Day PM')) hoursBack = 4
 
   // 3/4 day trips - check BEFORE "3 Day" and "4 Day"
-  else if (duration.includes('3/4 Day Islands')) hoursBack = 7
-  else if (duration.includes('3/4 DayCoronado')) hoursBack = 7
-  else if (duration.includes('3/4 DayMexican')) hoursBack = 7
-  else if (duration.includes('3/4 Day Local')) hoursBack = 6
   else if (duration.includes('3/4 Day')) hoursBack = 6
 
   // Decimal day trips - check BEFORE whole number days
   // ("1.5 Day" contains "5 Day", "2.5 Day" contains "5 Day", etc.)
-  else if (duration.includes('Extended 1.5 Day')) hoursBack = 28
   else if (duration.includes('1.5 Day')) hoursBack = 24
   else if (duration.includes('1.75 Day')) hoursBack = 30
   else if (duration.includes('2.5 Day')) hoursBack = 48
@@ -358,17 +417,10 @@ function estimateFishingDate(tripDate: string, tripDuration: string): string {
   else if (duration.includes('3 Day')) hoursBack = 60
   else if (duration.includes('2 Day')) hoursBack = 36
 
-  // Overnight trips
+  // Overnight trips (Reverse Overnight consolidated into Overnight)
   else if (duration.includes('Overnight')) hoursBack = 10
-  else if (duration.includes('Reverse Overnight')) hoursBack = 10
 
-  // Full day trips
-  else if (duration.includes('Full Day Offshore')) hoursBack = 10
-  else if (duration.includes('Full Day Coronado')) hoursBack = 9
-  else if (duration.includes('Full DayCoronado')) hoursBack = 9
-  else if (duration.includes('Full Day Mexican')) hoursBack = 10
-  else if (duration.includes('Full DayMexican')) hoursBack = 10
-  else if (duration.includes('Full Day Local')) hoursBack = 7
+  // Full day trips (all geographic variants consolidated)
   else if (duration.includes('Full Day')) hoursBack = 8
 
   // Hour-based trips

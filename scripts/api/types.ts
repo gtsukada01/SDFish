@@ -38,6 +38,7 @@ export interface Filters {
   species?: string[];
   landing?: string | null;
   boat?: string | null;
+  trip_duration?: string | null;
   limit?: number | null;
   cursor?: string | null;
 }

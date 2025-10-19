@@ -23,6 +23,8 @@ function App() {
   const [error, setError] = useState<string | null>(null)
   const [dataSource, setDataSource] = useState<'real' | 'mock'>('mock')
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState<string>('boats')
+  const breakdownRef = React.useRef<HTMLDivElement>(null)
 
   // Default filters: last 30 days (using local timezone, not UTC)
   const getLocalDateString = (date: Date): string => {
@@ -166,6 +168,15 @@ function App() {
     setSelectedLandings([])
   }
 
+  // Handle metric card clicks - switch to appropriate tab and scroll
+  const handleMetricCardClick = (tab: 'boats' | 'species' | 'moon') => {
+    setActiveTab(tab)
+    // Wait for tab to render, then scroll smoothly
+    setTimeout(() => {
+      breakdownRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    }, 100)
+  }
+
   // Calculate conditional metrics for boat-specific view
   const isBoatFiltered = !!filters.boat || selectedLandings.length > 0
 
@@ -225,7 +236,10 @@ function App() {
               {metrics && (
                 <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
                   {/* CARD 1: Total Fish - Always visible */}
-                  <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                  <Card
+                    className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                    onClick={() => handleMetricCardClick('species')}
+                  >
                     <CardContent className="pt-6">
                       <div className="flex items-center gap-2 mb-2">
                         <Fish className="h-4 w-4 text-muted-foreground" />
@@ -241,7 +255,10 @@ function App() {
                   </Card>
 
                   {/* CARD 2: Total Trips - Always visible */}
-                  <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                  <Card
+                    className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                    onClick={() => handleMetricCardClick('boats')}
+                  >
                     <CardContent className="pt-6">
                       <div className="flex items-center gap-2 mb-2">
                         <Anchor className="h-4 w-4 text-muted-foreground" />
@@ -297,7 +314,10 @@ function App() {
                   ) : (
                     <>
                       {/* CARD 3 (Default View): Active Boats */}
-                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                      <Card
+                        className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                        onClick={() => handleMetricCardClick('boats')}
+                      >
                         <CardContent className="pt-6">
                           <div className="flex items-center gap-2 mb-2">
                             <Ship className="h-4 w-4 text-muted-foreground" />
@@ -313,7 +333,10 @@ function App() {
                       </Card>
 
                       {/* CARD 4 (Default View): Species */}
-                      <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                      <Card
+                        className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                        onClick={() => handleMetricCardClick('species')}
+                      >
                         <CardContent className="pt-6">
                           <div className="flex items-center gap-2 mb-2">
                             <Layers className="h-4 w-4 text-muted-foreground" />
@@ -337,7 +360,7 @@ function App() {
 
               {/* Analytics & Insights - Tabbed Section Below Table */}
               {metrics && (
-                <Card className="border-0 shadow-none">
+                <Card ref={breakdownRef} className="border-0 shadow-none">
                   <CardHeader>
                     <CardTitle>Analytics & Insights</CardTitle>
                     <p className="text-sm text-muted-foreground">
@@ -345,13 +368,17 @@ function App() {
                     </p>
                   </CardHeader>
                   <CardContent>
-                    <Tabs defaultValue="boats" className="w-full">
-                      <TabsList className="grid w-full grid-cols-2">
+                    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                      <TabsList className="grid w-full grid-cols-3">
                         <TabsTrigger value="boats">Boat Breakdown</TabsTrigger>
-                        <TabsTrigger value="moon">Moon Phase Breakdown</TabsTrigger>
+                        <TabsTrigger value="species">Species Breakdown</TabsTrigger>
+                        <TabsTrigger value="moon">Moon Phase</TabsTrigger>
                       </TabsList>
                       <TabsContent value="boats" className="mt-6">
-                        <MetricsBreakdown metrics={metrics} />
+                        <MetricsBreakdown metrics={metrics} mode="boats" />
+                      </TabsContent>
+                      <TabsContent value="species" className="mt-6">
+                        <MetricsBreakdown metrics={metrics} mode="species" />
                       </TabsContent>
                       <TabsContent value="moon" className="mt-6">
                         {metrics.moon_phase && metrics.moon_phase.length > 0 ? (
