@@ -327,7 +327,7 @@ function App() {
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-6 left-6 flex items-center gap-2">
                           <Fish className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                          <span className="text-sm font-medium text-muted-foreground">Variety</span>
+                          <span className="text-sm font-medium text-muted-foreground">Species</span>
                         </div>
                         <div className="text-4xl font-bold tracking-tight">
                           {metrics.fleet.unique_species}
@@ -343,7 +343,7 @@ function App() {
 
               {/* Analytics & Insights - Tabbed Section Below Table */}
               {metrics && (
-                <Card ref={breakdownRef} className="border-0 shadow-none">
+                <Card ref={breakdownRef} className="md:border-transparent md:shadow-none">
                   <CardHeader>
                     <CardTitle>Analytics & Insights</CardTitle>
                     <p className="text-sm text-muted-foreground">
@@ -353,9 +353,9 @@ function App() {
                   <CardContent>
                     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                       <TabsList className="grid w-full grid-cols-3">
-                        <TabsTrigger value="boats">Boat Breakdown</TabsTrigger>
-                        <TabsTrigger value="species">Species Breakdown</TabsTrigger>
-                        <TabsTrigger value="moon">Moon Phase</TabsTrigger>
+                        <TabsTrigger value="boats">Boats</TabsTrigger>
+                        <TabsTrigger value="species">Species</TabsTrigger>
+                        <TabsTrigger value="moon">Moon</TabsTrigger>
                       </TabsList>
                       <TabsContent value="boats" className="mt-6">
                         <MetricsBreakdown metrics={metrics} mode="boats" />
