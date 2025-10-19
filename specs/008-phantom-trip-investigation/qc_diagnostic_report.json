@@ -1,0 +1,4590 @@
+{
+  "timestamp": "2025-10-18T02:15:45.994300",
+  "spec": "SPEC-008",
+  "phase": "Phase 1: Diagnostic QC Validation",
+  "summary": {
+    "total_dates": 105,
+    "total_phantom_trips": 116,
+    "dates_validated": 104,
+    "trips_categorized": 115,
+    "categories": {
+      "PHANTOM": 106,
+      "MISATTRIBUTED": 9,
+      "DATE-SHIFTED": 0,
+      "FIELD-MISMATCH": 0,
+      "UNKNOWN": 0
+    }
+  },
+  "date_reports": [
+    {
+      "date": "2024-01-19",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-01-19",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11415,
+          "trip_date": "2024-01-19",
+          "trip_duration": "1/2 Day Twilight",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1/2 Day Twilight' duration found on source page for 2024-01-19. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11415",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-01-19",
+          "match_details": null,
+          "boats_on_source": [
+            "Premier",
+            "Daily Double",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-03-07",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-03-07",
+      "phantom_trips_on_date": 1,
+      "categorizations": [],
+      "status": "source_parse_failed"
+    },
+    {
+      "date": "2024-03-09",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-03-09",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11716,
+          "trip_date": "2024-03-09",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 27,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 27 anglers and '1/2 Day AM' duration found on source page for 2024-03-09. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11716",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-03-09",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Daiwa Pacific",
+            "Jig Strike",
+            "Premier",
+            "Premier",
+            "Mission Belle",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-07-05",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-05",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 13335,
+          "trip_date": "2024-07-05",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 21,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 21 anglers and '1/2 Day AM' duration found on source page for 2024-07-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13335",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Alicia",
+            "Grande",
+            "Premier",
+            "Premier",
+            "Electra",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-07-06",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-06",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 13368,
+          "trip_date": "2024-07-06",
+          "trip_duration": "1/2 Day Twilight",
+          "anglers": 51,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 51 anglers and '1/2 Day Twilight' duration found on source page for 2024-07-06. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13368",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-06",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Electra",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        },
+        {
+          "trip_id": 13359,
+          "trip_date": "2024-07-06",
+          "trip_duration": "3/4 Day",
+          "anglers": 19,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 19 anglers and '3/4 Day' duration found on source page for 2024-07-06. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13359",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-06",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Electra",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-07-10",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-10",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 13453,
+          "trip_date": "2024-07-10",
+          "trip_duration": "3/4 Day",
+          "anglers": 25,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 25 anglers and '3/4 Day' duration found on source page for 2024-07-10. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13453",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-10",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Islander",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Grande",
+            "Premier",
+            "Premier",
+            "Electra",
+            "Southern Cal",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-07-13",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-13",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 13558,
+          "trip_date": "2024-07-13",
+          "trip_duration": "3/4 Day",
+          "anglers": 17,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 17 anglers and '3/4 Day' duration found on source page for 2024-07-13. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13558",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-13",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Electra",
+            "No Patience",
+            "No Patience",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-07-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 13965,
+          "trip_date": "2024-07-26",
+          "trip_duration": "3/4 Day",
+          "anglers": 18,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 18 anglers and '3/4 Day' duration found on source page for 2024-07-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13965",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-07-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Pacific Dawn",
+            "Grande",
+            "Jig Strike",
+            "Malihini",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Electra",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-01",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-01",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14904,
+          "trip_date": "2024-08-01",
+          "trip_duration": "3/4 Day",
+          "anglers": 19,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 19 anglers and '3/4 Day' duration found on source page for 2024-08-01. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14904",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-01",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Pacific Dawn",
+            "Grande",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Apollo",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-03",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-03",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14955,
+          "trip_date": "2024-08-03",
+          "trip_duration": "3/4 Day",
+          "anglers": 37,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 37 anglers and '3/4 Day' duration found on source page for 2024-08-03. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14955",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-03",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Pacific Queen",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-05",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-05",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 15025,
+          "trip_date": "2024-08-05",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 38,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 38 anglers and '1/2 Day AM' duration found on source page for 2024-08-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15025",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Aztec",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        },
+        {
+          "trip_id": 15015,
+          "trip_date": "2024-08-05",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 38,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 38 anglers and '1/2 Day AM' duration found on source page for 2024-08-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15015",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Aztec",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-06",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-06",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15062,
+          "trip_date": "2024-08-06",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 12,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 12 anglers and '1/2 Day AM' duration found on source page for 2024-08-06. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15062",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-06",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Pegasus",
+            "Grande",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "No Patience",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-07",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-07",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15082,
+          "trip_date": "2024-08-07",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 31,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 31 anglers and '1/2 Day AM' duration found on source page for 2024-08-07. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15082",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-07",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Liberty",
+            "Grande",
+            "Horizon",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-11",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-11",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15289,
+          "trip_date": "2024-08-11",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 20,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 20 anglers and '1/2 Day AM' duration found on source page for 2024-08-11. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15289",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-11",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Pacific Dawn",
+            "Pegasus",
+            "Tomahawk",
+            "Tradition",
+            "Daiwa Pacific",
+            "Grande",
+            "Jig Strike",
+            "Malihini",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Sea Star",
+            "Daily Double",
+            "Daily Double",
+            "El Capitan",
+            "Point Loma",
+            "Apollo",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-12",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-12",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15340,
+          "trip_date": "2024-08-12",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 12,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'New Seaforth' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'New Seaforth' LIMIT 1) WHERE id = 15340",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-12",
+          "match_details": {
+            "source_boat_name": "New Seaforth",
+            "source_landing_name": "Seaforth Sportfishing",
+            "source_catches": [
+              {
+                "species": "Calico Bass",
+                "count": 26
+              },
+              {
+                "species": "Rockfish",
+                "count": 3
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-13",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-13",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15360,
+          "trip_date": "2024-08-13",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 10,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Daily Double' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Daily Double' LIMIT 1) WHERE id = 15360",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-13",
+          "match_details": {
+            "source_boat_name": "Daily Double",
+            "source_landing_name": "Point Loma Sportfishing",
+            "source_catches": [
+              {
+                "species": "Barred Sand Bass",
+                "count": 50
+              },
+              {
+                "species": "Sculpin",
+                "count": 2
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-14",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-14",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15386,
+          "trip_date": "2024-08-14",
+          "trip_duration": "3/4 Day",
+          "anglers": 9,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 9 anglers and '3/4 Day' duration found on source page for 2024-08-14. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15386",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-14",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pacific Queen",
+            "Horizon",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Voodoo",
+            "Blue Horizon",
+            "El Capitan",
+            "Mission Belle",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-16",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-16",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15469,
+          "trip_date": "2024-08-16",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 20,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 20 anglers and '1/2 Day AM' duration found on source page for 2024-08-16. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15469",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-16",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pacific Queen",
+            "Pegasus",
+            "Tomahawk",
+            "Alicia",
+            "Constitution",
+            "Grande",
+            "Old Glory",
+            "Poseidon",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Aztec",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-17",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-17",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15517,
+          "trip_date": "2024-08-17",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 45,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 45 anglers and '1/2 Day AM' duration found on source page for 2024-08-17. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15517",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-17",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Islander",
+            "Pacific Dawn",
+            "Grande",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Success",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-18",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-18",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15564,
+          "trip_date": "2024-08-18",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1/2 Day AM' duration found on source page for 2024-08-18. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15564",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-18",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Tomahawk",
+            "Tradition",
+            "Excalibur",
+            "Grande",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-08-31",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-31",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16241,
+          "trip_date": "2024-08-31",
+          "trip_duration": "3/4 Day",
+          "anglers": 33,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 33 anglers and '3/4 Day' duration found on source page for 2024-08-31. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16241",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-08-31",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Pacific Dawn",
+            "Alicia",
+            "Daiwa Pacific",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-02",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-02",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 16315,
+          "trip_date": "2024-09-02",
+          "trip_duration": "2.5 Day",
+          "anglers": 29,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 29 anglers and '2.5 Day' duration found on source page for 2024-09-02. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16315",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-02",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Islander",
+            "Liberty",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Grande",
+            "Horizon",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Apollo",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        },
+        {
+          "trip_id": 16304,
+          "trip_date": "2024-09-02",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 28,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Premier' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Premier' LIMIT 1) WHERE id = 16304",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-02",
+          "match_details": {
+            "source_boat_name": "Premier",
+            "source_landing_name": "H&M Landing",
+            "source_catches": [
+              {
+                "species": "Sand Bass",
+                "count": 117
+              },
+              {
+                "species": "Sheephead",
+                "count": 2
+              },
+              {
+                "species": "Calico Bass",
+                "count": 9
+              },
+              {
+                "species": "Bonito",
+                "count": 50
+              },
+              {
+                "species": "Rockfish",
+                "count": 11
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-03",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-03",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16334,
+          "trip_date": "2024-09-03",
+          "trip_duration": "1.5 Day",
+          "anglers": 17,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 17 anglers and '1.5 Day' duration found on source page for 2024-09-03. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16334",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-03",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Old Glory",
+            "Poseidon",
+            "Premier",
+            "Producer",
+            "No Patience",
+            "Southern Cal",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-05",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-05",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 16368,
+          "trip_date": "2024-09-05",
+          "trip_duration": "Full Day",
+          "anglers": 12,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 12 anglers and 'Full Day' duration found on source page for 2024-09-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16368",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Islander",
+            "Daiwa Pacific",
+            "Grande",
+            "Legend",
+            "Poseidon",
+            "Premier",
+            "Premier",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Tribute",
+            "Voyager",
+            "Voyager"
+          ]
+        },
+        {
+          "trip_id": 16360,
+          "trip_date": "2024-09-05",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 25,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Premier' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Premier' LIMIT 1) WHERE id = 16360",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-05",
+          "match_details": {
+            "source_boat_name": "Premier",
+            "source_landing_name": "H&M Landing",
+            "source_catches": [
+              {
+                "species": "Sand Bass",
+                "count": 15
+              },
+              {
+                "species": "Bonito",
+                "count": 30
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-06",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-06",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 16431,
+          "trip_date": "2024-09-06",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 33,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 33 anglers and '1/2 Day AM' duration found on source page for 2024-09-06. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16431",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-06",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Constitution",
+            "Daiwa Pacific",
+            "Grande",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        },
+        {
+          "trip_id": 16441,
+          "trip_date": "2024-09-06",
+          "trip_duration": "3/4 Day",
+          "anglers": 18,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 18 anglers and '3/4 Day' duration found on source page for 2024-09-06. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16441",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-06",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Constitution",
+            "Daiwa Pacific",
+            "Grande",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-07",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-07",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16467,
+          "trip_date": "2024-09-07",
+          "trip_duration": "3/4 Day",
+          "anglers": 30,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 30 anglers and '3/4 Day' duration found on source page for 2024-09-07. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16467",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-07",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Daiwa Pacific",
+            "Legend",
+            "Malihini",
+            "Nautilus",
+            "Old Glory",
+            "Producer",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-08",
+      "phantom_trips_on_date": 3,
+      "categorizations": [
+        {
+          "trip_id": 16548,
+          "trip_date": "2024-09-08",
+          "trip_duration": "Full Day",
+          "anglers": 23,
+          "current_boat_id": 374,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Mission Belle' but is assigned to '' (boat_id 374) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Mission Belle' LIMIT 1) WHERE id = 16548",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-08",
+          "match_details": {
+            "source_boat_name": "Mission Belle",
+            "source_landing_name": "Point Loma Sportfishing",
+            "source_catches": [
+              {
+                "species": "Bluefin Tuna",
+                "count": 9
+              },
+              {
+                "species": "Yellowtail",
+                "count": 10
+              },
+              {
+                "species": "Calico Bass",
+                "count": 12
+              },
+              {
+                "species": "Rockfish",
+                "count": 25
+              }
+            ]
+          }
+        },
+        {
+          "trip_id": 16553,
+          "trip_date": "2024-09-08",
+          "trip_duration": "1.5 Day",
+          "anglers": 16,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 16 anglers and '1.5 Day' duration found on source page for 2024-09-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16553",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pegasus",
+            "Tomahawk",
+            "Tradition",
+            "Alicia",
+            "Excalibur",
+            "Grande",
+            "Malihini",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Producer",
+            "Relentless",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Sea Watch",
+            "Voyager"
+          ]
+        },
+        {
+          "trip_id": 16522,
+          "trip_date": "2024-09-08",
+          "trip_duration": "3/4 Day",
+          "anglers": 26,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 26 anglers and '3/4 Day' duration found on source page for 2024-09-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16522",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pegasus",
+            "Tomahawk",
+            "Tradition",
+            "Alicia",
+            "Excalibur",
+            "Grande",
+            "Malihini",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Producer",
+            "Relentless",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-12",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-12",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16761,
+          "trip_date": "2024-09-12",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 26,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 26 anglers and '1/2 Day AM' duration found on source page for 2024-09-12. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16761",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-12",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Pacific Queen",
+            "Pegasus",
+            "Grande",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-14",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-14",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16835,
+          "trip_date": "2024-09-14",
+          "trip_duration": "3/4 Day",
+          "anglers": 30,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 30 anglers and '3/4 Day' duration found on source page for 2024-09-14. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16835",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-14",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Alicia",
+            "Grande",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-15",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-15",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16887,
+          "trip_date": "2024-09-15",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 38,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 38 anglers and '1/2 Day AM' duration found on source page for 2024-09-15. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16887",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-15",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Islander",
+            "Liberty",
+            "Pacific Queen",
+            "Pegasus",
+            "Tomahawk",
+            "Alicia",
+            "Excalibur",
+            "Grande",
+            "Horizon",
+            "Legend",
+            "Malihini",
+            "Nautilus",
+            "Ocean Odyssey",
+            "Poseidon",
+            "Premier",
+            "Premier",
+            "Producer",
+            "No Patience",
+            "Southern Cal",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Point Loma",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-18",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-18",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16948,
+          "trip_date": "2024-09-18",
+          "trip_duration": "Full Day",
+          "anglers": 11,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 11 anglers and 'Full Day' duration found on source page for 2024-09-18. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16948",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-18",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Pacific Queen",
+            "Constitution",
+            "Old Glory",
+            "Poseidon",
+            "Tradition",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Outer Limits",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-22",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-22",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 17033,
+          "trip_date": "2024-09-22",
+          "trip_duration": "1.5 Day",
+          "anglers": 28,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 28 anglers and '1.5 Day' duration found on source page for 2024-09-22. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17033",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-22",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Liberty",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Constitution",
+            "Excalibur",
+            "Grande",
+            "Horizon",
+            "Legend",
+            "Malihini",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Relentless",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Apollo",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        },
+        {
+          "trip_id": 17021,
+          "trip_date": "2024-09-22",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 28,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 28 anglers and '1/2 Day AM' duration found on source page for 2024-09-22. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17021",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-22",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Liberty",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Constitution",
+            "Excalibur",
+            "Grande",
+            "Horizon",
+            "Legend",
+            "Malihini",
+            "Nautilus",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Relentless",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Apollo",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-23",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-23",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17039,
+          "trip_date": "2024-09-23",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 12,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Sea Watch' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Sea Watch' LIMIT 1) WHERE id = 17039",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-23",
+          "match_details": {
+            "source_boat_name": "Sea Watch",
+            "source_landing_name": "Seaforth Sportfishing",
+            "source_catches": [
+              {
+                "species": "Sheephead",
+                "count": 3
+              },
+              {
+                "species": "Whitefish",
+                "count": 27
+              },
+              {
+                "species": "Bonito",
+                "count": 2
+              },
+              {
+                "species": "Rockfish",
+                "count": 12
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-25",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-25",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17073,
+          "trip_date": "2024-09-25",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 13,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 13 anglers and '1/2 Day AM' duration found on source page for 2024-09-25. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17073",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-25",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Liberty",
+            "Pegasus",
+            "Horizon",
+            "Malihini",
+            "Nautilus",
+            "Ocean Odyssey",
+            "Southern Cal",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-27",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-27",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17110,
+          "trip_date": "2024-09-27",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1/2 Day AM' duration found on source page for 2024-09-27. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17110",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-27",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Pacific Dawn",
+            "Grande",
+            "Horizon",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Relentless",
+            "Tradition",
+            "Mission Belle",
+            "Aztec",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-28",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-28",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17144,
+          "trip_date": "2024-09-28",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 10,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 10 anglers and '1/2 Day AM' duration found on source page for 2024-09-28. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17144",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-28",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Pacific Queen",
+            "Alicia",
+            "Alicia",
+            "Grande",
+            "Horizon",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Point Loma",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-09-30",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-30",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17231,
+          "trip_date": "2024-09-30",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 14,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 14 anglers and '1/2 Day AM' duration found on source page for 2024-09-30. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17231",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-09-30",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Pacific Queen",
+            "Alicia",
+            "Constitution",
+            "Grande",
+            "Poseidon",
+            "Premier",
+            "Southern Cal",
+            "Cortez",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-03",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-03",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17198,
+          "trip_date": "2024-10-03",
+          "trip_duration": "1.5 Day",
+          "anglers": 29,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 29 anglers and '1.5 Day' duration found on source page for 2024-10-03. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17198",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-03",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Pacific Queen",
+            "Pegasus",
+            "Alicia",
+            "El Capitan",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-05",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-05",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 17261,
+          "trip_date": "2024-10-05",
+          "trip_duration": "Full Day",
+          "anglers": 4,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 4 anglers and 'Full Day' duration found on source page for 2024-10-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17261",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Liberty",
+            "Alicia",
+            "Grande",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        },
+        {
+          "trip_id": 17256,
+          "trip_date": "2024-10-05",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 38,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 38 anglers and '1/2 Day AM' duration found on source page for 2024-10-05. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17256",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-05",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Liberty",
+            "Alicia",
+            "Grande",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-07",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-07",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17309,
+          "trip_date": "2024-10-07",
+          "trip_duration": "3/4 Day",
+          "anglers": 22,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 22 anglers and '3/4 Day' duration found on source page for 2024-10-07. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17309",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-07",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Alicia",
+            "Constitution",
+            "Excalibur",
+            "Ocean Odyssey",
+            "Premier",
+            "Producer",
+            "No Patience",
+            "Southern Cal",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-09",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-09",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17338,
+          "trip_date": "2024-10-09",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1/2 Day AM' duration found on source page for 2024-10-09. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17338",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-09",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Condor",
+            "Dolphin",
+            "Fortune",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Alicia",
+            "Old Glory",
+            "Premier",
+            "No Patience",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-11",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-11",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17471,
+          "trip_date": "2024-10-11",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 13,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 13 anglers and '1/2 Day AM' duration found on source page for 2024-10-11. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17471",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-11",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Islander",
+            "Liberty",
+            "Pacific Queen",
+            "Pegasus",
+            "Alicia",
+            "Constitution",
+            "Grande",
+            "Horizon",
+            "Malihini",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-25",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-25",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17691,
+          "trip_date": "2024-10-25",
+          "trip_duration": "3/4 Day",
+          "anglers": 40,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 40 anglers and '3/4 Day' duration found on source page for 2024-10-25. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17691",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-25",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Pacific Dawn",
+            "Alicia",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17709,
+          "trip_date": "2024-10-26",
+          "trip_duration": "3/4 Day",
+          "anglers": 13,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 13 anglers and '3/4 Day' duration found on source page for 2024-10-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17709",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Alicia",
+            "Grande",
+            "Horizon",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "No Patience",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-10-27",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-27",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17736,
+          "trip_date": "2024-10-27",
+          "trip_duration": "Full Day",
+          "anglers": 2,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 2 anglers and 'Full Day' duration found on source page for 2024-10-27. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17736",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-10-27",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Liberty",
+            "Alicia",
+            "Constitution",
+            "Daiwa Pacific",
+            "Excalibur",
+            "Legend",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Tradition",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-01",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-01",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 14704,
+          "trip_date": "2024-11-01",
+          "trip_duration": "Full Day",
+          "anglers": 3,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 3 anglers and 'Full Day' duration found on source page for 2024-11-01. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14704",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-01",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Liberty",
+            "Pacific Queen",
+            "Alicia",
+            "Premier",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "San Diego"
+          ]
+        },
+        {
+          "trip_id": 14701,
+          "trip_date": "2024-11-01",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 17,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 17 anglers and '1/2 Day AM' duration found on source page for 2024-11-01. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14701",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-01",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Liberty",
+            "Pacific Queen",
+            "Alicia",
+            "Premier",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-08",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14869,
+          "trip_date": "2024-11-08",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 14,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 14 anglers and '1/2 Day AM' duration found on source page for 2024-11-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14869",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Condor",
+            "Malihini",
+            "Premier",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-10",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-10",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14887,
+          "trip_date": "2024-11-10",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 30,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 30 anglers and '1/2 Day AM' duration found on source page for 2024-11-10. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14887",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-10",
+          "match_details": null,
+          "boats_on_source": [
+            "Alicia",
+            "Nautilus",
+            "Premier",
+            "Premier",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-25",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-25",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15438,
+          "trip_date": "2024-11-25",
+          "trip_duration": "3/4 Day",
+          "anglers": 25,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 25 anglers and '3/4 Day' duration found on source page for 2024-11-25. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15438",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-25",
+          "match_details": null,
+          "boats_on_source": [
+            "Premier",
+            "Polaris Supreme",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-29",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-29",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15669,
+          "trip_date": "2024-11-29",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 20,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 20 anglers and '1/2 Day AM' duration found on source page for 2024-11-29. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15669",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-29",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2024-11-30",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-30",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15718,
+          "trip_date": "2024-11-30",
+          "trip_duration": "Full Day",
+          "anglers": 4,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 4 anglers and 'Full Day' duration found on source page for 2024-11-30. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15718",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2024-11-30",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Malihini",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-01-02",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-01-02",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11285,
+          "trip_date": "2025-01-02",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Southern Cal' but is assigned to '' (boat_id 375) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Southern Cal' LIMIT 1) WHERE id = 11285",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-01-02",
+          "match_details": {
+            "source_boat_name": "Southern Cal",
+            "source_landing_name": "Oceanside Sea Center",
+            "source_catches": [
+              {
+                "species": "Sculpin",
+                "count": 75
+              },
+              {
+                "species": "Sanddab",
+                "count": 5
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-02-02",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-02",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11470,
+          "trip_date": "2025-02-02",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 20,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 20 anglers and '1/2 Day AM' duration found on source page for 2025-02-02. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11470",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-02",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Alicia",
+            "Malihini",
+            "Pronto",
+            "Pacific Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-02-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-08",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11513,
+          "trip_date": "2025-02-08",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 10,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 10 anglers and '1/2 Day AM' duration found on source page for 2025-02-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11513",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-02-15",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-15",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11530,
+          "trip_date": "2025-02-15",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 15,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1/2 Day AM' duration found on source page for 2025-02-15. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11530",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-15",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Southern Cal",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-02-16",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-16",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11537,
+          "trip_date": "2025-02-16",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 22,
+          "current_boat_id": 375,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 22 anglers and '1/2 Day AM' duration found on source page for 2025-02-16. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11537",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-16",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Horizon",
+            "Nautilus",
+            "Southern Cal",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-03-16",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-16",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11745,
+          "trip_date": "2025-03-16",
+          "trip_duration": "3/4 Day",
+          "anglers": 4,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 4 anglers and '3/4 Day' duration found on source page for 2025-03-16. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11745",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-16",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "New Seaforth",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-04-13",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-13",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 12470,
+          "trip_date": "2025-04-13",
+          "trip_duration": "3/4 Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and '3/4 Day' duration found on source page for 2025-04-13. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 12470",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-13",
+          "match_details": null,
+          "boats_on_source": [
+            "Blue Horizon",
+            "Southern Cal",
+            "New Seaforth",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-04-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 12654,
+          "trip_date": "2025-04-26",
+          "trip_duration": "2 Day",
+          "anglers": 8,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 8 anglers and '2 Day' duration found on source page for 2025-04-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 12654",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Horizon",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "Electra",
+            "Pronto",
+            "Daily Double",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-05-14",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-05-14",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 13920,
+          "trip_date": "2025-05-14",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 3,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 3 anglers and '1/2 Day AM' duration found on source page for 2025-05-14. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 13920",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-05-14",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Premier",
+            "Southern Cal",
+            "New Seaforth",
+            "New Seaforth"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-06-01",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-01",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14324,
+          "trip_date": "2025-06-01",
+          "trip_duration": "1.5 Day",
+          "anglers": 16,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 16 anglers and '1.5 Day' duration found on source page for 2025-06-01. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14324",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-01",
+          "match_details": null,
+          "boats_on_source": [
+            "Constitution",
+            "Dolphin",
+            "Islander",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tomahawk",
+            "Tradition",
+            "Excalibur",
+            "Horizon",
+            "Legend",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Blue Horizon",
+            "Daily Double",
+            "Daily Double",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-06-12",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-12",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14483,
+          "trip_date": "2025-06-12",
+          "trip_duration": "Full Day",
+          "anglers": 21,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 21 anglers and 'Full Day' duration found on source page for 2025-06-12. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14483",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-12",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Premier",
+            "Premier",
+            "Southern Cal",
+            "Cortez",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-06-13",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-13",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14494,
+          "trip_date": "2025-06-13",
+          "trip_duration": "3/4 Day",
+          "anglers": 2,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 2 anglers and '3/4 Day' duration found on source page for 2025-06-13. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14494",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-13",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Pacific Queen",
+            "Alicia",
+            "Malihini",
+            "Premier",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Point Loma",
+            "Highliner",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-06-14",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-14",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14518,
+          "trip_date": "2025-06-14",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and '1/2 Day AM' duration found on source page for 2025-06-14. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14518",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-14",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Pegasus",
+            "Alicia",
+            "Grande",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "Premier",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Point Loma",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-06-19",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-19",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 14599,
+          "trip_date": "2025-06-19",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 2,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 2 anglers and '1/2 Day AM' duration found on source page for 2025-06-19. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 14599",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-06-19",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Alicia",
+            "Grande",
+            "Malihini",
+            "Premier",
+            "Premier",
+            "Sea Star",
+            "Southern Cal",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-02",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-02",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15185,
+          "trip_date": "2025-07-02",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-07-02. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15185",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-02",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Pacific Queen",
+            "Grande",
+            "Legend",
+            "Ocean Odyssey",
+            "Premier",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-08",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15585,
+          "trip_date": "2025-07-08",
+          "trip_duration": "Full Day",
+          "anglers": 5,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 5 anglers and 'Full Day' duration found on source page for 2025-07-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15585",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Grande",
+            "Horizon",
+            "Legend",
+            "Premier",
+            "Premier",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Voyager",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-10",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-10",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15696,
+          "trip_date": "2025-07-10",
+          "trip_duration": "Full Day",
+          "anglers": 5,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 5 anglers and 'Full Day' duration found on source page for 2025-07-10. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15696",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-10",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Grande",
+            "Nautilus",
+            "Ocean Odyssey",
+            "Premier",
+            "Premier",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-12",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-12",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15783,
+          "trip_date": "2025-07-12",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-07-12. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15783",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-12",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Dolphin",
+            "Daiwa Pacific",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Effishency",
+            "Pronto",
+            "Southern Cal",
+            "Daily Double",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-14",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-14",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 15884,
+          "trip_date": "2025-07-14",
+          "trip_duration": "Full Day",
+          "anglers": 3,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 3 anglers and 'Full Day' duration found on source page for 2025-07-14. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 15884",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-14",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Liberty",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Poseidon",
+            "Producer",
+            "Tradition",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Highliner",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Sea Watch",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-23",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-23",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16495,
+          "trip_date": "2025-07-23",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-07-23. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16495",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-23",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Alicia",
+            "Legend",
+            "Malihini",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Producer",
+            "Sea Star",
+            "Mission Belle",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16635,
+          "trip_date": "2025-07-26",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and '1/2 Day AM' duration found on source page for 2025-07-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16635",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Tradition",
+            "Grande",
+            "Horizon",
+            "Malihini",
+            "Old Glory",
+            "Producer",
+            "Sea Star",
+            "Mission Belle",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-27",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-27",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16690,
+          "trip_date": "2025-07-27",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-07-27. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16690",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-27",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Pacific Queen",
+            "Tomahawk",
+            "Tradition",
+            "Excalibur",
+            "Grande",
+            "Legend",
+            "Malihini",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Blue Horizon",
+            "Effishency",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "El Capitan",
+            "Mission Belle",
+            "Point Loma",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-28",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-28",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16741,
+          "trip_date": "2025-07-28",
+          "trip_duration": "1.5 Day",
+          "anglers": 30,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 30 anglers and '1.5 Day' duration found on source page for 2025-07-28. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16741",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-28",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Cortez",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-30",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-30",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16811,
+          "trip_date": "2025-07-30",
+          "trip_duration": "Full Day",
+          "anglers": 3,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 3 anglers and 'Full Day' duration found on source page for 2025-07-30. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16811",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-30",
+          "match_details": null,
+          "boats_on_source": [
+            "Constitution",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Grande",
+            "Ocean Odyssey",
+            "Poseidon",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Sea Watch",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-07-31",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-31",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 16857,
+          "trip_date": "2025-07-31",
+          "trip_duration": "1/2 Day AM",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and '1/2 Day AM' duration found on source page for 2025-07-31. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 16857",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-07-31",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Tradition",
+            "Alicia",
+            "Excalibur",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Blue Horizon",
+            "Sea Star",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-08-04",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-04",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17450,
+          "trip_date": "2025-08-04",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-08-04. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17450",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-04",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Tradition",
+            "Grande",
+            "Old Glory",
+            "Poseidon",
+            "Producer",
+            "Blue Horizon",
+            "Southern Cal",
+            "Mission Belle",
+            "Point Loma",
+            "Success",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-08-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-08",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17824,
+          "trip_date": "2025-08-08",
+          "trip_duration": "Full Day",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day' duration found on source page for 2025-08-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17824",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Constitution",
+            "Dolphin",
+            "Pacific Dawn",
+            "Daiwa Pacific",
+            "Horizon",
+            "Ocean Odyssey",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-08-10",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-10",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 17878,
+          "trip_date": "2025-08-10",
+          "trip_duration": "1.5 Day",
+          "anglers": 16,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 16 anglers and '1.5 Day' duration found on source page for 2025-08-10. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 17878",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-10",
+          "match_details": null,
+          "boats_on_source": [
+            "Constitution",
+            "Dolphin",
+            "Dolphin",
+            "Fortune",
+            "Liberty",
+            "Pacific Dawn",
+            "Pacific Queen",
+            "Tradition",
+            "Daiwa Pacific",
+            "Excalibur",
+            "Grande",
+            "Malihini",
+            "Old Glory",
+            "Southern Cal",
+            "El Capitan",
+            "Mission Belle",
+            "Point Loma",
+            "Aztec",
+            "Cortez",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-08-16",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-16",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 18024,
+          "trip_date": "2025-08-16",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-08-16. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 18024",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-16",
+          "match_details": null,
+          "boats_on_source": [
+            "Liberty",
+            "Pacific Dawn",
+            "Tomahawk",
+            "Alicia",
+            "Grande",
+            "Old Glory",
+            "Premier",
+            "Premier",
+            "Producer",
+            "Reel Champion",
+            "Blue Horizon",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-08-21",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-21",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 18142,
+          "trip_date": "2025-08-21",
+          "trip_duration": "Full Day Coronado Islands",
+          "anglers": 26,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 26 anglers and 'Full Day Coronado Islands' duration found on source page for 2025-08-21. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 18142",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-08-21",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Pacific Queen",
+            "Tomahawk",
+            "Tradition",
+            "Alicia",
+            "Grande",
+            "Malihini",
+            "Nautilus",
+            "Old Glory",
+            "Poseidon",
+            "Premier",
+            "Southern Cal",
+            "Mission Belle",
+            "Apollo",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-02",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10366,
+          "trip_date": "2025-09-02",
+          "trip_duration": "1.5 Day",
+          "anglers": 29,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 29 anglers and '1.5 Day' duration found on source page for 2025-09-02. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 10366",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-02",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Liberty",
+            "Tomahawk",
+            "Old Glory",
+            "Premier",
+            "Southern Cal",
+            "Mission Belle",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-09",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-09",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10498,
+          "trip_date": "2025-09-09",
+          "trip_duration": "1/2 Day PM",
+          "anglers": 5,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 5 anglers and '1/2 Day PM' duration found on source page for 2025-09-09. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 10498",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-09",
+          "match_details": null,
+          "boats_on_source": [
+            "Excalibur",
+            "Grande",
+            "Horizon",
+            "Premier",
+            "Blue Horizon",
+            "Southern Cal",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Pacifica",
+            "Polaris Supreme",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-17",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-17",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10636,
+          "trip_date": "2025-09-17",
+          "trip_duration": "3 Day",
+          "anglers": 19,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 19 anglers and '3 Day' duration found on source page for 2025-09-17. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 10636",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-17",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Fortune",
+            "Islander",
+            "Liberty",
+            "Pacific Queen",
+            "Grande",
+            "Ocean Odyssey",
+            "Producer",
+            "Blue Horizon",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacifica",
+            "San Diego",
+            "Sea Watch"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-20",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10688,
+          "trip_date": "2025-09-20",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 5,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 5 anglers and 'Full Day Offshore' duration found on source page for 2025-09-20. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 10688",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Alicia",
+            "Grande",
+            "Lucky Charm",
+            "Malihini",
+            "Old Glory",
+            "Premier",
+            "Producer",
+            "Reel Champion",
+            "Southern Cal",
+            "Daily Double",
+            "Mission Belle",
+            "Point Loma",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10816,
+          "trip_date": "2025-09-26",
+          "trip_duration": "Overnight",
+          "anglers": 19,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 19 anglers and 'Overnight' duration found on source page for 2025-09-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 10816",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Fortune",
+            "Islander",
+            "Tomahawk",
+            "Alicia",
+            "Excalibur",
+            "Horizon",
+            "Ocean Odyssey",
+            "Poseidon",
+            "Premier",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Daily Double",
+            "Mission Belle",
+            "Aztec",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Sea Watch",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-09-30",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-30",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 10904,
+          "trip_date": "2025-09-30",
+          "trip_duration": "1.5 Day",
+          "anglers": 29,
+          "current_boat_id": 374,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Old Glory' but is assigned to '' (boat_id 374) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Old Glory' LIMIT 1) WHERE id = 10904",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-30",
+          "match_details": {
+            "source_boat_name": "Old Glory",
+            "source_landing_name": "H&M Landing",
+            "source_catches": [
+              {
+                "species": "Bluefin Tuna",
+                "count": 58
+              },
+              {
+                "species": "Dorado",
+                "count": 3
+              },
+              {
+                "species": "Yellowfin Tuna",
+                "count": 1
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-07",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-07",
+      "phantom_trips_on_date": 2,
+      "categorizations": [
+        {
+          "trip_id": 11019,
+          "trip_date": "2025-10-07",
+          "trip_duration": "1.5 Day",
+          "anglers": 15,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 15 anglers and '1.5 Day' duration found on source page for 2025-10-07. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11019",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-07",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Alicia",
+            "Excalibur",
+            "Horizon",
+            "Premier",
+            "Blue Horizon",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "Cortez",
+            "Highliner",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "Pacifica",
+            "San Diego"
+          ]
+        },
+        {
+          "trip_id": 11013,
+          "trip_date": "2025-10-07",
+          "trip_duration": "2 Day",
+          "anglers": 24,
+          "current_boat_id": 374,
+          "category": "MISATTRIBUTED",
+          "reasoning": "Trip exists on source with boat 'Highliner' but is assigned to '' (boat_id 374) in database.",
+          "confidence": "high",
+          "recommended_action": "UPDATE trips SET boat_id = (SELECT id FROM boats WHERE name = 'Highliner' LIMIT 1) WHERE id = 11013",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-07",
+          "match_details": {
+            "source_boat_name": "Highliner",
+            "source_landing_name": "Seaforth Sportfishing",
+            "source_catches": [
+              {
+                "species": "Bluefin Tuna",
+                "count": 7
+              },
+              {
+                "species": "Yellowfin Tuna",
+                "count": 16
+              }
+            ]
+          }
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-08",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-08",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11025,
+          "trip_date": "2025-10-08",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 4,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 4 anglers and 'Full Day Offshore' duration found on source page for 2025-10-08. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11025",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-08",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Liberty",
+            "Old Glory",
+            "Southern Cal",
+            "New Seaforth",
+            "Polaris Supreme",
+            "San Diego"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-16",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-16",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11115,
+          "trip_date": "2025-10-16",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-16. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11115",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-16",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Alicia",
+            "Excalibur",
+            "Premier",
+            "Southern Cal",
+            "New Seaforth",
+            "New Seaforth",
+            "San Diego",
+            "Tribute"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-17",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-17",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11125,
+          "trip_date": "2025-10-17",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-17. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11125",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-17",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-18",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-18",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11135,
+          "trip_date": "2025-10-18",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-18. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11135",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-18",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-19",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-19",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11145,
+          "trip_date": "2025-10-19",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-19. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11145",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-19",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-20",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-20",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11155,
+          "trip_date": "2025-10-20",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-20. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11155",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-20",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-21",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-21",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11165,
+          "trip_date": "2025-10-21",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-21. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11165",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-21",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-22",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-22",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11175,
+          "trip_date": "2025-10-22",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-22. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11175",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-22",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-23",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-23",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11185,
+          "trip_date": "2025-10-23",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-23. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11185",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-23",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-24",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-24",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11195,
+          "trip_date": "2025-10-24",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-24. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11195",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-24",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-25",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-25",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11205,
+          "trip_date": "2025-10-25",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-25. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11205",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-25",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-26",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-26",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11215,
+          "trip_date": "2025-10-26",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-26. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11215",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-26",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-27",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-27",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11225,
+          "trip_date": "2025-10-27",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-27. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11225",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-27",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-28",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-28",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11235,
+          "trip_date": "2025-10-28",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-28. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11235",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-28",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-29",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-29",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11245,
+          "trip_date": "2025-10-29",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-29. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11245",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-29",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-30",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-30",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11255,
+          "trip_date": "2025-10-30",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-30. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11255",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-30",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "date": "2025-10-31",
+      "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-31",
+      "phantom_trips_on_date": 1,
+      "categorizations": [
+        {
+          "trip_id": 11265,
+          "trip_date": "2025-10-31",
+          "trip_duration": "Full Day Offshore",
+          "anglers": 6,
+          "current_boat_id": 374,
+          "category": "PHANTOM",
+          "reasoning": "No trip with 6 anglers and 'Full Day Offshore' duration found on source page for 2025-10-31. Trip appears to not exist.",
+          "confidence": "high",
+          "recommended_action": "DELETE FROM trips WHERE id = 11265",
+          "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-31",
+          "match_details": null,
+          "boats_on_source": [
+            "Dolphin",
+            "Dolphin",
+            "Islander",
+            "Alicia",
+            "Legend",
+            "Ocean Odyssey",
+            "Producer",
+            "Southern Cal",
+            "Daily Double",
+            "Aztec",
+            "New Seaforth",
+            "New Seaforth",
+            "Pacific Voyager",
+            "San Diego",
+            "Tribute",
+            "Voyager"
+          ]
+        }
+      ],
+      "status": "completed"
+    }
+  ]
+}

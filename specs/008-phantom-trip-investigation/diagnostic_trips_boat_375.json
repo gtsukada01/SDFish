@@ -1,0 +1,452 @@
+[
+  {
+    "id": 11415,
+    "boat_id": 375,
+    "trip_date": "2024-01-19",
+    "anglers": 15,
+    "trip_duration": "1/2 Day Twilight",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11699,
+    "boat_id": 375,
+    "trip_date": "2024-03-07",
+    "anglers": 19,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11716,
+    "boat_id": 375,
+    "trip_date": "2024-03-09",
+    "anglers": 27,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 13335,
+    "boat_id": 375,
+    "trip_date": "2024-07-05",
+    "anglers": 21,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 13359,
+    "boat_id": 375,
+    "trip_date": "2024-07-06",
+    "anglers": 19,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 13453,
+    "boat_id": 375,
+    "trip_date": "2024-07-10",
+    "anglers": 25,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 13558,
+    "boat_id": 375,
+    "trip_date": "2024-07-13",
+    "anglers": 17,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 13965,
+    "boat_id": 375,
+    "trip_date": "2024-07-26",
+    "anglers": 18,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 14904,
+    "boat_id": 375,
+    "trip_date": "2024-08-01",
+    "anglers": 19,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 14955,
+    "boat_id": 375,
+    "trip_date": "2024-08-03",
+    "anglers": 37,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15015,
+    "boat_id": 375,
+    "trip_date": "2024-08-05",
+    "anglers": 38,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15062,
+    "boat_id": 375,
+    "trip_date": "2024-08-06",
+    "anglers": 12,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15082,
+    "boat_id": 375,
+    "trip_date": "2024-08-07",
+    "anglers": 31,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15289,
+    "boat_id": 375,
+    "trip_date": "2024-08-11",
+    "anglers": 20,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15340,
+    "boat_id": 375,
+    "trip_date": "2024-08-12",
+    "anglers": 12,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15360,
+    "boat_id": 375,
+    "trip_date": "2024-08-13",
+    "anglers": 10,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15386,
+    "boat_id": 375,
+    "trip_date": "2024-08-14",
+    "anglers": 9,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15469,
+    "boat_id": 375,
+    "trip_date": "2024-08-16",
+    "anglers": 20,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15517,
+    "boat_id": 375,
+    "trip_date": "2024-08-17",
+    "anglers": 45,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15564,
+    "boat_id": 375,
+    "trip_date": "2024-08-18",
+    "anglers": 15,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16241,
+    "boat_id": 375,
+    "trip_date": "2024-08-31",
+    "anglers": 33,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16304,
+    "boat_id": 375,
+    "trip_date": "2024-09-02",
+    "anglers": 28,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16360,
+    "boat_id": 375,
+    "trip_date": "2024-09-05",
+    "anglers": 25,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16467,
+    "boat_id": 375,
+    "trip_date": "2024-09-07",
+    "anglers": 30,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16522,
+    "boat_id": 375,
+    "trip_date": "2024-09-08",
+    "anglers": 26,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16761,
+    "boat_id": 375,
+    "trip_date": "2024-09-12",
+    "anglers": 26,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16835,
+    "boat_id": 375,
+    "trip_date": "2024-09-14",
+    "anglers": 30,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 16887,
+    "boat_id": 375,
+    "trip_date": "2024-09-15",
+    "anglers": 38,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17021,
+    "boat_id": 375,
+    "trip_date": "2024-09-22",
+    "anglers": 28,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17039,
+    "boat_id": 375,
+    "trip_date": "2024-09-23",
+    "anglers": 12,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17073,
+    "boat_id": 375,
+    "trip_date": "2024-09-25",
+    "anglers": 13,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17110,
+    "boat_id": 375,
+    "trip_date": "2024-09-27",
+    "anglers": 15,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17144,
+    "boat_id": 375,
+    "trip_date": "2024-09-28",
+    "anglers": 10,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17231,
+    "boat_id": 375,
+    "trip_date": "2024-09-30",
+    "anglers": 14,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17256,
+    "boat_id": 375,
+    "trip_date": "2024-10-05",
+    "anglers": 38,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17309,
+    "boat_id": 375,
+    "trip_date": "2024-10-07",
+    "anglers": 22,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17338,
+    "boat_id": 375,
+    "trip_date": "2024-10-09",
+    "anglers": 15,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17471,
+    "boat_id": 375,
+    "trip_date": "2024-10-11",
+    "anglers": 13,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17691,
+    "boat_id": 375,
+    "trip_date": "2024-10-25",
+    "anglers": 40,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 17709,
+    "boat_id": 375,
+    "trip_date": "2024-10-26",
+    "anglers": 13,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 14701,
+    "boat_id": 375,
+    "trip_date": "2024-11-01",
+    "anglers": 17,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 14869,
+    "boat_id": 375,
+    "trip_date": "2024-11-08",
+    "anglers": 14,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 14887,
+    "boat_id": 375,
+    "trip_date": "2024-11-10",
+    "anglers": 30,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15438,
+    "boat_id": 375,
+    "trip_date": "2024-11-25",
+    "anglers": 25,
+    "trip_duration": "3/4 Day",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 15669,
+    "boat_id": 375,
+    "trip_date": "2024-11-29",
+    "anglers": 20,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11285,
+    "boat_id": 375,
+    "trip_date": "2025-01-02",
+    "anglers": 15,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11470,
+    "boat_id": 375,
+    "trip_date": "2025-02-02",
+    "anglers": 20,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11513,
+    "boat_id": 375,
+    "trip_date": "2025-02-08",
+    "anglers": 10,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11530,
+    "boat_id": 375,
+    "trip_date": "2025-02-15",
+    "anglers": 15,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  },
+  {
+    "id": 11537,
+    "boat_id": 375,
+    "trip_date": "2025-02-16",
+    "anglers": 22,
+    "trip_duration": "1/2 Day AM",
+    "total_fish": null,
+    "landing_id": 29
+  }
+]

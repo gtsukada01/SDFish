@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fishscraper.dev/schemas/summary-metrics.schema.json",
+  "title": "Offshore Summary Metrics Response",
+  "type": "object",
+  "required": ["fleet", "per_boat", "per_species", "filters_applied", "last_synced_at"],
+  "properties": {
+    "fleet": {
+      "type": "object",
+      "required": ["total_trips", "total_fish", "unique_boats", "unique_species"],
+      "properties": {
+        "total_trips": { "type": "integer", "minimum": 0 },
+        "total_fish": { "type": "integer", "minimum": 0 },
+        "unique_boats": { "type": "integer", "minimum": 0 },
+        "unique_species": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "per_boat": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["boat", "trips", "total_fish", "top_species", "top_species_count"],
+        "properties": {
+          "boat": { "type": "string" },
+          "trips": { "type": "integer", "minimum": 0 },
+          "total_fish": { "type": "integer", "minimum": 0 },
+          "top_species": { "type": "string" },
+          "top_species_count": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "per_species": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["species", "total_fish", "boats"],
+        "properties": {
+          "species": { "type": "string" },
+          "total_fish": { "type": "integer", "minimum": 0 },
+          "boats": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "filters_applied": { "$ref": "catch-table.schema.json#/definitions/Filters" },
+    "last_synced_at": { "type": "string", "format": "date-time" }
+  }
+}

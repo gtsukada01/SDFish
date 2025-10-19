@@ -1,0 +1,102 @@
+================================================================================
+POST-REMEDIATION QC VALIDATION
+================================================================================
+Started: 2025-10-18T02:39:43.629394
+
+📂 Loading affected dates...
+   ✅ 105 dates to validate
+
+🔌 Connecting to Supabase...
+2025-10-18 02:39:43,676 - INFO - ✅ Supabase connected
+   ✅ Connected
+
+🌐 Creating HTTP session...
+   ✅ Session ready
+
+================================================================================
+VALIDATING 105 DATES
+================================================================================
+
+[1/105] 📅 2024-01-19... 2025-10-18 02:39:47,365 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-18 02:39:47,365 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-18 02:39:47,365 - INFO - 🔍 Found boat: Boat at line 38
+2025-10-18 02:39:47,365 - INFO -    Next lines:
+2025-10-18 02:39:47,365 - INFO -      +0: 'Dock Totals'
+2025-10-18 02:39:47,366 - INFO -      +1: 'Premier'
+2025-10-18 02:39:47,366 - INFO -      +2: 'H&M Landing'
+2025-10-18 02:39:47,366 - INFO -      +3: 'San Diego, CA'
+2025-10-18 02:39:47,366 - INFO -    Incomplete data, skipping
+2025-10-18 02:39:47,366 - INFO - 🔍 Found boat: Premier at line 41
+2025-10-18 02:39:47,366 - INFO -    Next lines:
+2025-10-18 02:39:47,366 - INFO -      +0: 'San Diego, CA'
+2025-10-18 02:39:47,366 - INFO -      +1: '19 Anglers1/2 Day PM'
+2025-10-18 02:39:47,366 - INFO -      +2: '18 Sand Bass, 77 Sculpin, 22 Perch, 11 Whitefish'
+2025-10-18 02:39:47,366 - INFO -      +3: 'Helgrens Sportfishing Fish Counts'
+2025-10-18 02:39:47,366 - INFO -    Found 19 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-18 02:39:47,366 - INFO -    Catches: '18 Sand Bass, 77 Sculpin, 22 Perch, 11 Whitefish'
+2025-10-18 02:39:47,366 - INFO - ✅ Parsed: Premier - 4 species, 19 anglers
+2025-10-18 02:39:47,366 - INFO - 📍 Landing header detected: Helgrens Sportfishing
+2025-10-18 02:39:47,367 - INFO - 🔍 Found boat: Boat at line 47
+2025-10-18 02:39:47,367 - INFO -    Next lines:
+2025-10-18 02:39:47,367 - INFO -      +0: 'Dock Totals'
+2025-10-18 02:39:47,367 - INFO -      +1: 'Fisherman III'
+2025-10-18 02:39:47,367 - INFO -      +2: 'Helgrens Sportfishing'
+2025-10-18 02:39:47,367 - INFO -      +3: 'Oceanside, CA'
+2025-10-18 02:39:47,367 - INFO -    Incomplete data, skipping
+2025-10-18 02:39:47,367 - WARNING - ⚠️  Skipping landing name as boat: Helgrens Sportfishing
+2025-10-18 02:39:47,367 - INFO - 📍 Landing header detected: Oceanside Sea Center
+2025-10-18 02:39:47,367 - INFO - 🔍 Found boat: Boat at line 56
+2025-10-18 02:39:47,367 - INFO -    Next lines:
+2025-10-18 02:39:47,367 - INFO -      +0: 'Dock Totals'
+2025-10-18 02:39:47,367 - INFO -      +1: 'Chubasco II'
+2025-10-18 02:39:47,367 - INFO -      +2: 'Oceanside Sea Center'
+2025-10-18 02:39:47,367 - INFO -      +3: 'Oceanside, CA'
+2025-10-18 02:39:47,367 - INFO -    Incomplete data, skipping
+2025-10-18 02:39:47,367 - INFO - 📍 Landing header detected: Point Loma Sportfishing
+2025-10-18 02:39:47,367 - INFO - 🔍 Found boat: Boat at line 65
+2025-10-18 02:39:47,367 - INFO -    Next lines:
+2025-10-18 02:39:47,367 - INFO -      +0: 'Dock Totals'
+2025-10-18 02:39:47,367 - INFO -      +1: 'Daily Double'
+2025-10-18 02:39:47,367 - INFO -      +2: 'Point Loma Sportfishing'
+2025-10-18 02:39:47,367 - INFO -      +3: 'San Diego, CA'
+2025-10-18 02:39:47,367 - INFO -    Incomplete data, skipping
+2025-10-18 02:39:47,367 - INFO - 🔍 Found boat: Daily Double at line 68
+2025-10-18 02:39:47,367 - INFO -    Next lines:
+2025-10-18 02:39:47,367 - INFO -      +0: 'San Diego, CA'
+2025-10-18 02:39:47,367 - INFO -      +1: '28 Anglers1/2 Day AM'
+2025-10-18 02:39:47,367 - INFO -      +2: '33 Barred Sand Bass, 35 Sculpin, 1 Whitefish'
+2025-10-18 02:39:47,367 - INFO -      +3: 'Seaforth Sportfishing Fish Counts'
+2025-10-18 02:39:47,367 - INFO -    Found 28 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-18 02:39:47,367 - INFO -    Catches: '33 Barred Sand Bass, 35 Sculpin, 1 Whitefish'
+2025-10-18 02:39:47,367 - INFO - ✅ Parsed: Daily Double - 3 species, 28 anglers
+2025-10-18 02:39:47,368 - INFO - 📍 Landing header detected: Seaforth Sportfishing
+2025-10-18 02:39:47,368 - INFO - 🔍 Found boat: Boat at line 74
+2025-10-18 02:39:47,368 - INFO -    Next lines:
+2025-10-18 02:39:47,368 - INFO -      +0: 'Dock Totals'
+2025-10-18 02:39:47,368 - INFO -      +1: 'New Seaforth'
+2025-10-18 02:39:47,368 - INFO -      +2: 'Seaforth Sportfishing'
+2025-10-18 02:39:47,368 - INFO -      +3: 'San Diego, CA'
+2025-10-18 02:39:47,368 - INFO -    Incomplete data, skipping
+2025-10-18 02:39:47,368 - INFO - 🔍 Found boat: New Seaforth at line 77
+2025-10-18 02:39:47,368 - INFO -    Next lines:
+2025-10-18 02:39:47,368 - INFO -      +0: 'San Diego, CA'
+2025-10-18 02:39:47,368 - INFO -      +1: '15 Anglers1/2 Day AM'
+2025-10-18 02:39:47,368 - INFO -      +2: '25 Sand Bass, 7 Sculpin, 1 Whitefish'
+2025-10-18 02:39:47,368 - INFO -      +3: 'Previous Day Next Day'
+2025-10-18 02:39:47,368 - INFO -    Found 15 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-18 02:39:47,368 - INFO -    Catches: '25 Sand Bass, 7 Sculpin, 1 Whitefish'
+2025-10-18 02:39:47,368 - INFO - ✅ Parsed: New Seaforth - 3 species, 15 anglers
+2025-10-18 02:39:47,368 - INFO - ✅ Total trips parsed: 3
+2025-10-18 02:39:47,699 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%29%2Clandings%28name%29&trip_date=eq.2024-01-19 "HTTP/2 200 OK"
+Traceback (most recent call last):
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/post_remediation_qc.py", line 239, in <module>
+    main()
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/post_remediation_qc.py", line 182, in main
+    result = validate_date(date, supabase, session)
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/post_remediation_qc.py", line 136, in validate_date
+    passed, issues = compare_trips(date, source_trips or [], db_trips)
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/post_remediation_qc.py", line 88, in compare_trips
+    phantom_trips = [t for t in db_trips if any(str(phantom_boat_ids[0]) in str(t.get('boat_name', '')) or str(phantom_boat_ids[1]) in str(t.get('boat_name', '')))]
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/post_remediation_qc.py", line 88, in <listcomp>
+    phantom_trips = [t for t in db_trips if any(str(phantom_boat_ids[0]) in str(t.get('boat_name', '')) or str(phantom_boat_ids[1]) in str(t.get('boat_name', '')))]
+TypeError: 'bool' object is not iterable

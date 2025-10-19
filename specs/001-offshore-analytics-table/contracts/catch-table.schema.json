@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fishscraper.dev/schemas/catch-table.schema.json",
+  "title": "Offshore Catch Table Response",
+  "type": "object",
+  "required": ["data", "pagination", "filters_applied", "last_synced_at"],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/CatchRecord" }
+    },
+    "pagination": {
+      "type": "object",
+      "required": ["total_rows", "returned_rows", "limit", "next_cursor"],
+      "properties": {
+        "total_rows": { "type": "integer", "minimum": 0 },
+        "returned_rows": { "type": "integer", "minimum": 0 },
+        "limit": { "type": "integer", "minimum": 0 },
+        "next_cursor": { "type": ["string", "null"] }
+      }
+    },
+    "filters_applied": { "$ref": "#/definitions/Filters" },
+    "last_synced_at": { "type": "string", "format": "date-time" }
+  },
+  "definitions": {
+    "CatchRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "trip_date",
+        "boat",
+        "landing",
+        "trip_duration_hours",
+        "angler_count",
+        "total_fish",
+        "top_species",
+        "top_species_count",
+        "created_at"
+      ],
+      "properties": {
+        "id": { "type": "string", "format": "uuid" },
+        "trip_date": { "type": "string", "format": "date" },
+        "boat": { "type": "string" },
+        "landing": { "type": "string" },
+        "trip_duration_hours": { "type": "number", "minimum": 0 },
+        "angler_count": { "type": ["integer", "null"], "minimum": 0 },
+        "total_fish": { "type": "integer", "minimum": 0 },
+        "top_species": { "type": "string" },
+        "top_species_count": { "type": "integer", "minimum": 0 },
+        "species_breakdown": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["species", "count"],
+            "properties": {
+              "species": { "type": "string" },
+              "count": { "type": "integer", "minimum": 0 }
+            }
+          }
+        },
+        "weather_notes": { "type": ["string", "null"] },
+        "created_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "Filters": {
+      "type": "object",
+      "required": ["start_date", "end_date"],
+      "properties": {
+        "start_date": { "type": "string", "format": "date" },
+        "end_date": { "type": "string", "format": "date" },
+        "species": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "landing": { "type": ["string", "null"] },
+        "boat": { "type": ["string", "null"] },
+        "limit": { "type": ["integer", "null"], "minimum": 0 },
+        "cursor": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

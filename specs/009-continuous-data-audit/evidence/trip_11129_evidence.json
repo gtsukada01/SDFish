@@ -1,0 +1,52 @@
+{
+  "trip_id": 11129,
+  "audit_date": "2025-10-18T02:43:17.703922",
+  "database_record": {
+    "boat_name": "Tribute",
+    "landing_name": "Seaforth Sportfishing",
+    "trip_date": "2025-10-17",
+    "trip_duration": "1.5 Day",
+    "anglers": 29,
+    "catches": [
+      {
+        "count": 5,
+        "species": "Bluefin Tuna"
+      }
+    ],
+    "trip_id": 11129
+  },
+  "source_verification": {
+    "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-17",
+    "boats_found_on_date": [
+      "Dolphin",
+      "Dolphin",
+      "Islander",
+      "Alicia",
+      "Legend",
+      "Ocean Odyssey",
+      "Producer",
+      "Southern Cal",
+      "Daily Double",
+      "Aztec",
+      "New Seaforth",
+      "New Seaforth",
+      "Pacific Voyager",
+      "San Diego",
+      "Tribute",
+      "Voyager"
+    ],
+    "validation_status": "FAIL"
+  },
+  "category": "MISATTRIBUTED",
+  "severity": "HIGH",
+  "validation_results": {
+    "level_1_exists": true,
+    "missing_boats_count": 10
+  },
+  "recommendation": {
+    "action": "INVESTIGATE",
+    "confidence": "MEDIUM",
+    "reasoning": "10 boats on source not in database - possible misattribution",
+    "requires_manual_review": true
+  }
+}

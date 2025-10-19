@@ -1,0 +1,59 @@
+{
+  "fleet": {
+    "total_trips": 220,
+    "total_fish": 18750,
+    "unique_boats": 5,
+    "unique_species": 4
+  },
+  "per_boat": [
+    {
+      "boat": "Pacific Pioneer",
+      "trips": 48,
+      "total_fish": 4500,
+      "top_species": "Bluefin Tuna",
+      "top_species_count": 2800
+    },
+    {
+      "boat": "Liberty",
+      "trips": 44,
+      "total_fish": 3750,
+      "top_species": "Yellowfin Tuna",
+      "top_species_count": 2100
+    },
+    {
+      "boat": "Polaris Supreme",
+      "trips": 42,
+      "total_fish": 3300,
+      "top_species": "Bluefin Tuna",
+      "top_species_count": 1850
+    },
+    {
+      "boat": "American Angler",
+      "trips": 40,
+      "total_fish": 3150,
+      "top_species": "Yellowtail",
+      "top_species_count": 1700
+    },
+    {
+      "boat": "Ocean Odyssey",
+      "trips": 46,
+      "total_fish": 4050,
+      "top_species": "Dorado",
+      "top_species_count": 1800
+    }
+  ],
+  "per_species": [
+    { "species": "Bluefin Tuna", "total_fish": 6000, "boats": 4 },
+    { "species": "Yellowfin Tuna", "total_fish": 5000, "boats": 3 },
+    { "species": "Yellowtail", "total_fish": 4500, "boats": 3 },
+    { "species": "Dorado", "total_fish": 3250, "boats": 2 }
+  ],
+  "filters_applied": {
+    "start_date": "2025-08-28",
+    "end_date": "2025-09-27",
+    "species": ["Bluefin Tuna", "Yellowfin Tuna"],
+    "landing": null,
+    "boat": null
+  },
+  "last_synced_at": "2025-09-27T09:45:00Z"
+}

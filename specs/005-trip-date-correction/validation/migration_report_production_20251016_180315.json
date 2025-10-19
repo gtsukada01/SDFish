@@ -1,0 +1,239 @@
+{
+  "timestamp": "2025-10-16T18:03:15.602733",
+  "mode": "PRODUCTION",
+  "duration_seconds": 197.16595,
+  "statistics": {
+    "total_trips": 8523,
+    "trips_to_update": 2691,
+    "trips_unchanged": 5828,
+    "validation_errors": 4
+  },
+  "sample_changes": [
+    {
+      "trip_id": 4101,
+      "boat_id": 46,
+      "boat_name": "Horizon",
+      "old_date": "2024-01-13",
+      "new_date": "2024-01-11",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 9
+    },
+    {
+      "trip_id": 4215,
+      "boat_id": 42,
+      "boat_name": "Pacific Dawn",
+      "old_date": "2024-02-17",
+      "new_date": "2024-02-15",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 18
+    },
+    {
+      "trip_id": 4217,
+      "boat_id": 46,
+      "boat_name": "Horizon",
+      "old_date": "2024-02-17",
+      "new_date": "2024-02-15",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 18
+    },
+    {
+      "trip_id": 4222,
+      "boat_id": 66,
+      "boat_name": "Pacific Voyager",
+      "old_date": "2024-02-17",
+      "new_date": "2024-02-15",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 16
+    },
+    {
+      "trip_id": 4242,
+      "boat_id": 42,
+      "boat_name": "Pacific Dawn",
+      "old_date": "2024-02-24",
+      "new_date": "2024-02-22",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 16
+    },
+    {
+      "trip_id": 4244,
+      "boat_id": 46,
+      "boat_name": "Horizon",
+      "old_date": "2024-02-24",
+      "new_date": "2024-02-22",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 14
+    },
+    {
+      "trip_id": 4245,
+      "boat_id": 48,
+      "boat_name": "Old Glory",
+      "old_date": "2024-02-24",
+      "new_date": "2024-02-22",
+      "trip_duration": "2 Day",
+      "days_diff": 2,
+      "anglers": 10
+    },
+    {
+      "trip_id": 4247,
+      "boat_id": 69,
+      "boat_name": "Tribute",
+      "old_date": "2024-02-24",
+      "new_date": "2024-02-22",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 19
+    },
+    {
+      "trip_id": 4268,
+      "boat_id": 48,
+      "boat_name": "Old Glory",
+      "old_date": "2024-03-02",
+      "new_date": "2024-02-29",
+      "trip_duration": "2 Day",
+      "days_diff": 2,
+      "anglers": 14
+    },
+    {
+      "trip_id": 4348,
+      "boat_id": 80,
+      "boat_name": "Polaris Supreme",
+      "old_date": "2024-03-15",
+      "new_date": "2024-03-12",
+      "trip_duration": "3 Day",
+      "days_diff": 3,
+      "anglers": 24
+    },
+    {
+      "trip_id": 4342,
+      "boat_id": 46,
+      "boat_name": "Horizon",
+      "old_date": "2024-03-16",
+      "new_date": "2024-03-14",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 15
+    },
+    {
+      "trip_id": 4347,
+      "boat_id": 66,
+      "boat_name": "Pacific Voyager",
+      "old_date": "2024-03-16",
+      "new_date": "2024-03-14",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 14
+    },
+    {
+      "trip_id": 4349,
+      "boat_id": 69,
+      "boat_name": "Tribute",
+      "old_date": "2024-03-16",
+      "new_date": "2024-03-14",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 18
+    },
+    {
+      "trip_id": 4350,
+      "boat_id": 110,
+      "boat_name": "Jig Strike",
+      "old_date": "2024-03-18",
+      "new_date": "2024-03-17",
+      "trip_duration": "Overnight",
+      "days_diff": 1,
+      "anglers": 9
+    },
+    {
+      "trip_id": 4363,
+      "boat_id": 66,
+      "boat_name": "Pacific Voyager",
+      "old_date": "2024-03-18",
+      "new_date": "2024-03-15",
+      "trip_duration": "2.5 Day",
+      "days_diff": 3,
+      "anglers": 15
+    },
+    {
+      "trip_id": 4364,
+      "boat_id": 69,
+      "boat_name": "Tribute",
+      "old_date": "2024-03-19",
+      "new_date": "2024-03-17",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 30
+    },
+    {
+      "trip_id": 4377,
+      "boat_id": 80,
+      "boat_name": "Polaris Supreme",
+      "old_date": "2024-03-21",
+      "new_date": "2024-03-19",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 24
+    },
+    {
+      "trip_id": 4378,
+      "boat_id": 69,
+      "boat_name": "Tribute",
+      "old_date": "2024-03-21",
+      "new_date": "2024-03-19",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 22
+    },
+    {
+      "trip_id": 4379,
+      "boat_id": 108,
+      "boat_name": "Condor",
+      "old_date": "2024-03-22",
+      "new_date": "2024-03-20",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 19
+    },
+    {
+      "trip_id": 4385,
+      "boat_id": 46,
+      "boat_name": "Horizon",
+      "old_date": "2024-03-23",
+      "new_date": "2024-03-21",
+      "trip_duration": "1.5 Day",
+      "days_diff": 2,
+      "anglers": 25
+    }
+  ],
+  "validation_errors": [
+    {
+      "trip_id": 8666,
+      "boat_name": "Condor",
+      "error": "Unrecognized trip duration format: ''",
+      "trip_duration": ""
+    },
+    {
+      "trip_id": 8676,
+      "boat_name": "Fortune",
+      "error": "Unrecognized trip duration format: ''",
+      "trip_duration": ""
+    },
+    {
+      "trip_id": 8677,
+      "boat_name": "Pacific Dawn",
+      "error": "Unrecognized trip duration format: ''",
+      "trip_duration": ""
+    },
+    {
+      "trip_id": 9466,
+      "boat_name": "Alicia",
+      "error": "Unrecognized trip duration format: 'Lobster'",
+      "trip_duration": "Lobster"
+    }
+  ]
+}

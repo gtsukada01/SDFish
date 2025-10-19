@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timezone Fix Verification</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-case {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .bug { color: #dc2626; font-weight: bold; }
+    .fixed { color: #16a34a; font-weight: bold; }
+    code {
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔧 Timezone Fix Verification - FR-005</h1>
+  <p><strong>Testing Date:</strong> 2025-10-10 (departure date from database)</p>
+
+  <div class="test-case">
+    <h2 class="bug">❌ OLD CODE (BUGGY)</h2>
+    <pre><code>const date = new Date('2025-10-10')
+const formatted = date.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric'
+})</code></pre>
+    <p><strong>Result:</strong> <span id="old-result"></span></p>
+    <p><strong>Issue:</strong> Interprets as UTC midnight, displays previous day in Pacific Time</p>
+  </div>
+
+  <div class="test-case">
+    <h2 class="fixed">✅ NEW CODE (FIXED)</h2>
+    <pre><code>const [year, month, day] = '2025-10-10'.split('-').map(Number)
+const date = new Date(year, month - 1, day)
+const formatted = date.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric'
+})</code></pre>
+    <p><strong>Result:</strong> <span id="new-result"></span></p>
+    <p><strong>Fix:</strong> Parses as local timezone, displays correct date</p>
+  </div>
+
+  <div class="test-case">
+    <h2>📊 Test Results</h2>
+    <table style="width:100%; border-collapse: collapse;">
+      <tr style="border-bottom: 2px solid #ddd;">
+        <th style="text-align:left; padding: 10px;">Database Value</th>
+        <th style="text-align:left; padding: 10px;">Old Display</th>
+        <th style="text-align:left; padding: 10px;">New Display</th>
+        <th style="text-align:left; padding: 10px;">Status</th>
+      </tr>
+      <tr id="test-row" style="border-bottom: 1px solid #eee;">
+        <td style="padding: 10px;"><code>2025-10-10</code></td>
+        <td style="padding: 10px;" id="old-display"></td>
+        <td style="padding: 10px;" id="new-display"></td>
+        <td style="padding: 10px;" id="status"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // Test the old (buggy) code
+    const oldDate = new Date('2025-10-10')
+    const oldFormatted = oldDate.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    })
+    document.getElementById('old-result').textContent = oldFormatted
+    document.getElementById('old-display').textContent = oldFormatted
+
+    // Test the new (fixed) code
+    const [year, month, day] = '2025-10-10'.split('-').map(Number)
+    const newDate = new Date(year, month - 1, day)
+    const newFormatted = newDate.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    })
+    document.getElementById('new-result').textContent = newFormatted
+    document.getElementById('new-display').textContent = newFormatted
+
+    // Check if fix worked
+    const status = document.getElementById('status')
+    if (newFormatted.includes('Oct 10')) {
+      status.innerHTML = '<span class="fixed">✅ FIXED</span>'
+      status.style.background = '#dcfce7'
+    } else {
+      status.innerHTML = '<span class="bug">❌ FAILED</span>'
+      status.style.background = '#fee2e2'
+    }
+
+    // Show timezone info
+    console.log('Timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone)
+    console.log('Old date object:', oldDate.toISOString())
+    console.log('New date object:', newDate.toISOString())
+  </script>
+</body>
+</html>

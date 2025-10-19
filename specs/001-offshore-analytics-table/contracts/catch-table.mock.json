@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": "8f6ec7c0-0b18-4a27-9c89-0e0cd258a8c9",
+      "trip_date": "2025-09-01",
+      "boat": "Pacific Pioneer",
+      "landing": "San Diego",
+      "trip_duration_hours": 24,
+      "angler_count": 25,
+      "total_fish": 250,
+      "top_species": "Bluefin Tuna",
+      "top_species_count": 140,
+      "species_breakdown": [
+        { "species": "Bluefin Tuna", "count": 140 },
+        { "species": "Yellowtail", "count": 60 },
+        { "species": "Bonito", "count": 50 }
+      ],
+      "weather_notes": "Calm seas, light wind",
+      "created_at": "2025-09-01T12:30:00Z"
+    },
+    {
+      "id": "17acb879-4a38-4c61-ae29-0874a16cf62f",
+      "trip_date": "2025-09-02",
+      "boat": "Liberty",
+      "landing": "Point Loma",
+      "trip_duration_hours": 18,
+      "angler_count": null,
+      "total_fish": 180,
+      "top_species": "Yellowfin Tuna",
+      "top_species_count": 110,
+      "species_breakdown": [
+        { "species": "Yellowfin Tuna", "count": 110 },
+        { "species": "Skipjack", "count": 40 },
+        { "species": "Dorados", "count": 30 }
+      ],
+      "weather_notes": null,
+      "created_at": "2025-09-02T08:25:00Z"
+    }
+  ],
+  "pagination": {
+    "total_rows": 8200,
+    "returned_rows": 1000,
+    "limit": 1000,
+    "next_cursor": "eyJvZmZzZXQiOjEwMDB9"
+  },
+  "filters_applied": {
+    "start_date": "2025-08-28",
+    "end_date": "2025-09-27",
+    "species": ["Bluefin Tuna", "Yellowfin Tuna"],
+    "landing": null,
+    "boat": null
+  },
+  "last_synced_at": "2025-09-27T09:45:00Z"
+}

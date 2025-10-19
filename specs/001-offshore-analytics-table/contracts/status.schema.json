@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fishscraper.dev/schemas/status.schema.json",
+  "title": "Offshore Data Status Response",
+  "type": "object",
+  "required": ["status", "last_synced_at"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["ok", "degraded", "error"]
+    },
+    "last_synced_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "message": {
+      "type": ["string", "null"]
+    },
+    "incident_id": {
+      "type": ["string", "null"],
+      "description": "Identifier for tracking related incident in ops tooling."
+    }
+  }
+}

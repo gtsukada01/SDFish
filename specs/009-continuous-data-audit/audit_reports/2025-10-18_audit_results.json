@@ -1,0 +1,3012 @@
+{
+  "audit_date": "2025-10-18",
+  "sample_metadata": {
+    "start_date": "2025-09-18",
+    "end_date": "2025-10-15",
+    "days_back": 30,
+    "unique_dates": 18,
+    "landings_count": 5,
+    "boats_count": 39
+  },
+  "results": [
+    {
+      "trip_id": 10703,
+      "audit_date": "2025-10-18T02:48:52.105476",
+      "database_record": {
+        "boat_name": "Tomahawk",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "2.5 Day",
+        "anglers": 25,
+        "catches": [
+          {
+            "count": 72,
+            "species": "Bluefin Tuna (Up To 80 Pounds)"
+          }
+        ],
+        "trip_id": 10703
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10700,
+      "audit_date": "2025-10-18T02:48:56.714845",
+      "database_record": {
+        "boat_name": "Liberty",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "2 Day",
+        "anglers": 27,
+        "catches": [
+          {
+            "count": 91,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10700
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10756,
+      "audit_date": "2025-10-18T02:49:00.773950",
+      "database_record": {
+        "boat_name": "Fortune",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-24",
+        "trip_duration": "3 Day",
+        "anglers": 12,
+        "catches": [
+          {
+            "count": 57,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10756
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-24",
+        "boats_found_on_date": [
+          "Constitution",
+          "Fortune",
+          "Islander",
+          "Tomahawk",
+          "Grande",
+          "Legend",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Voyager",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10892,
+      "audit_date": "2025-10-18T02:49:04.377401",
+      "database_record": {
+        "boat_name": "Tradition",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-30",
+        "trip_duration": "1.5 Day",
+        "anglers": 15,
+        "catches": [
+          {
+            "count": 30,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 7,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 4,
+            "species": "Dorado"
+          },
+          {
+            "count": 5,
+            "species": "Yellowfin Tuna"
+          }
+        ],
+        "trip_id": 10892
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-30",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Tomahawk",
+          "Tradition",
+          "Alicia",
+          "Grande",
+          "Old Glory",
+          "Southern Cal",
+          "Daily Double",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "Polaris Supreme",
+          "San Diego",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10702,
+      "audit_date": "2025-10-18T02:49:07.927230",
+      "database_record": {
+        "boat_name": "Pacific Queen",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "3.5 Day",
+        "anglers": 19,
+        "catches": [
+          {
+            "count": 114,
+            "species": "Bluefin Tuna (Up To 80 Pounds)"
+          }
+        ],
+        "trip_id": 10702
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10699,
+      "audit_date": "2025-10-18T02:49:11.468041",
+      "database_record": {
+        "boat_name": "Islander",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "3.5 Day",
+        "anglers": 28,
+        "catches": [
+          {
+            "count": 168,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10699
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10818,
+      "audit_date": "2025-10-18T02:49:15.001631",
+      "database_record": {
+        "boat_name": "Constitution",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-27",
+        "trip_duration": "2.5 Day",
+        "anglers": 25,
+        "catches": [
+          {
+            "count": 4,
+            "species": "Dorado"
+          },
+          {
+            "count": 5,
+            "species": "Skipjack Tuna"
+          },
+          {
+            "count": 104,
+            "species": "Yellowfin Tuna"
+          }
+        ],
+        "trip_id": 10818
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-27",
+        "boats_found_on_date": [
+          "Constitution",
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Pacific Queen",
+          "Grande",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10637,
+      "audit_date": "2025-10-18T02:49:18.504390",
+      "database_record": {
+        "boat_name": "Dolphin",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 6,
+        "catches": [
+          {
+            "count": 2,
+            "species": "Sculpin"
+          },
+          {
+            "count": 12,
+            "species": "Sheephead"
+          },
+          {
+            "count": 8,
+            "species": "Whitefish"
+          },
+          {
+            "count": 20,
+            "species": "Rockfish"
+          },
+          {
+            "count": 8,
+            "species": "Vermilion Rockfish"
+          }
+        ],
+        "trip_id": 10637
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10639,
+      "audit_date": "2025-10-18T02:49:22.018098",
+      "database_record": {
+        "boat_name": "Pacific Dawn",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "3 Day",
+        "anglers": 11,
+        "catches": [
+          {
+            "count": 66,
+            "species": "Bluefin Tuna (Up To 100 Pounds)"
+          }
+        ],
+        "trip_id": 10639
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10758,
+      "audit_date": "2025-10-18T02:49:25.559118",
+      "database_record": {
+        "boat_name": "Tomahawk",
+        "landing_name": "Fisherman's Landing",
+        "trip_date": "2025-09-24",
+        "trip_duration": "3 Day",
+        "anglers": 17,
+        "catches": [
+          {
+            "count": 102,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10758
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-24",
+        "boats_found_on_date": [
+          "Constitution",
+          "Fortune",
+          "Islander",
+          "Tomahawk",
+          "Grande",
+          "Legend",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Voyager",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10657,
+      "audit_date": "2025-10-18T02:49:29.159520",
+      "database_record": {
+        "boat_name": "Nautilus",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "2.5 Day",
+        "anglers": 3,
+        "catches": [],
+        "trip_id": 10657
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10704,
+      "audit_date": "2025-10-18T02:49:32.685271",
+      "database_record": {
+        "boat_name": "Alicia",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "Full Day Offshore",
+        "anglers": 12,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10704
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10683,
+      "audit_date": "2025-10-18T02:49:36.226173",
+      "database_record": {
+        "boat_name": "Reel Champion",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-20",
+        "trip_duration": "Full Day Offshore",
+        "anglers": 6,
+        "catches": [
+          {
+            "count": 8,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 35,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10683
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10661,
+      "audit_date": "2025-10-18T02:49:39.749658",
+      "database_record": {
+        "boat_name": "Relentless",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "2.5 Day",
+        "anglers": 15,
+        "catches": [],
+        "trip_id": 10661
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10728,
+      "audit_date": "2025-10-18T02:49:43.276857",
+      "database_record": {
+        "boat_name": "Daiwa Pacific",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-22",
+        "trip_duration": "1.5 Day",
+        "anglers": 14,
+        "catches": [],
+        "trip_id": 10728
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-22",
+        "boats_found_on_date": [
+          "Liberty",
+          "Daiwa Pacific",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Cortez",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10708,
+      "audit_date": "2025-10-18T02:49:46.867278",
+      "database_record": {
+        "boat_name": "Legend",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "3 Day",
+        "anglers": 28,
+        "catches": [
+          {
+            "count": 168,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10708
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10799,
+      "audit_date": "2025-10-18T02:49:50.498509",
+      "database_record": {
+        "boat_name": "Ocean Odyssey",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-26",
+        "trip_duration": "1.5 Day",
+        "anglers": 29,
+        "catches": [],
+        "trip_id": 10799
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-26",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Horizon",
+          "Ocean Odyssey",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Daily Double",
+          "Mission Belle",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10678,
+      "audit_date": "2025-10-18T02:49:54.164123",
+      "database_record": {
+        "boat_name": "Lucky Charm",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-20",
+        "trip_duration": "Full Day Offshore",
+        "anglers": 15,
+        "catches": [
+          {
+            "count": 16,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10678
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10655,
+      "audit_date": "2025-10-18T02:49:57.690091",
+      "database_record": {
+        "boat_name": "Excalibur",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "2.5 Day",
+        "anglers": 27,
+        "catches": [
+          {
+            "count": 35,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 3,
+            "species": "Yellowtail"
+          }
+        ],
+        "trip_id": 10655
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10643,
+      "audit_date": "2025-10-18T02:50:01.238912",
+      "database_record": {
+        "boat_name": "Malihini",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "Full Day Offshore",
+        "anglers": 21,
+        "catches": [
+          {
+            "count": 2,
+            "species": "Sheephead"
+          },
+          {
+            "count": 17,
+            "species": "Lingcod"
+          },
+          {
+            "count": 42,
+            "species": "Whitefish"
+          },
+          {
+            "count": 127,
+            "species": "Rockfish"
+          },
+          {
+            "count": 3,
+            "species": "Red Rockfish"
+          }
+        ],
+        "trip_id": 10643
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 11105,
+      "audit_date": "2025-10-18T02:50:04.734945",
+      "database_record": {
+        "boat_name": "Effishency",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-15",
+        "trip_duration": "4 Hour",
+        "anglers": 3,
+        "catches": [
+          {
+            "count": 14,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 11105
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-15",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Pacific Queen",
+          "Alicia",
+          "Ocean Odyssey",
+          "Effishency",
+          "Sea Star",
+          "Southern Cal",
+          "Highliner",
+          "New Seaforth"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10645,
+      "audit_date": "2025-10-18T02:50:08.244587",
+      "database_record": {
+        "boat_name": "Southern Cal",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-09-18",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 14,
+        "catches": [
+          {
+            "count": 7,
+            "species": "Calico Bass"
+          },
+          {
+            "count": 20,
+            "species": "Bonito"
+          }
+        ],
+        "trip_id": 10645
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 11045,
+      "audit_date": "2025-10-18T02:50:11.731511",
+      "database_record": {
+        "boat_name": "Blue Horizon",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-10",
+        "trip_duration": "Full Day Local",
+        "anglers": 15,
+        "catches": [
+          {
+            "count": 11,
+            "species": "Sculpin"
+          },
+          {
+            "count": 120,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 11045
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-10",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Pacific Queen",
+          "Alicia",
+          "Ocean Odyssey",
+          "Premier",
+          "Premier",
+          "Blue Horizon",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10943,
+      "audit_date": "2025-10-18T02:50:15.343565",
+      "database_record": {
+        "boat_name": "Pronto",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-03",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 8,
+        "catches": [
+          {
+            "count": 12,
+            "species": "Bonito"
+          },
+          {
+            "count": 47,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10943
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-03",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Alicia",
+          "Grande",
+          "Premier",
+          "Pronto",
+          "Southern Cal",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Cortez",
+          "Highliner",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 11106,
+      "audit_date": "2025-10-18T02:50:18.850443",
+      "database_record": {
+        "boat_name": "Sea Star",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-15",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 13,
+        "catches": [
+          {
+            "count": 84,
+            "species": "Whitefish"
+          }
+        ],
+        "trip_id": 11106
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-15",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Pacific Queen",
+          "Alicia",
+          "Ocean Odyssey",
+          "Effishency",
+          "Sea Star",
+          "Southern Cal",
+          "Highliner",
+          "New Seaforth"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10684,
+      "audit_date": "2025-10-18T02:50:22.350012",
+      "database_record": {
+        "boat_name": "Southern Cal",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-09-20",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 46,
+        "catches": [
+          {
+            "count": 40,
+            "species": "Sculpin"
+          },
+          {
+            "count": 160,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10684
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10781,
+      "audit_date": "2025-10-18T02:50:25.892604",
+      "database_record": {
+        "boat_name": "Blue Horizon",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-09-25",
+        "trip_duration": "Overnight",
+        "anglers": 14,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Halibut"
+          },
+          {
+            "count": 13,
+            "species": "Sheephead"
+          },
+          {
+            "count": 7,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 1,
+            "species": "Lingcod"
+          },
+          {
+            "count": 62,
+            "species": "Whitefish"
+          },
+          {
+            "count": 62,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10781
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-25",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Grande",
+          "Legend",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Blue Horizon",
+          "Sea Star",
+          "Southern Cal",
+          "Daily Double",
+          "Apollo",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "San Diego",
+          "Tribute"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10916,
+      "audit_date": "2025-10-18T02:50:29.431748",
+      "database_record": {
+        "boat_name": "Pronto",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-01",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 7,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Mako Shark"
+          },
+          {
+            "count": 35,
+            "species": "Bonito"
+          },
+          {
+            "count": 18,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10916
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-01",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Islander",
+          "Pacific Dawn",
+          "Alicia",
+          "Excalibur",
+          "Legend",
+          "Ocean Odyssey",
+          "Premier",
+          "Premier",
+          "Relentless",
+          "Pronto",
+          "Southern Cal",
+          "Aztec",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10782,
+      "audit_date": "2025-10-18T02:50:33.061455",
+      "database_record": {
+        "boat_name": "Sea Star",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-09-25",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 4,
+        "catches": [
+          {
+            "count": 18,
+            "species": "Rockfish"
+          },
+          {
+            "count": 25,
+            "species": "Sanddab"
+          },
+          {
+            "count": 8,
+            "species": "Vermilion Rockfish"
+          }
+        ],
+        "trip_id": 10782
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-25",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Grande",
+          "Legend",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Blue Horizon",
+          "Sea Star",
+          "Southern Cal",
+          "Daily Double",
+          "Apollo",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "San Diego",
+          "Tribute"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10724,
+      "audit_date": "2025-10-18T02:50:36.593957",
+      "database_record": {
+        "boat_name": "Polaris Supreme",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "3 Day",
+        "anglers": 22,
+        "catches": [
+          {
+            "count": 132,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 3,
+            "species": "Dorado"
+          },
+          {
+            "count": 68,
+            "species": "Yellowfin Tuna"
+          }
+        ],
+        "trip_id": 10724
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10754,
+      "audit_date": "2025-10-18T02:50:40.148502",
+      "database_record": {
+        "boat_name": "Tribute",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-23",
+        "trip_duration": "1.5 Day",
+        "anglers": 29,
+        "catches": [
+          {
+            "count": 30,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10754
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-23",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Old Glory",
+          "Poseidon",
+          "Producer",
+          "Southern Cal",
+          "Apollo",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Tribute"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10651,
+      "audit_date": "2025-10-18T02:50:43.717446",
+      "database_record": {
+        "boat_name": "San Diego",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "Full Day Coronado Islands",
+        "anglers": 32,
+        "catches": [
+          {
+            "count": 2,
+            "species": "Barracuda"
+          },
+          {
+            "count": 20,
+            "species": "Sculpin"
+          },
+          {
+            "count": 6,
+            "species": "Sheephead"
+          },
+          {
+            "count": 13,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 6,
+            "species": "Calico Bass"
+          },
+          {
+            "count": 1,
+            "species": "Lingcod"
+          },
+          {
+            "count": 125,
+            "species": "Whitefish"
+          },
+          {
+            "count": 25,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10651
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10672,
+      "audit_date": "2025-10-18T02:50:47.243804",
+      "database_record": {
+        "boat_name": "Sea Watch",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "Full Day Coronado Islands",
+        "anglers": 17,
+        "catches": [
+          {
+            "count": 24,
+            "species": "Sculpin"
+          },
+          {
+            "count": 6,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 2,
+            "species": "Calico Bass"
+          },
+          {
+            "count": 8,
+            "species": "Lingcod"
+          },
+          {
+            "count": 30,
+            "species": "Whitefish"
+          },
+          {
+            "count": 39,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10672
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10720,
+      "audit_date": "2025-10-18T02:50:50.788386",
+      "database_record": {
+        "boat_name": "Highliner",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "1.5 Day",
+        "anglers": 26,
+        "catches": [
+          {
+            "count": 36,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10720
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10647,
+      "audit_date": "2025-10-18T02:50:54.338376",
+      "database_record": {
+        "boat_name": "New Seaforth",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 15,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Halibut"
+          },
+          {
+            "count": 14,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 10,
+            "species": "Bonito"
+          },
+          {
+            "count": 1,
+            "species": "White Seabass"
+          }
+        ],
+        "trip_id": 10647
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10732,
+      "audit_date": "2025-10-18T02:50:57.849157",
+      "database_record": {
+        "boat_name": "Cortez",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-22",
+        "trip_duration": "3.5 Day",
+        "anglers": 10,
+        "catches": [
+          {
+            "count": 28,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 1,
+            "species": "Yellowtail"
+          }
+        ],
+        "trip_id": 10732
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-22",
+        "boats_found_on_date": [
+          "Liberty",
+          "Daiwa Pacific",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Cortez",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10646,
+      "audit_date": "2025-10-18T02:51:01.357983",
+      "database_record": {
+        "boat_name": "Apollo",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-18",
+        "trip_duration": "2.5 Day",
+        "anglers": 15,
+        "catches": [
+          {
+            "count": 60,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10646
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-18",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Pacific Dawn",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Premier",
+          "Southern Cal",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "Polaris Supreme",
+          "San Diego"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10674,
+      "audit_date": "2025-10-18T02:51:04.905040",
+      "database_record": {
+        "boat_name": "Voyager",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "2.5 Day",
+        "anglers": 8,
+        "catches": [
+          {
+            "count": 32,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10674
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10735,
+      "audit_date": "2025-10-18T02:51:08.381853",
+      "database_record": {
+        "boat_name": "Pacifica",
+        "landing_name": "Seaforth Sportfishing",
+        "trip_date": "2025-09-22",
+        "trip_duration": "3 Day",
+        "anglers": 26,
+        "catches": [
+          {
+            "count": 91,
+            "species": "Bluefin Tuna (Up To 100 Pounds)"
+          }
+        ],
+        "trip_id": 10735
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-22",
+        "boats_found_on_date": [
+          "Liberty",
+          "Daiwa Pacific",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Cortez",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10686,
+      "audit_date": "2025-10-18T02:51:11.887592",
+      "database_record": {
+        "boat_name": "Mission Belle",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-20",
+        "trip_duration": "Full Day",
+        "anglers": 16,
+        "catches": [
+          {
+            "count": 2,
+            "species": "Sculpin"
+          },
+          {
+            "count": 27,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 1,
+            "species": "Lingcod"
+          }
+        ],
+        "trip_id": 10686
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10663,
+      "audit_date": "2025-10-18T02:51:15.481654",
+      "database_record": {
+        "boat_name": "Game Changer",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-19",
+        "trip_duration": "3.5 Day",
+        "anglers": 6,
+        "catches": [
+          {
+            "count": 36,
+            "species": "Bluefin Tuna (Up To 249 Pounds)"
+          }
+        ],
+        "trip_id": 10663
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-19",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Liberty",
+          "Excalibur",
+          "Grande",
+          "Nautilus",
+          "Poseidon",
+          "Premier",
+          "Producer",
+          "Relentless",
+          "Daily Double",
+          "Game Changer",
+          "Mission Belle",
+          "Aztec",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10832,
+      "audit_date": "2025-10-18T02:51:19.110028",
+      "database_record": {
+        "boat_name": "Point Loma",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-27",
+        "trip_duration": "Full Day",
+        "anglers": 12,
+        "catches": [
+          {
+            "count": 2,
+            "species": "Bluefin Tuna"
+          }
+        ],
+        "trip_id": 10832
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-27",
+        "boats_found_on_date": [
+          "Constitution",
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Pacific Queen",
+          "Grande",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "Apollo",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10685,
+      "audit_date": "2025-10-18T02:51:22.645396",
+      "database_record": {
+        "boat_name": "Daily Double",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-20",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 40,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Halibut"
+          },
+          {
+            "count": 200,
+            "species": "Sculpin"
+          },
+          {
+            "count": 27,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10685
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10857,
+      "audit_date": "2025-10-18T02:51:26.208107",
+      "database_record": {
+        "boat_name": "El Capitan",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-28",
+        "trip_duration": "2.5 Day",
+        "anglers": 10,
+        "catches": [
+          {
+            "count": 31,
+            "species": "Bluefin Tuna"
+          },
+          {
+            "count": 10,
+            "species": "Bonito"
+          },
+          {
+            "count": 185,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10857
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-28",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Tomahawk",
+          "Tradition",
+          "Alicia",
+          "Grande",
+          "Legend",
+          "Old Glory",
+          "Premier",
+          "Premier",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "El Capitan",
+          "Mission Belle",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch",
+          "Tribute",
+          "Voyager"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10716,
+      "audit_date": "2025-10-18T02:51:29.886237",
+      "database_record": {
+        "boat_name": "Mission Belle",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "Full Day",
+        "anglers": 24,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Barred Sand Bass"
+          },
+          {
+            "count": 7,
+            "species": "Yellowtail"
+          },
+          {
+            "count": 1,
+            "species": "Lingcod"
+          },
+          {
+            "count": 58,
+            "species": "Whitefish"
+          },
+          {
+            "count": 19,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10716
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10687,
+      "audit_date": "2025-10-18T02:51:33.510377",
+      "database_record": {
+        "boat_name": "Point Loma",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-20",
+        "trip_duration": "Full Day",
+        "anglers": 16,
+        "catches": [
+          {
+            "count": 61,
+            "species": "Whitefish"
+          },
+          {
+            "count": 12,
+            "species": "Bonito"
+          },
+          {
+            "count": 20,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10687
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-20",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Grande",
+          "Lucky Charm",
+          "Malihini",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Reel Champion",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Point Loma",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacific Voyager",
+          "San Diego",
+          "Sea Watch",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10715,
+      "audit_date": "2025-10-18T02:51:37.058457",
+      "database_record": {
+        "boat_name": "Daily Double",
+        "landing_name": "Point Loma Sportfishing",
+        "trip_date": "2025-09-21",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 20,
+        "catches": [
+          {
+            "count": 4,
+            "species": "Barred Sand Bass"
+          },
+          {
+            "count": 46,
+            "species": "Sculpin"
+          },
+          {
+            "count": 2,
+            "species": "Calico Bass"
+          },
+          {
+            "count": 52,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10715
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-09-21",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Islander",
+          "Liberty",
+          "Pacific Dawn",
+          "Pacific Queen",
+          "Tomahawk",
+          "Alicia",
+          "Excalibur",
+          "Grande",
+          "Horizon",
+          "Legend",
+          "Malihini",
+          "Nautilus",
+          "Old Glory",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "Mission Belle",
+          "Apollo",
+          "Aztec",
+          "Highliner",
+          "New Seaforth",
+          "New Seaforth",
+          "New Seaforth",
+          "Polaris Supreme",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "FAIL"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 11107,
+      "audit_date": "2025-10-18T02:51:40.562752",
+      "database_record": {
+        "boat_name": "Southern Cal",
+        "landing_name": "Oceanside Sea Center",
+        "trip_date": "2025-10-15",
+        "trip_duration": "1/2 Day AM",
+        "anglers": 9,
+        "catches": [
+          {
+            "count": 64,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 11107
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-15",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Fortune",
+          "Pacific Queen",
+          "Alicia",
+          "Ocean Odyssey",
+          "Effishency",
+          "Sea Star",
+          "Southern Cal",
+          "Highliner",
+          "New Seaforth"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 11030,
+      "audit_date": "2025-10-18T02:51:44.119117",
+      "database_record": {
+        "boat_name": "Alicia",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-10-09",
+        "trip_duration": "1/2 Day Twilight",
+        "anglers": 9,
+        "catches": [
+          {
+            "count": 13,
+            "species": "Spiny Lobster"
+          },
+          {
+            "count": 8,
+            "species": "Rock Crab"
+          }
+        ],
+        "trip_id": 11030
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-09",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Alicia",
+          "Horizon",
+          "Legend",
+          "Old Glory",
+          "Poseidon",
+          "Premier",
+          "New Seaforth",
+          "New Seaforth",
+          "Voyager"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    },
+    {
+      "trip_id": 10960,
+      "audit_date": "2025-10-18T02:51:47.668723",
+      "database_record": {
+        "boat_name": "Nautilus",
+        "landing_name": "H&M Landing",
+        "trip_date": "2025-10-04",
+        "trip_duration": "3/4 Day Local",
+        "anglers": 6,
+        "catches": [
+          {
+            "count": 1,
+            "species": "Calico Bass"
+          },
+          {
+            "count": 50,
+            "species": "Rockfish"
+          }
+        ],
+        "trip_id": 10960
+      },
+      "source_verification": {
+        "source_url": "https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-04",
+        "boats_found_on_date": [
+          "Dolphin",
+          "Dolphin",
+          "Alicia",
+          "Malihini",
+          "Nautilus",
+          "Premier",
+          "Producer",
+          "Southern Cal",
+          "Daily Double",
+          "New Seaforth",
+          "New Seaforth",
+          "Pacifica",
+          "San Diego",
+          "Sea Watch"
+        ],
+        "validation_status": "PASS"
+      },
+      "category": "VALID",
+      "severity": "NONE",
+      "validation_results": {
+        "level_1_exists": true,
+        "level_2_fields": "EXACT_MATCH"
+      },
+      "recommendation": {
+        "action": "NONE",
+        "confidence": "HIGH",
+        "reasoning": "Trip matches source exactly (no errors reported by QC validator)"
+      }
+    }
+  ],
+  "config": {
+    "sampling": {
+      "date_range_days": 30,
+      "sample_size": 50,
+      "stratified": true,
+      "min_boats_per_landing": 2
+    },
+    "validation": {
+      "anglers_tolerance": 1,
+      "catch_count_tolerance_pct": 5,
+      "enable_statistical_outlier_detection": true,
+      "z_score_threshold": 3.0
+    },
+    "reporting": {
+      "output_dir": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/audit_reports",
+      "evidence_dir": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/evidence",
+      "generate_screenshots": false,
+      "alert_on_qc_below": 99.5
+    }
+  }
+}

@@ -1,0 +1,855 @@
+{
+  "timestamp": "2025-10-18T02:50:38.676641",
+  "spec": "SPEC-008",
+  "phase": "Phase 4: Post-Remediation QC Validation",
+  "summary": {
+    "total_dates": 105,
+    "dates_validated": 105,
+    "passed": 105,
+    "failed": 0,
+    "pass_rate": 100.0,
+    "source_fetch_failures": 0
+  },
+  "results": [
+    {
+      "date": "2024-01-19",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 3,
+      "db_trips": 3
+    },
+    {
+      "date": "2024-03-07",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 0,
+      "db_trips": 0
+    },
+    {
+      "date": "2024-03-09",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 8,
+      "db_trips": 8
+    },
+    {
+      "date": "2024-07-05",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-07-06",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 22,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-07-10",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2024-07-13",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 27,
+      "db_trips": 29
+    },
+    {
+      "date": "2024-07-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 26,
+      "db_trips": 28
+    },
+    {
+      "date": "2024-08-01",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-08-03",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 25
+    },
+    {
+      "date": "2024-08-05",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 22,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-08-06",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-08-07",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 19
+    },
+    {
+      "date": "2024-08-11",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 29,
+      "db_trips": 30
+    },
+    {
+      "date": "2024-08-12",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 26,
+      "db_trips": 27
+    },
+    {
+      "date": "2024-08-13",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 19
+    },
+    {
+      "date": "2024-08-14",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 22
+    },
+    {
+      "date": "2024-08-16",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 32,
+      "db_trips": 32
+    },
+    {
+      "date": "2024-08-17",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 22,
+      "db_trips": 23
+    },
+    {
+      "date": "2024-08-18",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 31,
+      "db_trips": 32
+    },
+    {
+      "date": "2024-08-31",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 21
+    },
+    {
+      "date": "2024-09-02",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 25,
+      "db_trips": 25
+    },
+    {
+      "date": "2024-09-03",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 13,
+      "db_trips": 13
+    },
+    {
+      "date": "2024-09-05",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 18,
+      "db_trips": 18
+    },
+    {
+      "date": "2024-09-06",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 23,
+      "db_trips": 23
+    },
+    {
+      "date": "2024-09-07",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 20
+    },
+    {
+      "date": "2024-09-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 28,
+      "db_trips": 29
+    },
+    {
+      "date": "2024-09-12",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 15,
+      "db_trips": 15
+    },
+    {
+      "date": "2024-09-14",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 20
+    },
+    {
+      "date": "2024-09-15",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 35,
+      "db_trips": 36
+    },
+    {
+      "date": "2024-09-18",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 15,
+      "db_trips": 15
+    },
+    {
+      "date": "2024-09-22",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 31,
+      "db_trips": 31
+    },
+    {
+      "date": "2024-09-23",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 11,
+      "db_trips": 12
+    },
+    {
+      "date": "2024-09-25",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 15,
+      "db_trips": 16
+    },
+    {
+      "date": "2024-09-27",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 25
+    },
+    {
+      "date": "2024-09-28",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 19
+    },
+    {
+      "date": "2024-09-30",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2024-10-03",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 10,
+      "db_trips": 10
+    },
+    {
+      "date": "2024-10-05",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2024-10-07",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 14,
+      "db_trips": 15
+    },
+    {
+      "date": "2024-10-09",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2024-10-11",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 24
+    },
+    {
+      "date": "2024-10-25",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 14,
+      "db_trips": 14
+    },
+    {
+      "date": "2024-10-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 17,
+      "db_trips": 17
+    },
+    {
+      "date": "2024-10-27",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 23,
+      "db_trips": 23
+    },
+    {
+      "date": "2024-11-01",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 9,
+      "db_trips": 9
+    },
+    {
+      "date": "2024-11-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 10,
+      "db_trips": 10
+    },
+    {
+      "date": "2024-11-10",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 12,
+      "db_trips": 12
+    },
+    {
+      "date": "2024-11-25",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 3,
+      "db_trips": 3
+    },
+    {
+      "date": "2024-11-29",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 9,
+      "db_trips": 9
+    },
+    {
+      "date": "2024-11-30",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 9,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-01-02",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 4,
+      "db_trips": 4
+    },
+    {
+      "date": "2025-02-02",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 6,
+      "db_trips": 7
+    },
+    {
+      "date": "2025-02-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 6,
+      "db_trips": 6
+    },
+    {
+      "date": "2025-02-15",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 4,
+      "db_trips": 4
+    },
+    {
+      "date": "2025-02-16",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 6,
+      "db_trips": 6
+    },
+    {
+      "date": "2025-03-16",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 7,
+      "db_trips": 7
+    },
+    {
+      "date": "2025-04-13",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 4,
+      "db_trips": 4
+    },
+    {
+      "date": "2025-04-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 14,
+      "db_trips": 14
+    },
+    {
+      "date": "2025-05-14",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 6,
+      "db_trips": 6
+    },
+    {
+      "date": "2025-06-01",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 24
+    },
+    {
+      "date": "2025-06-12",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 12,
+      "db_trips": 13
+    },
+    {
+      "date": "2025-06-13",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 18,
+      "db_trips": 17
+    },
+    {
+      "date": "2025-06-14",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 21
+    },
+    {
+      "date": "2025-06-19",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2025-07-02",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 18,
+      "db_trips": 18
+    },
+    {
+      "date": "2025-07-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 19
+    },
+    {
+      "date": "2025-07-10",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 20
+    },
+    {
+      "date": "2025-07-12",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 20
+    },
+    {
+      "date": "2025-07-14",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 20
+    },
+    {
+      "date": "2025-07-23",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 19,
+      "db_trips": 19
+    },
+    {
+      "date": "2025-07-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2025-07-27",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 30,
+      "db_trips": 30
+    },
+    {
+      "date": "2025-07-28",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 17,
+      "db_trips": 17
+    },
+    {
+      "date": "2025-07-30",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 21
+    },
+    {
+      "date": "2025-07-31",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 25,
+      "db_trips": 25
+    },
+    {
+      "date": "2025-08-04",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 21
+    },
+    {
+      "date": "2025-08-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 22,
+      "db_trips": 22
+    },
+    {
+      "date": "2025-08-10",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 25
+    },
+    {
+      "date": "2025-08-16",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 21,
+      "db_trips": 21
+    },
+    {
+      "date": "2025-08-21",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 20
+    },
+    {
+      "date": "2025-09-02",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 14,
+      "db_trips": 14
+    },
+    {
+      "date": "2025-09-09",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 14,
+      "db_trips": 14
+    },
+    {
+      "date": "2025-09-17",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 16
+    },
+    {
+      "date": "2025-09-20",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 20,
+      "db_trips": 20
+    },
+    {
+      "date": "2025-09-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 24,
+      "db_trips": 25
+    },
+    {
+      "date": "2025-09-30",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 17,
+      "db_trips": 17
+    },
+    {
+      "date": "2025-10-07",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 17,
+      "db_trips": 18
+    },
+    {
+      "date": "2025-10-08",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 8,
+      "db_trips": 8
+    },
+    {
+      "date": "2025-10-16",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 9,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-17",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-18",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-19",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-20",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-21",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-22",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-23",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-24",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-25",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-26",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-27",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-28",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-29",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-30",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    },
+    {
+      "date": "2025-10-31",
+      "status": "completed",
+      "passed": true,
+      "issues": [],
+      "source_trips": 16,
+      "db_trips": 9
+    }
+  ]
+}

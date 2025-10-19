@@ -1,0 +1,3040 @@
+{
+  "timestamp": "2025-10-18T02:29:01.731086",
+  "spec": "SPEC-008",
+  "phase": "Phase 3: Pre-Remediation Backup",
+  "purpose": "Complete snapshot before any database modifications",
+  "boats": {
+    "374": {
+      "boat_info": {
+        "id": 374,
+        "name": "Seaforth Sportfishing",
+        "landing_id": 14
+      },
+      "trip_count": 66,
+      "catch_count": 112,
+      "trips": [
+        {
+          "id": 16690,
+          "boat_id": 374,
+          "trip_date": "2025-07-27",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 12654,
+          "boat_id": 374,
+          "trip_date": "2025-04-26",
+          "anglers": 8,
+          "trip_duration": "2 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 13368,
+          "boat_id": 374,
+          "trip_date": "2024-07-06",
+          "anglers": 51,
+          "trip_duration": "1/2 Day Twilight",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16741,
+          "boat_id": 374,
+          "trip_date": "2025-07-28",
+          "anglers": 30,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16811,
+          "boat_id": 374,
+          "trip_date": "2025-07-30",
+          "anglers": 3,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14324,
+          "boat_id": 374,
+          "trip_date": "2025-06-01",
+          "anglers": 16,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14483,
+          "boat_id": 374,
+          "trip_date": "2025-06-12",
+          "anglers": 21,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16857,
+          "boat_id": 374,
+          "trip_date": "2025-07-31",
+          "anglers": 6,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 12470,
+          "boat_id": 374,
+          "trip_date": "2025-04-13",
+          "anglers": 6,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11745,
+          "boat_id": 374,
+          "trip_date": "2025-03-16",
+          "anglers": 4,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10688,
+          "boat_id": 374,
+          "trip_date": "2025-09-20",
+          "anglers": 5,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11019,
+          "boat_id": 374,
+          "trip_date": "2025-10-07",
+          "anglers": 15,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11025,
+          "boat_id": 374,
+          "trip_date": "2025-10-08",
+          "anglers": 4,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11115,
+          "boat_id": 374,
+          "trip_date": "2025-10-16",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11125,
+          "boat_id": 374,
+          "trip_date": "2025-10-17",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11135,
+          "boat_id": 374,
+          "trip_date": "2025-10-18",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11145,
+          "boat_id": 374,
+          "trip_date": "2025-10-19",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11155,
+          "boat_id": 374,
+          "trip_date": "2025-10-20",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11013,
+          "boat_id": 374,
+          "trip_date": "2025-10-07",
+          "anglers": 24,
+          "trip_duration": "2 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 13920,
+          "boat_id": 374,
+          "trip_date": "2025-05-14",
+          "anglers": 3,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14494,
+          "boat_id": 374,
+          "trip_date": "2025-06-13",
+          "anglers": 2,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14518,
+          "boat_id": 374,
+          "trip_date": "2025-06-14",
+          "anglers": 6,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14599,
+          "boat_id": 374,
+          "trip_date": "2025-06-19",
+          "anglers": 2,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 14704,
+          "boat_id": 374,
+          "trip_date": "2024-11-01",
+          "anglers": 3,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10366,
+          "boat_id": 374,
+          "trip_date": "2025-09-02",
+          "anglers": 29,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16948,
+          "boat_id": 374,
+          "trip_date": "2024-09-18",
+          "anglers": 11,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15185,
+          "boat_id": 374,
+          "trip_date": "2025-07-02",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15025,
+          "boat_id": 374,
+          "trip_date": "2024-08-05",
+          "anglers": 38,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15585,
+          "boat_id": 374,
+          "trip_date": "2025-07-08",
+          "anglers": 5,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17033,
+          "boat_id": 374,
+          "trip_date": "2024-09-22",
+          "anglers": 28,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17198,
+          "boat_id": 374,
+          "trip_date": "2024-10-03",
+          "anglers": 29,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15696,
+          "boat_id": 374,
+          "trip_date": "2025-07-10",
+          "anglers": 5,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15718,
+          "boat_id": 374,
+          "trip_date": "2024-11-30",
+          "anglers": 4,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15783,
+          "boat_id": 374,
+          "trip_date": "2025-07-12",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10498,
+          "boat_id": 374,
+          "trip_date": "2025-09-09",
+          "anglers": 5,
+          "trip_duration": "1/2 Day PM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 15884,
+          "boat_id": 374,
+          "trip_date": "2025-07-14",
+          "anglers": 3,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17261,
+          "boat_id": 374,
+          "trip_date": "2024-10-05",
+          "anglers": 4,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16441,
+          "boat_id": 374,
+          "trip_date": "2024-09-06",
+          "anglers": 18,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16315,
+          "boat_id": 374,
+          "trip_date": "2024-09-02",
+          "anglers": 29,
+          "trip_duration": "2.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16368,
+          "boat_id": 374,
+          "trip_date": "2024-09-05",
+          "anglers": 12,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16431,
+          "boat_id": 374,
+          "trip_date": "2024-09-06",
+          "anglers": 33,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16334,
+          "boat_id": 374,
+          "trip_date": "2024-09-03",
+          "anglers": 17,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16495,
+          "boat_id": 374,
+          "trip_date": "2025-07-23",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16548,
+          "boat_id": 374,
+          "trip_date": "2024-09-08",
+          "anglers": 23,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16553,
+          "boat_id": 374,
+          "trip_date": "2024-09-08",
+          "anglers": 16,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 16635,
+          "boat_id": 374,
+          "trip_date": "2025-07-26",
+          "anglers": 6,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17450,
+          "boat_id": 374,
+          "trip_date": "2025-08-04",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17736,
+          "boat_id": 374,
+          "trip_date": "2024-10-27",
+          "anglers": 2,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10636,
+          "boat_id": 374,
+          "trip_date": "2025-09-17",
+          "anglers": 19,
+          "trip_duration": "3 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17878,
+          "boat_id": 374,
+          "trip_date": "2025-08-10",
+          "anglers": 16,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 17824,
+          "boat_id": 374,
+          "trip_date": "2025-08-08",
+          "anglers": 6,
+          "trip_duration": "Full Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10816,
+          "boat_id": 374,
+          "trip_date": "2025-09-26",
+          "anglers": 19,
+          "trip_duration": "Overnight",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 10904,
+          "boat_id": 374,
+          "trip_date": "2025-09-30",
+          "anglers": 29,
+          "trip_duration": "1.5 Day",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 18024,
+          "boat_id": 374,
+          "trip_date": "2025-08-16",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11165,
+          "boat_id": 374,
+          "trip_date": "2025-10-21",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11175,
+          "boat_id": 374,
+          "trip_date": "2025-10-22",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11185,
+          "boat_id": 374,
+          "trip_date": "2025-10-23",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11195,
+          "boat_id": 374,
+          "trip_date": "2025-10-24",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11205,
+          "boat_id": 374,
+          "trip_date": "2025-10-25",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11215,
+          "boat_id": 374,
+          "trip_date": "2025-10-26",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11225,
+          "boat_id": 374,
+          "trip_date": "2025-10-27",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11235,
+          "boat_id": 374,
+          "trip_date": "2025-10-28",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11245,
+          "boat_id": 374,
+          "trip_date": "2025-10-29",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11255,
+          "boat_id": 374,
+          "trip_date": "2025-10-30",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 18142,
+          "boat_id": 374,
+          "trip_date": "2025-08-21",
+          "anglers": 26,
+          "trip_duration": "Full Day Coronado Islands",
+          "total_fish": null,
+          "landing_id": 14
+        },
+        {
+          "id": 11265,
+          "boat_id": 374,
+          "trip_date": "2025-10-31",
+          "anglers": 6,
+          "trip_duration": "Full Day Offshore",
+          "total_fish": null,
+          "landing_id": 14
+        }
+      ],
+      "catches": [
+        {
+          "id": 26003,
+          "trip_id": 10366,
+          "species": "Bluefin Tuna",
+          "count": 2
+        },
+        {
+          "id": 26004,
+          "trip_id": 10366,
+          "species": "Yellowtail",
+          "count": 5
+        },
+        {
+          "id": 26005,
+          "trip_id": 10366,
+          "species": "Yellowfin Tuna",
+          "count": 17
+        },
+        {
+          "id": 26418,
+          "trip_id": 10498,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 26419,
+          "trip_id": 10498,
+          "species": "Calico Bass",
+          "count": 5
+        },
+        {
+          "id": 26801,
+          "trip_id": 10636,
+          "species": "Bluefin Tuna",
+          "count": 114
+        },
+        {
+          "id": 26802,
+          "trip_id": 10636,
+          "species": "Sheephead",
+          "count": 60
+        },
+        {
+          "id": 26803,
+          "trip_id": 10636,
+          "species": "Lingcod",
+          "count": 31
+        },
+        {
+          "id": 26949,
+          "trip_id": 10688,
+          "species": "Bluefin Tuna",
+          "count": 10
+        },
+        {
+          "id": 27269,
+          "trip_id": 10816,
+          "species": "Yellowfin Tuna",
+          "count": 91
+        },
+        {
+          "id": 27528,
+          "trip_id": 10904,
+          "species": "Bluefin Tuna",
+          "count": 58
+        },
+        {
+          "id": 27529,
+          "trip_id": 10904,
+          "species": "Yellowtail",
+          "count": 5
+        },
+        {
+          "id": 27530,
+          "trip_id": 10904,
+          "species": "Dorado",
+          "count": 8
+        },
+        {
+          "id": 27531,
+          "trip_id": 10904,
+          "species": "Yellowfin Tuna",
+          "count": 3
+        },
+        {
+          "id": 27833,
+          "trip_id": 11013,
+          "species": "Bluefin Tuna",
+          "count": 7
+        },
+        {
+          "id": 27834,
+          "trip_id": 11013,
+          "species": "Yellowfin Tuna",
+          "count": 16
+        },
+        {
+          "id": 27846,
+          "trip_id": 11019,
+          "species": "Yellowfin Tuna",
+          "count": 75
+        },
+        {
+          "id": 27857,
+          "trip_id": 11025,
+          "species": "Bluefin Tuna (Up To 110 Pounds)",
+          "count": 2
+        },
+        {
+          "id": 28047,
+          "trip_id": 11115,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28068,
+          "trip_id": 11125,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28089,
+          "trip_id": 11135,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28110,
+          "trip_id": 11145,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28131,
+          "trip_id": 11155,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28152,
+          "trip_id": 11165,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28173,
+          "trip_id": 11175,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28194,
+          "trip_id": 11185,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28215,
+          "trip_id": 11195,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28236,
+          "trip_id": 11205,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28257,
+          "trip_id": 11215,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28278,
+          "trip_id": 11225,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28299,
+          "trip_id": 11235,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28320,
+          "trip_id": 11245,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28341,
+          "trip_id": 11255,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 28362,
+          "trip_id": 11265,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 29647,
+          "trip_id": 11745,
+          "species": "Whitefish",
+          "count": 14
+        },
+        {
+          "id": 31537,
+          "trip_id": 12470,
+          "species": "Rockfish",
+          "count": 45
+        },
+        {
+          "id": 32045,
+          "trip_id": 12654,
+          "species": "Bluefin Tuna",
+          "count": 32
+        },
+        {
+          "id": 32046,
+          "trip_id": 12654,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 32047,
+          "trip_id": 12654,
+          "species": "Bonito",
+          "count": 2
+        },
+        {
+          "id": 33824,
+          "trip_id": 13368,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 33825,
+          "trip_id": 13368,
+          "species": "Barracuda",
+          "count": 3
+        },
+        {
+          "id": 33826,
+          "trip_id": 13368,
+          "species": "Yellowtail",
+          "count": 2
+        },
+        {
+          "id": 33827,
+          "trip_id": 13368,
+          "species": "Calico Bass",
+          "count": 77
+        },
+        {
+          "id": 35236,
+          "trip_id": 13920,
+          "species": "Rockfish",
+          "count": 15
+        },
+        {
+          "id": 36234,
+          "trip_id": 14324,
+          "species": "Bluefin Tuna",
+          "count": 6
+        },
+        {
+          "id": 36734,
+          "trip_id": 14483,
+          "species": "Sand Bass",
+          "count": 13
+        },
+        {
+          "id": 36735,
+          "trip_id": 14483,
+          "species": "Sculpin",
+          "count": 5
+        },
+        {
+          "id": 36736,
+          "trip_id": 14483,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 36737,
+          "trip_id": 14483,
+          "species": "Calico Bass",
+          "count": 32
+        },
+        {
+          "id": 36738,
+          "trip_id": 14483,
+          "species": "Whitefish",
+          "count": 105
+        },
+        {
+          "id": 36763,
+          "trip_id": 14494,
+          "species": "Yellowtail",
+          "count": 2
+        },
+        {
+          "id": 36764,
+          "trip_id": 14494,
+          "species": "Rockfish",
+          "count": 10
+        },
+        {
+          "id": 36865,
+          "trip_id": 14518,
+          "species": "Rockfish",
+          "count": 25
+        },
+        {
+          "id": 36866,
+          "trip_id": 14518,
+          "species": "Vermilion Rockfish",
+          "count": 12
+        },
+        {
+          "id": 37158,
+          "trip_id": 14599,
+          "species": "Calico Bass",
+          "count": 10
+        },
+        {
+          "id": 37159,
+          "trip_id": 14599,
+          "species": "Vermilion Rockfish",
+          "count": 4
+        },
+        {
+          "id": 37540,
+          "trip_id": 14704,
+          "species": "Bluefin Tuna",
+          "count": 1
+        },
+        {
+          "id": 38286,
+          "trip_id": 15025,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 38287,
+          "trip_id": 15025,
+          "species": "Halibut",
+          "count": 2
+        },
+        {
+          "id": 38288,
+          "trip_id": 15025,
+          "species": "Sculpin",
+          "count": 4
+        },
+        {
+          "id": 38289,
+          "trip_id": 15025,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 38290,
+          "trip_id": 15025,
+          "species": "Rockfish",
+          "count": 9
+        },
+        {
+          "id": 38645,
+          "trip_id": 15185,
+          "species": "Bluefin Tuna",
+          "count": 12
+        },
+        {
+          "id": 39629,
+          "trip_id": 15585,
+          "species": "Bluefin Tuna",
+          "count": 10
+        },
+        {
+          "id": 39869,
+          "trip_id": 15696,
+          "species": "Bluefin Tuna",
+          "count": 5
+        },
+        {
+          "id": 39917,
+          "trip_id": 15718,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 40056,
+          "trip_id": 15783,
+          "species": "Bluefin Tuna (Up To 80 Pounds)",
+          "count": 3
+        },
+        {
+          "id": 40057,
+          "trip_id": 15783,
+          "species": "Yellowtail",
+          "count": 29
+        },
+        {
+          "id": 40266,
+          "trip_id": 15884,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 41339,
+          "trip_id": 16315,
+          "species": "Bluefin Tuna",
+          "count": 116
+        },
+        {
+          "id": 41340,
+          "trip_id": 16315,
+          "species": "Yellowtail",
+          "count": 7
+        },
+        {
+          "id": 41390,
+          "trip_id": 16334,
+          "species": "Bluefin Tuna",
+          "count": 34
+        },
+        {
+          "id": 41391,
+          "trip_id": 16334,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 41472,
+          "trip_id": 16368,
+          "species": "Yellowtail",
+          "count": 5
+        },
+        {
+          "id": 41473,
+          "trip_id": 16368,
+          "species": "Dorado",
+          "count": 1
+        },
+        {
+          "id": 41618,
+          "trip_id": 16431,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 41619,
+          "trip_id": 16431,
+          "species": "Calico Bass",
+          "count": 39
+        },
+        {
+          "id": 41620,
+          "trip_id": 16431,
+          "species": "Bonito",
+          "count": 125
+        },
+        {
+          "id": 41621,
+          "trip_id": 16431,
+          "species": "Rockfish",
+          "count": 3
+        },
+        {
+          "id": 41792,
+          "trip_id": 16495,
+          "species": "Yellowtail",
+          "count": 14
+        },
+        {
+          "id": 41916,
+          "trip_id": 16548,
+          "species": "Bluefin Tuna",
+          "count": 9
+        },
+        {
+          "id": 41917,
+          "trip_id": 16548,
+          "species": "Yellowtail",
+          "count": 22
+        },
+        {
+          "id": 41925,
+          "trip_id": 16553,
+          "species": "Bluefin Tuna (Up To 160 Pounds)",
+          "count": 32
+        },
+        {
+          "id": 41926,
+          "trip_id": 16553,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 42129,
+          "trip_id": 16635,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 42130,
+          "trip_id": 16635,
+          "species": "Rockfish",
+          "count": 7
+        },
+        {
+          "id": 42131,
+          "trip_id": 16635,
+          "species": "Vermilion Rockfish",
+          "count": 12
+        },
+        {
+          "id": 42242,
+          "trip_id": 16690,
+          "species": "Bluefin Tuna",
+          "count": 12
+        },
+        {
+          "id": 42243,
+          "trip_id": 16690,
+          "species": "Yellowtail",
+          "count": 2
+        },
+        {
+          "id": 42376,
+          "trip_id": 16741,
+          "species": "Bluefin Tuna (Up To 200 Pounds)",
+          "count": 21
+        },
+        {
+          "id": 42570,
+          "trip_id": 16811,
+          "species": "Yellowtail",
+          "count": 15
+        },
+        {
+          "id": 42721,
+          "trip_id": 16857,
+          "species": "Bonito",
+          "count": 3
+        },
+        {
+          "id": 42722,
+          "trip_id": 16857,
+          "species": "Rockfish",
+          "count": 8
+        },
+        {
+          "id": 42723,
+          "trip_id": 16857,
+          "species": "Vermilion Rockfish",
+          "count": 12
+        },
+        {
+          "id": 42978,
+          "trip_id": 16948,
+          "species": "Striped Marlin",
+          "count": 1
+        },
+        {
+          "id": 43255,
+          "trip_id": 17033,
+          "species": "Bluefin Tuna",
+          "count": 29
+        },
+        {
+          "id": 43256,
+          "trip_id": 17033,
+          "species": "Sheephead",
+          "count": 18
+        },
+        {
+          "id": 43257,
+          "trip_id": 17033,
+          "species": "Whitefish",
+          "count": 83
+        },
+        {
+          "id": 43258,
+          "trip_id": 17033,
+          "species": "Rockfish",
+          "count": 55
+        },
+        {
+          "id": 43699,
+          "trip_id": 17198,
+          "species": "Bluefin Tuna",
+          "count": 6
+        },
+        {
+          "id": 43840,
+          "trip_id": 17261,
+          "species": "Yellowfin Tuna",
+          "count": 20
+        },
+        {
+          "id": 44220,
+          "trip_id": 17450,
+          "species": "Yellowtail",
+          "count": 7
+        },
+        {
+          "id": 44767,
+          "trip_id": 17736,
+          "species": "Bluefin Tuna (Up To 60 Pounds)",
+          "count": 3
+        },
+        {
+          "id": 44942,
+          "trip_id": 17824,
+          "species": "Yellowtail",
+          "count": 9
+        },
+        {
+          "id": 45068,
+          "trip_id": 17878,
+          "species": "Bluefin Tuna",
+          "count": 3
+        },
+        {
+          "id": 45482,
+          "trip_id": 18024,
+          "species": "Bluefin Tuna",
+          "count": 12
+        },
+        {
+          "id": 45483,
+          "trip_id": 18024,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 45826,
+          "trip_id": 18142,
+          "species": "Barracuda",
+          "count": 14
+        },
+        {
+          "id": 45827,
+          "trip_id": 18142,
+          "species": "Sculpin",
+          "count": 12
+        },
+        {
+          "id": 45828,
+          "trip_id": 18142,
+          "species": "Yellowtail",
+          "count": 10
+        },
+        {
+          "id": 45829,
+          "trip_id": 18142,
+          "species": "Calico Bass",
+          "count": 6
+        },
+        {
+          "id": 45830,
+          "trip_id": 18142,
+          "species": "Whitefish",
+          "count": 18
+        }
+      ]
+    },
+    "375": {
+      "boat_info": {
+        "id": 375,
+        "name": "Helgrens Sportfishing",
+        "landing_id": 29
+      },
+      "trip_count": 50,
+      "catch_count": 215,
+      "trips": [
+        {
+          "id": 11285,
+          "boat_id": 375,
+          "trip_date": "2025-01-02",
+          "anglers": 15,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11415,
+          "boat_id": 375,
+          "trip_date": "2024-01-19",
+          "anglers": 15,
+          "trip_duration": "1/2 Day Twilight",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11470,
+          "boat_id": 375,
+          "trip_date": "2025-02-02",
+          "anglers": 20,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11513,
+          "boat_id": 375,
+          "trip_date": "2025-02-08",
+          "anglers": 10,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11530,
+          "boat_id": 375,
+          "trip_date": "2025-02-15",
+          "anglers": 15,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11537,
+          "boat_id": 375,
+          "trip_date": "2025-02-16",
+          "anglers": 22,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11699,
+          "boat_id": 375,
+          "trip_date": "2024-03-07",
+          "anglers": 19,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16835,
+          "boat_id": 375,
+          "trip_date": "2024-09-14",
+          "anglers": 30,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 13335,
+          "boat_id": 375,
+          "trip_date": "2024-07-05",
+          "anglers": 21,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 13359,
+          "boat_id": 375,
+          "trip_date": "2024-07-06",
+          "anglers": 19,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16761,
+          "boat_id": 375,
+          "trip_date": "2024-09-12",
+          "anglers": 26,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 13453,
+          "boat_id": 375,
+          "trip_date": "2024-07-10",
+          "anglers": 25,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 13558,
+          "boat_id": 375,
+          "trip_date": "2024-07-13",
+          "anglers": 17,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 11716,
+          "boat_id": 375,
+          "trip_date": "2024-03-09",
+          "anglers": 27,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 13965,
+          "boat_id": 375,
+          "trip_date": "2024-07-26",
+          "anglers": 18,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16887,
+          "boat_id": 375,
+          "trip_date": "2024-09-15",
+          "anglers": 38,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 14701,
+          "boat_id": 375,
+          "trip_date": "2024-11-01",
+          "anglers": 17,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 14869,
+          "boat_id": 375,
+          "trip_date": "2024-11-08",
+          "anglers": 14,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 14887,
+          "boat_id": 375,
+          "trip_date": "2024-11-10",
+          "anglers": 30,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 14955,
+          "boat_id": 375,
+          "trip_date": "2024-08-03",
+          "anglers": 37,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 14904,
+          "boat_id": 375,
+          "trip_date": "2024-08-01",
+          "anglers": 19,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15015,
+          "boat_id": 375,
+          "trip_date": "2024-08-05",
+          "anglers": 38,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15062,
+          "boat_id": 375,
+          "trip_date": "2024-08-06",
+          "anglers": 12,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15082,
+          "boat_id": 375,
+          "trip_date": "2024-08-07",
+          "anglers": 31,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15289,
+          "boat_id": 375,
+          "trip_date": "2024-08-11",
+          "anglers": 20,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15438,
+          "boat_id": 375,
+          "trip_date": "2024-11-25",
+          "anglers": 25,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15469,
+          "boat_id": 375,
+          "trip_date": "2024-08-16",
+          "anglers": 20,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15340,
+          "boat_id": 375,
+          "trip_date": "2024-08-12",
+          "anglers": 12,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15360,
+          "boat_id": 375,
+          "trip_date": "2024-08-13",
+          "anglers": 10,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15386,
+          "boat_id": 375,
+          "trip_date": "2024-08-14",
+          "anglers": 9,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15517,
+          "boat_id": 375,
+          "trip_date": "2024-08-17",
+          "anglers": 45,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15564,
+          "boat_id": 375,
+          "trip_date": "2024-08-18",
+          "anglers": 15,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17144,
+          "boat_id": 375,
+          "trip_date": "2024-09-28",
+          "anglers": 10,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17021,
+          "boat_id": 375,
+          "trip_date": "2024-09-22",
+          "anglers": 28,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17073,
+          "boat_id": 375,
+          "trip_date": "2024-09-25",
+          "anglers": 13,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17039,
+          "boat_id": 375,
+          "trip_date": "2024-09-23",
+          "anglers": 12,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17110,
+          "boat_id": 375,
+          "trip_date": "2024-09-27",
+          "anglers": 15,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 15669,
+          "boat_id": 375,
+          "trip_date": "2024-11-29",
+          "anglers": 20,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16241,
+          "boat_id": 375,
+          "trip_date": "2024-08-31",
+          "anglers": 33,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16304,
+          "boat_id": 375,
+          "trip_date": "2024-09-02",
+          "anglers": 28,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16360,
+          "boat_id": 375,
+          "trip_date": "2024-09-05",
+          "anglers": 25,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16467,
+          "boat_id": 375,
+          "trip_date": "2024-09-07",
+          "anglers": 30,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 16522,
+          "boat_id": 375,
+          "trip_date": "2024-09-08",
+          "anglers": 26,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17231,
+          "boat_id": 375,
+          "trip_date": "2024-09-30",
+          "anglers": 14,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17256,
+          "boat_id": 375,
+          "trip_date": "2024-10-05",
+          "anglers": 38,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17309,
+          "boat_id": 375,
+          "trip_date": "2024-10-07",
+          "anglers": 22,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17338,
+          "boat_id": 375,
+          "trip_date": "2024-10-09",
+          "anglers": 15,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17471,
+          "boat_id": 375,
+          "trip_date": "2024-10-11",
+          "anglers": 13,
+          "trip_duration": "1/2 Day AM",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17691,
+          "boat_id": 375,
+          "trip_date": "2024-10-25",
+          "anglers": 40,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        },
+        {
+          "id": 17709,
+          "boat_id": 375,
+          "trip_date": "2024-10-26",
+          "anglers": 13,
+          "trip_duration": "3/4 Day",
+          "total_fish": null,
+          "landing_id": 29
+        }
+      ],
+      "catches": [
+        {
+          "id": 28418,
+          "trip_id": 11285,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 28419,
+          "trip_id": 11285,
+          "species": "Blue Perch",
+          "count": 1
+        },
+        {
+          "id": 28420,
+          "trip_id": 11285,
+          "species": "Whitefish",
+          "count": 18
+        },
+        {
+          "id": 28756,
+          "trip_id": 11415,
+          "species": "Sand Bass",
+          "count": 25
+        },
+        {
+          "id": 28757,
+          "trip_id": 11415,
+          "species": "Sculpin",
+          "count": 22
+        },
+        {
+          "id": 28758,
+          "trip_id": 11415,
+          "species": "Calico Bass",
+          "count": 5
+        },
+        {
+          "id": 28930,
+          "trip_id": 11470,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 28931,
+          "trip_id": 11470,
+          "species": "Sculpin",
+          "count": 35
+        },
+        {
+          "id": 28932,
+          "trip_id": 11470,
+          "species": "Whitefish",
+          "count": 7
+        },
+        {
+          "id": 29043,
+          "trip_id": 11513,
+          "species": "Sculpin",
+          "count": 14
+        },
+        {
+          "id": 29081,
+          "trip_id": 11530,
+          "species": "Sculpin",
+          "count": 4
+        },
+        {
+          "id": 29095,
+          "trip_id": 11537,
+          "species": "Sculpin",
+          "count": 12
+        },
+        {
+          "id": 29096,
+          "trip_id": 11537,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 29097,
+          "trip_id": 11537,
+          "species": "Whitefish",
+          "count": 23
+        },
+        {
+          "id": 29516,
+          "trip_id": 11699,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 29517,
+          "trip_id": 11699,
+          "species": "Sculpin",
+          "count": 3
+        },
+        {
+          "id": 29518,
+          "trip_id": 11699,
+          "species": "Sheephead",
+          "count": 7
+        },
+        {
+          "id": 29519,
+          "trip_id": 11699,
+          "species": "Whitefish",
+          "count": 51
+        },
+        {
+          "id": 29570,
+          "trip_id": 11716,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 29571,
+          "trip_id": 11716,
+          "species": "Sculpin",
+          "count": 21
+        },
+        {
+          "id": 29572,
+          "trip_id": 11716,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 29573,
+          "trip_id": 11716,
+          "species": "Whitefish",
+          "count": 27
+        },
+        {
+          "id": 29574,
+          "trip_id": 11716,
+          "species": "Sanddab",
+          "count": 3
+        },
+        {
+          "id": 33721,
+          "trip_id": 13335,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 33722,
+          "trip_id": 13335,
+          "species": "Calico Bass",
+          "count": 31
+        },
+        {
+          "id": 33723,
+          "trip_id": 13335,
+          "species": "Whitefish",
+          "count": 17
+        },
+        {
+          "id": 33724,
+          "trip_id": 13335,
+          "species": "Rockfish",
+          "count": 3
+        },
+        {
+          "id": 33797,
+          "trip_id": 13359,
+          "species": "Sand Bass",
+          "count": 3
+        },
+        {
+          "id": 33798,
+          "trip_id": 13359,
+          "species": "Barracuda",
+          "count": 2
+        },
+        {
+          "id": 33799,
+          "trip_id": 13359,
+          "species": "Calico Bass",
+          "count": 43
+        },
+        {
+          "id": 33800,
+          "trip_id": 13359,
+          "species": "Rockfish",
+          "count": 12
+        },
+        {
+          "id": 33801,
+          "trip_id": 13359,
+          "species": "Red Rockfish",
+          "count": 31
+        },
+        {
+          "id": 34038,
+          "trip_id": 13453,
+          "species": "Sheephead",
+          "count": 5
+        },
+        {
+          "id": 34039,
+          "trip_id": 13453,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 34040,
+          "trip_id": 13453,
+          "species": "Calico Bass",
+          "count": 69
+        },
+        {
+          "id": 34316,
+          "trip_id": 13558,
+          "species": "Sand Bass",
+          "count": 8
+        },
+        {
+          "id": 34317,
+          "trip_id": 13558,
+          "species": "Sculpin",
+          "count": 2
+        },
+        {
+          "id": 34318,
+          "trip_id": 13558,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 34319,
+          "trip_id": 13558,
+          "species": "Calico Bass",
+          "count": 48
+        },
+        {
+          "id": 35332,
+          "trip_id": 13965,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 35333,
+          "trip_id": 13965,
+          "species": "Dorado",
+          "count": 3
+        },
+        {
+          "id": 37533,
+          "trip_id": 14701,
+          "species": "Sculpin",
+          "count": 9
+        },
+        {
+          "id": 37534,
+          "trip_id": 14701,
+          "species": "Sheephead",
+          "count": 16
+        },
+        {
+          "id": 37535,
+          "trip_id": 14701,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 37536,
+          "trip_id": 14701,
+          "species": "Whitefish",
+          "count": 3
+        },
+        {
+          "id": 37537,
+          "trip_id": 14701,
+          "species": "Sand Sole",
+          "count": 1
+        },
+        {
+          "id": 38008,
+          "trip_id": 14869,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 38009,
+          "trip_id": 14869,
+          "species": "Sculpin",
+          "count": 8
+        },
+        {
+          "id": 38010,
+          "trip_id": 14869,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 38011,
+          "trip_id": 14869,
+          "species": "Whitefish",
+          "count": 51
+        },
+        {
+          "id": 38035,
+          "trip_id": 14887,
+          "species": "Sculpin",
+          "count": 4
+        },
+        {
+          "id": 38036,
+          "trip_id": 14887,
+          "species": "Sheephead",
+          "count": 9
+        },
+        {
+          "id": 38037,
+          "trip_id": 14887,
+          "species": "Blue Perch",
+          "count": 1
+        },
+        {
+          "id": 38038,
+          "trip_id": 14887,
+          "species": "Whitefish",
+          "count": 16
+        },
+        {
+          "id": 38067,
+          "trip_id": 14904,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 38068,
+          "trip_id": 14904,
+          "species": "Calico Bass",
+          "count": 15
+        },
+        {
+          "id": 38149,
+          "trip_id": 14955,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 38150,
+          "trip_id": 14955,
+          "species": "Bocaccio",
+          "count": 1
+        },
+        {
+          "id": 38151,
+          "trip_id": 14955,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 38152,
+          "trip_id": 14955,
+          "species": "Whitefish",
+          "count": 12
+        },
+        {
+          "id": 38153,
+          "trip_id": 14955,
+          "species": "Bonito",
+          "count": 1
+        },
+        {
+          "id": 38154,
+          "trip_id": 14955,
+          "species": "Rockfish",
+          "count": 5
+        },
+        {
+          "id": 38155,
+          "trip_id": 14955,
+          "species": "Red Rockfish",
+          "count": 18
+        },
+        {
+          "id": 38267,
+          "trip_id": 15015,
+          "species": "Sand Bass",
+          "count": 4
+        },
+        {
+          "id": 38268,
+          "trip_id": 15015,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 38269,
+          "trip_id": 15015,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 38270,
+          "trip_id": 15015,
+          "species": "Blue Perch",
+          "count": 2
+        },
+        {
+          "id": 38271,
+          "trip_id": 15015,
+          "species": "Calico Bass",
+          "count": 10
+        },
+        {
+          "id": 38272,
+          "trip_id": 15015,
+          "species": "Whitefish",
+          "count": 12
+        },
+        {
+          "id": 38273,
+          "trip_id": 15015,
+          "species": "Rockfish",
+          "count": 1
+        },
+        {
+          "id": 38358,
+          "trip_id": 15062,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 38359,
+          "trip_id": 15062,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 38360,
+          "trip_id": 15062,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 38361,
+          "trip_id": 15062,
+          "species": "Calico Bass",
+          "count": 26
+        },
+        {
+          "id": 38362,
+          "trip_id": 15062,
+          "species": "Whitefish",
+          "count": 1
+        },
+        {
+          "id": 38407,
+          "trip_id": 15082,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 38408,
+          "trip_id": 15082,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 38409,
+          "trip_id": 15082,
+          "species": "Calico Bass",
+          "count": 32
+        },
+        {
+          "id": 38899,
+          "trip_id": 15289,
+          "species": "Sculpin",
+          "count": 4
+        },
+        {
+          "id": 38900,
+          "trip_id": 15289,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 38901,
+          "trip_id": 15289,
+          "species": "Calico Bass",
+          "count": 21
+        },
+        {
+          "id": 38902,
+          "trip_id": 15289,
+          "species": "Rockfish",
+          "count": 2
+        },
+        {
+          "id": 39056,
+          "trip_id": 15340,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 39057,
+          "trip_id": 15340,
+          "species": "Calico Bass",
+          "count": 39
+        },
+        {
+          "id": 39058,
+          "trip_id": 15340,
+          "species": "Kelp Rockfish",
+          "count": 1
+        },
+        {
+          "id": 39097,
+          "trip_id": 15360,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 39098,
+          "trip_id": 15360,
+          "species": "Calico Bass",
+          "count": 50
+        },
+        {
+          "id": 39157,
+          "trip_id": 15386,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 39158,
+          "trip_id": 15386,
+          "species": "Calico Bass",
+          "count": 50
+        },
+        {
+          "id": 39272,
+          "trip_id": 15438,
+          "species": "Sculpin",
+          "count": 29
+        },
+        {
+          "id": 39273,
+          "trip_id": 15438,
+          "species": "Sheephead",
+          "count": 10
+        },
+        {
+          "id": 39274,
+          "trip_id": 15438,
+          "species": "Whitefish",
+          "count": 62
+        },
+        {
+          "id": 39339,
+          "trip_id": 15469,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 39340,
+          "trip_id": 15469,
+          "species": "Calico Bass",
+          "count": 58
+        },
+        {
+          "id": 39341,
+          "trip_id": 15469,
+          "species": "Whitefish",
+          "count": 1
+        },
+        {
+          "id": 39448,
+          "trip_id": 15517,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 39449,
+          "trip_id": 15517,
+          "species": "Calico Bass (Up To 6.5 Pounds)",
+          "count": 26
+        },
+        {
+          "id": 39450,
+          "trip_id": 15517,
+          "species": "Whitefish",
+          "count": 1
+        },
+        {
+          "id": 39451,
+          "trip_id": 15517,
+          "species": "Rockfish",
+          "count": 1
+        },
+        {
+          "id": 39569,
+          "trip_id": 15564,
+          "species": "Calico Bass",
+          "count": 46
+        },
+        {
+          "id": 39808,
+          "trip_id": 15669,
+          "species": "Sculpin",
+          "count": 7
+        },
+        {
+          "id": 39809,
+          "trip_id": 15669,
+          "species": "Sheephead",
+          "count": 10
+        },
+        {
+          "id": 39810,
+          "trip_id": 15669,
+          "species": "Whitefish",
+          "count": 60
+        },
+        {
+          "id": 41118,
+          "trip_id": 16241,
+          "species": "Sand Bass",
+          "count": 4
+        },
+        {
+          "id": 41119,
+          "trip_id": 16241,
+          "species": "Barracuda",
+          "count": 1
+        },
+        {
+          "id": 41120,
+          "trip_id": 16241,
+          "species": "Sheephead",
+          "count": 8
+        },
+        {
+          "id": 41121,
+          "trip_id": 16241,
+          "species": "Calico Bass",
+          "count": 45
+        },
+        {
+          "id": 41122,
+          "trip_id": 16241,
+          "species": "Whitefish",
+          "count": 4
+        },
+        {
+          "id": 41123,
+          "trip_id": 16241,
+          "species": "Bonito",
+          "count": 14
+        },
+        {
+          "id": 41124,
+          "trip_id": 16241,
+          "species": "Rockfish",
+          "count": 1
+        },
+        {
+          "id": 41291,
+          "trip_id": 16304,
+          "species": "Sand Bass",
+          "count": 5
+        },
+        {
+          "id": 41292,
+          "trip_id": 16304,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 41293,
+          "trip_id": 16304,
+          "species": "Calico Bass",
+          "count": 25
+        },
+        {
+          "id": 41294,
+          "trip_id": 16304,
+          "species": "Whitefish",
+          "count": 37
+        },
+        {
+          "id": 41295,
+          "trip_id": 16304,
+          "species": "Bonito",
+          "count": 1
+        },
+        {
+          "id": 41296,
+          "trip_id": 16304,
+          "species": "Rockfish",
+          "count": 16
+        },
+        {
+          "id": 41297,
+          "trip_id": 16304,
+          "species": "Thresher Shark",
+          "count": 1
+        },
+        {
+          "id": 41445,
+          "trip_id": 16360,
+          "species": "Sand Bass",
+          "count": 3
+        },
+        {
+          "id": 41446,
+          "trip_id": 16360,
+          "species": "Calico Bass",
+          "count": 14
+        },
+        {
+          "id": 41700,
+          "trip_id": 16467,
+          "species": "Sand Bass",
+          "count": 5
+        },
+        {
+          "id": 41701,
+          "trip_id": 16467,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 41702,
+          "trip_id": 16467,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 41703,
+          "trip_id": 16467,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 41704,
+          "trip_id": 16467,
+          "species": "Calico Bass",
+          "count": 26
+        },
+        {
+          "id": 41705,
+          "trip_id": 16467,
+          "species": "Bonito",
+          "count": 7
+        },
+        {
+          "id": 41706,
+          "trip_id": 16467,
+          "species": "Rockfish",
+          "count": 1
+        },
+        {
+          "id": 41842,
+          "trip_id": 16522,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 41843,
+          "trip_id": 16522,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 41844,
+          "trip_id": 16522,
+          "species": "Sheephead",
+          "count": 8
+        },
+        {
+          "id": 41845,
+          "trip_id": 16522,
+          "species": "Calico Bass",
+          "count": 4
+        },
+        {
+          "id": 41846,
+          "trip_id": 16522,
+          "species": "Bonito",
+          "count": 25
+        },
+        {
+          "id": 42428,
+          "trip_id": 16761,
+          "species": "Sand Bass",
+          "count": 3
+        },
+        {
+          "id": 42429,
+          "trip_id": 16761,
+          "species": "Calico Bass",
+          "count": 21
+        },
+        {
+          "id": 42430,
+          "trip_id": 16761,
+          "species": "Bonito",
+          "count": 1
+        },
+        {
+          "id": 42647,
+          "trip_id": 16835,
+          "species": "Sand Bass",
+          "count": 6
+        },
+        {
+          "id": 42648,
+          "trip_id": 16835,
+          "species": "Halibut",
+          "count": 2
+        },
+        {
+          "id": 42649,
+          "trip_id": 16835,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 42650,
+          "trip_id": 16835,
+          "species": "Calico Bass",
+          "count": 34
+        },
+        {
+          "id": 42651,
+          "trip_id": 16835,
+          "species": "Whitefish",
+          "count": 1
+        },
+        {
+          "id": 42652,
+          "trip_id": 16835,
+          "species": "Bonito",
+          "count": 10
+        },
+        {
+          "id": 42802,
+          "trip_id": 16887,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 42803,
+          "trip_id": 16887,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 42804,
+          "trip_id": 16887,
+          "species": "Sculpin",
+          "count": 7
+        },
+        {
+          "id": 42805,
+          "trip_id": 16887,
+          "species": "Sheephead",
+          "count": 7
+        },
+        {
+          "id": 42806,
+          "trip_id": 16887,
+          "species": "Calico Bass",
+          "count": 23
+        },
+        {
+          "id": 42807,
+          "trip_id": 16887,
+          "species": "Whitefish",
+          "count": 51
+        },
+        {
+          "id": 42808,
+          "trip_id": 16887,
+          "species": "Rockfish",
+          "count": 5
+        },
+        {
+          "id": 43215,
+          "trip_id": 17021,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 43216,
+          "trip_id": 17021,
+          "species": "Sculpin",
+          "count": 2
+        },
+        {
+          "id": 43217,
+          "trip_id": 17021,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 43218,
+          "trip_id": 17021,
+          "species": "Whitefish",
+          "count": 18
+        },
+        {
+          "id": 43219,
+          "trip_id": 17021,
+          "species": "Bonito",
+          "count": 2
+        },
+        {
+          "id": 43220,
+          "trip_id": 17021,
+          "species": "Rockfish",
+          "count": 3
+        },
+        {
+          "id": 43275,
+          "trip_id": 17039,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 43276,
+          "trip_id": 17039,
+          "species": "Cabezon",
+          "count": 2
+        },
+        {
+          "id": 43277,
+          "trip_id": 17039,
+          "species": "Sculpin",
+          "count": 2
+        },
+        {
+          "id": 43278,
+          "trip_id": 17039,
+          "species": "Sheephead",
+          "count": 9
+        },
+        {
+          "id": 43279,
+          "trip_id": 17039,
+          "species": "Triggerfish",
+          "count": 1
+        },
+        {
+          "id": 43280,
+          "trip_id": 17039,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 43281,
+          "trip_id": 17039,
+          "species": "Mako Shark",
+          "count": 1
+        },
+        {
+          "id": 43282,
+          "trip_id": 17039,
+          "species": "Whitefish",
+          "count": 7
+        },
+        {
+          "id": 43283,
+          "trip_id": 17039,
+          "species": "Sanddab",
+          "count": 1
+        },
+        {
+          "id": 43387,
+          "trip_id": 17073,
+          "species": "Cabezon",
+          "count": 1
+        },
+        {
+          "id": 43388,
+          "trip_id": 17073,
+          "species": "Sculpin",
+          "count": 55
+        },
+        {
+          "id": 43389,
+          "trip_id": 17073,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 43390,
+          "trip_id": 17073,
+          "species": "Triggerfish",
+          "count": 5
+        },
+        {
+          "id": 43391,
+          "trip_id": 17073,
+          "species": "Whitefish",
+          "count": 7
+        },
+        {
+          "id": 43392,
+          "trip_id": 17073,
+          "species": "Rockfish",
+          "count": 7
+        },
+        {
+          "id": 43491,
+          "trip_id": 17110,
+          "species": "Sculpin",
+          "count": 33
+        },
+        {
+          "id": 43492,
+          "trip_id": 17110,
+          "species": "Sheephead",
+          "count": 5
+        },
+        {
+          "id": 43493,
+          "trip_id": 17110,
+          "species": "Triggerfish",
+          "count": 1
+        },
+        {
+          "id": 43494,
+          "trip_id": 17110,
+          "species": "Whitefish",
+          "count": 1
+        },
+        {
+          "id": 43495,
+          "trip_id": 17110,
+          "species": "Rock Sole",
+          "count": 4
+        },
+        {
+          "id": 43575,
+          "trip_id": 17144,
+          "species": "Bocaccio",
+          "count": 24
+        },
+        {
+          "id": 43576,
+          "trip_id": 17144,
+          "species": "Sculpin",
+          "count": 16
+        },
+        {
+          "id": 43577,
+          "trip_id": 17144,
+          "species": "Triggerfish",
+          "count": 2
+        },
+        {
+          "id": 43578,
+          "trip_id": 17144,
+          "species": "Whitefish",
+          "count": 2
+        },
+        {
+          "id": 43579,
+          "trip_id": 17144,
+          "species": "Rockfish",
+          "count": 4
+        },
+        {
+          "id": 43580,
+          "trip_id": 17144,
+          "species": "Sanddab",
+          "count": 6
+        },
+        {
+          "id": 43753,
+          "trip_id": 17231,
+          "species": "Bocaccio",
+          "count": 17
+        },
+        {
+          "id": 43754,
+          "trip_id": 17231,
+          "species": "Sculpin",
+          "count": 2
+        },
+        {
+          "id": 43755,
+          "trip_id": 17231,
+          "species": "Whitefish",
+          "count": 6
+        },
+        {
+          "id": 43756,
+          "trip_id": 17231,
+          "species": "Rockfish",
+          "count": 12
+        },
+        {
+          "id": 43757,
+          "trip_id": 17231,
+          "species": "Red Rockfish",
+          "count": 41
+        },
+        {
+          "id": 43826,
+          "trip_id": 17256,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 43827,
+          "trip_id": 17256,
+          "species": "Sculpin",
+          "count": 28
+        },
+        {
+          "id": 43828,
+          "trip_id": 17256,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 43829,
+          "trip_id": 17256,
+          "species": "Whitefish",
+          "count": 3
+        },
+        {
+          "id": 43830,
+          "trip_id": 17256,
+          "species": "Sanddab",
+          "count": 2
+        },
+        {
+          "id": 43931,
+          "trip_id": 17309,
+          "species": "Bocaccio",
+          "count": 3
+        },
+        {
+          "id": 43932,
+          "trip_id": 17309,
+          "species": "Sculpin",
+          "count": 8
+        },
+        {
+          "id": 43933,
+          "trip_id": 17309,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 43934,
+          "trip_id": 17309,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 43935,
+          "trip_id": 17309,
+          "species": "Whitefish",
+          "count": 3
+        },
+        {
+          "id": 43936,
+          "trip_id": 17309,
+          "species": "Rockfish",
+          "count": 18
+        },
+        {
+          "id": 43937,
+          "trip_id": 17309,
+          "species": "Sanddab",
+          "count": 88
+        },
+        {
+          "id": 43938,
+          "trip_id": 17309,
+          "species": "Red Rockfish",
+          "count": 31
+        },
+        {
+          "id": 43988,
+          "trip_id": 17338,
+          "species": "Bocaccio",
+          "count": 1
+        },
+        {
+          "id": 43989,
+          "trip_id": 17338,
+          "species": "Sculpin",
+          "count": 15
+        },
+        {
+          "id": 43990,
+          "trip_id": 17338,
+          "species": "Rockfish",
+          "count": 17
+        },
+        {
+          "id": 43991,
+          "trip_id": 17338,
+          "species": "Sanddab",
+          "count": 51
+        },
+        {
+          "id": 43992,
+          "trip_id": 17338,
+          "species": "Red Rockfish",
+          "count": 24
+        },
+        {
+          "id": 44253,
+          "trip_id": 17471,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 44254,
+          "trip_id": 17471,
+          "species": "Sculpin",
+          "count": 28
+        },
+        {
+          "id": 44255,
+          "trip_id": 17471,
+          "species": "Sheephead",
+          "count": 5
+        },
+        {
+          "id": 44256,
+          "trip_id": 17471,
+          "species": "Whitefish",
+          "count": 6
+        },
+        {
+          "id": 44257,
+          "trip_id": 17471,
+          "species": "Rockfish",
+          "count": 3
+        },
+        {
+          "id": 44673,
+          "trip_id": 17691,
+          "species": "Sand Bass",
+          "count": 3
+        },
+        {
+          "id": 44674,
+          "trip_id": 17691,
+          "species": "Sculpin",
+          "count": 13
+        },
+        {
+          "id": 44675,
+          "trip_id": 17691,
+          "species": "Sheephead",
+          "count": 21
+        },
+        {
+          "id": 44676,
+          "trip_id": 17691,
+          "species": "Whitefish",
+          "count": 49
+        },
+        {
+          "id": 44710,
+          "trip_id": 17709,
+          "species": "Sand Bass",
+          "count": 4
+        },
+        {
+          "id": 44711,
+          "trip_id": 17709,
+          "species": "Sculpin",
+          "count": 38
+        },
+        {
+          "id": 44712,
+          "trip_id": 17709,
+          "species": "Sheephead",
+          "count": 28
+        },
+        {
+          "id": 44713,
+          "trip_id": 17709,
+          "species": "Whitefish",
+          "count": 57
+        }
+      ]
+    }
+  }
+}
