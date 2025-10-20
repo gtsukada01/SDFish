@@ -157,6 +157,7 @@ export function MultiCombobox({
           </Button>
           <Button
             type="button"
+            variant="secondary"
             size="sm"
             className="flex-1 h-11 md:h-9"
             onClick={handleApply}
