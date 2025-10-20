@@ -278,10 +278,10 @@ function App() {
                   >
                     <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                       <div className="absolute top-3 left-6 flex items-center gap-2">
-                        <Trophy className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                        <span className="text-sm font-medium text-muted-foreground">Catch</span>
+                        <Trophy className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                        <span className="text-base font-medium text-muted-foreground">Catch</span>
                       </div>
-                      <div className="text-4xl font-bold tracking-tight">
+                      <div className="text-3xl md:text-5xl font-bold tracking-tight">
                         {metrics.fleet.total_fish.toLocaleString()}
                       </div>
                     </CardContent>
@@ -294,10 +294,10 @@ function App() {
                   >
                     <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                       <div className="absolute top-3 left-6 flex items-center gap-2">
-                        <Anchor className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                        <span className="text-sm font-medium text-muted-foreground">Trips</span>
+                        <Anchor className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                        <span className="text-base font-medium text-muted-foreground">Trips</span>
                       </div>
-                      <div className="text-4xl font-bold tracking-tight">
+                      <div className="text-3xl md:text-5xl font-bold tracking-tight">
                         {metrics.fleet.total_trips.toLocaleString()}
                       </div>
                     </CardContent>
@@ -309,10 +309,10 @@ function App() {
                     <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
-                          <Users className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                          <span className="text-sm font-medium text-muted-foreground">Avg / Angler</span>
+                          <Users className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                          <span className="text-base font-medium text-muted-foreground">Avg / Angler</span>
                         </div>
-                        <div className="text-4xl font-bold tracking-tight">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
                           {avgFishPerAngler}
                         </div>
                       </CardContent>
@@ -325,10 +325,10 @@ function App() {
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
-                          <Ship className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                          <span className="text-sm font-medium text-muted-foreground">Fleet</span>
+                          <Ship className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                          <span className="text-base font-medium text-muted-foreground">Fleet</span>
                         </div>
-                        <div className="text-4xl font-bold tracking-tight">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
                           {metrics.fleet.unique_boats}
                         </div>
                       </CardContent>
@@ -344,10 +344,10 @@ function App() {
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
-                          <Moon className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                          <span className="text-sm font-medium text-muted-foreground">Moon Phase</span>
+                          <Moon className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                          <span className="text-base font-medium text-muted-foreground">Moon Phase</span>
                         </div>
-                        <div className="text-4xl font-bold tracking-tight capitalize">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight capitalize">
                           {bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, ' ') : 'N/A'}
                         </div>
                       </CardContent>
@@ -360,10 +360,10 @@ function App() {
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
-                          <Fish className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
-                          <span className="text-sm font-medium text-muted-foreground">Species</span>
+                          <Fish className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
+                          <span className="text-base font-medium text-muted-foreground">Species</span>
                         </div>
-                        <div className="text-4xl font-bold tracking-tight">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
                           {metrics.fleet.unique_species}
                         </div>
                       </CardContent>
