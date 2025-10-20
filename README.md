@@ -6,7 +6,7 @@
 **2024 Backfill**: ✅ 100% COMPLETE - All 366 dates validated (4,203 trips)
 **2025 Status**: ✅ 100% COMPLETE - All 304 dates validated (3,755 trips)
 **Total Database**: 7,958 trips across 670 unique dates
-**Last Updated**: October 17, 2025 - Comprehensive Verification Complete
+**Last Updated**: October 19, 2025 - Pipeline Hardening + Mobile UX Complete
 
 ---
 
@@ -35,6 +35,31 @@
 **Incident Resolution**: October 19, 2025 phantom data incident (18 corrupted trips on 10/19-10/20) - Root cause eliminated with quadruple-layered defense.
 
 **Reference**: See [SESSION-2025-10-19-SPEC-010-PHASE-2-COMPLETE.md](SESSION-2025-10-19-SPEC-010-PHASE-2-COMPLETE.md) for complete details.
+
+---
+
+## 🎨 Dashboard UX Improvements - October 19, 2025
+
+**Status**: ✅ COMPLETE - Production Ready
+
+### Species Bar Chart Aggregation Fix
+- **Issue**: Species with weight qualifiers (e.g., "bluefin tuna (up to 50 pounds)", "bluefin tuna (up to 120 pounds)") appeared as duplicate bars
+- **Fix**: Normalize and aggregate species before display - all weight variants now grouped under base species name
+- **Impact**: Cleaner analytics, accurate species totals, matches filter behavior
+- **File**: `src/components/MetricsBreakdown.tsx`
+
+### Mobile Multiselect UX - 2025 Best Practices
+- **Issue**: Users had to tap outside dropdown to apply filters (difficult on mobile, no clear affordance)
+- **Solution**: Added Apply/Cancel footer buttons following industry standards (Stripe, Linear, Material Design 3, iOS HIG)
+- **Features**:
+  - ✅ Clear Apply/Cancel buttons pinned to footer
+  - ✅ Large tap targets (44px mobile, 36px desktop - WCAG compliant)
+  - ✅ Selection count visible in Apply button ("Apply (2)")
+  - ✅ Apply disabled until changes made (explicit confirmation)
+  - ✅ Cancel reverts changes (safe exploration)
+  - ✅ No more "tap outside" confusion
+- **File**: `src/components/ui/multi-combobox.tsx`
+- **Affects**: Boat filter, Species filter in HeaderFilters
 
 ---
 

@@ -4,7 +4,51 @@
 
 ---
 
-## 2025-10-19: SPEC-010 Pipeline Hardening Phase 1+2 Complete
+## 2025-10-19 (Evening): Dashboard UX Improvements Complete
+
+### Changes Made
+
+**1. Species Bar Chart Aggregation Fix**
+- **Code**: `src/components/MetricsBreakdown.tsx` (modified)
+- **Action**: Added species normalization and aggregation before display
+- **Issue**: Species with weight qualifiers (e.g., "bluefin tuna (up to 50 pounds)", "bluefin tuna (up to 120 pounds)") appeared as duplicate bars
+- **Fix**: Group all weight variants under base species name using existing `normalizeSpeciesName()` utility
+- **Benefit**: Cleaner analytics, accurate species totals, matches filter behavior
+
+**2. Mobile Multiselect UX - 2025 Best Practices**
+- **Code**: `src/components/ui/multi-combobox.tsx` (major refactor)
+- **Action**: Implemented Apply/Cancel footer buttons following industry standards
+- **Issue**: Users had to tap outside dropdown to apply filters (difficult on mobile, no clear affordance)
+- **Solution**: Added footer with explicit Apply/Cancel buttons
+- **Features**:
+  - Apply/Cancel buttons pinned to footer (always visible)
+  - Large tap targets (44px mobile, 36px desktop - WCAG compliant)
+  - Selection count in Apply button ("Apply (2)")
+  - Apply disabled until changes made
+  - Cancel reverts changes
+  - No more "tap outside" confusion
+- **Standards**: Matches Stripe, Linear, Material Design 3, iOS HIG patterns
+- **Affects**: Boat filter, Species filter in HeaderFilters
+- **Benefit**: Mobile-first UX, clear confirmation, prevents accidental dismissals
+
+**3. Documentation Updates**
+- **Files Updated**:
+  - README.md (added Dashboard UX Improvements section, updated Last Updated date)
+  - DOC_CHANGELOG.md (this entry)
+- **Rationale**: Single source of truth, no new MD files created per user directive
+
+### Commits
+- `3b9afeb` - Fix species bar chart to aggregate weight variants
+- (Multi-combobox changes pending commit)
+
+### Impact
+- **User Experience**: Mobile users can now easily apply multiselect filters with clear affordance
+- **Data Quality**: Species analytics now show correct aggregated counts without duplicates
+- **Standards Compliance**: Matches 2025 mobile UX best practices (WCAG, Material Design, iOS HIG)
+
+---
+
+## 2025-10-19 (Morning): SPEC-010 Pipeline Hardening Phase 1+2 Complete
 
 ### Changes Made
 

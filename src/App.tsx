@@ -56,7 +56,7 @@ function App() {
     const COLLAPSE_THRESHOLD = 50 // pixels - scroll down to collapse
     const EXPAND_THRESHOLD = 30 // pixels - must scroll back above this to expand
     let lastScrollTop = 0
-    let collapsed = false
+    let collapsed = isFiltersCollapsed // Initialize from state to sync with manual expand/collapse
     let ticking = false
 
     const handleScroll = () => {
@@ -84,7 +84,7 @@ function App() {
 
     scrollContainer.addEventListener('scroll', handleScroll, { passive: true })
     return () => scrollContainer.removeEventListener('scroll', handleScroll)
-  }, [isLoading]) // Re-run when loading completes and ref becomes available
+  }, [isLoading, isFiltersCollapsed]) // Re-sync when filters are manually toggled
 
   async function loadData() {
       setIsLoading(true)

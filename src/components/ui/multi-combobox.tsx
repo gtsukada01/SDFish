@@ -52,17 +52,35 @@ export function MultiCombobox({
       ? pendingValues.filter((v) => v !== option)
       : [...pendingValues, option]
     setPendingValues(newValues)
-    onValuesChange(newValues) // Update chips immediately for visual feedback
+    // Don't call onValuesChange here - only update local pending state
+    // Parent gets updates only when Apply is clicked
   }
 
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen)
 
-    // When closing, apply the filters
-    if (!isOpen && onApply) {
-      onApply(pendingValues)
+    // Reset pending values to current values when opening
+    if (isOpen) {
+      setPendingValues(values)
+      setSearch('')
     }
   }
+
+  const handleApply = () => {
+    onApply?.(pendingValues)
+    setOpen(false)
+  }
+
+  const handleCancel = () => {
+    setPendingValues(values) // Revert to original values
+    setOpen(false)
+  }
+
+  // Check if user has made changes (enable Apply only if changed)
+  const hasChanges = React.useMemo(() => {
+    if (pendingValues.length !== values.length) return true
+    return !pendingValues.every(v => values.includes(v))
+  }, [pendingValues, values])
 
   const handleRemove = (option: string, e: React.MouseEvent) => {
     e.stopPropagation()
@@ -99,7 +117,7 @@ export function MultiCombobox({
             value={search}
             onValueChange={setSearch}
           />
-          <CommandList>
+          <CommandList className="max-h-[240px]">
             {filteredOptions.length === 0 ? (
               <CommandEmpty>{emptyMessage}</CommandEmpty>
             ) : (
@@ -125,6 +143,28 @@ export function MultiCombobox({
             )}
           </CommandList>
         </Command>
+
+        {/* Footer with Apply/Cancel buttons - 2025 mobile UX best practice */}
+        <div className="border-t bg-background p-2 flex gap-2">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            className="flex-1 h-11 md:h-9"
+            onClick={handleCancel}
+          >
+            Cancel
+          </Button>
+          <Button
+            type="button"
+            size="sm"
+            className="flex-1 h-11 md:h-9"
+            onClick={handleApply}
+            disabled={!hasChanges}
+          >
+            Apply {pendingValues.length > 0 && `(${pendingValues.length})`}
+          </Button>
+        </div>
       </PopoverContent>
     </Popover>
   )
