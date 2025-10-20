@@ -4,6 +4,120 @@
 
 ---
 
+## 2025-10-19 (Night): Documentation Hygiene Sweep - COMPLETE
+
+### Changes Made
+
+**1. Archived 14 Outdated Files** (Moved to `archive/`)
+- **START_HERE.md** - Oct 1, 2025 migration guide (85% complete), obsolete ports/tasks
+- **SESSION_SUMMARY.md** - Oct 1, 2025 session summary, completely outdated
+- **landing.md** - Sept 27, 2025 build system notes, Spec Kit workflow (untracked file)
+- **MOBILE_MULTISELECT_UX_ISSUE.md** - Issue resolved Oct 19, 2025 (now in archive)
+- **PARSER_BUG_REPORT.md** - Oct 16 resolved issue, not referenced in master docs
+- **FILTERPANEL_VERIFICATION_REPORT.md** - Old verification report, superseded
+- **SHADCN-SIDEBAR-VERIFICATION-REPORT.md** - Old verification report, superseded
+- **QUICK-VERIFICATION.md** - Old quick verification notes
+- **SCRAPER_ANALYSIS.md** - Old scraper analysis documentation
+- **SCRAPER_DOCS.md** - Old scraper documentation
+- **AGENTS.md** - Old agent documentation from Spec Kit era
+- **AUGUST_2025_COMPLETION_REPORT.md** - Consolidated into 2025_SCRAPING_REPORT.md
+- **SESSION-2025-10-17-COMPLETE-FIXES.md** - Session report (useful reference, archived)
+- **SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md** - Session report (useful reference, archived)
+
+**2. Updated 2025_SCRAPING_REPORT.md** (Major Consolidation)
+- **Status**: Updated from "IN PROGRESS 8/10 months" → "✅ COMPLETE 10/10 months (100%)"
+- **Last Updated**: October 17, 2025 → October 19, 2025
+- **Document Version**: 1.0 → 2.0
+- **Statistics Updated**:
+  - Total trips: 2,308 → 3,755
+  - Dates scraped: 242/304 (79.6%) → 304/304 (100%)
+  - Months complete: 8/10 → 10/10
+  - QC pass rate: 100% → 99.85% (1 accepted Aug 7 issue)
+- **Added July 2025 Section**:
+  - 31 dates, 705 trips, 7 batches, 100% QC pass rate
+  - Second highest volume month
+- **Added August 2025 Section** (from archived report):
+  - 31 dates, 733 trips (highest month), 7 batches, 96.8% QC pass rate
+  - Technical issues documented (Poseidon Aug 1, Dolphin Aug 7)
+  - Scraper enhancements documented (catch comparison logic)
+- **Updated Monthly Breakdown Table**: Added July/August rows with complete data
+- **Updated Next Steps**: Changed from "Complete July-August" to "November 2025 Forward"
+- **Updated File References**: Added AUGUST_2025_COMPLETION_REPORT.md to archive list
+
+**3. Compliance with DOCUMENTATION_STANDARDS.md**
+- ✅ Single source of truth maintained (README.md)
+- ✅ Consolidation over creation (no new monthly reports)
+- ✅ Context continuity preserved (archived, not deleted)
+- ✅ Audit trail compliance (this changelog entry)
+- ✅ Master documents never deleted
+- ✅ Superseded docs moved to archive/ folder
+
+### Rationale
+
+**Documentation Sprawl Issue**:
+- 14 orphaned/outdated .md files cluttering project root
+- Information duplicated across multiple files
+- Stats/metrics scattered instead of consolidated
+- No clear entry point for current status
+
+**Solution Approach**:
+1. Deep analysis of all .md files (excluding node_modules)
+2. Classification: Master docs (keep), Superseded (archive), Outdated (archive)
+3. Consolidation of August report into annual 2025 report
+4. Archive instead of delete (preserve historical context)
+5. Update DOC_CHANGELOG.md for audit trail
+
+**Compliance**:
+- Follows DOCUMENTATION_STANDARDS.md mandates
+- Maintains single source of truth (README.md)
+- Preserves historical context in archive/
+- Complete audit trail in this changelog
+
+### Files Modified
+
+**Updated**:
+- `2025_SCRAPING_REPORT.md` (major update - July/August added, stats updated to 100%)
+- `DOC_CHANGELOG.md` (this entry)
+
+**Archived** (14 files moved to `archive/`):
+- START_HERE.md, SESSION_SUMMARY.md, landing.md (untracked)
+- MOBILE_MULTISELECT_UX_ISSUE.md, PARSER_BUG_REPORT.md
+- FILTERPANEL_VERIFICATION_REPORT.md, SHADCN-SIDEBAR-VERIFICATION-REPORT.md
+- QUICK-VERIFICATION.md, SCRAPER_ANALYSIS.md, SCRAPER_DOCS.md
+- AGENTS.md, AUGUST_2025_COMPLETION_REPORT.md
+- SESSION-2025-10-17-COMPLETE-FIXES.md, SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md
+
+**Unchanged** (Master docs - always current):
+- README.md (single source of truth)
+- COMPREHENSIVE_QC_VERIFICATION.md (master QC report)
+- 2024_SCRAPING_REPORT.md (2024 consolidated)
+- DOCUMENTATION_STANDARDS.md (governance)
+- CLAUDE_OPERATING_GUIDE.md (operational guide)
+- DOC_CHANGELOG.md (audit trail)
+
+### Impact
+
+**Before Cleanup**:
+- 45+ .md files in project root (excluding specs/, archive/, node_modules/)
+- Confusing navigation - unclear which docs are current
+- Duplicate/outdated information scattered
+- No clear "what's the current status?" answer
+
+**After Cleanup**:
+- 6 master documents (always current)
+- 14 files properly archived (historical context preserved)
+- Clear single source of truth (README.md)
+- 2025_SCRAPING_REPORT.md now reflects 100% completion
+- All documentation hygiene standards met
+
+**Next Session Benefits**:
+- Clear entry point (README.md)
+- No orphaned/outdated files in root
+- Complete audit trail of what was cleaned up
+- Easy to maintain going forward
+
+---
+
 ## 2025-10-19 (Evening): Dashboard UX Improvements Complete
 
 ### Changes Made

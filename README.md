@@ -88,7 +88,7 @@
 **Session Summaries**:
 - [SESSION-2025-10-19-SPEC-010-PHASE-2-COMPLETE.md](SESSION-2025-10-19-SPEC-010-PHASE-2-COMPLETE.md) - **SPEC-010 Phase 1+2 complete** (Oct 19, 2025)
 - [specs/010-pipeline-hardening/IMPLEMENTATION_LOG.md](specs/010-pipeline-hardening/IMPLEMENTATION_LOG.md) - SPEC-010 development timeline
-- [SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md](SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md) - Dashboard UI/UX improvements (Oct 18, 2025)
+- [archive/SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md](archive/SESSION-2025-10-18-DASHBOARD-IMPROVEMENTS.md) - Dashboard UI/UX improvements (Oct 18, 2025) - ARCHIVED
 
 **Data Quality Updates**:
 - [MOON_PHASE_DURATION_MAPPING.md](MOON_PHASE_DURATION_MAPPING.md) - Trip duration normalization (Oct 18, 2025)
