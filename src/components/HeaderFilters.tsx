@@ -257,9 +257,12 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
     <>
       {/* Fixed-height sticky container - height never changes (prevents jitter) */}
       <div
-        className="sticky top-0 z-10 border-b bg-muted/40 md:relative md:h-auto"
+        className={cn(
+          "sticky top-0 z-10 border-b bg-muted/40 md:relative md:h-auto",
+          // Mobile-only fixed heights - desktop always auto
+          isCollapsed ? "h-[48px]" : "h-[160px]"
+        )}
         style={{
-          height: isCollapsed ? '48px' : '160px', // Fixed heights for each state
           overflowAnchor: 'none' // Prevent scroll anchor shifts
         }}
       >
