@@ -277,7 +277,7 @@ function App() {
                     onClick={() => handleMetricCardClick('species')}
                   >
                     <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                      <div className="absolute top-6 left-6 flex items-center gap-2">
+                      <div className="absolute top-3 left-6 flex items-center gap-2">
                         <Trophy className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                         <span className="text-sm font-medium text-muted-foreground">Catch</span>
                       </div>
@@ -293,7 +293,7 @@ function App() {
                     onClick={() => handleMetricCardClick('boats')}
                   >
                     <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                      <div className="absolute top-6 left-6 flex items-center gap-2">
+                      <div className="absolute top-3 left-6 flex items-center gap-2">
                         <Anchor className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                         <span className="text-sm font-medium text-muted-foreground">Trips</span>
                       </div>
@@ -308,7 +308,7 @@ function App() {
                     /* CARD 3 (Boat View): Avg Fish/Angler */
                     <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                        <div className="absolute top-6 left-6 flex items-center gap-2">
+                        <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Users className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-sm font-medium text-muted-foreground">Avg / Angler</span>
                         </div>
@@ -324,7 +324,7 @@ function App() {
                       onClick={() => handleMetricCardClick('boats')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                        <div className="absolute top-6 left-6 flex items-center gap-2">
+                        <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Ship className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-sm font-medium text-muted-foreground">Fleet</span>
                         </div>
@@ -343,7 +343,7 @@ function App() {
                       onClick={() => handleMetricCardClick('moon')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                        <div className="absolute top-6 left-6 flex items-center gap-2">
+                        <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Moon className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-sm font-medium text-muted-foreground">Moon Phase</span>
                         </div>
@@ -359,7 +359,7 @@ function App() {
                       onClick={() => handleMetricCardClick('species')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
-                        <div className="absolute top-6 left-6 flex items-center gap-2">
+                        <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Fish className="h-4 w-4 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-sm font-medium text-muted-foreground">Species</span>
                         </div>
