@@ -258,7 +258,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
       {/* Fixed-height sticky container - height never changes (prevents jitter) */}
       <div
         className={cn(
-          "sticky top-0 z-10 border-b bg-muted/40 md:relative md:h-auto",
+          "sticky top-0 z-50 border-b bg-muted/40 md:relative md:h-auto",
           // Mobile-only fixed heights - desktop always auto
           isCollapsed ? "h-[48px]" : "h-[160px]"
         )}
@@ -285,7 +285,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
         {/* Full filters - hidden when collapsed on mobile, always visible on desktop */}
         <div
           className={cn(
-            "absolute inset-0 md:relative transition-opacity duration-200 ease-in-out overflow-hidden",
+            "absolute inset-0 md:relative transition-opacity duration-200 ease-in-out overflow-visible",
             isCollapsed ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto" : "opacity-100 pointer-events-auto"
           )}
         >
