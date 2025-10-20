@@ -254,30 +254,38 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
   }
 
   return (
-    <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
-      {/* Compact bar - only visible when collapsed */}
+    <>
+      {/* Fixed-height sticky container - height never changes (prevents jitter) */}
       <div
-        className={cn(
-          "overflow-hidden transition-all duration-200 ease-in-out md:hidden",
-          isCollapsed ? "max-h-12 opacity-100" : "max-h-0 opacity-0"
-        )}
+        className="sticky top-0 z-10 border-b bg-muted/40 md:relative md:h-auto"
+        style={{
+          height: isCollapsed ? '48px' : '160px', // Fixed heights for each state
+          overflowAnchor: 'none' // Prevent scroll anchor shifts
+        }}
       >
-        <button
-          onClick={onToggleCollapse}
-          className="w-full flex items-center gap-2 px-4 py-3 text-sm text-left hover:bg-muted/60 transition-colors duration-150"
+        {/* Compact bar - only visible when collapsed */}
+        <div
+          className={cn(
+            "absolute inset-0 md:hidden transition-opacity duration-200 ease-in-out",
+            isCollapsed ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          )}
         >
-          <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200" />
-          <span className="text-muted-foreground truncate">{getFilterSummary()}</span>
-        </button>
-      </div>
+          <button
+            onClick={onToggleCollapse}
+            className="w-full h-full flex items-center gap-2 px-4 text-sm text-left hover:bg-muted/60 transition-colors duration-150"
+          >
+            <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200" />
+            <span className="text-muted-foreground truncate">{getFilterSummary()}</span>
+          </button>
+        </div>
 
-      {/* Full filters - hidden when collapsed on mobile, always visible on desktop */}
-      <div
-        className={cn(
-          "overflow-hidden transition-all duration-200 ease-in-out",
-          isCollapsed ? "max-h-0 opacity-0 md:max-h-none md:opacity-100" : "max-h-96 opacity-100"
-        )}
-      >
+        {/* Full filters - hidden when collapsed on mobile, always visible on desktop */}
+        <div
+          className={cn(
+            "absolute inset-0 md:relative transition-opacity duration-200 ease-in-out overflow-hidden",
+            isCollapsed ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto" : "opacity-100 pointer-events-auto"
+          )}
+        >
         <div className="container mx-auto p-4 md:px-6 py-2">
           <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
@@ -390,6 +398,15 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
         </div>
       </div>
       </div>
-    </div>
+      </div>
+
+      {/* Placeholder to maintain page flow - prevents content jump on mobile */}
+      <div
+        className="md:hidden transition-all duration-200 ease-in-out"
+        style={{
+          height: isCollapsed ? '0px' : '0px' // Both 0 since sticky container handles height
+        }}
+      />
+    </>
   )
 }
