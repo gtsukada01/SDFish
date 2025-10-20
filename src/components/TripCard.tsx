@@ -98,7 +98,7 @@ function SpeciesInlineMobile({ speciesBreakdown }: { speciesBreakdown: { species
           <span className="text-foreground">, </span>
           <Sheet>
             <SheetTrigger asChild>
-              <button className="text-muted-foreground hover:text-foreground underline decoration-dotted cursor-pointer transition-colors">
+              <button className="text-foreground underline decoration-dotted cursor-pointer transition-colors hover:opacity-80">
                 +{remainingSpecies.length}
               </button>
             </SheetTrigger>
