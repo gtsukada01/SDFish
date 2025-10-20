@@ -53,25 +53,33 @@ function App() {
     const scrollContainer = scrollContainerRef.current
     if (!scrollContainer) return
 
-    const COLLAPSE_THRESHOLD = 50 // pixels
+    const COLLAPSE_THRESHOLD = 50 // pixels - scroll down to collapse
+    const EXPAND_THRESHOLD = 30 // pixels - must scroll back above this to expand
     let lastScrollTop = 0
     let collapsed = false
+    let ticking = false
 
     const handleScroll = () => {
       const scrollTop = scrollContainer.scrollTop
 
-      // Scroll down >50px = collapse
-      if (scrollTop > COLLAPSE_THRESHOLD && !collapsed) {
-        collapsed = true
-        setIsFiltersCollapsed(true)
-      }
-      // Scroll up any amount = expand
-      else if (scrollTop < lastScrollTop && collapsed) {
-        collapsed = false
-        setIsFiltersCollapsed(false)
-      }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Scroll down past threshold = collapse
+          if (scrollTop > COLLAPSE_THRESHOLD && !collapsed) {
+            collapsed = true
+            setIsFiltersCollapsed(true)
+          }
+          // Scroll up and back above expand threshold = expand
+          else if (scrollTop < EXPAND_THRESHOLD && collapsed) {
+            collapsed = false
+            setIsFiltersCollapsed(false)
+          }
 
-      lastScrollTop = scrollTop
+          lastScrollTop = scrollTop
+          ticking = false
+        })
+        ticking = true
+      }
     }
 
     scrollContainer.addEventListener('scroll', handleScroll, { passive: true })
