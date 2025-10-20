@@ -6,6 +6,9 @@
 # macOS artifacts
 .DS_Store
 
+# Dependencies
+node_modules/
+
 # Local reference assets
 \[backup\] index-realdata.html
 @index
