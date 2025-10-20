@@ -253,26 +253,33 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
     return parts.join(' · ')
   }
 
-  // Compact bar for mobile (collapsed state)
-  if (isCollapsed) {
-    return (
-      <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
+  return (
+    <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
+      {/* Compact bar - only visible when collapsed */}
+      <div
+        className={cn(
+          "overflow-hidden transition-all duration-200 ease-in-out md:hidden",
+          isCollapsed ? "max-h-12 opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
         <button
           onClick={onToggleCollapse}
-          className="w-full flex items-center gap-2 px-4 py-3 text-sm text-left hover:bg-muted/60 transition-colors"
+          className="w-full flex items-center gap-2 px-4 py-3 text-sm text-left hover:bg-muted/60 transition-colors duration-150"
         >
-          <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0" />
+          <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0 transition-transform duration-200" />
           <span className="text-muted-foreground truncate">{getFilterSummary()}</span>
         </button>
       </div>
-    )
-  }
 
-  // Full filters (expanded state)
-  return (
-    <div className="sticky top-0 z-10 border-b bg-muted/40 md:relative">
-      <div className="container mx-auto p-4 md:px-6 py-2">
-        <div className="flex items-center gap-4 flex-wrap">
+      {/* Full filters - hidden when collapsed on mobile, always visible on desktop */}
+      <div
+        className={cn(
+          "overflow-hidden transition-all duration-200 ease-in-out",
+          isCollapsed ? "max-h-0 opacity-0 md:max-h-none md:opacity-100" : "max-h-96 opacity-100"
+        )}
+      >
+        <div className="container mx-auto p-4 md:px-6 py-2">
+          <div className="flex items-center gap-4 flex-wrap">
         {/* Date Range Preset Selector */}
         <Select value={selectedPreset} onValueChange={handlePresetChange}>
           <SelectTrigger className="h-8 w-full md:w-[200px]">
@@ -381,6 +388,7 @@ export function HeaderFilters({ filters, onFiltersChange, selectedLandings, isCo
           </SelectContent>
         </Select>
         </div>
+      </div>
       </div>
     </div>
   )

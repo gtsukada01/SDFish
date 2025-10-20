@@ -55,16 +55,19 @@ function App() {
 
     const COLLAPSE_THRESHOLD = 50 // pixels
     let lastScrollTop = 0
+    let collapsed = false
 
     const handleScroll = () => {
       const scrollTop = scrollContainer.scrollTop
 
       // Scroll down >50px = collapse
-      if (scrollTop > COLLAPSE_THRESHOLD && !isFiltersCollapsed) {
+      if (scrollTop > COLLAPSE_THRESHOLD && !collapsed) {
+        collapsed = true
         setIsFiltersCollapsed(true)
       }
       // Scroll up any amount = expand
-      else if (scrollTop < lastScrollTop && isFiltersCollapsed) {
+      else if (scrollTop < lastScrollTop && collapsed) {
+        collapsed = false
         setIsFiltersCollapsed(false)
       }
 
@@ -73,7 +76,7 @@ function App() {
 
     scrollContainer.addEventListener('scroll', handleScroll, { passive: true })
     return () => scrollContainer.removeEventListener('scroll', handleScroll)
-  }, [isFiltersCollapsed])
+  }, [isLoading]) // Re-run when loading completes and ref becomes available
 
   async function loadData() {
       setIsLoading(true)
