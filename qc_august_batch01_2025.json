@@ -1,0 +1,87 @@
+{
+  "date_range": {
+    "start": "2025-08-01",
+    "end": "2025-08-05"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 4,
+    "failed": 1,
+    "errors": 0,
+    "pass_rate": 80.0
+  },
+  "reports": [
+    {
+      "date": "2025-08-01",
+      "status": "FAIL",
+      "source_boat_count": 27,
+      "database_boat_count": 27,
+      "matches": 26,
+      "mismatches": [
+        {
+          "boat": "Poseidon",
+          "errors": [
+            "Missing species: 'bluefin tuna' (count=37) not in database",
+            "Missing species: 'yellowtail' (count=2) not in database"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Missing species: 'bluefin tuna' (count=37) not in database",
+        "Missing species: 'yellowtail' (count=2) not in database"
+      ],
+      "timestamp": "2025-10-17T14:59:40.961454"
+    },
+    {
+      "date": "2025-08-02",
+      "status": "PASS",
+      "source_boat_count": 27,
+      "database_boat_count": 27,
+      "matches": 27,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:59:44.860085"
+    },
+    {
+      "date": "2025-08-03",
+      "status": "PASS",
+      "source_boat_count": 33,
+      "database_boat_count": 33,
+      "matches": 33,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:59:47.735452"
+    },
+    {
+      "date": "2025-08-04",
+      "status": "PASS",
+      "source_boat_count": 22,
+      "database_boat_count": 22,
+      "matches": 22,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:59:50.501699"
+    },
+    {
+      "date": "2025-08-05",
+      "status": "PASS",
+      "source_boat_count": 23,
+      "database_boat_count": 23,
+      "matches": 23,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:59:53.549153"
+    }
+  ],
+  "timestamp": "2025-10-17T14:59:53.549672"
+}

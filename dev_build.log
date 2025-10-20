@@ -1,0 +1,14 @@
+
+> sd-fishing-dashboard@0.1.0 dev
+> npm run dev:css & npm run dev:js
+
+
+> sd-fishing-dashboard@0.1.0 dev:js
+> esbuild src/main.tsx --bundle --format=esm --target=es2020 --outfile=assets/main.js --sourcemap --watch --loader:.tsx=tsx --loader:.ts=ts
+
+
+> sd-fishing-dashboard@0.1.0 dev:css
+> tailwindcss -i ./src/styles/globals.css -o ./assets/styles.css --watch
+
+[watch] build finished, watching for changes...
+[watch] stopped automatically because stdin was closed (use "--watch=forever" to keep watching even after stdin is closed)

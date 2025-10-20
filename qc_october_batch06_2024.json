@@ -1,0 +1,88 @@
+{
+  "date_range": {
+    "start": "2024-10-26",
+    "end": "2024-10-31"
+  },
+  "summary": {
+    "total_dates": 6,
+    "passed": 6,
+    "failed": 0,
+    "errors": 0,
+    "pass_rate": 100.0
+  },
+  "reports": [
+    {
+      "date": "2024-10-26",
+      "status": "PASS",
+      "source_boat_count": 18,
+      "database_boat_count": 18,
+      "matches": 18,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:02:53.037902"
+    },
+    {
+      "date": "2024-10-27",
+      "status": "PASS",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 24,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:02:56.042303"
+    },
+    {
+      "date": "2024-10-28",
+      "status": "PASS",
+      "source_boat_count": 6,
+      "database_boat_count": 6,
+      "matches": 6,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:02:58.798682"
+    },
+    {
+      "date": "2024-10-29",
+      "status": "PASS",
+      "source_boat_count": 2,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:03:01.539135"
+    },
+    {
+      "date": "2024-10-30",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:03:04.413178"
+    },
+    {
+      "date": "2024-10-31",
+      "status": "PASS",
+      "source_boat_count": 4,
+      "database_boat_count": 4,
+      "matches": 4,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:03:07.204475"
+    }
+  ],
+  "timestamp": "2025-10-17T15:03:07.204994"
+}

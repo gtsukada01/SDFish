@@ -1,0 +1,64 @@
+{
+  "month": "April",
+  "month_num": 4,
+  "total_batches": 6,
+  "completed_batches": 6,
+  "failed_batches": 0,
+  "total_dates": 30,
+  "batch_results": [
+    {
+      "batch_num": 1,
+      "start_date": "2024-04-01",
+      "end_date": "2024-04-05",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch01_2024.json"
+    },
+    {
+      "batch_num": 2,
+      "start_date": "2024-04-06",
+      "end_date": "2024-04-10",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch02_2024.json"
+    },
+    {
+      "batch_num": 3,
+      "start_date": "2024-04-11",
+      "end_date": "2024-04-15",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch03_2024.json"
+    },
+    {
+      "batch_num": 4,
+      "start_date": "2024-04-16",
+      "end_date": "2024-04-20",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch04_2024.json"
+    },
+    {
+      "batch_num": 5,
+      "start_date": "2024-04-21",
+      "end_date": "2024-04-25",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch05_2024.json"
+    },
+    {
+      "batch_num": 6,
+      "start_date": "2024-04-26",
+      "end_date": "2024-04-30",
+      "days": 5,
+      "pass_rate": 100.0,
+      "dates_validated": 5,
+      "qc_file": "qc_april_batch06_2024.json"
+    }
+  ]
+}

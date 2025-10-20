@@ -1,0 +1,93 @@
+{
+  "date_range": {
+    "start": "2025-08-06",
+    "end": "2025-08-10"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 4,
+    "failed": 1,
+    "errors": 0,
+    "pass_rate": 80.0
+  },
+  "reports": [
+    {
+      "date": "2025-08-06",
+      "status": "PASS",
+      "source_boat_count": 25,
+      "database_boat_count": 25,
+      "matches": 25,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:50:30.760578"
+    },
+    {
+      "date": "2025-08-07",
+      "status": "FAIL",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 23,
+      "mismatches": [
+        {
+          "boat": "Dolphin",
+          "errors": [
+            "Species count mismatch: 'cabezon' source=1 db=3",
+            "Missing species: 'sheephead' (count=1) not in database",
+            "Species count mismatch: 'calico bass' source=51 db=48",
+            "Species count mismatch: 'rockfish' source=21 db=28",
+            "Extra species: 'barracuda' (count=2) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'cabezon' source=1 db=3",
+        "Missing species: 'sheephead' (count=1) not in database",
+        "Species count mismatch: 'calico bass' source=51 db=48",
+        "Species count mismatch: 'rockfish' source=21 db=28",
+        "Extra species: 'barracuda' (count=2) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T15:50:33.599958"
+    },
+    {
+      "date": "2025-08-08",
+      "status": "PASS",
+      "source_boat_count": 23,
+      "database_boat_count": 23,
+      "matches": 23,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:50:36.540454"
+    },
+    {
+      "date": "2025-08-09",
+      "status": "PASS",
+      "source_boat_count": 19,
+      "database_boat_count": 19,
+      "matches": 19,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:50:39.428558"
+    },
+    {
+      "date": "2025-08-10",
+      "status": "PASS",
+      "source_boat_count": 26,
+      "database_boat_count": 26,
+      "matches": 26,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T15:50:42.328693"
+    }
+  ],
+  "timestamp": "2025-10-17T15:50:42.329207"
+}

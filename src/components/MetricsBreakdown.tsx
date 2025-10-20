@@ -1,5 +1,6 @@
 import React from 'react'
 import { SummaryMetricsResponse } from '../../scripts/api/types'
+import { normalizeSpeciesName } from '@/lib/utils'
 
 interface MetricsBreakdownProps {
   metrics: SummaryMetricsResponse
@@ -9,13 +10,25 @@ interface MetricsBreakdownProps {
 export function MetricsBreakdown({ metrics, mode = 'boats' }: MetricsBreakdownProps) {
   // Show species breakdown if mode is 'species'
   if (mode === 'species') {
-    // Show all species caught
-    const sortedSpecies = [...metrics.per_species].sort((a, b) => b.total_fish - a.total_fish)
-    const maxFish = Math.max(...sortedSpecies.map(s => s.total_fish))
+    // Normalize and aggregate species (group variants like "bluefin tuna (up to 50 pounds)" → "bluefin tuna")
+    const speciesMap = new Map<string, number>()
+
+    metrics.per_species.forEach(species => {
+      const normalizedName = normalizeSpeciesName(species.species)
+      const currentTotal = speciesMap.get(normalizedName) || 0
+      speciesMap.set(normalizedName, currentTotal + species.total_fish)
+    })
+
+    // Convert map to array and sort by count descending
+    const aggregatedSpecies = Array.from(speciesMap.entries())
+      .map(([species, total_fish]) => ({ species, total_fish }))
+      .sort((a, b) => b.total_fish - a.total_fish)
+
+    const maxFish = Math.max(...aggregatedSpecies.map(s => s.total_fish))
 
     return (
       <div className="space-y-2">
-        {sortedSpecies.map((species) => {
+        {aggregatedSpecies.map((species) => {
           const percentage = (species.total_fish / maxFish) * 100
           return (
             <div key={species.species} className="space-y-1">

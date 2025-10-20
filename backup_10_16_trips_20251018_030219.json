@@ -1,0 +1,209 @@
+{
+  "timestamp": "2025-10-18T03:02:19.710426",
+  "date": "2025-10-16",
+  "trips": [
+    {
+      "id": 11111,
+      "boat_id": 92,
+      "trip_date": "2025-10-16",
+      "anglers": 10,
+      "trip_duration": "1/2 Day Twilight",
+      "total_fish": null,
+      "landing_id": 11
+    },
+    {
+      "id": 11113,
+      "boat_id": 50,
+      "trip_date": "2025-10-16",
+      "anglers": 24,
+      "trip_duration": "1/2 Day AM",
+      "total_fish": null,
+      "landing_id": 11
+    },
+    {
+      "id": 11117,
+      "boat_id": 65,
+      "trip_date": "2025-10-16",
+      "anglers": 12,
+      "trip_duration": "1/2 Day PM",
+      "total_fish": null,
+      "landing_id": 14
+    },
+    {
+      "id": 11119,
+      "boat_id": 69,
+      "trip_date": "2025-10-16",
+      "anglers": 29,
+      "trip_duration": "1.5 Day",
+      "total_fish": null,
+      "landing_id": 14
+    },
+    {
+      "id": 11110,
+      "boat_id": 39,
+      "trip_date": "2025-10-16",
+      "anglers": 15,
+      "trip_duration": "1/2 Day AM",
+      "total_fish": null,
+      "landing_id": 10
+    },
+    {
+      "id": 11112,
+      "boat_id": 44,
+      "trip_date": "2025-10-16",
+      "anglers": 18,
+      "trip_duration": "1.5 Day",
+      "total_fish": null,
+      "landing_id": 11
+    },
+    {
+      "id": 11114,
+      "boat_id": 58,
+      "trip_date": "2025-10-16",
+      "anglers": 15,
+      "trip_duration": "1/2 Day AM",
+      "total_fish": null,
+      "landing_id": 12
+    },
+    {
+      "id": 11116,
+      "boat_id": 65,
+      "trip_date": "2025-10-16",
+      "anglers": 27,
+      "trip_duration": "1/2 Day AM",
+      "total_fish": null,
+      "landing_id": 14
+    },
+    {
+      "id": 11118,
+      "boat_id": 67,
+      "trip_date": "2025-10-16",
+      "anglers": 18,
+      "trip_duration": "Full Day Offshore",
+      "total_fish": null,
+      "landing_id": 14
+    }
+  ],
+  "catches": [
+    {
+      "id": 28036,
+      "trip_id": 11110,
+      "species": "Bluefin Tuna (Up To 90 Pounds)",
+      "count": 2
+    },
+    {
+      "id": 28037,
+      "trip_id": 11110,
+      "species": "Rockfish",
+      "count": 76
+    },
+    {
+      "id": 28038,
+      "trip_id": 11111,
+      "species": "Spiny Lobster",
+      "count": 11
+    },
+    {
+      "id": 28039,
+      "trip_id": 11111,
+      "species": "Rock Crab",
+      "count": 5
+    },
+    {
+      "id": 28040,
+      "trip_id": 11112,
+      "species": "Bluefin Tuna",
+      "count": 4
+    },
+    {
+      "id": 28041,
+      "trip_id": 11112,
+      "species": "Sheephead",
+      "count": 10
+    },
+    {
+      "id": 28042,
+      "trip_id": 11112,
+      "species": "Yellowtail",
+      "count": 3
+    },
+    {
+      "id": 28043,
+      "trip_id": 11112,
+      "species": "Bonito",
+      "count": 20
+    },
+    {
+      "id": 28044,
+      "trip_id": 11112,
+      "species": "Rockfish",
+      "count": 30
+    },
+    {
+      "id": 28045,
+      "trip_id": 11113,
+      "species": "Rockfish",
+      "count": 104
+    },
+    {
+      "id": 28046,
+      "trip_id": 11114,
+      "species": "Rockfish",
+      "count": 65
+    },
+    {
+      "id": 28048,
+      "trip_id": 11116,
+      "species": "Bluefin Tuna (Up To 110 Pounds)",
+      "count": 2
+    },
+    {
+      "id": 28049,
+      "trip_id": 11116,
+      "species": "Rockfish",
+      "count": 27
+    },
+    {
+      "id": 28050,
+      "trip_id": 11116,
+      "species": "Vermilion Rockfish",
+      "count": 8
+    },
+    {
+      "id": 28051,
+      "trip_id": 11117,
+      "species": "Sculpin",
+      "count": 2
+    },
+    {
+      "id": 28052,
+      "trip_id": 11117,
+      "species": "Sheephead",
+      "count": 4
+    },
+    {
+      "id": 28053,
+      "trip_id": 11117,
+      "species": "Calico Bass",
+      "count": 3
+    },
+    {
+      "id": 28054,
+      "trip_id": 11117,
+      "species": "Whitefish",
+      "count": 79
+    },
+    {
+      "id": 28055,
+      "trip_id": 11118,
+      "species": "Bluefin Tuna",
+      "count": 2
+    },
+    {
+      "id": 28056,
+      "trip_id": 11119,
+      "species": "Bluefin Tuna",
+      "count": 5
+    }
+  ]
+}

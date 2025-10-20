@@ -1,0 +1,76 @@
+{
+  "date_range": {
+    "start": "2025-05-21",
+    "end": "2025-05-25"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 5,
+    "failed": 0,
+    "errors": 0,
+    "pass_rate": 100.0
+  },
+  "reports": [
+    {
+      "date": "2025-05-21",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:27:15.193565"
+    },
+    {
+      "date": "2025-05-22",
+      "status": "PASS",
+      "source_boat_count": 5,
+      "database_boat_count": 5,
+      "matches": 5,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:27:17.938054"
+    },
+    {
+      "date": "2025-05-23",
+      "status": "PASS",
+      "source_boat_count": 16,
+      "database_boat_count": 16,
+      "matches": 16,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:27:20.696835"
+    },
+    {
+      "date": "2025-05-24",
+      "status": "PASS",
+      "source_boat_count": 16,
+      "database_boat_count": 16,
+      "matches": 16,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:27:23.457268"
+    },
+    {
+      "date": "2025-05-25",
+      "status": "PASS",
+      "source_boat_count": 18,
+      "database_boat_count": 18,
+      "matches": 18,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:27:26.325303"
+    }
+  ],
+  "timestamp": "2025-10-17T14:27:26.325818"
+}

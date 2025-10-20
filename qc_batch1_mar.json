@@ -1,0 +1,87 @@
+{
+  "date_range": {
+    "start": "2025-03-01",
+    "end": "2025-03-05"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 4,
+    "failed": 1,
+    "errors": 0,
+    "pass_rate": 80.0
+  },
+  "reports": [
+    {
+      "date": "2025-03-01",
+      "status": "FAIL",
+      "source_boat_count": 6,
+      "database_boat_count": 5,
+      "matches": 5,
+      "mismatches": [
+        {
+          "boat": "Premier",
+          "errors": [
+            "Species count mismatch: 'sculpin' source=15 db=58",
+            "Extra species: 'whitefish' (count=1) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'sculpin' source=15 db=58",
+        "Extra species: 'whitefish' (count=1) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T03:23:12.988921"
+    },
+    {
+      "date": "2025-03-02",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T03:23:15.762816"
+    },
+    {
+      "date": "2025-03-03",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T03:23:18.468117"
+    },
+    {
+      "date": "2025-03-04",
+      "status": "PASS",
+      "source_boat_count": 1,
+      "database_boat_count": 1,
+      "matches": 1,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T03:23:21.177153"
+    },
+    {
+      "date": "2025-03-05",
+      "status": "PASS",
+      "source_boat_count": 1,
+      "database_boat_count": 1,
+      "matches": 1,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T03:23:23.906316"
+    }
+  ],
+  "timestamp": "2025-10-17T03:23:23.906841"
+}

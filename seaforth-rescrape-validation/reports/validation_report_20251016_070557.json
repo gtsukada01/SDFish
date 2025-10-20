@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-10-16T07:03:59.552831",
+  "duration_minutes": 1.9603288166666668,
+  "backup_file": null,
+  "original_trip_count": 0,
+  "trips_deleted": 0,
+  "trips_inserted": 96,
+  "trips_skipped": 38,
+  "dates_processed": 22,
+  "validation_errors": [
+    "2025-09-25: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-09-26: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-09-26: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-09-27: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-09-28: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-09-30: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-03: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-05: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-06: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-07: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-07: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-07: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-08: Invalid boat name 'Seaforth Sportfishing'",
+    "2025-10-12: Invalid boat name 'Seaforth Sportfishing'"
+  ],
+  "boat_names_found": [
+    "Apollo",
+    "Aztec",
+    "Cortez",
+    "Highliner",
+    "New Seaforth",
+    "Pacific Voyager",
+    "Pacifica",
+    "Polaris Supreme",
+    "San Diego",
+    "Sea Watch",
+    "Tribute",
+    "Voyager"
+  ],
+  "species_comparison": {},
+  "backup_info": {
+    "trip_count": 0,
+    "backup_file": null
+  },
+  "constitution_version": "1.0.0",
+  "specification": "003-seaforth-boat-fix"
+}

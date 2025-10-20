@@ -1,0 +1,335 @@
+{
+  "date_range": {
+    "start": "2025-09-01",
+    "end": "2025-09-05"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 0,
+    "failed": 5,
+    "errors": 0,
+    "pass_rate": 0.0
+  },
+  "reports": [
+    {
+      "date": "2025-09-01",
+      "status": "FAIL",
+      "source_boat_count": 26,
+      "database_boat_count": 26,
+      "matches": 22,
+      "mismatches": [
+        {
+          "boat": "Dolphin",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=47 db=53",
+            "Species count mismatch: 'sand bass' source=8 db=25",
+            "Species count mismatch: 'rockfish' source=81 db=56"
+          ]
+        },
+        {
+          "boat": "Premier",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day Twilight'",
+            "Anglers mismatch: source=22 db=31",
+            "Missing species: 'sheephead' (count=1) not in database",
+            "Missing species: 'yellowtail' (count=1) not in database",
+            "Missing species: 'calico bass' (count=31) not in database",
+            "Missing species: 'rockfish' (count=7) not in database"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+            "Anglers mismatch: source=48 db=51",
+            "Species count mismatch: 'sand bass' source=4 db=12",
+            "Species count mismatch: 'sculpin' source=22 db=1",
+            "Species count mismatch: 'calico bass' source=19 db=18",
+            "Species count mismatch: 'rockfish' source=34 db=5",
+            "Extra species: 'halibut' (count=1) in database but not on source page",
+            "Extra species: 'sheephead' (count=8) in database but not on source page"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Species count mismatch: 'sand bass' source=1 db=12",
+            "Species count mismatch: 'sheephead' source=3 db=8",
+            "Species count mismatch: 'calico bass' source=19 db=18",
+            "Missing species: 'bonito' (count=1) not in database",
+            "Species count mismatch: 'rockfish' source=1 db=5",
+            "Extra species: 'halibut' (count=1) in database but not on source page",
+            "Extra species: 'sculpin' (count=1) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=47 db=53",
+        "Species count mismatch: 'sand bass' source=8 db=25",
+        "Species count mismatch: 'rockfish' source=81 db=56",
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day Twilight'",
+        "Anglers mismatch: source=22 db=31",
+        "Missing species: 'sheephead' (count=1) not in database",
+        "Missing species: 'yellowtail' (count=1) not in database",
+        "Missing species: 'calico bass' (count=31) not in database",
+        "Missing species: 'rockfish' (count=7) not in database",
+        "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+        "Anglers mismatch: source=48 db=51",
+        "Species count mismatch: 'sand bass' source=4 db=12",
+        "Species count mismatch: 'sculpin' source=22 db=1",
+        "Species count mismatch: 'calico bass' source=19 db=18",
+        "Species count mismatch: 'rockfish' source=34 db=5",
+        "Extra species: 'halibut' (count=1) in database but not on source page",
+        "Extra species: 'sheephead' (count=8) in database but not on source page",
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Species count mismatch: 'sand bass' source=1 db=12",
+        "Species count mismatch: 'sheephead' source=3 db=8",
+        "Species count mismatch: 'calico bass' source=19 db=18",
+        "Missing species: 'bonito' (count=1) not in database",
+        "Species count mismatch: 'rockfish' source=1 db=5",
+        "Extra species: 'halibut' (count=1) in database but not on source page",
+        "Extra species: 'sculpin' (count=1) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T02:19:00.624820"
+    },
+    {
+      "date": "2025-09-02",
+      "status": "FAIL",
+      "source_boat_count": 15,
+      "database_boat_count": 15,
+      "matches": 13,
+      "mismatches": [
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+            "Anglers mismatch: source=29 db=8",
+            "Missing species: 'sand bass' (count=7) not in database",
+            "Missing species: 'sculpin' (count=8) not in database",
+            "Species count mismatch: 'calico bass' source=8 db=6",
+            "Missing species: 'whitefish' (count=1) not in database",
+            "Missing species: 'rockfish' (count=38) not in database",
+            "Extra species: 'barracuda' (count=2) in database but not on source page",
+            "Extra species: 'sheephead' (count=2) in database but not on source page",
+            "Extra species: 'yellowtail' (count=2) in database but not on source page"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=22 db=8",
+            "Species count mismatch: 'yellowtail' source=3 db=2",
+            "Species count mismatch: 'calico bass' source=13 db=6",
+            "Missing species: 'bonito' (count=5) not in database",
+            "Extra species: 'barracuda' (count=2) in database but not on source page",
+            "Extra species: 'sheephead' (count=2) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+        "Anglers mismatch: source=29 db=8",
+        "Missing species: 'sand bass' (count=7) not in database",
+        "Missing species: 'sculpin' (count=8) not in database",
+        "Species count mismatch: 'calico bass' source=8 db=6",
+        "Missing species: 'whitefish' (count=1) not in database",
+        "Missing species: 'rockfish' (count=38) not in database",
+        "Extra species: 'barracuda' (count=2) in database but not on source page",
+        "Extra species: 'sheephead' (count=2) in database but not on source page",
+        "Extra species: 'yellowtail' (count=2) in database but not on source page",
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=22 db=8",
+        "Species count mismatch: 'yellowtail' source=3 db=2",
+        "Species count mismatch: 'calico bass' source=13 db=6",
+        "Missing species: 'bonito' (count=5) not in database",
+        "Extra species: 'barracuda' (count=2) in database but not on source page",
+        "Extra species: 'sheephead' (count=2) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T02:19:03.376280"
+    },
+    {
+      "date": "2025-09-03",
+      "status": "FAIL",
+      "source_boat_count": 16,
+      "database_boat_count": 16,
+      "matches": 13,
+      "mismatches": [
+        {
+          "boat": "Dolphin",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=14 db=11",
+            "Species count mismatch: 'sand bass' source=8 db=6",
+            "Species count mismatch: 'sculpin' source=70 db=8",
+            "Species count mismatch: 'sheephead' source=12 db=9",
+            "Missing species: 'whitefish' (count=6) not in database",
+            "Species count mismatch: 'rockfish' source=23 db=43"
+          ]
+        },
+        {
+          "boat": "Sea Star",
+          "errors": [
+            "Landing mismatch: source='H&M Landing' db='Oceanside Sea Center'"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=21 db=19",
+            "Species count mismatch: 'yellowtail' source=15 db=8",
+            "Species count mismatch: 'calico bass' source=30 db=5",
+            "Extra species: 'sand bass' (count=2) in database but not on source page",
+            "Extra species: 'mako shark' (count=1) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=14 db=11",
+        "Species count mismatch: 'sand bass' source=8 db=6",
+        "Species count mismatch: 'sculpin' source=70 db=8",
+        "Species count mismatch: 'sheephead' source=12 db=9",
+        "Missing species: 'whitefish' (count=6) not in database",
+        "Species count mismatch: 'rockfish' source=23 db=43",
+        "Landing mismatch: source='H&M Landing' db='Oceanside Sea Center'",
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=21 db=19",
+        "Species count mismatch: 'yellowtail' source=15 db=8",
+        "Species count mismatch: 'calico bass' source=30 db=5",
+        "Extra species: 'sand bass' (count=2) in database but not on source page",
+        "Extra species: 'mako shark' (count=1) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T02:19:06.176364"
+    },
+    {
+      "date": "2025-09-04",
+      "status": "FAIL",
+      "source_boat_count": 15,
+      "database_boat_count": 15,
+      "matches": 14,
+      "mismatches": [
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=52 db=49",
+            "Missing species: 'halibut' (count=1) not in database",
+            "Species count mismatch: 'sheephead' source=3 db=2",
+            "Species count mismatch: 'yellowtail' source=16 db=17",
+            "Species count mismatch: 'calico bass' source=20 db=15",
+            "Species count mismatch: 'whitefish' source=6 db=4",
+            "Species count mismatch: 'bonito' source=9 db=15",
+            "Missing species: 'rockfish' (count=5) not in database"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=52 db=49",
+        "Missing species: 'halibut' (count=1) not in database",
+        "Species count mismatch: 'sheephead' source=3 db=2",
+        "Species count mismatch: 'yellowtail' source=16 db=17",
+        "Species count mismatch: 'calico bass' source=20 db=15",
+        "Species count mismatch: 'whitefish' source=6 db=4",
+        "Species count mismatch: 'bonito' source=9 db=15",
+        "Missing species: 'rockfish' (count=5) not in database"
+      ],
+      "timestamp": "2025-10-17T02:19:08.990713"
+    },
+    {
+      "date": "2025-09-05",
+      "status": "FAIL",
+      "source_boat_count": 29,
+      "database_boat_count": 29,
+      "matches": 26,
+      "mismatches": [
+        {
+          "boat": "Premier",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=19 db=17",
+            "Species count mismatch: 'sculpin' source=5 db=22",
+            "Missing species: 'lingcod' (count=2) not in database",
+            "Species count mismatch: 'rockfish' source=75 db=33",
+            "Extra species: 'sand bass' (count=12) in database but not on source page",
+            "Extra species: 'halibut' (count=1) in database but not on source page",
+            "Extra species: 'whitefish' (count=16) in database but not on source page",
+            "Extra species: 'bonito' (count=1) in database but not on source page"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+            "Anglers mismatch: source=28 db=53",
+            "Missing species: 'sculpin' (count=14) not in database",
+            "Species count mismatch: 'yellowtail' source=1 db=3",
+            "Species count mismatch: 'calico bass' source=5 db=30",
+            "Missing species: 'bonito' (count=1) not in database",
+            "Missing species: 'rockfish' (count=35) not in database",
+            "Extra species: 'sheephead' (count=3) in database but not on source page",
+            "Extra species: 'whitefish' (count=6) in database but not on source page"
+          ]
+        },
+        {
+          "boat": "New Seaforth",
+          "errors": [
+            "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+            "Anglers mismatch: source=15 db=53",
+            "Missing species: 'sand bass' (count=2) not in database",
+            "Species count mismatch: 'yellowtail' source=4 db=3",
+            "Species count mismatch: 'calico bass' source=11 db=30",
+            "Missing species: 'bonito' (count=5) not in database",
+            "Extra species: 'sheephead' (count=3) in database but not on source page",
+            "Extra species: 'whitefish' (count=6) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=19 db=17",
+        "Species count mismatch: 'sculpin' source=5 db=22",
+        "Missing species: 'lingcod' (count=2) not in database",
+        "Species count mismatch: 'rockfish' source=75 db=33",
+        "Extra species: 'sand bass' (count=12) in database but not on source page",
+        "Extra species: 'halibut' (count=1) in database but not on source page",
+        "Extra species: 'whitefish' (count=16) in database but not on source page",
+        "Extra species: 'bonito' (count=1) in database but not on source page",
+        "Trip type mismatch: source='1/2 Day Twilight' db='1/2 Day AM'",
+        "Anglers mismatch: source=28 db=53",
+        "Missing species: 'sculpin' (count=14) not in database",
+        "Species count mismatch: 'yellowtail' source=1 db=3",
+        "Species count mismatch: 'calico bass' source=5 db=30",
+        "Missing species: 'bonito' (count=1) not in database",
+        "Missing species: 'rockfish' (count=35) not in database",
+        "Extra species: 'sheephead' (count=3) in database but not on source page",
+        "Extra species: 'whitefish' (count=6) in database but not on source page",
+        "Trip type mismatch: source='1/2 Day PM' db='1/2 Day AM'",
+        "Anglers mismatch: source=15 db=53",
+        "Missing species: 'sand bass' (count=2) not in database",
+        "Species count mismatch: 'yellowtail' source=4 db=3",
+        "Species count mismatch: 'calico bass' source=11 db=30",
+        "Missing species: 'bonito' (count=5) not in database",
+        "Extra species: 'sheephead' (count=3) in database but not on source page",
+        "Extra species: 'whitefish' (count=6) in database but not on source page"
+      ],
+      "timestamp": "2025-10-17T02:19:12.477195"
+    }
+  ],
+  "timestamp": "2025-10-17T02:19:12.477699"
+}

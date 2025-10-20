@@ -1,0 +1,2353 @@
+{
+  "backup_timestamp": "2025-10-15T20:42:53.439612",
+  "boat_id": 329,
+  "boat_name": "Seaforth Sportfishing",
+  "trip_count": 85,
+  "catch_count": 263,
+  "date_range": {
+    "start": "2025-09-24",
+    "end": "2025-10-15"
+  },
+  "trips": [
+    {
+      "id": 9347,
+      "boat_id": 329,
+      "trip_date": "2025-09-24",
+      "trip_duration": "1.5 Day",
+      "anglers": 6,
+      "catches": [
+        {
+          "id": 22376,
+          "trip_id": 9347,
+          "species": "Bluefin Tuna",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "id": 9342,
+      "boat_id": 329,
+      "trip_date": "2025-09-24",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 15,
+      "catches": [
+        {
+          "id": 22363,
+          "trip_id": 9342,
+          "species": "Yellowtail",
+          "count": 2
+        },
+        {
+          "id": 22364,
+          "trip_id": 9342,
+          "species": "Calico Bass",
+          "count": 6
+        },
+        {
+          "id": 22365,
+          "trip_id": 9342,
+          "species": "Bonito",
+          "count": 3
+        },
+        {
+          "id": 22366,
+          "trip_id": 9342,
+          "species": "Rockfish",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": 9343,
+      "boat_id": 329,
+      "trip_date": "2025-09-24",
+      "trip_duration": "3 Day",
+      "anglers": 24,
+      "catches": [
+        {
+          "id": 22368,
+          "trip_id": 9343,
+          "species": "Bluefin Tuna",
+          "count": 144
+        }
+      ]
+    },
+    {
+      "id": 9345,
+      "boat_id": 329,
+      "trip_date": "2025-09-24",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 35,
+      "catches": [
+        {
+          "id": 22370,
+          "trip_id": 9345,
+          "species": "Bluefin Tuna",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 9340,
+      "boat_id": 329,
+      "trip_date": "2025-09-24",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 42,
+      "catches": [
+        {
+          "id": 22355,
+          "trip_id": 9340,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22356,
+          "trip_id": 9340,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 22357,
+          "trip_id": 9340,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 22358,
+          "trip_id": 9340,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22359,
+          "trip_id": 9340,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 22360,
+          "trip_id": 9340,
+          "species": "Lingcod",
+          "count": 1
+        },
+        {
+          "id": 22361,
+          "trip_id": 9340,
+          "species": "Bonito",
+          "count": 6
+        },
+        {
+          "id": 22362,
+          "trip_id": 9340,
+          "species": "Rockfish",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "id": 9367,
+      "boat_id": 329,
+      "trip_date": "2025-09-25",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 5,
+      "catches": [
+        {
+          "id": 22434,
+          "trip_id": 9367,
+          "species": "Bluefin Tuna (Up To 150 Pounds)",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": 9371,
+      "boat_id": 329,
+      "trip_date": "2025-09-25",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 14,
+      "catches": [
+        {
+          "id": 22447,
+          "trip_id": 9371,
+          "species": "Sculpin",
+          "count": 3
+        },
+        {
+          "id": 22448,
+          "trip_id": 9371,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22449,
+          "trip_id": 9371,
+          "species": "Yellowtail",
+          "count": 3
+        },
+        {
+          "id": 22450,
+          "trip_id": 9371,
+          "species": "Whitefish",
+          "count": 4
+        },
+        {
+          "id": 22451,
+          "trip_id": 9371,
+          "species": "Bonito",
+          "count": 3
+        },
+        {
+          "id": 22452,
+          "trip_id": 9371,
+          "species": "Rockfish",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "id": 9369,
+      "boat_id": 329,
+      "trip_date": "2025-09-25",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 34,
+      "catches": [
+        {
+          "id": 22439,
+          "trip_id": 9369,
+          "species": "Sculpin",
+          "count": 5
+        },
+        {
+          "id": 22440,
+          "trip_id": 9369,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 22441,
+          "trip_id": 9369,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 22442,
+          "trip_id": 9369,
+          "species": "Bonito",
+          "count": 1
+        },
+        {
+          "id": 22443,
+          "trip_id": 9369,
+          "species": "Rockfish",
+          "count": 70
+        }
+      ]
+    },
+    {
+      "id": 9366,
+      "boat_id": 329,
+      "trip_date": "2025-09-25",
+      "trip_duration": "4 Day",
+      "anglers": 21,
+      "catches": [
+        {
+          "id": 22428,
+          "trip_id": 9366,
+          "species": "Bluefin Tuna",
+          "count": 43
+        },
+        {
+          "id": 22429,
+          "trip_id": 9366,
+          "species": "Yellowtail",
+          "count": 12
+        },
+        {
+          "id": 22430,
+          "trip_id": 9366,
+          "species": "Dorado",
+          "count": 2
+        },
+        {
+          "id": 22431,
+          "trip_id": 9366,
+          "species": "Yellowfin Tuna",
+          "count": 134
+        }
+      ]
+    },
+    {
+      "id": 9373,
+      "boat_id": 329,
+      "trip_date": "2025-09-25",
+      "trip_duration": "1.5 Day",
+      "anglers": 29,
+      "catches": [
+        {
+          "id": 22457,
+          "trip_id": 9373,
+          "species": "Bluefin Tuna (Up To 180 Pounds)",
+          "count": 2
+        },
+        {
+          "id": 22458,
+          "trip_id": 9373,
+          "species": "Yellowtail",
+          "count": 30
+        },
+        {
+          "id": 22459,
+          "trip_id": 9373,
+          "species": "Dorado",
+          "count": 8
+        },
+        {
+          "id": 22460,
+          "trip_id": 9373,
+          "species": "Yellowfin Tuna",
+          "count": 145
+        }
+      ]
+    },
+    {
+      "id": 9400,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 27,
+      "catches": [
+        {
+          "id": 22526,
+          "trip_id": 9400,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 22527,
+          "trip_id": 9400,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 22528,
+          "trip_id": 9400,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22529,
+          "trip_id": 9400,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 22530,
+          "trip_id": 9400,
+          "species": "Whitefish",
+          "count": 7
+        },
+        {
+          "id": 22531,
+          "trip_id": 9400,
+          "species": "Bonito",
+          "count": 19
+        },
+        {
+          "id": 22532,
+          "trip_id": 9400,
+          "species": "Rockfish",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "id": 9399,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "1/2 Day Twilight",
+      "anglers": 22,
+      "catches": [
+        {
+          "id": 22525,
+          "trip_id": 9399,
+          "species": "Bonito",
+          "count": 110
+        }
+      ]
+    },
+    {
+      "id": 9397,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 40,
+      "catches": [
+        {
+          "id": 22516,
+          "trip_id": 9397,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22517,
+          "trip_id": 9397,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 22518,
+          "trip_id": 9397,
+          "species": "Sculpin",
+          "count": 3
+        },
+        {
+          "id": 22519,
+          "trip_id": 9397,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22520,
+          "trip_id": 9397,
+          "species": "Yellowtail",
+          "count": 6
+        },
+        {
+          "id": 22521,
+          "trip_id": 9397,
+          "species": "Lingcod",
+          "count": 1
+        },
+        {
+          "id": 22522,
+          "trip_id": 9397,
+          "species": "Whitefish",
+          "count": 7
+        },
+        {
+          "id": 22523,
+          "trip_id": 9397,
+          "species": "Rockfish",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "id": 9395,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "2 Day",
+      "anglers": 8,
+      "catches": [
+        {
+          "id": 22510,
+          "trip_id": 9395,
+          "species": "Bluefin Tuna",
+          "count": 2
+        },
+        {
+          "id": 22511,
+          "trip_id": 9395,
+          "species": "Skipjack Tuna",
+          "count": 1
+        },
+        {
+          "id": 22512,
+          "trip_id": 9395,
+          "species": "Yellowfin Tuna",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "id": 9394,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 6,
+      "catches": [
+        {
+          "id": 22509,
+          "trip_id": 9394,
+          "species": "Yellowfin Tuna",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9402,
+      "boat_id": 329,
+      "trip_date": "2025-09-26",
+      "trip_duration": "3 Day",
+      "anglers": 15,
+      "catches": [
+        {
+          "id": 22534,
+          "trip_id": 9402,
+          "species": "Bluefin Tuna",
+          "count": 12
+        },
+        {
+          "id": 22535,
+          "trip_id": 9402,
+          "species": "Yellowtail",
+          "count": 11
+        },
+        {
+          "id": 22536,
+          "trip_id": 9402,
+          "species": "Dorado",
+          "count": 4
+        },
+        {
+          "id": 22537,
+          "trip_id": 9402,
+          "species": "Skipjack Tuna",
+          "count": 18
+        },
+        {
+          "id": 22538,
+          "trip_id": 9402,
+          "species": "Yellowfin Tuna",
+          "count": 225
+        }
+      ]
+    },
+    {
+      "id": 9427,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "1/2 Day Twilight",
+      "anglers": 33,
+      "catches": [
+        {
+          "id": 22595,
+          "trip_id": 9427,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22596,
+          "trip_id": 9427,
+          "species": "Sculpin",
+          "count": 32
+        },
+        {
+          "id": 22597,
+          "trip_id": 9427,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22598,
+          "trip_id": 9427,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 22599,
+          "trip_id": 9427,
+          "species": "Bonito",
+          "count": 1
+        },
+        {
+          "id": 22600,
+          "trip_id": 9427,
+          "species": "Rockfish",
+          "count": 28
+        }
+      ]
+    },
+    {
+      "id": 9429,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 48,
+      "catches": [
+        {
+          "id": 22604,
+          "trip_id": 9429,
+          "species": "Halibut",
+          "count": 1
+        },
+        {
+          "id": 22605,
+          "trip_id": 9429,
+          "species": "Sculpin",
+          "count": 7
+        },
+        {
+          "id": 22606,
+          "trip_id": 9429,
+          "species": "Sheephead",
+          "count": 5
+        },
+        {
+          "id": 22607,
+          "trip_id": 9429,
+          "species": "Lingcod",
+          "count": 1
+        },
+        {
+          "id": 22608,
+          "trip_id": 9429,
+          "species": "Whitefish",
+          "count": 45
+        },
+        {
+          "id": 22609,
+          "trip_id": 9429,
+          "species": "Rockfish",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "id": 9425,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 5,
+      "catches": [
+        {
+          "id": 22589,
+          "trip_id": 9425,
+          "species": "Bluefin Tuna",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": 9428,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 52,
+      "catches": [
+        {
+          "id": 22601,
+          "trip_id": 9428,
+          "species": "Sculpin",
+          "count": 8
+        },
+        {
+          "id": 22602,
+          "trip_id": 9428,
+          "species": "Bonito",
+          "count": 3
+        },
+        {
+          "id": 22603,
+          "trip_id": 9428,
+          "species": "Rockfish",
+          "count": 111
+        }
+      ]
+    },
+    {
+      "id": 9430,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "3 Day",
+      "anglers": 18,
+      "catches": [
+        {
+          "id": 22610,
+          "trip_id": 9430,
+          "species": "Bluefin Tuna",
+          "count": 108
+        },
+        {
+          "id": 22611,
+          "trip_id": 9430,
+          "species": "Yellowfin Tuna",
+          "count": 144
+        }
+      ]
+    },
+    {
+      "id": 9431,
+      "boat_id": 329,
+      "trip_date": "2025-09-27",
+      "trip_duration": "Full Day Coronado Islands",
+      "anglers": 28,
+      "catches": [
+        {
+          "id": 22612,
+          "trip_id": 9431,
+          "species": "Yellowtail",
+          "count": 10
+        },
+        {
+          "id": 22613,
+          "trip_id": 9431,
+          "species": "Whitefish",
+          "count": 80
+        },
+        {
+          "id": 22614,
+          "trip_id": 9431,
+          "species": "Rockfish",
+          "count": 20
+        }
+      ]
+    },
+    {
+      "id": 9460,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "2.5 Day",
+      "anglers": 28,
+      "catches": [
+        {
+          "id": 22690,
+          "trip_id": 9460,
+          "species": "Bluefin Tuna",
+          "count": 41
+        },
+        {
+          "id": 22691,
+          "trip_id": 9460,
+          "species": "Yellowtail",
+          "count": 9
+        },
+        {
+          "id": 22692,
+          "trip_id": 9460,
+          "species": "Yellowfin Tuna",
+          "count": 31
+        }
+      ]
+    },
+    {
+      "id": 9455,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 48,
+      "catches": [
+        {
+          "id": 22666,
+          "trip_id": 9455,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 22667,
+          "trip_id": 9455,
+          "species": "Sheephead",
+          "count": 10
+        },
+        {
+          "id": 22668,
+          "trip_id": 9455,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 22669,
+          "trip_id": 9455,
+          "species": "Whitefish",
+          "count": 65
+        },
+        {
+          "id": 22670,
+          "trip_id": 9455,
+          "species": "Rockfish",
+          "count": 66
+        },
+        {
+          "id": 22671,
+          "trip_id": 9455,
+          "species": "Vermilion Rockfish",
+          "count": 71
+        }
+      ]
+    },
+    {
+      "id": 9457,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "1/2 Day Twilight",
+      "anglers": 8,
+      "catches": [
+        {
+          "id": 22672,
+          "trip_id": 9457,
+          "species": "Sculpin",
+          "count": 32
+        },
+        {
+          "id": 22673,
+          "trip_id": 9457,
+          "species": "Calico Bass",
+          "count": 15
+        },
+        {
+          "id": 22674,
+          "trip_id": 9457,
+          "species": "Rockfish",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "id": 9453,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "2 Day",
+      "anglers": 23,
+      "catches": [
+        {
+          "id": 22662,
+          "trip_id": 9453,
+          "species": "Skipjack Tuna",
+          "count": 10
+        },
+        {
+          "id": 22663,
+          "trip_id": 9453,
+          "species": "Yellowfin Tuna",
+          "count": 100
+        }
+      ]
+    },
+    {
+      "id": 9451,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 6,
+      "catches": [
+        {
+          "id": 22660,
+          "trip_id": 9451,
+          "species": "Bluefin Tuna (Up To 150 Pounds)",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 9462,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "1.5 Day",
+      "anglers": 30,
+      "catches": [
+        {
+          "id": 22695,
+          "trip_id": 9462,
+          "species": "Yellowtail",
+          "count": 3
+        },
+        {
+          "id": 22696,
+          "trip_id": 9462,
+          "species": "Dorado",
+          "count": 1
+        },
+        {
+          "id": 22697,
+          "trip_id": 9462,
+          "species": "Skipjack Tuna",
+          "count": 60
+        },
+        {
+          "id": 22698,
+          "trip_id": 9462,
+          "species": "Yellowfin Tuna",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "id": 9458,
+      "boat_id": 329,
+      "trip_date": "2025-09-28",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 41,
+      "catches": [
+        {
+          "id": 22679,
+          "trip_id": 9458,
+          "species": "Sculpin",
+          "count": 5
+        },
+        {
+          "id": 22680,
+          "trip_id": 9458,
+          "species": "Sheephead",
+          "count": 8
+        },
+        {
+          "id": 22681,
+          "trip_id": 9458,
+          "species": "Lingcod",
+          "count": 1
+        },
+        {
+          "id": 22682,
+          "trip_id": 9458,
+          "species": "Whitefish",
+          "count": 20
+        },
+        {
+          "id": 22683,
+          "trip_id": 9458,
+          "species": "Rockfish",
+          "count": 26
+        },
+        {
+          "id": 22684,
+          "trip_id": 9458,
+          "species": "Vermilion Rockfish",
+          "count": 17
+        },
+        {
+          "id": 22685,
+          "trip_id": 9458,
+          "species": "White Seabass",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9484,
+      "boat_id": 329,
+      "trip_date": "2025-09-29",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 15,
+      "catches": [
+        {
+          "id": 22754,
+          "trip_id": 9484,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 22755,
+          "trip_id": 9484,
+          "species": "Whitefish",
+          "count": 9
+        },
+        {
+          "id": 22756,
+          "trip_id": 9484,
+          "species": "Rockfish",
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": 9482,
+      "boat_id": 329,
+      "trip_date": "2025-09-29",
+      "trip_duration": "2.5 Day",
+      "anglers": 13,
+      "catches": [
+        {
+          "id": 22747,
+          "trip_id": 9482,
+          "species": "Yellowtail",
+          "count": 130
+        },
+        {
+          "id": 22748,
+          "trip_id": 9482,
+          "species": "Striped Marlin",
+          "count": 1
+        },
+        {
+          "id": 22749,
+          "trip_id": 9482,
+          "species": "Yellowfin Tuna",
+          "count": 40
+        }
+      ]
+    },
+    {
+      "id": 9486,
+      "boat_id": 329,
+      "trip_date": "2025-09-29",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 35,
+      "catches": [
+        {
+          "id": 22762,
+          "trip_id": 9486,
+          "species": "Yellowfin Tuna",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 9485,
+      "boat_id": 329,
+      "trip_date": "2025-09-29",
+      "trip_duration": "3 Day",
+      "anglers": 18,
+      "catches": [
+        {
+          "id": 22757,
+          "trip_id": 9485,
+          "species": "Bluefin Tuna",
+          "count": 108
+        },
+        {
+          "id": 22758,
+          "trip_id": 9485,
+          "species": "Yellowtail",
+          "count": 17
+        },
+        {
+          "id": 22759,
+          "trip_id": 9485,
+          "species": "Dorado",
+          "count": 4
+        },
+        {
+          "id": 22760,
+          "trip_id": 9485,
+          "species": "Skipjack Tuna",
+          "count": 30
+        },
+        {
+          "id": 22761,
+          "trip_id": 9485,
+          "species": "Yellowfin Tuna",
+          "count": 112
+        }
+      ]
+    },
+    {
+      "id": 9483,
+      "boat_id": 329,
+      "trip_date": "2025-09-29",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 22,
+      "catches": [
+        {
+          "id": 22750,
+          "trip_id": 9483,
+          "species": "Sculpin",
+          "count": 5
+        },
+        {
+          "id": 22751,
+          "trip_id": 9483,
+          "species": "Sheephead",
+          "count": 11
+        },
+        {
+          "id": 22752,
+          "trip_id": 9483,
+          "species": "Whitefish",
+          "count": 12
+        },
+        {
+          "id": 22753,
+          "trip_id": 9483,
+          "species": "Rockfish",
+          "count": 71
+        }
+      ]
+    },
+    {
+      "id": 9499,
+      "boat_id": 329,
+      "trip_date": "2025-09-30",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 18,
+      "catches": [
+        {
+          "id": 22796,
+          "trip_id": 9499,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22797,
+          "trip_id": 9499,
+          "species": "Whitefish",
+          "count": 23
+        },
+        {
+          "id": 22798,
+          "trip_id": 9499,
+          "species": "Bonito",
+          "count": 2
+        },
+        {
+          "id": 22799,
+          "trip_id": 9499,
+          "species": "Rockfish",
+          "count": 35
+        }
+      ]
+    },
+    {
+      "id": 9503,
+      "boat_id": 329,
+      "trip_date": "2025-09-30",
+      "trip_duration": "3 Day",
+      "anglers": 24,
+      "catches": [
+        {
+          "id": 22807,
+          "trip_id": 9503,
+          "species": "Bluefin Tuna (Up To 200 Pounds)",
+          "count": 144
+        },
+        {
+          "id": 22808,
+          "trip_id": 9503,
+          "species": "Yellowtail",
+          "count": 60
+        },
+        {
+          "id": 22809,
+          "trip_id": 9503,
+          "species": "Dorado",
+          "count": 10
+        },
+        {
+          "id": 22810,
+          "trip_id": 9503,
+          "species": "Yellowfin Tuna",
+          "count": 96
+        }
+      ]
+    },
+    {
+      "id": 9505,
+      "boat_id": 329,
+      "trip_date": "2025-09-30",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 35,
+      "catches": []
+    },
+    {
+      "id": 9497,
+      "boat_id": 329,
+      "trip_date": "2025-09-30",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 20,
+      "catches": [
+        {
+          "id": 22790,
+          "trip_id": 9497,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22791,
+          "trip_id": 9497,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22792,
+          "trip_id": 9497,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 22793,
+          "trip_id": 9497,
+          "species": "Whitefish",
+          "count": 15
+        },
+        {
+          "id": 22794,
+          "trip_id": 9497,
+          "species": "Rockfish",
+          "count": 88
+        }
+      ]
+    },
+    {
+      "id": 9501,
+      "boat_id": 329,
+      "trip_date": "2025-09-30",
+      "trip_duration": "1.5 Day",
+      "anglers": 28,
+      "catches": [
+        {
+          "id": 22802,
+          "trip_id": 9501,
+          "species": "Bluefin Tuna",
+          "count": 50
+        },
+        {
+          "id": 22803,
+          "trip_id": 9501,
+          "species": "Yellowtail",
+          "count": 5
+        },
+        {
+          "id": 22804,
+          "trip_id": 9501,
+          "species": "Yellowfin Tuna",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9522,
+      "boat_id": 329,
+      "trip_date": "2025-10-01",
+      "trip_duration": "2 Day",
+      "anglers": 14,
+      "catches": [
+        {
+          "id": 22861,
+          "trip_id": 9522,
+          "species": "Bluefin Tuna",
+          "count": 28
+        },
+        {
+          "id": 22862,
+          "trip_id": 9522,
+          "species": "Dorado",
+          "count": 1
+        },
+        {
+          "id": 22863,
+          "trip_id": 9522,
+          "species": "Yellowfin Tuna",
+          "count": 29
+        }
+      ]
+    },
+    {
+      "id": 9524,
+      "boat_id": 329,
+      "trip_date": "2025-10-01",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 24,
+      "catches": [
+        {
+          "id": 22867,
+          "trip_id": 9524,
+          "species": "Bluefin Tuna",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9520,
+      "boat_id": 329,
+      "trip_date": "2025-10-01",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 25,
+      "catches": [
+        {
+          "id": 22853,
+          "trip_id": 9520,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 22854,
+          "trip_id": 9520,
+          "species": "Sculpin",
+          "count": 2
+        },
+        {
+          "id": 22855,
+          "trip_id": 9520,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 22856,
+          "trip_id": 9520,
+          "species": "Yellowtail",
+          "count": 2
+        },
+        {
+          "id": 22857,
+          "trip_id": 9520,
+          "species": "Whitefish",
+          "count": 9
+        },
+        {
+          "id": 22858,
+          "trip_id": 9520,
+          "species": "Bonito",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9539,
+      "boat_id": 329,
+      "trip_date": "2025-10-02",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 26,
+      "catches": [
+        {
+          "id": 22907,
+          "trip_id": 9539,
+          "species": "Bluefin Tuna",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9538,
+      "boat_id": 329,
+      "trip_date": "2025-10-02",
+      "trip_duration": "1.5 Day",
+      "anglers": 14,
+      "catches": [
+        {
+          "id": 22906,
+          "trip_id": 9538,
+          "species": "Bluefin Tuna",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "id": 9537,
+      "boat_id": 329,
+      "trip_date": "2025-10-02",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 11,
+      "catches": [
+        {
+          "id": 22902,
+          "trip_id": 9537,
+          "species": "Sheephead",
+          "count": 2
+        },
+        {
+          "id": 22903,
+          "trip_id": 9537,
+          "species": "Calico Bass",
+          "count": 9
+        },
+        {
+          "id": 22904,
+          "trip_id": 9537,
+          "species": "Whitefish",
+          "count": 4
+        },
+        {
+          "id": 22905,
+          "trip_id": 9537,
+          "species": "Bonito",
+          "count": 18
+        }
+      ]
+    },
+    {
+      "id": 9561,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 6,
+      "catches": [
+        {
+          "id": 22956,
+          "trip_id": 9561,
+          "species": "Rockfish",
+          "count": 30
+        },
+        {
+          "id": 22957,
+          "trip_id": 9561,
+          "species": "Vermilion Rockfish",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9327,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "2 Day",
+      "anglers": 16,
+      "catches": [
+        {
+          "id": 22331,
+          "trip_id": 9327,
+          "species": "Bluefin Tuna",
+          "count": 42
+        },
+        {
+          "id": 22332,
+          "trip_id": 9327,
+          "species": "Yellowfin Tuna",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "id": 9328,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "Full Day Coronado Islands",
+      "anglers": 30,
+      "catches": [
+        {
+          "id": 22333,
+          "trip_id": 9328,
+          "species": "Sheephead",
+          "count": 7
+        },
+        {
+          "id": 22334,
+          "trip_id": 9328,
+          "species": "Yellowtail",
+          "count": 4
+        },
+        {
+          "id": 22335,
+          "trip_id": 9328,
+          "species": "Calico Bass",
+          "count": 8
+        },
+        {
+          "id": 22336,
+          "trip_id": 9328,
+          "species": "Lingcod",
+          "count": 2
+        },
+        {
+          "id": 22337,
+          "trip_id": 9328,
+          "species": "Whitefish",
+          "count": 84
+        },
+        {
+          "id": 22338,
+          "trip_id": 9328,
+          "species": "Bonito",
+          "count": 74
+        },
+        {
+          "id": 22339,
+          "trip_id": 9328,
+          "species": "Rockfish",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "id": 9560,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "3 Day",
+      "anglers": 10,
+      "catches": [
+        {
+          "id": 22953,
+          "trip_id": 9560,
+          "species": "Bluefin Tuna",
+          "count": 29
+        },
+        {
+          "id": 22954,
+          "trip_id": 9560,
+          "species": "Yellowtail",
+          "count": 6
+        },
+        {
+          "id": 22955,
+          "trip_id": 9560,
+          "species": "Yellowfin Tuna",
+          "count": 21
+        }
+      ]
+    },
+    {
+      "id": 9563,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 25,
+      "catches": [
+        {
+          "id": 22959,
+          "trip_id": 9563,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22960,
+          "trip_id": 9563,
+          "species": "Sculpin",
+          "count": 9
+        },
+        {
+          "id": 22961,
+          "trip_id": 9563,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 22962,
+          "trip_id": 9563,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 22963,
+          "trip_id": 9563,
+          "species": "Whitefish",
+          "count": 17
+        },
+        {
+          "id": 22964,
+          "trip_id": 9563,
+          "species": "Bonito",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "id": 9559,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "1.5 Day",
+      "anglers": 24,
+      "catches": [
+        {
+          "id": 22951,
+          "trip_id": 9559,
+          "species": "Bluefin Tuna",
+          "count": 15
+        },
+        {
+          "id": 22952,
+          "trip_id": 9559,
+          "species": "Yellowtail",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 9562,
+      "boat_id": 329,
+      "trip_date": "2025-10-03",
+      "trip_duration": "2.5 Day",
+      "anglers": 17,
+      "catches": [
+        {
+          "id": 22958,
+          "trip_id": 9562,
+          "species": "Bluefin Tuna",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "id": 9350,
+      "boat_id": 329,
+      "trip_date": "2025-10-04",
+      "trip_duration": "Full Day Coronado Islands",
+      "anglers": 22,
+      "catches": [
+        {
+          "id": 22382,
+          "trip_id": 9350,
+          "species": "Yellowtail",
+          "count": 5
+        },
+        {
+          "id": 22383,
+          "trip_id": 9350,
+          "species": "Calico Bass",
+          "count": 2
+        },
+        {
+          "id": 22384,
+          "trip_id": 9350,
+          "species": "Whitefish",
+          "count": 60
+        },
+        {
+          "id": 22385,
+          "trip_id": 9350,
+          "species": "Bonito",
+          "count": 30
+        },
+        {
+          "id": 22386,
+          "trip_id": 9350,
+          "species": "Rockfish",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": 9348,
+      "boat_id": 329,
+      "trip_date": "2025-10-04",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 32,
+      "catches": [
+        {
+          "id": 22377,
+          "trip_id": 9348,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 22378,
+          "trip_id": 9348,
+          "species": "Sheephead",
+          "count": 6
+        },
+        {
+          "id": 22379,
+          "trip_id": 9348,
+          "species": "Whitefish",
+          "count": 56
+        },
+        {
+          "id": 22380,
+          "trip_id": 9348,
+          "species": "Bonito",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9349,
+      "boat_id": 329,
+      "trip_date": "2025-10-04",
+      "trip_duration": "2 Day",
+      "anglers": 26,
+      "catches": [
+        {
+          "id": 22381,
+          "trip_id": 9349,
+          "species": "Bluefin Tuna",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 9375,
+      "boat_id": 329,
+      "trip_date": "2025-10-05",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 36,
+      "catches": [
+        {
+          "id": 22462,
+          "trip_id": 9375,
+          "species": "Sculpin",
+          "count": 10
+        },
+        {
+          "id": 22463,
+          "trip_id": 9375,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22464,
+          "trip_id": 9375,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 22465,
+          "trip_id": 9375,
+          "species": "Whitefish",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "id": 9376,
+      "boat_id": 329,
+      "trip_date": "2025-10-05",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 20,
+      "catches": [
+        {
+          "id": 22466,
+          "trip_id": 9376,
+          "species": "Sand Bass",
+          "count": 2
+        },
+        {
+          "id": 22467,
+          "trip_id": 9376,
+          "species": "Sculpin",
+          "count": 9
+        },
+        {
+          "id": 22468,
+          "trip_id": 9376,
+          "species": "Sheephead",
+          "count": 4
+        },
+        {
+          "id": 22469,
+          "trip_id": 9376,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 22470,
+          "trip_id": 9376,
+          "species": "Whitefish",
+          "count": 60
+        },
+        {
+          "id": 22471,
+          "trip_id": 9376,
+          "species": "Bonito",
+          "count": 25
+        }
+      ]
+    },
+    {
+      "id": 9372,
+      "boat_id": 329,
+      "trip_date": "2025-10-05",
+      "trip_duration": "1.5 Day",
+      "anglers": 12,
+      "catches": [
+        {
+          "id": 22453,
+          "trip_id": 9372,
+          "species": "Bluefin Tuna",
+          "count": 12
+        },
+        {
+          "id": 22454,
+          "trip_id": 9372,
+          "species": "Barracuda",
+          "count": 1
+        },
+        {
+          "id": 22455,
+          "trip_id": 9372,
+          "species": "Yellowtail",
+          "count": 6
+        },
+        {
+          "id": 22456,
+          "trip_id": 9372,
+          "species": "Calico Bass",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 9374,
+      "boat_id": 329,
+      "trip_date": "2025-10-05",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 6,
+      "catches": [
+        {
+          "id": 22461,
+          "trip_id": 9374,
+          "species": "Bluefin Tuna (Up To 100 Pounds)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9377,
+      "boat_id": 329,
+      "trip_date": "2025-10-05",
+      "trip_duration": "Overnight",
+      "anglers": 28,
+      "catches": [
+        {
+          "id": 22472,
+          "trip_id": 9377,
+          "species": "Bluefin Tuna",
+          "count": 31
+        },
+        {
+          "id": 22473,
+          "trip_id": 9377,
+          "species": "Yellowfin Tuna",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9403,
+      "boat_id": 329,
+      "trip_date": "2025-10-06",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 36,
+      "catches": []
+    },
+    {
+      "id": 9401,
+      "boat_id": 329,
+      "trip_date": "2025-10-06",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 7,
+      "catches": [
+        {
+          "id": 22533,
+          "trip_id": 9401,
+          "species": "Rockfish",
+          "count": 70
+        }
+      ]
+    },
+    {
+      "id": 9398,
+      "boat_id": 329,
+      "trip_date": "2025-10-06",
+      "trip_duration": "3/4 Day",
+      "anglers": 5,
+      "catches": [
+        {
+          "id": 22524,
+          "trip_id": 9398,
+          "species": "Bluefin Tuna (Up To 145 Pounds)",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9419,
+      "boat_id": 329,
+      "trip_date": "2025-10-07",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 3,
+      "catches": []
+    },
+    {
+      "id": 9417,
+      "boat_id": 329,
+      "trip_date": "2025-10-07",
+      "trip_duration": "1.5 Day",
+      "anglers": 14,
+      "catches": [
+        {
+          "id": 22573,
+          "trip_id": 9417,
+          "species": "Yellowtail",
+          "count": 15
+        },
+        {
+          "id": 22574,
+          "trip_id": 9417,
+          "species": "Skipjack Tuna",
+          "count": 5
+        },
+        {
+          "id": 22575,
+          "trip_id": 9417,
+          "species": "Yellowfin Tuna",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9424,
+      "boat_id": 329,
+      "trip_date": "2025-10-07",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 4,
+      "catches": [
+        {
+          "id": 22587,
+          "trip_id": 9424,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22588,
+          "trip_id": 9424,
+          "species": "Whitefish",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": 9426,
+      "boat_id": 329,
+      "trip_date": "2025-10-07",
+      "trip_duration": "3 Day",
+      "anglers": 18,
+      "catches": [
+        {
+          "id": 22590,
+          "trip_id": 9426,
+          "species": "Bluefin Tuna",
+          "count": 39
+        },
+        {
+          "id": 22591,
+          "trip_id": 9426,
+          "species": "Yellowtail",
+          "count": 3
+        },
+        {
+          "id": 22592,
+          "trip_id": 9426,
+          "species": "Dorado",
+          "count": 2
+        },
+        {
+          "id": 22593,
+          "trip_id": 9426,
+          "species": "Skipjack Tuna",
+          "count": 3
+        },
+        {
+          "id": 22594,
+          "trip_id": 9426,
+          "species": "Yellowfin Tuna",
+          "count": 23
+        }
+      ]
+    },
+    {
+      "id": 9438,
+      "boat_id": 329,
+      "trip_date": "2025-10-08",
+      "trip_duration": "5 Day",
+      "anglers": 22,
+      "catches": [
+        {
+          "id": 22624,
+          "trip_id": 9438,
+          "species": "Bluefin Tuna",
+          "count": 19
+        },
+        {
+          "id": 22625,
+          "trip_id": 9438,
+          "species": "Yellowtail",
+          "count": 330
+        },
+        {
+          "id": 22626,
+          "trip_id": 9438,
+          "species": "Yellowfin Tuna",
+          "count": 57
+        }
+      ]
+    },
+    {
+      "id": 9436,
+      "boat_id": 329,
+      "trip_date": "2025-10-08",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 4,
+      "catches": [
+        {
+          "id": 22622,
+          "trip_id": 9436,
+          "species": "Bluefin Tuna (Up To 110 Pounds)",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9437,
+      "boat_id": 329,
+      "trip_date": "2025-10-08",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 41,
+      "catches": [
+        {
+          "id": 22623,
+          "trip_id": 9437,
+          "species": "Rockfish",
+          "count": 283
+        }
+      ]
+    },
+    {
+      "id": 9464,
+      "boat_id": 329,
+      "trip_date": "2025-10-09",
+      "trip_duration": "2 Day",
+      "anglers": 12,
+      "catches": [
+        {
+          "id": 22703,
+          "trip_id": 9464,
+          "species": "Bluefin Tuna (Up To 120 Pounds)",
+          "count": 32
+        }
+      ]
+    },
+    {
+      "id": 9463,
+      "boat_id": 329,
+      "trip_date": "2025-10-09",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 20,
+      "catches": [
+        {
+          "id": 22699,
+          "trip_id": 9463,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22700,
+          "trip_id": 9463,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 22701,
+          "trip_id": 9463,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22702,
+          "trip_id": 9463,
+          "species": "Whitefish",
+          "count": 61
+        }
+      ]
+    },
+    {
+      "id": 9477,
+      "boat_id": 329,
+      "trip_date": "2025-10-10",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 14,
+      "catches": [
+        {
+          "id": 22732,
+          "trip_id": 9477,
+          "species": "Rockfish",
+          "count": 101
+        },
+        {
+          "id": 22733,
+          "trip_id": 9477,
+          "species": "Vermilion Rockfish",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 9475,
+      "boat_id": 329,
+      "trip_date": "2025-10-10",
+      "trip_duration": "2 Day",
+      "anglers": 24,
+      "catches": [
+        {
+          "id": 22728,
+          "trip_id": 9475,
+          "species": "Bluefin Tuna",
+          "count": 96
+        },
+        {
+          "id": 22729,
+          "trip_id": 9475,
+          "species": "Yellowtail",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9509,
+      "boat_id": 329,
+      "trip_date": "2025-10-11",
+      "trip_duration": "Full Day Coronado Islands",
+      "anglers": 25,
+      "catches": [
+        {
+          "id": 22824,
+          "trip_id": 9509,
+          "species": "Yellowtail",
+          "count": 12
+        },
+        {
+          "id": 22825,
+          "trip_id": 9509,
+          "species": "Whitefish",
+          "count": 107
+        },
+        {
+          "id": 22826,
+          "trip_id": 9509,
+          "species": "Rockfish",
+          "count": 22
+        }
+      ]
+    },
+    {
+      "id": 9508,
+      "boat_id": 329,
+      "trip_date": "2025-10-11",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 49,
+      "catches": [
+        {
+          "id": 22818,
+          "trip_id": 9508,
+          "species": "Sand Bass",
+          "count": 1
+        },
+        {
+          "id": 22819,
+          "trip_id": 9508,
+          "species": "Sculpin",
+          "count": 5
+        },
+        {
+          "id": 22820,
+          "trip_id": 9508,
+          "species": "Sheephead",
+          "count": 9
+        },
+        {
+          "id": 22821,
+          "trip_id": 9508,
+          "species": "Yellowtail",
+          "count": 8
+        },
+        {
+          "id": 22822,
+          "trip_id": 9508,
+          "species": "Calico Bass",
+          "count": 3
+        },
+        {
+          "id": 22823,
+          "trip_id": 9508,
+          "species": "Whitefish",
+          "count": 55
+        }
+      ]
+    },
+    {
+      "id": 9526,
+      "boat_id": 329,
+      "trip_date": "2025-10-12",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 3,
+      "catches": [
+        {
+          "id": 22869,
+          "trip_id": 9526,
+          "species": "Bluefin Tuna",
+          "count": 1
+        },
+        {
+          "id": 22870,
+          "trip_id": 9526,
+          "species": "Yellowfin Tuna",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "id": 9527,
+      "boat_id": 329,
+      "trip_date": "2025-10-12",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 50,
+      "catches": [
+        {
+          "id": 22871,
+          "trip_id": 9527,
+          "species": "Rockfish",
+          "count": 200
+        },
+        {
+          "id": 22872,
+          "trip_id": 9527,
+          "species": "Vermilion Rockfish",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9528,
+      "boat_id": 329,
+      "trip_date": "2025-10-12",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 35,
+      "catches": [
+        {
+          "id": 22873,
+          "trip_id": 9528,
+          "species": "Sculpin",
+          "count": 3
+        },
+        {
+          "id": 22874,
+          "trip_id": 9528,
+          "species": "Sheephead",
+          "count": 3
+        },
+        {
+          "id": 22875,
+          "trip_id": 9528,
+          "species": "Whitefish",
+          "count": 76
+        }
+      ]
+    },
+    {
+      "id": 9549,
+      "boat_id": 329,
+      "trip_date": "2025-10-13",
+      "trip_duration": "1/2 Day PM",
+      "anglers": 18,
+      "catches": [
+        {
+          "id": 22923,
+          "trip_id": 9549,
+          "species": "Sculpin",
+          "count": 1
+        },
+        {
+          "id": 22924,
+          "trip_id": 9549,
+          "species": "Sheephead",
+          "count": 1
+        },
+        {
+          "id": 22925,
+          "trip_id": 9549,
+          "species": "Calico Bass",
+          "count": 1
+        },
+        {
+          "id": 22926,
+          "trip_id": 9549,
+          "species": "Whitefish",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 9551,
+      "boat_id": 329,
+      "trip_date": "2025-10-13",
+      "trip_duration": "Full Day Offshore",
+      "anglers": 21,
+      "catches": [
+        {
+          "id": 22929,
+          "trip_id": 9551,
+          "species": "Bluefin Tuna",
+          "count": 1
+        },
+        {
+          "id": 22930,
+          "trip_id": 9551,
+          "species": "Yellowfin Tuna",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9550,
+      "boat_id": 329,
+      "trip_date": "2025-10-13",
+      "trip_duration": "2.5 Day",
+      "anglers": 19,
+      "catches": [
+        {
+          "id": 22927,
+          "trip_id": 9550,
+          "species": "Bluefin Tuna",
+          "count": 114
+        },
+        {
+          "id": 22928,
+          "trip_id": 9550,
+          "species": "Yellowfin Tuna",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9568,
+      "boat_id": 329,
+      "trip_date": "2025-10-14",
+      "trip_duration": "1.5 Day",
+      "anglers": 30,
+      "catches": [
+        {
+          "id": 22973,
+          "trip_id": 9568,
+          "species": "Bluefin Tuna",
+          "count": 24
+        },
+        {
+          "id": 22974,
+          "trip_id": 9568,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 22975,
+          "trip_id": 9568,
+          "species": "Yellowfin Tuna",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "id": 9567,
+      "boat_id": 329,
+      "trip_date": "2025-10-14",
+      "trip_duration": "2 Day",
+      "anglers": 25,
+      "catches": [
+        {
+          "id": 22969,
+          "trip_id": 9567,
+          "species": "Bluefin Tuna",
+          "count": 20
+        },
+        {
+          "id": 22970,
+          "trip_id": 9567,
+          "species": "Yellowtail",
+          "count": 1
+        },
+        {
+          "id": 22971,
+          "trip_id": 9567,
+          "species": "Dorado",
+          "count": 1
+        },
+        {
+          "id": 22972,
+          "trip_id": 9567,
+          "species": "Yellowfin Tuna",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "id": 9578,
+      "boat_id": 329,
+      "trip_date": "2025-10-15",
+      "trip_duration": "1/2 Day AM",
+      "anglers": 11,
+      "catches": [
+        {
+          "id": 22992,
+          "trip_id": 9578,
+          "species": "Rockfish",
+          "count": 110
+        }
+      ]
+    }
+  ]
+}

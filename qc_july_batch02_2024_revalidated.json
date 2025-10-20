@@ -1,0 +1,415 @@
+{
+  "date_range": {
+    "start": "2024-07-06",
+    "end": "2024-07-10"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 2,
+    "failed": 3,
+    "errors": 0,
+    "pass_rate": 40.0
+  },
+  "reports": [
+    {
+      "date": "2024-07-06",
+      "status": "PASS",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 24,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:19:38.192261"
+    },
+    {
+      "date": "2024-07-07",
+      "status": "PASS",
+      "source_boat_count": 32,
+      "database_boat_count": 32,
+      "matches": 32,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:19:41.079709"
+    },
+    {
+      "date": "2024-07-08",
+      "status": "FAIL",
+      "source_boat_count": 18,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Condor",
+          "landing": "Fisherman's Landing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "Dolphin",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 24
+        },
+        {
+          "boat": "Dolphin",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 25
+        },
+        {
+          "boat": "Grande",
+          "landing": "H&M Landing",
+          "trip_type": "Full Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Legend",
+          "landing": "H&M Landing",
+          "trip_type": "3 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Nautilus",
+          "landing": "H&M Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Premier",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 25
+        },
+        {
+          "boat": "Southern Cal",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 20
+        },
+        {
+          "boat": "Daily Double",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 19
+        },
+        {
+          "boat": "Apollo",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Aztec",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1.5 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Highliner",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 41
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 49
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 36
+        },
+        {
+          "boat": "Polaris Supreme",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "3 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 33
+        },
+        {
+          "boat": "Voyager",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 12
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:19:43.922691"
+    },
+    {
+      "date": "2024-07-09",
+      "status": "FAIL",
+      "source_boat_count": 21,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Dolphin",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 22
+        },
+        {
+          "boat": "Dolphin",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Liberty",
+          "landing": "Fisherman's Landing",
+          "trip_type": "2 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Pegasus",
+          "landing": "Fisherman's Landing",
+          "trip_type": "2 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Tomahawk",
+          "landing": "Fisherman's Landing",
+          "trip_type": "2 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Jig Strike",
+          "landing": "H&M Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Ocean Odyssey",
+          "landing": "H&M Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Old Glory",
+          "landing": "H&M Landing",
+          "trip_type": "Overnight",
+          "anglers": 4
+        },
+        {
+          "boat": "Premier",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 30
+        },
+        {
+          "boat": "Blue Horizon",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 5
+        },
+        {
+          "boat": "Sea Star",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 15
+        },
+        {
+          "boat": "Southern Cal",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 25
+        },
+        {
+          "boat": "Daily Double",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 19
+        },
+        {
+          "boat": "Daily Double",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 25
+        },
+        {
+          "boat": "Mission Belle",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 27
+        },
+        {
+          "boat": "Seaforth Sportfishing",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 35
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 50
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 36
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Sea Watch",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:19:46.783015"
+    },
+    {
+      "date": "2024-07-10",
+      "status": "FAIL",
+      "source_boat_count": 17,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Dolphin",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 27
+        },
+        {
+          "boat": "Islander",
+          "landing": "Fisherman's Landing",
+          "trip_type": "3 Day",
+          "anglers": 27
+        },
+        {
+          "boat": "Pacific Dawn",
+          "landing": "Fisherman's Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Pacific Queen",
+          "landing": "Fisherman's Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 33
+        },
+        {
+          "boat": "Grande",
+          "landing": "H&M Landing",
+          "trip_type": "Full Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Premier",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 34
+        },
+        {
+          "boat": "Premier",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 26
+        },
+        {
+          "boat": "Electra",
+          "landing": "Helgrens Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 15
+        },
+        {
+          "boat": "Helgrens Sportfishing",
+          "landing": "Helgrens Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Southern Cal",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 35
+        },
+        {
+          "boat": "Highliner",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1.5 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 51
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 48
+        },
+        {
+          "boat": "New Seaforth",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 49
+        },
+        {
+          "boat": "Pacifica",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Polaris Supreme",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:19:49.652929"
+    }
+  ],
+  "timestamp": "2025-10-17T14:19:49.653445"
+}

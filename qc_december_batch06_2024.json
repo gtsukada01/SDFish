@@ -1,0 +1,101 @@
+{
+  "date_range": {
+    "start": "2024-12-26",
+    "end": "2024-12-31"
+  },
+  "summary": {
+    "total_dates": 6,
+    "passed": 5,
+    "failed": 1,
+    "errors": 0,
+    "pass_rate": 83.33
+  },
+  "reports": [
+    {
+      "date": "2024-12-26",
+      "status": "FAIL",
+      "source_boat_count": 7,
+      "database_boat_count": 6,
+      "matches": 6,
+      "mismatches": [
+        {
+          "boat": "Dolphin",
+          "errors": [
+            "Missing species: 'sand bass' (count=17) not in database",
+            "Missing species: 'sculpin' (count=7) not in database",
+            "Missing species: 'whitefish' (count=8) not in database"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Missing species: 'sand bass' (count=17) not in database",
+        "Missing species: 'sculpin' (count=7) not in database",
+        "Missing species: 'whitefish' (count=8) not in database"
+      ],
+      "timestamp": "2025-10-17T14:52:17.457789"
+    },
+    {
+      "date": "2024-12-27",
+      "status": "PASS",
+      "source_boat_count": 7,
+      "database_boat_count": 7,
+      "matches": 7,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:52:20.221179"
+    },
+    {
+      "date": "2024-12-28",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:52:22.982817"
+    },
+    {
+      "date": "2024-12-29",
+      "status": "PASS",
+      "source_boat_count": 8,
+      "database_boat_count": 8,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:52:25.794871"
+    },
+    {
+      "date": "2024-12-30",
+      "status": "PASS",
+      "source_boat_count": 7,
+      "database_boat_count": 7,
+      "matches": 7,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:52:28.555708"
+    },
+    {
+      "date": "2024-12-31",
+      "status": "PASS",
+      "source_boat_count": 7,
+      "database_boat_count": 7,
+      "matches": 7,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:52:31.527452"
+    }
+  ],
+  "timestamp": "2025-10-17T14:52:31.527944"
+}

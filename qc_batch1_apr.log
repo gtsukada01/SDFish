@@ -1,0 +1,548 @@
+2025-10-16 20:33:47,041 - INFO - 
+================================================================================
+2025-10-16 20:33:47,041 - INFO - 🚀 QC VALIDATION - DATE RANGE
+2025-10-16 20:33:47,041 - INFO - ================================================================================
+2025-10-16 20:33:47,042 - INFO - 📅 Date range: 2025-04-01 to 2025-04-05
+2025-10-16 20:33:47,073 - INFO - ✅ Supabase connected
+2025-10-16 20:33:47,073 - INFO - 
+================================================================================
+2025-10-16 20:33:47,073 - INFO - 🔍 QC VALIDATION: 2025-04-01
+2025-10-16 20:33:47,073 - INFO - ================================================================================
+2025-10-16 20:33:47,073 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-01
+2025-10-16 20:33:47,715 - INFO - ✅ Fetched 26909 bytes
+2025-10-16 20:33:47,720 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-16 20:33:47,720 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-16 20:33:47,720 - INFO - 🔍 Found boat: Boat at line 38
+2025-10-16 20:33:47,720 - INFO -    Next lines:
+2025-10-16 20:33:47,720 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:47,720 - INFO -      +1: 'Premier'
+2025-10-16 20:33:47,721 - INFO -      +2: 'H&M Landing'
+2025-10-16 20:33:47,721 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:47,721 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:47,721 - INFO - 🔍 Found boat: Premier at line 41
+2025-10-16 20:33:47,721 - INFO -    Next lines:
+2025-10-16 20:33:47,721 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:47,721 - INFO -      +1: '41 Anglers1/2 Day AM'
+2025-10-16 20:33:47,721 - INFO -      +2: '1 Sand Bass, 7 Sculpin, 101 Rockfish, 50 Red Rockfish'
+2025-10-16 20:33:47,721 - INFO -      +3: 'Previous Day Next Day'
+2025-10-16 20:33:47,721 - INFO -    Found 41 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:47,721 - INFO -    Catches: '1 Sand Bass, 7 Sculpin, 101 Rockfish, 50 Red Rockfish'
+2025-10-16 20:33:47,721 - INFO - ✅ Parsed: Premier - 4 species, 41 anglers
+2025-10-16 20:33:47,721 - INFO - ✅ Total trips parsed: 1
+2025-10-16 20:33:47,721 - INFO - 📊 Source page: 1 trips
+2025-10-16 20:33:47,847 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%2Clandings%28name%29%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-04-01 "HTTP/2 200 OK"
+2025-10-16 20:33:47,848 - INFO - 📊 Database: 1 trips
+2025-10-16 20:33:47,848 - INFO - ✅ Match: Premier
+2025-10-16 20:33:47,848 - INFO - 
+================================================================================
+2025-10-16 20:33:47,848 - INFO - ✅ QC PASSED: 2025-04-01
+2025-10-16 20:33:47,848 - INFO - 📊 Matches: 1/1
+2025-10-16 20:33:47,848 - INFO - ⚠️  Mismatches: 0
+2025-10-16 20:33:47,848 - INFO - ⚠️  Missing boats: 0
+2025-10-16 20:33:47,848 - INFO - ⚠️  Extra boats: 0
+2025-10-16 20:33:47,848 - INFO - ================================================================================
+
+2025-10-16 20:33:49,854 - INFO - 
+================================================================================
+2025-10-16 20:33:49,854 - INFO - 🔍 QC VALIDATION: 2025-04-02
+2025-10-16 20:33:49,854 - INFO - ================================================================================
+2025-10-16 20:33:49,854 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-02
+2025-10-16 20:33:50,797 - INFO - ✅ Fetched 26933 bytes
+2025-10-16 20:33:50,802 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-16 20:33:50,802 - INFO - 📍 Landing header detected: Fisherman's Landing
+2025-10-16 20:33:50,802 - INFO - 🔍 Found boat: Boat at line 38
+2025-10-16 20:33:50,802 - INFO -    Next lines:
+2025-10-16 20:33:50,802 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:50,802 - INFO -      +1: 'Dolphin'
+2025-10-16 20:33:50,802 - INFO -      +2: 'Fisherman's Landing'
+2025-10-16 20:33:50,802 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:50,802 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:50,802 - INFO - 🔍 Found boat: Dolphin at line 41
+2025-10-16 20:33:50,802 - INFO -    Next lines:
+2025-10-16 20:33:50,802 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:50,803 - INFO -      +1: '45 Anglers1/2 Day AM'
+2025-10-16 20:33:50,803 - INFO -      +2: '7 Halibut, 5 Halibut Released'
+2025-10-16 20:33:50,803 - INFO -      +3: 'Previous Day Next Day'
+2025-10-16 20:33:50,803 - INFO -    Found 45 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:50,803 - INFO -    Catches: '7 Halibut, 5 Halibut Released'
+2025-10-16 20:33:50,803 - INFO - ✅ Parsed: Dolphin - 1 species, 45 anglers
+2025-10-16 20:33:50,803 - INFO - ✅ Total trips parsed: 1
+2025-10-16 20:33:50,803 - INFO - 📊 Source page: 1 trips
+2025-10-16 20:33:50,880 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%2Clandings%28name%29%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-04-02 "HTTP/2 200 OK"
+2025-10-16 20:33:50,881 - INFO - 📊 Database: 1 trips
+2025-10-16 20:33:50,881 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:50,881 - INFO - 
+================================================================================
+2025-10-16 20:33:50,881 - INFO - ✅ QC PASSED: 2025-04-02
+2025-10-16 20:33:50,881 - INFO - 📊 Matches: 1/1
+2025-10-16 20:33:50,881 - INFO - ⚠️  Mismatches: 0
+2025-10-16 20:33:50,881 - INFO - ⚠️  Missing boats: 0
+2025-10-16 20:33:50,881 - INFO - ⚠️  Extra boats: 0
+2025-10-16 20:33:50,881 - INFO - ================================================================================
+
+2025-10-16 20:33:52,885 - INFO - 
+================================================================================
+2025-10-16 20:33:52,885 - INFO - 🔍 QC VALIDATION: 2025-04-03
+2025-10-16 20:33:52,885 - INFO - ================================================================================
+2025-10-16 20:33:52,885 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-03
+2025-10-16 20:33:53,604 - INFO - ✅ Fetched 29232 bytes
+2025-10-16 20:33:53,610 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-16 20:33:53,610 - INFO - 📍 Landing header detected: Fisherman's Landing
+2025-10-16 20:33:53,610 - INFO - 🔍 Found boat: Boat at line 38
+2025-10-16 20:33:53,610 - INFO -    Next lines:
+2025-10-16 20:33:53,610 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:53,610 - INFO -      +1: 'Dolphin'
+2025-10-16 20:33:53,610 - INFO -      +2: 'Fisherman's Landing'
+2025-10-16 20:33:53,611 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:53,611 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:53,611 - INFO - 🔍 Found boat: Dolphin at line 41
+2025-10-16 20:33:53,611 - INFO -    Next lines:
+2025-10-16 20:33:53,611 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:53,611 - INFO -      +1: '16 Anglers1/2 Day AM'
+2025-10-16 20:33:53,611 - INFO -      +2: '71 Rockfish'
+2025-10-16 20:33:53,611 - INFO -      +3: 'Dolphin'
+2025-10-16 20:33:53,611 - INFO -    Found 16 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:53,611 - INFO -    Catches: '71 Rockfish'
+2025-10-16 20:33:53,611 - INFO - ✅ Parsed: Dolphin - 1 species, 16 anglers
+2025-10-16 20:33:53,611 - INFO - 🔍 Found boat: Dolphin at line 46
+2025-10-16 20:33:53,611 - INFO -    Next lines:
+2025-10-16 20:33:53,611 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:53,611 - INFO -      +1: '14 Anglers1/2 Day PM'
+2025-10-16 20:33:53,611 - INFO -      +2: '7 Sculpin, 55 Rockfish'
+2025-10-16 20:33:53,611 - INFO -      +3: 'H&M Landing Fish Counts'
+2025-10-16 20:33:53,611 - INFO -    Found 14 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:53,611 - INFO -    Catches: '7 Sculpin, 55 Rockfish'
+2025-10-16 20:33:53,611 - INFO - ✅ Parsed: Dolphin - 2 species, 14 anglers
+2025-10-16 20:33:53,611 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-16 20:33:53,611 - INFO - 🔍 Found boat: Boat at line 52
+2025-10-16 20:33:53,611 - INFO -    Next lines:
+2025-10-16 20:33:53,611 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:53,611 - INFO -      +1: 'Premier'
+2025-10-16 20:33:53,611 - INFO -      +2: 'H&M Landing'
+2025-10-16 20:33:53,611 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:53,611 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:53,611 - INFO - 🔍 Found boat: Premier at line 55
+2025-10-16 20:33:53,612 - INFO -    Next lines:
+2025-10-16 20:33:53,612 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:53,612 - INFO -      +1: '32 Anglers1/2 Day AM'
+2025-10-16 20:33:53,612 - INFO -      +2: '3 Sand Bass, 17 Sculpin, 10 Whitefish, 70 Rockfish'
+2025-10-16 20:33:53,612 - INFO -      +3: 'Oceanside Sea Center Fish Counts'
+2025-10-16 20:33:53,612 - INFO -    Found 32 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:53,612 - INFO -    Catches: '3 Sand Bass, 17 Sculpin, 10 Whitefish, 70 Rockfish'
+2025-10-16 20:33:53,612 - INFO - ✅ Parsed: Premier - 4 species, 32 anglers
+2025-10-16 20:33:53,612 - INFO - 📍 Landing header detected: Oceanside Sea Center
+2025-10-16 20:33:53,612 - INFO - 🔍 Found boat: Boat at line 61
+2025-10-16 20:33:53,612 - INFO -    Next lines:
+2025-10-16 20:33:53,612 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:53,612 - INFO -      +1: 'Southern Cal'
+2025-10-16 20:33:53,612 - INFO -      +2: 'Oceanside Sea Center'
+2025-10-16 20:33:53,612 - INFO -      +3: 'Oceanside, CA'
+2025-10-16 20:33:53,612 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:53,612 - INFO - 🔍 Found boat: Southern Cal at line 64
+2025-10-16 20:33:53,612 - INFO -    Next lines:
+2025-10-16 20:33:53,612 - INFO -      +0: 'Oceanside, CA'
+2025-10-16 20:33:53,612 - INFO -      +1: '9 Anglers1/2 Day AM'
+2025-10-16 20:33:53,612 - INFO -      +2: '10 Whitefish, 70 Rockfish, 20 Sanddab'
+2025-10-16 20:33:53,612 - INFO -      +3: 'Point Loma Sportfishing Fish Counts'
+2025-10-16 20:33:53,612 - INFO -    Found 9 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:53,612 - INFO -    Catches: '10 Whitefish, 70 Rockfish, 20 Sanddab'
+2025-10-16 20:33:53,612 - INFO - ✅ Parsed: Southern Cal - 3 species, 9 anglers
+2025-10-16 20:33:53,612 - INFO - 📍 Landing header detected: Point Loma Sportfishing
+2025-10-16 20:33:53,612 - INFO - 🔍 Found boat: Boat at line 70
+2025-10-16 20:33:53,612 - INFO -    Next lines:
+2025-10-16 20:33:53,612 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:53,612 - INFO -      +1: 'Point Loma'
+2025-10-16 20:33:53,613 - INFO -      +2: 'Point Loma Sportfishing'
+2025-10-16 20:33:53,613 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:53,613 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:53,613 - INFO - 🔍 Found boat: Point Loma at line 73
+2025-10-16 20:33:53,613 - INFO -    Next lines:
+2025-10-16 20:33:53,613 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:53,613 - INFO -      +1: '12 Anglers1/2 Day AM'
+2025-10-16 20:33:53,613 - INFO -      +2: '3 Barred Sand Bass, 1 Sculpin, 51 Whitefish, 35 Rockfish'
+2025-10-16 20:33:53,613 - INFO -      +3: 'Previous Day Next Day'
+2025-10-16 20:33:53,613 - INFO -    Found 12 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:53,613 - INFO -    Catches: '3 Barred Sand Bass, 1 Sculpin, 51 Whitefish, 35 Rockfish'
+2025-10-16 20:33:53,613 - INFO - ✅ Parsed: Point Loma - 4 species, 12 anglers
+2025-10-16 20:33:53,613 - INFO - ✅ Total trips parsed: 5
+2025-10-16 20:33:53,613 - INFO - 📊 Source page: 5 trips
+2025-10-16 20:33:53,664 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%2Clandings%28name%29%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-04-03 "HTTP/2 200 OK"
+2025-10-16 20:33:53,666 - INFO - 📊 Database: 5 trips
+2025-10-16 20:33:53,666 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:53,666 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:53,666 - INFO - ✅ Match: Premier
+2025-10-16 20:33:53,666 - INFO - ✅ Match: Southern Cal
+2025-10-16 20:33:53,666 - INFO - ✅ Match: Point Loma
+2025-10-16 20:33:53,666 - INFO - 
+================================================================================
+2025-10-16 20:33:53,666 - INFO - ✅ QC PASSED: 2025-04-03
+2025-10-16 20:33:53,666 - INFO - 📊 Matches: 5/5
+2025-10-16 20:33:53,666 - INFO - ⚠️  Mismatches: 0
+2025-10-16 20:33:53,666 - INFO - ⚠️  Missing boats: 0
+2025-10-16 20:33:53,666 - INFO - ⚠️  Extra boats: 0
+2025-10-16 20:33:53,666 - INFO - ================================================================================
+
+2025-10-16 20:33:55,668 - INFO - 
+================================================================================
+2025-10-16 20:33:55,668 - INFO - 🔍 QC VALIDATION: 2025-04-04
+2025-10-16 20:33:55,668 - INFO - ================================================================================
+2025-10-16 20:33:55,668 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-04
+2025-10-16 20:33:56,324 - INFO - ✅ Fetched 32161 bytes
+2025-10-16 20:33:56,332 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-16 20:33:56,332 - INFO - 📍 Landing header detected: Fisherman's Landing
+2025-10-16 20:33:56,332 - INFO - 🔍 Found boat: Boat at line 40
+2025-10-16 20:33:56,332 - INFO -    Next lines:
+2025-10-16 20:33:56,332 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:56,332 - INFO -      +1: 'Dolphin'
+2025-10-16 20:33:56,332 - INFO -      +2: 'Fisherman's Landing'
+2025-10-16 20:33:56,332 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:56,332 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:56,332 - INFO - 🔍 Found boat: Dolphin at line 43
+2025-10-16 20:33:56,332 - INFO -    Next lines:
+2025-10-16 20:33:56,332 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,333 - INFO -      +1: '35 Anglers1/2 Day AM'
+2025-10-16 20:33:56,333 - INFO -      +2: '87 Rockfish, 47 Vermilion Rockfish'
+2025-10-16 20:33:56,333 - INFO -      +3: 'H&M Landing Fish Counts'
+2025-10-16 20:33:56,333 - INFO -    Found 35 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:56,333 - INFO -    Catches: '87 Rockfish, 47 Vermilion Rockfish'
+2025-10-16 20:33:56,333 - INFO - ✅ Parsed: Dolphin - 2 species, 35 anglers
+2025-10-16 20:33:56,333 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-16 20:33:56,333 - INFO - 🔍 Found boat: Boat at line 49
+2025-10-16 20:33:56,333 - INFO -    Next lines:
+2025-10-16 20:33:56,333 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:56,333 - INFO -      +1: 'Patriot (SD)'
+2025-10-16 20:33:56,333 - INFO -      +2: 'H&M Landing'
+2025-10-16 20:33:56,333 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:56,333 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:56,333 - INFO - 🔍 Found boat: Premier at line 57
+2025-10-16 20:33:56,333 - INFO -    Next lines:
+2025-10-16 20:33:56,333 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,333 - INFO -      +1: '23 Anglers1/2 Day AM'
+2025-10-16 20:33:56,333 - INFO -      +2: '165 Rockfish'
+2025-10-16 20:33:56,333 - INFO -      +3: 'Premier'
+2025-10-16 20:33:56,333 - INFO -    Found 23 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:56,333 - INFO -    Catches: '165 Rockfish'
+2025-10-16 20:33:56,333 - INFO - ✅ Parsed: Premier - 1 species, 23 anglers
+2025-10-16 20:33:56,333 - INFO - 🔍 Found boat: Premier at line 62
+2025-10-16 20:33:56,333 - INFO -    Next lines:
+2025-10-16 20:33:56,333 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,333 - INFO -      +1: '30 Anglers1/2 Day PM'
+2025-10-16 20:33:56,333 - INFO -      +2: '5 Sand Bass, 13 Sculpin, 2 Lingcod, 25 Rockfish, 70 Red Rockfish'
+2025-10-16 20:33:56,333 - INFO -      +3: 'Oceanside Sea Center Fish Counts'
+2025-10-16 20:33:56,333 - INFO -    Found 30 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:56,333 - INFO -    Catches: '5 Sand Bass, 13 Sculpin, 2 Lingcod, 25 Rockfish, 70 Red Rockfish'
+2025-10-16 20:33:56,333 - INFO - ✅ Parsed: Premier - 5 species, 30 anglers
+2025-10-16 20:33:56,334 - INFO - 📍 Landing header detected: Oceanside Sea Center
+2025-10-16 20:33:56,334 - INFO - 🔍 Found boat: Boat at line 68
+2025-10-16 20:33:56,334 - INFO -    Next lines:
+2025-10-16 20:33:56,334 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:56,334 - INFO -      +1: 'Southern Cal'
+2025-10-16 20:33:56,334 - INFO -      +2: 'Oceanside Sea Center'
+2025-10-16 20:33:56,334 - INFO -      +3: 'Oceanside, CA'
+2025-10-16 20:33:56,334 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:56,334 - INFO - 🔍 Found boat: Southern Cal at line 71
+2025-10-16 20:33:56,334 - INFO -    Next lines:
+2025-10-16 20:33:56,334 - INFO -      +0: 'Oceanside, CA'
+2025-10-16 20:33:56,334 - INFO -      +1: '24 Anglers1/2 Day AM'
+2025-10-16 20:33:56,334 - INFO -      +2: '15 Sculpin, 5 Whitefish, 130 Rockfish'
+2025-10-16 20:33:56,334 - INFO -      +3: 'Point Loma Sportfishing Fish Counts'
+2025-10-16 20:33:56,334 - INFO -    Found 24 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:56,334 - INFO -    Catches: '15 Sculpin, 5 Whitefish, 130 Rockfish'
+2025-10-16 20:33:56,334 - INFO - ✅ Parsed: Southern Cal - 3 species, 24 anglers
+2025-10-16 20:33:56,334 - INFO - 📍 Landing header detected: Point Loma Sportfishing
+2025-10-16 20:33:56,334 - INFO - 🔍 Found boat: Boat at line 77
+2025-10-16 20:33:56,334 - INFO -    Next lines:
+2025-10-16 20:33:56,334 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:56,334 - INFO -      +1: 'Point Loma'
+2025-10-16 20:33:56,334 - INFO -      +2: 'Point Loma Sportfishing'
+2025-10-16 20:33:56,334 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:56,334 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:56,334 - INFO - 🔍 Found boat: Point Loma at line 80
+2025-10-16 20:33:56,334 - INFO -    Next lines:
+2025-10-16 20:33:56,334 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,334 - INFO -      +1: '24 Anglers1/2 Day AM'
+2025-10-16 20:33:56,334 - INFO -      +2: '131 Rockfish'
+2025-10-16 20:33:56,334 - INFO -      +3: 'Seaforth Sportfishing Fish Counts'
+2025-10-16 20:33:56,334 - INFO -    Found 24 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:56,334 - INFO -    Catches: '131 Rockfish'
+2025-10-16 20:33:56,335 - INFO - ✅ Parsed: Point Loma - 1 species, 24 anglers
+2025-10-16 20:33:56,335 - INFO - 📍 Landing header detected: Seaforth Sportfishing
+2025-10-16 20:33:56,335 - INFO - 🔍 Found boat: Boat at line 86
+2025-10-16 20:33:56,335 - INFO -    Next lines:
+2025-10-16 20:33:56,335 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:56,335 - INFO -      +1: 'New Seaforth'
+2025-10-16 20:33:56,335 - INFO -      +2: 'Seaforth Sportfishing'
+2025-10-16 20:33:56,335 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:56,335 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:56,335 - INFO - 🔍 Found boat: New Seaforth at line 89
+2025-10-16 20:33:56,335 - INFO -    Next lines:
+2025-10-16 20:33:56,335 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,335 - INFO -      +1: '27 Anglers1/2 Day AM'
+2025-10-16 20:33:56,335 - INFO -      +2: '125 Rockfish'
+2025-10-16 20:33:56,335 - INFO -      +3: 'New Seaforth'
+2025-10-16 20:33:56,335 - INFO -    Found 27 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:56,335 - INFO -    Catches: '125 Rockfish'
+2025-10-16 20:33:56,335 - INFO - ✅ Parsed: New Seaforth - 1 species, 27 anglers
+2025-10-16 20:33:56,335 - INFO - 🔍 Found boat: New Seaforth at line 94
+2025-10-16 20:33:56,335 - INFO -    Next lines:
+2025-10-16 20:33:56,335 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,335 - INFO -      +1: '24 Anglers1/2 Day PM'
+2025-10-16 20:33:56,335 - INFO -      +2: '2 Sculpin, 40 Whitefish, 45 Rockfish, 10 Vermilion Rockfish'
+2025-10-16 20:33:56,335 - INFO -      +3: 'Outer Limits'
+2025-10-16 20:33:56,335 - INFO -    Found 24 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:56,335 - INFO -    Catches: '2 Sculpin, 40 Whitefish, 45 Rockfish, 10 Vermilion Rockfish'
+2025-10-16 20:33:56,335 - INFO - ✅ Parsed: New Seaforth - 4 species, 24 anglers
+2025-10-16 20:33:56,335 - INFO - 🔍 Found boat: Outer Limits at line 99
+2025-10-16 20:33:56,335 - INFO -    Next lines:
+2025-10-16 20:33:56,335 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,335 - INFO -      +1: '20 AnglersFull Day'
+2025-10-16 20:33:56,335 - INFO -      +2: '1 Lingcod, 53 Rockfish'
+2025-10-16 20:33:56,336 - INFO -      +3: 'Pacific Voyager'
+2025-10-16 20:33:56,336 - INFO -    Found 20 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:56,336 - INFO -    Catches: '1 Lingcod, 53 Rockfish'
+2025-10-16 20:33:56,336 - INFO - ✅ Parsed: Outer Limits - 2 species, 20 anglers
+2025-10-16 20:33:56,336 - INFO - 🔍 Found boat: Pacific Voyager at line 104
+2025-10-16 20:33:56,336 - INFO -    Next lines:
+2025-10-16 20:33:56,336 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,336 - INFO -      +1: '13 Anglers1.5 Day'
+2025-10-16 20:33:56,336 - INFO -      +2: '65 Lingcod, 25 Rockfish, 40 Vermilion Rockfish'
+2025-10-16 20:33:56,336 - INFO -      +3: 'San Diego'
+2025-10-16 20:33:56,336 - INFO -    Found 13 anglers, trip: '1.5 Day' at offset +1
+2025-10-16 20:33:56,336 - INFO -    Catches: '65 Lingcod, 25 Rockfish, 40 Vermilion Rockfish'
+2025-10-16 20:33:56,336 - INFO - ✅ Parsed: Pacific Voyager - 3 species, 13 anglers
+2025-10-16 20:33:56,336 - INFO - 🔍 Found boat: San Diego at line 109
+2025-10-16 20:33:56,336 - INFO -    Next lines:
+2025-10-16 20:33:56,336 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,336 - INFO -      +1: '21 AnglersFull Day'
+2025-10-16 20:33:56,336 - INFO -      +2: '11 Sculpin, 1 Sheephead, 1 Lingcod, 105 Whitefish, 6 Rockfish'
+2025-10-16 20:33:56,336 - INFO -      +3: 'Sea Watch'
+2025-10-16 20:33:56,336 - INFO -    Found 21 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:56,336 - INFO -    Catches: '11 Sculpin, 1 Sheephead, 1 Lingcod, 105 Whitefish, 6 Rockfish'
+2025-10-16 20:33:56,336 - INFO - ✅ Parsed: San Diego - 5 species, 21 anglers
+2025-10-16 20:33:56,336 - INFO - 🔍 Found boat: Sea Watch at line 114
+2025-10-16 20:33:56,336 - INFO -    Next lines:
+2025-10-16 20:33:56,336 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:56,336 - INFO -      +1: '18 AnglersFull Day'
+2025-10-16 20:33:56,336 - INFO -      +2: '11 Sculpin, 1 Calico Bass, 98 Rockfish, 12 Vermilion Rockfish'
+2025-10-16 20:33:56,336 - INFO -      +3: 'Previous Day Next Day'
+2025-10-16 20:33:56,336 - INFO -    Found 18 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:56,336 - INFO -    Catches: '11 Sculpin, 1 Calico Bass, 98 Rockfish, 12 Vermilion Rockfish'
+2025-10-16 20:33:56,336 - INFO - ✅ Parsed: Sea Watch - 4 species, 18 anglers
+2025-10-16 20:33:56,336 - INFO - ✅ Total trips parsed: 11
+2025-10-16 20:33:56,337 - INFO - 📊 Source page: 11 trips
+2025-10-16 20:33:56,424 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%2Clandings%28name%29%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-04-04 "HTTP/2 200 OK"
+2025-10-16 20:33:56,425 - INFO - 📊 Database: 11 trips
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Premier
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Premier
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Southern Cal
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Point Loma
+2025-10-16 20:33:56,425 - INFO - ✅ Match: New Seaforth
+2025-10-16 20:33:56,425 - INFO - ✅ Match: New Seaforth
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Outer Limits
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Pacific Voyager
+2025-10-16 20:33:56,425 - INFO - ✅ Match: San Diego
+2025-10-16 20:33:56,425 - INFO - ✅ Match: Sea Watch
+2025-10-16 20:33:56,425 - INFO - 
+================================================================================
+2025-10-16 20:33:56,425 - INFO - ✅ QC PASSED: 2025-04-04
+2025-10-16 20:33:56,425 - INFO - 📊 Matches: 11/11
+2025-10-16 20:33:56,425 - INFO - ⚠️  Mismatches: 0
+2025-10-16 20:33:56,425 - INFO - ⚠️  Missing boats: 0
+2025-10-16 20:33:56,425 - INFO - ⚠️  Extra boats: 0
+2025-10-16 20:33:56,425 - INFO - ================================================================================
+
+2025-10-16 20:33:58,430 - INFO - 
+================================================================================
+2025-10-16 20:33:58,430 - INFO - 🔍 QC VALIDATION: 2025-04-05
+2025-10-16 20:33:58,430 - INFO - ================================================================================
+2025-10-16 20:33:58,431 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-04-05
+2025-10-16 20:33:59,085 - INFO - ✅ Fetched 32319 bytes
+2025-10-16 20:33:59,092 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-16 20:33:59,092 - INFO - 📍 Landing header detected: Fisherman's Landing
+2025-10-16 20:33:59,092 - INFO - 🔍 Found boat: Boat at line 40
+2025-10-16 20:33:59,092 - INFO -    Next lines:
+2025-10-16 20:33:59,092 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:59,092 - INFO -      +1: 'Dolphin'
+2025-10-16 20:33:59,093 - INFO -      +2: 'Fisherman's Landing'
+2025-10-16 20:33:59,093 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:59,093 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:59,093 - INFO - 🔍 Found boat: Dolphin at line 43
+2025-10-16 20:33:59,093 - INFO -    Next lines:
+2025-10-16 20:33:59,093 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,093 - INFO -      +1: '33 Anglers1/2 Day PM'
+2025-10-16 20:33:59,093 - INFO -      +2: '11 Sculpin, 1 Sheephead, 2 Lingcod, 21 Whitefish, 26 Rockfish, 52 Vermilion Rockfish'
+2025-10-16 20:33:59,093 - INFO -      +3: 'Dolphin'
+2025-10-16 20:33:59,093 - INFO -    Found 33 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:59,093 - INFO -    Catches: '11 Sculpin, 1 Sheephead, 2 Lingcod, 21 Whitefish, 26 Rockfish, 52 Vermilion Rockfish'
+2025-10-16 20:33:59,093 - INFO - ✅ Parsed: Dolphin - 6 species, 33 anglers
+2025-10-16 20:33:59,093 - INFO - 🔍 Found boat: Dolphin at line 48
+2025-10-16 20:33:59,093 - INFO -    Next lines:
+2025-10-16 20:33:59,093 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,093 - INFO -      +1: '55 Anglers1/2 Day AM'
+2025-10-16 20:33:59,093 - INFO -      +2: '47 Rockfish, 31 Vermilion Rockfish'
+2025-10-16 20:33:59,093 - INFO -      +3: 'H&M Landing Fish Counts'
+2025-10-16 20:33:59,093 - INFO -    Found 55 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:59,093 - INFO -    Catches: '47 Rockfish, 31 Vermilion Rockfish'
+2025-10-16 20:33:59,093 - INFO - ✅ Parsed: Dolphin - 2 species, 55 anglers
+2025-10-16 20:33:59,093 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-16 20:33:59,093 - INFO - 🔍 Found boat: Boat at line 54
+2025-10-16 20:33:59,093 - INFO -    Next lines:
+2025-10-16 20:33:59,093 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:59,093 - INFO -      +1: 'Horizon'
+2025-10-16 20:33:59,093 - INFO -      +2: 'H&M Landing'
+2025-10-16 20:33:59,093 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:59,093 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:59,093 - INFO - 🔍 Found boat: Horizon at line 57
+2025-10-16 20:33:59,093 - INFO -    Next lines:
+2025-10-16 20:33:59,093 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,094 - INFO -      +1: '10 AnglersFull Day'
+2025-10-16 20:33:59,094 - INFO -      +2: '14 Bocaccio, 1 Sheephead, 2 Lingcod, 76 Rockfish, 27 Red Rockfish'
+2025-10-16 20:33:59,094 - INFO -      +3: 'Premier'
+2025-10-16 20:33:59,094 - INFO -    Found 10 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:59,094 - INFO -    Catches: '14 Bocaccio, 1 Sheephead, 2 Lingcod, 76 Rockfish, 27 Red Rockfish'
+2025-10-16 20:33:59,094 - INFO - ✅ Parsed: Horizon - 5 species, 10 anglers
+2025-10-16 20:33:59,094 - INFO - 🔍 Found boat: Premier at line 62
+2025-10-16 20:33:59,094 - INFO -    Next lines:
+2025-10-16 20:33:59,094 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,094 - INFO -      +1: '47 Anglers1/2 Day AMLocal'
+2025-10-16 20:33:59,094 - INFO -      +2: '187 Rockfish'
+2025-10-16 20:33:59,094 - INFO -      +3: 'Premier'
+2025-10-16 20:33:59,094 - INFO -    Found 47 anglers, trip: '1/2 Day AMLocal' at offset +1
+2025-10-16 20:33:59,094 - INFO -    Catches: '187 Rockfish'
+2025-10-16 20:33:59,094 - INFO - ✅ Parsed: Premier - 1 species, 47 anglers
+2025-10-16 20:33:59,094 - INFO - 🔍 Found boat: Premier at line 67
+2025-10-16 20:33:59,094 - INFO -    Next lines:
+2025-10-16 20:33:59,094 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,094 - INFO -      +1: '47 Anglers1/2 Day PM'
+2025-10-16 20:33:59,094 - INFO -      +2: '1 Sand Bass, 23 Sculpin, 27 Rockfish, 61 Red Rockfish'
+2025-10-16 20:33:59,094 - INFO -      +3: 'Oceanside Sea Center Fish Counts'
+2025-10-16 20:33:59,094 - INFO -    Found 47 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:59,094 - INFO -    Catches: '1 Sand Bass, 23 Sculpin, 27 Rockfish, 61 Red Rockfish'
+2025-10-16 20:33:59,094 - INFO - ✅ Parsed: Premier - 4 species, 47 anglers
+2025-10-16 20:33:59,094 - INFO - 📍 Landing header detected: Oceanside Sea Center
+2025-10-16 20:33:59,094 - INFO - 🔍 Found boat: Boat at line 73
+2025-10-16 20:33:59,094 - INFO -    Next lines:
+2025-10-16 20:33:59,094 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:59,094 - INFO -      +1: 'Southern Cal'
+2025-10-16 20:33:59,094 - INFO -      +2: 'Oceanside Sea Center'
+2025-10-16 20:33:59,094 - INFO -      +3: 'Oceanside, CA'
+2025-10-16 20:33:59,094 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:59,095 - INFO - 🔍 Found boat: Southern Cal at line 76
+2025-10-16 20:33:59,095 - INFO -    Next lines:
+2025-10-16 20:33:59,095 - INFO -      +0: 'Oceanside, CA'
+2025-10-16 20:33:59,095 - INFO -      +1: '38 Anglers1/2 Day AM'
+2025-10-16 20:33:59,095 - INFO -      +2: '55 Sculpin, 2 Whitefish, 112 Rockfish, 40 Sanddab'
+2025-10-16 20:33:59,095 - INFO -      +3: 'Point Loma Sportfishing Fish Counts'
+2025-10-16 20:33:59,095 - INFO -    Found 38 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:59,095 - INFO -    Catches: '55 Sculpin, 2 Whitefish, 112 Rockfish, 40 Sanddab'
+2025-10-16 20:33:59,095 - INFO - ✅ Parsed: Southern Cal - 4 species, 38 anglers
+2025-10-16 20:33:59,095 - INFO - 📍 Landing header detected: Point Loma Sportfishing
+2025-10-16 20:33:59,095 - INFO - 🔍 Found boat: Boat at line 82
+2025-10-16 20:33:59,095 - INFO -    Next lines:
+2025-10-16 20:33:59,095 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:59,095 - INFO -      +1: 'Mission Belle'
+2025-10-16 20:33:59,095 - INFO -      +2: 'Point Loma Sportfishing'
+2025-10-16 20:33:59,095 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:59,095 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:59,095 - INFO - 🔍 Found boat: Mission Belle at line 85
+2025-10-16 20:33:59,095 - INFO -    Next lines:
+2025-10-16 20:33:59,095 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,095 - INFO -      +1: '25 AnglersFull Day'
+2025-10-16 20:33:59,095 - INFO -      +2: '3 Sculpin, 2 Sheephead, 1 Lingcod, 19 Whitefish, 120 Rockfish'
+2025-10-16 20:33:59,095 - INFO -      +3: 'Point Loma'
+2025-10-16 20:33:59,095 - INFO -    Found 25 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:59,095 - INFO -    Catches: '3 Sculpin, 2 Sheephead, 1 Lingcod, 19 Whitefish, 120 Rockfish'
+2025-10-16 20:33:59,095 - INFO - ✅ Parsed: Mission Belle - 5 species, 25 anglers
+2025-10-16 20:33:59,095 - INFO - 🔍 Found boat: Point Loma at line 90
+2025-10-16 20:33:59,095 - INFO -    Next lines:
+2025-10-16 20:33:59,095 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,095 - INFO -      +1: '23 Anglers1/2 Day AM'
+2025-10-16 20:33:59,095 - INFO -      +2: '3 Barred Sand Bass, 7 Sculpin, 14 Whitefish, 11 Rockfish, 14 Red Rockfish'
+2025-10-16 20:33:59,095 - INFO -      +3: 'Seaforth Sportfishing Fish Counts'
+2025-10-16 20:33:59,095 - INFO -    Found 23 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:59,096 - INFO -    Catches: '3 Barred Sand Bass, 7 Sculpin, 14 Whitefish, 11 Rockfish, 14 Red Rockfish'
+2025-10-16 20:33:59,096 - INFO - ✅ Parsed: Point Loma - 5 species, 23 anglers
+2025-10-16 20:33:59,096 - INFO - 📍 Landing header detected: Seaforth Sportfishing
+2025-10-16 20:33:59,096 - INFO - 🔍 Found boat: Boat at line 96
+2025-10-16 20:33:59,096 - INFO -    Next lines:
+2025-10-16 20:33:59,096 - INFO -      +0: 'Dock Totals'
+2025-10-16 20:33:59,096 - INFO -      +1: 'New Seaforth'
+2025-10-16 20:33:59,096 - INFO -      +2: 'Seaforth Sportfishing'
+2025-10-16 20:33:59,096 - INFO -      +3: 'San Diego, CA'
+2025-10-16 20:33:59,096 - INFO -    Incomplete data, skipping
+2025-10-16 20:33:59,096 - INFO - 🔍 Found boat: New Seaforth at line 99
+2025-10-16 20:33:59,096 - INFO -    Next lines:
+2025-10-16 20:33:59,096 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,096 - INFO -      +1: '51 Anglers1/2 Day AM'
+2025-10-16 20:33:59,096 - INFO -      +2: '126 Rockfish'
+2025-10-16 20:33:59,096 - INFO -      +3: 'New Seaforth'
+2025-10-16 20:33:59,096 - INFO -    Found 51 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-16 20:33:59,096 - INFO -    Catches: '126 Rockfish'
+2025-10-16 20:33:59,096 - INFO - ✅ Parsed: New Seaforth - 1 species, 51 anglers
+2025-10-16 20:33:59,096 - INFO - 🔍 Found boat: New Seaforth at line 104
+2025-10-16 20:33:59,096 - INFO -    Next lines:
+2025-10-16 20:33:59,096 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,096 - INFO -      +1: '24 Anglers1/2 Day PM'
+2025-10-16 20:33:59,096 - INFO -      +2: '4 Sculpin, 1 Sheephead, 23 Whitefish, 18 Rockfish, 4 Vermilion Rockfish'
+2025-10-16 20:33:59,096 - INFO -      +3: 'Pacific Voyager'
+2025-10-16 20:33:59,096 - INFO -    Found 24 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-16 20:33:59,096 - INFO -    Catches: '4 Sculpin, 1 Sheephead, 23 Whitefish, 18 Rockfish, 4 Vermilion Rockfish'
+2025-10-16 20:33:59,096 - INFO - ✅ Parsed: New Seaforth - 5 species, 24 anglers
+2025-10-16 20:33:59,096 - INFO - 🔍 Found boat: Pacific Voyager at line 109
+2025-10-16 20:33:59,096 - INFO -    Next lines:
+2025-10-16 20:33:59,096 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,096 - INFO -      +1: '15 AnglersOvernight'
+2025-10-16 20:33:59,096 - INFO -      +2: '75 Lingcod, 50 Rockfish'
+2025-10-16 20:33:59,097 - INFO -      +3: 'San Diego'
+2025-10-16 20:33:59,097 - INFO -    Found 15 anglers, trip: 'Overnight' at offset +1
+2025-10-16 20:33:59,097 - INFO -    Catches: '75 Lingcod, 50 Rockfish'
+2025-10-16 20:33:59,097 - INFO - ✅ Parsed: Pacific Voyager - 2 species, 15 anglers
+2025-10-16 20:33:59,097 - INFO - 🔍 Found boat: San Diego at line 114
+2025-10-16 20:33:59,097 - INFO -    Next lines:
+2025-10-16 20:33:59,097 - INFO -      +0: 'San Diego, CA'
+2025-10-16 20:33:59,097 - INFO -      +1: '21 AnglersFull Day'
+2025-10-16 20:33:59,097 - INFO -      +2: '9 Sculpin, 120 Whitefish, 24 Rockfish'
+2025-10-16 20:33:59,097 - INFO -      +3: 'Previous Day Next Day'
+2025-10-16 20:33:59,097 - INFO -    Found 21 anglers, trip: 'Full Day' at offset +1
+2025-10-16 20:33:59,097 - INFO -    Catches: '9 Sculpin, 120 Whitefish, 24 Rockfish'
+2025-10-16 20:33:59,097 - INFO - ✅ Parsed: San Diego - 3 species, 21 anglers
+2025-10-16 20:33:59,097 - INFO - ✅ Total trips parsed: 12
+2025-10-16 20:33:59,097 - INFO - 📊 Source page: 12 trips
+2025-10-16 20:33:59,171 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%2Clandings%28name%29%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-04-05 "HTTP/2 200 OK"
+2025-10-16 20:33:59,171 - INFO - 📊 Database: 12 trips
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Dolphin
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Horizon
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Premier
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Premier
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Southern Cal
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Mission Belle
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Point Loma
+2025-10-16 20:33:59,171 - INFO - ✅ Match: New Seaforth
+2025-10-16 20:33:59,171 - INFO - ✅ Match: New Seaforth
+2025-10-16 20:33:59,171 - INFO - ✅ Match: Pacific Voyager
+2025-10-16 20:33:59,171 - INFO - ✅ Match: San Diego
+2025-10-16 20:33:59,171 - INFO - 
+================================================================================
+2025-10-16 20:33:59,172 - INFO - ✅ QC PASSED: 2025-04-05
+2025-10-16 20:33:59,172 - INFO - 📊 Matches: 12/12
+2025-10-16 20:33:59,172 - INFO - ⚠️  Mismatches: 0
+2025-10-16 20:33:59,172 - INFO - ⚠️  Missing boats: 0
+2025-10-16 20:33:59,172 - INFO - ⚠️  Extra boats: 0
+2025-10-16 20:33:59,172 - INFO - ================================================================================
+
+2025-10-16 20:33:59,172 - INFO - 
+================================================================================
+2025-10-16 20:33:59,172 - INFO - 📊 QC VALIDATION SUMMARY
+2025-10-16 20:33:59,172 - INFO - ================================================================================
+2025-10-16 20:33:59,172 - INFO - 📅 Dates validated: 5
+2025-10-16 20:33:59,172 - INFO - ✅ Passed: 5
+2025-10-16 20:33:59,172 - INFO - ❌ Failed: 0
+2025-10-16 20:33:59,172 - INFO - ⚠️  Errors: 0
+2025-10-16 20:33:59,172 - INFO - 
+================================================================================
+2025-10-16 20:33:59,172 - INFO - 🎉 100% QC VALIDATION PASSED!
+2025-10-16 20:33:59,172 - INFO - ================================================================================
+
+2025-10-16 20:33:59,172 - INFO - ✅ Report saved: qc_batch1_apr.json

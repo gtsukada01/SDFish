@@ -1,0 +1,46 @@
+{
+  "date_range": {
+    "start": "2024-07-06",
+    "end": "2024-07-10"
+  },
+  "summary": {
+    "total_dates": 5,
+    "passed": 0,
+    "failed": 0,
+    "errors": 5,
+    "pass_rate": 0.0
+  },
+  "reports": [
+    {
+      "date": "2024-07-06",
+      "status": "ERROR",
+      "error": "Failed to fetch source page",
+      "timestamp": "2025-10-17T06:20:13.024228"
+    },
+    {
+      "date": "2024-07-07",
+      "status": "ERROR",
+      "error": "Failed to fetch source page",
+      "timestamp": "2025-10-17T06:21:15.041879"
+    },
+    {
+      "date": "2024-07-08",
+      "status": "ERROR",
+      "error": "Failed to fetch source page",
+      "timestamp": "2025-10-17T06:22:17.058469"
+    },
+    {
+      "date": "2024-07-09",
+      "status": "ERROR",
+      "error": "Failed to fetch source page",
+      "timestamp": "2025-10-17T06:23:19.076409"
+    },
+    {
+      "date": "2024-07-10",
+      "status": "ERROR",
+      "error": "Failed to fetch source page",
+      "timestamp": "2025-10-17T06:24:21.093472"
+    }
+  ],
+  "timestamp": "2025-10-17T06:24:21.093823"
+}

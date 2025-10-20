@@ -1,0 +1,28 @@
+{
+  "date_range": {
+    "start": "2025-07-31",
+    "end": "2025-07-31"
+  },
+  "summary": {
+    "total_dates": 1,
+    "passed": 1,
+    "failed": 0,
+    "errors": 0,
+    "pass_rate": 100.0
+  },
+  "reports": [
+    {
+      "date": "2025-07-31",
+      "status": "PASS",
+      "source_boat_count": 26,
+      "database_boat_count": 26,
+      "matches": 26,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-17T14:53:48.641145"
+    }
+  ],
+  "timestamp": "2025-10-17T14:53:48.641676"
+}

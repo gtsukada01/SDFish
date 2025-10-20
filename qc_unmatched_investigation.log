@@ -1,0 +1,4 @@
+usage: qc_validator.py [-h] [--date DATE] [--start-date START_DATE]
+                       [--end-date END_DATE] [--polaris-test]
+                       [--output OUTPUT]
+qc_validator.py: error: unrecognized arguments: --dates-file unmatched_dates_for_qc.txt --verbose

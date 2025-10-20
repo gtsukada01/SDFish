@@ -1,0 +1,63 @@
+{
+  "url": "http://localhost:8081/index.html",
+  "title": "SD Fishing - Premium Analytics Dashboard",
+  "console_messages": [
+    {
+      "type": "info",
+      "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+    }
+  ],
+  "react_info": {
+    "reactMounted": true,
+    "rootInnerHTML": "<div class=\"container mx-auto p-6 space-y-6\"><h1 class=\"text-3xl font-bold\">Southern California Offshore Analytics</h1><div class=\"grid gap-4 md:grid-cols-2 lg:grid-cols-4\"><div class=\"rounded-lg border bg-card text-card-foreground shadow-sm\"><div class=\"flex flex-col space-y-1.5 p-6 pb-2\"><div class=\"tracking-tight text-sm font-medium text-muted-foreground\">Total Trips</div></div><div class=\"p-6 pt-0\"><div class=\"text-2xl font-bold\">220</div></div></div><div class=\"rounded-lg border bg-card tex",
+    "metricsCardCount": 5,
+    "metricsCardClasses": [
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm"
+    ],
+    "sidebarHTML": "\n        <div class=\"nav-section\">\n          <div class=\"nav-item all-landings hover:bg-accent hover:text-accent-foreground\" data-landing-id=\"all\">\n            <div class=\"nav-item-content\">\n              <span class=\"text-foreground\">All Landings</span>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"nav-divider\"></div>\n\n        <div class=\"nav-section\">\n          <div class=\"nav-header\">Pinned</div>\n          <div id=\"pinnedSection\"></div>\n        </div>\n\n        <div class=\"nav-divider\"></div>\n\n        <div class=\"nav-section\">\n          <div class=\"nav-header\">San Diego</div>\n          <div id=\"sanDiegoSection\"></div>\n        </div>\n      ",
+    "filtersFound": {
+      "startDate": false,
+      "endDate": false,
+      "landingName": false,
+      "boat": false,
+      "allSpecies": false
+    },
+    "bodyClasses": "",
+    "documentTitle": "SD Fishing - Premium Analytics Dashboard"
+  },
+  "styles_info": {
+    "sidebar": {
+      "display": "flex",
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(2, 8, 23)",
+      "width": "240px",
+      "padding": "12px",
+      "border": ""
+    },
+    "mainContent": {
+      "display": "block",
+      "backgroundColor": "rgba(241, 245, 249, 0.3)",
+      "color": "rgb(2, 8, 23)",
+      "width": "1680px",
+      "padding": "0px",
+      "border": "0px solid rgb(226, 232, 240)"
+    },
+    "root": {
+      "display": "block",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "color": "rgb(2, 8, 23)",
+      "width": "1680px",
+      "padding": "0px",
+      "border": "0px solid rgb(226, 232, 240)"
+    }
+  },
+  "screenshots": {
+    "full_page": "screenshot_full_page.png",
+    "sidebar": "screenshot_sidebar.png",
+    "main_content": "screenshot_main_content.png"
+  }
+}

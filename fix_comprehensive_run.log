@@ -1,0 +1,1558 @@
+2025-10-17 20:48:22,347 - INFO - ✅ Supabase connected
+================================================================================
+🔧 COMPREHENSIVE LANDING NAME MISATTRIBUTION FIX
+================================================================================
+
+Processing 2 phantom boats:
+  - Boat ID 374: Seaforth Sportfishing
+  - Boat ID 375: Helgrens Sportfishing
+
+================================================================================
+🔧 PROCESSING Seaforth Sportfishing (BOAT ID 374)
+================================================================================
+
+2025-10-17 20:48:22,503 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id%2Ctrip_date%2Ctrip_duration%2Canglers&boat_id=eq.374&order=trip_date.asc "HTTP/2 200 OK"
+Found 121 trips to fix
+
+Covering 114 unique dates
+
+================================================================================
+📅 Processing 2024-05-25 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth
+
+  DB Trip ID 12379: 1/2 Day Twilight          | 19 anglers
+  ✅ Match: New Seaforth
+2025-10-17 20:48:23,437 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Seaforth "HTTP/2 200 OK"
+2025-10-17 20:48:23,516 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.12379 "HTTP/2 200 OK"
+  ✅ Updated trip 12379 to boat 'New Seaforth' (ID 65)
+================================================================================
+📅 Processing 2024-05-26 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, Tribute
+
+  DB Trip ID 12556: 1/2 Day AM                | 43 anglers
+  ✅ Match: New Seaforth
+2025-10-17 20:48:27,206 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Seaforth "HTTP/2 200 OK"
+2025-10-17 20:48:27,269 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.12556 "HTTP/2 200 OK"
+  ✅ Updated trip 12556 to boat 'New Seaforth' (ID 65)
+================================================================================
+📅 Processing 2024-07-06 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Voyager, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 13368: 1/2 Day Twilight          | 51 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-11 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Voyager, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 13515: 1/2 Day Twilight          | 51 anglers
+  ✅ Match: New Seaforth
+2025-10-17 20:48:34,921 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Seaforth "HTTP/2 200 OK"
+2025-10-17 20:48:34,993 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.13515 "HTTP/2 200 OK"
+  ✅ Updated trip 13515 to boat 'New Seaforth' (ID 65)
+================================================================================
+📅 Processing 2024-08-05 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Polaris Supreme, Highliner, Sea Watch, Cortez, New Seaforth
+
+  DB Trip ID 15025: 1/2 Day AM                | 38 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-10 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 15224: Overnight                 | 25 anglers
+  ✅ Match: Highliner
+2025-10-17 20:48:43,589 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Highliner "HTTP/2 200 OK"
+2025-10-17 20:48:43,691 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.15224 "HTTP/2 200 OK"
+  ✅ Updated trip 15224 to boat 'Highliner' (ID 64)
+================================================================================
+📅 Processing 2024-09-02 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, New Seaforth, Highliner, Sea Watch
+
+  DB Trip ID 16315: 2.5 Day                   | 29 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-03 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, Sea Watch
+
+  DB Trip ID 16334: 1.5 Day                   | 17 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-05 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Voyager, New Seaforth, Tribute
+
+  DB Trip ID 16368: Full Day                  | 12 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-06 (2 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, Pacifica, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 16431: 1/2 Day AM                | 33 anglers
+  ❌ No match found
+
+  DB Trip ID 16441: 3/4 Day                   | 18 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-08 (2 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 16553: 1.5 Day                   | 16 anglers
+  ❌ No match found
+
+  DB Trip ID 16548: Full Day                  | 23 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-18 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, Outer Limits
+
+  DB Trip ID 16948: Full Day                  | 11 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-22 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Aztec, Pacifica, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 17033: 1.5 Day                   | 28 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-26 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Pacifica, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17091: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:14,575 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:14,684 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17091 "HTTP/2 200 OK"
+  ✅ Updated trip 17091 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-09-27 (1 trips)
+================================================================================
+Found 10 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, Highliner, Sea Watch, Cortez, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17114: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:18,466 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:18,547 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17114 "HTTP/2 200 OK"
+  ✅ Updated trip 17114 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-03 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: San Diego, New Seaforth
+
+  DB Trip ID 17198: 1.5 Day                   | 29 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-04 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: Aztec, Highliner, Cortez, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17241: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:25,960 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:26,051 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17241 "HTTP/2 200 OK"
+  ✅ Updated trip 17241 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-05 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, Sea Watch
+
+  DB Trip ID 17261: Full Day                  | 4 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-06 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacifica, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17295: Full Day                  | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:33,853 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:33,937 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17295 "HTTP/2 200 OK"
+  ✅ Updated trip 17295 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-07 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17313: Full Day                  | 2 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:37,631 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:37,713 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17313 "HTTP/2 200 OK"
+  ✅ Updated trip 17313 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-12 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos, Sea Watch
+
+  DB Trip ID 17525: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:41,398 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:41,468 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17525 "HTTP/2 200 OK"
+  ✅ Updated trip 17525 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-13 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Pacifica, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17547: 1/2 Day AM                | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:45,243 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:45,415 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17547 "HTTP/2 200 OK"
+  ✅ Updated trip 17547 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-18 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, Pacific Voyager, New Seaforth, El Gato Dos
+
+  DB Trip ID 17602: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:49:49,106 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:49:49,179 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17602 "HTTP/2 200 OK"
+  ✅ Updated trip 17602 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2024-10-27 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, Tribute, Pacifica
+
+  DB Trip ID 17736: Full Day                  | 2 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-11-01 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: San Diego, New Seaforth
+
+  DB Trip ID 14704: Full Day                  | 3 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-11-30 (1 trips)
+================================================================================
+Found 3 trips on page
+  Boats found: San Diego, New Seaforth
+
+  DB Trip ID 15718: Full Day                  | 4 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-01-26 (1 trips)
+================================================================================
+Found 1 trips on page
+  Boats found: Tribute
+
+  DB Trip ID 11384: 1.5 Day                   | 21 anglers
+  ✅ Match: Tribute
+2025-10-17 20:50:04,192 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Tribute "HTTP/2 200 OK"
+2025-10-17 20:50:04,271 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11384 "HTTP/2 200 OK"
+  ✅ Updated trip 11384 to boat 'Tribute' (ID 69)
+================================================================================
+📅 Processing 2025-02-02 (1 trips)
+================================================================================
+Found 1 trips on page
+  Boats found: Sea Watch
+
+  DB Trip ID 11474: 1/2 Day AM                | 16 anglers
+  ✅ Match: Sea Watch
+2025-10-17 20:50:07,931 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sea+Watch "HTTP/2 200 OK"
+2025-10-17 20:50:07,996 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11474 "HTTP/2 200 OK"
+  ✅ Updated trip 11474 to boat 'Sea Watch' (ID 68)
+================================================================================
+📅 Processing 2025-03-02 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: Pacific Voyager, Tribute
+
+  DB Trip ID 11594: 2.5 Day                   | 15 anglers
+  ✅ Match: Pacific Voyager
+2025-10-17 20:50:11,760 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Pacific+Voyager "HTTP/2 200 OK"
+2025-10-17 20:50:11,856 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11594 "HTTP/2 200 OK"
+  ✅ Updated trip 11594 to boat 'Pacific Voyager' (ID 66)
+================================================================================
+📅 Processing 2025-03-03 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: Pacific Voyager, Tribute
+
+  DB Trip ID 11602: 2.5 Day                   | 15 anglers
+  ✅ Match: Pacific Voyager
+2025-10-17 20:50:15,554 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Pacific+Voyager "HTTP/2 200 OK"
+2025-10-17 20:50:15,609 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11602 "HTTP/2 200 OK"
+  ✅ Updated trip 11602 to boat 'Pacific Voyager' (ID 66)
+================================================================================
+📅 Processing 2025-03-16 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: New Seaforth, Sea Watch
+
+  DB Trip ID 11745: 3/4 Day                   | 4 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-04-13 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: New Seaforth
+
+  DB Trip ID 12470: 3/4 Day                   | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-04-26 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: San Diego, New Seaforth
+
+  DB Trip ID 12654: 2 Day                     | 8 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-05-14 (1 trips)
+================================================================================
+Found 2 trips on page
+  Boats found: New Seaforth
+
+  DB Trip ID 13920: 1/2 Day AM                | 3 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-01 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 14324: 1.5 Day                   | 16 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-12 (2 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: Pacific Voyager, New Seaforth, El Gato Dos, Sea Watch
+
+  DB Trip ID 14478: Full Day                  | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:50:38,734 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:50:38,808 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.14478 "HTTP/2 200 OK"
+  ✅ Updated trip 14478 to boat 'El Gato Dos' (ID 63)
+
+  DB Trip ID 14483: Full Day                  | 21 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-13 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Polaris Supreme, Voyager, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 14494: 3/4 Day                   | 2 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-14 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, New Seaforth, Pacifica, Sea Watch
+
+  DB Trip ID 14518: 1/2 Day AM                | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-15 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Sea Watch, Cortez, New Seaforth, El Gato Dos
+
+  DB Trip ID 14543: 3/4 Day                   | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:50:49,811 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:50:49,875 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.14543 "HTTP/2 200 OK"
+  ✅ Updated trip 14543 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-06-18 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos, Sea Watch
+
+  DB Trip ID 14585: 1/2 Day AM                | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:50:53,536 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:50:53,598 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.14585 "HTTP/2 200 OK"
+  ✅ Updated trip 14585 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-06-19 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Polaris Supreme, Pacific Voyager, Sea Watch, New Seaforth
+
+  DB Trip ID 14599: 1/2 Day AM                | 2 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-06-22 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos, Sea Watch
+
+  DB Trip ID 14659: Full Day                  | 3 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:01,035 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:01,128 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.14659 "HTTP/2 200 OK"
+  ✅ Updated trip 14659 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-02 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Voyager, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 15185: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-07 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Polaris Supreme, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 15524: 3/4 Day                   | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:08,567 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:08,640 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.15524 "HTTP/2 200 OK"
+  ✅ Updated trip 15524 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-08 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Voyager, New Seaforth
+
+  DB Trip ID 15585: Full Day                  | 5 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-10 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Polaris Supreme, Voyager, Sea Watch, New Seaforth
+
+  DB Trip ID 15696: Full Day                  | 5 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-11 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 15745: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:19,853 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:19,933 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.15745 "HTTP/2 200 OK"
+  ✅ Updated trip 15745 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-12 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: Pacific Voyager, New Seaforth, Sea Watch
+
+  DB Trip ID 15783: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-13 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: Polaris Supreme, Voyager, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 15839: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:27,407 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:27,475 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.15839 "HTTP/2 200 OK"
+  ✅ Updated trip 15839 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-14 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: New Seaforth, Tribute, Highliner, Sea Watch
+
+  DB Trip ID 15884: Full Day                  | 3 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-15 (1 trips)
+================================================================================
+Found 10 trips on page
+  Boats found: Polaris Supreme, Pacific Voyager, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 15955: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:34,880 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:34,980 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.15955 "HTTP/2 200 OK"
+  ✅ Updated trip 15955 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-17 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: Polaris Supreme, Pacific Voyager, Pacifica, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 16024: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:39,070 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:39,340 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.16024 "HTTP/2 200 OK"
+  ✅ Updated trip 16024 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-18 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 16068: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:43,127 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:43,212 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.16068 "HTTP/2 200 OK"
+  ✅ Updated trip 16068 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-19 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: Pacific Voyager, New Seaforth, El Gato Dos, Sea Watch
+
+  DB Trip ID 16123: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:46,909 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:47,005 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.16123 "HTTP/2 200 OK"
+  ✅ Updated trip 16123 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-21 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: Polaris Supreme, Pacifica, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 16397: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:51:50,816 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:51:50,886 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.16397 "HTTP/2 200 OK"
+  ✅ Updated trip 16397 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-23 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: New Seaforth, Pacifica, Sea Watch
+
+  DB Trip ID 16495: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-26 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: Voyager, New Seaforth, Sea Watch
+
+  DB Trip ID 16635: 1/2 Day AM                | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-27 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 16690: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-28 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Polaris Supreme, Pacific Voyager, Sea Watch, New Seaforth
+
+  DB Trip ID 16741: 1.5 Day                   | 30 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-29 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 16770: 3/4 Day                   | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:09,431 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:09,502 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.16770 "HTTP/2 200 OK"
+  ✅ Updated trip 16770 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-07-30 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 16811: Full Day                  | 3 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-07-31 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Polaris Supreme, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 16857: 1/2 Day AM                | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-08-01 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Pacifica, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17355: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:20,681 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:20,753 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17355 "HTTP/2 200 OK"
+  ✅ Updated trip 17355 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-02 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, Pacifica, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 17394: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:24,666 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:24,747 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17394 "HTTP/2 200 OK"
+  ✅ Updated trip 17394 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-03 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 17428: Full Day                  | 3 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:28,504 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:28,596 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17428 "HTTP/2 200 OK"
+  ✅ Updated trip 17428 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-04 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Polaris Supreme, Voyager, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 17450: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-08-07 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 17804: 1/2 Day AM                | 38 anglers
+  ✅ Match: New Seaforth
+2025-10-17 20:52:36,273 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Seaforth "HTTP/2 200 OK"
+2025-10-17 20:52:36,358 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17804 "HTTP/2 200 OK"
+  ✅ Updated trip 17804 to boat 'New Seaforth' (ID 65)
+================================================================================
+📅 Processing 2025-08-08 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, Tribute
+
+  DB Trip ID 17824: Full Day                  | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-08-09 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 17847: Full Day                  | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:43,910 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:43,998 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17847 "HTTP/2 200 OK"
+  ✅ Updated trip 17847 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-10 (2 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacifica, Sea Watch, Cortez, New Seaforth, El Gato Dos
+
+  DB Trip ID 17878: 1.5 Day                   | 16 anglers
+  ❌ No match found
+
+  DB Trip ID 17872: Full Day                  | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:47,858 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:47,958 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17872 "HTTP/2 200 OK"
+  ✅ Updated trip 17872 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-14 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Pacific Voyager, Aztec, Voyager, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 17972: Full Day Coronado Islands | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:51,741 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:51,822 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.17972 "HTTP/2 200 OK"
+  ✅ Updated trip 17972 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-16 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, Sea Watch
+
+  DB Trip ID 18024: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-08-17 (1 trips)
+================================================================================
+Found 10 trips on page
+  Boats found: San Diego, Pacific Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 18051: Full Day Offshore         | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:52:59,444 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:52:59,540 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18051 "HTTP/2 200 OK"
+  ✅ Updated trip 18051 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-20 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 18116: Full Day Offshore         | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:03,267 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:03,398 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18116 "HTTP/2 200 OK"
+  ✅ Updated trip 18116 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-21 (1 trips)
+================================================================================
+Found 5 trips on page
+  Boats found: San Diego, New Seaforth, Tribute
+
+  DB Trip ID 18142: Full Day Coronado Islands | 26 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-08-22 (1 trips)
+================================================================================
+Found 11 trips on page
+  Boats found: San Diego, Pacific Voyager, Aztec, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 18162: Full Day Offshore         | 4 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:11,175 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:11,264 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18162 "HTTP/2 200 OK"
+  ✅ Updated trip 18162 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-25 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 18228: Full Day Local            | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:15,408 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:15,500 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18228 "HTTP/2 200 OK"
+  ✅ Updated trip 18228 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-29 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Pacific Voyager, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 18312: Full Day Offshore         | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:19,282 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:19,385 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18312 "HTTP/2 200 OK"
+  ✅ Updated trip 18312 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-08-31 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 18361: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:23,190 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:23,303 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.18361 "HTTP/2 200 OK"
+  ✅ Updated trip 18361 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-02 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Voyager, New Seaforth, Sea Watch
+
+  DB Trip ID 10366: 1.5 Day                   | 29 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-09-09 (1 trips)
+================================================================================
+Found 8 trips on page
+  Boats found: San Diego, Polaris Supreme, Pacific Voyager, Pacifica, Highliner, New Seaforth, Tribute
+
+  DB Trip ID 10498: 1/2 Day PM                | 5 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-09-10 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos
+
+  DB Trip ID 10512: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:34,792 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:35,080 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10512 "HTTP/2 200 OK"
+  ✅ Updated trip 10512 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-15 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 10601: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:38,859 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:38,985 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10601 "HTTP/2 200 OK"
+  ✅ Updated trip 10601 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-17 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Pacifica, Highliner, Sea Watch, New Seaforth
+
+  DB Trip ID 10636: 3 Day                     | 19 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-09-19 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Voyager, Pacifica, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 10666: 3/4 Day                   | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:46,561 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:46,697 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10666 "HTTP/2 200 OK"
+  ✅ Updated trip 10666 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-20 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, Sea Watch, New Seaforth
+
+  DB Trip ID 10688: Full Day Offshore         | 5 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-09-21 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Polaris Supreme, Aztec, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 10719: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:54,228 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:54,398 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10719 "HTTP/2 200 OK"
+  ✅ Updated trip 10719 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-25 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Aztec, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 10787: Full Day Offshore         | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:53:59,180 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:53:59,308 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10787 "HTTP/2 200 OK"
+  ✅ Updated trip 10787 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-26 (2 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, Highliner, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 10808: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:03,169 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:03,302 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10808 "HTTP/2 200 OK"
+  ✅ Updated trip 10808 to boat 'El Gato Dos' (ID 63)
+
+  DB Trip ID 10816: Overnight                 | 19 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-09-27 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Polaris Supreme, Sea Watch, New Seaforth, El Gato Dos
+
+  DB Trip ID 10834: Full Day Offshore         | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:07,309 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:07,428 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10834 "HTTP/2 200 OK"
+  ✅ Updated trip 10834 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-28 (1 trips)
+================================================================================
+Found 10 trips on page
+  Boats found: San Diego, Voyager, Pacifica, Highliner, Sea Watch, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 10860: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:11,237 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:11,402 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10860 "HTTP/2 200 OK"
+  ✅ Updated trip 10860 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-09-30 (1 trips)
+================================================================================
+Found 6 trips on page
+  Boats found: San Diego, Polaris Supreme, Voyager, Pacifica, New Seaforth
+
+  DB Trip ID 10904: 1.5 Day                   | 29 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-03 (1 trips)
+================================================================================
+Found 9 trips on page
+  Boats found: San Diego, Pacific Voyager, Aztec, Highliner, Cortez, New Seaforth, El Gato Dos
+
+  DB Trip ID 10949: 1/2 Day AM                | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:18,951 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:19,070 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10949 "HTTP/2 200 OK"
+  ✅ Updated trip 10949 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-10-05 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacifica, Sea Watch, Cortez, New Seaforth, El Gato Dos
+
+  DB Trip ID 10983: Full Day Offshore         | 6 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:22,933 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:23,077 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10983 "HTTP/2 200 OK"
+  ✅ Updated trip 10983 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-10-06 (1 trips)
+================================================================================
+Found 3 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos
+
+  DB Trip ID 10998: 3/4 Day                   | 5 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:26,804 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:26,918 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.10998 "HTTP/2 200 OK"
+  ✅ Updated trip 10998 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-10-07 (3 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Pacifica, Cortez, New Seaforth, El Gato Dos
+
+  DB Trip ID 11019: 1.5 Day                   | 15 anglers
+  ❌ No match found
+
+  DB Trip ID 11013: 2 Day                     | 24 anglers
+  ❌ No match found
+
+  DB Trip ID 11012: Full Day Offshore         | 3 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:30,708 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:30,839 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11012 "HTTP/2 200 OK"
+  ✅ Updated trip 11012 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-10-08 (1 trips)
+================================================================================
+Found 3 trips on page
+  Boats found: San Diego, Polaris Supreme, New Seaforth
+
+  DB Trip ID 11025: Full Day Offshore         | 4 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-12 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, El Gato Dos
+
+  DB Trip ID 11072: Full Day Offshore         | 3 anglers
+  ✅ Match: El Gato Dos
+2025-10-17 20:54:38,351 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.El+Gato+Dos "HTTP/2 200 OK"
+2025-10-17 20:54:38,457 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?id=eq.11072 "HTTP/2 200 OK"
+  ✅ Updated trip 11072 to boat 'El Gato Dos' (ID 63)
+================================================================================
+📅 Processing 2025-10-16 (1 trips)
+================================================================================
+Found 4 trips on page
+  Boats found: San Diego, New Seaforth, Tribute
+
+  DB Trip ID 11115: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-17 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11125: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-18 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11135: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-19 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11145: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-20 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11155: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-21 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11165: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-22 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11175: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-23 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11185: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-24 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11195: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-25 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11205: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-26 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11215: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-27 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11225: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-28 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11235: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-29 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11245: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-30 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11255: Full Day Offshore         | 6 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2025-10-31 (1 trips)
+================================================================================
+Found 7 trips on page
+  Boats found: San Diego, Pacific Voyager, Voyager, New Seaforth, Tribute, El Gato Dos
+
+  DB Trip ID 11265: Full Day Offshore         | 6 anglers
+  ❌ No match found
+
+================================================================================
+📊 SUMMARY FOR Seaforth Sportfishing
+================================================================================
+✅ Fixed: 55
+❌ Errors: 66
+
+⚠️  Unmatched trips requiring manual review:
+  Trip ID 13368: 2024-07-06 | 1/2 Day Twilight | 51 anglers
+  Trip ID 15025: 2024-08-05 | 1/2 Day AM | 38 anglers
+  Trip ID 16315: 2024-09-02 | 2.5 Day | 29 anglers
+  Trip ID 16334: 2024-09-03 | 1.5 Day | 17 anglers
+  Trip ID 16368: 2024-09-05 | Full Day | 12 anglers
+  Trip ID 16431: 2024-09-06 | 1/2 Day AM | 33 anglers
+  Trip ID 16441: 2024-09-06 | 3/4 Day | 18 anglers
+  Trip ID 16553: 2024-09-08 | 1.5 Day | 16 anglers
+  Trip ID 16548: 2024-09-08 | Full Day | 23 anglers
+  Trip ID 16948: 2024-09-18 | Full Day | 11 anglers
+  ... and 56 more
+
+📝 Unmatched trips saved to: unmatched_trips_boat_374_20251017_205541.json
+
+
+================================================================================
+🔧 PROCESSING Helgrens Sportfishing (BOAT ID 375)
+================================================================================
+
+2025-10-17 20:55:42,270 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id%2Ctrip_date%2Ctrip_duration%2Canglers&boat_id=eq.375&order=trip_date.asc "HTTP/2 200 OK"
+Found 50 trips to fix
+
+Covering 50 unique dates
+
+================================================================================
+📅 Processing 2024-01-19 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 11415: 1/2 Day Twilight          | 15 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-03-07 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 11699: 1/2 Day AM                | 19 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-03-09 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 11716: 1/2 Day AM                | 27 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-05 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 13335: 1/2 Day AM                | 21 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-06 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 13359: 3/4 Day                   | 19 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-10 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 13453: 3/4 Day                   | 25 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-13 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 13558: 3/4 Day                   | 17 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-07-26 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 13965: 3/4 Day                   | 18 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-01 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 14904: 3/4 Day                   | 19 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-03 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 14955: 3/4 Day                   | 37 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-05 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15015: 1/2 Day AM                | 38 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-06 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15062: 1/2 Day AM                | 12 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-07 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15082: 1/2 Day AM                | 31 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-11 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15289: 1/2 Day AM                | 20 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-12 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15340: 1/2 Day AM                | 12 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-13 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15360: 1/2 Day AM                | 10 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-14 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15386: 3/4 Day                   | 9 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-16 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15469: 1/2 Day AM                | 20 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-17 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15517: 1/2 Day AM                | 45 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-18 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 15564: 1/2 Day AM                | 15 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-08-31 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16241: 3/4 Day                   | 33 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-02 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16304: 1/2 Day AM                | 28 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-05 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16360: 1/2 Day AM                | 25 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-07 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16467: 3/4 Day                   | 30 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-08 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16522: 3/4 Day                   | 26 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-12 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16761: 1/2 Day AM                | 26 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-14 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16835: 3/4 Day                   | 30 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-15 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 16887: 1/2 Day AM                | 38 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-22 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17021: 1/2 Day AM                | 28 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-23 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17039: 1/2 Day AM                | 12 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-25 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17073: 1/2 Day AM                | 13 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-27 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17110: 1/2 Day AM                | 15 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-28 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17144: 1/2 Day AM                | 10 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-09-30 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17231: 1/2 Day AM                | 14 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-05 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17256: 1/2 Day AM                | 38 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-07 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17309: 3/4 Day                   | 22 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-09 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17338: 1/2 Day AM                | 15 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-11 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17471: 1/2 Day AM                | 13 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-25 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17691: 3/4 Day                   | 40 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-10-26 (1 trips)
+================================================================================
+Found 0 trips on page
+
+  DB Trip ID 17709: 3/4 Day                   | 13 anglers
+  ❌ No match found
+================================================================================
+📅 Processing 2024-11-01 (1 trips)
+================================================================================
+❌ Failed to fetch 2024-11-01: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2024-11-01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9eb50>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2024-11-01, skipping
+================================================================================
+📅 Processing 2024-11-08 (1 trips)
+================================================================================
+❌ Failed to fetch 2024-11-08: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2024-11-08 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9e970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2024-11-08, skipping
+================================================================================
+📅 Processing 2024-11-10 (1 trips)
+================================================================================
+❌ Failed to fetch 2024-11-10: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2024-11-10 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9e880>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2024-11-10, skipping
+================================================================================
+📅 Processing 2024-11-25 (1 trips)
+================================================================================
+❌ Failed to fetch 2024-11-25: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2024-11-25 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9e8e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2024-11-25, skipping
+================================================================================
+📅 Processing 2024-11-29 (1 trips)
+================================================================================
+❌ Failed to fetch 2024-11-29: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2024-11-29 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9ea30>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2024-11-29, skipping
+================================================================================
+📅 Processing 2025-01-02 (1 trips)
+================================================================================
+❌ Failed to fetch 2025-01-02: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-01-02 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9ebe0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2025-01-02, skipping
+================================================================================
+📅 Processing 2025-02-02 (1 trips)
+================================================================================
+❌ Failed to fetch 2025-02-02: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-02-02 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9eb80>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2025-02-02, skipping
+================================================================================
+📅 Processing 2025-02-08 (1 trips)
+================================================================================
+❌ Failed to fetch 2025-02-08: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-02-08 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9ea60>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2025-02-08, skipping
+================================================================================
+📅 Processing 2025-02-15 (1 trips)
+================================================================================
+❌ Failed to fetch 2025-02-15: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-02-15 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9ea90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2025-02-15, skipping
+================================================================================
+📅 Processing 2025-02-16 (1 trips)
+================================================================================
+❌ Failed to fetch 2025-02-16: HTTPSConnectionPool(host='www.sandiegofishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-02-16 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107f9ed00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+❌ Couldn't fetch data for 2025-02-16, skipping
+
+================================================================================
+📊 SUMMARY FOR Helgrens Sportfishing
+================================================================================
+✅ Fixed: 0
+❌ Errors: 50
+
+⚠️  Unmatched trips requiring manual review:
+  Trip ID 11415: 2024-01-19 | 1/2 Day Twilight | 15 anglers
+  Trip ID 11699: 2024-03-07 | 1/2 Day AM | 19 anglers
+  Trip ID 11716: 2024-03-09 | 1/2 Day AM | 27 anglers
+  Trip ID 13335: 2024-07-05 | 1/2 Day AM | 21 anglers
+  Trip ID 13359: 2024-07-06 | 3/4 Day | 19 anglers
+  Trip ID 13453: 2024-07-10 | 3/4 Day | 25 anglers
+  Trip ID 13558: 2024-07-13 | 3/4 Day | 17 anglers
+  Trip ID 13965: 2024-07-26 | 3/4 Day | 18 anglers
+  Trip ID 14904: 2024-08-01 | 3/4 Day | 19 anglers
+  Trip ID 14955: 2024-08-03 | 3/4 Day | 37 anglers
+  ... and 30 more
+
+📝 Unmatched trips saved to: unmatched_trips_boat_375_20251017_212259.json
+
+
+================================================================================
+🎯 OVERALL SUMMARY
+================================================================================
+✅ Total Fixed: 55
+❌ Total Errors: 116
+⚠️  Total Unmatched: 106
+
+Checking remaining trips on phantom boats:
+Traceback (most recent call last):
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 101, in handle_request
+    raise exc
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 78, in handle_request
+    stream = self._connect(request)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_sync/connection.py", line 124, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_backends/sync.py", line 215, in connect_tcp
+    sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/fix_landing_name_misattribution_comprehensive.py", line 360, in <module>
+    main()
+  File "/Users/btsukada/Desktop/Fishing/fish-scraper/fix_landing_name_misattribution_comprehensive.py", line 339, in main
+    remaining = supabase.table('trips').select('id', count='exact').eq('boat_id', boat_id).execute()
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/postgrest/_sync/request_builder.py", line 57, in execute
+    r = self.session.request(
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/btsukada/Library/Python/3.9/lib/python/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 8] nodename nor servname provided, or not known

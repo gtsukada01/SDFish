@@ -1,0 +1,398 @@
+[
+  {
+    "trip_id": 13368,
+    "date": "2024-07-06",
+    "duration": "1/2 Day Twilight",
+    "anglers": 51
+  },
+  {
+    "trip_id": 15025,
+    "date": "2024-08-05",
+    "duration": "1/2 Day AM",
+    "anglers": 38
+  },
+  {
+    "trip_id": 16315,
+    "date": "2024-09-02",
+    "duration": "2.5 Day",
+    "anglers": 29
+  },
+  {
+    "trip_id": 16334,
+    "date": "2024-09-03",
+    "duration": "1.5 Day",
+    "anglers": 17
+  },
+  {
+    "trip_id": 16368,
+    "date": "2024-09-05",
+    "duration": "Full Day",
+    "anglers": 12
+  },
+  {
+    "trip_id": 16431,
+    "date": "2024-09-06",
+    "duration": "1/2 Day AM",
+    "anglers": 33
+  },
+  {
+    "trip_id": 16441,
+    "date": "2024-09-06",
+    "duration": "3/4 Day",
+    "anglers": 18
+  },
+  {
+    "trip_id": 16553,
+    "date": "2024-09-08",
+    "duration": "1.5 Day",
+    "anglers": 16
+  },
+  {
+    "trip_id": 16548,
+    "date": "2024-09-08",
+    "duration": "Full Day",
+    "anglers": 23
+  },
+  {
+    "trip_id": 16948,
+    "date": "2024-09-18",
+    "duration": "Full Day",
+    "anglers": 11
+  },
+  {
+    "trip_id": 17033,
+    "date": "2024-09-22",
+    "duration": "1.5 Day",
+    "anglers": 28
+  },
+  {
+    "trip_id": 17198,
+    "date": "2024-10-03",
+    "duration": "1.5 Day",
+    "anglers": 29
+  },
+  {
+    "trip_id": 17261,
+    "date": "2024-10-05",
+    "duration": "Full Day",
+    "anglers": 4
+  },
+  {
+    "trip_id": 17736,
+    "date": "2024-10-27",
+    "duration": "Full Day",
+    "anglers": 2
+  },
+  {
+    "trip_id": 14704,
+    "date": "2024-11-01",
+    "duration": "Full Day",
+    "anglers": 3
+  },
+  {
+    "trip_id": 15718,
+    "date": "2024-11-30",
+    "duration": "Full Day",
+    "anglers": 4
+  },
+  {
+    "trip_id": 11745,
+    "date": "2025-03-16",
+    "duration": "3/4 Day",
+    "anglers": 4
+  },
+  {
+    "trip_id": 12470,
+    "date": "2025-04-13",
+    "duration": "3/4 Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 12654,
+    "date": "2025-04-26",
+    "duration": "2 Day",
+    "anglers": 8
+  },
+  {
+    "trip_id": 13920,
+    "date": "2025-05-14",
+    "duration": "1/2 Day AM",
+    "anglers": 3
+  },
+  {
+    "trip_id": 14324,
+    "date": "2025-06-01",
+    "duration": "1.5 Day",
+    "anglers": 16
+  },
+  {
+    "trip_id": 14483,
+    "date": "2025-06-12",
+    "duration": "Full Day",
+    "anglers": 21
+  },
+  {
+    "trip_id": 14494,
+    "date": "2025-06-13",
+    "duration": "3/4 Day",
+    "anglers": 2
+  },
+  {
+    "trip_id": 14518,
+    "date": "2025-06-14",
+    "duration": "1/2 Day AM",
+    "anglers": 6
+  },
+  {
+    "trip_id": 14599,
+    "date": "2025-06-19",
+    "duration": "1/2 Day AM",
+    "anglers": 2
+  },
+  {
+    "trip_id": 15185,
+    "date": "2025-07-02",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 15585,
+    "date": "2025-07-08",
+    "duration": "Full Day",
+    "anglers": 5
+  },
+  {
+    "trip_id": 15696,
+    "date": "2025-07-10",
+    "duration": "Full Day",
+    "anglers": 5
+  },
+  {
+    "trip_id": 15783,
+    "date": "2025-07-12",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 15884,
+    "date": "2025-07-14",
+    "duration": "Full Day",
+    "anglers": 3
+  },
+  {
+    "trip_id": 16495,
+    "date": "2025-07-23",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 16635,
+    "date": "2025-07-26",
+    "duration": "1/2 Day AM",
+    "anglers": 6
+  },
+  {
+    "trip_id": 16690,
+    "date": "2025-07-27",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 16741,
+    "date": "2025-07-28",
+    "duration": "1.5 Day",
+    "anglers": 30
+  },
+  {
+    "trip_id": 16811,
+    "date": "2025-07-30",
+    "duration": "Full Day",
+    "anglers": 3
+  },
+  {
+    "trip_id": 16857,
+    "date": "2025-07-31",
+    "duration": "1/2 Day AM",
+    "anglers": 6
+  },
+  {
+    "trip_id": 17450,
+    "date": "2025-08-04",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 17824,
+    "date": "2025-08-08",
+    "duration": "Full Day",
+    "anglers": 6
+  },
+  {
+    "trip_id": 17878,
+    "date": "2025-08-10",
+    "duration": "1.5 Day",
+    "anglers": 16
+  },
+  {
+    "trip_id": 18024,
+    "date": "2025-08-16",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 18142,
+    "date": "2025-08-21",
+    "duration": "Full Day Coronado Islands",
+    "anglers": 26
+  },
+  {
+    "trip_id": 10366,
+    "date": "2025-09-02",
+    "duration": "1.5 Day",
+    "anglers": 29
+  },
+  {
+    "trip_id": 10498,
+    "date": "2025-09-09",
+    "duration": "1/2 Day PM",
+    "anglers": 5
+  },
+  {
+    "trip_id": 10636,
+    "date": "2025-09-17",
+    "duration": "3 Day",
+    "anglers": 19
+  },
+  {
+    "trip_id": 10688,
+    "date": "2025-09-20",
+    "duration": "Full Day Offshore",
+    "anglers": 5
+  },
+  {
+    "trip_id": 10816,
+    "date": "2025-09-26",
+    "duration": "Overnight",
+    "anglers": 19
+  },
+  {
+    "trip_id": 10904,
+    "date": "2025-09-30",
+    "duration": "1.5 Day",
+    "anglers": 29
+  },
+  {
+    "trip_id": 11019,
+    "date": "2025-10-07",
+    "duration": "1.5 Day",
+    "anglers": 15
+  },
+  {
+    "trip_id": 11013,
+    "date": "2025-10-07",
+    "duration": "2 Day",
+    "anglers": 24
+  },
+  {
+    "trip_id": 11025,
+    "date": "2025-10-08",
+    "duration": "Full Day Offshore",
+    "anglers": 4
+  },
+  {
+    "trip_id": 11115,
+    "date": "2025-10-16",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11125,
+    "date": "2025-10-17",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11135,
+    "date": "2025-10-18",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11145,
+    "date": "2025-10-19",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11155,
+    "date": "2025-10-20",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11165,
+    "date": "2025-10-21",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11175,
+    "date": "2025-10-22",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11185,
+    "date": "2025-10-23",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11195,
+    "date": "2025-10-24",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11205,
+    "date": "2025-10-25",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11215,
+    "date": "2025-10-26",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11225,
+    "date": "2025-10-27",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11235,
+    "date": "2025-10-28",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11245,
+    "date": "2025-10-29",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11255,
+    "date": "2025-10-30",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  },
+  {
+    "trip_id": 11265,
+    "date": "2025-10-31",
+    "duration": "Full Day Offshore",
+    "anglers": 6
+  }
+]
