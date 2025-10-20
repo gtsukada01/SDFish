@@ -314,7 +314,10 @@ function App() {
                   {/* CARD 3: Conditional based on boat/landing filter */}
                   {isBoatFiltered ? (
                     /* CARD 3 (Boat View): Avg Fish/Angler */
-                    <Card className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20">
+                    <Card
+                      className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                      onClick={() => handleMetricCardClick('species')}
+                    >
                       <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Users className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
