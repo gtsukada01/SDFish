@@ -49,7 +49,7 @@ export function ActiveFilters({
   }
 
   return (
-    <div className="border-b bg-background">
+    <div className="relative z-20 border-b bg-background">
       <div className="container mx-auto p-4 md:px-6 py-3">
         <div className="flex items-center justify-between gap-3 flex-wrap">
         <div className="flex items-center gap-2 flex-wrap">
