@@ -2,8 +2,70 @@
 
 **For Claude Code Agents**: This guide provides explicit, step-by-step instructions for operating the fish scraper system with 100% data accuracy (SPEC 006 mandate).
 
-**Last Updated**: October 16, 2025
-**Status**: Production Ready - SPEC 006 Complete
+**Last Updated**: October 20, 2025
+**Status**: 🚨 **CRITICAL PARSER BUG FIXED - REMEDIATION IN PROGRESS**
+
+---
+
+## 🚨 CRITICAL: Parser Bug Fixed (Oct 20, 2025)
+
+**ALL NEW TEAM MEMBERS READ THIS FIRST**
+
+### What Happened
+
+A regex bug in `parse_boats_page()` (boats_scraper.py line 655) silently dropped boats with:
+- 3+ word names (Lucky B Sportfishing)
+- Single letters (Little G)
+- Numbers (Oceanside 95)
+- Special characters (Patriot (SD))
+
+**Impact**: 28+ trips missing from Oct 10-18 alone. Potentially hundreds missing from all historical data (Jan 2024 - Oct 2025).
+
+### What Was Fixed
+
+**OLD (BROKEN) CODE:**
+```python
+# Line 655 - FAULTY REGEX
+if re.match(r'^[A-Z][a-z]+(\s+[A-Z][a-z]+)?$', line):
+    boat_name = line
+```
+
+**NEW (FIXED) CODE:**
+```python
+# Database cross-reference validation (PRIMARY)
+if line in known_boats:
+    boat_name = line
+    boat_info = known_boats[line]
+    # Validated against 124 known boats in database
+
+# Fallback regex for new boats (SECONDARY)
+elif re.match(r'^[A-Z][a-z0-9]*(\s+[A-Z0-9][a-z0-9]*){0,4}$', line):
+    boat_name = line
+    logger.warning("NEW BOAT DETECTED")
+```
+
+### Files Modified
+
+1. **boats_scraper.py**:
+   - Added `get_all_known_boats(supabase)` - loads 124 boats from database
+   - Modified `parse_boats_page(html, date, supabase)` - now takes supabase client
+   - Replaced regex-only matching with database cross-reference
+
+2. **qc_validator.py**:
+   - Updated `validate_date()` to pass supabase client to parser
+
+### Current Status
+
+- ✅ **Parser fixed** (Oct 20, 2025)
+- ✅ **Oct 19 scraped** with fixed parser (28/28 trips)
+- ⚠️ **Oct 10-18 needs re-scraping** (28 known missing trips)
+- ⚠️ **All historical data needs audit** (potentially hundreds of missing trips)
+
+### Next Team: IMMEDIATE ACTIONS
+
+See README.md "Remediation Commands" section for step-by-step instructions.
+
+**DO NOT SKIP THE REMEDIATION STEPS** - The database is currently incomplete.
 
 ---
 

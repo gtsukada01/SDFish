@@ -81,7 +81,7 @@ function SpeciesInlineMobile({ speciesBreakdown }: { speciesBreakdown: { species
   }
 
   const sortedSpecies = [...speciesBreakdown].sort((a, b) => b.count - a.count)
-  const displayLimit = 2 // Show fewer on mobile for compactness
+  const displayLimit = 3 // Show top 3 species on mobile
   const topSpecies = sortedSpecies.slice(0, displayLimit)
   const remainingSpecies = sortedSpecies.slice(displayLimit)
   const hasMore = remainingSpecies.length > 0

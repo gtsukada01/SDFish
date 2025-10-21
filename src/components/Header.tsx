@@ -3,11 +3,10 @@ import { Menu } from 'lucide-react'
 import { Button } from './ui/button'
 
 interface HeaderProps {
-  dataSource?: 'real' | 'mock'
   onMobileMenuClick?: () => void
 }
 
-export function Header({ dataSource, onMobileMenuClick }: HeaderProps) {
+export function Header({ onMobileMenuClick }: HeaderProps) {
   return (
     <header className="border-b bg-background px-6 py-4">
       <div className="flex items-center justify-between">
@@ -29,11 +28,6 @@ export function Header({ dataSource, onMobileMenuClick }: HeaderProps) {
             </span>
           </div>
         </div>
-        {dataSource && (
-          <div className={`text-xs px-2 py-1 rounded ${dataSource === 'real' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}`}>
-            {dataSource === 'real' ? '🟢 Real Data' : '🟡 Mock Data'}
-          </div>
-        )}
       </div>
     </header>
   )

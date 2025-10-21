@@ -4,6 +4,133 @@
 
 ---
 
+## 2025-10-20: CRITICAL PARSER BUG DISCOVERY & REMEDIATION DOCS
+
+### Changes Made
+
+**1. README.md** - CRITICAL UPDATE
+- **Status Line**: Changed from "✅ Production Ready - 100% COMPLETE" → "🚨 CRITICAL PARSER BUG DISCOVERED"
+- **Added Section**: "🚨 URGENT: Parser Bug Discovered (Oct 20, 2025)"
+  - Root cause analysis (regex pattern too restrictive)
+  - Impact assessment (28+ trips missing from Oct 10-18)
+  - Fix implementation details (database cross-reference)
+  - List of affected boat types (3+ words, single letters, numbers, special chars)
+- **Added Section**: "🚨 REMEDIATION COMMANDS - IMMEDIATE ACTION REQUIRED"
+  - Priority 1: Re-scrape Oct 10-18 (8 dates, 28 missing trips)
+  - Priority 2-3: Audit September & August 2025
+  - Priority 4: Full historical audit (2024 + 2025)
+  - Exact bash commands with expected outputs
+- **Updated Stats**:
+  - Total Database: 7,958 → 7,986 trips (28 added on 10/20)
+  - 2024 Status: "✅ 100% COMPLETE" → "⚠️ NEEDS RE-AUDIT"
+  - 2025 Status: "✅ 100% COMPLETE" → "⚠️ IN REMEDIATION"
+- **Files Changed**: Documented boats_scraper.py and qc_validator.py modifications
+
+**2. COMPREHENSIVE_QC_VERIFICATION.md** - CRITICAL INVALIDATION
+- **Status Line**: Changed from "✅ VERIFIED" → "🚨 CRITICAL DATA INTEGRITY ISSUE"
+- **Added Section**: "🚨 CRITICAL UPDATE: Parser Bug Discovered (October 20, 2025)"
+  - Audit results table (9 dates, 11.1% pass rate)
+  - Parser bug technical details (faulty regex pattern)
+  - List of boats rejected (Chubasco II, San Diego, Lucky B, Little G, etc.)
+  - Fix implementation (database cross-reference + relaxed regex)
+  - Impact assessment by date (Oct 10-18 breakdown)
+  - Remediation status checklist
+- **Invalidated Executive Summary**:
+  - Strikethrough on "100% COVERAGE" claims
+  - Warning labels on all previous metrics
+  - Clear statement that QC methodology was flawed
+- **Updated Date**: October 17, 2025 → October 20, 2025 (with critical update note)
+
+**3. CLAUDE_OPERATING_GUIDE.md** - CRITICAL ALERT FOR NEW TEAM
+- **Status Line**: Changed from "Production Ready" → "🚨 CRITICAL PARSER BUG FIXED - REMEDIATION IN PROGRESS"
+- **Added Section**: "🚨 CRITICAL: Parser Bug Fixed (Oct 20, 2025)"
+  - **Subsection**: "What Happened" - clear explanation for new team
+  - **Subsection**: "What Was Fixed" - side-by-side code comparison (OLD vs NEW)
+  - **Subsection**: "Files Modified" - exact file and function changes
+  - **Subsection**: "Current Status" - checklist of done vs todo
+  - **Subsection**: "Next Team: IMMEDIATE ACTIONS" - direct reference to README remediation commands
+- **Updated Date**: October 16, 2025 → October 20, 2025
+
+**4. DOC_CHANGELOG.md** - This Entry
+- Added this comprehensive changelog entry
+- Documented all 3 file changes above
+- Rationale and impact sections below
+
+### Rationale
+
+**Discovery Context**:
+- User provided Oct 18 data for validation
+- QC validator reported 25/28 trips (3 missing)
+- User corrected: should be 28 trips total
+- Investigation revealed parser regex bug rejecting boats with:
+  - 3+ word names (Lucky B Sportfishing, El Gato Dos)
+  - Single letters (Little G)
+  - Numbers (Oceanside 95, Ranger 85, Vendetta 2)
+  - Special characters (Patriot (SD), New Lo-An)
+
+**Audit Findings**:
+- Oct 10-18 audit: 28 trips missing across 8 dates (11.1% pass rate)
+- Previous "99.85% QC pass rate" claim was **INVALID**
+- Parser bug existed since scraper creation (Jan 2024)
+- Potentially hundreds of trips missing from all historical data
+
+**Fix Implementation**:
+- Added `get_all_known_boats(supabase)` function
+- Modified `parse_boats_page()` to use database cross-reference as primary validation
+- Relaxed regex fallback for new boats: `^[A-Z][a-z0-9]*(\s+[A-Z0-9][a-z0-9]*){0,4}$`
+- Validated fix: Oct 19 scrape captured 28/28 trips (was 25/28 before)
+
+**Documentation Update Approach**:
+- **CRITICAL TRANSPARENCY**: Invalidated all previous "100% complete" claims
+- **HANDOFF FOCUSED**: New team takes over, needs clear action items
+- **NO DATA DELETION**: All existing docs preserved, marked as pre-bug discovery
+- **ACTIONABLE COMMANDS**: Exact bash commands for remediation
+- **SINGLE SOURCE OF TRUTH**: All critical info in README.md, detailed info in referenced docs
+
+### Impact
+
+**Before (Pre-Bug Discovery)**:
+- README: "✅ Production Ready - 100% COMPLETE"
+- QC Report: "99.85% pass rate"
+- Status: Confident in data accuracy
+
+**After (Post-Bug Discovery)**:
+- README: "🚨 CRITICAL PARSER BUG DISCOVERED - DATA INTEGRITY ISSUE"
+- QC Report: "🚨 CRITICAL DATA INTEGRITY ISSUE - PARSER BUG DISCOVERED"
+- Status: **Parser fixed**, historical data needs full remediation
+- New Team: Clear action items with exact commands
+
+**Data Impact**:
+- **Confirmed Missing**: 28 trips (Oct 10-18)
+- **Likely Missing**: Potentially hundreds (Jan 2024 - Oct 2025)
+- **Database Updated**: 7,986 trips (28 added on 10/20)
+- **Remediation Required**: Full historical audit recommended
+
+**Compliance**:
+- ✅ Single source of truth: README.md updated with critical status
+- ✅ Context preserved: Pre-bug metrics not deleted, marked invalid
+- ✅ Audit trail: This changelog entry documents all changes
+- ✅ Handoff ready: New team has exact remediation commands
+
+### Files Modified
+
+**Updated**:
+- `README.md` (critical status update, remediation commands added)
+- `COMPREHENSIVE_QC_VERIFICATION.md` (previous claims invalidated, audit results added)
+- `CLAUDE_OPERATING_GUIDE.md` (critical alert for new team added)
+- `DOC_CHANGELOG.md` (this entry)
+
+**Code Modified** (not documentation, but related):
+- `boats_scraper.py` (database cross-reference implemented)
+- `qc_validator.py` (updated to pass supabase client)
+
+**Unchanged** (Master docs - not affected by parser bug):
+- `2024_SCRAPING_REPORT.md` (needs re-validation but structure intact)
+- `2025_SCRAPING_REPORT.md` (needs re-validation but structure intact)
+- `DOCUMENTATION_STANDARDS.md` (governance rules unchanged)
+
+---
+
 ## 2025-10-19 (Night): Documentation Hygiene Sweep - COMPLETE
 
 ### Changes Made

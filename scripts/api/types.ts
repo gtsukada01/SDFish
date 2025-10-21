@@ -39,6 +39,7 @@ export interface Filters {
   landing?: string | null;
   boat?: string | null;
   trip_duration?: string | null;
+  moon_phase?: string | null;
   limit?: number | null;
   cursor?: string | null;
 }

@@ -105,7 +105,8 @@ function App() {
             landing: activeLanding,
             boat: filters.boat,
             species: filters.species,
-            tripDuration: filters.trip_duration || undefined
+            tripDuration: filters.trip_duration || undefined,
+            moonPhase: filters.moon_phase || undefined
           }
 
           const [data, metricsData] = await Promise.all([
@@ -192,6 +193,10 @@ function App() {
     }
   }
 
+  const handleRemoveMoonPhase = () => {
+    setFilters(prev => ({ ...prev, moon_phase: undefined }))
+  }
+
   const handleRemoveDateRange = () => {
     const defaultFilters: Filters = {
       start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
@@ -218,6 +223,54 @@ function App() {
     }, 100)
   }
 
+  // Handle boat bar click - drilldown to specific boat
+  const handleBoatBarClick = (boatName: string) => {
+    console.log('[Analytics Drilldown] Boat clicked:', boatName)
+    // Replace boat filter (single-select)
+    setFilters(prev => ({ ...prev, boat: boatName }))
+
+    // Scroll to table for immediate feedback
+    setTimeout(() => {
+      const tableElement = document.querySelector('.catch-table')
+      if (tableElement) {
+        tableElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+    }, 100)
+  }
+
+  // Handle species bar click - drilldown to specific species
+  const handleSpeciesBarClick = (speciesName: string) => {
+    // Normalize species name (e.g., "bluefin tuna (up to 50 pounds)" → "bluefin tuna")
+    const normalized = normalizeSpeciesName(speciesName)
+    console.log('[Analytics Drilldown] Species clicked:', speciesName, '→', normalized)
+
+    // Replace species filter (single-select, wrapped in array for API compatibility)
+    setFilters(prev => ({ ...prev, species: [normalized] }))
+
+    // Scroll to table for immediate feedback
+    setTimeout(() => {
+      const tableElement = document.querySelector('.catch-table')
+      if (tableElement) {
+        tableElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+    }, 100)
+  }
+
+  // Handle moon phase bar click - drilldown to specific moon phase
+  const handleMoonPhaseBarClick = (phaseName: string) => {
+    console.log('[Analytics Drilldown] Moon phase clicked:', phaseName)
+    // Replace moon phase filter (single-select)
+    setFilters(prev => ({ ...prev, moon_phase: phaseName }))
+
+    // Scroll to table for immediate feedback
+    setTimeout(() => {
+      const tableElement = document.querySelector('.catch-table')
+      if (tableElement) {
+        tableElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+      }
+    }, 100)
+  }
+
   // Calculate conditional metrics for boat-specific view
   const isBoatFiltered = !!filters.boat || selectedLandings.length > 0
   const isSpeciesFiltered = !!filters.species && filters.species.length > 0
@@ -241,7 +294,6 @@ function App() {
   return (
     <div className="flex flex-col h-screen overflow-hidden">
       <Header
-        dataSource={dataSource}
         onMobileMenuClick={() => setIsSidebarOpen(true)}
       />
       <div className="flex flex-1 overflow-hidden">
@@ -271,6 +323,7 @@ function App() {
             onRemoveLanding={handleRemoveLanding}
             onRemoveBoat={handleRemoveBoat}
             onRemoveSpecies={handleRemoveSpecies}
+            onRemoveMoonPhase={handleRemoveMoonPhase}
             onRemoveDateRange={handleRemoveDateRange}
             onClearAll={handleClearAllFilters}
           />
@@ -403,14 +456,28 @@ function App() {
                         <TabsTrigger value="moon">Moon</TabsTrigger>
                       </TabsList>
                       <TabsContent value="boats" className="mt-6">
-                        <MetricsBreakdown metrics={metrics} mode="boats" />
+                        <MetricsBreakdown
+                          metrics={metrics}
+                          mode="boats"
+                          selectedValue={filters.boat || null}
+                          onBarClick={handleBoatBarClick}
+                        />
                       </TabsContent>
                       <TabsContent value="species" className="mt-6">
-                        <MetricsBreakdown metrics={metrics} mode="species" />
+                        <MetricsBreakdown
+                          metrics={metrics}
+                          mode="species"
+                          selectedValue={filters.species?.[0] || null}
+                          onBarClick={handleSpeciesBarClick}
+                        />
                       </TabsContent>
                       <TabsContent value="moon" className="mt-6">
                         {metrics.moon_phase && metrics.moon_phase.length > 0 ? (
-                          <MoonPhaseBreakdown data={metrics.moon_phase} />
+                          <MoonPhaseBreakdown
+                            data={metrics.moon_phase}
+                            selectedValue={filters.moon_phase || null}
+                            onBarClick={handleMoonPhaseBarClick}
+                          />
                         ) : (
                           <p className="text-muted-foreground text-center py-8">
                             No moon phase data available for the selected date range

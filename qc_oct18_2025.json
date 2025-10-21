@@ -1,0 +1,12 @@
+{
+  "date": "2025-10-18",
+  "status": "PASS",
+  "source_boat_count": 13,
+  "database_boat_count": 13,
+  "matches": 13,
+  "mismatches": [],
+  "missing_boats": [],
+  "extra_boats": [],
+  "field_errors": [],
+  "timestamp": "2025-10-20T14:31:53.901017"
+}

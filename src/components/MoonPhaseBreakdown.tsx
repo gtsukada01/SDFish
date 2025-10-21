@@ -9,6 +9,8 @@ interface MoonPhaseData {
 
 interface MoonPhaseBreakdownProps {
   data: MoonPhaseData[]
+  selectedValue?: string | null  // Currently selected moon phase for visual feedback
+  onBarClick?: (phaseName: string) => void  // Callback when bar is clicked
 }
 
 const phaseDisplayNames: Record<string, string> = {
@@ -44,7 +46,7 @@ const MOON_PHASE_ORDER = [
   'waning_crescent'
 ]
 
-export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
+export function MoonPhaseBreakdown({ data, selectedValue, onBarClick }: MoonPhaseBreakdownProps) {
   if (!data || data.length === 0) {
     return null
   }
@@ -61,13 +63,31 @@ export function MoonPhaseBreakdown({ data }: MoonPhaseBreakdownProps) {
         const percentage = (phase.total_fish / totalFish) * 100
         const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name
         const icon = moonIcons[phase.phase_name] || '🌑'
+        const isSelected = selectedValue === phase.phase_name
 
         return (
-          <div key={phase.phase_name} className="space-y-1">
+          <div
+            key={phase.phase_name}
+            className={`space-y-1 rounded-md p-2 transition-colors ${
+              onBarClick ? 'cursor-pointer hover:bg-accent/50' : ''
+            } ${isSelected ? 'bg-accent/30' : ''}`}
+            onClick={() => onBarClick?.(phase.phase_name)}
+            role={onBarClick ? 'button' : undefined}
+            tabIndex={onBarClick ? 0 : undefined}
+            onKeyDown={(e) => {
+              if (onBarClick && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault()
+                onBarClick(phase.phase_name)
+              }
+            }}
+            aria-label={`Filter by ${displayName}`}
+          >
             {/* Line 1: Icon + Progress bar + Percentage */}
             <div className="flex items-center gap-2">
               <span className="text-lg shrink-0 leading-none">{icon}</span>
-              <div className="relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center justify-end">
+              <div className={`relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center justify-end ${
+                isSelected ? 'ring-2 ring-primary ring-offset-2' : ''
+              } transition-all duration-300`}>
                 <div
                   className="absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300"
                   style={{ width: `${percentage}%`, height: '100%' }}

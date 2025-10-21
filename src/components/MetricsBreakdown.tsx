@@ -5,9 +5,11 @@ import { normalizeSpeciesName } from '@/lib/utils'
 interface MetricsBreakdownProps {
   metrics: SummaryMetricsResponse
   mode?: 'boats' | 'species'
+  selectedValue?: string | null  // Currently selected boat/species for visual feedback
+  onBarClick?: (value: string) => void  // Callback when bar is clicked
 }
 
-export function MetricsBreakdown({ metrics, mode = 'boats' }: MetricsBreakdownProps) {
+export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBarClick }: MetricsBreakdownProps) {
   // Show species breakdown if mode is 'species'
   if (mode === 'species') {
     // Normalize and aggregate species (group variants like "bluefin tuna (up to 50 pounds)" → "bluefin tuna")
@@ -30,15 +32,33 @@ export function MetricsBreakdown({ metrics, mode = 'boats' }: MetricsBreakdownPr
       <div className="space-y-2">
         {aggregatedSpecies.map((species) => {
           const percentage = (species.total_fish / maxFish) * 100
+          const isSelected = selectedValue === species.species
           return (
-            <div key={species.species} className="space-y-1">
+            <div
+              key={species.species}
+              className={`space-y-1 rounded-md p-2 transition-colors ${
+                onBarClick ? 'cursor-pointer hover:bg-accent/50' : ''
+              } ${isSelected ? 'bg-accent/30' : ''}`}
+              onClick={() => onBarClick?.(species.species)}
+              role={onBarClick ? 'button' : undefined}
+              tabIndex={onBarClick ? 0 : undefined}
+              onKeyDown={(e) => {
+                if (onBarClick && (e.key === 'Enter' || e.key === ' ')) {
+                  e.preventDefault()
+                  onBarClick(species.species)
+                }
+              }}
+              aria-label={`Filter by ${species.species}`}
+            >
               <div className="flex items-center justify-between text-sm">
                 <span className="font-medium">{species.species}</span>
                 <span className="text-muted-foreground">
                   {species.total_fish.toLocaleString()} fish
                 </span>
               </div>
-              <div className="relative h-7 bg-muted rounded-md overflow-hidden flex items-center">
+              <div className={`relative h-7 bg-muted rounded-md overflow-hidden flex items-center ${
+                isSelected ? 'ring-2 ring-primary ring-offset-2' : ''
+              } transition-all duration-300`}>
                 <div
                   className="absolute inset-0 left-0 bg-primary/20 transition-all duration-300"
                   style={{ width: `${percentage}%`, height: '100%' }}
@@ -62,15 +82,33 @@ export function MetricsBreakdown({ metrics, mode = 'boats' }: MetricsBreakdownPr
     <div className="space-y-2">
       {sortedBoats.map((boat) => {
         const percentage = (boat.total_fish / maxFish) * 100
+        const isSelected = selectedValue === boat.boat
         return (
-          <div key={boat.boat} className="space-y-1">
+          <div
+            key={boat.boat}
+            className={`space-y-1 rounded-md p-2 transition-colors ${
+              onBarClick ? 'cursor-pointer hover:bg-accent/50' : ''
+            } ${isSelected ? 'bg-accent/30' : ''}`}
+            onClick={() => onBarClick?.(boat.boat)}
+            role={onBarClick ? 'button' : undefined}
+            tabIndex={onBarClick ? 0 : undefined}
+            onKeyDown={(e) => {
+              if (onBarClick && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault()
+                onBarClick(boat.boat)
+              }
+            }}
+            aria-label={`Filter by ${boat.boat}`}
+          >
             <div className="flex items-center justify-between text-sm">
               <span className="font-medium">{boat.boat}</span>
               <span className="text-muted-foreground">
                 {boat.total_fish.toLocaleString()} fish · {boat.trips} trips
               </span>
             </div>
-            <div className="relative h-7 bg-muted rounded-md overflow-hidden flex items-center">
+            <div className={`relative h-7 bg-muted rounded-md overflow-hidden flex items-center ${
+              isSelected ? 'ring-2 ring-primary ring-offset-2' : ''
+            } transition-all duration-300`}>
               <div
                 className="absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300"
                 style={{ width: `${percentage}%`, height: '100%' }}

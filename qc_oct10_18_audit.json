@@ -1,0 +1,300 @@
+{
+  "date_range": {
+    "start": "2025-10-10",
+    "end": "2025-10-18"
+  },
+  "summary": {
+    "total_dates": 9,
+    "passed": 1,
+    "failed": 8,
+    "errors": 0,
+    "pass_rate": 11.11
+  },
+  "reports": [
+    {
+      "date": "2025-10-10",
+      "status": "FAIL",
+      "source_boat_count": 16,
+      "database_boat_count": 12,
+      "matches": 11,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Little G",
+          "landing": "H&M Landing",
+          "trip_type": "3.5 Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Patriot (SD)",
+          "landing": "H&M Landing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 10
+        },
+        {
+          "boat": "Blue Horizon",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "Full Day Local",
+          "anglers": 15
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day TwilightLocal",
+          "anglers": 9
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:25.932116"
+    },
+    {
+      "date": "2025-10-11",
+      "status": "FAIL",
+      "source_boat_count": 14,
+      "database_boat_count": 13,
+      "matches": 12,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "3/4 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Coronado Islands",
+          "anglers": 25
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:28.523599"
+    },
+    {
+      "date": "2025-10-12",
+      "status": "FAIL",
+      "source_boat_count": 15,
+      "database_boat_count": 12,
+      "matches": 10,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Vendetta 2",
+          "landing": "H&M Landing",
+          "trip_type": "Overnight",
+          "anglers": 11
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "3/4 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Oceanside 95",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "2.5 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "El Gato Dos",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 3
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 34
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:31.069157"
+    },
+    {
+      "date": "2025-10-13",
+      "status": "FAIL",
+      "source_boat_count": 18,
+      "database_boat_count": 16,
+      "matches": 14,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Lucky B Sportfishing",
+          "landing": "Fisherman's Landing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Legend",
+          "landing": "H&M Landing",
+          "trip_type": "1.5 Day Offshore",
+          "anglers": 21
+        },
+        {
+          "boat": "New Lo-An",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "3 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 21
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:33.758397"
+    },
+    {
+      "date": "2025-10-14",
+      "status": "PASS",
+      "source_boat_count": 7,
+      "database_boat_count": 7,
+      "matches": 7,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:36.278597"
+    },
+    {
+      "date": "2025-10-15",
+      "status": "FAIL",
+      "source_boat_count": 12,
+      "database_boat_count": 11,
+      "matches": 11,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Little G",
+          "landing": "H&M Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 5
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:38.832283"
+    },
+    {
+      "date": "2025-10-16",
+      "status": "FAIL",
+      "source_boat_count": 13,
+      "database_boat_count": 9,
+      "matches": 8,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Patriot (SD)",
+          "landing": "H&M Landing",
+          "trip_type": "Overnight",
+          "anglers": 7
+        },
+        {
+          "boat": "Patriot (SD)",
+          "landing": "H&M Landing",
+          "trip_type": "Overnight",
+          "anglers": 7
+        },
+        {
+          "boat": "New Lo-An",
+          "landing": "Point Loma Sportfishing",
+          "trip_type": "3 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "El Gato Dos",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 6
+        },
+        {
+          "boat": "San Diego",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "Full Day Offshore",
+          "anglers": 18
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:41.453866"
+    },
+    {
+      "date": "2025-10-17",
+      "status": "FAIL",
+      "source_boat_count": 19,
+      "database_boat_count": 17,
+      "matches": 16,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Lucky B Sportfishing",
+          "landing": "Fisherman's Landing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Ranger 85",
+          "landing": "H&M Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "El Gato Dos",
+          "landing": "Seaforth Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 5
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:44.052479"
+    },
+    {
+      "date": "2025-10-18",
+      "status": "FAIL",
+      "source_boat_count": 16,
+      "database_boat_count": 13,
+      "matches": 13,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Lucky B Sportfishing",
+          "landing": "Fisherman's Landing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "3/4 Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day TwilightLocal",
+          "anglers": 10
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-21T00:24:46.548623"
+    }
+  ],
+  "timestamp": "2025-10-21T00:24:46.549207"
+}

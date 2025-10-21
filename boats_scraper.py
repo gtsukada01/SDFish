@@ -561,11 +561,12 @@ def extract_report_date_from_header(html: str) -> Optional[str]:
 # DATA PARSING
 # ============================================================================
 
-def parse_boats_page(html: str, date: str) -> List[Dict]:
+def parse_boats_page(html: str, date: str, supabase: Client) -> List[Dict]:
     """
     Parse boats.php page to extract trip data
 
     SPEC-010 FR-001: Validates actual report date matches requested date to prevent phantom data
+    NEW: Cross-references boat names against database for accuracy
 
     Structure:
         H&M Landing Fish Counts
@@ -578,6 +579,7 @@ def parse_boats_page(html: str, date: str) -> List[Dict]:
     Args:
         html: Raw HTML from boats.php
         date: Requested date (YYYY-MM-DD)
+        supabase: Supabase client for database cross-reference
 
     Returns:
         List of trip dictionaries
@@ -586,6 +588,9 @@ def parse_boats_page(html: str, date: str) -> List[Dict]:
         ParserError: If date header cannot be found
         DateMismatchError: If actual date doesn't match requested date
     """
+    # Load all known boats from database for validation
+    known_boats = get_all_known_boats(supabase)
+
     # SPEC-010 FR-001: Source Date Validation
     # Extract actual report date from page header
     actual_date = extract_report_date_from_header(html)
@@ -651,18 +656,37 @@ def parse_boats_page(html: str, date: str) -> List[Dict]:
 
         # Parse boat entry (if we have a landing context)
         if current_landing and i + 3 < len(lines):
-            # Check if this looks like a boat name (single word or two words, capitalized)
-            if re.match(r'^[A-Z][a-z]+(\s+[A-Z][a-z]+)?$', line):
+            boat_matched = False
+
+            # CRITICAL FIX: Cross-reference boat name against database
+            # This replaces unreliable regex matching with database validation
+            if line in known_boats:
                 boat_name = line
+                boat_info = known_boats[line]
+                boat_matched = True
 
-                # CRITICAL FIX: Don't use landing name as boat name
-                # This prevents "Seaforth Sportfishing" from being treated as a boat
-                if boat_name == current_landing:
-                    logger.warning(f"{Fore.YELLOW}⚠️  Skipping landing name as boat: {boat_name}")
-                    i += 1
-                    continue
+                # Validate landing matches (optional warning, not blocker)
+                if boat_info['landing_name'] != current_landing and boat_info['landing_name'] != 'Unknown':
+                    logger.warning(f"{Fore.YELLOW}⚠️  Landing mismatch for {boat_name}")
+                    logger.warning(f"{Fore.YELLOW}    Expected: {boat_info['landing_name']}")
+                    logger.warning(f"{Fore.YELLOW}    Found in: {current_landing}")
+                    # Continue anyway - boats can move between landings
 
-                logger.info(f"{Fore.YELLOW}🔍 Found boat: {boat_name} at line {i}")
+                logger.info(f"{Fore.YELLOW}🔍 Found boat: {boat_name} at line {i} (validated against database)")
+
+            # FALLBACK: Check for NEW boats not yet in database
+            # Use relaxed regex to catch boats with numbers, 3+ words, single letters, etc.
+            elif re.match(r'^[A-Z][a-z0-9]*(\s+[A-Z0-9][a-z0-9]*){0,4}$', line):
+                # Potential new boat - check it's not a landing name
+                if line != current_landing and 'Fish Counts' not in line:
+                    boat_name = line
+                    boat_matched = True
+                    logger.warning(f"{Fore.RED}🚨 NEW BOAT DETECTED: {boat_name}")
+                    logger.warning(f"{Fore.RED}   Landing: {current_landing}")
+                    logger.warning(f"{Fore.RED}   This boat is NOT in the database - will be auto-created")
+                    logger.warning(f"{Fore.RED}   Manual verification recommended")
+
+            if boat_matched:
 
                 # Next line should be landing name (skip it, we already have current_landing)
                 i += 1
@@ -758,6 +782,44 @@ def parse_boats_page(html: str, date: str) -> List[Dict]:
 # ============================================================================
 # DATABASE OPERATIONS
 # ============================================================================
+
+def get_all_known_boats(supabase: Client) -> Dict[str, Dict]:
+    """
+    Get all boats from database for validation during parsing
+
+    Returns dict mapping boat name -> {id, landing_id, landing_name}
+
+    This allows parser to:
+    1. Validate boat names against known boats (accuracy)
+    2. Detect new boats that need manual verification
+    3. Prevent parsing landing names as boat names
+
+    Example:
+        >>> boats = get_all_known_boats(supabase)
+        >>> if "Lucky B Sportfishing" in boats:
+        >>>     # Valid boat, continue parsing
+    """
+    try:
+        result = supabase.table('boats').select('id, name, landing_id, landings(name)').execute()
+
+        boats_dict = {}
+        for boat in result.data:
+            boat_name = boat['name']
+            landing_name = boat.get('landings', {}).get('name', 'Unknown') if boat.get('landings') else 'Unknown'
+
+            boats_dict[boat_name] = {
+                'id': boat['id'],
+                'landing_id': boat['landing_id'],
+                'landing_name': landing_name
+            }
+
+        logger.info(f"{Fore.GREEN}✅ Loaded {len(boats_dict)} known boats from database")
+        return boats_dict
+
+    except Exception as e:
+        logger.warning(f"{Fore.YELLOW}⚠️  Could not load boats from database: {e}")
+        logger.warning(f"{Fore.YELLOW}    Falling back to regex-only parsing")
+        return {}
 
 def get_or_create_landing(supabase: Client, landing_name: str) -> int:
     """Get or create landing"""
@@ -1206,8 +1268,8 @@ def scrape_date_range(
                 current += timedelta(days=1)
                 continue
 
-            # Parse trips
-            trips = parse_boats_page(html, date_str)
+            # Parse trips (with database cross-reference for boat validation)
+            trips = parse_boats_page(html, date_str, supabase)
             total_trips += len(trips)
 
             # Insert trips

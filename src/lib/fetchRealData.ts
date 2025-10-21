@@ -9,6 +9,7 @@ export interface FetchParams {
   boat?: string | string[]
   species?: string[]
   tripDuration?: string
+  moonPhase?: string
 }
 
 /**
@@ -16,7 +17,7 @@ export interface FetchParams {
  * Handles foreign key joins: trips → boats → landings, catches
  */
 export async function fetchRealCatchData(params: FetchParams): Promise<CatchRecord[]> {
-  const { startDate, endDate, landing, boat, species, tripDuration } = params
+  const { startDate, endDate, landing, boat, species, tripDuration, moonPhase } = params
 
   // Build query with joins
   let query = supabase
@@ -119,6 +120,37 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
       }
     })
     .filter((r): r is CatchRecord => r !== null)
+
+  // Apply moon phase filter if specified
+  if (moonPhase) {
+    // Need to fetch moon phase data and filter by estimated fishing date
+    const expandedStartDate = new Date(startDate)
+    expandedStartDate.setDate(expandedStartDate.getDate() - 5) // 5 days back to cover longest trips
+
+    const { data: moonData, error: moonError } = await supabase
+      .from('ocean_conditions')
+      .select('date, moon_phase_name')
+      .gte('date', expandedStartDate.toISOString().split('T')[0])
+      .lte('date', endDate)
+
+    if (!moonError && moonData) {
+      // Create date -> moon phase map
+      const moonPhaseMap = new Map<string, string>()
+      moonData.forEach((record: any) => {
+        moonPhaseMap.set(record.date, record.moon_phase_name)
+      })
+
+      // Filter records by moon phase using estimated fishing date
+      return records.filter(trip => {
+        const durationString = typeof trip.trip_duration_hours === 'string'
+          ? trip.trip_duration_hours
+          : trip.trip_duration_hours?.toString() || ''
+        const fishingDate = estimateFishingDate(trip.trip_date, durationString)
+        const tripMoonPhase = moonPhaseMap.get(fishingDate)
+        return tripMoonPhase === moonPhase
+      })
+    }
+  }
 
   return records
 }

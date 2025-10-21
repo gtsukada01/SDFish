@@ -303,8 +303,8 @@ def validate_date(date: str, supabase: Client) -> Dict:
             'timestamp': datetime.utcnow().isoformat()
         }
 
-    # Parse source trips
-    source_trips = parse_boats_page(html, date)
+    # Parse source trips (with database cross-reference for boat validation)
+    source_trips = parse_boats_page(html, date, supabase)
     logger.info(f"{Fore.CYAN}📊 Source page: {len(source_trips)} trips")
 
     # Get database trips

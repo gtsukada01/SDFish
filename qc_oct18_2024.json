@@ -1,0 +1,18 @@
+{
+  "date": "2024-10-18",
+  "status": "FAIL",
+  "source_boat_count": 12,
+  "database_boat_count": 13,
+  "matches": 12,
+  "mismatches": [],
+  "missing_boats": [],
+  "extra_boats": [
+    {
+      "boat": "El Gato Dos",
+      "landing": "Seaforth Sportfishing",
+      "trip_date": "2024-10-18"
+    }
+  ],
+  "field_errors": [],
+  "timestamp": "2025-10-20T14:31:25.592730"
+}

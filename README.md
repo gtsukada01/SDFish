@@ -1,12 +1,51 @@
 # SD Fishing Dashboard - React + shadcn/ui
 
-**Status**: ✅ Production Ready - **100% COMPLETE FOR BOTH 2024 AND 2025**
+**Status**: 🚨 **CRITICAL PARSER BUG DISCOVERED - DATA INTEGRITY ISSUE**
 **Stack**: React 18 + shadcn/ui + Tailwind CSS + TanStack React Table + Supabase Direct Client
-**Current Data**: 3,755 trips (Jan-Oct 2025) - 100% QC validated
-**2024 Backfill**: ✅ 100% COMPLETE - All 366 dates validated (4,203 trips)
-**2025 Status**: ✅ 100% COMPLETE - All 304 dates validated (3,755 trips)
-**Total Database**: 7,958 trips across 670 unique dates
-**Last Updated**: October 19, 2025 - Pipeline Hardening + Mobile UX Complete
+**Current Data**: 3,783 trips (Jan-Oct 2025) - **28+ trips missing due to parser bug**
+**2024 Backfill**: ⚠️ **NEEDS RE-AUDIT** - Unknown number of trips missed
+**2025 Status**: ⚠️ **IN REMEDIATION** - Parser fixed, re-scraping in progress
+**Total Database**: 7,986 trips (28 added on 10/20, unknown additional missing)
+**Last Updated**: October 20, 2025 - **CRITICAL: Parser Bug Fixed, Remediation Required**
+
+## 🚨 URGENT: Parser Bug Discovered (Oct 20, 2025)
+
+**Status**: Parser FIXED ✅ | Historical Data NEEDS RE-SCRAPING ⚠️
+
+**Critical Finding**: The boat name regex pattern in `parse_boats_page()` (line 655) was too restrictive, causing silent data loss:
+- **Pattern**: Only matched 1-2 word boat names with multiple lowercase letters
+- **Impact**: Missed boats with 3+ words, single letters, numbers, or special characters
+- **Dates Affected**: Potentially **ALL dates** from January 2024 through October 2025
+
+**Confirmed Missing Trips (Oct 10-18, 2025)**:
+- **28 trips across 8 dates** (only 1 date had perfect data)
+- **Pass rate: 11%** (1/9 dates validated correctly)
+
+**Root Cause**: Regex `^[A-Z][a-z]+(\s+[A-Z][a-z]+)?$` rejected:
+- ❌ **3+ word names** (Lucky B Sportfishing, El Gato Dos)
+- ❌ **Single letters** (Little G, Ranger 85)
+- ❌ **Numbers** (Oceanside 95, Vendetta 2, Top Gun 80)
+- ❌ **Special chars** (Patriot (SD), New Lo-An)
+
+**Fix Implemented** (Oct 20, 2025):
+- ✅ **Database cross-reference**: Parser now validates boat names against boats table (124 known boats)
+- ✅ **Relaxed regex fallback**: New boats detected with `^[A-Z][a-z0-9]*(\s+[A-Z0-9][a-z0-9]*){0,4}$`
+- ✅ **Landing validation**: Warns if boat appears at unexpected landing
+- ✅ **10/19 validation**: Parser now finds 28/28 trips (was 25/28 before fix)
+
+**Immediate Actions Required** (see below for commands):
+1. ✅ **DONE**: Fix parser bug with database cross-reference
+2. ✅ **DONE**: Scrape 10/19 with fixed parser (28/28 trips captured)
+3. ⚠️ **TODO**: Re-scrape 10/10 through 10/18 (8 dates, 28 missing trips)
+4. ⚠️ **TODO**: Audit September 2025 for missing boats
+5. ⚠️ **TODO**: Audit August 2025 for missing boats
+6. ⚠️ **TODO**: Consider full historical audit (2024 + 2025 Jan-Sep)
+
+**Files Changed**:
+- `boats_scraper.py`: Added `get_all_known_boats()`, modified `parse_boats_page()` to use database validation
+- `qc_validator.py`: Updated to pass `supabase` client to parser
+
+**Next Team: See "Remediation Commands" section below for exact steps.**
 
 ---
 
@@ -63,6 +102,43 @@
 
 ---
 
+## ✅ SPEC-011: Analytics Drilldown - COMPLETE
+
+**Status**: ✅ PRODUCTION - All Phases Complete
+**Completed**: October 20, 2025
+
+### What Was Delivered
+
+**Phase 1 - Boats & Species Drilldown (COMPLETE)**:
+- ✅ **Clickable Bar Charts**: Boats and Species tabs now have interactive drilldown
+- ✅ **Filter Integration**: One-click filtering - click any bar to filter table
+- ✅ **Visual Feedback**: Selected bars show ring border + background highlight
+- ✅ **Auto-Scroll**: Table scrolls into view after drilldown click
+- ✅ **Keyboard Accessible**: Tab navigation + Enter/Space key support
+- ✅ **Single-Select Behavior**: Bar click replaces existing filters (use dropdowns for multi-select)
+
+**Phase 2 - Moon Phase Drilldown (COMPLETE)**:
+- ✅ **Moon Phase Filtering**: Click any moon phase bar to filter trips by moon phase
+- ✅ **Intelligent Correlation**: Uses estimated fishing date (not return date) for accuracy
+- ✅ **Moon Phase Badge**: Active moon phase displayed in Active Filters with (x) to clear
+- ✅ **Complete Integration**: All three Analytics tabs (Boats, Species, Moon) have drilldown
+
+**User Experience**:
+- Click "Dolphin" on Boats tab → Table instantly shows only Dolphin trips
+- Click "Yellowtail" on Species tab → Table shows all trips with Yellowtail catches
+- Species normalization handles weight qualifiers automatically
+- Clear visual state - always know which boat/species is filtered
+- Works seamlessly with existing header filters
+
+**Files Modified**:
+- `src/components/MetricsBreakdown.tsx` - Added click handlers and visual styling
+- `src/App.tsx` - Added `handleBoatBarClick()` and `handleSpeciesBarClick()` handlers
+- `specs/011-analytics-drilldown/` - Full specification, testing checklist, implementation summary
+
+**Reference**: See [specs/011-analytics-drilldown/](specs/011-analytics-drilldown/) for complete documentation.
+
+---
+
 ## 📚 Documentation Navigation
 
 **Single Source of Truth**: This README - All current status, commands, and quick links
@@ -81,6 +157,7 @@
   - 2025: April, May, June completion summaries and updates
 
 **Technical Specs**:
+- [specs/011-analytics-drilldown/](specs/011-analytics-drilldown/) - **✅ Phase 1 COMPLETE | Phase 2 IN PROGRESS - Analytics drilldown** (Oct 20, 2025)
 - [specs/010-pipeline-hardening/](specs/010-pipeline-hardening/) - **✅ COMPLETE - Pipeline hardening** (Phase 1+2 complete Oct 19, 2025)
 - [specs/006-scraper-accuracy-validation/](specs/006-scraper-accuracy-validation/) - QC validation standards
 - [SPEC-007-CONDITIONAL-METRICS.md](SPEC-007-CONDITIONAL-METRICS.md) - Dashboard conditional metrics ✅ (Oct 18, 2025)
@@ -117,19 +194,61 @@
 **QC PASS RATE**: 99.85% (669/670 dates passed, 1 accepted issue on Aug 7)
 - ⚠️ **Aug 7, 2025**: Dolphin boat species count variance (accepted as production-ready)
 
-**NEXT STEPS - NOVEMBER 2025 FORWARD**:
+## 🚨 REMEDIATION COMMANDS - IMMEDIATE ACTION REQUIRED
+
+**Priority 1: Re-scrape October 10-18 (8 dates, 28 known missing trips)**
 ```bash
-# Continue with November 2025 using same SPEC 006 workflow
-# 1. Scrape first batch
+# Re-scrape dates with known missing boats (parser now fixed)
+python3 boats_scraper.py --start-date 2025-10-10 --end-date 2025-10-18
+
+# Validate all trips captured (should be 100% pass rate)
+python3 qc_validator.py --start-date 2025-10-10 --end-date 2025-10-18 --output qc_oct10_18_final.json
+
+# Verify pass rate improved from 11% to 100%
+cat qc_oct10_18_final.json | jq '.summary.pass_rate'  # Target: 100.0
+```
+
+**Priority 2: Audit September 2025 (30 dates)**
+```bash
+# Check for missed boats in September
+python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-30 --output qc_sept_audit.json
+
+# Review results
+cat qc_sept_audit.json | jq '.summary.pass_rate'
+cat qc_sept_audit.json | jq '.reports[] | select(.status == "FAIL") | {date, missing_boats}'
+
+# If failures found, re-scrape problem dates
+# python3 boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
+```
+
+**Priority 3: Audit August 2025 (31 dates)**
+```bash
+# Check for missed boats in August
+python3 qc_validator.py --start-date 2025-08-01 --end-date 2025-08-31 --output qc_aug_audit.json
+cat qc_aug_audit.json | jq '.summary.pass_rate'
+
+# Re-scrape if needed
+```
+
+**Priority 4: Full Historical Audit (Optional but Recommended)**
+```bash
+# Audit ALL 2025 data (Jan-Oct)
+python3 qc_validator.py --start-date 2025-01-01 --end-date 2025-10-31 --output qc_2025_full_audit.json
+
+# Audit ALL 2024 data
+python3 qc_validator.py --start-date 2024-01-01 --end-date 2024-12-31 --output qc_2024_full_audit.json
+
+# Identify all dates needing re-scraping
+cat qc_2025_full_audit.json | jq '.reports[] | select(.status == "FAIL") | .date'
+cat qc_2024_full_audit.json | jq '.reports[] | select(.status == "FAIL") | .date'
+```
+
+**November 2025 Forward** (after remediation complete):
+```bash
+# Continue with November using fixed parser
 python3 boats_scraper.py --start-date 2025-11-01 --end-date 2025-11-05
-
-# 2. Immediately QC validate
 python3 qc_validator.py --start-date 2025-11-01 --end-date 2025-11-05 --output qc_nov_batch01.json
-
-# 3. Verify 100% pass rate
 cat qc_nov_batch01.json | jq '.summary.pass_rate'  # Target: 100.0
-
-# 4. Continue with remaining batches
 ```
 
 **COMPREHENSIVE VERIFICATION**:

@@ -1,5 +1,5 @@
 import React from 'react'
-import { X, MapPin, Calendar, Fish, Anchor } from 'lucide-react'
+import { X, MapPin, Calendar, Fish, Anchor, Moon } from 'lucide-react'
 import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 import { Filters } from '../../scripts/api/types'
@@ -12,6 +12,7 @@ interface ActiveFiltersProps {
   onRemoveLanding: (landing: string) => void
   onRemoveBoat: (boat?: string) => void
   onRemoveSpecies: (species?: string) => void
+  onRemoveMoonPhase: () => void
   onRemoveDateRange: () => void
   onClearAll: () => void
 }
@@ -22,6 +23,7 @@ export function ActiveFilters({
   onRemoveLanding,
   onRemoveBoat,
   onRemoveSpecies,
+  onRemoveMoonPhase,
   onRemoveDateRange,
   onClearAll
 }: ActiveFiltersProps) {
@@ -37,10 +39,23 @@ export function ActiveFilters({
     return Array.from(uniqueNormalized)
   }, [species])
 
+  // Moon phase display names
+  const phaseDisplayNames: Record<string, string> = {
+    'new_moon': 'New Moon',
+    'waxing_crescent': 'Waxing Crescent',
+    'first_quarter': 'First Quarter',
+    'waxing_gibbous': 'Waxing Gibbous',
+    'full_moon': 'Full Moon',
+    'waning_gibbous': 'Waning Gibbous',
+    'last_quarter': 'Last Quarter',
+    'waning_crescent': 'Waning Crescent'
+  }
+
   const hasActiveFilters =
     selectedLandings.length > 0 ||
     boats.length > 0 ||
     species.length > 0 ||
+    filters.moon_phase ||
     filters.start_date ||
     filters.end_date
 
@@ -123,6 +138,24 @@ export function ActiveFilters({
               </Button>
             </Badge>
           ))}
+
+          {/* Moon Phase chip */}
+          {filters.moon_phase && (
+            <Badge variant="secondary" className="gap-1.5 pr-1 h-7">
+              <Moon className="h-3 w-3" />
+              <span className="max-w-[120px] truncate">
+                {phaseDisplayNames[filters.moon_phase] || filters.moon_phase}
+              </span>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-4 w-4 p-0 hover:bg-transparent"
+                onClick={onRemoveMoonPhase}
+              >
+                <X className="h-3 w-3" />
+              </Button>
+            </Badge>
+          )}
         </div>
 
         {/* Clear All */}

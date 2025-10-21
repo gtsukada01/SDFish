@@ -1,0 +1,163 @@
+{
+  "date": "2025-10-19",
+  "status": "FAIL",
+  "source_boat_count": 25,
+  "database_boat_count": 0,
+  "matches": 0,
+  "mismatches": [],
+  "missing_boats": [
+    {
+      "boat": "Constitution",
+      "landing": "Fisherman's Landing",
+      "trip_type": "2 Day",
+      "anglers": 20
+    },
+    {
+      "boat": "Dolphin",
+      "landing": "Fisherman's Landing",
+      "trip_type": "1/2 Day AM",
+      "anglers": 30
+    },
+    {
+      "boat": "Dolphin",
+      "landing": "Fisherman's Landing",
+      "trip_type": "1/2 Day PM",
+      "anglers": 60
+    },
+    {
+      "boat": "Fortune",
+      "landing": "Fisherman's Landing",
+      "trip_type": "2 Day",
+      "anglers": 15
+    },
+    {
+      "boat": "Islander",
+      "landing": "Fisherman's Landing",
+      "trip_type": "1.5 Day",
+      "anglers": 29
+    },
+    {
+      "boat": "Liberty",
+      "landing": "Fisherman's Landing",
+      "trip_type": "2 Day",
+      "anglers": 17
+    },
+    {
+      "boat": "Pacific Dawn",
+      "landing": "Fisherman's Landing",
+      "trip_type": "2 Day",
+      "anglers": 17
+    },
+    {
+      "boat": "Alicia",
+      "landing": "H&M Landing",
+      "trip_type": "1/2 Day Twilight",
+      "anglers": 10
+    },
+    {
+      "boat": "Excalibur",
+      "landing": "H&M Landing",
+      "trip_type": "3 Day",
+      "anglers": 25
+    },
+    {
+      "boat": "Grande",
+      "landing": "H&M Landing",
+      "trip_type": "Full Day Offshore",
+      "anglers": 33
+    },
+    {
+      "boat": "Legend",
+      "landing": "H&M Landing",
+      "trip_type": "3 Day",
+      "anglers": 30
+    },
+    {
+      "boat": "Ocean Odyssey",
+      "landing": "H&M Landing",
+      "trip_type": "1.5 Day",
+      "anglers": 29
+    },
+    {
+      "boat": "Old Glory",
+      "landing": "H&M Landing",
+      "trip_type": "2 Day",
+      "anglers": 22
+    },
+    {
+      "boat": "Poseidon",
+      "landing": "H&M Landing",
+      "trip_type": "2.5 Day",
+      "anglers": 16
+    },
+    {
+      "boat": "Producer",
+      "landing": "H&M Landing",
+      "trip_type": "Overnight",
+      "anglers": 25
+    },
+    {
+      "boat": "Blue Horizon",
+      "landing": "Oceanside Sea Center",
+      "trip_type": "1.5 Day Offshore",
+      "anglers": 13
+    },
+    {
+      "boat": "Southern Cal",
+      "landing": "Oceanside Sea Center",
+      "trip_type": "1/2 Day AM",
+      "anglers": 18
+    },
+    {
+      "boat": "Daily Double",
+      "landing": "Point Loma Sportfishing",
+      "trip_type": "1/2 Day AM",
+      "anglers": 12
+    },
+    {
+      "boat": "Aztec",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "2 Day",
+      "anglers": 21
+    },
+    {
+      "boat": "Highliner",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "2 Day",
+      "anglers": 21
+    },
+    {
+      "boat": "New Seaforth",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "1/2 Day AM",
+      "anglers": 36
+    },
+    {
+      "boat": "San Diego",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "Full Day Offshore",
+      "anglers": 35
+    },
+    {
+      "boat": "Sea Watch",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "3/4 Day",
+      "anglers": 15
+    },
+    {
+      "boat": "Tribute",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "1.5 Day",
+      "anglers": 30
+    },
+    {
+      "boat": "Voyager",
+      "landing": "Seaforth Sportfishing",
+      "trip_type": "2 Day",
+      "anglers": 13
+    }
+  ],
+  "extra_boats": [],
+  "field_errors": [],
+  "timestamp": "2025-10-21T00:06:43.024810"
+}
