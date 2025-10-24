@@ -642,6 +642,32 @@ def normalize_species_name(species_name: str) -> str:
     normalized = species_name.lower()
     return SPECIES_NAME_ALIASES.get(normalized, species_name)
 
+def has_weight_labels(catches: List[Dict]) -> bool:
+    for catch in catches:
+        species = catch.get('species', '')
+        if '(up to' in species.lower() or 'pound' in species.lower():
+            return True
+    return False
+
+def deduplicate_trips_prefer_detailed(trips: List[Dict]) -> List[Dict]:
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for trip in trips:
+        key = (trip['boat_name'], trip['trip_date'], trip['trip_duration'], trip.get('anglers'))
+        groups[key].append(trip)
+    deduplicated = []
+    for key, group_trips in groups.items():
+        if len(group_trips) == 1:
+            deduplicated.append(group_trips[0])
+        else:
+            detailed_trips = [t for t in group_trips if has_weight_labels(t['catches'])]
+            if detailed_trips:
+                deduplicated.append(detailed_trips[0])
+                logger.info(f"{Fore.CYAN}🔍 Dedup: Preferring detailed row for {key[0]}")
+            else:
+                deduplicated.append(group_trips[0])
+    return deduplicated
+
 def parse_boats_page(html: str, date: str, supabase: Client) -> List[Dict]:
     """
     Parse boats.php page using HTML table row parsing (FIXED VERSION)
@@ -804,9 +830,10 @@ def parse_boats_page(html: str, date: str, supabase: Client) -> List[Dict]:
                     logger.info(f"{Fore.GREEN}✅ Parsed: {boat_name} - {len(catches)} species, {anglers} anglers")
 
     logger.info(f"{Fore.GREEN}✅ Total trips parsed: {len(trips)}")
-    return trips
-
-    return trips
+    deduplicated_trips = deduplicate_trips_prefer_detailed(trips)
+    if len(deduplicated_trips) < len(trips):
+        logger.info(f"{Fore.CYAN}🔍 Deduplication: {len(trips)} -> {len(deduplicated_trips)} trips")
+    return deduplicated_trips
 
 # ============================================================================
 # DATABASE OPERATIONS

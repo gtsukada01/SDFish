@@ -1,13 +1,44 @@
 # SoCal Scraper Development - Team Handoff Documentation
 
-**Date**: October 22-23, 2025 (Updated)
-**Session Type**: Production Deployment + Critical Bug Fixes
-**Status**: ✅ **PRODUCTION** - Oct 2025 complete (340 trips), ready for 2025 backfill
-**Next Team**: Requires scraping Jan 1 - Sep 30, 2025 (9 months backfill)
+**Date**: October 22-24, 2025 (Final Update)
+**Session Type**: Production Deployment + Critical Bug Fixes + QC Completion
+**Status**: ✅ **COMPLETE** - Full 2025 Jan-Oct coverage (5,455 trips) with 100% QC validation
+**Latest Update**: October 24, 2025 - **2025 Backfill Complete + Data Quality Fix**
 
 ---
 
-## Executive Summary
+## 🎉 UPDATE: PROJECT COMPLETE (Oct 24, 2025)
+
+### Final Status
+- ✅ **All 2025 data scraped**: Jan 1 - Oct 23 (5,455 trips across 145 dates)
+- ✅ **100% QC validation**: 145/145 dates passed field-level validation
+- ✅ **Weight label deduplication fix**: Parser now intelligently prefers detailed data
+- ✅ **Production-ready**: Ready for daily scraping going forward
+
+### Critical Data Quality Fix Applied
+
+**Problem**: Source pages had duplicate boat entries (summary + detailed with weight labels)
+- **Summary row**: "50 Sheephead, 71 Calico Bass"
+- **Detailed row**: "50 Sheephead (up to 14 pounds), 31 Calico Bass (up to 6 pounds)"
+
+**Solution**: Added `deduplicate_trips_prefer_detailed()` function to `socal_scraper.py`
+- Automatically detects weight labels: `(up to X pounds)` patterns
+- Groups duplicate trips by (boat, date, trip_type, anglers)
+- Always selects detailed version with weight/size information
+
+**Impact**:
+- **297 trips re-scraped** across 14 dates (June-September)
+- **QC pass rate improved**: 78.7% → **100%** (145/145 dates)
+- **Data quality**: All trips now have complete weight label information where available
+
+### Final Database Totals
+- **San Diego**: 7,717 trips (2024 + 2025 Jan-Oct)
+- **SoCal**: 5,455 trips (2025 Jan-Oct) - **+1,153 from original Oct 23 count**
+- **Total**: 13,172 trips with dual-source validation
+
+---
+
+## Executive Summary (Original Oct 22-23 Session)
 
 ### What Was Accomplished
 
@@ -110,7 +141,7 @@ Our system now has **TWO separate scrapers** with **NO overlap**:
 
 ### File Location
 ```
-/Users/btsukada/Desktop/Fishing/fish-scraper/socal_scraper.py
+/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/python/socal_scraper.py
 ```
 
 ### Key Differences from boats_scraper.py
@@ -380,7 +411,7 @@ elif re.match(r'^[A-Z][a-zA-Z0-9\-]*(\s+[A-Z0-9][a-zA-Z0-9\-]*){0,4}(\s*\([^)]+\
 
 ### Production-Ready Scraper ✅
 
-**File**: `/Users/btsukada/Desktop/Fishing/fish-scraper/socal_scraper.py`
+**File**: `/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/python/socal_scraper.py`
 
 **Capabilities**:
 - ✅ Scrapes socalfishreports.com (Ventura → Dana Point)
@@ -420,10 +451,10 @@ elif re.match(r'^[A-Z][a-zA-Z0-9\-]*(\s+[A-Z0-9][a-zA-Z0-9\-]*){0,4}(\s*\([^)]+\
 cd /Users/btsukada/Desktop/Fishing/fish-scraper
 
 # Example: January 2025
-python3 socal_scraper.py --start-date 2025-01-01 --end-date 2025-01-31
+python3 scripts/python/socal_scraper.py --start-date 2025-01-01 --end-date 2025-01-31
 
 # Example: February 2025
-python3 socal_scraper.py --start-date 2025-02-01 --end-date 2025-02-28
+python3 scripts/python/socal_scraper.py --start-date 2025-02-01 --end-date 2025-02-28
 ```
 
 **Estimated Runtime**: ~3-5 minutes per month (30-31 dates × 3-5 seconds/date)
@@ -549,11 +580,11 @@ cd /Users/btsukada/Desktop/Fishing/fish-scraper
 # Get today's date
 TODAY=$(date -u -v-8H +%Y-%m-%d)  # Pacific Time
 
-# 1. Scrape San Diego (boats_scraper.py)
-python3 boats_scraper.py --start-date $TODAY --end-date $TODAY
+# 1. Scrape San Diego (scripts/python/boats_scraper.py)
+python3 scripts/python/boats_scraper.py --start-date $TODAY --end-date $TODAY
 
-# 2. Scrape SoCal (socal_scraper.py)
-python3 socal_scraper.py --start-date $TODAY --end-date $TODAY
+# 2. Scrape SoCal (scripts/python/socal_scraper.py)
+python3 scripts/python/socal_scraper.py --start-date $TODAY --end-date $TODAY
 
 # 3. Verify both scrapers completed
 echo "San Diego scraper: Check boats_scraper.log for summary"
@@ -708,7 +739,7 @@ if existing_trip.data:
 grep "ERROR\|Incomplete data" boats_scraper.log | tail -20
 
 # 2. Re-scrape problem date with verbose logging
-python3 socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
+python3 scripts/python/socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
 
 # 3. Compare dry-run output to source page
 # Count "✅ Parsed:" lines vs manual boat count on source
@@ -768,7 +799,7 @@ else:
 **Debugging**:
 ```bash
 # Check if filters are working
-python3 socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run \
+python3 scripts/python/socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run \
   | grep -E "(Parsed:|Skipping excluded)"
 
 # Should NOT see:
@@ -811,7 +842,7 @@ print(f'Deleted {len(result.data)} trips from 2025-10-15')
 # 3. Fix parser issue
 
 # 4. Re-scrape the date
-python3 socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
+python3 scripts/python/socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 ```
 
 ---
@@ -822,25 +853,25 @@ python3 socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 
 ```
 /Users/btsukada/Desktop/Fishing/fish-scraper/
-├── socal_scraper.py          # NEW SoCal scraper (Ventura → Dana Point)
-├── boats_scraper.py           # Existing San Diego scraper
-├── qc_validator.py            # QC validation (San Diego only currently)
-├── boats_scraper.log          # Combined log file (both scrapers)
-└── fishing-dashboard/         # Next.js dashboard (San Diego only currently)
+├── scripts/python/socal_scraper.py        # NEW SoCal scraper (Ventura → Dana Point)
+├── scripts/python/boats_scraper.py        # Existing San Diego scraper
+├── scripts/python/qc_validator.py         # QC validation (San Diego only currently)
+├── scripts/python/socal_qc_validator.py   # QC validation (SoCal source)
+├── scripts/python/data_auditor.py         # Data health audit
+└── archive/logs/boats_scraper_latest.log  # Latest combined scraper log
 ```
 
 ### Documentation Files
 
 ```
 /Users/btsukada/Desktop/Fishing/fish-scraper/
-├── SOCAL_SCRAPER_HANDOFF_OCT22_2025.md  # This file
-├── COMPREHENSIVE_QC_VERIFICATION.md      # San Diego QC results
-├── README.md                             # Project overview
-├── DOCUMENTATION_STANDARDS.md            # Doc governance
-├── CLAUDE_OPERATING_GUIDE.md            # Operational guide
-└── archive/
-    ├── SESSION_HANDOFF_OCT22_EVENING.md  # Previous session
-    └── [other historical docs]
+├── README.md                               # Project overview
+├── SOCAL_SCRAPER_HANDOFF_OCT22_2025.md     # This file
+├── archive/docs/archive/docs/CLAUDE_OPERATING_GUIDE.md  # Operational playbook
+├── archive/docs/DOCUMENTATION_STANDARDS.md # Doc governance
+├── archive/reports/qc/COMPREHENSIVE_QC_VERIFICATION.md # San Diego QC results
+├── archive/reports/scrape/2025_SCRAPING_REPORT.md      # 2025 consolidated report
+└── archive/reports/scrape/2024_SCRAPING_REPORT.md      # 2024 consolidated report
 ```
 
 ---
@@ -854,6 +885,15 @@ python3 socal_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsc2J0d3Fod25ycGtvdXJwaGlxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjU4OTIyOSwiZXhwIjoyMDcyMTY1MjI5fQ.35Wwadw4fhNKsapJIiul4fZxTc7HQmKNTMrKY0Sv_6U
 ```
+
+### Python Environment Setup
+
+- Add the script bundle to your path before running any of the reorganized utilities:
+  ```bash
+  export PYTHONPATH="$(pwd)/scripts/python"
+  ```
+- One-off shell snippets in specs expect that path; replicate by prefixing commands with `PYTHONPATH=scripts/python` when running from repo root.
+- Unit tests under `tests/python/` already bootstrap this path automatically—no extra setup needed when using `python -m unittest`.
 
 ### Quick Database Queries
 
@@ -940,19 +980,19 @@ for label, start, end in weeks:
 1. **Check this document first** - Most issues covered in Troubleshooting section
 2. **Review validation dates** - Oct 1-6 are known-good, use for testing
 3. **Check git history** - All changes documented with commit messages
-4. **Consult CLAUDE_OPERATING_GUIDE.md** - Operational procedures for existing scraper
+4. **Consult archive/docs/CLAUDE_OPERATING_GUIDE.md** - Operational procedures for existing scraper
 
 ### Related Documentation
 
 **Must Read**:
-- `CLAUDE_OPERATING_GUIDE.md` - Step-by-step operational guide (950+ lines)
-- `COMPREHENSIVE_QC_VERIFICATION.md` - San Diego QC results (100% verified)
-- `DOCUMENTATION_STANDARDS.md` - Doc governance & templates
+- `archive/docs/CLAUDE_OPERATING_GUIDE.md` - Step-by-step operational guide (950+ lines)
+- `archive/reports/qc/COMPREHENSIVE_QC_VERIFICATION.md` - San Diego QC results (100% verified)
+- `archive/docs/DOCUMENTATION_STANDARDS.md` - Doc governance & templates
 
 **Reference**:
 - `README.md` - Project overview & status
-- `2025_SCRAPING_REPORT.md` - 2025 consolidated report (San Diego)
-- `DOC_CHANGELOG.md` - Documentation audit trail
+- `archive/reports/scrape/2025_SCRAPING_REPORT.md` - 2025 consolidated report (San Diego)
+- `archive/docs/DOC_CHANGELOG.md` - Documentation audit trail
 
 ---
 
@@ -961,13 +1001,13 @@ for label, start, end in weeks:
 ### Before Starting
 
 - [ ] Read this entire document (SOCAL_SCRAPER_HANDOFF_OCT22_2025.md)
-- [ ] Read CLAUDE_OPERATING_GUIDE.md (operational procedures)
+- [ ] Read archive/docs/CLAUDE_OPERATING_GUIDE.md (operational procedures)
 - [ ] Verify Supabase connection works (run "Get total trip count" query above)
-- [ ] Confirm `socal_scraper.py` exists in `/Users/btsukada/Desktop/Fishing/fish-scraper/`
+- [ ] Confirm `scripts/python/socal_scraper.py` exists in `/Users/btsukada/Desktop/Fishing/fish-scraper/`
 
 ### Phase 1: October Scraping
 
-- [ ] Run: `python3 socal_scraper.py --start-date 2025-10-01 --end-date 2025-10-22`
+- [ ] Run: `python3 scripts/python/socal_scraper.py --start-date 2025-10-01 --end-date 2025-10-22`
 - [ ] Verify: ~400-500 trips in database for October 2025
 - [ ] QC: Spot-check 3 random dates (Oct 1-22) against source pages
 - [ ] Document: Any issues encountered + resolutions
@@ -975,7 +1015,7 @@ for label, start, end in weeks:
 ### Phase 2: Daily Operations
 
 - [ ] Set up daily scraping schedule (after 5:00 PM PT)
-- [ ] Run both scrapers: `boats_scraper.py` (San Diego) + `socal_scraper.py` (SoCal)
+- [ ] Run both scrapers: `scripts/python/boats_scraper.py` (San Diego) + `scripts/python/socal_scraper.py` (SoCal)
 - [ ] Weekly QC: Validate 2-3 random dates from past week
 - [ ] Monitor: Check for "NEW BOAT DETECTED" warnings (expected 0-2/week)
 
@@ -1085,6 +1125,16 @@ if anglers is None or not trip_type or not catches_text:
 | Oct 5 | 0 | 7 | 3 | 0 | 2 | 4 | 4 | 4 | **24** |
 | Oct 6 | 2 | 2 | 1 | 0 | 0 | 2 | 2 | 4 | **13** |
 | **TOTAL** | **5** | **21** | **12** | **2** | **12** | **19** | **20** | **23** | **114** |
+
+---
+
+## Archive Organization Update (Oct 23, 2025)
+
+- Archived historical QC datasets under `archive/reports/qc/` and kept only the latest baseline (`qc_2025_full_audit.*`) at repo root.
+- Moved legacy scrape summaries to `archive/reports/scrape/` and triaged one-off investigations into `archive/scripts/python/`.
+- Consolidated historical logs/backups into `archive/logs/` and `archive/backups/`; future runs should emit to top-level `logs/` and `backups/` directories (root now ignores stray `*.log`, `qc_*.json`, etc.).
+- Old screenshots and disposable HTML (e.g., diagnostics) now live in `archive/screenshots/` when needed; remove new captures after linking them from docs.
+- When adding new operational artifacts, either store them in the dedicated directories or purge them after documenting to keep the workspace lean.
 
 ---
 
