@@ -29,7 +29,7 @@ function App() {
   const breakdownRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
-  // Default filters: last 30 days (using local timezone, not UTC)
+  // Default filters: YTD (Year to Date - Jan 1 to today, using local timezone, not UTC)
   const getLocalDateString = (date: Date): string => {
     const year = date.getFullYear()
     const month = String(date.getMonth() + 1).padStart(2, '0')
@@ -38,7 +38,7 @@ function App() {
   }
 
   const [filters, setFilters] = useState<Filters>({
-    start_date: getLocalDateString(new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)),
+    start_date: getLocalDateString(new Date(new Date().getFullYear(), 0, 1)), // January 1st of current year
     end_date: getLocalDateString(new Date()),
   })
   const [selectedLandings, setSelectedLandings] = useState<string[]>([])
@@ -199,19 +199,26 @@ function App() {
 
   const handleRemoveDateRange = () => {
     const defaultFilters: Filters = {
-      start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      end_date: new Date().toISOString().split('T')[0],
+      start_date: getLocalDateString(new Date(new Date().getFullYear(), 0, 1)), // YTD: January 1st of current year
+      end_date: getLocalDateString(new Date()),
     }
     setFilters(prev => ({ ...prev, start_date: defaultFilters.start_date, end_date: defaultFilters.end_date }))
   }
 
   const handleClearAllFilters = () => {
     const defaultFilters: Filters = {
-      start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      end_date: new Date().toISOString().split('T')[0],
+      start_date: getLocalDateString(new Date(new Date().getFullYear(), 0, 1)), // YTD: January 1st of current year
+      end_date: getLocalDateString(new Date()),
     }
     setFilters(defaultFilters)
     setSelectedLandings([])
+  }
+
+  const handleLogoClick = () => {
+    // Reset to home: clear all filters and scroll to top
+    handleClearAllFilters()
+    // Scroll to top of page
+    scrollContainerRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   // Handle metric card clicks - switch to appropriate tab and scroll
@@ -295,6 +302,7 @@ function App() {
     <div className="flex flex-col h-screen overflow-hidden">
       <Header
         onMobileMenuClick={() => setIsSidebarOpen(true)}
+        onLogoClick={handleLogoClick}
       />
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar Sheet (both mobile and desktop) */}
@@ -452,7 +460,7 @@ function App() {
                     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                       <TabsList className="grid w-full grid-cols-3">
                         <TabsTrigger value="boats">Boats</TabsTrigger>
-                        <TabsTrigger value="species">Species</TabsTrigger>
+                        <TabsTrigger value="species">{isSpeciesFiltered ? 'Monthly' : 'Species'}</TabsTrigger>
                         <TabsTrigger value="moon">Moon</TabsTrigger>
                       </TabsList>
                       <TabsContent value="boats" className="mt-6">
@@ -469,6 +477,8 @@ function App() {
                           mode="species"
                           selectedValue={filters.species?.[0] || null}
                           onBarClick={handleSpeciesBarClick}
+                          catchData={catchData}
+                          isSpeciesFiltered={isSpeciesFiltered}
                         />
                       </TabsContent>
                       <TabsContent value="moon" className="mt-6">

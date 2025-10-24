@@ -15,15 +15,6 @@
         "shadcn@latest",
         "mcp"
       ]
-    },
-    "supabase": {
-      "command": "/Users/btsukada/.local/bin/supabase-mcp-server",
-      "env": {
-        "QUERY_API_KEY": "qry_v1_FCDDozVrF18tfe2epwt2PYmvGPt7JKuGmofbA-DkQRI",
-        "SUPABASE_PROJECT_REF": "ulsbtwqhwnrpkourphiq",
-        "SUPABASE_SERVICE_ROLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsc2J0d3Fod25ycGtvdXJwaGlxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjU4OTIyOSwiZXhwIjoyMDcyMTY1MjI5fQ.35Wwadw4fhNKsapJIiul4fZxTc7HQmKNTMrKY0Sv_6U",
-        "SUPABASE_REGION": "us-west-1"
-      }
     }
   }
 }

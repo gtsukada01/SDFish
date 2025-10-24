@@ -110,7 +110,6 @@ export function ActiveFilters({
           {/* Boat chips */}
           {boats.map((boat) => (
             <Badge key={boat} variant="secondary" className="gap-1.5 pr-1 h-7">
-              <Anchor className="h-3 w-3" />
               <span className="max-w-[120px] truncate">{boat}</span>
               <Button
                 variant="ghost"
@@ -126,7 +125,6 @@ export function ActiveFilters({
           {/* Species chips - show only normalized names */}
           {normalizedSpecies.map((sp) => (
             <Badge key={sp} variant="secondary" className="gap-1.5 pr-1 h-7">
-              <Fish className="h-3 w-3" />
               <span className="max-w-[120px] truncate">{sp}</span>
               <Button
                 variant="ghost"

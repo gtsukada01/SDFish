@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-QC Validation Script - 100% Data Accuracy Verification
-========================================================
+SoCal QC Validation Script - 100% Data Accuracy Verification
+=============================================================
 
 SPEC 006: Validates database matches boats.php source pages with 100% accuracy
 
@@ -9,11 +9,11 @@ Features:
 - Field-level comparison (landing, boat, trip type, anglers, species, counts)
 - Missing boats detection (on source but not in database)
 - Extra boats detection (in database but not on source)
-- Polaris Supreme validation test (10 trips from 09-09 to 10-10)
+- SoCal-specific: www.socalfishreports.com source
 - JSON report generation with PASS/FAIL status
 
 Author: Fishing Intelligence Platform
-Date: October 16, 2025
+Date: October 23, 2025
 """
 
 import sys
@@ -29,9 +29,9 @@ from bs4 import BeautifulSoup
 from supabase import create_client, Client
 from colorama import Fore, Style, init
 
-# Import parsing utilities from boats_scraper
+# Import parsing utilities from socal_scraper
 sys.path.insert(0, str(Path(__file__).parent))
-from boats_scraper import (
+from socal_scraper import (
     parse_boats_page,
     normalize_trip_type,
     parse_species_counts,
@@ -50,8 +50,17 @@ SUPABASE_URL = "https://ulsbtwqhwnrpkourphiq.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsc2J0d3Fod25ycGtvdXJwaGlxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjU4OTIyOSwiZXhwIjoyMDcyMTY1MjI5fQ.35Wwadw4fhNKsapJIiul4fZxTc7HQmKNTMrKY0Sv_6U"
 
 # Logging
-LOG_FILE = "qc_validator.log"
+LOG_FILE = "socal_qc_validator.log"
 LOG_LEVEL = logging.INFO
+
+# San Diego landing blocklist (needed to remove cross-source bleed)
+SAN_DIEGO_LANDINGS = {
+    "fisherman's landing",
+    'h&m landing',
+    'seaforth sportfishing',
+    'point loma sportfishing',
+    'oceanside sea center',
+}
 
 # ============================================================================
 # LOGGING SETUP
@@ -75,30 +84,37 @@ logger = setup_logging()
 # DATABASE QUERIES
 # ============================================================================
 
+def is_san_diego_landing(landing_name: Optional[str]) -> bool:
+    """Return True when landing_name belongs to the San Diego blocklist"""
+    if not landing_name:
+        return False
+    return landing_name.lower() in SAN_DIEGO_LANDINGS
+
 def get_database_trips(supabase: Client, date: str) -> List[Dict]:
     """
-    Get all San Diego trips from database for a specific date
+    Get all SoCal trips from database for a specific date
 
-    FILTERS BY SOURCE: Only returns trips from www.sandiegofishreports.com scrape jobs
+    FILTERS BY SOURCE: Only returns trips from www.socalfishreports.com scrape jobs
+    FILTERS BY LANDING: Drops known San Diego landings (prevents cross-source overlap)
 
     Returns:
         List of trips with all fields (boat, landing, trip type, anglers, catches)
     """
     try:
-        # First, get all San Diego scrape job IDs
+        # First, get all SoCal scrape job IDs
         jobs_result = supabase.table('scrape_jobs') \
             .select('id') \
-            .like('source_url_pattern', '%sandiegofishreports%') \
+            .like('source_url_pattern', '%socalfishreports%') \
             .execute()
 
         if not jobs_result.data:
-            logger.warning(f"{Fore.YELLOW}⚠️  No San Diego scrape jobs found in database")
+            logger.warning(f"{Fore.YELLOW}⚠️  No SoCal scrape jobs found in database")
             return []
 
         job_ids = [job['id'] for job in jobs_result.data]
 
         # Get trips with joins to boats, landings (direct), and catches
-        # FILTER: Only San Diego trips (scrape_job_id from sandiegofishreports.com)
+        # FILTER: Only SoCal trips (scrape_job_id from socalfishreports.com)
         result = supabase.table('trips') \
             .select('*, boats(name), landings(name), catches(species, count)') \
             .eq('trip_date', date) \
@@ -106,10 +122,23 @@ def get_database_trips(supabase: Client, date: str) -> List[Dict]:
             .execute()
 
         trips = []
+        skipped_san_diego = 0
+
         for row in result.data:
             # Extract nested data
-            boat_name = row['boats']['name']
-            landing_name = row['landings']['name']  # Now from trips.landing_id, not boats.landing_id
+            boat_info = row.get('boats') or {}
+            landing_info = row.get('landings') or {}
+
+            boat_name = boat_info.get('name', 'UNKNOWN BOAT')
+            landing_name = landing_info.get('name')
+
+            if is_san_diego_landing(landing_name):
+                skipped_san_diego += 1
+                logger.warning(
+                    f"{Fore.YELLOW}⚠️  Skipping San Diego landing trip from DB: "
+                    f"{boat_name} @ {landing_name or 'UNKNOWN LANDING'}"
+                )
+                continue
 
             trip = {
                 'boat_name': boat_name,
@@ -120,6 +149,11 @@ def get_database_trips(supabase: Client, date: str) -> List[Dict]:
                 'catches': row['catches'] if row['catches'] else []
             }
             trips.append(trip)
+
+        if skipped_san_diego > 0:
+            logger.info(
+                f"{Fore.CYAN}ℹ️  Removed {skipped_san_diego} San Diego trips from DB results"
+            )
 
         return trips
 

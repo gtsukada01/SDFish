@@ -25,6 +25,7 @@ import time
 import random
 import logging
 import re
+import hashlib
 import pytz
 from datetime import datetime, timedelta
 from typing import List, Dict, Optional
@@ -255,51 +256,76 @@ def validate_scrape_timing(date_str: str, allow_early: bool = False, require_aft
 # SPEC-010 FR-005: Deep Deduplication with trip_hash
 # ============================================================================
 
-def compute_trip_hash(
+SLUG_SANITIZE_RE = re.compile(r'[^a-z0-9]+')
+
+
+def slugify(value: Optional[str]) -> Optional[str]:
+    if not value:
+        return None
+    slug = SLUG_SANITIZE_RE.sub('-', value.lower()).strip('-')
+    return slug or None
+
+
+def derive_landing_slug(raw_slug: Optional[str], landing_name: str) -> Optional[str]:
+    return slugify(raw_slug) or slugify(landing_name)
+
+
+def _normalize_catches(catches: List[Dict]) -> List[Dict]:
+    return sorted(
+        (
+            {
+                'species': c['species'].lower().strip(),
+                'count': c['count']
+            }
+            for c in catches
+        ),
+        key=lambda c: c['species']
+    )
+
+
+def compute_trip_hash_v1(
     boat_id: int,
     trip_duration: str,
     anglers: Optional[int],
     catches: List[Dict]
 ) -> str:
-    """
-    Compute deterministic hash of trip content (excluding date)
-
-    SPEC-010 FR-005: Allows detection of identical trips on different dates
-    Same boat + duration + anglers + catches = same hash
-
-    Args:
-        boat_id: Database ID of boat
-        trip_duration: Trip type (e.g., "1/2 Day", "Overnight")
-        anglers: Number of anglers (None if not reported)
-        catches: List of catch dicts with species and count
-
-    Returns:
-        16-character hex hash (truncated SHA256)
-
-    Example:
-        >>> catches = [{'species': 'Yellowtail', 'count': 15}, {'species': 'Rockfish', 'count': 8}]
-        >>> compute_trip_hash(42, '1/2 Day', 25, catches)
-        'a1b2c3d4e5f67890'
-    """
-    import hashlib
     import json
 
-    # Sort catches for deterministic hashing
-    sorted_catches = sorted(catches, key=lambda c: c['species'])
-
+    normalized_catches = _normalize_catches(catches)
     hash_input = {
         'boat_id': boat_id,
         'trip_duration': trip_duration,
         'anglers': anglers,
-        'catches': sorted_catches
+        'catches': normalized_catches
     }
+    hash_str = json.dumps(hash_input, sort_keys=True)
+    return hashlib.sha256(hash_str.encode()).hexdigest()[:16]
 
+
+def compute_trip_hash_v2(
+    boat_name: str,
+    raw_landing_slug: Optional[str],
+    trip_duration: str,
+    anglers: Optional[int],
+    catches: List[Dict]
+) -> str:
+    import json
+
+    normalized_catches = _normalize_catches(catches)
+    slug = slugify(raw_landing_slug) or 'unknown'
+    hash_input = {
+        'boat_name': boat_name.lower().strip(),
+        'raw_landing_slug': slug,
+        'trip_duration': trip_duration,
+        'anglers': anglers,
+        'catches': normalized_catches
+    }
     hash_str = json.dumps(hash_input, sort_keys=True)
     return hashlib.sha256(hash_str.encode()).hexdigest()[:16]
 
 def check_duplicate_in_window(
     supabase: Client,
-    trip_hash: str,
+    trip_hashes: List[str],
     trip_date: str,
     window_days: int = 7
 ) -> Optional[Dict]:
@@ -328,16 +354,18 @@ def check_duplicate_in_window(
         start_date = (date_obj - timedelta(days=window_days)).isoformat()
         end_date = (date_obj + timedelta(days=window_days)).isoformat()
 
-        # Query for matching hash in date window
-        result = supabase.table('trips').select('*') \
-            .eq('trip_hash', trip_hash) \
-            .gte('trip_date', start_date) \
-            .lte('trip_date', end_date) \
-            .neq('trip_date', trip_date) \
-            .execute()
+        for trip_hash in trip_hashes:
+            if not trip_hash:
+                continue
+            result = supabase.table('trips').select('*') \
+                .eq('trip_hash', trip_hash) \
+                .gte('trip_date', start_date) \
+                .lte('trip_date', end_date) \
+                .neq('trip_date', trip_date) \
+                .execute()
 
-        if result.data:
-            return result.data[0]  # Return first match
+            if result.data:
+                return result.data[0]  # Return first match
         return None
 
     except Exception as e:
@@ -754,6 +782,8 @@ def parse_boats_page(html: str, date: str, supabase: Client) -> List[Dict]:
                     # Normalize trip type (fix spacing issues)
                     normalized_trip_type = normalize_trip_type(trip_type)
 
+                    landing_slug = derive_landing_slug(None, current_landing)
+
                     # FR-006 (SPEC 006): Store dates EXACTLY as shown on boats.php
                     # boats.php?date = RETURN/REPORT DATE (when boat came back)
                     # NO date calculations - source of truth principle
@@ -762,6 +792,7 @@ def parse_boats_page(html: str, date: str, supabase: Client) -> List[Dict]:
                     trip = {
                         'boat_name': boat_name,
                         'landing_name': current_landing,
+                        'raw_landing_slug': landing_slug,
                         'trip_date': date,  # SPEC 006: Store boats.php date AS-IS (return/report date)
                         'trip_duration': normalized_trip_type,  # Store text like "Full Day", "1/2 Day"
                         'trip_type': normalized_trip_type,
@@ -860,7 +891,17 @@ def catches_identical(catches1: List[Dict], catches2: List[Dict]) -> bool:
     c2 = sorted([(c['species'].lower(), c['count']) for c in catches2])
     return c1 == c2
 
-def check_trip_exists(supabase: Client, boat_id: int, trip_date: str, trip_duration: str, anglers: Optional[int] = None, catches: Optional[List[Dict]] = None) -> bool:
+def check_trip_exists(
+    supabase: Client,
+    boat_id: int,
+    trip_date: str,
+    trip_duration: str,
+    anglers: Optional[int] = None,
+    catches: Optional[List[Dict]] = None,
+    raw_landing_slug: Optional[str] = None,
+    trip_hash_v2: Optional[str] = None,
+    trip_hash_v1: Optional[str] = None,
+) -> bool:
     """
     Check if trip exists (SPEC 006 FIX: Composite Key + Catch Comparison)
 
@@ -879,34 +920,64 @@ def check_trip_exists(supabase: Client, boat_id: int, trip_date: str, trip_durat
     Returns:
         True if trip exists with identical catches, False otherwise
     """
-    query = supabase.table('trips').select('id') \
+    def _hash_lookup(hash_value: Optional[str]) -> Optional[bool]:
+        if not hash_value:
+            return None
+        response = supabase.table('trips').select('id') \
+            .eq('trip_hash', hash_value) \
+            .eq('trip_date', trip_date) \
+            .execute()
+        if not response.data:
+            return None
+        if catches is None:
+            return True
+        trip_id = response.data[0]['id']
+        existing_catches = supabase.table('catches').select('species, count').eq('trip_id', trip_id).execute().data
+        return True if catches_identical(existing_catches, catches) else False
+
+    hash_result = _hash_lookup(trip_hash_v2)
+    if hash_result is not None:
+        return hash_result
+
+    hash_result = _hash_lookup(trip_hash_v1)
+    if hash_result is not None:
+        return hash_result
+
+    query = supabase.table('trips').select('id, raw_landing_slug') \
         .eq('boat_id', boat_id) \
         .eq('trip_date', trip_date) \
         .eq('trip_duration', trip_duration)
 
-    # SPEC 006: Include anglers in composite key to handle multiple trips per boat/date/type
     if anglers is not None:
         query = query.eq('anglers', anglers)
+    if raw_landing_slug:
+        query = query.eq('raw_landing_slug', raw_landing_slug)
 
     result = query.execute()
 
+    if not result.data and raw_landing_slug:
+        legacy_query = supabase.table('trips').select('id, raw_landing_slug') \
+            .eq('boat_id', boat_id) \
+            .eq('trip_date', trip_date) \
+            .eq('trip_duration', trip_duration) \
+            .is_('raw_landing_slug', None)
+        if anglers is not None:
+            legacy_query = legacy_query.eq('anglers', anglers)
+        result = legacy_query.execute()
+
     if not result.data:
-        return False  # No existing trip with this composite key
+        return False
 
-    # SPEC 006 FIX: If catches provided, check if any existing trip has IDENTICAL catches
-    # This differentiates trips with same metadata but different catches
-    if catches is not None:
-        for existing_trip in result.data:
-            trip_id = existing_trip['id']
-            existing_catches = supabase.table('catches').select('species, count').eq('trip_id', trip_id).execute().data
+    if catches is None:
+        return True
 
-            if catches_identical(existing_catches, catches):
-                return True  # True duplicate (same metadata AND catches)
+    for existing_trip in result.data:
+        trip_id = existing_trip['id']
+        existing_catches = supabase.table('catches').select('species, count').eq('trip_id', trip_id).execute().data
+        if catches_identical(existing_catches, catches):
+            return True
 
-        return False  # Same metadata but different catches = different trip
-
-    # Old behavior: If no catches provided for comparison, treat as duplicate
-    return bool(result.data)
+    return False
 
 def create_scrape_job(
     supabase: Client,
@@ -1062,23 +1133,42 @@ def insert_trip(supabase: Client, trip: Dict, scrape_job_id: Optional[int] = Non
         # Get/create boat
         boat_id = get_or_create_boat(supabase, trip['boat_name'], landing_id)
 
-        # Check duplicate (SPEC 006 FIX: Compare catches for trips with identical metadata)
-        if check_trip_exists(supabase, boat_id, trip['trip_date'], trip['trip_duration'], trip.get('anglers'), trip.get('catches')):
-            logger.info(f"{Fore.YELLOW}⚠️  Duplicate: {trip['boat_name']} on {trip['trip_date']} ({trip['trip_duration']}, {trip.get('anglers')} anglers)")
-            return False
+        catches_payload = trip.get('catches', [])
+        landing_slug = trip.get('raw_landing_slug') or derive_landing_slug(None, trip['landing_name'])
 
-        # SPEC-010 FR-005: Compute trip hash and check for phantom duplicates
-        trip_hash = compute_trip_hash(
+        trip_hash_v2 = compute_trip_hash_v2(
+            trip['boat_name'],
+            landing_slug,
+            trip['trip_duration'],
+            trip.get('anglers'),
+            catches_payload
+        )
+        trip_hash_v1 = compute_trip_hash_v1(
             boat_id,
             trip['trip_duration'],
             trip.get('anglers'),
-            trip.get('catches', [])
+            catches_payload
         )
+
+        # Check duplicate (SPEC 006 FIX: Compare catches for trips with identical metadata)
+        if check_trip_exists(
+            supabase,
+            boat_id,
+            trip['trip_date'],
+            trip['trip_duration'],
+            trip.get('anglers'),
+            catches_payload,
+            raw_landing_slug=landing_slug,
+            trip_hash_v2=trip_hash_v2,
+            trip_hash_v1=trip_hash_v1
+        ):
+            logger.info(f"{Fore.YELLOW}⚠️  Duplicate: {trip['boat_name']} on {trip['trip_date']} ({trip['trip_duration']}, {trip.get('anglers')} anglers)")
+            return False
 
         # Check for phantom duplicates (same trip on different dates)
         duplicate_trip = check_duplicate_in_window(
             supabase,
-            trip_hash,
+            [trip_hash_v2, trip_hash_v1],
             trip['trip_date'],
             window_days=7
         )
@@ -1088,7 +1178,7 @@ def insert_trip(supabase: Client, trip: Dict, scrape_job_id: Optional[int] = Non
             logger.warning(f"{Fore.YELLOW}   Current trip: {trip['boat_name']} on {trip['trip_date']}")
             logger.warning(f"{Fore.YELLOW}   Matches trip on: {duplicate_trip['trip_date']}")
             logger.warning(f"{Fore.YELLOW}   Trip type: {trip['trip_duration']}, Anglers: {trip.get('anglers')}")
-            logger.warning(f"{Fore.YELLOW}   Hash: {trip_hash}")
+            logger.warning(f"{Fore.YELLOW}   Hash: {trip_hash_v2}")
             logger.warning(f"{Fore.YELLOW}   → This may be fallback data from website")
 
             # OPTION: Raise error to abort (strict mode)
@@ -1108,7 +1198,10 @@ def insert_trip(supabase: Client, trip: Dict, scrape_job_id: Optional[int] = Non
             'landing_id': landing_id,  # Historical accuracy: landing at time of trip
             'trip_date': trip['trip_date'],
             'trip_duration': trip['trip_duration'],
-            'anglers': trip['anglers']
+            'anglers': trip['anglers'],
+            'raw_landing_slug': landing_slug,
+            'trip_hash': trip_hash_v2,
+            'trip_hash_version': 2
         }
 
         # SPEC-010 FR-003: Link trip to scrape_job for audit trail
