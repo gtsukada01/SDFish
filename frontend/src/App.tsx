@@ -424,9 +424,9 @@ function App() {
       : 'text-muted-foreground'
 
     return (
-      <div className="flex items-center justify-center gap-1.5 text-sm font-medium">
+      <div className="flex items-center justify-center gap-1 md:gap-1.5 text-xs md:text-sm font-medium whitespace-nowrap">
         <span>{trend.displayText}</span>
-        <Icon className={`h-4 w-4 ${iconColor}`} />
+        <Icon className={`h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}`} />
       </div>
     )
   }
