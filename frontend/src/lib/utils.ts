@@ -70,13 +70,15 @@ export function calculateYOY(current: number, previous: number): number | null {
  * Format YOY change for display
  * @param current - Current year value
  * @param previous - Previous year value
+ * @param compact - Use compact format (K/M abbreviations) for mobile
  * @returns Object with formatted display values
  */
-export function formatYOYChange(current: number, previous: number): {
+export function formatYOYChange(current: number, previous: number, compact = false): {
   absolute: number
   percentage: number | null
   direction: 'up' | 'down' | 'neutral'
   displayText: string
+  displayTextCompact: string
 } {
   const absolute = current - previous
   const percentage = calculateYOY(current, previous)
@@ -85,12 +87,24 @@ export function formatYOYChange(current: number, previous: number): {
 
   const sign = absolute > 0 ? '+' : ''
   const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : ''
+
+  // Full format for desktop
   const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`
+
+  // Compact format for mobile (abbreviate large numbers)
+  const formatCompact = (num: number): string => {
+    const absNum = Math.abs(num)
+    if (absNum >= 1000000) return (num / 1000000).toFixed(1) + 'M'
+    if (absNum >= 1000) return (num / 1000).toFixed(1) + 'K'
+    return num.toString()
+  }
+  const displayTextCompact = `${sign}${formatCompact(absolute)}${percentageText} YOY`
 
   return {
     absolute,
     percentage,
     direction,
-    displayText
+    displayText,
+    displayTextCompact
   }
 }

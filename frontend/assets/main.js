@@ -35944,18 +35944,26 @@ function calculateYOY(current, previous) {
   if (previous === 0 || !previous) return null;
   return Math.round((current - previous) / previous * 100);
 }
-function formatYOYChange(current, previous) {
+function formatYOYChange(current, previous, compact = false) {
   const absolute = current - previous;
   const percentage = calculateYOY(current, previous);
   const direction = absolute > 0 ? "up" : absolute < 0 ? "down" : "neutral";
   const sign = absolute > 0 ? "+" : "";
   const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : "";
   const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`;
+  const formatCompact = (num) => {
+    const absNum = Math.abs(num);
+    if (absNum >= 1e6) return (num / 1e6).toFixed(1) + "M";
+    if (absNum >= 1e3) return (num / 1e3).toFixed(1) + "K";
+    return num.toString();
+  };
+  const displayTextCompact = `${sign}${formatCompact(absolute)}${percentageText} YOY`;
   return {
     absolute,
     percentage,
     direction,
-    displayText
+    displayText,
+    displayTextCompact
   };
 }
 
@@ -52888,8 +52896,9 @@ function App() {
   const TrendBadge = ({ trend }) => {
     const Icon3 = trend.direction === "up" ? TrendingUp : trend.direction === "down" ? TrendingDown : Minus;
     const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-xs md:text-sm font-medium whitespace-nowrap", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { children: trend.displayText }),
+    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-xs md:text-sm font-medium", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "md:hidden", children: trend.displayTextCompact }),
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "hidden md:inline", children: trend.displayText }),
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}` })
     ] });
   };
