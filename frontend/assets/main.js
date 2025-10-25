@@ -35951,13 +35951,7 @@ function formatYOYChange(current, previous, compact = false) {
   const sign = absolute > 0 ? "+" : "";
   const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : "";
   const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`;
-  const formatCompact = (num) => {
-    const absNum = Math.abs(num);
-    if (absNum >= 1e6) return (num / 1e6).toFixed(1) + "M";
-    if (absNum >= 1e3) return (num / 1e3).toFixed(1) + "K";
-    return num.toString();
-  };
-  const displayTextCompact = `${sign}${formatCompact(absolute)}${percentageText} YOY`;
+  const displayTextCompact = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`;
   return {
     absolute,
     percentage,

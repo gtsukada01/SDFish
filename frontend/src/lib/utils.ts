@@ -91,14 +91,8 @@ export function formatYOYChange(current: number, previous: number, compact = fal
   // Full format for desktop
   const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`
 
-  // Compact format for mobile (abbreviate large numbers)
-  const formatCompact = (num: number): string => {
-    const absNum = Math.abs(num)
-    if (absNum >= 1000000) return (num / 1000000).toFixed(1) + 'M'
-    if (absNum >= 1000) return (num / 1000).toFixed(1) + 'K'
-    return num.toString()
-  }
-  const displayTextCompact = `${sign}${formatCompact(absolute)}${percentageText} YOY`
+  // Compact format for mobile (percentage only for brevity)
+  const displayTextCompact = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`
 
   return {
     absolute,
