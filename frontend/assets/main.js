@@ -25932,8 +25932,12 @@ var __iconNode13 = [
 ];
 var Menu = createLucideIcon("menu", __iconNode13);
 
+// node_modules/lucide-react/dist/esm/icons/minus.js
+var __iconNode14 = [["path", { d: "M5 12h14", key: "1ays0h" }]];
+var Minus = createLucideIcon("minus", __iconNode14);
+
 // node_modules/lucide-react/dist/esm/icons/moon.js
-var __iconNode14 = [
+var __iconNode15 = [
   [
     "path",
     {
@@ -25942,17 +25946,17 @@ var __iconNode14 = [
     }
   ]
 ];
-var Moon = createLucideIcon("moon", __iconNode14);
+var Moon = createLucideIcon("moon", __iconNode15);
 
 // node_modules/lucide-react/dist/esm/icons/panel-left.js
-var __iconNode15 = [
+var __iconNode16 = [
   ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }],
   ["path", { d: "M9 3v18", key: "fh3hqa" }]
 ];
-var PanelLeft = createLucideIcon("panel-left", __iconNode15);
+var PanelLeft = createLucideIcon("panel-left", __iconNode16);
 
 // node_modules/lucide-react/dist/esm/icons/pin.js
-var __iconNode16 = [
+var __iconNode17 = [
   ["path", { d: "M12 17v5", key: "bb1du9" }],
   [
     "path",
@@ -25962,17 +25966,17 @@ var __iconNode16 = [
     }
   ]
 ];
-var Pin = createLucideIcon("pin", __iconNode16);
+var Pin = createLucideIcon("pin", __iconNode17);
 
 // node_modules/lucide-react/dist/esm/icons/search.js
-var __iconNode17 = [
+var __iconNode18 = [
   ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
   ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-var Search = createLucideIcon("search", __iconNode17);
+var Search = createLucideIcon("search", __iconNode18);
 
 // node_modules/lucide-react/dist/esm/icons/ship.js
-var __iconNode18 = [
+var __iconNode19 = [
   ["path", { d: "M12 10.189V14", key: "1p8cqu" }],
   ["path", { d: "M12 2v3", key: "qbqxhf" }],
   ["path", { d: "M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6", key: "qpkstq" }],
@@ -25991,10 +25995,24 @@ var __iconNode18 = [
     }
   ]
 ];
-var Ship = createLucideIcon("ship", __iconNode18);
+var Ship = createLucideIcon("ship", __iconNode19);
+
+// node_modules/lucide-react/dist/esm/icons/trending-down.js
+var __iconNode20 = [
+  ["path", { d: "M16 17h6v-6", key: "t6n2it" }],
+  ["path", { d: "m22 17-8.5-8.5-5 5L2 7", key: "x473p" }]
+];
+var TrendingDown = createLucideIcon("trending-down", __iconNode20);
+
+// node_modules/lucide-react/dist/esm/icons/trending-up.js
+var __iconNode21 = [
+  ["path", { d: "M16 7h6v6", key: "box55l" }],
+  ["path", { d: "m22 7-8.5 8.5-5-5L2 17", key: "1t1m79" }]
+];
+var TrendingUp = createLucideIcon("trending-up", __iconNode21);
 
 // node_modules/lucide-react/dist/esm/icons/trophy.js
-var __iconNode19 = [
+var __iconNode22 = [
   ["path", { d: "M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978", key: "1n3hpd" }],
   ["path", { d: "M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978", key: "rfe1zi" }],
   ["path", { d: "M18 9h1.5a1 1 0 0 0 0-5H18", key: "7xy6bh" }],
@@ -26002,23 +26020,23 @@ var __iconNode19 = [
   ["path", { d: "M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z", key: "1mhfuq" }],
   ["path", { d: "M6 9H4.5a1 1 0 0 1 0-5H6", key: "tex48p" }]
 ];
-var Trophy = createLucideIcon("trophy", __iconNode19);
+var Trophy = createLucideIcon("trophy", __iconNode22);
 
 // node_modules/lucide-react/dist/esm/icons/users.js
-var __iconNode20 = [
+var __iconNode23 = [
   ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
   ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
   ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
   ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
 ];
-var Users = createLucideIcon("users", __iconNode20);
+var Users = createLucideIcon("users", __iconNode23);
 
 // node_modules/lucide-react/dist/esm/icons/x.js
-var __iconNode21 = [
+var __iconNode24 = [
   ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
   ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
 ];
-var X = createLucideIcon("x", __iconNode21);
+var X = createLucideIcon("x", __iconNode24);
 
 // node_modules/@supabase/functions-js/dist/module/helper.js
 var resolveFetch = (customFetch) => {
@@ -35922,10 +35940,29 @@ function groupSpeciesByNormalizedName(allSpecies) {
   };
   return result;
 }
+function calculateYOY(current, previous) {
+  if (previous === 0 || !previous) return null;
+  return Math.round((current - previous) / previous * 100);
+}
+function formatYOYChange(current, previous) {
+  const absolute = current - previous;
+  const percentage = calculateYOY(current, previous);
+  const direction = absolute > 0 ? "up" : absolute < 0 ? "down" : "neutral";
+  const sign = absolute > 0 ? "+" : "";
+  const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : "";
+  const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`;
+  return {
+    absolute,
+    percentage,
+    direction,
+    displayText
+  };
+}
 
 // src/lib/fetchRealData.ts
 async function fetchRealCatchData(params) {
   const { startDate, endDate, landing, boat, species, tripDuration, moonPhase } = params;
+  const normalizedSpeciesTargets = (species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   let query = supabase.from("trips").select(`
       id,
       trip_date,
@@ -35961,9 +35998,10 @@ async function fetchRealCatchData(params) {
     const catches = trip.catches || [];
     let activeCatches = catches;
     if (species && species.length > 0) {
-      const matchingCatches = catches.filter(
-        (c) => species.includes(c.species)
-      );
+      const matchingCatches = catches.filter((c) => {
+        const normalizedCatch = normalizeSpeciesName(c.species).toLowerCase();
+        return normalizedSpeciesTargets.includes(normalizedCatch);
+      });
       if (matchingCatches.length === 0) {
         return null;
       }
@@ -36110,9 +36148,10 @@ async function fetchFilterOptions(filterByLanding) {
 }
 async function fetchRealSummaryMetrics(params) {
   const records = await fetchRealCatchData(params);
+  const summarySpeciesTargets = (params.species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   const getFilteredSpeciesBreakdown = (breakdown) => {
-    if (params.species && params.species.length > 0) {
-      return breakdown.filter((s) => params.species.includes(s.species));
+    if (summarySpeciesTargets.length > 0) {
+      return breakdown.filter((s) => summarySpeciesTargets.includes(normalizeSpeciesName(s.species).toLowerCase()));
     }
     return breakdown;
   };
@@ -36155,16 +36194,21 @@ async function fetchRealSummaryMetrics(params) {
   records.forEach((r2) => {
     const filteredBreakdown = getFilteredSpeciesBreakdown(r2.species_breakdown);
     filteredBreakdown.forEach((s) => {
-      if (!speciesMap.has(s.species)) {
-        speciesMap.set(s.species, { fish: 0, boats: /* @__PURE__ */ new Set() });
+      const normalized = normalizeSpeciesName(s.species).toLowerCase();
+      const key = summarySpeciesTargets.length > 0 ? normalized : s.species;
+      if (!speciesMap.has(key)) {
+        speciesMap.set(key, { fish: 0, boats: /* @__PURE__ */ new Set(), label: s.species });
       }
-      const species = speciesMap.get(s.species);
-      species.fish += s.count;
-      species.boats.add(r2.boat);
+      const speciesEntry = speciesMap.get(key);
+      speciesEntry.fish += s.count;
+      speciesEntry.boats.add(r2.boat);
+      if (summarySpeciesTargets.length === 0) {
+        speciesEntry.label = s.species;
+      }
     });
   });
-  const perSpecies = Array.from(speciesMap.entries()).map(([species, data]) => ({
-    species,
+  const perSpecies = Array.from(speciesMap.entries()).map(([, data]) => ({
+    species: data.label,
     total_fish: data.fish,
     boats: data.boats.size
   })).sort((a, b) => b.total_fish - a.total_fish);
@@ -52571,6 +52615,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = (0, import_react43.useState)(false);
   const [activeTab, setActiveTab] = (0, import_react43.useState)("boats");
   const [isFiltersCollapsed, setIsFiltersCollapsed] = (0, import_react43.useState)(false);
+  const [timeframeMetrics, setTimeframeMetrics] = (0, import_react43.useState)(null);
   const breakdownRef = (0, import_react43.useRef)(null);
   const scrollContainerRef = (0, import_react43.useRef)(null);
   const getLocalDateString = (date) => {
@@ -52585,6 +52630,49 @@ function App() {
     end_date: getLocalDateString(/* @__PURE__ */ new Date())
   });
   const [selectedLandings, setSelectedLandings] = (0, import_react43.useState)([]);
+  const summarizeRecords = (records) => {
+    const totalTrips = records.length;
+    const totalFish = records.reduce((sum2, trip) => sum2 + (trip.total_fish || 0), 0);
+    const uniqueBoats = new Set(records.map((trip) => trip.boat)).size;
+    const totalAnglers2 = records.reduce((sum2, trip) => sum2 + (trip.angler_count || 0), 0);
+    const avgPerAngler = totalAnglers2 > 0 ? Math.round(totalFish / totalAnglers2) : 0;
+    const uniqueSpeciesSet = /* @__PURE__ */ new Set();
+    records.forEach((trip) => {
+      trip.species_breakdown?.forEach((speciesEntry) => {
+        const normalized = normalizeSpeciesName(speciesEntry.species);
+        uniqueSpeciesSet.add(normalized);
+      });
+    });
+    const uniqueSpecies = uniqueSpeciesSet.size;
+    return { totalTrips, totalFish, uniqueBoats, uniqueSpecies, avgPerAngler };
+  };
+  const computePreviousRange = (start, end) => {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) {
+      return null;
+    }
+    const toISO = (date) => date.toISOString().split("T")[0];
+    const shiftOneYear = (source) => {
+      const year = source.getFullYear() - 1;
+      const month = source.getMonth();
+      const candidate = new Date(source);
+      candidate.setFullYear(year);
+      if (candidate.getMonth() !== month) {
+        return new Date(year, month + 1, 0);
+      }
+      return candidate;
+    };
+    const prevStart = shiftOneYear(startDate);
+    const prevEnd = shiftOneYear(endDate);
+    if (Number.isNaN(prevStart.getTime()) || Number.isNaN(prevEnd.getTime())) {
+      return null;
+    }
+    return {
+      start: toISO(prevStart),
+      end: toISO(prevEnd)
+    };
+  };
   (0, import_react43.useEffect)(() => {
     loadData();
   }, [filters, selectedLandings]);
@@ -52616,9 +52704,11 @@ function App() {
     scrollContainer.addEventListener("scroll", handleScroll2, { passive: true });
     return () => scrollContainer.removeEventListener("scroll", handleScroll2);
   }, [isLoading, isFiltersCollapsed]);
+  const isSpeciesFiltered = !!filters.species && filters.species.length > 0;
   async function loadData() {
     setIsLoading(true);
     setError(null);
+    setTimeframeMetrics(null);
     const useRealData = window.USE_REAL_DATA === true;
     try {
       if (useRealData) {
@@ -52632,13 +52722,29 @@ function App() {
           tripDuration: filters.trip_duration || void 0,
           moonPhase: filters.moon_phase || void 0
         };
-        const [data, metricsData] = await Promise.all([
+        const previousRange = computePreviousRange(params.startDate, params.endDate);
+        const previousParams = previousRange ? {
+          ...params,
+          startDate: previousRange.start,
+          endDate: previousRange.end
+        } : null;
+        const [data, metricsData, previousData] = await Promise.all([
           fetchRealCatchData(params),
-          fetchRealSummaryMetrics(params)
+          fetchRealSummaryMetrics(params),
+          previousParams ? fetchRealCatchData(previousParams) : Promise.resolve([])
         ]);
         setCatchData(data);
         setMetrics(metricsData);
         setDataSource("real");
+        const currentSummary = summarizeRecords(data);
+        const previousSummary = summarizeRecords(previousData);
+        setTimeframeMetrics({
+          catch: formatYOYChange(currentSummary.totalFish, previousSummary.totalFish),
+          trips: formatYOYChange(currentSummary.totalTrips, previousSummary.totalTrips),
+          fleet: formatYOYChange(currentSummary.uniqueBoats, previousSummary.uniqueBoats),
+          species: formatYOYChange(currentSummary.uniqueSpecies, previousSummary.uniqueSpecies),
+          avgPerAngler: formatYOYChange(currentSummary.avgPerAngler, previousSummary.avgPerAngler)
+        });
       } else {
         setCatchData(mockCatchTableResponse.data);
         setMetrics(mockSummaryMetricsResponse);
@@ -52702,7 +52808,6 @@ function App() {
   const handleClearAllFilters = () => {
     const defaultFilters = {
       start_date: getLocalDateString(new Date((/* @__PURE__ */ new Date()).getFullYear(), 0, 1)),
-      // YTD: January 1st of current year
       end_date: getLocalDateString(/* @__PURE__ */ new Date())
     };
     setFilters(defaultFilters);
@@ -52770,7 +52875,6 @@ function App() {
     }, 100);
   };
   const isBoatFiltered = !!filters.boat || selectedLandings.length > 0;
-  const isSpeciesFiltered = !!filters.species && filters.species.length > 0;
   const totalAnglers = catchData.reduce(
     (sum2, trip) => sum2 + (trip.angler_count || 0),
     0
@@ -52781,6 +52885,14 @@ function App() {
   const bestMoonPhase = filteredPhases.length > 0 ? filteredPhases.reduce(
     (best, current) => current.avg_fish_per_trip > best.avg_fish_per_trip ? current : best
   ) : null;
+  const TrendBadge = ({ trend }) => {
+    const Icon3 = trend.direction === "up" ? TrendingUp : trend.direction === "down" ? TrendingDown : Minus;
+    const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
+    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1.5 text-sm font-medium", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { children: trend.displayText }),
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-4 w-4 ${iconColor}` })
+    ] });
+  };
   return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col h-screen overflow-hidden", children: [
     /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
       Header,
@@ -52830,12 +52942,15 @@ function App() {
               {
                 className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("species"),
-                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Trophy, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Catch" })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_fish.toLocaleString() })
+                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_fish.toLocaleString() }),
+                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.catch })
+                  ] })
                 ] })
               }
             ),
@@ -52844,12 +52959,15 @@ function App() {
               {
                 className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("boats"),
-                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Anchor, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Trips" })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_trips.toLocaleString() })
+                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_trips.toLocaleString() }),
+                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.trips })
+                  ] })
                 ] })
               }
             ),
@@ -52860,12 +52978,15 @@ function App() {
                 {
                   className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Users, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Avg / Angler" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: avgFishPerAngler })
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: avgFishPerAngler }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.avgPerAngler })
+                    ] })
                   ] })
                 }
               )
@@ -52876,12 +52997,15 @@ function App() {
                 {
                   className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("boats"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Ship, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Fleet" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_boats })
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_boats }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.fleet })
+                    ] })
                   ] })
                 }
               )
@@ -52893,12 +53017,12 @@ function App() {
                 {
                   className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("moon"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Moon, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Moon Phase" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2", children: bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, " ") : "N/A" })
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2 mt-6", children: bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, " ") : "N/A" })
                   ] })
                 }
               )
@@ -52909,12 +53033,15 @@ function App() {
                 {
                   className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex items-center justify-center min-h-[140px]", children: [
+                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Fish, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
                       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Species" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_species })
+                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_species }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.species })
+                    ] })
                   ] })
                 }
               )
@@ -53170,6 +53297,14 @@ lucide-react/dist/esm/icons/menu.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide-react/dist/esm/icons/minus.js:
+  (**
+   * @license lucide-react v0.544.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide-react/dist/esm/icons/moon.js:
   (**
    * @license lucide-react v0.544.0 - ISC
@@ -53203,6 +53338,22 @@ lucide-react/dist/esm/icons/search.js:
    *)
 
 lucide-react/dist/esm/icons/ship.js:
+  (**
+   * @license lucide-react v0.544.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/icons/trending-down.js:
+  (**
+   * @license lucide-react v0.544.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/icons/trending-up.js:
   (**
    * @license lucide-react v0.544.0 - ISC
    *

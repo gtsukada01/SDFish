@@ -54,3 +54,43 @@ export function groupSpeciesByNormalizedName(allSpecies: string[]): {
 
   return result
 }
+
+/**
+ * Calculate Year-over-Year percentage change
+ * @param current - Current year value (e.g., 2025)
+ * @param previous - Previous year value (e.g., 2024)
+ * @returns Percentage change (e.g., 23 for +23%)
+ */
+export function calculateYOY(current: number, previous: number): number | null {
+  if (previous === 0 || !previous) return null
+  return Math.round(((current - previous) / previous) * 100)
+}
+
+/**
+ * Format YOY change for display
+ * @param current - Current year value
+ * @param previous - Previous year value
+ * @returns Object with formatted display values
+ */
+export function formatYOYChange(current: number, previous: number): {
+  absolute: number
+  percentage: number | null
+  direction: 'up' | 'down' | 'neutral'
+  displayText: string
+} {
+  const absolute = current - previous
+  const percentage = calculateYOY(current, previous)
+
+  const direction = absolute > 0 ? 'up' : absolute < 0 ? 'down' : 'neutral'
+
+  const sign = absolute > 0 ? '+' : ''
+  const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : ''
+  const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`
+
+  return {
+    absolute,
+    percentage,
+    direction,
+    displayText
+  }
+}

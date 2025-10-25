@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
-import { Fish, Ship, Anchor, Layers, Moon, Users, Trophy } from 'lucide-react'
+import { Fish, Ship, Anchor, Layers, Moon, Users, Trophy, TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import { FishingHook } from './components/icons/FishingHook'
 import { CatchRecord, SummaryMetricsResponse, Filters } from '../../scripts/api/types'
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
@@ -15,7 +15,16 @@ import { ActiveFilters } from './components/ActiveFilters'
 import { MetricsBreakdown } from './components/MetricsBreakdown'
 import { MoonPhaseBreakdown } from './components/MoonPhaseBreakdown'
 import { CatchTable } from './components/CatchTable'
-import { normalizeSpeciesName } from './lib/utils'
+import { normalizeSpeciesName, formatYOYChange } from './lib/utils'
+
+type TrendMetric = ReturnType<typeof formatYOYChange>
+type TrendSummary = {
+  catch: TrendMetric
+  trips: TrendMetric
+  fleet: TrendMetric
+  species: TrendMetric
+  avgPerAngler: TrendMetric
+}
 
 function App() {
   const [catchData, setCatchData] = useState<CatchRecord[]>([])
@@ -26,6 +35,7 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<string>('boats')
   const [isFiltersCollapsed, setIsFiltersCollapsed] = useState(false)
+  const [timeframeMetrics, setTimeframeMetrics] = useState<TrendSummary | null>(null)
   const breakdownRef = useRef<HTMLDivElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
@@ -42,6 +52,60 @@ function App() {
     end_date: getLocalDateString(new Date()),
   })
   const [selectedLandings, setSelectedLandings] = useState<string[]>([])
+
+  const summarizeRecords = (records: CatchRecord[]) => {
+    const totalTrips = records.length
+    const totalFish = records.reduce((sum, trip) => sum + (trip.total_fish || 0), 0)
+    const uniqueBoats = new Set(records.map(trip => trip.boat)).size
+    const totalAnglers = records.reduce((sum, trip) => sum + (trip.angler_count || 0), 0)
+    const avgPerAngler = totalAnglers > 0 ? Math.round(totalFish / totalAnglers) : 0
+    const uniqueSpeciesSet = new Set<string>()
+    records.forEach(trip => {
+      trip.species_breakdown?.forEach(speciesEntry => {
+        const normalized = normalizeSpeciesName(speciesEntry.species)
+        uniqueSpeciesSet.add(normalized)
+      })
+    })
+    const uniqueSpecies = uniqueSpeciesSet.size
+
+    return { totalTrips, totalFish, uniqueBoats, uniqueSpecies, avgPerAngler }
+  }
+
+  const computePreviousRange = (start: string, end: string) => {
+    const startDate = new Date(start)
+    const endDate = new Date(end)
+    if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) {
+      return null
+    }
+
+    const toISO = (date: Date) => date.toISOString().split('T')[0]
+
+    const shiftOneYear = (source: Date) => {
+      const year = source.getFullYear() - 1
+      const month = source.getMonth()
+      const candidate = new Date(source)
+      candidate.setFullYear(year)
+
+      if (candidate.getMonth() !== month) {
+        // Clamp to last day of the original month (handles leap years)
+        return new Date(year, month + 1, 0)
+      }
+
+      return candidate
+    }
+
+    const prevStart = shiftOneYear(startDate)
+    const prevEnd = shiftOneYear(endDate)
+
+    if (Number.isNaN(prevStart.getTime()) || Number.isNaN(prevEnd.getTime())) {
+      return null
+    }
+
+    return {
+      start: toISO(prevStart),
+      end: toISO(prevEnd)
+    }
+  }
 
   // Load data when filters change (no debounce - filters only change when dropdowns close)
   useEffect(() => {
@@ -86,9 +150,12 @@ function App() {
     return () => scrollContainer.removeEventListener('scroll', handleScroll)
   }, [isLoading, isFiltersCollapsed]) // Re-sync when filters are manually toggled
 
+  const isSpeciesFiltered = !!filters.species && filters.species.length > 0
+
   async function loadData() {
       setIsLoading(true)
       setError(null)
+      setTimeframeMetrics(null)
 
       // Check if real data mode is enabled (set in index.html)
       const useRealData = (window as any).USE_REAL_DATA === true
@@ -109,14 +176,34 @@ function App() {
             moonPhase: filters.moon_phase || undefined
           }
 
-          const [data, metricsData] = await Promise.all([
+          const previousRange = computePreviousRange(params.startDate, params.endDate)
+          const previousParams = previousRange
+            ? {
+                ...params,
+                startDate: previousRange.start,
+                endDate: previousRange.end
+              }
+            : null
+
+          const [data, metricsData, previousData] = await Promise.all([
             fetchRealCatchData(params),
-            fetchRealSummaryMetrics(params)
+            fetchRealSummaryMetrics(params),
+            previousParams ? fetchRealCatchData(previousParams) : Promise.resolve<CatchRecord[]>([])
           ])
 
           setCatchData(data)
           setMetrics(metricsData)
           setDataSource('real')
+
+          const currentSummary = summarizeRecords(data)
+          const previousSummary = summarizeRecords(previousData)
+          setTimeframeMetrics({
+            catch: formatYOYChange(currentSummary.totalFish, previousSummary.totalFish),
+            trips: formatYOYChange(currentSummary.totalTrips, previousSummary.totalTrips),
+            fleet: formatYOYChange(currentSummary.uniqueBoats, previousSummary.uniqueBoats),
+            species: formatYOYChange(currentSummary.uniqueSpecies, previousSummary.uniqueSpecies),
+            avgPerAngler: formatYOYChange(currentSummary.avgPerAngler, previousSummary.avgPerAngler)
+          })
         } else {
           // Use mock data (current behavior)
           setCatchData(mockCatchTableResponse.data)
@@ -207,7 +294,7 @@ function App() {
 
   const handleClearAllFilters = () => {
     const defaultFilters: Filters = {
-      start_date: getLocalDateString(new Date(new Date().getFullYear(), 0, 1)), // YTD: January 1st of current year
+      start_date: getLocalDateString(new Date(new Date().getFullYear(), 0, 1)),
       end_date: getLocalDateString(new Date()),
     }
     setFilters(defaultFilters)
@@ -310,7 +397,6 @@ function App() {
 
   // Calculate conditional metrics for boat-specific view
   const isBoatFiltered = !!filters.boat || selectedLandings.length > 0
-  const isSpeciesFiltered = !!filters.species && filters.species.length > 0
 
   const totalAnglers = catchData.reduce((sum, trip) =>
     sum + (trip.angler_count || 0), 0
@@ -327,6 +413,23 @@ function App() {
         current.avg_fish_per_trip > best.avg_fish_per_trip ? current : best
       )
     : null
+
+  // Trend Badge Component (timeframe-over-timeframe deltas)
+  const TrendBadge = ({ trend }: { trend: TrendMetric }) => {
+    const Icon = trend.direction === 'up' ? TrendingUp : trend.direction === 'down' ? TrendingDown : Minus
+    const iconColor = trend.direction === 'up'
+      ? 'text-emerald-600 dark:text-emerald-400'
+      : trend.direction === 'down'
+      ? 'text-red-600 dark:text-red-400'
+      : 'text-muted-foreground'
+
+    return (
+      <div className="flex items-center justify-center gap-1.5 text-sm font-medium">
+        <span>{trend.displayText}</span>
+        <Icon className={`h-4 w-4 ${iconColor}`} />
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
@@ -375,13 +478,16 @@ function App() {
                     className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                     onClick={() => handleMetricCardClick('species')}
                   >
-                    <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                    <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                       <div className="absolute top-3 left-6 flex items-center gap-2">
                         <Trophy className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                         <span className="text-base font-medium text-muted-foreground">Catch</span>
                       </div>
-                      <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                        {metrics.fleet.total_fish.toLocaleString()}
+                      <div className="flex flex-col items-center justify-center gap-1 mt-6">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
+                          {metrics.fleet.total_fish.toLocaleString()}
+                        </div>
+                        {timeframeMetrics && <TrendBadge trend={timeframeMetrics.catch} />}
                       </div>
                     </CardContent>
                   </Card>
@@ -391,13 +497,16 @@ function App() {
                     className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                     onClick={() => handleMetricCardClick('boats')}
                   >
-                    <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                    <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                       <div className="absolute top-3 left-6 flex items-center gap-2">
                         <Anchor className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                         <span className="text-base font-medium text-muted-foreground">Trips</span>
                       </div>
-                      <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                        {metrics.fleet.total_trips.toLocaleString()}
+                      <div className="flex flex-col items-center justify-center gap-1 mt-6">
+                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
+                          {metrics.fleet.total_trips.toLocaleString()}
+                        </div>
+                        {timeframeMetrics && <TrendBadge trend={timeframeMetrics.trips} />}
                       </div>
                     </CardContent>
                   </Card>
@@ -409,13 +518,16 @@ function App() {
                       className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('species')}
                     >
-                      <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                      <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Users className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-base font-medium text-muted-foreground">Avg / Angler</span>
                         </div>
-                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                          {avgFishPerAngler}
+                        <div className="flex flex-col items-center justify-center gap-1 mt-6">
+                          <div className="text-3xl md:text-5xl font-bold tracking-tight">
+                            {avgFishPerAngler}
+                          </div>
+                          {timeframeMetrics && <TrendBadge trend={timeframeMetrics.avgPerAngler} />}
                         </div>
                       </CardContent>
                     </Card>
@@ -425,13 +537,16 @@ function App() {
                       className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('boats')}
                     >
-                      <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                      <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Ship className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-base font-medium text-muted-foreground">Fleet</span>
                         </div>
-                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                          {metrics.fleet.unique_boats}
+                        <div className="flex flex-col items-center justify-center gap-1 mt-6">
+                          <div className="text-3xl md:text-5xl font-bold tracking-tight">
+                            {metrics.fleet.unique_boats}
+                          </div>
+                          {timeframeMetrics && <TrendBadge trend={timeframeMetrics.fleet} />}
                         </div>
                       </CardContent>
                     </Card>
@@ -444,12 +559,12 @@ function App() {
                       className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('moon')}
                     >
-                      <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                      <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Moon className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-base font-medium text-muted-foreground">Moon Phase</span>
                         </div>
-                        <div className="text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2">
+                        <div className="text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2 mt-6">
                           {bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, ' ') : 'N/A'}
                         </div>
                       </CardContent>
@@ -460,13 +575,16 @@ function App() {
                       className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('species')}
                     >
-                      <CardContent className="relative pt-6 pb-6 flex items-center justify-center min-h-[140px]">
+                      <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
                         <div className="absolute top-3 left-6 flex items-center gap-2">
                           <Fish className="h-5 w-5 text-muted-foreground/60 stroke-[1.5]" />
                           <span className="text-base font-medium text-muted-foreground">Species</span>
                         </div>
-                        <div className="text-3xl md:text-5xl font-bold tracking-tight">
-                          {metrics.fleet.unique_species}
+                        <div className="flex flex-col items-center justify-center gap-1 mt-6">
+                          <div className="text-3xl md:text-5xl font-bold tracking-tight">
+                            {metrics.fleet.unique_species}
+                          </div>
+                          {timeframeMetrics && <TrendBadge trend={timeframeMetrics.species} />}
                         </div>
                       </CardContent>
                     </Card>
