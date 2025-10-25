@@ -35949,9 +35949,8 @@ function formatYOYChange(current, previous, compact = false) {
   const percentage = calculateYOY(current, previous);
   const direction = absolute > 0 ? "up" : absolute < 0 ? "down" : "neutral";
   const sign = absolute > 0 ? "+" : "";
-  const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : "";
-  const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`;
-  const displayTextCompact = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`;
+  const displayText = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`;
+  const displayTextCompact = displayText;
   return {
     absolute,
     percentage,
@@ -52891,9 +52890,9 @@ function App() {
     const Icon3 = trend.direction === "up" ? TrendingUp : trend.direction === "down" ? TrendingDown : Minus;
     const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
     return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-xs md:text-sm font-normal text-muted-foreground", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}` }),
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "md:hidden", children: trend.displayTextCompact }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "hidden md:inline", children: trend.displayText }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}` })
+      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "hidden md:inline", children: trend.displayText })
     ] });
   };
   return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col h-screen overflow-hidden", children: [

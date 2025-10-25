@@ -86,13 +86,10 @@ export function formatYOYChange(current: number, previous: number, compact = fal
   const direction = absolute > 0 ? 'up' : absolute < 0 ? 'down' : 'neutral'
 
   const sign = absolute > 0 ? '+' : ''
-  const percentageText = percentage !== null ? ` (${sign}${percentage}%)` : ''
 
-  // Full format for desktop
-  const displayText = `${sign}${absolute.toLocaleString()}${percentageText} YOY`
-
-  // Compact format for mobile (percentage only for brevity)
-  const displayTextCompact = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`
+  // Percentage-only format (industry best practice)
+  const displayText = percentage !== null ? `${sign}${percentage}% YOY` : `${sign}${absolute} YOY`
+  const displayTextCompact = displayText // Same format for both desktop and mobile
 
   return {
     absolute,
