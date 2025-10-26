@@ -39572,7 +39572,7 @@ function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, onClose
       }
     ) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("aside", { className: `${isMobile ? "w-full" : "w-72 border-r"} bg-card p-3 flex flex-col gap-2 overflow-y-auto`, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("aside", { className: `${isMobile ? "w-full h-full" : "w-72 h-full border-r"} bg-card p-3 flex flex-col gap-2 overflow-y-auto`, children: [
     /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
       "button",
       {
