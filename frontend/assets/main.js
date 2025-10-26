@@ -49083,13 +49083,23 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
           trip_count: current.trip_count + 1
         });
       });
-      const monthlyData = Array.from(monthlyMap.entries()).map(([key, data]) => ({ monthKey: key, ...data })).sort((a, b) => a.monthKey.localeCompare(b.monthKey));
-      const maxFish3 = Math.max(...monthlyData.map((m2) => m2.total_fish));
+      const monthlyData = Array.from(monthlyMap.entries()).map(([key, data]) => ({
+        monthKey: key,
+        ...data,
+        avg_per_trip: data.total_fish / data.trip_count
+      })).sort((a, b) => a.monthKey.localeCompare(b.monthKey));
+      const maxAvg = Math.max(...monthlyData.map((m2) => m2.avg_per_trip));
+      const totalFish = monthlyData.reduce((sum2, m2) => sum2 + m2.total_fish, 0);
+      const sortedByPerformance = [...monthlyData].sort((a, b) => b.avg_per_trip - a.avg_per_trip);
       return /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "space-y-2", children: [
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "mb-4 text-sm text-muted-foreground", children: "Monthly catch breakdown for selected species \xB7 Click a month to view trips" }),
         monthlyData.map((monthData) => {
-          const percentage = monthData.total_fish / maxFish3 * 100;
-          const avgPerTrip = (monthData.total_fish / monthData.trip_count).toFixed(1);
+          const barPercentage = monthData.avg_per_trip / maxAvg * 100;
+          const distributionPercentage = monthData.total_fish / totalFish * 100;
+          const performanceRank = sortedByPerformance.findIndex((m2) => m2.monthKey === monthData.monthKey);
+          const isTopPerformer = performanceRank < 2;
+          const isBottomPerformer = performanceRank >= sortedByPerformance.length - 2;
+          const barAccent = isTopPerformer ? "bg-emerald-500/20" : isBottomPerformer ? "bg-red-500/20" : "bg-primary/20";
           return /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)(
             "div",
             {
@@ -49105,29 +49115,27 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
               },
               "aria-label": `Filter by ${monthData.month}`,
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "flex items-center justify-between text-sm", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("span", { className: "font-medium", children: monthData.month }),
-                  /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("span", { className: "text-muted-foreground", children: [
-                    monthData.total_fish.toLocaleString(),
-                    " fish \xB7 ",
-                    monthData.trip_count,
-                    " trips \xB7 ",
-                    avgPerTrip,
-                    " avg/trip"
-                  ] })
-                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "flex items-center justify-between text-sm", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("span", { className: "font-medium", children: monthData.month }) }),
                 /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "relative h-7 bg-muted rounded-md overflow-hidden flex items-center transition-all duration-300", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
                     "div",
                     {
-                      className: "absolute inset-0 left-0 bg-primary/20 transition-all duration-300",
-                      style: { width: `${percentage}%`, height: "100%" }
+                      className: `absolute inset-0 left-0 transition-all duration-300 ${barAccent}`,
+                      style: { width: `${barPercentage}%`, height: "100%" }
                     }
                   ),
                   /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("span", { className: "relative text-xs font-medium text-foreground leading-none px-3", children: [
-                    monthData.total_fish.toLocaleString(),
-                    " caught"
+                    monthData.avg_per_trip.toFixed(1),
+                    " avg/trip"
                   ] })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "text-xs text-muted-foreground", children: [
+                  monthData.trip_count,
+                  " trips  |  ",
+                  monthData.total_fish.toLocaleString(),
+                  " fish  |  ",
+                  distributionPercentage.toFixed(1),
+                  "%"
                 ] })
               ]
             },

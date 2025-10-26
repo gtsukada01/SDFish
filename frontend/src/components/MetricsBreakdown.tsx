@@ -35,10 +35,18 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
 
       // Convert to array and sort chronologically
       const monthlyData = Array.from(monthlyMap.entries())
-        .map(([key, data]) => ({ monthKey: key, ...data }))
+        .map(([key, data]) => ({
+          monthKey: key,
+          ...data,
+          avg_per_trip: data.total_fish / data.trip_count
+        }))
         .sort((a, b) => a.monthKey.localeCompare(b.monthKey))
 
-      const maxFish = Math.max(...monthlyData.map(m => m.total_fish))
+      const maxAvg = Math.max(...monthlyData.map(m => m.avg_per_trip))
+      const totalFish = monthlyData.reduce((sum, m) => sum + m.total_fish, 0)
+
+      // Sort by performance to identify top/bottom performers
+      const sortedByPerformance = [...monthlyData].sort((a, b) => b.avg_per_trip - a.avg_per_trip)
 
       return (
         <div className="space-y-2">
@@ -46,8 +54,18 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
             Monthly catch breakdown for selected species · Click a month to view trips
           </div>
           {monthlyData.map((monthData) => {
-            const percentage = (monthData.total_fish / maxFish) * 100
-            const avgPerTrip = (monthData.total_fish / monthData.trip_count).toFixed(1)
+            const barPercentage = (monthData.avg_per_trip / maxAvg) * 100
+            const distributionPercentage = (monthData.total_fish / totalFish) * 100
+
+            // Determine if this month is a top or bottom performer
+            const performanceRank = sortedByPerformance.findIndex(m => m.monthKey === monthData.monthKey)
+            const isTopPerformer = performanceRank < 2
+            const isBottomPerformer = performanceRank >= sortedByPerformance.length - 2
+            const barAccent = isTopPerformer
+              ? 'bg-emerald-500/20'
+              : isBottomPerformer
+              ? 'bg-red-500/20'
+              : 'bg-primary/20'
 
             return (
               <div
@@ -68,18 +86,18 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
               >
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium">{monthData.month}</span>
-                  <span className="text-muted-foreground">
-                    {monthData.total_fish.toLocaleString()} fish · {monthData.trip_count} trips · {avgPerTrip} avg/trip
-                  </span>
                 </div>
                 <div className="relative h-7 bg-muted rounded-md overflow-hidden flex items-center transition-all duration-300">
                   <div
-                    className="absolute inset-0 left-0 bg-primary/20 transition-all duration-300"
-                    style={{ width: `${percentage}%`, height: '100%' }}
+                    className={`absolute inset-0 left-0 transition-all duration-300 ${barAccent}`}
+                    style={{ width: `${barPercentage}%`, height: '100%' }}
                   />
                   <span className="relative text-xs font-medium text-foreground leading-none px-3">
-                    {monthData.total_fish.toLocaleString()} caught
+                    {monthData.avg_per_trip.toFixed(1)} avg/trip
                   </span>
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {monthData.trip_count} trips  |  {monthData.total_fish.toLocaleString()} fish  |  {distributionPercentage.toFixed(1)}%
                 </div>
               </div>
             )
