@@ -39278,7 +39278,7 @@ var buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-input bg-card hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline"
@@ -47790,7 +47790,7 @@ var SelectTrigger2 = React75.forwardRef(({ className, children, ...props }, ref)
   {
     ref,
     className: cn(
-      "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "flex h-10 w-full items-center justify-between rounded-md border border-input bg-card px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className
     ),
     ...props,
@@ -52946,7 +52946,7 @@ function App() {
             /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
               Card,
               {
-                className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("species"),
                 children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -52963,7 +52963,7 @@ function App() {
             /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
               Card,
               {
-                className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("boats"),
                 children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -52982,7 +52982,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53001,7 +53001,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("boats"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53021,7 +53021,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("moon"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53037,7 +53037,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
