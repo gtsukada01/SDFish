@@ -49261,29 +49261,22 @@ var moonIcons = {
   "last_quarter": "\u{1F317}",
   "waning_crescent": "\u{1F318}"
 };
-var MOON_PHASE_ORDER = [
-  "new_moon",
-  "waxing_crescent",
-  "first_quarter",
-  "waxing_gibbous",
-  "full_moon",
-  "waning_gibbous",
-  "last_quarter",
-  "waning_crescent"
-];
 function MoonPhaseBreakdown({ data, selectedValue, onBarClick }) {
   if (!data || data.length === 0) {
     return null;
   }
-  const sortedData = [...data].sort(
-    (a, b) => MOON_PHASE_ORDER.indexOf(a.phase_name) - MOON_PHASE_ORDER.indexOf(b.phase_name)
-  );
+  const sortedData = [...data].sort((a, b) => b.avg_fish_per_trip - a.avg_fish_per_trip);
   const totalFish = sortedData.reduce((sum2, d) => sum2 + d.total_fish, 0);
-  return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "space-y-2", children: sortedData.map((phase) => {
-    const percentage = phase.total_fish / totalFish * 100;
+  const maxAvg = Math.max(...sortedData.map((d) => d.avg_fish_per_trip));
+  return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("div", { className: "space-y-2", children: sortedData.map((phase, index3) => {
+    const barPercentage = phase.avg_fish_per_trip / maxAvg * 100;
+    const distributionPercentage = phase.total_fish / totalFish * 100;
     const displayName = phaseDisplayNames[phase.phase_name] || phase.phase_name;
     const icon = moonIcons[phase.phase_name] || "\u{1F311}";
     const isSelected = selectedValue === phase.phase_name;
+    const isTopPerformer = index3 < 2;
+    const isBottomPerformer = index3 >= sortedData.length - 2;
+    const barAccent = isTopPerformer ? "bg-emerald-500/20" : isBottomPerformer ? "bg-red-500/20" : "bg-muted-foreground/30";
     return /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)(
       "div",
       {
@@ -49301,29 +49294,29 @@ function MoonPhaseBreakdown({ data, selectedValue, onBarClick }) {
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "flex items-center gap-2", children: [
             /* @__PURE__ */ (0, import_jsx_runtime37.jsx)("span", { className: "text-lg shrink-0 leading-none", children: icon }),
-            /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: `relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center justify-end ${isSelected ? "ring-2 ring-primary ring-offset-2" : ""} transition-all duration-300`, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: `relative h-7 bg-muted rounded-md overflow-hidden flex-1 flex items-center ${isSelected ? "ring-2 ring-primary ring-offset-2" : ""} transition-all duration-300`, children: [
               /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
                 "div",
                 {
-                  className: "absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300",
-                  style: { width: `${percentage}%`, height: "100%" }
+                  className: `absolute inset-0 left-0 transition-all duration-300 ${barAccent}`,
+                  style: { width: `${barPercentage}%`, height: "100%" }
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("span", { className: "relative text-xs font-medium text-foreground leading-none px-2", children: [
-                percentage.toFixed(1),
-                "%"
+              /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("span", { className: "relative text-xs font-medium text-foreground leading-none px-3", children: [
+                phase.avg_fish_per_trip.toFixed(1),
+                " avg"
               ] })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime37.jsxs)("div", { className: "text-xs text-muted-foreground", children: [
             displayName,
             "  |  ",
-            phase.total_fish.toLocaleString(),
-            " fish  |  ",
             phase.trip_count,
             " trips  |  ",
-            phase.avg_fish_per_trip.toFixed(1),
-            " avg"
+            phase.total_fish.toLocaleString(),
+            " fish  |  ",
+            distributionPercentage.toFixed(1),
+            "%"
           ] })
         ]
       },
