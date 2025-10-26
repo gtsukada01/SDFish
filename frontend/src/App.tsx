@@ -425,7 +425,7 @@ function App() {
 
     return (
       <div className="flex items-center justify-center gap-1 md:gap-1.5 text-base font-normal text-muted-foreground">
-        <Icon className={`h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}`} />
+        <Icon className={`h-4 w-4 md:h-5 md:w-5 flex-shrink-0 ${iconColor}`} />
         <span className="md:hidden">{trend.displayTextCompact}</span>
         <span className="hidden md:inline">{trend.displayText}</span>
       </div>
