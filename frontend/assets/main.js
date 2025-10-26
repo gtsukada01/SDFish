@@ -52889,7 +52889,7 @@ function App() {
   const TrendBadge = ({ trend }) => {
     const Icon3 = trend.direction === "up" ? TrendingUp : trend.direction === "down" ? TrendingDown : Minus;
     const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-sm md:text-base font-normal text-muted-foreground", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-base font-normal text-muted-foreground", children: [
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}` }),
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "md:hidden", children: trend.displayTextCompact }),
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "hidden md:inline", children: trend.displayText })
