@@ -175,9 +175,19 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
 
   return (
     <div className="space-y-2">
-      {sortedBoats.map((boat) => {
+      {sortedBoats.map((boat, index) => {
         const percentage = (boat.total_fish / maxFish) * 100
         const isSelected = selectedValue === boat.boat
+
+        // Highlight best (top 2) and worst (bottom 2) performers
+        const isTopPerformer = index < 2
+        const isBottomPerformer = index >= sortedBoats.length - 2
+        const barAccent = isTopPerformer
+          ? 'bg-emerald-500/20'
+          : isBottomPerformer
+          ? 'bg-red-500/20'
+          : 'bg-muted-foreground/30'
+
         return (
           <div
             key={boat.boat}
@@ -205,7 +215,7 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
               isSelected ? 'ring-2 ring-primary ring-offset-2' : ''
             } transition-all duration-300`}>
               <div
-                className="absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300"
+                className={`absolute inset-0 left-0 transition-all duration-300 ${barAccent}`}
                 style={{ width: `${percentage}%`, height: '100%' }}
               />
               <span className="relative text-xs font-medium text-foreground leading-none px-3">

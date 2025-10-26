@@ -49198,9 +49198,12 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
   }
   const sortedBoats = [...metrics.per_boat].sort((a, b) => b.total_fish - a.total_fish);
   const maxFish = Math.max(...sortedBoats.map((b) => b.total_fish));
-  return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "space-y-2", children: sortedBoats.map((boat) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "space-y-2", children: sortedBoats.map((boat, index3) => {
     const percentage = boat.total_fish / maxFish * 100;
     const isSelected = selectedValue === boat.boat;
+    const isTopPerformer = index3 < 2;
+    const isBottomPerformer = index3 >= sortedBoats.length - 2;
+    const barAccent = isTopPerformer ? "bg-emerald-500/20" : isBottomPerformer ? "bg-red-500/20" : "bg-muted-foreground/30";
     return /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)(
       "div",
       {
@@ -49229,7 +49232,7 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
             /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(
               "div",
               {
-                className: "absolute inset-0 left-0 bg-muted-foreground/30 transition-all duration-300",
+                className: `absolute inset-0 left-0 transition-all duration-300 ${barAccent}`,
                 style: { width: `${percentage}%`, height: "100%" }
               }
             ),
