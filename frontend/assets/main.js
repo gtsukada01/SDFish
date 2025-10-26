@@ -25830,60 +25830,74 @@ var __iconNode = [
 ];
 var Anchor = createLucideIcon("anchor", __iconNode);
 
-// node_modules/lucide-react/dist/esm/icons/arrow-up-down.js
+// node_modules/lucide-react/dist/esm/icons/arrow-down-right.js
 var __iconNode2 = [
+  ["path", { d: "m7 7 10 10", key: "1fmybs" }],
+  ["path", { d: "M17 7v10H7", key: "6fjiku" }]
+];
+var ArrowDownRight = createLucideIcon("arrow-down-right", __iconNode2);
+
+// node_modules/lucide-react/dist/esm/icons/arrow-up-down.js
+var __iconNode3 = [
   ["path", { d: "m21 16-4 4-4-4", key: "f6ql7i" }],
   ["path", { d: "M17 20V4", key: "1ejh1v" }],
   ["path", { d: "m3 8 4-4 4 4", key: "11wl7u" }],
   ["path", { d: "M7 4v16", key: "1glfcx" }]
 ];
-var ArrowUpDown = createLucideIcon("arrow-up-down", __iconNode2);
+var ArrowUpDown = createLucideIcon("arrow-up-down", __iconNode3);
+
+// node_modules/lucide-react/dist/esm/icons/arrow-up-right.js
+var __iconNode4 = [
+  ["path", { d: "M7 7h10v10", key: "1tivn9" }],
+  ["path", { d: "M7 17 17 7", key: "1vkiza" }]
+];
+var ArrowUpRight = createLucideIcon("arrow-up-right", __iconNode4);
 
 // node_modules/lucide-react/dist/esm/icons/calendar.js
-var __iconNode3 = [
+var __iconNode5 = [
   ["path", { d: "M8 2v4", key: "1cmpym" }],
   ["path", { d: "M16 2v4", key: "4m81vk" }],
   ["rect", { width: "18", height: "18", x: "3", y: "4", rx: "2", key: "1hopcy" }],
   ["path", { d: "M3 10h18", key: "8toen8" }]
 ];
-var Calendar = createLucideIcon("calendar", __iconNode3);
+var Calendar = createLucideIcon("calendar", __iconNode5);
 
 // node_modules/lucide-react/dist/esm/icons/check.js
-var __iconNode4 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-var Check = createLucideIcon("check", __iconNode4);
+var __iconNode6 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+var Check = createLucideIcon("check", __iconNode6);
 
 // node_modules/lucide-react/dist/esm/icons/chevron-down.js
-var __iconNode5 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-var ChevronDown = createLucideIcon("chevron-down", __iconNode5);
+var __iconNode7 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+var ChevronDown = createLucideIcon("chevron-down", __iconNode7);
 
 // node_modules/lucide-react/dist/esm/icons/chevron-left.js
-var __iconNode6 = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
-var ChevronLeft = createLucideIcon("chevron-left", __iconNode6);
+var __iconNode8 = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
+var ChevronLeft = createLucideIcon("chevron-left", __iconNode8);
 
 // node_modules/lucide-react/dist/esm/icons/chevron-right.js
-var __iconNode7 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
-var ChevronRight = createLucideIcon("chevron-right", __iconNode7);
+var __iconNode9 = [["path", { d: "m9 18 6-6-6-6", key: "mthhwq" }]];
+var ChevronRight = createLucideIcon("chevron-right", __iconNode9);
 
 // node_modules/lucide-react/dist/esm/icons/chevron-up.js
-var __iconNode8 = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-var ChevronUp = createLucideIcon("chevron-up", __iconNode8);
+var __iconNode10 = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+var ChevronUp = createLucideIcon("chevron-up", __iconNode10);
 
 // node_modules/lucide-react/dist/esm/icons/chevrons-up-down.js
-var __iconNode9 = [
+var __iconNode11 = [
   ["path", { d: "m7 15 5 5 5-5", key: "1hf1tw" }],
   ["path", { d: "m7 9 5-5 5 5", key: "sgt6xg" }]
 ];
-var ChevronsUpDown = createLucideIcon("chevrons-up-down", __iconNode9);
+var ChevronsUpDown = createLucideIcon("chevrons-up-down", __iconNode11);
 
 // node_modules/lucide-react/dist/esm/icons/clock.js
-var __iconNode10 = [
+var __iconNode12 = [
   ["path", { d: "M12 6v6l4 2", key: "mmk7yg" }],
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }]
 ];
-var Clock = createLucideIcon("clock", __iconNode10);
+var Clock = createLucideIcon("clock", __iconNode12);
 
 // node_modules/lucide-react/dist/esm/icons/fish.js
-var __iconNode11 = [
+var __iconNode13 = [
   [
     "path",
     {
@@ -25909,10 +25923,10 @@ var __iconNode11 = [
     { d: "m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98", key: "1zlm23" }
   ]
 ];
-var Fish = createLucideIcon("fish", __iconNode11);
+var Fish = createLucideIcon("fish", __iconNode13);
 
 // node_modules/lucide-react/dist/esm/icons/map-pin.js
-var __iconNode12 = [
+var __iconNode14 = [
   [
     "path",
     {
@@ -25922,22 +25936,22 @@ var __iconNode12 = [
   ],
   ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-var MapPin = createLucideIcon("map-pin", __iconNode12);
+var MapPin = createLucideIcon("map-pin", __iconNode14);
 
 // node_modules/lucide-react/dist/esm/icons/menu.js
-var __iconNode13 = [
+var __iconNode15 = [
   ["path", { d: "M4 5h16", key: "1tepv9" }],
   ["path", { d: "M4 12h16", key: "1lakjw" }],
   ["path", { d: "M4 19h16", key: "1djgab" }]
 ];
-var Menu = createLucideIcon("menu", __iconNode13);
+var Menu = createLucideIcon("menu", __iconNode15);
 
 // node_modules/lucide-react/dist/esm/icons/minus.js
-var __iconNode14 = [["path", { d: "M5 12h14", key: "1ays0h" }]];
-var Minus = createLucideIcon("minus", __iconNode14);
+var __iconNode16 = [["path", { d: "M5 12h14", key: "1ays0h" }]];
+var Minus = createLucideIcon("minus", __iconNode16);
 
 // node_modules/lucide-react/dist/esm/icons/moon.js
-var __iconNode15 = [
+var __iconNode17 = [
   [
     "path",
     {
@@ -25946,17 +25960,17 @@ var __iconNode15 = [
     }
   ]
 ];
-var Moon = createLucideIcon("moon", __iconNode15);
+var Moon = createLucideIcon("moon", __iconNode17);
 
 // node_modules/lucide-react/dist/esm/icons/panel-left.js
-var __iconNode16 = [
+var __iconNode18 = [
   ["rect", { width: "18", height: "18", x: "3", y: "3", rx: "2", key: "afitv7" }],
   ["path", { d: "M9 3v18", key: "fh3hqa" }]
 ];
-var PanelLeft = createLucideIcon("panel-left", __iconNode16);
+var PanelLeft = createLucideIcon("panel-left", __iconNode18);
 
 // node_modules/lucide-react/dist/esm/icons/pin.js
-var __iconNode17 = [
+var __iconNode19 = [
   ["path", { d: "M12 17v5", key: "bb1du9" }],
   [
     "path",
@@ -25966,17 +25980,17 @@ var __iconNode17 = [
     }
   ]
 ];
-var Pin = createLucideIcon("pin", __iconNode17);
+var Pin = createLucideIcon("pin", __iconNode19);
 
 // node_modules/lucide-react/dist/esm/icons/search.js
-var __iconNode18 = [
+var __iconNode20 = [
   ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
   ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-var Search = createLucideIcon("search", __iconNode18);
+var Search = createLucideIcon("search", __iconNode20);
 
 // node_modules/lucide-react/dist/esm/icons/ship.js
-var __iconNode19 = [
+var __iconNode21 = [
   ["path", { d: "M12 10.189V14", key: "1p8cqu" }],
   ["path", { d: "M12 2v3", key: "qbqxhf" }],
   ["path", { d: "M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6", key: "qpkstq" }],
@@ -25995,21 +26009,7 @@ var __iconNode19 = [
     }
   ]
 ];
-var Ship = createLucideIcon("ship", __iconNode19);
-
-// node_modules/lucide-react/dist/esm/icons/trending-down.js
-var __iconNode20 = [
-  ["path", { d: "M16 17h6v-6", key: "t6n2it" }],
-  ["path", { d: "m22 17-8.5-8.5-5 5L2 7", key: "x473p" }]
-];
-var TrendingDown = createLucideIcon("trending-down", __iconNode20);
-
-// node_modules/lucide-react/dist/esm/icons/trending-up.js
-var __iconNode21 = [
-  ["path", { d: "M16 7h6v6", key: "box55l" }],
-  ["path", { d: "m22 7-8.5 8.5-5-5L2 17", key: "1t1m79" }]
-];
-var TrendingUp = createLucideIcon("trending-up", __iconNode21);
+var Ship = createLucideIcon("ship", __iconNode21);
 
 // node_modules/lucide-react/dist/esm/icons/trophy.js
 var __iconNode22 = [
@@ -52887,7 +52887,7 @@ function App() {
     (best, current) => current.avg_fish_per_trip > best.avg_fish_per_trip ? current : best
   ) : null;
   const TrendBadge = ({ trend }) => {
-    const Icon3 = trend.direction === "up" ? TrendingUp : trend.direction === "down" ? TrendingDown : Minus;
+    const Icon3 = trend.direction === "up" ? ArrowUpRight : trend.direction === "down" ? ArrowDownRight : Minus;
     const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
     return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-base font-normal text-muted-foreground", children: [
       /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-3 w-3 md:h-4 md:w-4 flex-shrink-0 ${iconColor}` }),
@@ -53203,7 +53203,23 @@ lucide-react/dist/esm/icons/anchor.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide-react/dist/esm/icons/arrow-down-right.js:
+  (**
+   * @license lucide-react v0.544.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide-react/dist/esm/icons/arrow-up-down.js:
+  (**
+   * @license lucide-react v0.544.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide-react/dist/esm/icons/arrow-up-right.js:
   (**
    * @license lucide-react v0.544.0 - ISC
    *
@@ -53340,22 +53356,6 @@ lucide-react/dist/esm/icons/search.js:
    *)
 
 lucide-react/dist/esm/icons/ship.js:
-  (**
-   * @license lucide-react v0.544.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide-react/dist/esm/icons/trending-down.js:
-  (**
-   * @license lucide-react v0.544.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide-react/dist/esm/icons/trending-up.js:
   (**
    * @license lucide-react v0.544.0 - ISC
    *

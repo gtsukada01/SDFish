@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { format } from 'date-fns'
-import { Fish, Ship, Anchor, Layers, Moon, Users, Trophy, TrendingUp, TrendingDown, Minus } from 'lucide-react'
+import { Fish, Ship, Anchor, Layers, Moon, Users, Trophy, ArrowUpRight, ArrowDownRight, Minus } from 'lucide-react'
 import { FishingHook } from './components/icons/FishingHook'
 import { CatchRecord, SummaryMetricsResponse, Filters } from '../../scripts/api/types'
 import { fetchRealCatchData, fetchRealSummaryMetrics } from './lib/fetchRealData'
@@ -416,7 +416,7 @@ function App() {
 
   // Trend Badge Component (timeframe-over-timeframe deltas)
   const TrendBadge = ({ trend }: { trend: TrendMetric }) => {
-    const Icon = trend.direction === 'up' ? TrendingUp : trend.direction === 'down' ? TrendingDown : Minus
+    const Icon = trend.direction === 'up' ? ArrowUpRight : trend.direction === 'down' ? ArrowDownRight : Minus
     const iconColor = trend.direction === 'up'
       ? 'text-emerald-600 dark:text-emerald-400'
       : trend.direction === 'down'
