@@ -52487,7 +52487,7 @@ function CatchTable({ data }) {
   });
   const currentRows = table.getRowModel().rows;
   return /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(import_jsx_runtime41.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(Card, { className: "hidden md:block border-transparent shadow-none", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(Card, { className: "hidden md:block", children: [
       /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)(CardHeader, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(CardTitle, { children: "Daily Catch Report" }),
         /* @__PURE__ */ (0, import_jsx_runtime41.jsxs)("p", { className: "text-sm text-muted-foreground", children: [
@@ -53054,7 +53054,7 @@ function App() {
             )
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CatchTable, { data: catchData }),
-          metrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Card, { ref: breakdownRef, className: "md:border-transparent md:shadow-none", children: [
+          metrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Card, { ref: breakdownRef, children: [
             /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardHeader, { children: [
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardTitle, { children: "Analytics & Insights" }),
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { className: "text-sm text-muted-foreground", children: "Explore detailed breakdowns and patterns in the fishing data" })

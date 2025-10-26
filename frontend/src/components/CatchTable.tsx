@@ -143,7 +143,7 @@ export function CatchTable({ data }: CatchTableProps) {
   return (
     <>
       {/* Desktop Table View */}
-      <Card className="hidden md:block border-transparent shadow-none">
+      <Card className="hidden md:block">
         <CardHeader>
           <CardTitle>Daily Catch Report</CardTitle>
           <p className="text-sm text-muted-foreground">

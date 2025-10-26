@@ -598,7 +598,7 @@ function App() {
 
               {/* Analytics & Insights - Tabbed Section Below Table */}
               {metrics && (
-                <Card ref={breakdownRef} className="md:border-transparent md:shadow-none">
+                <Card ref={breakdownRef}>
                   <CardHeader>
                     <CardTitle>Analytics & Insights</CardTitle>
                     <p className="text-sm text-muted-foreground">
