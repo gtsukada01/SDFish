@@ -10,7 +10,7 @@
 
 ## 1. Install project dependencies
 ```bash
-npm install
+npm --prefix frontend install
 npx playwright install  # required for UI + performance suites
 ```
 
@@ -29,18 +29,18 @@ npm run build
 npm run dev
 
 # Start development server
-npm start  # → http://localhost:8081
+npm --prefix frontend run dev  # → http://localhost:8081
 ```
 
 **Build Output**:
-- `assets/main.js` (1.6MB React bundle with source maps)
-- `assets/styles.css` (1.6KB Tailwind CSS output)
+- `frontend/assets/main.js` (1.6MB React bundle with source maps)
+- `frontend/assets/styles.css` (1.6KB Tailwind CSS output)
 
 **Architecture**: React 18 + shadcn/ui components + TanStack React Table
 
 ## 4. Run contract tests
 ```
-npm run test:contracts
+npm --prefix frontend run test:contracts
 ```
 
 ## 5. Configure data mode (index.html)
@@ -52,7 +52,7 @@ window.USE_REAL_DATA = true;  // ✅ ENABLED
 - Uses direct Supabase client queries
 - No API layer (avoids Vercel deployment issues)
 - 7,746+ real trips from database
-- Credentials in `src/lib/supabase.ts` (public anon key is safe)
+- Credentials in `frontend/src/lib/supabase.ts` (public anon key is safe)
 
 ### Mock Data Mode (Development)
 ```javascript

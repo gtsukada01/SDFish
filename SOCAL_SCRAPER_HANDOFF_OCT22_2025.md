@@ -858,20 +858,22 @@ python3 scripts/python/socal_scraper.py --start-date 2025-10-15 --end-date 2025-
 ├── scripts/python/qc_validator.py         # QC validation (San Diego only currently)
 ├── scripts/python/socal_qc_validator.py   # QC validation (SoCal source)
 ├── scripts/python/data_auditor.py         # Data health audit
-└── archive/logs/boats_scraper_latest.log  # Latest combined scraper log
+└── logs/                                  # Current scrape logs (boats_scraper.log, socal_scraper.log)
 ```
 
 ### Documentation Files
 
 ```
 /Users/btsukada/Desktop/Fishing/fish-scraper/
+├── frontend/                            # React dashboard workspace (app + assets)
 ├── README.md                               # Project overview
 ├── SOCAL_SCRAPER_HANDOFF_OCT22_2025.md     # This file
-├── archive/docs/archive/docs/CLAUDE_OPERATING_GUIDE.md  # Operational playbook
+├── archive/docs/CLAUDE_OPERATING_GUIDE.md  # Operational playbook
 ├── archive/docs/DOCUMENTATION_STANDARDS.md # Doc governance
-├── archive/reports/qc/COMPREHENSIVE_QC_VERIFICATION.md # San Diego QC results
-├── archive/reports/scrape/2025_SCRAPING_REPORT.md      # 2025 consolidated report
-└── archive/reports/scrape/2024_SCRAPING_REPORT.md      # 2024 consolidated report
+├── archive/reports/qc/COMPREHENSIVE_QC_VERIFICATION.md           # San Diego QC results
+├── archive/reports/qc/current/qc_2025_full_audit.json            # Latest audit baseline
+├── archive/reports/scrape/2025_SCRAPING_REPORT.md                # 2025 consolidated report
+└── archive/reports/scrape/2024_SCRAPING_REPORT.md                # 2024 consolidated report
 ```
 
 ---
@@ -1130,11 +1132,18 @@ if anglers is None or not trip_type or not catches_text:
 
 ## Archive Organization Update (Oct 23, 2025)
 
-- Archived historical QC datasets under `archive/reports/qc/` and kept only the latest baseline (`qc_2025_full_audit.*`) at repo root.
+- Archived historical QC datasets under `archive/reports/qc/` and moved the active baseline to `archive/reports/qc/current/qc_2025_full_audit.*`.
 - Moved legacy scrape summaries to `archive/reports/scrape/` and triaged one-off investigations into `archive/scripts/python/`.
 - Consolidated historical logs/backups into `archive/logs/` and `archive/backups/`; future runs should emit to top-level `logs/` and `backups/` directories (root now ignores stray `*.log`, `qc_*.json`, etc.).
 - Old screenshots and disposable HTML (e.g., diagnostics) now live in `archive/screenshots/` when needed; remove new captures after linking them from docs.
 - When adding new operational artifacts, either store them in the dedicated directories or purge them after documenting to keep the workspace lean.
+- Retired standalone remediation projects (e.g., Seaforth validator, 2024 backfill) now live under `archive/legacy/` for reference without cluttering root.
+
+## Frontend Runtime Notes (Oct 24, 2025)
+
+- If the dashboard falls back to mock data with `normalizedSpeciesTargets is not defined`, rebuild the static bundle so the compiled `assets/main.js` matches the updated species-filter logic: `npm --prefix frontend run build`.
+- Restart whichever server is serving `frontend/assets/` after rebuilding; dev mode (`npm --prefix frontend run dev`) automatically picks up the change, static mode needs a manual restart of `scripts/serve-static.mjs`.
+- Error indicates the app is still shipping the pre-Oct 24 bundle; no Supabase schema changes are required once the bundle is refreshed.
 
 ---
 

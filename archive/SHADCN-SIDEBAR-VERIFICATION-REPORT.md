@@ -148,7 +148,7 @@ The sidebar has been successfully converted from custom HTML elements to profess
 - ✅ Border radius token: --radius: 0.5rem
 
 **Build Output**:
-- ✅ CSS compiled to `assets/styles.css` (minified)
+- ✅ CSS compiled to `frontend/assets/styles.css` (minified)
 - ✅ All shadcn classes present in compiled CSS
 - ✅ HSL color tokens properly applied
 - ✅ Responsive breakpoints included (sm, md, lg)

@@ -274,7 +274,7 @@ ROLLBACK;
 
 **Step 1: Run QC Validator on ALL Affected Dates**
 ```bash
-python3 qc_validator.py \
+python3 scripts/python/qc_validator.py \
   --dates-file affected_dates.txt \
   --output qc_landing_fix_validation.json \
   --strict-mode

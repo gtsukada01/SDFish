@@ -33,7 +33,7 @@
 
 **Phase 4: April-June 2025**
 - **Status**: 🔄 CURRENTLY RUNNING
-- **Command**: `python3 boats_scraper.py --start-date 2025-04-04 --end-date 2025-06-29 2>&1 | tee april_june_remediation.log`
+- **Command**: `python3 scripts/python/boats_scraper.py --start-date 2025-04-04 --end-date 2025-06-29 2>&1 | tee april_june_remediation.log`
 - **Dates**: 87 dates total (47 from original audit, but command includes full range)
 - **Current Progress**: Processing date 2 of 87 as of last check
 - **Estimated Duration**: ~8-10 minutes total
@@ -54,10 +54,10 @@
 - **Command to run**:
   ```bash
   # Feb-March dates
-  python3 boats_scraper.py --start-date 2025-02-07 --end-date 2025-03-29
+  python3 scripts/python/boats_scraper.py --start-date 2025-02-07 --end-date 2025-03-29
 
   # October dates
-  python3 boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-03
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-03
   ```
 
 ---
@@ -146,7 +146,7 @@
 
 **Check if Phase 4 is still running:**
 ```bash
-ps aux | grep "python3 boats_scraper.py --start-date 2025-04" | grep -v grep
+ps aux | grep "python3 scripts/python/boats_scraper.py --start-date 2025-04" | grep -v grep
 ```
 
 **Monitor progress:**
@@ -179,10 +179,10 @@ grep "SCRAPING SUMMARY" april_june_remediation.log
 cd /Users/btsukada/Desktop/Fishing/fish-scraper
 
 # Re-scrape February and March dates
-python3 boats_scraper.py --start-date 2025-02-07 --end-date 2025-03-29 2>&1 | tee feb_march_remediation.log
+python3 scripts/python/boats_scraper.py --start-date 2025-02-07 --end-date 2025-03-29 2>&1 | tee feb_march_remediation.log
 
 # Re-scrape October dates
-python3 boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-03 2>&1 | tee october_remediation.log
+python3 scripts/python/boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-03 2>&1 | tee october_remediation.log
 ```
 
 **Estimated time**: ~2-3 minutes total
@@ -193,7 +193,7 @@ python3 boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-03 2>&1 | te
 
 ```bash
 # Validate all failed dates that were re-scraped
-python3 qc_validator.py --start-date 2025-02-06 --end-date 2025-10-21 --output qc_2025_post_remediation.json
+python3 scripts/python/qc_validator.py --start-date 2025-02-06 --end-date 2025-10-21 --output qc_2025_post_remediation.json
 
 # Check results
 cat qc_2025_post_remediation.json | jq '.summary'
@@ -208,7 +208,7 @@ cat qc_2025_post_remediation.json | jq '.summary'
 **Spot-check high-value boats:**
 ```bash
 # Validate Polaris Supreme (10 trips expected)
-python3 qc_validator.py --polaris-test --output polaris_post_remediation.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_post_remediation.json
 ```
 
 ### STEP 3: Calculate Final Recovery Statistics
@@ -334,7 +334,7 @@ grep "Processing:" april_june_remediation.log | tail -1
 **Resume from last date:**
 ```bash
 # If it stopped at 2025-05-15, resume from 2025-05-16
-python3 boats_scraper.py --start-date 2025-05-16 --end-date 2025-06-29 2>&1 | tee april_june_remediation_resumed.log
+python3 scripts/python/boats_scraper.py --start-date 2025-05-16 --end-date 2025-06-29 2>&1 | tee april_june_remediation_resumed.log
 ```
 
 ### If QC Validation Shows Unexpected Failures
@@ -347,10 +347,10 @@ cat qc_2025_post_remediation.json | jq '.reports[] | select(.status == "FAIL") |
 **Re-scrape those specific dates:**
 ```bash
 # Example for a single failed date
-python3 boats_scraper.py --start-date 2025-05-10 --end-date 2025-05-10
+python3 scripts/python/boats_scraper.py --start-date 2025-05-10 --end-date 2025-05-10
 
 # Validate again
-python3 qc_validator.py --start-date 2025-05-10 --end-date 2025-05-10
+python3 scripts/python/qc_validator.py --start-date 2025-05-10 --end-date 2025-05-10
 ```
 
 ### If Duplicate Errors Occur
@@ -373,7 +373,7 @@ HAVING COUNT(*) > 1;
 psql $DATABASE_URL -c "DELETE FROM trips WHERE trip_date = '2025-05-10';"
 
 # Re-scrape
-python3 boats_scraper.py --start-date 2025-05-10 --end-date 2025-05-10
+python3 scripts/python/boats_scraper.py --start-date 2025-05-10 --end-date 2025-05-10
 ```
 
 ---

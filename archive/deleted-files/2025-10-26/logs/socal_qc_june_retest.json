@@ -1,0 +1,478 @@
+{
+  "date_range": {
+    "start": "2025-06-01",
+    "end": "2025-06-30"
+  },
+  "summary": {
+    "total_dates": 30,
+    "passed": 23,
+    "failed": 7,
+    "errors": 0,
+    "skipped": 0,
+    "effective_dates": 30,
+    "pass_rate": 76.67
+  },
+  "reports": [
+    {
+      "date": "2025-06-01",
+      "status": "PASS",
+      "source_boat_count": 34,
+      "database_boat_count": 34,
+      "matches": 34,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:24:47.344005"
+    },
+    {
+      "date": "2025-06-02",
+      "status": "PASS",
+      "source_boat_count": 16,
+      "database_boat_count": 16,
+      "matches": 16,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:24:49.965218"
+    },
+    {
+      "date": "2025-06-03",
+      "status": "FAIL",
+      "source_boat_count": 14,
+      "database_boat_count": 13,
+      "matches": 13,
+      "mismatches": [
+        {
+          "boat": "Thunderbird",
+          "errors": [
+            "Extra species: 'sheephead' (count=1) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Extra species: 'sheephead' (count=1) in database but not on source page"
+      ],
+      "timestamp": "2025-10-24T14:24:52.493037"
+    },
+    {
+      "date": "2025-06-04",
+      "status": "PASS",
+      "source_boat_count": 21,
+      "database_boat_count": 20,
+      "matches": 21,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:24:55.067920"
+    },
+    {
+      "date": "2025-06-05",
+      "status": "PASS",
+      "source_boat_count": 19,
+      "database_boat_count": 19,
+      "matches": 19,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:24:57.681451"
+    },
+    {
+      "date": "2025-06-06",
+      "status": "PASS",
+      "source_boat_count": 28,
+      "database_boat_count": 27,
+      "matches": 28,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:00.283567"
+    },
+    {
+      "date": "2025-06-07",
+      "status": "PASS",
+      "source_boat_count": 37,
+      "database_boat_count": 36,
+      "matches": 37,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:02.947288"
+    },
+    {
+      "date": "2025-06-08",
+      "status": "PASS",
+      "source_boat_count": 35,
+      "database_boat_count": 35,
+      "matches": 35,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:05.645067"
+    },
+    {
+      "date": "2025-06-09",
+      "status": "PASS",
+      "source_boat_count": 20,
+      "database_boat_count": 20,
+      "matches": 20,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:08.253788"
+    },
+    {
+      "date": "2025-06-10",
+      "status": "PASS",
+      "source_boat_count": 22,
+      "database_boat_count": 22,
+      "matches": 22,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:10.867073"
+    },
+    {
+      "date": "2025-06-11",
+      "status": "FAIL",
+      "source_boat_count": 24,
+      "database_boat_count": 23,
+      "matches": 23,
+      "mismatches": [
+        {
+          "boat": "Thunderbird",
+          "errors": [
+            "Species count mismatch: 'calico bass' source=25 db=32",
+            "Extra species: 'bonito' (count=25) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'calico bass' source=25 db=32",
+        "Extra species: 'bonito' (count=25) in database but not on source page"
+      ],
+      "timestamp": "2025-10-24T14:25:13.458779"
+    },
+    {
+      "date": "2025-06-12",
+      "status": "PASS",
+      "source_boat_count": 23,
+      "database_boat_count": 23,
+      "matches": 23,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:15.980066"
+    },
+    {
+      "date": "2025-06-13",
+      "status": "FAIL",
+      "source_boat_count": 29,
+      "database_boat_count": 27,
+      "matches": 28,
+      "mismatches": [
+        {
+          "boat": "Sport King",
+          "errors": [
+            "Species count mismatch: 'sheephead' source=17 db=11",
+            "Missing species: 'yellowtail' (count=4) not in database",
+            "Species count mismatch: 'calico bass' source=63 db=62"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'sheephead' source=17 db=11",
+        "Missing species: 'yellowtail' (count=4) not in database",
+        "Species count mismatch: 'calico bass' source=63 db=62"
+      ],
+      "timestamp": "2025-10-24T14:25:18.553395"
+    },
+    {
+      "date": "2025-06-14",
+      "status": "PASS",
+      "source_boat_count": 48,
+      "database_boat_count": 46,
+      "matches": 48,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:21.139868"
+    },
+    {
+      "date": "2025-06-15",
+      "status": "PASS",
+      "source_boat_count": 44,
+      "database_boat_count": 44,
+      "matches": 44,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:23.762800"
+    },
+    {
+      "date": "2025-06-16",
+      "status": "PASS",
+      "source_boat_count": 28,
+      "database_boat_count": 28,
+      "matches": 28,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:26.313670"
+    },
+    {
+      "date": "2025-06-17",
+      "status": "PASS",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 24,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:30.762504"
+    },
+    {
+      "date": "2025-06-18",
+      "status": "PASS",
+      "source_boat_count": 29,
+      "database_boat_count": 29,
+      "matches": 29,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:33.392663"
+    },
+    {
+      "date": "2025-06-19",
+      "status": "PASS",
+      "source_boat_count": 33,
+      "database_boat_count": 33,
+      "matches": 33,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:35.946440"
+    },
+    {
+      "date": "2025-06-20",
+      "status": "FAIL",
+      "source_boat_count": 35,
+      "database_boat_count": 33,
+      "matches": 34,
+      "mismatches": [
+        {
+          "boat": "Freelance",
+          "errors": [
+            "Species count mismatch: 'blue perch' source=103 db=101"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'blue perch' source=103 db=101"
+      ],
+      "timestamp": "2025-10-24T14:25:38.567371"
+    },
+    {
+      "date": "2025-06-21",
+      "status": "PASS",
+      "source_boat_count": 36,
+      "database_boat_count": 36,
+      "matches": 36,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:41.226552"
+    },
+    {
+      "date": "2025-06-22",
+      "status": "PASS",
+      "source_boat_count": 33,
+      "database_boat_count": 33,
+      "matches": 33,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:43.856561"
+    },
+    {
+      "date": "2025-06-23",
+      "status": "PASS",
+      "source_boat_count": 34,
+      "database_boat_count": 34,
+      "matches": 34,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:46.417729"
+    },
+    {
+      "date": "2025-06-24",
+      "status": "PASS",
+      "source_boat_count": 30,
+      "database_boat_count": 30,
+      "matches": 30,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:49.030130"
+    },
+    {
+      "date": "2025-06-25",
+      "status": "PASS",
+      "source_boat_count": 32,
+      "database_boat_count": 32,
+      "matches": 32,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:51.772690"
+    },
+    {
+      "date": "2025-06-26",
+      "status": "PASS",
+      "source_boat_count": 32,
+      "database_boat_count": 31,
+      "matches": 32,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:25:54.343065"
+    },
+    {
+      "date": "2025-06-27",
+      "status": "FAIL",
+      "source_boat_count": 43,
+      "database_boat_count": 42,
+      "matches": 42,
+      "mismatches": [
+        {
+          "boat": "Eldorado",
+          "errors": [
+            "Species count mismatch: 'calico bass' source=12 db=7",
+            "Species count mismatch: 'whitefish' source=40 db=39",
+            "Species count mismatch: 'rockfish' source=70 db=68",
+            "Extra species: 'sculpin' (count=1) in database but not on source page",
+            "Extra species: 'sanddab' (count=10) in database but not on source page"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'calico bass' source=12 db=7",
+        "Species count mismatch: 'whitefish' source=40 db=39",
+        "Species count mismatch: 'rockfish' source=70 db=68",
+        "Extra species: 'sculpin' (count=1) in database but not on source page",
+        "Extra species: 'sanddab' (count=10) in database but not on source page"
+      ],
+      "timestamp": "2025-10-24T14:25:56.920400"
+    },
+    {
+      "date": "2025-06-28",
+      "status": "FAIL",
+      "source_boat_count": 50,
+      "database_boat_count": 48,
+      "matches": 48,
+      "mismatches": [
+        {
+          "boat": "Eldorado",
+          "errors": [
+            "Missing species: 'sheephead (up to 14 pounds)' (count=50) not in database",
+            "Missing species: 'calico bass (up to 6 pounds)' (count=31) not in database",
+            "Missing species: 'white seabass (up to 40 pounds)' (count=5) not in database",
+            "Extra species: 'sheephead' (count=50) in database but not on source page",
+            "Extra species: 'calico bass' (count=71) in database but not on source page",
+            "Extra species: 'white seabass' (count=5) in database but not on source page"
+          ]
+        },
+        {
+          "boat": "Thunderbird",
+          "errors": [
+            "Species count mismatch: 'yellowtail' source=42 db=43"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Missing species: 'sheephead (up to 14 pounds)' (count=50) not in database",
+        "Missing species: 'calico bass (up to 6 pounds)' (count=31) not in database",
+        "Missing species: 'white seabass (up to 40 pounds)' (count=5) not in database",
+        "Extra species: 'sheephead' (count=50) in database but not on source page",
+        "Extra species: 'calico bass' (count=71) in database but not on source page",
+        "Extra species: 'white seabass' (count=5) in database but not on source page",
+        "Species count mismatch: 'yellowtail' source=42 db=43"
+      ],
+      "timestamp": "2025-10-24T14:25:59.499899"
+    },
+    {
+      "date": "2025-06-29",
+      "status": "FAIL",
+      "source_boat_count": 38,
+      "database_boat_count": 37,
+      "matches": 37,
+      "mismatches": [
+        {
+          "boat": "Eldorado",
+          "errors": [
+            "Species count mismatch: 'sculpin' source=39 db=35",
+            "Species count mismatch: 'sheephead' source=24 db=26",
+            "Species count mismatch: 'blue perch' source=24 db=39",
+            "Species count mismatch: 'rockfish' source=158 db=160"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'sculpin' source=39 db=35",
+        "Species count mismatch: 'sheephead' source=24 db=26",
+        "Species count mismatch: 'blue perch' source=24 db=39",
+        "Species count mismatch: 'rockfish' source=158 db=160"
+      ],
+      "timestamp": "2025-10-24T14:26:02.133322"
+    },
+    {
+      "date": "2025-06-30",
+      "status": "PASS",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 24,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:26:04.703571"
+    }
+  ],
+  "timestamp": "2025-10-24T14:26:04.704113"
+}

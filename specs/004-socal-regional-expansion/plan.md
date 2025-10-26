@@ -74,7 +74,7 @@ fish-scraper/
 ├── boats_scraper.py           # MODIFY: Change BASE_URL (line 46)
 ├── check_scraper_status.py    # USE: Pre-scraping validation
 ├── validate_data.py           # USE: Post-scraping validation
-├── requirements.txt           # NO CHANGE: Dependencies already installed
+├── scripts/python/requirements.txt           # NO CHANGE: Dependencies already installed
 └── SCRAPER_DOCS.md            # UPDATE: Document regional expansion
 ```
 
@@ -228,7 +228,7 @@ EXPECTED_SAN_DIEGO_LANDINGS = [
 **Test 1: Single Day Dry Run**
 ```bash
 # Dry run for October 13, 2025 (known good data from Phase 0)
-python3 boats_scraper.py \
+python3 scripts/python/boats_scraper.py \
   --start-date 2025-10-13 \
   --end-date 2025-10-13 \
   --dry-run
@@ -248,7 +248,7 @@ python3 boats_scraper.py \
 **Test 2: Multi-Day Dry Run**
 ```bash
 # Test 3-day range to validate date iteration
-python3 boats_scraper.py \
+python3 scripts/python/boats_scraper.py \
   --start-date 2025-10-13 \
   --end-date 2025-10-15 \
   --dry-run
@@ -300,7 +300,7 @@ print(f"Scrape range: {start_date} to {end_date}")
 **Step 2: Production Scrape**
 ```bash
 # Execute 30-day backfill (estimated 2-3 hours with delays)
-python3 boats_scraper.py \
+python3 scripts/python/boats_scraper.py \
   --start-date 2025-09-16 \
   --end-date 2025-10-16
 
@@ -455,7 +455,7 @@ print('Database trip:', result.data[0])
 
 ```bash
 # Update database with latest week
-python3 boats_scraper.py --start-date $(date -v-7d +%Y-%m-%d)
+python3 scripts/python/boats_scraper.py --start-date $(date -v-7d +%Y-%m-%d)
 ```
 
 ## Monthly Validation

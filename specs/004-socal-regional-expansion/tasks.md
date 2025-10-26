@@ -32,13 +32,13 @@ The `socal_scraper.py` has a parsing issue where it sometimes creates city-name 
 ### Quick Start for New Team:
 ```bash
 # Test the scraper (dry-run)
-python3 socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12 --dry-run
+python3 scripts/python/socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12 --dry-run
 
 # Run 30-day backfill (production)
-python3 socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
+python3 scripts/python/socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
 
 # Check database
-python3 -c "from socal_scraper import init_supabase; s=init_supabase(); print(s.table('landings').select('name').execute())"
+PYTHONPATH=scripts/python python3 -c "from socal_scraper import init_supabase; s=init_supabase(); print(s.table('landings').select('name').execute())"
 ```
 
 ### Important Notes:
@@ -120,7 +120,7 @@ This preserves San Diego data integrity and allows for SoCal-specific parser log
 
 - [x] T006 Single-date production test (October 12, 2025)
   ```bash
-  python3 socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12
+  python3 scripts/python/socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12
   ```
   - ✅ Inserted 22 real trips into production database
   - ✅ Created 7 new landings (22nd Street, Channel Islands SF, Dana Wharf, Davey's Locker, Long Beach SF, Marina Del Rey SF, Pierpoint)
@@ -162,7 +162,7 @@ Phase 2 dry-run testing is OPTIONAL - can proceed directly to Phase 3 production
 
 - [ ] T009 **[OPTIONAL]** Execute single-day dry run (October 13, 2025)
   ```bash
-  python3 socal_scraper.py --start-date 2025-10-13 --end-date 2025-10-13 --dry-run
+  python3 scripts/python/socal_scraper.py --start-date 2025-10-13 --end-date 2025-10-13 --dry-run
   ```
   - Verify landings detected in logs
   - Verify trips parsed
@@ -189,7 +189,7 @@ Phase 2 dry-run testing is OPTIONAL - can proceed directly to Phase 3 production
 - [x] T014 Execute production scrape with monitoring
   ```bash
   # Terminal 1: Run scraper
-  python3 socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
+  python3 scripts/python/socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
   ```
   - ✅ **31 dates processed** (100% coverage)
   - ✅ **515 trips found** across all SoCal landings
@@ -201,7 +201,7 @@ Phase 2 dry-run testing is OPTIONAL - can proceed directly to Phase 3 production
 
 - [x] T015 Generate post-scraping validation report
   ```bash
-  python3 validate_socal_coverage.py
+  python3 scripts/python/validate_socal_coverage.py
   ```
   - ✅ **19 total landings** (9 SoCal + 10 San Diego)
   - ✅ **40 SoCal boats** created/associated correctly
@@ -213,7 +213,7 @@ Phase 2 dry-run testing is OPTIONAL - can proceed directly to Phase 3 production
 
 - [x] T016 Validate post-scraping data quality
   ```bash
-  python3 validate_socal_coverage.py
+  python3 scripts/python/validate_socal_coverage.py
   ```
   - ✅ All 9 SoCal landings verified:
     - Dana Wharf Sportfishing: 127 trips
@@ -362,7 +362,7 @@ Phase 2 dry-run testing is OPTIONAL - can proceed directly to Phase 3 production
 
   ## Weekly Scraping
   ```bash
-  python3 boats_scraper.py --start-date $(date -v-7d +%Y-%m-%d)
+  python3 scripts/python/boats_scraper.py --start-date $(date -v-7d +%Y-%m-%d)
   ```
 
   ## Monthly Validation

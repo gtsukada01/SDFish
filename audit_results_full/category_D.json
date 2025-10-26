@@ -1,0 +1,2206 @@
+[
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/analyze.md",
+    "file_name": "analyze.md",
+    "analysis_date": "2025-10-25T20:47:59.560461",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/analyze.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/clarify.md",
+    "file_name": "clarify.md",
+    "analysis_date": "2025-10-25T20:47:59.547310",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/clarify.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/implement.md",
+    "file_name": "implement.md",
+    "analysis_date": "2025-10-25T20:48:02.400270",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/implement.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/specify.md",
+    "file_name": "specify.md",
+    "analysis_date": "2025-10-25T20:48:02.212220",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.codex/prompts/specify.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/check-prerequisites.sh",
+    "file_name": "check-prerequisites.sh",
+    "analysis_date": "2025-10-25T20:48:07.624285",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/check-prerequisites.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/create-new-feature.sh",
+    "file_name": "create-new-feature.sh",
+    "analysis_date": "2025-10-25T20:48:10.028678",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/create-new-feature.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/setup-plan.sh",
+    "file_name": "setup-plan.sh",
+    "analysis_date": "2025-10-25T20:48:09.969303",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/scripts/bash/setup-plan.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/agent-file-template.md",
+    "file_name": "agent-file-template.md",
+    "analysis_date": "2025-10-25T20:48:10.547427",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/agent-file-template.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/plan-template.md",
+    "file_name": "plan-template.md",
+    "analysis_date": "2025-10-25T20:48:12.669117",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/plan-template.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/spec-template.md",
+    "file_name": "spec-template.md",
+    "analysis_date": "2025-10-25T20:48:12.714139",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/.specify/templates/spec-template.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-03-01.json",
+    "file_name": "trips_2025-03-01.json",
+    "analysis_date": "2025-10-25T20:51:40.088760",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-03-01.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-04-05.json",
+    "file_name": "trips_2025-04-05.json",
+    "analysis_date": "2025-10-25T20:51:40.956983",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-04-05.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-08.json",
+    "file_name": "trips_2025-05-08.json",
+    "analysis_date": "2025-10-25T20:51:41.159821",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-08.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-14.json",
+    "file_name": "trips_2025-05-14.json",
+    "analysis_date": "2025-10-25T20:51:42.156200",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-14.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-23.json",
+    "file_name": "trips_2025-05-23.json",
+    "analysis_date": "2025-10-25T20:51:42.832503",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-05-23.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-03.json",
+    "file_name": "trips_2025-06-03.json",
+    "analysis_date": "2025-10-25T20:51:43.752709",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-03.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-04.json",
+    "file_name": "trips_2025-06-04.json",
+    "analysis_date": "2025-10-25T20:51:43.831988",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-04.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-06.json",
+    "file_name": "trips_2025-06-06.json",
+    "analysis_date": "2025-10-25T20:51:44.871752",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-06.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-07.json",
+    "file_name": "trips_2025-06-07.json",
+    "analysis_date": "2025-10-25T20:51:45.574602",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-07.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-11.json",
+    "file_name": "trips_2025-06-11.json",
+    "analysis_date": "2025-10-25T20:51:46.471515",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-11.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-13.json",
+    "file_name": "trips_2025-06-13.json",
+    "analysis_date": "2025-10-25T20:51:46.496715",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-13.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-20.json",
+    "file_name": "trips_2025-06-20.json",
+    "analysis_date": "2025-10-25T20:51:47.511996",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-20.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-26.json",
+    "file_name": "trips_2025-06-26.json",
+    "analysis_date": "2025-10-25T20:51:48.355202",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-26.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-27.json",
+    "file_name": "trips_2025-06-27.json",
+    "analysis_date": "2025-10-25T20:51:49.184437",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-27.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-28.json",
+    "file_name": "trips_2025-06-28.json",
+    "analysis_date": "2025-10-25T20:51:49.139678",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-28.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-29.json",
+    "file_name": "trips_2025-06-29.json",
+    "analysis_date": "2025-10-25T20:51:50.268147",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-06-29.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-01.json",
+    "file_name": "trips_2025-07-01.json",
+    "analysis_date": "2025-10-25T20:51:51.036247",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-01.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-06.json",
+    "file_name": "trips_2025-07-06.json",
+    "analysis_date": "2025-10-25T20:51:51.824448",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-06.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-09.json",
+    "file_name": "trips_2025-07-09.json",
+    "analysis_date": "2025-10-25T20:51:51.817489",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-09.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-20.json",
+    "file_name": "trips_2025-07-20.json",
+    "analysis_date": "2025-10-25T20:51:52.993998",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-20.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-23.json",
+    "file_name": "trips_2025-07-23.json",
+    "analysis_date": "2025-10-25T20:51:53.857657",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-23.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-25.json",
+    "file_name": "trips_2025-07-25.json",
+    "analysis_date": "2025-10-25T20:51:54.450257",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-25.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-27.json",
+    "file_name": "trips_2025-07-27.json",
+    "analysis_date": "2025-10-25T20:51:54.457151",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/backups/phase2/trips_2025-07-27.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/frontend/verify-shadcn-sidebar.js",
+    "file_name": "verify-shadcn-sidebar.js",
+    "analysis_date": "2025-10-25T20:52:30.776351",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/frontend/verify-shadcn-sidebar.js' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_aug_sep_FINAL.json",
+    "file_name": "socal_qc_aug_sep_FINAL.json",
+    "analysis_date": "2025-10-25T20:52:31.353846",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_aug_sep_FINAL.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_aug_sep_backfill.json",
+    "file_name": "socal_qc_aug_sep_backfill.json",
+    "analysis_date": "2025-10-25T20:52:31.906668",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_aug_sep_backfill.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_fixed.json",
+    "file_name": "socal_qc_june_fixed.json",
+    "analysis_date": "2025-10-25T20:52:33.925150",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_fixed.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_july_final.json",
+    "file_name": "socal_qc_june_july_final.json",
+    "analysis_date": "2025-10-25T20:52:33.919256",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_july_final.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_july_retest.json",
+    "file_name": "socal_qc_june_july_retest.json",
+    "analysis_date": "2025-10-25T20:52:34.598457",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_july_retest.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_oct_final.json",
+    "file_name": "socal_qc_june_oct_final.json",
+    "analysis_date": "2025-10-25T20:52:36.197717",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_oct_final.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_retest.json",
+    "file_name": "socal_qc_june_retest.json",
+    "analysis_date": "2025-10-25T20:52:36.441561",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/logs/socal_qc_june_retest.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/notes/2025-10-22-modernization-kickoff.md",
+    "file_name": "2025-10-22-modernization-kickoff.md",
+    "analysis_date": "2025-10-25T20:52:41.234533",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/notes/2025-10-22-modernization-kickoff.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/risks/012-modernize-frontend.md",
+    "file_name": "012-modernize-frontend.md",
+    "analysis_date": "2025-10-25T20:52:41.414195",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/risks/012-modernize-frontend.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/generate-from-schemas.mjs",
+    "file_name": "generate-from-schemas.mjs",
+    "analysis_date": "2025-10-25T20:52:47.936947",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/generate-from-schemas.mjs' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_chain_remaining.sh",
+    "file_name": "auto_chain_remaining.sh",
+    "analysis_date": "2025-10-25T20:52:59.688890",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_chain_remaining.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_complete_2025.sh",
+    "file_name": "auto_complete_2025.sh",
+    "analysis_date": "2025-10-25T20:53:00.146693",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_complete_2025.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_phase2.sh",
+    "file_name": "auto_phase2.sh",
+    "analysis_date": "2025-10-25T20:53:01.310807",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_phase2.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_phase5.sh",
+    "file_name": "auto_phase5.sh",
+    "analysis_date": "2025-10-25T20:53:01.993213",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_phase5.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_remediate.sh",
+    "file_name": "auto_remediate.sh",
+    "analysis_date": "2025-10-25T20:53:02.588168",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_remediate.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_scrape_jan_sep_2025.sh",
+    "file_name": "auto_scrape_jan_sep_2025.sh",
+    "analysis_date": "2025-10-25T20:53:02.858273",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/auto_scrape_jan_sep_2025.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/run_september.sh",
+    "file_name": "run_september.sh",
+    "analysis_date": "2025-10-25T20:53:04.816807",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/scripts/shell/run_september.sh' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/catch-table.mock.json",
+    "file_name": "catch-table.mock.json",
+    "analysis_date": "2025-10-25T20:53:10.808284",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/catch-table.mock.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/status.mock.json",
+    "file_name": "status.mock.json",
+    "analysis_date": "2025-10-25T20:53:12.758654",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/status.mock.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json",
+    "file_name": "summary-metrics.mock.json",
+    "analysis_date": "2025-10-25T20:53:13.610013",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md",
+    "file_name": "phase4-dashboard-validation.md",
+    "analysis_date": "2025-10-25T20:53:26.540644",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json",
+    "file_name": "migration_report_dry_run_20251016_175053.json",
+    "analysis_date": "2025-10-25T20:53:32.225071",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json",
+    "file_name": "migration_report_production_20251016_180315.json",
+    "analysis_date": "2025-10-25T20:53:33.599963",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt",
+    "file_name": "diagnostic_dates_boat_374.txt",
+    "analysis_date": "2025-10-25T20:53:40.914468",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt",
+    "file_name": "diagnostic_dates_boat_375.txt",
+    "analysis_date": "2025-10-25T20:53:41.750301",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/execute_remediation.py",
+    "file_name": "execute_remediation.py",
+    "analysis_date": "2025-10-25T20:53:44.789076",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/execute_remediation.py' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/run_diagnostic_qc.py",
+    "file_name": "run_diagnostic_qc.py",
+    "analysis_date": "2025-10-25T20:53:50.382273",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/008-phantom-trip-investigation/run_diagnostic_qc.py' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md",
+    "file_name": "PRODUCTION_RUN_SUMMARY.md",
+    "analysis_date": "2025-10-25T20:53:52.126373",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/evidence/trip_11129_evidence.json",
+    "file_name": "trip_11129_evidence.json",
+    "analysis_date": "2025-10-25T20:53:55.087731",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/specs/009-continuous-data-audit/evidence/trip_11129_evidence.json' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/sql/create_trip_collisions_table.sql",
+    "file_name": "create_trip_collisions_table.sql",
+    "analysis_date": "2025-10-25T20:54:06.885948",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/sql/create_trip_collisions_table.sql' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/sql/migrate_constraint.sql",
+    "file_name": "migrate_constraint.sql",
+    "analysis_date": "2025-10-25T20:54:06.786444",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/sql/migrate_constraint.sql' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/sql/remove_unique_constraint.sql",
+    "file_name": "remove_unique_constraint.sql",
+    "analysis_date": "2025-10-25T20:54:07.204814",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/sql/remove_unique_constraint.sql' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/api/client.spec.ts",
+    "file_name": "client.spec.ts",
+    "analysis_date": "2025-10-25T20:54:07.672524",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/api/client.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/test-date-filter.spec.ts",
+    "file_name": "test-date-filter.spec.ts",
+    "analysis_date": "2025-10-25T20:54:12.601680",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/test-date-filter.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filter-panel-verification.spec.ts",
+    "file_name": "filter-panel-verification.spec.ts",
+    "analysis_date": "2025-10-25T20:54:12.745812",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filter-panel-verification.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-complete-report.spec.ts",
+    "file_name": "filterpanel-complete-report.spec.ts",
+    "analysis_date": "2025-10-25T20:54:14.677386",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-complete-report.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-diagnostic.spec.ts",
+    "file_name": "filterpanel-diagnostic.spec.ts",
+    "analysis_date": "2025-10-25T20:54:14.827586",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-diagnostic.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-final-verify.spec.ts",
+    "file_name": "filterpanel-final-verify.spec.ts",
+    "analysis_date": "2025-10-25T20:54:15.080692",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-final-verify.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-verified.spec.ts",
+    "file_name": "filterpanel-verified.spec.ts",
+    "analysis_date": "2025-10-25T20:54:15.143911",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/filterpanel-verified.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/inspect-badges.spec.ts",
+    "file_name": "inspect-badges.spec.ts",
+    "analysis_date": "2025-10-25T20:54:17.491745",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/inspect-badges.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/support/mock-fixtures.ts",
+    "file_name": "mock-fixtures.ts",
+    "analysis_date": "2025-10-25T20:54:17.512905",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/support/mock-fixtures.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  },
+  {
+    "file_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/verify-filter-panel.spec.ts",
+    "file_name": "verify-filter-panel.spec.ts",
+    "analysis_date": "2025-10-25T20:54:19.599535",
+    "phase": "1",
+    "static_analysis": {
+      "code_references": 0,
+      "files_referencing": [],
+      "config_references": [],
+      "config_count": 0,
+      "doc_references": 0,
+      "docs_mentioning": [],
+      "total_references": 0
+    },
+    "dynamic_analysis": null,
+    "classification": {
+      "category": "D",
+      "category_name": "DELETE",
+      "confidence_score": 75,
+      "recommendation": "SAFE_TO_DELETE",
+      "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+      "critical_pattern_match": false,
+      "historical_value": false,
+      "dynamic_validation": false
+    },
+    "recommendation": "SAFE_TO_DELETE",
+    "justification": "Zero references found. Not a critical pattern. No historical value. Orphaned artifact. (Phase 1: No dynamic validation)",
+    "action_command": "python3 scripts/python/safe_delete.py --file '/Users/btsukada/Desktop/Fishing/fish-scraper/tests/ui/verify-filter-panel.spec.ts' --operator user@example.com --reason 'Orphaned artifact' --dry-run"
+  }
+]

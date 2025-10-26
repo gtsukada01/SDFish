@@ -347,7 +347,7 @@ All testing steps were completed successfully:
 ### ✅ Pre-Fix Verification (COMPLETED)
 ```bash
 # Verified bug exists
-python3 seaforth-rescrape-validation/rescrape_validator.py
+python3 archive/legacy/seaforth-rescrape-validation/rescrape_validator.py
 # Result: FAILED at Phase 3 with "0 Seaforth trips found" ✅
 ```
 
@@ -405,7 +405,7 @@ for date in test_dates:
 **Step 3: Run Full Validation Script** ✅
 ```bash
 # Should now pass Phase 3 and proceed to Phase 4
-python3 seaforth-rescrape-validation/rescrape_validator.py
+python3 archive/legacy/seaforth-rescrape-validation/rescrape_validator.py
 ```
 
 **Actual Output**:

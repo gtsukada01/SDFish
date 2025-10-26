@@ -93,7 +93,7 @@ EOF
 **Step 2: Run QC Validator**
 ```bash
 # Validate ALL affected dates against source
-python3 qc_validator.py \
+python3 scripts/python/qc_validator.py \
   --dates-file unmatched_dates_for_qc.txt \
   --output qc_diagnostic_report.json \
   --verbose \
@@ -461,7 +461,7 @@ with open('remediation_audit_log.json', 'w') as f:
 **Step 1: Re-run QC Validator on ALL 105 Dates**
 ```bash
 # Validate same dates that were investigated
-python3 qc_validator.py \
+python3 scripts/python/qc_validator.py \
   --dates-file unmatched_dates_for_qc.txt \
   --output qc_post_remediation.json \
   --strict-mode

@@ -195,8 +195,8 @@ calico bass
 - ✅ `src/lib/utils.ts` - Removed normalization logs
 
 ### Build Files
-- ✅ `assets/main.js` - Rebuilt with all changes
-- ✅ `assets/styles.css` - Rebuilt for text-3xl classes
+- ✅ `frontend/assets/main.js` - Rebuilt with all changes
+- ✅ `frontend/assets/styles.css` - Rebuilt for text-3xl classes
 
 ## Testing Performed
 

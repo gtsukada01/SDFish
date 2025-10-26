@@ -1,0 +1,149 @@
+{
+  "date_range": {
+    "start": "2025-02-21",
+    "end": "2025-02-28"
+  },
+  "summary": {
+    "total_dates": 8,
+    "passed": 3,
+    "failed": 4,
+    "errors": 0,
+    "skipped": 1,
+    "effective_dates": 7,
+    "pass_rate": 42.86
+  },
+  "reports": [
+    {
+      "date": "2025-02-21",
+      "status": "FAIL",
+      "source_boat_count": 3,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "3/4 Day",
+          "anglers": 30
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:32.395655"
+    },
+    {
+      "date": "2025-02-22",
+      "status": "FAIL",
+      "source_boat_count": 13,
+      "database_boat_count": 10,
+      "matches": 10,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Patriot (SD)",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day PMMexican Waters",
+          "anglers": 9
+        },
+        {
+          "boat": "Patriot (SD)",
+          "landing": "H&M Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 9
+        },
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day TwilightLocal",
+          "anglers": 13
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:35.169495"
+    },
+    {
+      "date": "2025-02-23",
+      "status": "PASS",
+      "source_boat_count": 9,
+      "database_boat_count": 9,
+      "matches": 9,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:37.893374"
+    },
+    {
+      "date": "2025-02-24",
+      "status": "PASS",
+      "source_boat_count": 2,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:40.688663"
+    },
+    {
+      "date": "2025-02-25",
+      "status": "SKIPPED",
+      "reason": "Dock Totals duplicate - shows 2025-02-24 content",
+      "deleted_trips": 2,
+      "timestamp": "2025-10-22T14:20:43.302139"
+    },
+    {
+      "date": "2025-02-26",
+      "status": "FAIL",
+      "source_boat_count": 3,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day AM",
+          "anglers": 8
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:45.986098"
+    },
+    {
+      "date": "2025-02-27",
+      "status": "PASS",
+      "source_boat_count": 2,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:48.624315"
+    },
+    {
+      "date": "2025-02-28",
+      "status": "FAIL",
+      "source_boat_count": 3,
+      "database_boat_count": 2,
+      "matches": 2,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Chubasco II",
+          "landing": "Oceanside Sea Center",
+          "trip_type": "1/2 Day TwilightLocal",
+          "anglers": 20
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-22T14:20:51.304778"
+    }
+  ],
+  "timestamp": "2025-10-22T14:20:51.305397"
+}

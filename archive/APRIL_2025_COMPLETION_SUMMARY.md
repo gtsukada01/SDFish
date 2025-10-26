@@ -79,12 +79,12 @@ Updated `check_trip_exists()` function in `boats_scraper.py` (lines 401-424) to 
 ### SPEC 006 Progressive Workflow
 1. **Scrape 5-date batch**
    ```bash
-   python3 boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
+   python3 scripts/python/boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
    ```
 
 2. **Immediately QC validate**
    ```bash
-   python3 qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_batch.json
+   python3 scripts/python/qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_batch.json
    ```
 
 3. **Verify 100% pass rate**

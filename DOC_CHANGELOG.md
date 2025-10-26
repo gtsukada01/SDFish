@@ -4,6 +4,26 @@
 
 ---
 
+## [2025-10-26 15:00:33] Archived: post_remediation_qc.log
+
+**Action**: Moved to archive/logs/
+**Original Path**: `specs/008-phantom-trip-investigation/post_remediation_qc.log`
+**Archive Path**: `archive/logs/post_remediation_qc.log`
+**Reason**: Archival per SPEC-013 file cleanup
+**Governed By**: SPEC-013 File Auditing & Cleanup System
+
+---
+
+## [2025-10-26 15:00:33] Archived: socal_qc_june_retest.log
+
+**Action**: Moved to archive/logs/
+**Original Path**: `logs/socal_qc_june_retest.log`
+**Archive Path**: `archive/logs/socal_qc_june_retest.log`
+**Reason**: Archival per SPEC-013 file cleanup
+**Governed By**: SPEC-013 File Auditing & Cleanup System
+
+---
+
 ## 2025-10-23 (Late Evening): SOCAL JAN-SEP 2025 QC VALIDATION - CRITICAL ISSUES FOUND
 
 ### Changes Made

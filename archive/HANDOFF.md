@@ -41,7 +41,7 @@ Successfully implemented **Phase 1 + Phase 2 of SPEC-010: Pipeline Hardening & F
 **Test Results**:
 ```bash
 # Test: Request future date 10/25, source serves 10/18 (fallback)
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
 
 # Result: ✅ BLOCKED
 ❌ DATE MISMATCH DETECTED
@@ -68,7 +68,7 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 **Test Results**:
 ```bash
 # Test: Request future date 10/25 without override (today is 10/19)
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 
 # Result: ✅ BLOCKED
 ❌ FUTURE DATE DETECTED
@@ -159,7 +159,7 @@ Scrape Request: 2025-10-25 (future date)
 
 **Test Command**:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
 ```
 
 **Test Result**: ✅ PASSED - Phantom data scenario completely blocked
@@ -181,7 +181,7 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 **Test Results**:
 ```bash
 # Test: Scrape today at 12:49 PM PT (before 5pm)
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 # Result: ✅ BLOCKED
 ❌ EARLY SCRAPING BLOCKED
@@ -213,7 +213,7 @@ python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 **Test Results**:
 ```bash
 # Test: Code integration with dry-run
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 # Result: ✅ PASSED
 - Parsed 16 trips successfully
@@ -268,7 +268,7 @@ Scrape Request: 2025-10-19 (today, 12:49 PM PT)
 
 **Test Command**:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run --allow-early
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run --allow-early
 ```
 
 **Test Result**: ✅ PASSED - Triple-layered defense validated (FR-004 override doesn't bypass FR-001)
@@ -363,7 +363,7 @@ python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 #### Test 1: FR-001 Normal Date Validation
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 - ✅ Source date validated: 2025-10-17 matches requested 2025-10-17
 - ✅ Parsed 14 trips successfully
@@ -371,7 +371,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 #### Test 2: FR-002 Future Date Without Override
 ```bash
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 ```
 - ✅ Detected future date: 6 days ahead
 - ✅ Blocked with FutureDateError
@@ -379,7 +379,7 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 
 #### Test 3: FR-002 + FR-001 Double-Safeguard
 ```bash
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
 ```
 - ✅ FR-002 bypassed with warning
 - ✅ FR-001 caught mismatch (requested 10/25, actual 10/18)
@@ -388,7 +388,7 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 
 #### Test 4: FR-003 Audit Logging Dry-Run
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 - ✅ Operator auto-detected: "Gtsukada01" (from Git config)
 - ✅ Operator source detected: "cron" (non-tty execution)
@@ -397,7 +397,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 #### Test 5: FR-003 Audit Logging Real Scrape
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --operator "Claude Code (Test)"
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --operator "Claude Code (Test)"
 ```
 - ✅ Created scrape_job #1 with complete metadata
 - ✅ Git SHA captured: "2a668bde"
@@ -409,7 +409,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --operato
 
 #### Test 6: FR-004 Early Scraping Guard
 ```bash
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 ```
 - ✅ Current Pacific Time: 2025-10-19 12:49 PDT
 - ✅ Early scraping blocked: "Scraping today's data (2025-10-19) before 17:00 PT"
@@ -417,7 +417,7 @@ python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 #### Test 7: FR-004 + FR-001 Triple-Safeguard
 ```bash
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run --allow-early
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run --allow-early
 ```
 - ✅ FR-004 bypassed with warning: "EARLY SCRAPING OVERRIDE ENABLED"
 - ✅ Proceeded to fetch page (fallback from 10/18 detected)
@@ -426,7 +426,7 @@ python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 #### Test 8: FR-005 Code Integration
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 - ✅ Dry-run functional with new hash code
 - ✅ No errors from compute_trip_hash() function
@@ -516,7 +516,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 **2. Test Complete System** ✅
    ```bash
    # Test all safeguards with dry-run
-   python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+   python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
    # Verify:
    # - FR-001: Source date validation ✅
@@ -529,7 +529,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 **3. Recovery Scrape for 10/18** (Missing Date)
    ```bash
    # Scrape 10/18 with all safeguards enabled
-   python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 --operator "Recovery Team"
+   python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 --operator "Recovery Team"
 
    # Expected: ~17 trips inserted with complete audit trail
    ```
@@ -674,11 +674,11 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 - [ ] Verify both migrations completed successfully (scrape_jobs + trip_hash)
 - [ ] Run test command to validate all Phase 1+2 safeguards:
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
   ```
 - [ ] Test early scraping guard (should block before 5pm PT):
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
   ```
 - [ ] Recovery scrape for 10/18 (missing date)
 - [ ] Check git status and commit Phase 1+2 changes

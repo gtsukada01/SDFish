@@ -359,6 +359,173 @@ Brief explanation of why these changes were necessary
 
 ---
 
+## File Auditing Procedures (SPEC-013)
+
+**Status**: ✅ PRODUCTION (Phase 1-4 Complete - Oct 25, 2025)
+**Purpose**: AI-powered file classification and cleanup with safety guarantees
+
+### Automated File Auditing System
+
+**SPEC-013 File Auditing & Cleanup System** provides enterprise-grade tools for safe file management with comprehensive audit trails. All tools located in `scripts/python/` and `scripts/shell/`.
+
+### File Categories
+
+**Category A - CRITICAL** (Never Delete):
+- Master documentation (README.md, annual reports, DOC_CHANGELOG.md, etc.)
+- Core application code (frontend/src/, scripts/python/, migrations/)
+- Build & configuration files (package.json, tsconfig.json, etc.)
+- Active specifications (specs/**/spec.md)
+
+**Category B - ACTIVE** (Keep):
+- Files with active code references (imports, includes)
+- Files referenced in configuration
+- Files mentioned in documentation
+
+**Category C - ARCHIVE** (Move to archive/):
+- QC logs and validation reports (qc_*.json)
+- Scraper logs (SCRAPE_*.json, *.log)
+- Monthly completion reports (*_COMPLETE.md)
+- Session summaries (SESSION_*.md)
+- Database backups and snapshots
+
+**Category D - DELETE** (Safe to Remove):
+- Orphaned files with zero references
+- Build artifacts no longer needed
+- Temporary test files
+- **Requires ≥75% confidence score for auto-deletion**
+
+### Auditing Tools
+
+**1. audit_file.py** - Single file classification
+```bash
+# Audit single file (with dynamic validation)
+python3 scripts/python/audit_file.py --file path/to/file.md
+
+# Audit with static analysis only (faster)
+python3 scripts/python/audit_file.py --file path/to/file.md --skip-dynamic
+
+# Output to JSON
+python3 scripts/python/audit_file.py --file path/to/file.md --output audit_result.json
+```
+
+**2. batch_audit.py** - Parallel batch auditing
+```bash
+# Audit entire directory with 4 parallel workers
+python3 scripts/python/batch_audit.py --dir . --output audit_results/ --workers 4
+
+# Skip expensive dynamic validation
+python3 scripts/python/batch_audit.py --dir . --output audit_results/ --skip-dynamic
+```
+
+**3. safe_delete.py** - Backup-first deletion
+```bash
+# Preview deletion (dry-run)
+python3 scripts/python/safe_delete.py --file orphaned.txt --operator user@example.com --reason "Orphaned file" --dry-run
+
+# Actually delete (creates backup + audit trail)
+python3 scripts/python/safe_delete.py --file orphaned.txt --operator user@example.com --reason "Orphaned file"
+
+# Batch deletion from file list
+python3 scripts/python/safe_delete.py --batch delete_files.txt --operator user@example.com --reason "Cleanup"
+
+# Restore file from backup
+python3 scripts/python/safe_delete.py --restore archive/deleted-files/2025-10-25/orphaned.txt
+```
+
+**4. archive_file.py** - Documentation archival
+```bash
+# Archive with auto-detection
+python3 scripts/python/archive_file.py --file qc_old_log.json --auto-detect
+
+# Archive to specific category
+python3 scripts/python/archive_file.py --file SESSION_OLD.md --category docs
+
+# Batch archival
+python3 scripts/python/archive_file.py --batch archive_files.txt
+```
+
+**5. cleanup_orphans.sh** - End-to-end workflow
+```bash
+# Dry-run (preview what would happen)
+./scripts/shell/cleanup_orphans.sh --dir . --operator user@example.com --dry-run
+
+# Actual cleanup (audit → archive → delete → git commit)
+./scripts/shell/cleanup_orphans.sh --dir . --operator user@example.com
+```
+
+### Safety Guarantees
+
+**Backup-First Protocol**:
+- Every deletion creates backup in `archive/deleted-files/YYYY-MM-DD/`
+- Original file structure preserved in backup
+- SHA256 hash verification for integrity
+
+**Comprehensive Audit Trail**:
+- Every deletion logged in `archive/deleted-files/YYYY-MM-DD/AUDIT.json`
+- Operator, reason, timestamp, file hash recorded
+- Recovery command included for easy restoration
+
+**Documentation Compliance Enforcement** (NFR-003):
+- Master documents protected from deletion
+- Monthly completion reports automatically reclassified to ARCHIVE
+- Session summaries automatically reclassified to ARCHIVE
+- Violations blocked with clear error messages
+
+**Conservative Bias**:
+- When uncertain, recommend KEEP or MANUAL_REVIEW
+- Build failures → automatic reclassification to KEEP
+- ≥75% confidence required for auto-deletion
+- All edge cases flagged for manual review
+
+### Workflow Example
+
+```bash
+# 1. Run full audit on project
+python3 scripts/python/batch_audit.py --dir . --output audit_results/ --workers 4
+
+# 2. Review Category D files (safe to delete)
+cat audit_results/category_D.json | jq '.[] | select(.classification.recommendation == "SAFE_TO_DELETE") | .file_path'
+
+# 3. Archive Category C files (historical value)
+cat audit_results/category_C.json | jq -r '.[].file_path' > archive_files.txt
+python3 scripts/python/archive_file.py --batch archive_files.txt
+
+# 4. Delete safe Category D files
+cat audit_results/category_D.json | jq -r '.[] | select(.classification.recommendation == "SAFE_TO_DELETE") | .file_path' > delete_files.txt
+python3 scripts/python/safe_delete.py --batch delete_files.txt --operator user@example.com --reason "Automated cleanup per SPEC-013"
+
+# 5. Review AUDIT.json
+cat archive/deleted-files/$(date +%Y-%m-%d)/AUDIT.json | jq '.deletions | length'
+```
+
+### Integration with DOC_CHANGELOG.md
+
+**Automatic Updates**:
+- `archive_file.py` automatically updates DOC_CHANGELOG.md with archival entries
+- Includes original path, archive path, reason, timestamp
+- Maintains audit trail for documentation moves
+
+**Manual Updates Required**:
+- When using `safe_delete.py` (deletion, not archival)
+- When making other documentation changes
+- Follow DOC_CHANGELOG.md entry format template
+
+### Pre-Commit Checklist
+
+Before committing file cleanup results:
+
+- [ ] Review audit results (check category_*.json files)
+- [ ] Verify no master docs in DELETE category
+- [ ] Confirm backup creation (check archive/deleted-files/)
+- [ ] Verify AUDIT.json completeness
+- [ ] Update DOC_CHANGELOG.md if needed
+- [ ] Test critical functionality still works
+- [ ] Review git diff before commit
+
+**Reference**: See [specs/013-file-auditing-cleanup/spec.md](specs/013-file-auditing-cleanup/spec.md) for complete technical specification.
+
+---
+
 ## FAQ
 
 **Q: When should I create a new document?**

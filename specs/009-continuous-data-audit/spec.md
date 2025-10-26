@@ -403,7 +403,7 @@ except DatabaseError as e:
 **Cron Schedule**:
 ```bash
 # Daily at 2 AM PST
-0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 data_auditor.py --sample-size 50 --date-range 30 --report-dir specs/009-continuous-data-audit/audit_reports/
+0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 scripts/python/data_auditor.py --sample-size 50 --date-range 30 --report-dir specs/009-continuous-data-audit/audit_reports/
 ```
 
 **Configuration File** (`audit_config.yaml`):

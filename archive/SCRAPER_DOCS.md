@@ -71,7 +71,7 @@ fish-scraper/
 ├── boats_scraper.py            # ✅ MAIN SCRAPER (use this!)
 ├── check_scraper_status.py     # Helper: Check what dates need updating
 ├── validate_data.py            # Helper: Validate database integrity
-├── requirements.txt            # Python dependencies
+├── scripts/python/requirements.txt            # Python dependencies
 ├── boats_scraper.log           # Automatic logging output
 └── SCRAPER_DOCS.md             # This documentation
 ```
@@ -117,7 +117,7 @@ This prevents inserting the same trip twice (e.g., "Excel on 2025-09-25 for 1.5 
 ### Step 1: Install Python Dependencies
 ```bash
 cd /Users/btsukada/desktop/fishing/fish-scraper
-pip install -r requirements.txt
+pip install -r scripts/python/requirements.txt
 ```
 
 ### Step 2: Verify Supabase Connection
@@ -139,19 +139,19 @@ chmod +x boats_scraper.py
 #### 1. **Dry Run (Test Mode)**
 Test scraping without database modifications:
 ```bash
-python3 boats_scraper.py --start-date 2025-09-24 --end-date 2025-10-15 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-09-24 --end-date 2025-10-15 --dry-run
 ```
 
 #### 2. **Production Run (Update Database)**
 Scrape and insert into database:
 ```bash
-python3 boats_scraper.py --start-date 2025-09-24 --end-date 2025-10-15
+python3 scripts/python/boats_scraper.py --start-date 2025-09-24 --end-date 2025-10-15
 ```
 
 #### 3. **Single Day (Fast Test)**
 Scrape just one day:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
+python3 scripts/python/boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 ```
 
 ### Command-Line Arguments
@@ -168,17 +168,17 @@ python3 boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 ```bash
 START_DATE=$(date -v-7d +%Y-%m-%d)
 END_DATE=$(date +%Y-%m-%d)
-python3 boats_scraper.py --start-date $START_DATE --end-date $END_DATE
+python3 scripts/python/boats_scraper.py --start-date $START_DATE --end-date $END_DATE
 ```
 
 **Update from specific date to today:**
 ```bash
-python3 boats_scraper.py --start-date 2025-10-01
+python3 scripts/python/boats_scraper.py --start-date 2025-10-01
 ```
 
 **Quick test (single day, dry run):**
 ```bash
-python3 boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
 ```
 
 ---
@@ -279,7 +279,7 @@ Database Status:
 
 #### 2. **Validate Data Integrity**
 ```bash
-python3 validate_data.py
+python3 scripts/python/validate_data.py
 ```
 Checks:
 - All trips have valid boat_id
@@ -312,7 +312,7 @@ print(f'Latest trip: {result.data[0][\"trip_date\"]}')
 ### Dry Run Testing
 Always test with `--dry-run` first:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15 --dry-run
 ```
 
 Review logs for:
@@ -475,7 +475,7 @@ python3 check_scraper_status.py
 
 #### Monthly: Validate data integrity
 ```bash
-python3 validate_data.py
+python3 scripts/python/validate_data.py
 ```
 
 #### Quarterly: Review landing/boat names

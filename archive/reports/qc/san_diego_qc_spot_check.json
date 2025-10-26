@@ -1,0 +1,123 @@
+{
+  "date": "2025-10-17",
+  "status": "FAIL",
+  "source_boat_count": 19,
+  "database_boat_count": 41,
+  "matches": 19,
+  "mismatches": [],
+  "missing_boats": [],
+  "extra_boats": [
+    {
+      "boat": "Toronado",
+      "landing": "Pierpoint Landing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Amigo",
+      "landing": "22nd Street Landing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Gail Force",
+      "landing": "LA Waterfront Cruises and Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Monte Carlo",
+      "landing": "22nd Street Landing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Pursuit",
+      "landing": "22nd Street Landing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Sport King",
+      "landing": "LA Waterfront Cruises and Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Western Pride",
+      "landing": "Davey's Locker",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Clemente",
+      "landing": "Dana Wharf Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Dana Pride",
+      "landing": "Dana Wharf Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Fury",
+      "landing": "Dana Wharf Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Reel Fun",
+      "landing": "Dana Wharf Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Sum Fun",
+      "landing": "Dana Wharf Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Endeavor (Ventura)",
+      "landing": "Ventura Harbor Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Aloha Spirit",
+      "landing": "Channel Islands Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Estella",
+      "landing": "Hooks Landing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Gentleman",
+      "landing": "Channel Islands Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Island Fox",
+      "landing": "Channel Islands Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Mirage",
+      "landing": "Channel Islands Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Betty-O",
+      "landing": "Marina Del Rey Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "New Del Mar",
+      "landing": "Marina Del Rey Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Spitfire",
+      "landing": "Marina Del Rey Sportfishing",
+      "trip_date": "2025-10-17"
+    },
+    {
+      "boat": "Enterprise",
+      "landing": "Pierpoint Landing",
+      "trip_date": "2025-10-17"
+    }
+  ],
+  "field_errors": [],
+  "timestamp": "2025-10-23T14:10:22.790813"
+}

@@ -126,8 +126,8 @@ package.json       # Added React, shadcn, TanStack dependencies
 - esbuild + PostCSS for building
 
 ### Build Output
-- Bundle: `assets/main.js` (1.6MB)
-- CSS: `assets/styles.css` (1.6KB)
+- Bundle: `frontend/assets/main.js` (1.6MB)
+- CSS: `frontend/assets/styles.css` (1.6KB)
 - Source maps: 3.1MB (main.js.map)
 
 ### Performance

@@ -7,11 +7,24 @@
 .DS_Store
 
 # Dependencies
-node_modules/
+/frontend/node_modules/
+
+# Build outputs
+/frontend/assets/*.map
+/frontend/test-results/
+/frontend/.playwright-home/
 
 # Local reference assets
-\[backup\] index-realdata.html
 @index
-assets/
-test-results/
-.playwright-home/
+
+# Operational outputs (archived under archive/)
+/*.log
+/qc_*.json
+/SCRAPE_*.json
+/socal_*_scrape.log
+/backup_*.json
+/*_remediation.log
+
+# Preserve current baseline artifacts
+!qc_2025_full_audit.log
+!qc_2025_full_audit.json

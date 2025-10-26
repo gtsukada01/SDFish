@@ -61,4 +61,4 @@ A Southern California angler planning an offshore trip visits the dashboard to r
 - Offshore catch data is sourced from the existing Supabase project and may expand to cover at least 36 months of history.
 - Data-quality logging for blank/mismatched fields will feed a cleanup backlog managed outside the UI.
 - Supabase access keys and Vercel environment variables will be configured ahead of frontend integration work.
-- Reference-only assets `[backup] index-realdata.html` and `@index` remain local and excluded from GitHub; they inform styling and legacy data hooks but are not deployed.
+- Reference-only assets `frontend/reference/index-realdata.html` and `@index` remain local and excluded from GitHub; they inform styling and legacy data hooks but are not deployed.

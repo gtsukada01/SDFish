@@ -47,7 +47,7 @@ A **critical regex bug** in the boat name parser was silently dropping trips fro
 ### 🔄 In Progress
 
 **Full 2025 QC Audit (Feb 6 - Oct 31)**
-- Command: `python3 qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json`
+- Command: `python3 scripts/python/qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json`
 - Status: Running in background
 - Progress: Processing ~2-3 seconds per date
 - Total dates: 268
@@ -139,13 +139,13 @@ if title and "Dock Totals" in title:
 **Usage**:
 ```bash
 # Single date
-python3 qc_validator.py --date 2025-10-20
+python3 scripts/python/qc_validator.py --date 2025-10-20
 
 # Date range
-python3 qc_validator.py --start-date 2025-10-01 --end-date 2025-10-31 --output qc_report.json
+python3 scripts/python/qc_validator.py --start-date 2025-10-01 --end-date 2025-10-31 --output qc_report.json
 
 # Polaris Supreme test (10 trips expected)
-python3 qc_validator.py --polaris-test --output polaris_test.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_test.json
 ```
 
 ### Database Schema
@@ -273,27 +273,27 @@ Tables: landings, boats, trips, catches
 
 ```bash
 # Single date
-python3 boats_scraper.py --start-date 2025-10-20 --end-date 2025-10-20
+python3 scripts/python/boats_scraper.py --start-date 2025-10-20 --end-date 2025-10-20
 
 # Date range
-python3 boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-31
+python3 scripts/python/boats_scraper.py --start-date 2025-10-01 --end-date 2025-10-31
 
 # Batch re-scraping (chained)
-python3 boats_scraper.py --start-date 2025-10-10 --end-date 2025-10-10 && \
-python3 boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
+python3 scripts/python/boats_scraper.py --start-date 2025-10-10 --end-date 2025-10-10 && \
+python3 scripts/python/boats_scraper.py --start-date 2025-10-15 --end-date 2025-10-15
 ```
 
 ### QC Validation Commands
 
 ```bash
 # Single date validation
-python3 qc_validator.py --date 2025-10-20
+python3 scripts/python/qc_validator.py --date 2025-10-20
 
 # Range validation with output
-python3 qc_validator.py --start-date 2025-10-01 --end-date 2025-10-31 --output qc_october.json
+python3 scripts/python/qc_validator.py --start-date 2025-10-01 --end-date 2025-10-31 --output qc_october.json
 
 # Polaris Supreme validation test
-python3 qc_validator.py --polaris-test --output polaris_test.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_test.json
 
 # Check results
 cat qc_report.json | jq '.summary'
@@ -320,7 +320,7 @@ psql $DATABASE_URL -c "SELECT * FROM scrape_jobs ORDER BY job_started_at DESC LI
 ### Polaris Supreme Validation Test
 
 **Purpose**: Known benchmark with 10 expected trips
-**Command**: `python3 qc_validator.py --polaris-test`
+**Command**: `python3 scripts/python/qc_validator.py --polaris-test`
 **Expected**: 10/10 trips match perfectly
 **Last Result**: ✅ PASSED (Oct 17, 2025)
 

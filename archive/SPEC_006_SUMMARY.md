@@ -71,13 +71,13 @@ else:
 **Usage**:
 ```bash
 # Validate single date
-python3 qc_validator.py --date 2025-09-30
+python3 scripts/python/qc_validator.py --date 2025-09-30
 
 # Validate date range
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-30 --output qc_report.json
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-30 --output qc_report.json
 
 # Polaris Supreme test (10 trips validation)
-python3 qc_validator.py --polaris-test --output polaris_test.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_test.json
 ```
 
 **Validation Speed**: 61 dates validated in ~3 minutes (competitive with manual checking, but 100% accurate).
@@ -119,14 +119,14 @@ def find_matching_trip(source_trip, db_trips):
 **Example**:
 ```bash
 # Batch 1
-python3 boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output qc_batch1.json
+python3 scripts/python/boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output qc_batch1.json
 
 # Check results
 cat qc_batch1.json | jq '.summary.pass_rate'  # Must be 100%
 
 # If pass, continue to Batch 2
-python3 boats_scraper.py --start-date 2025-09-06 --end-date 2025-09-10
+python3 scripts/python/boats_scraper.py --start-date 2025-09-06 --end-date 2025-09-10
 ...
 ```
 
@@ -238,10 +238,10 @@ From the constitution (`specs/006-scraper-accuracy-validation/constitution.md`):
 ```bash
 # Always use progressive validation
 # Step 1: Scrape batch
-python3 boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
+python3 scripts/python/boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
 
 # Step 2: QC validate
-python3 qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_report.json
+python3 scripts/python/qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_report.json
 
 # Step 3: Verify 100% pass rate
 cat qc_report.json | jq '.summary.pass_rate'  # Must be 100%

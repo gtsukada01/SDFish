@@ -79,19 +79,19 @@
 
 - [ ] **1. Test normal operation**:
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
   ```
   **Expected**: Parses 16 trips, no errors, all safeguards working
 
 - [ ] **2. Test early scraping guard** (only if before 5pm PT):
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
   ```
   **Expected**: Blocks with "Scraping today's data before 17:00 PT" error
 
 - [ ] **3. Test future date guard**:
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
   ```
   **Expected**: Blocks with "end_date is N days in the future" error
 
@@ -109,7 +109,7 @@
 
 - [ ] **1. Scrape 10/18**:
   ```bash
-  python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
+  python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
     --operator "Recovery Team - [Your Name]"
   ```
   **Expected**: ~17 trips inserted
@@ -133,7 +133,7 @@
 
 - [ ] **4. Run QC validation**:
   ```bash
-  python3 qc_validator.py --date 2025-10-18 --output qc_10_18_recovery.json
+  python3 scripts/python/qc_validator.py --date 2025-10-18 --output qc_10_18_recovery.json
   ```
   **Expected**: PASS (100% match)
 
@@ -228,7 +228,7 @@
 
 - [ ] **1. Verify 10/18 complete**:
   ```bash
-  python3 qc_validator.py --date 2025-10-18
+  python3 scripts/python/qc_validator.py --date 2025-10-18
   ```
   **Expected**: PASS
 
@@ -240,7 +240,7 @@
 
 - [ ] **3. Run comprehensive QC**:
   ```bash
-  python3 qc_validator.py --start-date 2025-10-15 --end-date 2025-10-20 \
+  python3 scripts/python/qc_validator.py --start-date 2025-10-15 --end-date 2025-10-20 \
     --output qc_final_validation.json
   ```
   **Expected**: 100% pass rate

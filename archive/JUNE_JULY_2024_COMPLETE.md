@@ -128,8 +128,8 @@ Continue 2024 backfill:
 python3 scrape_2024_by_month.py --start-month AUG
 
 # Or scrape specific batch
-python3 boats_scraper.py --start-date 2024-08-01 --end-date 2024-08-05
-python3 qc_validator.py --start-date 2024-08-01 --end-date 2024-08-05 --output qc_aug_batch01_2024.json
+python3 scripts/python/boats_scraper.py --start-date 2024-08-01 --end-date 2024-08-05
+python3 scripts/python/qc_validator.py --start-date 2024-08-01 --end-date 2024-08-05 --output qc_aug_batch01_2024.json
 ```
 
 **Estimated Time**: 5 months × ~2 hours = ~10 hours total

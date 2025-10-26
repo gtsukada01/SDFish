@@ -63,7 +63,7 @@ npm start
 ```bash
 npm run build
 # Should complete in ~250ms
-# Output: assets/main.js (1.6MB), assets/styles.css (1.6KB)
+# Output: frontend/assets/main.js (1.6MB), frontend/assets/styles.css (1.6KB)
 ```
 
 ### Step 3: Continue from T026 (next task)
@@ -163,7 +163,7 @@ You're done when ALL of these are true:
 ### If Build Fails
 ```bash
 rm -rf node_modules package-lock.json
-npm install
+npm --prefix frontend install
 npm run build
 ```
 
@@ -218,7 +218,7 @@ npx playwright test
 
 ### Local Server
 - **Dev Server**: http://localhost:8081
-- **Build Output**: `assets/main.js`, `assets/styles.css`
+- **Build Output**: `frontend/assets/main.js`, `frontend/assets/styles.css`
 
 ### Documentation
 - **Master Docs**: `/Users/btsukada/Desktop/Fishing/CLAUDE.md`

@@ -1,0 +1,90 @@
+2025-10-23 07:10:21,715 - INFO - ✅ Supabase connected
+2025-10-23 07:10:21,716 - INFO - 
+================================================================================
+2025-10-23 07:10:21,716 - INFO - 🔍 QC VALIDATION: 2025-05-15
+2025-10-23 07:10:21,716 - INFO - ================================================================================
+2025-10-23 07:10:21,716 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-05-15
+2025-10-23 07:10:22,149 - INFO - ✅ Fetched 36096 bytes
+2025-10-23 07:10:22,504 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-23 07:10:22,506 - INFO - ✅ Loaded 147 known boats from database
+2025-10-23 07:10:22,516 - INFO - ✅ Source date validated: 2025-05-15 matches requested 2025-05-15
+2025-10-23 07:10:22,525 - INFO - ⚠️  Skipping excluded landing: Virg's Landing
+2025-10-23 07:10:22,525 - INFO - ⚠️  Skipping excluded landing: Santa Barbara Landing
+2025-10-23 07:10:22,525 - INFO - 🔍 Found boat: Endeavor (Ventura) (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Endeavor (Ventura) - 4 species, 19 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Aloha Spirit (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Aloha Spirit - 5 species, 12 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Cobra (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Cobra - 1 species, 2 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Gentleman (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Gentleman - 4 species, 27 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Graylight (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Graylight - 6 species, 6 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Mirage (validated against database)
+2025-10-23 07:10:22,526 - INFO - ✅ Parsed: Mirage - 6 species, 21 anglers
+2025-10-23 07:10:22,526 - INFO - 🔍 Found boat: Speed Twin (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Speed Twin - 4 species, 22 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Betty-O (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Betty-O - 2 species, 5 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Spitfire - 3 species, 20 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Redondo Special (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Redondo Special - 2 species, 14 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Enterprise (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Enterprise - 1 species, 23 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Ghost (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Ghost - 3 species, 8 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Monte Carlo (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Monte Carlo - 3 species, 32 anglers
+2025-10-23 07:10:22,527 - INFO - 🔍 Found boat: Blackfish (validated against database)
+2025-10-23 07:10:22,527 - INFO - ✅ Parsed: Blackfish - 1 species, 6 anglers
+2025-10-23 07:10:22,528 - INFO - 🔍 Found boat: Thunderbird (validated against database)
+2025-10-23 07:10:22,528 - INFO - ✅ Parsed: Thunderbird - 7 species, 30 anglers
+2025-10-23 07:10:22,528 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-23 07:10:22,528 - INFO - ✅ Parsed: Western Pride - 3 species, 26 anglers
+2025-10-23 07:10:22,528 - INFO - 🔍 Found boat: Clemente (validated against database)
+2025-10-23 07:10:22,528 - INFO - ✅ Parsed: Clemente - 6 species, 25 anglers
+2025-10-23 07:10:22,528 - INFO - 🔍 Found boat: Dana Pride (validated against database)
+2025-10-23 07:10:22,528 - INFO - ✅ Parsed: Dana Pride - 5 species, 47 anglers
+2025-10-23 07:10:22,528 - INFO - 🔍 Found boat: Sum Fun (validated against database)
+2025-10-23 07:10:22,528 - INFO - ✅ Parsed: Sum Fun - 1 species, 21 anglers
+2025-10-23 07:10:22,528 - INFO - ✅ Total trips parsed: 19
+2025-10-23 07:10:22,528 - INFO - 📊 Source page: 19 trips
+2025-10-23 07:10:22,720 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%29%2Clandings%28name%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-05-15 "HTTP/2 200 OK"
+2025-10-23 07:10:22,722 - INFO - 📊 Database: 26 trips
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Endeavor (Ventura)
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Aloha Spirit
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Cobra
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Gentleman
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Graylight
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Mirage
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Speed Twin
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Betty-O
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Spitfire
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Redondo Special
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Enterprise
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Ghost
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Monte Carlo
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Blackfish
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Thunderbird
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Western Pride
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Clemente
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Dana Pride
+2025-10-23 07:10:22,722 - INFO - ✅ Match: Sum Fun
+2025-10-23 07:10:22,722 - WARNING - ⚠️  Extra: Dolphin in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: Liberty in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: Southern Cal in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: New Seaforth in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: Dolphin in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: Premier in database but not on source page
+2025-10-23 07:10:22,723 - WARNING - ⚠️  Extra: New Seaforth in database but not on source page
+2025-10-23 07:10:22,723 - INFO - 
+================================================================================
+2025-10-23 07:10:22,723 - ERROR - ❌ QC FAILED: 2025-05-15
+2025-10-23 07:10:22,723 - INFO - 📊 Matches: 19/19
+2025-10-23 07:10:22,723 - INFO - ⚠️  Mismatches: 0
+2025-10-23 07:10:22,723 - INFO - ⚠️  Missing boats: 0
+2025-10-23 07:10:22,723 - INFO - ⚠️  Extra boats: 7
+2025-10-23 07:10:22,723 - INFO - ================================================================================
+
+2025-10-23 07:10:22,723 - INFO - ✅ Report saved: socal_qc_spot_check.json

@@ -571,7 +571,7 @@ def check_trip_exists(...):
 
 3. **CLI Options**
    ```bash
-   python3 boats_scraper.py \
+   python3 scripts/python/boats_scraper.py \
        --start-date 2025-10-18 \
        --end-date 2025-10-19 \
        --auto-qc  # Enable automatic QC after each date

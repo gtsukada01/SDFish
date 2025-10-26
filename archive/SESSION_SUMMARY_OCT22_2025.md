@@ -53,7 +53,7 @@
 
 ### Full 2025 QC Audit (STOPPED)
 
-**Command**: `python3 qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31`
+**Command**: `python3 scripts/python/qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31`
 **Status**: **STOPPED at user request**
 **Progress**: Partially complete (processed Feb 6-11 before stopping)
 **Output**: Partial results may be in `qc_2025_feb_oct_audit.json` (if file exists)
@@ -70,7 +70,7 @@
 1. **Complete Full 2025 QC Audit**
    ```bash
    # Run complete audit (Feb 6 - Oct 31: 268 dates)
-   python3 qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json
+   python3 scripts/python/qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json
 
    # This will take ~15-30 minutes total
    # Check results when complete:
@@ -80,16 +80,16 @@
 2. **Extract Failed Dates & Re-scrape**
    ```bash
    # Example: If audit shows Feb 7, 8 failed
-   python3 boats_scraper.py --start-date 2025-02-07 --end-date 2025-02-08
+   python3 scripts/python/boats_scraper.py --start-date 2025-02-07 --end-date 2025-02-08
 
    # Then QC validate to confirm:
-   python3 qc_validator.py --start-date 2025-02-07 --end-date 2025-02-08
+   python3 scripts/python/qc_validator.py --start-date 2025-02-07 --end-date 2025-02-08
    ```
 
 3. **Final Validation**
    ```bash
    # Validate complete 2025 (Jan-Oct)
-   python3 qc_validator.py --start-date 2025-01-01 --end-date 2025-10-31 --output qc_2025_final.json
+   python3 scripts/python/qc_validator.py --start-date 2025-01-01 --end-date 2025-10-31 --output qc_2025_final.json
 
    # Should achieve ~100% pass rate (excluding known duplicates)
    ```
@@ -291,7 +291,7 @@ if boat_name in known_boats_db:
 ### Re-run Full 2025 Audit
 ```bash
 cd /Users/btsukada/Desktop/Fishing/fish-scraper
-python3 qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json
+python3 scripts/python/qc_validator.py --start-date 2025-02-06 --end-date 2025-10-31 --output qc_2025_feb_oct_audit.json
 
 # Check results
 cat qc_2025_feb_oct_audit.json | jq '.summary'
@@ -303,10 +303,10 @@ cat qc_2025_feb_oct_audit.json | jq '.reports[] | select(.status == "FAIL") | .d
 ### Extract & Re-scrape Failed Dates
 ```bash
 # Example for Feb 7-8
-python3 boats_scraper.py --start-date 2025-02-07 --end-date 2025-02-08
+python3 scripts/python/boats_scraper.py --start-date 2025-02-07 --end-date 2025-02-08
 
 # Validate
-python3 qc_validator.py --start-date 2025-02-07 --end-date 2025-02-08
+python3 scripts/python/qc_validator.py --start-date 2025-02-07 --end-date 2025-02-08
 ```
 
 ### Check Database Status

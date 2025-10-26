@@ -75,7 +75,7 @@ catches (id, trip_id, species, count)
 - ✅ `sd_fish_scraper.py` - Main scraper (needs HTML parser fix)
 - ✅ `check_scraper_status.py` - Database status checker (working)
 - ✅ `validate_data.py` - Data integrity validator (working)
-- ✅ `requirements.txt` - Python dependencies (installed)
+- ✅ `scripts/python/requirements.txt` - Python dependencies (installed)
 - ✅ `SCRAPER_DOCS.md` - Comprehensive documentation
 
 **Test Results**:
@@ -141,7 +141,7 @@ python3 check_scraper_status.py
 python3 sd_fish_scraper.py --start-date 2025-09-22
 
 # Validate data quality
-python3 validate_data.py
+python3 scripts/python/validate_data.py
 ```
 
 **Estimated Time**: ~22 minutes at 10 trips/min (220 trips × 2-5 sec delays)
@@ -246,7 +246,7 @@ for trip in trips.data[:3]:
 
 ### Phase 4: Data Validation
 ```bash
-python3 validate_data.py
+python3 scripts/python/validate_data.py
 ```
 
 **Expected Output**:

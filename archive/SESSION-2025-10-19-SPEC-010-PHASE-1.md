@@ -94,19 +94,19 @@
 
 ### Test 1: Normal Date Validation
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 **Result**: ✅ Source date validated, 14 trips parsed correctly
 
 ### Test 2: Future Date Guard
 ```bash
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 ```
 **Result**: ✅ Blocked with FutureDateError (6 days in future)
 
 ### Test 3: Double-Safeguard (Phantom Data Scenario)
 ```bash
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
 ```
 **Result**:
 - FR-002 bypassed with warning
@@ -133,7 +133,7 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 
 3. **Test Recovery Scrape**
    ```bash
-   python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 --dry-run
+   python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 --dry-run
    ```
    - Verify FR-001 and FR-002 work correctly
    - Verify audit logging (after code implementation)
@@ -189,13 +189,13 @@ python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 ### Test Safeguards
 ```bash
 # Test normal date (should work)
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 # Test future date (should block)
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 
 # Test double-safeguard (should block on mismatch)
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run --allow-future
 ```
 
 ### Verify Database After Migration

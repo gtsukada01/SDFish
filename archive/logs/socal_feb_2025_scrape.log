@@ -1,0 +1,1075 @@
+2025-10-22 20:27:17,614 - INFO - ================================================================================
+2025-10-22 20:27:17,615 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 20:27:17,615 - INFO - ================================================================================
+2025-10-22 20:27:17,615 - INFO - 📅 Date range: 2025-02-01 to 2025-02-28
+2025-10-22 20:27:17,615 - INFO - 🔧 Dry run: False
+2025-10-22 20:27:17,615 - INFO - 🔧 Allow future: False
+2025-10-22 20:27:17,615 - INFO - 🔧 Allow early: False
+2025-10-22 20:27:17,626 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 20:27:17,660 - INFO - ✅ Supabase connected
+2025-10-22 20:27:17,676 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 20:27:17,859 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 20:27:17,861 - INFO - ✅ Created scrape_job #31
+2025-10-22 20:27:17,861 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 20:27:17,862 - INFO -    Version: 2.0.0-spec010
+2025-10-22 20:27:17,862 - INFO -    Git SHA: 21b46600
+2025-10-22 20:27:17,862 - INFO - 
+================================================================================
+2025-10-22 20:27:17,862 - INFO - 📅 Processing: 2025-02-01 (1 of 28)
+2025-10-22 20:27:17,862 - INFO - ================================================================================
+2025-10-22 20:27:17,862 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-01
+2025-10-22 20:27:18,254 - INFO - ✅ Fetched 27623 bytes
+2025-10-22 20:27:18,358 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:18,358 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:18,365 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:18,365 - ERROR -    Requested: 2025-02-01
+2025-10-22 20:27:18,365 - ERROR -    Actual:    2025-01-29
+2025-10-22 20:27:18,365 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:18,365 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:18,365 - WARNING - ⚠️  Date mismatch on 2025-02-01: Date mismatch: requested 2025-02-01, page shows 2025-01-29. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:18,366 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:18,366 - INFO - 
+================================================================================
+2025-10-22 20:27:18,366 - INFO - 📅 Processing: 2025-02-02 (2 of 28)
+2025-10-22 20:27:18,366 - INFO - ================================================================================
+2025-10-22 20:27:18,366 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:21,371 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-02
+2025-10-22 20:27:21,943 - INFO - ✅ Fetched 27623 bytes
+2025-10-22 20:27:22,013 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:22,014 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:22,018 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:22,018 - ERROR -    Requested: 2025-02-02
+2025-10-22 20:27:22,018 - ERROR -    Actual:    2025-01-29
+2025-10-22 20:27:22,018 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:22,018 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:22,019 - WARNING - ⚠️  Date mismatch on 2025-02-02: Date mismatch: requested 2025-02-02, page shows 2025-01-29. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:22,019 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:22,019 - INFO - 
+================================================================================
+2025-10-22 20:27:22,019 - INFO - 📅 Processing: 2025-02-03 (3 of 28)
+2025-10-22 20:27:22,019 - INFO - ================================================================================
+2025-10-22 20:27:22,019 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:25,024 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-03
+2025-10-22 20:27:25,517 - INFO - ✅ Fetched 27610 bytes
+2025-10-22 20:27:25,594 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:25,595 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:25,600 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:25,600 - ERROR -    Requested: 2025-02-03
+2025-10-22 20:27:25,600 - ERROR -    Actual:    2025-01-29
+2025-10-22 20:27:25,600 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:25,600 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:25,601 - WARNING - ⚠️  Date mismatch on 2025-02-03: Date mismatch: requested 2025-02-03, page shows 2025-01-29. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:25,601 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:25,601 - INFO - 
+================================================================================
+2025-10-22 20:27:25,601 - INFO - 📅 Processing: 2025-02-04 (4 of 28)
+2025-10-22 20:27:25,601 - INFO - ================================================================================
+2025-10-22 20:27:25,601 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:28,605 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-04
+2025-10-22 20:27:29,048 - INFO - ✅ Fetched 27606 bytes
+2025-10-22 20:27:29,113 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:29,114 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:29,119 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:29,119 - ERROR -    Requested: 2025-02-04
+2025-10-22 20:27:29,119 - ERROR -    Actual:    2025-01-29
+2025-10-22 20:27:29,119 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:29,119 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:29,119 - WARNING - ⚠️  Date mismatch on 2025-02-04: Date mismatch: requested 2025-02-04, page shows 2025-01-29. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:29,119 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:29,119 - INFO - 
+================================================================================
+2025-10-22 20:27:29,120 - INFO - 📅 Processing: 2025-02-05 (5 of 28)
+2025-10-22 20:27:29,120 - INFO - ================================================================================
+2025-10-22 20:27:29,120 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:32,125 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-05
+2025-10-22 20:27:32,555 - INFO - ✅ Fetched 25642 bytes
+2025-10-22 20:27:32,655 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:32,656 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:32,660 - INFO - ✅ Source date validated: 2025-02-05 matches requested 2025-02-05
+2025-10-22 20:27:32,663 - INFO - ✅ Total trips parsed: 0
+2025-10-22 20:27:32,743 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:27:32,744 - INFO - 
+================================================================================
+2025-10-22 20:27:32,744 - INFO - 📅 Processing: 2025-02-06 (6 of 28)
+2025-10-22 20:27:32,744 - INFO - ================================================================================
+2025-10-22 20:27:32,744 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:35,750 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-06
+2025-10-22 20:27:36,200 - INFO - ✅ Fetched 25771 bytes
+2025-10-22 20:27:36,270 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:36,272 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:36,275 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:36,275 - ERROR -    Requested: 2025-02-06
+2025-10-22 20:27:36,275 - ERROR -    Actual:    2025-02-05
+2025-10-22 20:27:36,275 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:36,275 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:36,275 - WARNING - ⚠️  Date mismatch on 2025-02-06: Date mismatch: requested 2025-02-06, page shows 2025-02-05. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:36,275 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:36,275 - INFO - 
+================================================================================
+2025-10-22 20:27:36,275 - INFO - 📅 Processing: 2025-02-07 (7 of 28)
+2025-10-22 20:27:36,276 - INFO - ================================================================================
+2025-10-22 20:27:36,276 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:39,281 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-07
+2025-10-22 20:27:39,694 - INFO - ✅ Fetched 25769 bytes
+2025-10-22 20:27:39,776 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:39,777 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:39,780 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:39,780 - ERROR -    Requested: 2025-02-07
+2025-10-22 20:27:39,781 - ERROR -    Actual:    2025-02-05
+2025-10-22 20:27:39,781 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:39,781 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:39,781 - WARNING - ⚠️  Date mismatch on 2025-02-07: Date mismatch: requested 2025-02-07, page shows 2025-02-05. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:39,781 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:39,781 - INFO - 
+================================================================================
+2025-10-22 20:27:39,781 - INFO - 📅 Processing: 2025-02-08 (8 of 28)
+2025-10-22 20:27:39,781 - INFO - ================================================================================
+2025-10-22 20:27:39,781 - INFO - ⏳ Delay: 2s
+2025-10-22 20:27:41,786 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-08
+2025-10-22 20:27:42,245 - INFO - ✅ Fetched 31747 bytes
+2025-10-22 20:27:42,323 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:42,324 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:42,332 - INFO - ✅ Source date validated: 2025-02-08 matches requested 2025-02-08
+2025-10-22 20:27:42,339 - INFO - 🔍 Found boat: Gentleman (validated against database)
+2025-10-22 20:27:42,340 - INFO - ✅ Parsed: Gentleman - 1 species, 23 anglers
+2025-10-22 20:27:42,340 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:27:42,340 - INFO - ✅ Parsed: New Del Mar - 3 species, 48 anglers
+2025-10-22 20:27:42,340 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:27:42,340 - INFO - ✅ Parsed: Spitfire - 3 species, 22 anglers
+2025-10-22 20:27:42,340 - INFO - 🔍 Found boat: Ahra-Ahn (validated against database)
+2025-10-22 20:27:42,340 - INFO - ✅ Parsed: Ahra-Ahn - 1 species, 31 anglers
+2025-10-22 20:27:42,340 - INFO - 🔍 Found boat: Monte Carlo (validated against database)
+2025-10-22 20:27:42,340 - INFO - ✅ Parsed: Monte Carlo - 2 species, 24 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Native Sun - 3 species, 38 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Sport King (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Sport King - 1 species, 10 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Western Pride - 3 species, 44 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Western Pride - 2 species, 37 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Western Pride - 2 species, 40 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Reel Fun (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Reel Fun - 3 species, 11 anglers
+2025-10-22 20:27:42,341 - INFO - 🔍 Found boat: Sum Fun (validated against database)
+2025-10-22 20:27:42,341 - INFO - ✅ Parsed: Sum Fun - 3 species, 26 anglers
+2025-10-22 20:27:42,341 - INFO - ✅ Total trips parsed: 12
+2025-10-22 20:27:42,437 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Channel+Islands+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:42,519 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Gentleman "HTTP/2 200 OK"
+2025-10-22 20:27:42,605 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.357&trip_date=eq.2025-02-08&trip_duration=eq.3%2F4+Day&anglers=eq.23 "HTTP/2 200 OK"
+2025-10-22 20:27:42,734 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.2734cdf3247638e8&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:42,820 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:42,885 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:42,885 - INFO - ✅ Inserted: Gentleman (1 species)
+2025-10-22 20:27:42,943 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:43,015 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:27:43,071 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-08&trip_duration=eq.3%2F4+Day&anglers=eq.48 "HTTP/2 200 OK"
+2025-10-22 20:27:43,146 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.983751eca843f34e&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:43,209 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:43,272 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:43,272 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:27:43,328 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:43,386 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:27:43,444 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-08&trip_duration=eq.3%2F4+Day&anglers=eq.22 "HTTP/2 200 OK"
+2025-10-22 20:27:43,512 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.fbe16134f06d37b7&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:43,566 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:43,628 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:43,629 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:27:43,684 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Long+Beach+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:43,747 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ahra-Ahn "HTTP/2 200 OK"
+2025-10-22 20:27:43,802 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.367&trip_date=eq.2025-02-08&trip_duration=eq.Full+Day&anglers=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:27:43,856 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.a174b9a12b18496a&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:43,914 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:43,971 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:43,971 - INFO - ✅ Inserted: Ahra-Ahn (1 species)
+2025-10-22 20:27:44,020 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:27:44,072 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Monte+Carlo "HTTP/2 200 OK"
+2025-10-22 20:27:44,124 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.342&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+AM&anglers=eq.24 "HTTP/2 200 OK"
+2025-10-22 20:27:44,177 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.7dfe067032fab165&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:44,232 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:44,297 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:44,298 - INFO - ✅ Inserted: Monte Carlo (2 species)
+2025-10-22 20:27:44,352 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:27:44,410 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:27:44,469 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-08&trip_duration=eq.3%2F4+Day&anglers=eq.38 "HTTP/2 200 OK"
+2025-10-22 20:27:44,520 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.d801d25a97ab81f8&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:44,577 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:44,631 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:44,631 - INFO - ✅ Inserted: Native Sun (3 species)
+2025-10-22 20:27:44,690 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:44,748 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sport+King "HTTP/2 200 OK"
+2025-10-22 20:27:44,803 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.372&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+AM&anglers=eq.10 "HTTP/2 200 OK"
+2025-10-22 20:27:44,856 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.7f5edcedaf748a56&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:44,911 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:44,965 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:44,966 - INFO - ✅ Inserted: Sport King (1 species)
+2025-10-22 20:27:45,024 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:27:45,075 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:27:45,132 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+AM&anglers=eq.44 "HTTP/2 200 OK"
+2025-10-22 20:27:45,195 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.83c924f9ce907055&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:45,248 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:45,308 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:45,308 - INFO - ✅ Inserted: Western Pride (3 species)
+2025-10-22 20:27:45,361 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:27:45,415 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:27:45,466 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.37 "HTTP/2 200 OK"
+2025-10-22 20:27:45,517 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.e2374b2179d973c3&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:45,575 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:45,630 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:45,631 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:27:45,688 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:27:45,750 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:27:45,812 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.40 "HTTP/2 200 OK"
+2025-10-22 20:27:45,867 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.78b4deaa5a2eaf56&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:45,921 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:45,972 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:45,973 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:27:46,025 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:46,082 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Reel+Fun "HTTP/2 200 OK"
+2025-10-22 20:27:46,155 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.356&trip_date=eq.2025-02-08&trip_duration=eq.1%2F2+Day+AM&anglers=eq.11 "HTTP/2 200 OK"
+2025-10-22 20:27:46,210 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.4b7a50e0b6a5d22f&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:46,271 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:46,323 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:46,323 - INFO - ✅ Inserted: Reel Fun (3 species)
+2025-10-22 20:27:46,372 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:27:46,429 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sum+Fun "HTTP/2 200 OK"
+2025-10-22 20:27:46,488 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.349&trip_date=eq.2025-02-08&trip_duration=eq.3%2F4+Day&anglers=eq.26 "HTTP/2 200 OK"
+2025-10-22 20:27:46,542 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.b58b1e67e70a874a&trip_date=gte.2025-02-01&trip_date=lte.2025-02-15&trip_date=neq.2025-02-08 "HTTP/2 200 OK"
+2025-10-22 20:27:46,595 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:27:46,647 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:27:46,648 - INFO - ✅ Inserted: Sum Fun (3 species)
+2025-10-22 20:27:46,703 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:27:46,703 - INFO - 
+================================================================================
+2025-10-22 20:27:46,703 - INFO - 📅 Processing: 2025-02-09 (9 of 28)
+2025-10-22 20:27:46,703 - INFO - ================================================================================
+2025-10-22 20:27:46,703 - INFO - ⏳ Delay: 2s
+2025-10-22 20:27:48,708 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-09
+2025-10-22 20:27:49,151 - INFO - ✅ Fetched 31874 bytes
+2025-10-22 20:27:49,216 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:49,218 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:49,224 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:49,224 - ERROR -    Requested: 2025-02-09
+2025-10-22 20:27:49,225 - ERROR -    Actual:    2025-02-08
+2025-10-22 20:27:49,225 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:49,225 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:49,225 - WARNING - ⚠️  Date mismatch on 2025-02-09: Date mismatch: requested 2025-02-09, page shows 2025-02-08. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:49,225 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:49,225 - INFO - 
+================================================================================
+2025-10-22 20:27:49,225 - INFO - 📅 Processing: 2025-02-10 (10 of 28)
+2025-10-22 20:27:49,225 - INFO - ================================================================================
+2025-10-22 20:27:49,225 - INFO - ⏳ Delay: 5s
+2025-10-22 20:27:54,230 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-10
+2025-10-22 20:27:54,657 - INFO - ✅ Fetched 31872 bytes
+2025-10-22 20:27:54,788 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:54,789 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:54,796 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:54,796 - ERROR -    Requested: 2025-02-10
+2025-10-22 20:27:54,796 - ERROR -    Actual:    2025-02-08
+2025-10-22 20:27:54,796 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:54,796 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:54,796 - WARNING - ⚠️  Date mismatch on 2025-02-10: Date mismatch: requested 2025-02-10, page shows 2025-02-08. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:54,796 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:54,796 - INFO - 
+================================================================================
+2025-10-22 20:27:54,796 - INFO - 📅 Processing: 2025-02-11 (11 of 28)
+2025-10-22 20:27:54,796 - INFO - ================================================================================
+2025-10-22 20:27:54,796 - INFO - ⏳ Delay: 3s
+2025-10-22 20:27:57,801 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-11
+2025-10-22 20:27:58,217 - INFO - ✅ Fetched 31876 bytes
+2025-10-22 20:27:58,276 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:27:58,277 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:27:58,285 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:27:58,285 - ERROR -    Requested: 2025-02-11
+2025-10-22 20:27:58,285 - ERROR -    Actual:    2025-02-08
+2025-10-22 20:27:58,285 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:27:58,285 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:27:58,285 - WARNING - ⚠️  Date mismatch on 2025-02-11: Date mismatch: requested 2025-02-11, page shows 2025-02-08. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:27:58,285 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:27:58,285 - INFO - 
+================================================================================
+2025-10-22 20:27:58,285 - INFO - 📅 Processing: 2025-02-12 (12 of 28)
+2025-10-22 20:27:58,285 - INFO - ================================================================================
+2025-10-22 20:27:58,285 - INFO - ⏳ Delay: 3s
+2025-10-22 20:28:01,290 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-12
+2025-10-22 20:28:01,735 - INFO - ✅ Fetched 25649 bytes
+2025-10-22 20:28:01,809 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:01,810 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:01,813 - INFO - ✅ Source date validated: 2025-02-12 matches requested 2025-02-12
+2025-10-22 20:28:01,817 - INFO - ✅ Total trips parsed: 0
+2025-10-22 20:28:01,887 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:01,888 - INFO - 
+================================================================================
+2025-10-22 20:28:01,888 - INFO - 📅 Processing: 2025-02-13 (13 of 28)
+2025-10-22 20:28:01,888 - INFO - ================================================================================
+2025-10-22 20:28:01,888 - INFO - ⏳ Delay: 5s
+2025-10-22 20:28:06,893 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-13
+2025-10-22 20:28:07,367 - INFO - ✅ Fetched 25770 bytes
+2025-10-22 20:28:07,494 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:07,495 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:07,499 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:28:07,499 - ERROR -    Requested: 2025-02-13
+2025-10-22 20:28:07,499 - ERROR -    Actual:    2025-02-12
+2025-10-22 20:28:07,499 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:28:07,499 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:28:07,499 - WARNING - ⚠️  Date mismatch on 2025-02-13: Date mismatch: requested 2025-02-13, page shows 2025-02-12. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:28:07,499 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:28:07,499 - INFO - 
+================================================================================
+2025-10-22 20:28:07,499 - INFO - 📅 Processing: 2025-02-14 (14 of 28)
+2025-10-22 20:28:07,499 - INFO - ================================================================================
+2025-10-22 20:28:07,499 - INFO - ⏳ Delay: 2s
+2025-10-22 20:28:09,504 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-14
+2025-10-22 20:28:09,939 - INFO - ✅ Fetched 25774 bytes
+2025-10-22 20:28:10,000 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:10,002 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:10,006 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:28:10,006 - ERROR -    Requested: 2025-02-14
+2025-10-22 20:28:10,006 - ERROR -    Actual:    2025-02-12
+2025-10-22 20:28:10,006 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:28:10,006 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:28:10,006 - WARNING - ⚠️  Date mismatch on 2025-02-14: Date mismatch: requested 2025-02-14, page shows 2025-02-12. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:28:10,006 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:28:10,006 - INFO - 
+================================================================================
+2025-10-22 20:28:10,006 - INFO - 📅 Processing: 2025-02-15 (15 of 28)
+2025-10-22 20:28:10,006 - INFO - ================================================================================
+2025-10-22 20:28:10,006 - INFO - ⏳ Delay: 3s
+2025-10-22 20:28:13,011 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-15
+2025-10-22 20:28:13,514 - INFO - ✅ Fetched 30365 bytes
+2025-10-22 20:28:13,571 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:13,572 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:13,578 - INFO - ✅ Source date validated: 2025-02-15 matches requested 2025-02-15
+2025-10-22 20:28:13,585 - INFO - 🔍 Found boat: Betty-O (validated against database)
+2025-10-22 20:28:13,585 - INFO - ✅ Parsed: Betty-O - 3 species, 6 anglers
+2025-10-22 20:28:13,585 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:28:13,585 - INFO - ✅ Parsed: New Del Mar - 2 species, 45 anglers
+2025-10-22 20:28:13,585 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:28:13,585 - INFO - ✅ Parsed: Spitfire - 2 species, 13 anglers
+2025-10-22 20:28:13,585 - INFO - 🔍 Found boat: Ahra-Ahn (validated against database)
+2025-10-22 20:28:13,585 - INFO - ✅ Parsed: Ahra-Ahn - 1 species, 28 anglers
+2025-10-22 20:28:13,585 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:28:13,586 - INFO - ✅ Parsed: Native Sun - 4 species, 37 anglers
+2025-10-22 20:28:13,586 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:28:13,586 - INFO - ✅ Parsed: Native Sun - 2 species, 26 anglers
+2025-10-22 20:28:13,586 - INFO - 🔍 Found boat: Triton (validated against database)
+2025-10-22 20:28:13,586 - INFO - ✅ Parsed: Triton - 1 species, 10 anglers
+2025-10-22 20:28:13,586 - INFO - 🔍 Found boat: Patriot (Newport) (validated against database)
+2025-10-22 20:28:13,586 - INFO - ✅ Parsed: Patriot (Newport) - 3 species, 23 anglers
+2025-10-22 20:28:13,586 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:13,586 - INFO - ✅ Parsed: Western Pride - 1 species, 35 anglers
+2025-10-22 20:28:13,586 - INFO - ✅ Total trips parsed: 9
+2025-10-22 20:28:13,667 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:13,738 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Betty-O "HTTP/2 200 OK"
+2025-10-22 20:28:13,791 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.350&trip_date=eq.2025-02-15&trip_duration=eq.3%2F4+Day&anglers=eq.6 "HTTP/2 200 OK"
+2025-10-22 20:28:13,857 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.1ab8e774ae3aabf9&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:13,922 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:13,985 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:13,986 - INFO - ✅ Inserted: Betty-O (3 species)
+2025-10-22 20:28:14,063 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:14,140 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:28:14,197 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-15&trip_duration=eq.1%2F2+Day+AM&anglers=eq.45 "HTTP/2 200 OK"
+2025-10-22 20:28:14,272 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.d848fc5f6f2cf4e0&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:14,336 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:14,398 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:14,398 - INFO - ✅ Inserted: New Del Mar (2 species)
+2025-10-22 20:28:14,454 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:14,514 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:28:14,572 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-15&trip_duration=eq.3%2F4+Day&anglers=eq.13 "HTTP/2 200 OK"
+2025-10-22 20:28:14,630 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.df62424f2d43aa20&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:14,684 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:14,764 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:14,764 - INFO - ✅ Inserted: Spitfire (2 species)
+2025-10-22 20:28:14,829 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Long+Beach+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:14,887 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ahra-Ahn "HTTP/2 200 OK"
+2025-10-22 20:28:14,945 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.367&trip_date=eq.2025-02-15&trip_duration=eq.Full+Day&anglers=eq.28 "HTTP/2 200 OK"
+2025-10-22 20:28:15,006 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.9d0333c27de5b00b&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:15,074 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:15,133 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:15,133 - INFO - ✅ Inserted: Ahra-Ahn (1 species)
+2025-10-22 20:28:15,194 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:15,260 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:28:15,325 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-15&trip_duration=eq.3%2F4+Day&anglers=eq.37 "HTTP/2 200 OK"
+2025-10-22 20:28:15,381 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ced4804a4b54123c&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:15,434 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:15,506 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:15,507 - INFO - ✅ Inserted: Native Sun (4 species)
+2025-10-22 20:28:15,561 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:15,620 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:28:15,686 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-15&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.26 "HTTP/2 200 OK"
+2025-10-22 20:28:15,743 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ca0ece8d5c7c42c5&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:15,814 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:15,875 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:15,875 - INFO - ✅ Inserted: Native Sun (2 species)
+2025-10-22 20:28:15,935 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:15,992 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Triton "HTTP/2 200 OK"
+2025-10-22 20:28:16,046 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.399&trip_date=eq.2025-02-15&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.10 "HTTP/2 200 OK"
+2025-10-22 20:28:16,114 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.0773a63e2b43d291&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:16,178 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:16,230 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:16,230 - INFO - ✅ Inserted: Triton (1 species)
+2025-10-22 20:28:16,285 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Newport+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:16,366 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Patriot+%28Newport%29 "HTTP/2 200 OK"
+2025-10-22 20:28:16,422 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.389&trip_date=eq.2025-02-15&trip_duration=eq.3%2F4+Day&anglers=eq.23 "HTTP/2 200 OK"
+2025-10-22 20:28:16,477 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.aae1a943312729ca&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:16,539 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:16,608 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:16,608 - INFO - ✅ Inserted: Patriot (Newport) (3 species)
+2025-10-22 20:28:16,663 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:16,724 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:16,790 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-15&trip_duration=eq.1%2F2+Day+AM&anglers=eq.35 "HTTP/2 200 OK"
+2025-10-22 20:28:16,865 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.f3fba53022e1561c&trip_date=gte.2025-02-08&trip_date=lte.2025-02-22&trip_date=neq.2025-02-15 "HTTP/2 200 OK"
+2025-10-22 20:28:16,936 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:16,990 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:16,990 - INFO - ✅ Inserted: Western Pride (1 species)
+2025-10-22 20:28:17,063 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:17,064 - INFO - 
+================================================================================
+2025-10-22 20:28:17,064 - INFO - 📅 Processing: 2025-02-16 (16 of 28)
+2025-10-22 20:28:17,064 - INFO - ================================================================================
+2025-10-22 20:28:17,064 - INFO - ⏳ Delay: 2s
+2025-10-22 20:28:19,069 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-16
+2025-10-22 20:28:19,554 - INFO - ✅ Fetched 30490 bytes
+2025-10-22 20:28:19,610 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:19,610 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:19,616 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:28:19,616 - ERROR -    Requested: 2025-02-16
+2025-10-22 20:28:19,616 - ERROR -    Actual:    2025-02-15
+2025-10-22 20:28:19,616 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:28:19,616 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:28:19,616 - WARNING - ⚠️  Date mismatch on 2025-02-16: Date mismatch: requested 2025-02-16, page shows 2025-02-15. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:28:19,616 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:28:19,616 - INFO - 
+================================================================================
+2025-10-22 20:28:19,616 - INFO - 📅 Processing: 2025-02-17 (17 of 28)
+2025-10-22 20:28:19,617 - INFO - ================================================================================
+2025-10-22 20:28:19,617 - INFO - ⏳ Delay: 4s
+2025-10-22 20:28:23,618 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-17
+2025-10-22 20:28:23,885 - INFO - ✅ Fetched 30585 bytes
+2025-10-22 20:28:23,964 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:23,964 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:23,971 - INFO - ✅ Source date validated: 2025-02-17 matches requested 2025-02-17
+2025-10-22 20:28:23,977 - INFO - 🔍 Found boat: Betty-O (validated against database)
+2025-10-22 20:28:23,977 - INFO - ✅ Parsed: Betty-O - 1 species, 12 anglers
+2025-10-22 20:28:23,977 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:28:23,977 - INFO - ✅ Parsed: New Del Mar - 3 species, 80 anglers
+2025-10-22 20:28:23,977 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Spitfire - 3 species, 20 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Gail Force (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Gail Force - 1 species, 15 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Triton (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Triton - 1 species, 10 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Patriot (Newport) (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Patriot (Newport) - 2 species, 22 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Western Pride - 2 species, 18 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Western Pride - 1 species, 43 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Dana Pride (validated against database)
+2025-10-22 20:28:23,978 - INFO - ✅ Parsed: Dana Pride - 3 species, 56 anglers
+2025-10-22 20:28:23,978 - INFO - 🔍 Found boat: Sum Fun (validated against database)
+2025-10-22 20:28:23,979 - INFO - ✅ Parsed: Sum Fun - 2 species, 26 anglers
+2025-10-22 20:28:23,979 - INFO - ✅ Total trips parsed: 10
+2025-10-22 20:28:24,040 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:24,105 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Betty-O "HTTP/2 200 OK"
+2025-10-22 20:28:24,170 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.350&trip_date=eq.2025-02-17&trip_duration=eq.3%2F4+Day&anglers=eq.12 "HTTP/2 200 OK"
+2025-10-22 20:28:24,239 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.0aa2c59dc5bf1e8a&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:24,312 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:24,387 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:24,387 - INFO - ✅ Inserted: Betty-O (1 species)
+2025-10-22 20:28:24,447 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:24,511 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:28:24,575 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+AM&anglers=eq.80 "HTTP/2 200 OK"
+2025-10-22 20:28:24,637 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.6bba323cec3926ed&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:24,698 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:24,757 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:24,758 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:28:24,812 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:24,866 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:28:24,932 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-17&trip_duration=eq.3%2F4+Day&anglers=eq.20 "HTTP/2 200 OK"
+2025-10-22 20:28:24,986 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.d3eccaa832242d91&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:25,047 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:25,109 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:25,109 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:28:25,175 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:25,233 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Gail+Force "HTTP/2 200 OK"
+2025-10-22 20:28:25,291 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.392&trip_date=eq.2025-02-17&trip_duration=eq.3%2F4+Day&anglers=eq.15 "HTTP/2 200 OK"
+2025-10-22 20:28:25,363 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.f60d757c7c2b3756&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:25,430 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:25,483 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:25,483 - INFO - ✅ Inserted: Gail Force (1 species)
+2025-10-22 20:28:25,540 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:25,593 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Triton "HTTP/2 200 OK"
+2025-10-22 20:28:25,650 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.399&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.10 "HTTP/2 200 OK"
+2025-10-22 20:28:25,708 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.defabfff9aa6bbf2&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:25,778 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:25,836 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:25,836 - INFO - ✅ Inserted: Triton (1 species)
+2025-10-22 20:28:25,911 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Newport+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:25,962 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Patriot+%28Newport%29 "HTTP/2 200 OK"
+2025-10-22 20:28:26,012 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.389&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+PM&anglers=eq.22 "HTTP/2 200 OK"
+2025-10-22 20:28:26,065 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.fa2b766b7c5b4707&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:26,124 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:26,187 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:26,187 - INFO - ✅ Inserted: Patriot (Newport) (2 species)
+2025-10-22 20:28:26,248 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:26,327 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:26,421 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.18 "HTTP/2 200 OK"
+2025-10-22 20:28:26,482 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.404ff7129a704a16&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:26,543 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:26,610 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:26,611 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:28:26,670 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:26,750 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:26,806 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+PM&anglers=eq.43 "HTTP/2 200 OK"
+2025-10-22 20:28:26,867 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.217591ac6c5d8450&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:26,931 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:26,989 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:26,990 - INFO - ✅ Inserted: Western Pride (1 species)
+2025-10-22 20:28:27,058 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:27,117 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Dana+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:27,176 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.347&trip_date=eq.2025-02-17&trip_duration=eq.1%2F2+Day+AM&anglers=eq.56 "HTTP/2 200 OK"
+2025-10-22 20:28:27,231 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.4126efdfa8ac4b54&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:27,287 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:27,349 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:27,350 - INFO - ✅ Inserted: Dana Pride (3 species)
+2025-10-22 20:28:27,404 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:27,460 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sum+Fun "HTTP/2 200 OK"
+2025-10-22 20:28:27,518 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.349&trip_date=eq.2025-02-17&trip_duration=eq.3%2F4+Day&anglers=eq.26 "HTTP/2 200 OK"
+2025-10-22 20:28:27,577 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.604e5714c644cc4b&trip_date=gte.2025-02-10&trip_date=lte.2025-02-24&trip_date=neq.2025-02-17 "HTTP/2 200 OK"
+2025-10-22 20:28:27,645 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:27,703 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:27,704 - INFO - ✅ Inserted: Sum Fun (2 species)
+2025-10-22 20:28:27,760 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:27,760 - INFO - 
+================================================================================
+2025-10-22 20:28:27,760 - INFO - 📅 Processing: 2025-02-18 (18 of 28)
+2025-10-22 20:28:27,760 - INFO - ================================================================================
+2025-10-22 20:28:27,760 - INFO - ⏳ Delay: 3s
+2025-10-22 20:28:30,765 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-18
+2025-10-22 20:28:30,982 - INFO - ✅ Fetched 26175 bytes
+2025-10-22 20:28:31,046 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:31,047 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:31,051 - INFO - ✅ Source date validated: 2025-02-18 matches requested 2025-02-18
+2025-10-22 20:28:31,065 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:31,065 - INFO - ✅ Parsed: Western Pride - 1 species, 33 anglers
+2025-10-22 20:28:31,065 - INFO - ✅ Total trips parsed: 1
+2025-10-22 20:28:31,114 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:31,181 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:31,241 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-18&trip_duration=eq.1%2F2+Day+PM&anglers=eq.33 "HTTP/2 200 OK"
+2025-10-22 20:28:31,294 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ce9f8fce5498c155&trip_date=gte.2025-02-11&trip_date=lte.2025-02-25&trip_date=neq.2025-02-18 "HTTP/2 200 OK"
+2025-10-22 20:28:31,355 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:31,420 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:31,421 - INFO - ✅ Inserted: Western Pride (1 species)
+2025-10-22 20:28:31,488 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:31,488 - INFO - 
+================================================================================
+2025-10-22 20:28:31,488 - INFO - 📅 Processing: 2025-02-19 (19 of 28)
+2025-10-22 20:28:31,488 - INFO - ================================================================================
+2025-10-22 20:28:31,488 - INFO - ⏳ Delay: 5s
+2025-10-22 20:28:36,493 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-19
+2025-10-22 20:28:36,763 - INFO - ✅ Fetched 28800 bytes
+2025-10-22 20:28:36,939 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:36,940 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:36,945 - INFO - ✅ Source date validated: 2025-02-19 matches requested 2025-02-19
+2025-10-22 20:28:36,950 - INFO - 🔍 Found boat: Betty-O (validated against database)
+2025-10-22 20:28:36,951 - INFO - ✅ Parsed: Betty-O - 2 species, 9 anglers
+2025-10-22 20:28:36,951 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:28:36,951 - INFO - ✅ Parsed: New Del Mar - 3 species, 20 anglers
+2025-10-22 20:28:36,951 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:28:36,951 - INFO - ✅ Parsed: Native Sun - 3 species, 27 anglers
+2025-10-22 20:28:36,951 - INFO - 🔍 Found boat: Patriot (Newport) (validated against database)
+2025-10-22 20:28:36,951 - INFO - ✅ Parsed: Patriot (Newport) - 2 species, 7 anglers
+2025-10-22 20:28:36,951 - INFO - 🔍 Found boat: Sum Fun (validated against database)
+2025-10-22 20:28:36,951 - INFO - ✅ Parsed: Sum Fun - 1 species, 19 anglers
+2025-10-22 20:28:36,951 - INFO - ✅ Total trips parsed: 5
+2025-10-22 20:28:37,018 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:37,081 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Betty-O "HTTP/2 200 OK"
+2025-10-22 20:28:37,145 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.350&trip_date=eq.2025-02-19&trip_duration=eq.3%2F4+Day&anglers=eq.9 "HTTP/2 200 OK"
+2025-10-22 20:28:37,207 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.25b41630f50b50a3&trip_date=gte.2025-02-12&trip_date=lte.2025-02-26&trip_date=neq.2025-02-19 "HTTP/2 200 OK"
+2025-10-22 20:28:37,300 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:37,371 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:37,372 - INFO - ✅ Inserted: Betty-O (2 species)
+2025-10-22 20:28:37,441 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:37,504 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:28:37,569 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-19&trip_duration=eq.1%2F2+Day+AM&anglers=eq.20 "HTTP/2 200 OK"
+2025-10-22 20:28:37,628 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ff41c1c1711fff80&trip_date=gte.2025-02-12&trip_date=lte.2025-02-26&trip_date=neq.2025-02-19 "HTTP/2 200 OK"
+2025-10-22 20:28:37,687 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:37,751 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:37,751 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:28:37,813 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:37,869 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:28:37,930 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-19&trip_duration=eq.3%2F4+Day&anglers=eq.27 "HTTP/2 200 OK"
+2025-10-22 20:28:37,988 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.6f1b8dea1f5bee19&trip_date=gte.2025-02-12&trip_date=lte.2025-02-26&trip_date=neq.2025-02-19 "HTTP/2 200 OK"
+2025-10-22 20:28:38,150 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:38,205 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:38,206 - INFO - ✅ Inserted: Native Sun (3 species)
+2025-10-22 20:28:38,266 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Newport+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:38,317 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Patriot+%28Newport%29 "HTTP/2 200 OK"
+2025-10-22 20:28:38,378 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.389&trip_date=eq.2025-02-19&trip_duration=eq.1%2F2+Day+AM&anglers=eq.7 "HTTP/2 200 OK"
+2025-10-22 20:28:38,449 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.7085ab932dcd2fd6&trip_date=gte.2025-02-12&trip_date=lte.2025-02-26&trip_date=neq.2025-02-19 "HTTP/2 200 OK"
+2025-10-22 20:28:38,503 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:38,558 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:38,559 - INFO - ✅ Inserted: Patriot (Newport) (2 species)
+2025-10-22 20:28:38,613 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:38,681 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sum+Fun "HTTP/2 200 OK"
+2025-10-22 20:28:38,734 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.349&trip_date=eq.2025-02-19&trip_duration=eq.1%2F2+Day+AM&anglers=eq.19 "HTTP/2 200 OK"
+2025-10-22 20:28:38,785 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.eb79e059adedc0e8&trip_date=gte.2025-02-12&trip_date=lte.2025-02-26&trip_date=neq.2025-02-19 "HTTP/2 200 OK"
+2025-10-22 20:28:38,845 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:38,918 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:38,919 - INFO - ✅ Inserted: Sum Fun (1 species)
+2025-10-22 20:28:38,979 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:38,980 - INFO - 
+================================================================================
+2025-10-22 20:28:38,980 - INFO - 📅 Processing: 2025-02-20 (20 of 28)
+2025-10-22 20:28:38,980 - INFO - ================================================================================
+2025-10-22 20:28:38,980 - INFO - ⏳ Delay: 4s
+2025-10-22 20:28:42,985 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-20
+2025-10-22 20:28:43,213 - INFO - ✅ Fetched 28925 bytes
+2025-10-22 20:28:43,271 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:43,271 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:43,277 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:28:43,277 - ERROR -    Requested: 2025-02-20
+2025-10-22 20:28:43,277 - ERROR -    Actual:    2025-02-19
+2025-10-22 20:28:43,277 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:28:43,277 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:28:43,277 - WARNING - ⚠️  Date mismatch on 2025-02-20: Date mismatch: requested 2025-02-20, page shows 2025-02-19. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:28:43,278 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:28:43,278 - INFO - 
+================================================================================
+2025-10-22 20:28:43,278 - INFO - 📅 Processing: 2025-02-21 (21 of 28)
+2025-10-22 20:28:43,278 - INFO - ================================================================================
+2025-10-22 20:28:43,278 - INFO - ⏳ Delay: 2s
+2025-10-22 20:28:45,283 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-21
+2025-10-22 20:28:45,531 - INFO - ✅ Fetched 28925 bytes
+2025-10-22 20:28:45,592 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:45,594 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:45,599 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:28:45,599 - ERROR -    Requested: 2025-02-21
+2025-10-22 20:28:45,599 - ERROR -    Actual:    2025-02-19
+2025-10-22 20:28:45,599 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:28:45,599 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:28:45,599 - WARNING - ⚠️  Date mismatch on 2025-02-21: Date mismatch: requested 2025-02-21, page shows 2025-02-19. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:28:45,599 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:28:45,599 - INFO - 
+================================================================================
+2025-10-22 20:28:45,599 - INFO - 📅 Processing: 2025-02-22 (22 of 28)
+2025-10-22 20:28:45,599 - INFO - ================================================================================
+2025-10-22 20:28:45,599 - INFO - ⏳ Delay: 4s
+2025-10-22 20:28:49,604 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-22
+2025-10-22 20:28:49,851 - INFO - ✅ Fetched 29792 bytes
+2025-10-22 20:28:49,906 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:49,908 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:49,913 - INFO - ✅ Source date validated: 2025-02-22 matches requested 2025-02-22
+2025-10-22 20:28:49,919 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:28:49,919 - INFO - ✅ Parsed: New Del Mar - 3 species, 68 anglers
+2025-10-22 20:28:49,919 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:28:49,919 - INFO - ✅ Parsed: Spitfire - 3 species, 36 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Ahra-Ahn (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Ahra-Ahn - 1 species, 21 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Ghost (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Ghost - 2 species, 2 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Monte Carlo (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Monte Carlo - 2 species, 53 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Native Sun - 3 species, 15 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Sport King (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Sport King - 1 species, 6 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Western Pride - 2 species, 48 anglers
+2025-10-22 20:28:49,920 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:49,920 - INFO - ✅ Parsed: Western Pride - 2 species, 33 anglers
+2025-10-22 20:28:49,920 - INFO - ✅ Total trips parsed: 9
+2025-10-22 20:28:49,982 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:50,037 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:28:50,093 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-22&trip_duration=eq.1%2F2+Day+AM&anglers=eq.68 "HTTP/2 200 OK"
+2025-10-22 20:28:50,150 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.b4e6acecf0c40efa&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:50,223 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:50,296 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:50,297 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:28:50,350 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:50,415 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:28:50,475 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-22&trip_duration=eq.3%2F4+Day&anglers=eq.36 "HTTP/2 200 OK"
+2025-10-22 20:28:50,529 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.51dec223185911ad&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:50,577 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:50,627 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:50,628 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:28:50,679 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Long+Beach+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:50,724 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ahra-Ahn "HTTP/2 200 OK"
+2025-10-22 20:28:50,790 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.367&trip_date=eq.2025-02-22&trip_duration=eq.Full+Day&anglers=eq.21 "HTTP/2 200 OK"
+2025-10-22 20:28:50,845 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.88916296547bf87e&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:50,905 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:50,963 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:50,963 - INFO - ✅ Inserted: Ahra-Ahn (1 species)
+2025-10-22 20:28:51,040 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:51,095 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ghost "HTTP/2 200 OK"
+2025-10-22 20:28:51,143 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.400&trip_date=eq.2025-02-22&trip_duration=eq.Full+Day&anglers=eq.2 "HTTP/2 200 OK"
+2025-10-22 20:28:51,196 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ca0bb0a1ab14b55e&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:51,247 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:51,299 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:51,300 - INFO - ✅ Inserted: Ghost (2 species)
+2025-10-22 20:28:51,345 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:51,393 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Monte+Carlo "HTTP/2 200 OK"
+2025-10-22 20:28:51,438 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.342&trip_date=eq.2025-02-22&trip_duration=eq.1%2F2+Day+AM&anglers=eq.53 "HTTP/2 200 OK"
+2025-10-22 20:28:51,484 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.3e9aab455b4979df&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:51,543 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:51,605 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:51,605 - INFO - ✅ Inserted: Monte Carlo (2 species)
+2025-10-22 20:28:51,691 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:51,756 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:28:51,808 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-22&trip_duration=eq.3%2F4+Day&anglers=eq.15 "HTTP/2 200 OK"
+2025-10-22 20:28:51,855 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.eabe2fa7a0fbdb02&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:51,908 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:51,961 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:51,962 - INFO - ✅ Inserted: Native Sun (3 species)
+2025-10-22 20:28:52,014 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:52,068 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sport+King "HTTP/2 200 OK"
+2025-10-22 20:28:52,121 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.372&trip_date=eq.2025-02-22&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.6 "HTTP/2 200 OK"
+2025-10-22 20:28:52,171 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.394804a2335fcab0&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:52,225 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:52,275 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:52,275 - INFO - ✅ Inserted: Sport King (1 species)
+2025-10-22 20:28:52,323 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:52,378 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:52,434 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-22&trip_duration=eq.1%2F2+Day+PM&anglers=eq.48 "HTTP/2 200 OK"
+2025-10-22 20:28:52,502 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.9e59843a1088bf83&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:52,577 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:52,635 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:52,635 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:28:52,692 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:28:52,746 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:28:52,801 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-22&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.33 "HTTP/2 200 OK"
+2025-10-22 20:28:52,853 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.98ecced8f8be8aa6&trip_date=gte.2025-02-15&trip_date=lte.2025-03-01&trip_date=neq.2025-02-22 "HTTP/2 200 OK"
+2025-10-22 20:28:52,925 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:52,974 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:52,974 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:28:53,024 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:28:53,024 - INFO - 
+================================================================================
+2025-10-22 20:28:53,024 - INFO - 📅 Processing: 2025-02-23 (23 of 28)
+2025-10-22 20:28:53,024 - INFO - ================================================================================
+2025-10-22 20:28:53,024 - INFO - ⏳ Delay: 3s
+2025-10-22 20:28:56,029 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-23
+2025-10-22 20:28:56,317 - INFO - ✅ Fetched 30651 bytes
+2025-10-22 20:28:56,392 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:28:56,393 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:28:56,399 - INFO - ✅ Source date validated: 2025-02-23 matches requested 2025-02-23
+2025-10-22 20:28:56,405 - INFO - 🔍 Found boat: Betty-O (validated against database)
+2025-10-22 20:28:56,405 - INFO - ✅ Parsed: Betty-O - 2 species, 15 anglers
+2025-10-22 20:28:56,405 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:28:56,405 - INFO - ✅ Parsed: New Del Mar - 3 species, 94 anglers
+2025-10-22 20:28:56,405 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:28:56,405 - INFO - ✅ Parsed: Spitfire - 3 species, 34 anglers
+2025-10-22 20:28:56,405 - INFO - 🔍 Found boat: Gail Force (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Gail Force - 1 species, 10 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Ghost (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Ghost - 3 species, 6 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Monte Carlo (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Monte Carlo - 3 species, 12 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Native Sun - 3 species, 38 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Pride (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Pride - 8 species, 14 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Sport King (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Sport King - 1 species, 10 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Patriot (Newport) (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Patriot (Newport) - 3 species, 23 anglers
+2025-10-22 20:28:56,406 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:28:56,406 - INFO - ✅ Parsed: Western Pride - 2 species, 43 anglers
+2025-10-22 20:28:56,406 - INFO - ✅ Total trips parsed: 11
+2025-10-22 20:28:56,461 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:56,521 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Betty-O "HTTP/2 200 OK"
+2025-10-22 20:28:56,583 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.350&trip_date=eq.2025-02-23&trip_duration=eq.3%2F4+Day&anglers=eq.15 "HTTP/2 200 OK"
+2025-10-22 20:28:56,658 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.2fe3f0d790046082&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:56,721 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:56,795 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:56,796 - INFO - ✅ Inserted: Betty-O (2 species)
+2025-10-22 20:28:56,851 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:56,905 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:28:56,961 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-23&trip_duration=eq.1%2F2+Day+AM&anglers=eq.94 "HTTP/2 200 OK"
+2025-10-22 20:28:57,017 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.e86f545f21e3948f&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:57,076 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:57,144 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:57,144 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:28:57,195 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:57,248 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:28:57,302 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-23&trip_duration=eq.3%2F4+Day&anglers=eq.34 "HTTP/2 200 OK"
+2025-10-22 20:28:57,366 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.189e477051f1a7c8&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:57,422 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:57,480 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:57,480 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:28:57,535 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:57,615 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Gail+Force "HTTP/2 200 OK"
+2025-10-22 20:28:57,692 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.392&trip_date=eq.2025-02-23&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.10 "HTTP/2 200 OK"
+2025-10-22 20:28:57,759 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.bd4097aad3ca195d&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:57,820 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:57,878 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:57,879 - INFO - ✅ Inserted: Gail Force (1 species)
+2025-10-22 20:28:57,937 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:58,000 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ghost "HTTP/2 200 OK"
+2025-10-22 20:28:58,055 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.400&trip_date=eq.2025-02-23&trip_duration=eq.Full+Day&anglers=eq.6 "HTTP/2 200 OK"
+2025-10-22 20:28:58,135 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.45808117e6608ee7&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:58,195 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:58,253 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:58,254 - INFO - ✅ Inserted: Ghost (3 species)
+2025-10-22 20:28:58,309 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:58,375 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Monte+Carlo "HTTP/2 200 OK"
+2025-10-22 20:28:58,429 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.342&trip_date=eq.2025-02-23&trip_duration=eq.1%2F2+Day+AM&anglers=eq.12 "HTTP/2 200 OK"
+2025-10-22 20:28:58,488 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.a50f915f33a5003b&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:58,542 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:58,621 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:58,622 - INFO - ✅ Inserted: Monte Carlo (3 species)
+2025-10-22 20:28:58,679 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:58,732 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:28:58,784 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-23&trip_duration=eq.3%2F4+Day&anglers=eq.38 "HTTP/2 200 OK"
+2025-10-22 20:28:58,845 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.3c092b5273571bd0&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:58,908 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:58,980 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:58,980 - INFO - ✅ Inserted: Native Sun (3 species)
+2025-10-22 20:28:59,053 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:59,126 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Pride "HTTP/2 200 OK"
+2025-10-22 20:28:59,184 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.362&trip_date=eq.2025-02-23&trip_duration=eq.2+Day&anglers=eq.14 "HTTP/2 200 OK"
+2025-10-22 20:28:59,237 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.ca3accd82727be12&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:59,293 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:59,359 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:59,359 - INFO - ✅ Inserted: Pride (8 species)
+2025-10-22 20:28:59,414 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:28:59,486 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sport+King "HTTP/2 200 OK"
+2025-10-22 20:28:59,551 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.372&trip_date=eq.2025-02-23&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.10 "HTTP/2 200 OK"
+2025-10-22 20:28:59,612 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.0c1a08d1d32a6338&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:28:59,691 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:28:59,758 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:28:59,759 - INFO - ✅ Inserted: Sport King (1 species)
+2025-10-22 20:28:59,819 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Newport+Landing "HTTP/2 200 OK"
+2025-10-22 20:28:59,874 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Patriot+%28Newport%29 "HTTP/2 200 OK"
+2025-10-22 20:28:59,930 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.389&trip_date=eq.2025-02-23&trip_duration=eq.Full+Day&anglers=eq.23 "HTTP/2 200 OK"
+2025-10-22 20:28:59,981 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.6df81d5de16ee303&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:29:00,030 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:00,084 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:00,084 - INFO - ✅ Inserted: Patriot (Newport) (3 species)
+2025-10-22 20:29:00,133 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:29:00,182 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:29:00,238 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-23&trip_duration=eq.1%2F2+Day+AM&anglers=eq.43 "HTTP/2 200 OK"
+2025-10-22 20:29:00,297 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.e4f1e022b5b6a094&trip_date=gte.2025-02-16&trip_date=lte.2025-03-02&trip_date=neq.2025-02-23 "HTTP/2 200 OK"
+2025-10-22 20:29:00,364 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:00,419 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:00,420 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:29:00,471 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:00,472 - INFO - 
+================================================================================
+2025-10-22 20:29:00,472 - INFO - 📅 Processing: 2025-02-24 (24 of 28)
+2025-10-22 20:29:00,472 - INFO - ================================================================================
+2025-10-22 20:29:00,472 - INFO - ⏳ Delay: 2s
+2025-10-22 20:29:02,477 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-24
+2025-10-22 20:29:02,741 - INFO - ✅ Fetched 30770 bytes
+2025-10-22 20:29:02,817 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:29:02,817 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:29:02,829 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:29:02,829 - ERROR -    Requested: 2025-02-24
+2025-10-22 20:29:02,830 - ERROR -    Actual:    2025-02-23
+2025-10-22 20:29:02,830 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:29:02,830 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:29:02,830 - WARNING - ⚠️  Date mismatch on 2025-02-24: Date mismatch: requested 2025-02-24, page shows 2025-02-23. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:29:02,830 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:29:02,830 - INFO - 
+================================================================================
+2025-10-22 20:29:02,830 - INFO - 📅 Processing: 2025-02-25 (25 of 28)
+2025-10-22 20:29:02,830 - INFO - ================================================================================
+2025-10-22 20:29:02,830 - INFO - ⏳ Delay: 5s
+2025-10-22 20:29:07,830 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-25
+2025-10-22 20:29:08,076 - INFO - ✅ Fetched 30770 bytes
+2025-10-22 20:29:08,206 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:29:08,207 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:29:08,213 - ERROR - ❌ DATE MISMATCH DETECTED
+2025-10-22 20:29:08,213 - ERROR -    Requested: 2025-02-25
+2025-10-22 20:29:08,213 - ERROR -    Actual:    2025-02-23
+2025-10-22 20:29:08,214 - ERROR -    → Source may be serving fallback/cached content
+2025-10-22 20:29:08,214 - ERROR -    → This prevents phantom data injection
+2025-10-22 20:29:08,214 - WARNING - ⚠️  Date mismatch on 2025-02-25: Date mismatch: requested 2025-02-25, page shows 2025-02-23. Source may be serving fallback/cached content for future dates. ABORTING to prevent phantom data injection.
+2025-10-22 20:29:08,214 - WARNING -    → Skipping date (no new data available)
+2025-10-22 20:29:08,214 - INFO - 
+================================================================================
+2025-10-22 20:29:08,214 - INFO - 📅 Processing: 2025-02-26 (26 of 28)
+2025-10-22 20:29:08,214 - INFO - ================================================================================
+2025-10-22 20:29:08,214 - INFO - ⏳ Delay: 5s
+2025-10-22 20:29:13,219 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-26
+2025-10-22 20:29:13,651 - INFO - ✅ Fetched 28539 bytes
+2025-10-22 20:29:13,792 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:29:13,796 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:29:13,804 - INFO - ✅ Source date validated: 2025-02-26 matches requested 2025-02-26
+2025-10-22 20:29:13,811 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:29:13,812 - INFO - ✅ Parsed: New Del Mar - 3 species, 40 anglers
+2025-10-22 20:29:13,812 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:29:13,812 - INFO - ✅ Parsed: Spitfire - 3 species, 20 anglers
+2025-10-22 20:29:13,812 - INFO - 🔍 Found boat: Native Sun (validated against database)
+2025-10-22 20:29:13,812 - INFO - ✅ Parsed: Native Sun - 3 species, 26 anglers
+2025-10-22 20:29:13,812 - INFO - 🔍 Found boat: Reel Fun (validated against database)
+2025-10-22 20:29:13,812 - INFO - ✅ Parsed: Reel Fun - 3 species, 23 anglers
+2025-10-22 20:29:13,812 - INFO - 🔍 Found boat: Sum Fun (validated against database)
+2025-10-22 20:29:13,813 - INFO - ✅ Parsed: Sum Fun - 1 species, 13 anglers
+2025-10-22 20:29:13,813 - INFO - ✅ Total trips parsed: 5
+2025-10-22 20:29:13,871 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:13,932 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:29:14,001 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-26&trip_duration=eq.1%2F2+Day+AM&anglers=eq.40 "HTTP/2 200 OK"
+2025-10-22 20:29:14,055 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.b27092666dc9ea5d&trip_date=gte.2025-02-19&trip_date=lte.2025-03-05&trip_date=neq.2025-02-26 "HTTP/2 200 OK"
+2025-10-22 20:29:14,120 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:14,194 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:14,194 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:29:14,240 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:14,297 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:29:14,349 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-26&trip_duration=eq.3%2F4+Day&anglers=eq.20 "HTTP/2 200 OK"
+2025-10-22 20:29:14,405 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.db8d91fa9b46f690&trip_date=gte.2025-02-19&trip_date=lte.2025-03-05&trip_date=neq.2025-02-26 "HTTP/2 200 OK"
+2025-10-22 20:29:14,462 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:14,533 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:14,533 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:29:14,594 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.22nd+Street+Landing "HTTP/2 200 OK"
+2025-10-22 20:29:14,661 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Native+Sun "HTTP/2 200 OK"
+2025-10-22 20:29:14,729 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.343&trip_date=eq.2025-02-26&trip_duration=eq.3%2F4+Day&anglers=eq.26 "HTTP/2 200 OK"
+2025-10-22 20:29:14,784 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.1be3e63644b8aa31&trip_date=gte.2025-02-19&trip_date=lte.2025-03-05&trip_date=neq.2025-02-26 "HTTP/2 200 OK"
+2025-10-22 20:29:14,836 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:14,894 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:14,894 - INFO - ✅ Inserted: Native Sun (3 species)
+2025-10-22 20:29:14,954 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:15,013 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Reel+Fun "HTTP/2 200 OK"
+2025-10-22 20:29:15,065 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.356&trip_date=eq.2025-02-26&trip_duration=eq.1%2F2+Day+AM&anglers=eq.23 "HTTP/2 200 OK"
+2025-10-22 20:29:15,119 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.d603fac6dbd271ce&trip_date=gte.2025-02-19&trip_date=lte.2025-03-05&trip_date=neq.2025-02-26 "HTTP/2 200 OK"
+2025-10-22 20:29:15,189 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:15,257 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:15,257 - INFO - ✅ Inserted: Reel Fun (3 species)
+2025-10-22 20:29:15,328 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:15,382 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Sum+Fun "HTTP/2 200 OK"
+2025-10-22 20:29:15,458 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.349&trip_date=eq.2025-02-26&trip_duration=eq.1%2F2+Day+AM&anglers=eq.13 "HTTP/2 200 OK"
+2025-10-22 20:29:15,528 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.5c301eca5ced5629&trip_date=gte.2025-02-19&trip_date=lte.2025-03-05&trip_date=neq.2025-02-26 "HTTP/2 200 OK"
+2025-10-22 20:29:15,584 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:15,647 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:15,647 - INFO - ✅ Inserted: Sum Fun (1 species)
+2025-10-22 20:29:15,703 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:15,703 - INFO - 
+================================================================================
+2025-10-22 20:29:15,703 - INFO - 📅 Processing: 2025-02-27 (27 of 28)
+2025-10-22 20:29:15,703 - INFO - ================================================================================
+2025-10-22 20:29:15,703 - INFO - ⏳ Delay: 2s
+2025-10-22 20:29:17,708 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-27
+2025-10-22 20:29:18,134 - INFO - ✅ Fetched 28480 bytes
+2025-10-22 20:29:18,190 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:29:18,191 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:29:18,196 - INFO - ✅ Source date validated: 2025-02-27 matches requested 2025-02-27
+2025-10-22 20:29:18,201 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:29:18,201 - INFO - ✅ Parsed: New Del Mar - 3 species, 28 anglers
+2025-10-22 20:29:18,201 - INFO - 🔍 Found boat: Gail Force (validated against database)
+2025-10-22 20:29:18,201 - INFO - ✅ Parsed: Gail Force - 1 species, 7 anglers
+2025-10-22 20:29:18,201 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:29:18,202 - INFO - ✅ Parsed: Western Pride - 4 species, 17 anglers
+2025-10-22 20:29:18,202 - INFO - 🔍 Found boat: Reel Fun (validated against database)
+2025-10-22 20:29:18,202 - INFO - ✅ Parsed: Reel Fun - 1 species, 19 anglers
+2025-10-22 20:29:18,202 - INFO - ✅ Total trips parsed: 4
+2025-10-22 20:29:18,276 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:18,333 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:29:18,392 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-27&trip_duration=eq.1%2F2+Day+AM&anglers=eq.28 "HTTP/2 200 OK"
+2025-10-22 20:29:18,448 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.426877e39374140b&trip_date=gte.2025-02-20&trip_date=lte.2025-03-06&trip_date=neq.2025-02-27 "HTTP/2 200 OK"
+2025-10-22 20:29:18,498 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:18,561 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:18,561 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:29:18,620 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.LA+Waterfront+Cruises+and+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:18,679 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Gail+Force "HTTP/2 200 OK"
+2025-10-22 20:29:18,735 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.392&trip_date=eq.2025-02-27&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.7 "HTTP/2 200 OK"
+2025-10-22 20:29:18,787 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.0401cfd8a88f8f6c&trip_date=gte.2025-02-20&trip_date=lte.2025-03-06&trip_date=neq.2025-02-27 "HTTP/2 200 OK"
+2025-10-22 20:29:18,855 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:18,919 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:18,920 - INFO - ✅ Inserted: Gail Force (1 species)
+2025-10-22 20:29:18,971 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:29:19,023 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:29:19,079 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-27&trip_duration=eq.1%2F2+Day+PM&anglers=eq.17 "HTTP/2 200 OK"
+2025-10-22 20:29:19,139 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.a60614ee3e445e82&trip_date=gte.2025-02-20&trip_date=lte.2025-03-06&trip_date=neq.2025-02-27 "HTTP/2 200 OK"
+2025-10-22 20:29:19,191 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:19,240 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:19,240 - INFO - ✅ Inserted: Western Pride (4 species)
+2025-10-22 20:29:19,292 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Dana+Wharf+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:19,338 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Reel+Fun "HTTP/2 200 OK"
+2025-10-22 20:29:19,385 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.356&trip_date=eq.2025-02-27&trip_duration=eq.1%2F2+Day+AM&anglers=eq.19 "HTTP/2 200 OK"
+2025-10-22 20:29:19,438 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.2d794ae577f3c22e&trip_date=gte.2025-02-20&trip_date=lte.2025-03-06&trip_date=neq.2025-02-27 "HTTP/2 200 OK"
+2025-10-22 20:29:19,516 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:19,578 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:19,578 - INFO - ✅ Inserted: Reel Fun (1 species)
+2025-10-22 20:29:19,644 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:19,644 - INFO - 
+================================================================================
+2025-10-22 20:29:19,644 - INFO - 📅 Processing: 2025-02-28 (28 of 28)
+2025-10-22 20:29:19,644 - INFO - ================================================================================
+2025-10-22 20:29:19,644 - INFO - ⏳ Delay: 2s
+2025-10-22 20:29:21,648 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-02-28
+2025-10-22 20:29:22,091 - INFO - ✅ Fetched 28749 bytes
+2025-10-22 20:29:22,183 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 20:29:22,184 - INFO - ✅ Loaded 137 known boats from database
+2025-10-22 20:29:22,190 - INFO - ✅ Source date validated: 2025-02-28 matches requested 2025-02-28
+2025-10-22 20:29:22,195 - INFO - 🔍 Found boat: New Del Mar (validated against database)
+2025-10-22 20:29:22,195 - INFO - ✅ Parsed: New Del Mar - 3 species, 25 anglers
+2025-10-22 20:29:22,195 - INFO - 🔍 Found boat: Spitfire (validated against database)
+2025-10-22 20:29:22,195 - INFO - ✅ Parsed: Spitfire - 3 species, 8 anglers
+2025-10-22 20:29:22,195 - INFO - 🔍 Found boat: Ahra-Ahn (validated against database)
+2025-10-22 20:29:22,195 - INFO - ✅ Parsed: Ahra-Ahn - 1 species, 23 anglers
+2025-10-22 20:29:22,195 - INFO - 🔍 Found boat: Patriot (Newport) (validated against database)
+2025-10-22 20:29:22,195 - INFO - ✅ Parsed: Patriot (Newport) - 4 species, 16 anglers
+2025-10-22 20:29:22,196 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:29:22,196 - INFO - ✅ Parsed: Western Pride - 3 species, 25 anglers
+2025-10-22 20:29:22,196 - INFO - 🔍 Found boat: Western Pride (validated against database)
+2025-10-22 20:29:22,196 - INFO - ✅ Parsed: Western Pride - 2 species, 39 anglers
+2025-10-22 20:29:22,196 - INFO - ✅ Total trips parsed: 6
+2025-10-22 20:29:22,242 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:22,289 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.New+Del+Mar "HTTP/2 200 OK"
+2025-10-22 20:29:22,353 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.336&trip_date=eq.2025-02-28&trip_duration=eq.1%2F2+Day+AM&anglers=eq.25 "HTTP/2 200 OK"
+2025-10-22 20:29:22,407 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.f4c0f000bd488950&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:22,462 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:22,519 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:22,519 - INFO - ✅ Inserted: New Del Mar (3 species)
+2025-10-22 20:29:22,563 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Marina+Del+Rey+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:22,619 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Spitfire "HTTP/2 200 OK"
+2025-10-22 20:29:22,670 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.337&trip_date=eq.2025-02-28&trip_duration=eq.3%2F4+Day&anglers=eq.8 "HTTP/2 200 OK"
+2025-10-22 20:29:22,719 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.101ff8d0b6e86038&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:22,773 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:22,833 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:22,834 - INFO - ✅ Inserted: Spitfire (3 species)
+2025-10-22 20:29:22,876 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Long+Beach+Sportfishing "HTTP/2 200 OK"
+2025-10-22 20:29:22,927 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Ahra-Ahn "HTTP/2 200 OK"
+2025-10-22 20:29:22,994 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.367&trip_date=eq.2025-02-28&trip_duration=eq.Full+Day&anglers=eq.23 "HTTP/2 200 OK"
+2025-10-22 20:29:23,067 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.832aa001fce6258e&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:23,115 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:23,167 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:23,167 - INFO - ✅ Inserted: Ahra-Ahn (1 species)
+2025-10-22 20:29:23,214 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Newport+Landing "HTTP/2 200 OK"
+2025-10-22 20:29:23,267 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Patriot+%28Newport%29 "HTTP/2 200 OK"
+2025-10-22 20:29:23,328 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.389&trip_date=eq.2025-02-28&trip_duration=eq.Full+Day&anglers=eq.16 "HTTP/2 200 OK"
+2025-10-22 20:29:23,401 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.0e912502fb5046d8&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:23,456 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:23,515 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:23,516 - INFO - ✅ Inserted: Patriot (Newport) (4 species)
+2025-10-22 20:29:23,571 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:29:23,616 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:29:23,667 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-28&trip_duration=eq.1%2F2+Day+PM&anglers=eq.25 "HTTP/2 200 OK"
+2025-10-22 20:29:23,734 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.c6adcc8da02c464f&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:23,802 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:23,855 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:23,856 - INFO - ✅ Inserted: Western Pride (3 species)
+2025-10-22 20:29:23,910 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/landings?select=id&name=eq.Davey%27s+Locker "HTTP/2 200 OK"
+2025-10-22 20:29:23,965 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id&name=eq.Western+Pride "HTTP/2 200 OK"
+2025-10-22 20:29:24,017 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=id&boat_id=eq.345&trip_date=eq.2025-02-28&trip_duration=eq.1%2F2+Day+Twilight&anglers=eq.39 "HTTP/2 200 OK"
+2025-10-22 20:29:24,074 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A&trip_hash=eq.8ae0ae9e57f9cc9c&trip_date=gte.2025-02-21&trip_date=lte.2025-03-07&trip_date=neq.2025-02-28 "HTTP/2 200 OK"
+2025-10-22 20:29:24,123 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips "HTTP/2 201 Created"
+2025-10-22 20:29:24,173 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/catches?columns=%22species%22%2C%22trip_id%22%2C%22count%22 "HTTP/2 201 Created"
+2025-10-22 20:29:24,173 - INFO - ✅ Inserted: Western Pride (2 species)
+2025-10-22 20:29:24,220 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:24,287 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:24,343 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.31 "HTTP/2 200 OK"
+2025-10-22 20:29:24,343 - INFO - ✅ Completed scrape_job #31: SUCCESS (126.5s)
+2025-10-22 20:29:24,343 - INFO - 
+================================================================================
+2025-10-22 20:29:24,343 - INFO - 📊 SCRAPING SUMMARY
+2025-10-22 20:29:24,344 - INFO - ================================================================================
+2025-10-22 20:29:24,344 - INFO - ✅ Dates processed: 28
+2025-10-22 20:29:24,344 - INFO - ✅ Trips found: 72
+2025-10-22 20:29:24,344 - INFO - ✅ Trips inserted: 72
+2025-10-22 20:29:24,344 - INFO - ⚠️  Trips skipped: 0
+2025-10-22 20:29:24,344 - INFO - ================================================================================
+

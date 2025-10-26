@@ -147,10 +147,10 @@ All QC validation reports saved:
 ### Process to Follow (SPEC 006 Workflow)
 ```bash
 # 1. Scrape 5-date batch
-python3 boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
+python3 scripts/python/boats_scraper.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD
 
 # 2. QC validate immediately
-python3 qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_batchN.json
+python3 scripts/python/qc_validator.py --start-date YYYY-MM-DD --end-date YYYY-MM-DD --output qc_batchN.json
 
 # 3. Verify 100% pass
 cat qc_batchN.json | jq '.summary.pass_rate'  # MUST be 100.0

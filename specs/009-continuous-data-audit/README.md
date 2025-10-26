@@ -33,13 +33,13 @@ Following the SPEC-008 remediation of 115 corrupted trips (91.4% phantoms), this
 
 ```bash
 # Audit 50 trips from last 30 days (default)
-python3 data_auditor.py
+python3 scripts/python/data_auditor.py
 
 # Custom sample size and date range
-python3 data_auditor.py --sample-size 100 --date-range 60
+python3 scripts/python/data_auditor.py --sample-size 100 --date-range 60
 
 # Smaller test run
-python3 data_auditor.py --sample-size 10 --date-range 7
+python3 scripts/python/data_auditor.py --sample-size 10 --date-range 7
 ```
 
 ### Output
@@ -216,7 +216,7 @@ COMMIT;
 
 ```bash
 # Re-run auditor to verify fixes
-python3 data_auditor.py --sample-size 20 --date-range 30
+python3 scripts/python/data_auditor.py --sample-size 20 --date-range 30
 
 # Should show improved QC confidence
 ```
@@ -232,7 +232,7 @@ python3 data_auditor.py --sample-size 20 --date-range 30
 crontab -e
 
 # Add daily audit at 2 AM
-0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 data_auditor.py --sample-size 50 --date-range 30 >> data_auditor_cron.log 2>&1
+0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 scripts/python/data_auditor.py --sample-size 50 --date-range 30 >> data_auditor_cron.log 2>&1
 ```
 
 ### Weekly Summary Script
@@ -366,7 +366,7 @@ reporting:
 
 ```bash
 # Quick test (5 trips, 7 days)
-python3 data_auditor.py --sample-size 5 --date-range 7
+python3 scripts/python/data_auditor.py --sample-size 5 --date-range 7
 
 # Expected output:
 # ✅ Audit complete!
@@ -374,7 +374,7 @@ python3 data_auditor.py --sample-size 5 --date-range 7
 # VALID: 4-5/5
 
 # Full test (50 trips, 30 days)
-python3 data_auditor.py --sample-size 50 --date-range 30
+python3 scripts/python/data_auditor.py --sample-size 50 --date-range 30
 
 # Expected runtime: <5 minutes
 # Expected QC confidence: >99%

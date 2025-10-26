@@ -396,8 +396,8 @@ python3 test_fishing_date_estimation.py
 **Build Status**: ✅ SUCCESS
 ```bash
 npm run build
-# ✅ assets/main.js built (2.0mb)
-# ✅ assets/styles.css built (1.6kb)
+# ✅ frontend/assets/main.js built (2.0mb)
+# ✅ frontend/assets/styles.css built (1.6kb)
 ```
 
 **Dashboard Ready**: http://localhost:3002

@@ -1,0 +1,42 @@
+{
+  "date_range": {
+    "start": "2025-10-22",
+    "end": "2025-10-23"
+  },
+  "summary": {
+    "total_dates": 2,
+    "passed": 2,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "effective_dates": 2,
+    "pass_rate": 100.0
+  },
+  "reports": [
+    {
+      "date": "2025-10-22",
+      "status": "PASS",
+      "source_boat_count": 13,
+      "database_boat_count": 13,
+      "matches": 13,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:17:36.951513"
+    },
+    {
+      "date": "2025-10-23",
+      "status": "PASS",
+      "source_boat_count": 11,
+      "database_boat_count": 11,
+      "matches": 11,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T14:17:39.772355"
+    }
+  ],
+  "timestamp": "2025-10-24T14:17:39.772889"
+}

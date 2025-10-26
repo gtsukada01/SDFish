@@ -8,7 +8,7 @@
 ## Execution Summary
 
 ```bash
-python3 socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
+python3 scripts/python/socal_scraper.py --start-date 2025-09-15 --end-date 2025-10-15
 ```
 
 ### Results

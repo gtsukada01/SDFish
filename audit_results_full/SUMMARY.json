@@ -1,0 +1,26 @@
+{
+  "audit_date": "2025-10-25T20:54:20.104022",
+  "total_files_audited": 650,
+  "workers": 4,
+  "skip_dynamic": true,
+  "category_breakdown": {
+    "CRITICAL (A)": 94,
+    "ACTIVE (B)": 187,
+    "ARCHIVE (C)": 293,
+    "DELETE (D)": 76,
+    "ERROR": 0
+  },
+  "recommendations": {
+    "KEEP": 281,
+    "ARCHIVE": 293,
+    "DELETE": 76,
+    "MANUAL_REVIEW": 0
+  },
+  "errors": 0,
+  "deletion_safety": {
+    "total_candidates": 76,
+    "safe_to_delete": 76,
+    "needs_manual_review": 0,
+    "safety_rate": "100.0%"
+  }
+}

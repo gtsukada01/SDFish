@@ -41,7 +41,7 @@ chmod +x qc_validator.py
 ### 1. Validate Single Date
 
 ```bash
-python3 qc_validator.py --date 2025-09-30
+python3 scripts/python/qc_validator.py --date 2025-09-30
 ```
 
 **Output**:
@@ -68,7 +68,7 @@ python3 qc_validator.py --date 2025-09-30
 ### 2. Validate Date Range
 
 ```bash
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-30 --output sept_2025_qc.json
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-30 --output sept_2025_qc.json
 ```
 
 Validates all 30 dates in September and saves detailed JSON report.
@@ -76,7 +76,7 @@ Validates all 30 dates in September and saves detailed JSON report.
 ### 3. Run Polaris Supreme Test
 
 ```bash
-python3 qc_validator.py --polaris-test --output polaris_test_report.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_test_report.json
 ```
 
 **Expected Result**: PASS (10 trips, correct dates)
@@ -198,9 +198,9 @@ python3 qc_validator.py --polaris-test --output polaris_test_report.json
 
 ```bash
 # Test on 3 known good dates (from 2024 data)
-python3 qc_validator.py --date 2024-10-15
-python3 qc_validator.py --date 2024-09-20
-python3 qc_validator.py --date 2024-08-10
+python3 scripts/python/qc_validator.py --date 2024-10-15
+python3 scripts/python/qc_validator.py --date 2024-09-20
+python3 scripts/python/qc_validator.py --date 2024-08-10
 ```
 
 **Expected**: All should PASS (if 2024 data is good)
@@ -211,7 +211,7 @@ python3 qc_validator.py --date 2024-08-10
 
 ```bash
 # Validate newly scraped dates
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output batch1_qc.json
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output batch1_qc.json
 ```
 
 **If PASS**: Continue to next batch
@@ -223,14 +223,14 @@ Scrape in batches of 5 dates, then validate:
 
 ```bash
 # Batch 1: Scrape Sept 1-5
-python3 boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
+python3 scripts/python/boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
 
 # Validate Batch 1
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05
 
 # If PASS, continue to Batch 2
-python3 boats_scraper.py --start-date 2025-09-06 --end-date 2025-09-10
-python3 qc_validator.py --start-date 2025-09-06 --end-date 2025-09-10
+python3 scripts/python/boats_scraper.py --start-date 2025-09-06 --end-date 2025-09-10
+python3 scripts/python/qc_validator.py --start-date 2025-09-06 --end-date 2025-09-10
 
 # ... repeat
 ```
@@ -371,10 +371,10 @@ extra_boats: [
 python3 -c "from boats_scraper import init_supabase; ..."  # Backup script
 
 # 2. Scrape Batch 1 (Sept 1-5)
-python3 boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
+python3 scripts/python/boats_scraper.py --start-date 2025-09-01 --end-date 2025-09-05
 
 # 3. QC Validate Batch 1
-python3 qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output qc_batch1.json
+python3 scripts/python/qc_validator.py --start-date 2025-09-01 --end-date 2025-09-05 --output qc_batch1.json
 
 # 4. Check QC results
 cat qc_batch1.json | jq '.summary.passed'  # Should be 5
@@ -385,7 +385,7 @@ cat qc_batch1.json | jq '.summary.passed'  # Should be 5
 # ... repeat for all batches
 
 # Final: Run Polaris Supreme test
-python3 qc_validator.py --polaris-test --output polaris_final_test.json
+python3 scripts/python/qc_validator.py --polaris-test --output polaris_final_test.json
 ```
 
 ---

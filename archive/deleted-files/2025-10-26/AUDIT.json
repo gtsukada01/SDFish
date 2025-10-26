@@ -1,0 +1,767 @@
+{
+  "audit_version": "1.0",
+  "backup_directory": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26",
+  "created_at": "2025-10-26T15:01:32.677287",
+  "deletions": [
+    {
+      "deleted_at": "2025-10-26T15:01:32.676990",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".codex/prompts/analyze.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/analyze.md",
+      "file_hash": "a88d3ef21c5119e1cda5321cd5915503dca517fc9b3c78c9a5f1debe46e05a2f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/analyze.md .codex/prompts/analyze.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.678191",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".codex/prompts/clarify.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/clarify.md",
+      "file_hash": "3187649b032ff5f27aa9d403a289adf94bc91dee28d3ed355cca1df45fc0ded7",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/clarify.md .codex/prompts/clarify.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.678889",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".codex/prompts/implement.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/implement.md",
+      "file_hash": "3816dec38afe51915f63d14a3b17cd74ded7215f4c965ff0ca72fd661d2ff61b",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/implement.md .codex/prompts/implement.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.679578",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".codex/prompts/specify.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/specify.md",
+      "file_hash": "69c3ed920a2acd497f3f7bf7d4e918129f6e20058f843395287c3869ab301d04",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.codex/prompts/specify.md .codex/prompts/specify.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.680271",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/scripts/bash/check-prerequisites.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/check-prerequisites.sh",
+      "file_hash": "092fc69a0a21c56173978c778e1cda5ad85a15f7d6ab2c1a41f71ecbede81219",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/check-prerequisites.sh .specify/scripts/bash/check-prerequisites.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.680855",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/scripts/bash/create-new-feature.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/create-new-feature.sh",
+      "file_hash": "0f5f8cfe1c9506b68d7096cf8e80f33963e13217d4f2f5c0969679c3ea03b1a3",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/create-new-feature.sh .specify/scripts/bash/create-new-feature.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.681430",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/scripts/bash/setup-plan.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/setup-plan.sh",
+      "file_hash": "558c450a34ae2c468b51f8551b3c15e98aac177794cb9dadc832bcd9ecc22bcd",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/scripts/bash/setup-plan.sh .specify/scripts/bash/setup-plan.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.682048",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/templates/agent-file-template.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/agent-file-template.md",
+      "file_hash": "4999c22c1a7c58c4aab5415a1712240e152c511fd623f7de49158b605549e930",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/agent-file-template.md .specify/templates/agent-file-template.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.682720",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/templates/plan-template.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/plan-template.md",
+      "file_hash": "ef913d3f1605375ad2f3f6c617c79d507d069ae4932f4a4bf3e9aef88fb80e19",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/plan-template.md .specify/templates/plan-template.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.683383",
+      "operator": "claude-code@anthropic.com",
+      "original_path": ".specify/templates/spec-template.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/spec-template.md",
+      "file_hash": "da5e8b95a629cd60f4bf0781421a29eae371c7a4dc716b0eb2054e12127f5c87",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/.specify/templates/spec-template.md .specify/templates/spec-template.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.684547",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-03-01.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-03-01.json",
+      "file_hash": "948837b8f9ef0c4f56b3cfbf20717b570cf380686a0c0b58701bc3074ba85f7b",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-03-01.json backups/phase2/trips_2025-03-01.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.685698",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-04-05.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-04-05.json",
+      "file_hash": "d8bedb73f20ef2647b45114dcab2f7c0aeddf4ade07c9bffdbf498ca7bc75c18",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-04-05.json backups/phase2/trips_2025-04-05.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.686743",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-05-08.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-08.json",
+      "file_hash": "8ce71bc1bdc1019dfae41b3337713c694886454bf7d9deb2e9afb37e760cf0e8",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-08.json backups/phase2/trips_2025-05-08.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.687766",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-05-14.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-14.json",
+      "file_hash": "73db26497d3d64f3c9dcebb9a2fb4bf56b86d580e91d2477682370e094197ce6",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-14.json backups/phase2/trips_2025-05-14.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.688576",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-05-23.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-23.json",
+      "file_hash": "0f21ef4f79d1c7ed3488ed23b9d2488238d4c2d2deebde122a45e79a5411d02e",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-05-23.json backups/phase2/trips_2025-05-23.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.690947",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-03.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-03.json",
+      "file_hash": "50fc51d4dd57bc034c70fc036f730e5d10ab5a9c01ad2feabf3253e597838a81",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-03.json backups/phase2/trips_2025-06-03.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.691871",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-04.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-04.json",
+      "file_hash": "2388e62eacbfb317d1ba3ca27534968e033e54c05589f74cf1c0d261235e702c",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-04.json backups/phase2/trips_2025-06-04.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.692886",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-06.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-06.json",
+      "file_hash": "a5ffbe4f90f7cd34c3672ba84754b839da4106cf5350e500eff8594766610286",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-06.json backups/phase2/trips_2025-06-06.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.693931",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-07.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-07.json",
+      "file_hash": "42b1e09fdbca5f8e8ff6c532355b2bbb34b39524c9c7455d6e64ed0df3529f84",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-07.json backups/phase2/trips_2025-06-07.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.695063",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-11.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-11.json",
+      "file_hash": "49ad48e980c70c9aba49d220712fa74c0e474254bc58d9094c5b0bbefc4b927d",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-11.json backups/phase2/trips_2025-06-11.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.696067",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-13.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-13.json",
+      "file_hash": "6c7b007be22bb4353b2cd74c28569cb796b2ce56425c8053c38a2fea59ddddf2",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-13.json backups/phase2/trips_2025-06-13.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.697072",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-20.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-20.json",
+      "file_hash": "91d6bfa9d933b2ce1568695817d438ac4f6a53b778335cd35b1a2ce0029063dc",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-20.json backups/phase2/trips_2025-06-20.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.698065",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-26.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-26.json",
+      "file_hash": "c01a91a1149ad648c125720f147e1224323b5b8eeb3260e4b848ebf47993935e",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-26.json backups/phase2/trips_2025-06-26.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.699225",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-27.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-27.json",
+      "file_hash": "249081a5cd3fe0ca03c1b68d91e32d36987acd4ce8399140484efa870241c8c8",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-27.json backups/phase2/trips_2025-06-27.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.700410",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-28.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-28.json",
+      "file_hash": "819fc87b5c23acbf7c7bdc3af0f5bd0c9fa824d5c8477e387deef9fa66d37a52",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-28.json backups/phase2/trips_2025-06-28.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.701416",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-06-29.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-29.json",
+      "file_hash": "96ab4d6ec30e03e2bcb16a1720cb3e6b201dc225f2474b31f86ecaf1027f04a8",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-06-29.json backups/phase2/trips_2025-06-29.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.702340",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-01.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-01.json",
+      "file_hash": "0bc295ca6047576518ddf8e94a758588059fbfe0edcbb0695d636001a50cc34e",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-01.json backups/phase2/trips_2025-07-01.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.703346",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-06.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-06.json",
+      "file_hash": "fd73094ddb3101278077af689cc0da8ccfc368e952dc50cad959b3e0137dab86",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-06.json backups/phase2/trips_2025-07-06.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.704543",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-09.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-09.json",
+      "file_hash": "e731a6e603eb18fdb47f5a3f96bdd68b5242dd29348ee34ebfd039b137a030fb",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-09.json backups/phase2/trips_2025-07-09.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.705584",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-20.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-20.json",
+      "file_hash": "730a4da60c5ed50db817b971b44a70f0a3fe10001e7f4d39a04899c93498c67b",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-20.json backups/phase2/trips_2025-07-20.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.706363",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-23.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-23.json",
+      "file_hash": "9f2f04de8a769a848e5c11a9a0afb6c6ed34de4f3533aecd6825c12e2b0c18c3",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-23.json backups/phase2/trips_2025-07-23.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.707187",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-25.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-25.json",
+      "file_hash": "71e19c33dee16a5dfeeb6dbe2aa4df0962c2b84c80aee32d38eb161e715f067f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-25.json backups/phase2/trips_2025-07-25.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.708283",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "backups/phase2/trips_2025-07-27.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-27.json",
+      "file_hash": "f5df529e81cdc73f34f5936348157a7ed48eb3e13b1866b9a582f6433de8cd23",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/backups/phase2/trips_2025-07-27.json backups/phase2/trips_2025-07-27.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.709837",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "frontend/verify-shadcn-sidebar.js",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/frontend/verify-shadcn-sidebar.js",
+      "file_hash": "89b01be44616db26bb61f87074886fc55b68bbe8e36a2d8ba1cdb77214185500",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/frontend/verify-shadcn-sidebar.js frontend/verify-shadcn-sidebar.js"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.711534",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_aug_sep_FINAL.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_aug_sep_FINAL.json",
+      "file_hash": "4ec08abd554bced6e40542cf7e5bf833f46b49a2784a07baa4423a5ee4d541f5",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_aug_sep_FINAL.json logs/socal_qc_aug_sep_FINAL.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.713516",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_aug_sep_backfill.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_aug_sep_backfill.json",
+      "file_hash": "f04ae3d32d17fdc36ae1f542e3a6d7e414fbca084c6a6ecbb0a0285082b6b322",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_aug_sep_backfill.json logs/socal_qc_aug_sep_backfill.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.714882",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_june_fixed.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_fixed.json",
+      "file_hash": "81f75c8e3b8ec0fe6728b2874b1dfac86f0ebea7c40b015fee1befb4d4b5e69f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_fixed.json logs/socal_qc_june_fixed.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.716218",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_june_july_final.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_july_final.json",
+      "file_hash": "6a556d5cc7c7aa7fe60fd47926ba895d7a0e9faf27369d7b774c378f6e4a35c6",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_july_final.json logs/socal_qc_june_july_final.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.717676",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_june_july_retest.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_july_retest.json",
+      "file_hash": "b7bfb9ddc674be7317b51dc2fd29144c065ba807ad7d949eaa6d84a1e14feb0a",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_july_retest.json logs/socal_qc_june_july_retest.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.719091",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_june_oct_final.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_oct_final.json",
+      "file_hash": "46d4f73a97cd0ff4b18c75b0a908e7d873fd47993349e0ed7442e6bf3d122e75",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_oct_final.json logs/socal_qc_june_oct_final.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.720452",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "logs/socal_qc_june_retest.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_retest.json",
+      "file_hash": "9dd2d54e05f8e40aa8a1f7b28a2f9bbdabd283e6e9df0875379c1f4874f045f2",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/logs/socal_qc_june_retest.json logs/socal_qc_june_retest.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.722066",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "notes/2025-10-22-modernization-kickoff.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/notes/2025-10-22-modernization-kickoff.md",
+      "file_hash": "e910cd0d058ce504658838e2b49856e9eaf1a43a39323bd04d369a9d2da8f5d6",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/notes/2025-10-22-modernization-kickoff.md notes/2025-10-22-modernization-kickoff.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.723230",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "risks/012-modernize-frontend.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/risks/012-modernize-frontend.md",
+      "file_hash": "7d6e64c182aaad4aaebc16d442a46b96fe1c4eb8462809fef5c36e7c00a91f1d",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/risks/012-modernize-frontend.md risks/012-modernize-frontend.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.724684",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/generate-from-schemas.mjs",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/generate-from-schemas.mjs",
+      "file_hash": "7b69bd9605d9951ea30f55946e64aab0ea8825f8d98f0628d675fe9aadd92e25",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/generate-from-schemas.mjs scripts/generate-from-schemas.mjs"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.726229",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_chain_remaining.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_chain_remaining.sh",
+      "file_hash": "f0b83e93a36df6dcf03c82f484e2edc9334fde0f24c7ac98b6e9c7ced2249eb5",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_chain_remaining.sh scripts/shell/auto_chain_remaining.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.727581",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_complete_2025.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_complete_2025.sh",
+      "file_hash": "d5c6ee01d9bc9c2453e70965d1c0640ed698c4a688ba7df29ee04df355ac8b66",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_complete_2025.sh scripts/shell/auto_complete_2025.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.729128",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_phase2.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_phase2.sh",
+      "file_hash": "94a27dc4d56d34918f310da2b54029b1a0a046b8bf9b993cf28729b7fd284d72",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_phase2.sh scripts/shell/auto_phase2.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.730375",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_phase5.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_phase5.sh",
+      "file_hash": "586331be1502e9fe8d04ceb86a1c6098d6b50b4705fb52a803f9cb26bf06244e",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_phase5.sh scripts/shell/auto_phase5.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.731509",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_remediate.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_remediate.sh",
+      "file_hash": "90fea6b71b188de0b89b30b608e5a4c73f58b722d8338f208e9109e462d93239",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_remediate.sh scripts/shell/auto_remediate.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.732610",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/auto_scrape_jan_sep_2025.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_scrape_jan_sep_2025.sh",
+      "file_hash": "4e063708d69166bd6063c55d82d73ebaae42e4231c7e9aac497dd3cdb478e3c2",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/auto_scrape_jan_sep_2025.sh scripts/shell/auto_scrape_jan_sep_2025.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.733632",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "scripts/shell/run_september.sh",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/run_september.sh",
+      "file_hash": "2515bbdd2c5baae74f9a35f15b2b66fbd8d23b6debb0bf9ea2b53ecbe6dc0059",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/scripts/shell/run_september.sh scripts/shell/run_september.sh"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.734930",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/001-offshore-analytics-table/contracts/catch-table.mock.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/catch-table.mock.json",
+      "file_hash": "6ec020a05251b9c25e6f65d2b52199de131223fc0f57acce73c94774a859e2af",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/catch-table.mock.json specs/001-offshore-analytics-table/contracts/catch-table.mock.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.736207",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/001-offshore-analytics-table/contracts/status.mock.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/status.mock.json",
+      "file_hash": "1ffab4d585feda0331246c2d651cc7f5c8993eb7f9899bd116f2d04dde29ee2b",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/status.mock.json specs/001-offshore-analytics-table/contracts/status.mock.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.737343",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json",
+      "file_hash": "a9befa09ddebeede4085bd9827040bd72963606a5719f6e12ca5525075171035",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json specs/001-offshore-analytics-table/contracts/summary-metrics.mock.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.738993",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md",
+      "file_hash": "81bccc48e0a663879b7001299db02369f26083c70b52c0c11a12001c996ebc54",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md specs/004-socal-regional-expansion/validation/phase4-dashboard-validation.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.740759",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json",
+      "file_hash": "369c5e482772bcef4485cf72e3c4ee5011f3892892640019c76c67c4b11af243",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json specs/005-trip-date-correction/validation/migration_report_dry_run_20251016_175053.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.742241",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json",
+      "file_hash": "71a9bf9c3e03e347fd31a38c47405545ccf57df86949ec2aad78377b38078233",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json specs/005-trip-date-correction/validation/migration_report_production_20251016_180315.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.743634",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt",
+      "file_hash": "645fd78f4f9f24541990e27e1546366cd7ba47483e183a2e27e58b4a0086ec6f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt specs/008-phantom-trip-investigation/diagnostic_dates_boat_374.txt"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.745107",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt",
+      "file_hash": "a6b4de7a459ab4b35b3528eef3d9b077afc267d20ddee5de96c02b833a13475f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt specs/008-phantom-trip-investigation/diagnostic_dates_boat_375.txt"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.746713",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/008-phantom-trip-investigation/execute_remediation.py",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/execute_remediation.py",
+      "file_hash": "b19764df4f41da5a6291e0894ccea87a44b14c9fced86e9d8f578dc7df16d09f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/execute_remediation.py specs/008-phantom-trip-investigation/execute_remediation.py"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.748257",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/008-phantom-trip-investigation/run_diagnostic_qc.py",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/run_diagnostic_qc.py",
+      "file_hash": "539773edb546ce588cb593dd8fed9b61f9a99b855a2e698a7d51d29ce6c2cfeb",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/008-phantom-trip-investigation/run_diagnostic_qc.py specs/008-phantom-trip-investigation/run_diagnostic_qc.py"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.749729",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md",
+      "file_hash": "59eac692c62067ec6f5101ef765bc9c7102fc9fdf1a1aa04fb5be8340e76a18e",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md specs/009-continuous-data-audit/PRODUCTION_RUN_SUMMARY.md"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.751179",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "specs/009-continuous-data-audit/evidence/trip_11129_evidence.json",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/009-continuous-data-audit/evidence/trip_11129_evidence.json",
+      "file_hash": "34da7e80c1b9b467fc90497f255d0054f9a48f60d0a8d41d9ab59b25d84848b5",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/specs/009-continuous-data-audit/evidence/trip_11129_evidence.json specs/009-continuous-data-audit/evidence/trip_11129_evidence.json"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.752551",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "sql/create_trip_collisions_table.sql",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/create_trip_collisions_table.sql",
+      "file_hash": "08dd3e6d25ea221e1f0277c90d6d6635a0b07084ed7fbf1af6db2dcdfb758148",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/create_trip_collisions_table.sql sql/create_trip_collisions_table.sql"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.754245",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "sql/migrate_constraint.sql",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/migrate_constraint.sql",
+      "file_hash": "65db620c60e2a3789863ca7b685c09a2d74a2d408af41234a31ab1ad71de5d41",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/migrate_constraint.sql sql/migrate_constraint.sql"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.755941",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "sql/remove_unique_constraint.sql",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/remove_unique_constraint.sql",
+      "file_hash": "9eedd715f2b5665f7fb6139039a43a92a89b06f9d16ce9cdc79d02f1e3681026",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/sql/remove_unique_constraint.sql sql/remove_unique_constraint.sql"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.757719",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/api/client.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/api/client.spec.ts",
+      "file_hash": "f3a1086f1098730ed330c59f7c2dfb45b41e6d25c86a3343c83d6a1894258fc8",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/api/client.spec.ts tests/api/client.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.759461",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/test-date-filter.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/test-date-filter.spec.ts",
+      "file_hash": "335c4b179e03f38d6263750204d68016e4e11df3627a2b39068fa0c6eb19ff19",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/test-date-filter.spec.ts tests/test-date-filter.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.761602",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/filter-panel-verification.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filter-panel-verification.spec.ts",
+      "file_hash": "553a327d105358e6c9af32c7ed255a5bb535959321aedd464684536de2b5f2b8",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filter-panel-verification.spec.ts tests/ui/filter-panel-verification.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.763456",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/filterpanel-complete-report.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-complete-report.spec.ts",
+      "file_hash": "8bd243c2fd25638780a26fde37af33e5bd49ba50508c4a742fde883ba502cb7f",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-complete-report.spec.ts tests/ui/filterpanel-complete-report.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.765214",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/filterpanel-diagnostic.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-diagnostic.spec.ts",
+      "file_hash": "655bfc32e629eb993239fe02a3817ecd4b22fe0955f2fb0c55cffde4acdec0af",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-diagnostic.spec.ts tests/ui/filterpanel-diagnostic.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.767156",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/filterpanel-final-verify.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-final-verify.spec.ts",
+      "file_hash": "eb133e88e0cbcec5914f81765f5115792b2be0670a960a2ac4006cbe3b024373",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-final-verify.spec.ts tests/ui/filterpanel-final-verify.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.768623",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/filterpanel-verified.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-verified.spec.ts",
+      "file_hash": "83a288c72d9fe6be0c877775613e88549c48db65904a4fdbd94b29adc095fab6",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/filterpanel-verified.spec.ts tests/ui/filterpanel-verified.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.770351",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/inspect-badges.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/inspect-badges.spec.ts",
+      "file_hash": "a3f279fec9df281684cef3a424edd36ecbc807f91ebbd08a3c078c18ac4a01d2",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/inspect-badges.spec.ts tests/ui/inspect-badges.spec.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.771934",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/support/mock-fixtures.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/support/mock-fixtures.ts",
+      "file_hash": "6d656585f5550991ba8e56d02b1eaeca85bb0ae72ef3fab5a7a3fb53c852ecac",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/support/mock-fixtures.ts tests/ui/support/mock-fixtures.ts"
+    },
+    {
+      "deleted_at": "2025-10-26T15:01:32.774367",
+      "operator": "claude-code@anthropic.com",
+      "original_path": "tests/ui/verify-filter-panel.spec.ts",
+      "backup_path": "/Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/verify-filter-panel.spec.ts",
+      "file_hash": "433467e319053cfb18774148291710845272bbf630f1d9b33e900521b23c353a",
+      "reason": "Automated cleanup per SPEC-013 Phase 4 - Category D orphaned files (0 code references, 100% safe to delete)",
+      "dry_run": false,
+      "recovery_command": "cp /Users/btsukada/Desktop/Fishing/fish-scraper/archive/deleted-files/2025-10-26/tests/ui/verify-filter-panel.spec.ts tests/ui/verify-filter-panel.spec.ts"
+    }
+  ]
+}

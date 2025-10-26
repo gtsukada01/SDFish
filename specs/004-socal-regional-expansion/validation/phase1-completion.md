@@ -22,7 +22,7 @@ Successfully validated `socal_scraper.py` database integration with production S
 ## Test Execution
 
 ### Step 1: Dry-Run Test ✅
-**Command**: `python3 socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12 --dry-run`
+**Command**: `python3 scripts/python/socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12 --dry-run`
 
 **Results**:
 - Fetched page successfully (37,485 bytes)
@@ -89,7 +89,7 @@ TRIPS BY LANDING:
 ```
 
 ### Step 4: Production Insertion Test ✅
-**Command**: `python3 socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12`
+**Command**: `python3 scripts/python/socal_scraper.py --start-date 2025-10-12 --end-date 2025-10-12`
 
 **Duration**: 25 seconds (with ethical 2-5 second delays)
 

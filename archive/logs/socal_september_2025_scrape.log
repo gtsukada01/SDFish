@@ -1,0 +1,411 @@
+2025-10-22 22:56:25,611 - INFO - ================================================================================
+2025-10-22 22:56:25,611 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 22:56:25,611 - INFO - ================================================================================
+2025-10-22 22:56:25,611 - INFO - 📅 Date range: 2025-09-01 to 2025-09-30
+2025-10-22 22:56:25,611 - INFO - 🔧 Dry run: False
+2025-10-22 22:56:25,611 - INFO - 🔧 Allow future: False
+2025-10-22 22:56:25,611 - INFO - 🔧 Allow early: False
+2025-10-22 22:56:25,642 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 22:56:25,739 - INFO - ✅ Supabase connected
+2025-10-22 22:56:25,769 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 22:56:55,801 - ERROR - ❌ Failed to create scrape_job: [Errno 8] nodename nor servname provided, or not known
+2025-10-22 22:56:55,802 - WARNING - ⚠️  Continuing without audit trail (NOT RECOMMENDED)
+2025-10-22 22:56:55,803 - INFO - 
+================================================================================
+2025-10-22 22:56:55,803 - INFO - 📅 Processing: 2025-09-01 (1 of 30)
+2025-10-22 22:56:55,803 - INFO - ================================================================================
+2025-10-22 22:56:55,803 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-01
+2025-10-22 22:57:55,810 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 22:58:00,821 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-01
+2025-10-22 22:59:00,826 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 22:59:10,828 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-01
+2025-10-22 23:00:10,836 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154610>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:00:10,837 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-01
+2025-10-22 23:00:10,837 - WARNING - ⚠️  Skipping 2025-09-01
+2025-10-22 23:00:10,837 - INFO - 
+================================================================================
+2025-10-22 23:00:10,837 - INFO - 📅 Processing: 2025-09-02 (2 of 30)
+2025-10-22 23:00:10,837 - INFO - ================================================================================
+2025-10-22 23:00:10,838 - INFO - ⏳ Delay: 2s
+2025-10-22 23:00:12,848 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-02
+2025-10-22 23:01:12,853 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-02 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:01:17,864 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-02
+2025-10-22 23:02:17,870 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-02 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:02:27,882 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-02
+2025-10-22 23:03:27,887 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-02 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154610>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:03:27,888 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-02
+2025-10-22 23:03:27,888 - WARNING - ⚠️  Skipping 2025-09-02
+2025-10-22 23:03:27,889 - INFO - 
+================================================================================
+2025-10-22 23:03:27,889 - INFO - 📅 Processing: 2025-09-03 (3 of 30)
+2025-10-22 23:03:27,889 - INFO - ================================================================================
+2025-10-22 23:03:27,889 - INFO - ⏳ Delay: 4s
+2025-10-22 23:03:31,899 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-03
+2025-10-22 23:04:31,903 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-03 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:04:36,911 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-03
+2025-10-22 23:05:36,918 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-03 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:05:46,929 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-03
+2025-10-22 23:06:46,934 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-03 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154610>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:06:46,934 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-03
+2025-10-22 23:06:46,934 - WARNING - ⚠️  Skipping 2025-09-03
+2025-10-22 23:06:46,935 - INFO - 
+================================================================================
+2025-10-22 23:06:46,935 - INFO - 📅 Processing: 2025-09-04 (4 of 30)
+2025-10-22 23:06:46,935 - INFO - ================================================================================
+2025-10-22 23:06:46,935 - INFO - ⏳ Delay: 5s
+2025-10-22 23:06:51,936 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-04
+2025-10-22 23:07:51,941 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-04 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:07:56,948 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-04
+2025-10-22 23:08:56,951 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-04 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:09:06,962 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-04
+2025-10-22 23:10:06,967 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-04 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154610>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:10:06,968 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-04
+2025-10-22 23:10:06,968 - WARNING - ⚠️  Skipping 2025-09-04
+2025-10-22 23:10:06,968 - INFO - 
+================================================================================
+2025-10-22 23:10:06,969 - INFO - 📅 Processing: 2025-09-05 (5 of 30)
+2025-10-22 23:10:06,969 - INFO - ================================================================================
+2025-10-22 23:10:06,969 - INFO - ⏳ Delay: 3s
+2025-10-22 23:10:09,979 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-05
+2025-10-22 23:11:09,981 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-05 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:11:14,992 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-05
+2025-10-22 23:12:14,997 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-05 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:12:25,008 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-05
+2025-10-22 23:13:25,013 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-05 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154610>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:13:25,015 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-05
+2025-10-22 23:13:25,015 - WARNING - ⚠️  Skipping 2025-09-05
+2025-10-22 23:13:25,015 - INFO - 
+================================================================================
+2025-10-22 23:13:25,015 - INFO - 📅 Processing: 2025-09-06 (6 of 30)
+2025-10-22 23:13:25,015 - INFO - ================================================================================
+2025-10-22 23:13:25,015 - INFO - ⏳ Delay: 2s
+2025-10-22 23:13:27,020 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-06
+2025-10-22 23:14:27,025 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-06 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:14:32,035 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-06
+2025-10-22 23:15:32,042 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-06 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:15:42,053 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-06
+2025-10-22 23:16:42,058 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-06 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:16:42,060 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-06
+2025-10-22 23:16:42,060 - WARNING - ⚠️  Skipping 2025-09-06
+2025-10-22 23:16:42,060 - INFO - 
+================================================================================
+2025-10-22 23:16:42,060 - INFO - 📅 Processing: 2025-09-07 (7 of 30)
+2025-10-22 23:16:42,060 - INFO - ================================================================================
+2025-10-22 23:16:42,060 - INFO - ⏳ Delay: 5s
+2025-10-22 23:16:47,070 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-07
+2025-10-22 23:17:47,076 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-07 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:17:52,088 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-07
+2025-10-22 23:18:52,095 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-07 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:19:02,099 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-07
+2025-10-22 23:35:18,822 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-07 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:35:18,824 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-07
+2025-10-22 23:35:18,824 - WARNING - ⚠️  Skipping 2025-09-07
+2025-10-22 23:35:18,824 - INFO - 
+================================================================================
+2025-10-22 23:35:18,824 - INFO - 📅 Processing: 2025-09-08 (8 of 30)
+2025-10-22 23:35:18,824 - INFO - ================================================================================
+2025-10-22 23:35:18,824 - INFO - ⏳ Delay: 4s
+2025-10-22 23:35:22,825 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-08
+2025-10-22 23:36:22,835 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-08 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:36:27,846 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-08
+2025-10-22 23:37:27,850 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-08 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:37:37,861 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-08
+2025-10-22 23:38:37,865 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-08 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:38:37,866 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-08
+2025-10-22 23:38:37,866 - WARNING - ⚠️  Skipping 2025-09-08
+2025-10-22 23:38:37,866 - INFO - 
+================================================================================
+2025-10-22 23:38:37,866 - INFO - 📅 Processing: 2025-09-09 (9 of 30)
+2025-10-22 23:38:37,866 - INFO - ================================================================================
+2025-10-22 23:38:37,866 - INFO - ⏳ Delay: 2s
+2025-10-22 23:38:39,870 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-09
+2025-10-22 23:39:39,876 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-09 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:39:44,888 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-09
+2025-10-22 23:40:44,894 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-09 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:40:54,905 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-09
+2025-10-22 23:41:54,911 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-09 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:41:54,913 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-09
+2025-10-22 23:41:54,913 - WARNING - ⚠️  Skipping 2025-09-09
+2025-10-22 23:41:54,913 - INFO - 
+================================================================================
+2025-10-22 23:41:54,913 - INFO - 📅 Processing: 2025-09-10 (10 of 30)
+2025-10-22 23:41:54,913 - INFO - ================================================================================
+2025-10-22 23:41:54,913 - INFO - ⏳ Delay: 5s
+2025-10-22 23:41:59,923 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-10
+2025-10-22 23:42:59,927 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-10 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:43:04,930 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-10
+2025-10-22 23:44:04,934 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-10 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:44:14,946 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-10
+2025-10-22 23:45:14,952 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-10 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:45:14,953 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-10
+2025-10-22 23:45:14,953 - WARNING - ⚠️  Skipping 2025-09-10
+2025-10-22 23:45:14,953 - INFO - 
+================================================================================
+2025-10-22 23:45:14,953 - INFO - 📅 Processing: 2025-09-11 (11 of 30)
+2025-10-22 23:45:14,953 - INFO - ================================================================================
+2025-10-22 23:45:14,954 - INFO - ⏳ Delay: 5s
+2025-10-22 23:45:19,964 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-11
+2025-10-22 23:46:19,969 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-11 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:46:24,982 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-11
+2025-10-22 23:47:24,986 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-11 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:47:34,997 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-11
+2025-10-22 23:48:35,003 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-11 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:48:35,004 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-11
+2025-10-22 23:48:35,004 - WARNING - ⚠️  Skipping 2025-09-11
+2025-10-22 23:48:35,004 - INFO - 
+================================================================================
+2025-10-22 23:48:35,004 - INFO - 📅 Processing: 2025-09-12 (12 of 30)
+2025-10-22 23:48:35,004 - INFO - ================================================================================
+2025-10-22 23:48:35,004 - INFO - ⏳ Delay: 5s
+2025-10-22 23:48:40,014 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-12
+2025-10-22 23:49:40,018 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-12 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:49:45,024 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-12
+2025-10-22 23:50:45,029 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-12 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:50:55,041 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-12
+2025-10-22 23:51:55,049 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-12 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:51:55,050 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-12
+2025-10-22 23:51:55,050 - WARNING - ⚠️  Skipping 2025-09-12
+2025-10-22 23:51:55,051 - INFO - 
+================================================================================
+2025-10-22 23:51:55,051 - INFO - 📅 Processing: 2025-09-13 (13 of 30)
+2025-10-22 23:51:55,051 - INFO - ================================================================================
+2025-10-22 23:51:55,051 - INFO - ⏳ Delay: 4s
+2025-10-22 23:51:59,061 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-13
+2025-10-22 23:52:59,067 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-13 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:53:04,078 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-13
+2025-10-22 23:54:04,084 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-13 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:54:14,095 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-13
+2025-10-22 23:55:14,101 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-13 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:55:14,103 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-13
+2025-10-22 23:55:14,103 - WARNING - ⚠️  Skipping 2025-09-13
+2025-10-22 23:55:14,103 - INFO - 
+================================================================================
+2025-10-22 23:55:14,103 - INFO - 📅 Processing: 2025-09-14 (14 of 30)
+2025-10-22 23:55:14,103 - INFO - ================================================================================
+2025-10-22 23:55:14,104 - INFO - ⏳ Delay: 2s
+2025-10-22 23:55:16,114 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-14
+2025-10-22 23:56:16,117 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-14 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:56:21,123 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-14
+2025-10-22 23:57:21,129 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-14 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:57:31,141 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-14
+2025-10-22 23:58:31,146 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-14 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:58:31,147 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-14
+2025-10-22 23:58:31,147 - WARNING - ⚠️  Skipping 2025-09-14
+2025-10-22 23:58:31,147 - INFO - 
+================================================================================
+2025-10-22 23:58:31,148 - INFO - 📅 Processing: 2025-09-15 (15 of 30)
+2025-10-22 23:58:31,148 - INFO - ================================================================================
+2025-10-22 23:58:31,148 - INFO - ⏳ Delay: 5s
+2025-10-22 23:58:36,150 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-15
+2025-10-22 23:59:36,156 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-15 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-22 23:59:41,167 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-15
+2025-10-23 00:00:41,174 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-15 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:00:51,185 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-15
+2025-10-23 00:01:51,191 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-15 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:01:51,193 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-15
+2025-10-23 00:01:51,193 - WARNING - ⚠️  Skipping 2025-09-15
+2025-10-23 00:01:51,193 - INFO - 
+================================================================================
+2025-10-23 00:01:51,193 - INFO - 📅 Processing: 2025-09-16 (16 of 30)
+2025-10-23 00:01:51,193 - INFO - ================================================================================
+2025-10-23 00:01:51,193 - INFO - ⏳ Delay: 5s
+2025-10-23 00:01:56,203 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-16
+2025-10-23 00:02:56,208 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-16 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:03:01,215 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-16
+2025-10-23 00:04:01,220 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-16 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:04:11,228 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-16
+2025-10-23 00:05:11,234 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-16 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:05:11,235 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-16
+2025-10-23 00:05:11,235 - WARNING - ⚠️  Skipping 2025-09-16
+2025-10-23 00:05:11,235 - INFO - 
+================================================================================
+2025-10-23 00:05:11,235 - INFO - 📅 Processing: 2025-09-17 (17 of 30)
+2025-10-23 00:05:11,235 - INFO - ================================================================================
+2025-10-23 00:05:11,235 - INFO - ⏳ Delay: 4s
+2025-10-23 00:05:15,240 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-17
+2025-10-23 00:05:48,593 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-17 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:05:53,602 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-17
+2025-10-23 00:06:53,610 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-17 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:07:03,621 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-17
+2025-10-23 00:08:03,628 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-17 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:08:03,630 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-17
+2025-10-23 00:08:03,630 - WARNING - ⚠️  Skipping 2025-09-17
+2025-10-23 00:08:03,630 - INFO - 
+================================================================================
+2025-10-23 00:08:03,630 - INFO - 📅 Processing: 2025-09-18 (18 of 30)
+2025-10-23 00:08:03,630 - INFO - ================================================================================
+2025-10-23 00:08:03,630 - INFO - ⏳ Delay: 4s
+2025-10-23 00:08:07,641 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-18
+2025-10-23 00:09:07,645 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-18 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:09:12,657 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-18
+2025-10-23 00:10:12,663 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-18 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a00>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:10:22,667 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-18
+2025-10-23 00:11:22,672 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-18 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:11:22,674 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-18
+2025-10-23 00:11:22,674 - WARNING - ⚠️  Skipping 2025-09-18
+2025-10-23 00:11:22,674 - INFO - 
+================================================================================
+2025-10-23 00:11:22,674 - INFO - 📅 Processing: 2025-09-19 (19 of 30)
+2025-10-23 00:11:22,674 - INFO - ================================================================================
+2025-10-23 00:11:22,674 - INFO - ⏳ Delay: 5s
+2025-10-23 00:11:27,684 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-19
+2025-10-23 00:12:27,688 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-19 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:12:32,700 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-19
+2025-10-23 00:13:32,707 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-19 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:13:42,719 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-19
+2025-10-23 00:14:42,726 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-19 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:14:42,728 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-19
+2025-10-23 00:14:42,728 - WARNING - ⚠️  Skipping 2025-09-19
+2025-10-23 00:14:42,728 - INFO - 
+================================================================================
+2025-10-23 00:14:42,728 - INFO - 📅 Processing: 2025-09-20 (20 of 30)
+2025-10-23 00:14:42,728 - INFO - ================================================================================
+2025-10-23 00:14:42,729 - INFO - ⏳ Delay: 4s
+2025-10-23 00:14:46,730 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-20
+2025-10-23 00:15:46,736 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:15:51,747 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-20
+2025-10-23 00:16:51,754 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:17:01,764 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-20
+2025-10-23 00:18:01,771 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-20 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:18:01,772 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-20
+2025-10-23 00:18:01,772 - WARNING - ⚠️  Skipping 2025-09-20
+2025-10-23 00:18:01,772 - INFO - 
+================================================================================
+2025-10-23 00:18:01,772 - INFO - 📅 Processing: 2025-09-21 (21 of 30)
+2025-10-23 00:18:01,772 - INFO - ================================================================================
+2025-10-23 00:18:01,772 - INFO - ⏳ Delay: 3s
+2025-10-23 00:18:04,782 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-21
+2025-10-23 00:19:04,788 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-21 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:19:09,794 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-21
+2025-10-23 00:20:09,799 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-21 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:20:19,805 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-21
+2025-10-23 00:21:19,811 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-21 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:21:19,812 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-21
+2025-10-23 00:21:19,812 - WARNING - ⚠️  Skipping 2025-09-21
+2025-10-23 00:21:19,812 - INFO - 
+================================================================================
+2025-10-23 00:21:19,812 - INFO - 📅 Processing: 2025-09-22 (22 of 30)
+2025-10-23 00:21:19,812 - INFO - ================================================================================
+2025-10-23 00:21:19,812 - INFO - ⏳ Delay: 2s
+2025-10-23 00:21:21,812 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-22
+2025-10-23 00:22:21,814 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-22 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:22:26,825 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-22
+2025-10-23 00:23:26,831 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-22 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:23:36,840 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-22
+2025-10-23 00:24:36,847 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-22 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:24:36,848 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-22
+2025-10-23 00:24:36,848 - WARNING - ⚠️  Skipping 2025-09-22
+2025-10-23 00:24:36,848 - INFO - 
+================================================================================
+2025-10-23 00:24:36,848 - INFO - 📅 Processing: 2025-09-23 (23 of 30)
+2025-10-23 00:24:36,848 - INFO - ================================================================================
+2025-10-23 00:24:36,849 - INFO - ⏳ Delay: 3s
+2025-10-23 00:24:39,859 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-23
+2025-10-23 00:25:39,863 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-23 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:25:44,873 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-23
+2025-10-23 00:26:44,879 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-23 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:26:54,886 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-23
+2025-10-23 00:27:54,889 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-23 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:27:54,890 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-23
+2025-10-23 00:27:54,890 - WARNING - ⚠️  Skipping 2025-09-23
+2025-10-23 00:27:54,890 - INFO - 
+================================================================================
+2025-10-23 00:27:54,890 - INFO - 📅 Processing: 2025-09-24 (24 of 30)
+2025-10-23 00:27:54,890 - INFO - ================================================================================
+2025-10-23 00:27:54,890 - INFO - ⏳ Delay: 4s
+2025-10-23 00:27:58,893 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-24
+2025-10-23 00:28:58,899 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-24 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:29:03,910 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-24
+2025-10-23 00:30:03,914 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-24 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:30:13,925 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-24
+2025-10-23 00:31:13,931 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-24 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:31:13,933 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-24
+2025-10-23 00:31:13,933 - WARNING - ⚠️  Skipping 2025-09-24
+2025-10-23 00:31:13,933 - INFO - 
+================================================================================
+2025-10-23 00:31:13,933 - INFO - 📅 Processing: 2025-09-25 (25 of 30)
+2025-10-23 00:31:13,933 - INFO - ================================================================================
+2025-10-23 00:31:13,933 - INFO - ⏳ Delay: 5s
+2025-10-23 00:31:18,943 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-25
+2025-10-23 00:32:18,950 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-25 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:32:23,961 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-25
+2025-10-23 00:33:23,968 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-25 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:33:33,980 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-25
+2025-10-23 00:34:33,986 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-25 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:34:33,987 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-25
+2025-10-23 00:34:33,987 - WARNING - ⚠️  Skipping 2025-09-25
+2025-10-23 00:34:33,987 - INFO - 
+================================================================================
+2025-10-23 00:34:33,987 - INFO - 📅 Processing: 2025-09-26 (26 of 30)
+2025-10-23 00:34:33,987 - INFO - ================================================================================
+2025-10-23 00:34:33,988 - INFO - ⏳ Delay: 4s
+2025-10-23 00:34:37,998 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-26
+2025-10-23 00:35:38,005 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-26 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:35:43,017 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-26
+2025-10-23 00:36:43,023 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-26 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:36:53,034 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-26
+2025-10-23 00:37:53,039 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-26 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:37:53,041 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-26
+2025-10-23 00:37:53,041 - WARNING - ⚠️  Skipping 2025-09-26
+2025-10-23 00:37:53,041 - INFO - 
+================================================================================
+2025-10-23 00:37:53,042 - INFO - 📅 Processing: 2025-09-27 (27 of 30)
+2025-10-23 00:37:53,042 - INFO - ================================================================================
+2025-10-23 00:37:53,042 - INFO - ⏳ Delay: 5s
+2025-10-23 00:37:58,052 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-27
+2025-10-23 00:38:58,059 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-27 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:39:03,071 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-27
+2025-10-23 00:40:03,077 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-27 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:40:13,083 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-27
+2025-10-23 00:41:13,089 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-27 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:41:13,090 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-27
+2025-10-23 00:41:13,090 - WARNING - ⚠️  Skipping 2025-09-27
+2025-10-23 00:41:13,091 - INFO - 
+================================================================================
+2025-10-23 00:41:13,091 - INFO - 📅 Processing: 2025-09-28 (28 of 30)
+2025-10-23 00:41:13,091 - INFO - ================================================================================
+2025-10-23 00:41:13,091 - INFO - ⏳ Delay: 3s
+2025-10-23 00:41:16,101 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-28
+2025-10-23 00:42:16,109 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-28 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:42:21,121 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-28
+2025-10-23 00:43:21,126 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-28 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:43:31,136 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-28
+2025-10-23 00:44:31,141 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-28 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:44:31,143 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-28
+2025-10-23 00:44:31,143 - WARNING - ⚠️  Skipping 2025-09-28
+2025-10-23 00:44:31,143 - INFO - 
+================================================================================
+2025-10-23 00:44:31,143 - INFO - 📅 Processing: 2025-09-29 (29 of 30)
+2025-10-23 00:44:31,143 - INFO - ================================================================================
+2025-10-23 00:44:31,144 - INFO - ⏳ Delay: 2s
+2025-10-23 00:44:33,154 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-29
+2025-10-23 00:45:33,157 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-29 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:45:38,164 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-29
+2025-10-23 00:46:38,169 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-29 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:46:48,181 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-29
+2025-10-23 00:47:48,186 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-29 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:47:48,188 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-29
+2025-10-23 00:47:48,188 - WARNING - ⚠️  Skipping 2025-09-29
+2025-10-23 00:47:48,188 - INFO - 
+================================================================================
+2025-10-23 00:47:48,188 - INFO - 📅 Processing: 2025-09-30 (30 of 30)
+2025-10-23 00:47:48,188 - INFO - ================================================================================
+2025-10-23 00:47:48,188 - INFO - ⏳ Delay: 5s
+2025-10-23 00:47:53,198 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-30
+2025-10-23 00:48:53,204 - WARNING - ⚠️  Attempt 1/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-30 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1071542b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:48:58,215 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-30
+2025-10-23 00:49:58,221 - WARNING - ⚠️  Attempt 2/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-30 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154a90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:50:08,232 - INFO - 🌐 Fetching: https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-30
+2025-10-23 00:51:08,241 - WARNING - ⚠️  Attempt 3/3 failed: HTTPSConnectionPool(host='www.socalfishreports.com', port=443): Max retries exceeded with url: /dock_totals/boats.php?date=2025-09-30 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x107154970>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2025-10-23 00:51:08,242 - ERROR - ❌ Failed to fetch https://www.socalfishreports.com/dock_totals/boats.php?date=2025-09-30
+2025-10-23 00:51:08,243 - WARNING - ⚠️  Skipping 2025-09-30
+2025-10-23 00:51:08,243 - INFO - 
+================================================================================
+2025-10-23 00:51:08,243 - INFO - 📊 SCRAPING SUMMARY
+2025-10-23 00:51:08,243 - INFO - ================================================================================
+2025-10-23 00:51:08,243 - INFO - ✅ Dates processed: 30
+2025-10-23 00:51:08,243 - INFO - ✅ Trips found: 0
+2025-10-23 00:51:08,243 - INFO - ✅ Trips inserted: 0
+2025-10-23 00:51:08,243 - INFO - ⚠️  Trips skipped: 0
+2025-10-23 00:51:08,243 - INFO - ================================================================================
+

@@ -21,7 +21,7 @@ A **continuous quality monitoring system** that randomly spot-checks your fishin
 cd /Users/btsukada/Desktop/Fishing/fish-scraper
 
 # Quick test (5 trips, last 7 days)
-python3 data_auditor.py --sample-size 5 --date-range 7
+python3 scripts/python/data_auditor.py --sample-size 5 --date-range 7
 ```
 
 **Expected Output**:
@@ -79,7 +79,7 @@ cat specs/009-continuous-data-audit/evidence/trip_12345_evidence.json | jq '.'
 
 ```bash
 # Audit 50 trips from last 30 days
-python3 data_auditor.py --sample-size 50 --date-range 30
+python3 scripts/python/data_auditor.py --sample-size 50 --date-range 30
 
 # Runtime: ~5 minutes
 # Recommended frequency: Daily
@@ -89,7 +89,7 @@ python3 data_auditor.py --sample-size 50 --date-range 30
 
 ```bash
 # Audit 100 trips from last 60 days
-python3 data_auditor.py --sample-size 100 --date-range 60
+python3 scripts/python/data_auditor.py --sample-size 100 --date-range 60
 
 # Runtime: ~10 minutes
 # Recommended frequency: Weekly
@@ -102,7 +102,7 @@ python3 data_auditor.py --sample-size 100 --date-range 60
 crontab -e
 
 # Add this line:
-0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 data_auditor.py --sample-size 50 --date-range 30 >> data_auditor_cron.log 2>&1
+0 2 * * * cd /Users/btsukada/Desktop/Fishing/fish-scraper && python3 scripts/python/data_auditor.py --sample-size 50 --date-range 30 >> data_auditor_cron.log 2>&1
 ```
 
 ---
@@ -201,7 +201,7 @@ ls -lt specs/009-continuous-data-audit/audit_reports/ | head -10
 python3 -c "from boats_scraper import init_supabase; s=init_supabase(); print(s.table('trips').select('count').execute())"
 
 # Try shorter date range
-python3 data_auditor.py --sample-size 5 --date-range 3
+python3 scripts/python/data_auditor.py --sample-size 5 --date-range 3
 ```
 
 ### "Source unavailable" errors

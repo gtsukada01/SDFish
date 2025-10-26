@@ -164,7 +164,7 @@ WHERE table_name = 'trips' AND column_name = 'trip_hash';
 
 1. **Scrape missing 10/18 date** (~17 trips expected):
    ```bash
-   python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
+   python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
      --operator "Recovery Team"
    ```
 
@@ -174,7 +174,7 @@ WHERE table_name = 'trips' AND column_name = 'trip_hash';
 
 3. **Run QC validation** on recovered range:
    ```bash
-   python3 qc_validator.py --start-date 2025-10-15 --end-date 2025-10-20 \
+   python3 scripts/python/qc_validator.py --start-date 2025-10-15 --end-date 2025-10-20 \
      --output qc_recovery.json
    ```
 
@@ -296,17 +296,17 @@ WHERE table_name = 'trips' AND column_name = 'trip_hash';
 
 **Test all safeguards**:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 
 **Test early scraping guard** (should block if before 5pm PT):
 ```bash
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 ```
 
 **Recovery scrape for 10/18**:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
+python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
   --operator "Recovery Team"
 ```
 

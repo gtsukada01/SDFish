@@ -1,0 +1,5133 @@
+{
+  "date_range": {
+    "start": "2025-08-16",
+    "end": "2025-09-30"
+  },
+  "summary": {
+    "total_dates": 46,
+    "passed": 14,
+    "failed": 32,
+    "errors": 0,
+    "skipped": 0,
+    "effective_dates": 46,
+    "pass_rate": 30.43
+  },
+  "reports": [
+    {
+      "date": "2025-08-16",
+      "status": "PASS",
+      "source_boat_count": 45,
+      "database_boat_count": 45,
+      "matches": 45,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:09.545076"
+    },
+    {
+      "date": "2025-08-17",
+      "status": "PASS",
+      "source_boat_count": 41,
+      "database_boat_count": 41,
+      "matches": 41,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:12.146367"
+    },
+    {
+      "date": "2025-08-18",
+      "status": "PASS",
+      "source_boat_count": 25,
+      "database_boat_count": 25,
+      "matches": 25,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:14.769563"
+    },
+    {
+      "date": "2025-08-19",
+      "status": "PASS",
+      "source_boat_count": 21,
+      "database_boat_count": 21,
+      "matches": 21,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:17.574305"
+    },
+    {
+      "date": "2025-08-20",
+      "status": "PASS",
+      "source_boat_count": 20,
+      "database_boat_count": 20,
+      "matches": 20,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:20.183730"
+    },
+    {
+      "date": "2025-08-21",
+      "status": "FAIL",
+      "source_boat_count": 32,
+      "database_boat_count": 12,
+      "matches": 11,
+      "mismatches": [
+        {
+          "boat": "Redondo Special",
+          "errors": [
+            "Missing species: 'sculpin' (count=4) not in database",
+            "Missing species: 'sheephead' (count=3) not in database",
+            "Missing species: 'calico bass' (count=30) not in database",
+            "Missing species: 'whitefish' (count=16) not in database",
+            "Missing species: 'rockfish' (count=61) not in database"
+          ]
+        }
+      ],
+      "missing_boats": [
+        {
+          "boat": "City of Long Beach",
+          "landing": "Pierpoint Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 30
+        },
+        {
+          "boat": "Enterprise",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 23
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 15
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 44
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 45
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 27
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 4
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 14
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [
+        "Missing species: 'sculpin' (count=4) not in database",
+        "Missing species: 'sheephead' (count=3) not in database",
+        "Missing species: 'calico bass' (count=30) not in database",
+        "Missing species: 'whitefish' (count=16) not in database",
+        "Missing species: 'rockfish' (count=61) not in database"
+      ],
+      "timestamp": "2025-10-24T00:50:22.857869"
+    },
+    {
+      "date": "2025-08-22",
+      "status": "FAIL",
+      "source_boat_count": 25,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Endeavor (Ventura)",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 26
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 8
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 33
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 33
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 32
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 47
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 60
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1.5 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 32
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 11
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 14
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:25.503237"
+    },
+    {
+      "date": "2025-08-23",
+      "status": "FAIL",
+      "source_boat_count": 48,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Black Pearl",
+          "landing": "Black Pearl Sportfishing",
+          "trip_type": "12 Hour",
+          "anglers": 24
+        },
+        {
+          "boat": "Black Pearl",
+          "landing": "Black Pearl Sportfishing",
+          "trip_type": "12 Hour",
+          "anglers": 24
+        },
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 39
+        },
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 31
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Coroloma",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Estella",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 45
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 12
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 27
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 128
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Pescador",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 32
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "City of Long Beach",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 0
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 13
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 37
+        },
+        {
+          "boat": "Sport King",
+          "landing": "LA Waterfront Cruises and Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 31
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Overnight",
+          "anglers": 4
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 60
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 43
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 42
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 51
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 43
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 23
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Lex Sea",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 3
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 32
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 23
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 39
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 10
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 43
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:28.194307"
+    },
+    {
+      "date": "2025-08-24",
+      "status": "FAIL",
+      "source_boat_count": 42,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 44
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Coroloma",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Estella",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 45
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 24
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 9
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 148
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 20
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 48
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 34
+        },
+        {
+          "boat": "City of Long Beach",
+          "landing": "Pierpoint Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 25
+        },
+        {
+          "boat": "Toronado",
+          "landing": "Pierpoint Landing",
+          "trip_type": "2 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 36
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 32
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 42
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 47
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 3
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 49
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 24
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 32
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 31
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 38
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 39
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:31.645024"
+    },
+    {
+      "date": "2025-08-25",
+      "status": "FAIL",
+      "source_boat_count": 24,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Endeavor (Ventura)",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 16
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 24
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 21
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Pescador",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 19
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 14
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 28
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 17
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 17
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 8
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 16
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:34.398230"
+    },
+    {
+      "date": "2025-08-26",
+      "status": "FAIL",
+      "source_boat_count": 19,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 17
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 27
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 37
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 22
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 61
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 25
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 24
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 26
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:36.990515"
+    },
+    {
+      "date": "2025-08-27",
+      "status": "FAIL",
+      "source_boat_count": 14,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 13
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "Overnight",
+          "anglers": 30
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 21
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 31
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:39.708035"
+    },
+    {
+      "date": "2025-08-28",
+      "status": "FAIL",
+      "source_boat_count": 20,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 12
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 23
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 37
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 12
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 26
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 7
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:42.311683"
+    },
+    {
+      "date": "2025-08-29",
+      "status": "FAIL",
+      "source_boat_count": 34,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Endeavor (Ventura)",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 39
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 20
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 37
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 63
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 23
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "MarDiosa",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 5
+        },
+        {
+          "boat": "Toronado",
+          "landing": "Pierpoint Landing",
+          "trip_type": "2 Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 25
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 23
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 49
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 38
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 28
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 60
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 23
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 23
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 23
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 39
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:45.026772"
+    },
+    {
+      "date": "2025-08-30",
+      "status": "FAIL",
+      "source_boat_count": 42,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Endeavor (Ventura)",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 51
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Coroloma",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Estella",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 44
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 44
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 22
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 44
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 139
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 55
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 30
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 47
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Enterprise",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 22
+        },
+        {
+          "boat": "MarDiosa",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 5
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 13
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 35
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 52
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 0
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 47
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 42
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 56
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 15
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 30
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 43
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:47.782898"
+    },
+    {
+      "date": "2025-08-31",
+      "status": "FAIL",
+      "source_boat_count": 35,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Coroloma",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Estella",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 45
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 41
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 19
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 27
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 143
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 36
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 34
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 34
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 30
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 65
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 55
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 37
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 63
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 25
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 33
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 17
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:50.418301"
+    },
+    {
+      "date": "2025-09-01",
+      "status": "FAIL",
+      "source_boat_count": 38,
+      "database_boat_count": 37,
+      "matches": 37,
+      "mismatches": [
+        {
+          "boat": "Thunderbird",
+          "errors": [
+            "Species count mismatch: 'yellowtail' source=34 db=11"
+          ]
+        }
+      ],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [
+        "Species count mismatch: 'yellowtail' source=34 db=11"
+      ],
+      "timestamp": "2025-10-24T00:50:53.053035"
+    },
+    {
+      "date": "2025-09-02",
+      "status": "PASS",
+      "source_boat_count": 12,
+      "database_boat_count": 11,
+      "matches": 12,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:55.669916"
+    },
+    {
+      "date": "2025-09-03",
+      "status": "PASS",
+      "source_boat_count": 13,
+      "database_boat_count": 13,
+      "matches": 13,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:50:58.301755"
+    },
+    {
+      "date": "2025-09-04",
+      "status": "PASS",
+      "source_boat_count": 17,
+      "database_boat_count": 17,
+      "matches": 17,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:00.955363"
+    },
+    {
+      "date": "2025-09-05",
+      "status": "PASS",
+      "source_boat_count": 24,
+      "database_boat_count": 24,
+      "matches": 24,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:03.560177"
+    },
+    {
+      "date": "2025-09-06",
+      "status": "PASS",
+      "source_boat_count": 34,
+      "database_boat_count": 33,
+      "matches": 34,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:06.231738"
+    },
+    {
+      "date": "2025-09-07",
+      "status": "PASS",
+      "source_boat_count": 33,
+      "database_boat_count": 32,
+      "matches": 33,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:08.883069"
+    },
+    {
+      "date": "2025-09-08",
+      "status": "PASS",
+      "source_boat_count": 13,
+      "database_boat_count": 13,
+      "matches": 13,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:11.473361"
+    },
+    {
+      "date": "2025-09-09",
+      "status": "PASS",
+      "source_boat_count": 15,
+      "database_boat_count": 15,
+      "matches": 15,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:14.127717"
+    },
+    {
+      "date": "2025-09-10",
+      "status": "PASS",
+      "source_boat_count": 12,
+      "database_boat_count": 12,
+      "matches": 12,
+      "mismatches": [],
+      "missing_boats": [],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:16.723378"
+    },
+    {
+      "date": "2025-09-11",
+      "status": "FAIL",
+      "source_boat_count": 15,
+      "database_boat_count": 10,
+      "matches": 10,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 61
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 21
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 29
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:19.352427"
+    },
+    {
+      "date": "2025-09-12",
+      "status": "FAIL",
+      "source_boat_count": 30,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 42
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 38
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 45
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 33
+        },
+        {
+          "boat": "Toronado",
+          "landing": "Pierpoint Landing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 27
+        },
+        {
+          "boat": "Gail Force",
+          "landing": "LA Waterfront Cruises and Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 38
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 23
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 21
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 33
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 43
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:21.924739"
+    },
+    {
+      "date": "2025-09-13",
+      "status": "FAIL",
+      "source_boat_count": 36,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Endeavor (Ventura)",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 15
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Coroloma",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 36
+        },
+        {
+          "boat": "Graylight",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Mirage",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 21
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 17
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Pescador",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 8
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 13
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 29
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 56
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 58
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 10
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 36
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 42
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 5
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 40
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 44
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 45
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 39
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:24.674597"
+    },
+    {
+      "date": "2025-09-14",
+      "status": "FAIL",
+      "source_boat_count": 32,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 49
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 17
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 48
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 74
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "City of Long Beach",
+          "landing": "Pierpoint Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 61
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Toronado",
+          "landing": "Pierpoint Landing",
+          "trip_type": "2 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 45
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 40
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 35
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 36
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Sport King",
+          "landing": "LA Waterfront Cruises and Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "Overnight",
+          "anglers": 17
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2 Day",
+          "anglers": 27
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 48
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 50
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 32
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 27
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:27.299224"
+    },
+    {
+      "date": "2025-09-15",
+      "status": "FAIL",
+      "source_boat_count": 15,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 17
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 32
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 33
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 16
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Lex Sea",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 22
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 18
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:29.916536"
+    },
+    {
+      "date": "2025-09-16",
+      "status": "FAIL",
+      "source_boat_count": 14,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 20
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Aggressor",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 22
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 4
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 49
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 33
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 9
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 22
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 42
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:32.542448"
+    },
+    {
+      "date": "2025-09-17",
+      "status": "FAIL",
+      "source_boat_count": 16,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 2
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 26
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 8
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 33
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 5
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 31
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 20
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:35.158342"
+    },
+    {
+      "date": "2025-09-18",
+      "status": "FAIL",
+      "source_boat_count": 10,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 19
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Enterprise",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 16
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 46
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 27
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 19
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:37.772082"
+    },
+    {
+      "date": "2025-09-19",
+      "status": "FAIL",
+      "source_boat_count": 30,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Hooks Landing",
+          "trip_type": "Overnight",
+          "anglers": 16
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 19
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 15
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Enterprise",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 37
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 33
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 25
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Lex Sea",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 4
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 31
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 7
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:40.452094"
+    },
+    {
+      "date": "2025-09-20",
+      "status": "FAIL",
+      "source_boat_count": 36,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 48
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 43
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 7
+        },
+        {
+          "boat": "Orion",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 8
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 112
+        },
+        {
+          "boat": "Pescador",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 22
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 36
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 31
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 60
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 24
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 41
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 50
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 48
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 31
+        },
+        {
+          "boat": "Current",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 50
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 25
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 31
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 32
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:43.153816"
+    },
+    {
+      "date": "2025-09-21",
+      "status": "FAIL",
+      "source_boat_count": 34,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Island Spirit",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Hooks Landing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 8
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 93
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 34
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 24
+        },
+        {
+          "boat": "City of Long Beach",
+          "landing": "Pierpoint Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "2.5 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 30
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 13
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 20
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 31
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 39
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 48
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 54
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 22
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 7
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 11
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:45.824679"
+    },
+    {
+      "date": "2025-09-22",
+      "status": "FAIL",
+      "source_boat_count": 13,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Estella",
+          "landing": "Hooks Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 7
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 15
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 35
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 46
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 45
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 10
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 22
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:48.444591"
+    },
+    {
+      "date": "2025-09-23",
+      "status": "FAIL",
+      "source_boat_count": 13,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Cobra",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 25
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 74
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Eldorado",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 28
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 55
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 34
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 43
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 27
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:50.985072"
+    },
+    {
+      "date": "2025-09-24",
+      "status": "FAIL",
+      "source_boat_count": 14,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 35
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 33
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 48
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 20
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:53.668235"
+    },
+    {
+      "date": "2025-09-25",
+      "status": "FAIL",
+      "source_boat_count": 17,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 11
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Enterprise",
+          "landing": "Pierpoint Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 31
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 19
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "Overnight",
+          "anglers": 29
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 32
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 25
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:56.286301"
+    },
+    {
+      "date": "2025-09-26",
+      "status": "FAIL",
+      "source_boat_count": 24,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Black Pearl",
+          "landing": "Black Pearl Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 18
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 45
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 9
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 40
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 13
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 21
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 22
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 32
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 43
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 17
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 28
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 40
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 14
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 17
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 28
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:51:58.903408"
+    },
+    {
+      "date": "2025-09-27",
+      "status": "FAIL",
+      "source_boat_count": 36,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Californian",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 29
+        },
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Estella",
+          "landing": "Hooks Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 13
+        },
+        {
+          "boat": "Gentleman",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 24
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 19
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 7
+        },
+        {
+          "boat": "New Hustler",
+          "landing": "Hooks Landing",
+          "trip_type": "Overnight",
+          "anglers": 18
+        },
+        {
+          "boat": "Orion",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 17
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 33
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 129
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 19
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 25
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 33
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 44
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 15
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 48
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 51
+        },
+        {
+          "boat": "Native Sun",
+          "landing": "22nd Street Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 37
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 29
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 47
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 41
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 46
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 50
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 29
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 47
+        },
+        {
+          "boat": "Helena",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 29
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day Twilight",
+          "anglers": 37
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:52:01.515815"
+    },
+    {
+      "date": "2025-09-28",
+      "status": "FAIL",
+      "source_boat_count": 30,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Estella",
+          "landing": "Hooks Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 21
+        },
+        {
+          "boat": "Island Fox",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Island Tak",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 7
+        },
+        {
+          "boat": "Orion",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 12
+        },
+        {
+          "boat": "Seabiscuit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 15
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 28
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 8
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Redondo Special",
+          "landing": "Redondo Beach Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 22
+        },
+        {
+          "boat": "Ahra-Ahn",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 26
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 22
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Freedom",
+          "landing": "22nd Street Landing",
+          "trip_type": "Overnight",
+          "anglers": 33
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 41
+        },
+        {
+          "boat": "Monte Carlo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 14
+        },
+        {
+          "boat": "Pride",
+          "landing": "22nd Street Landing",
+          "trip_type": "2 Day",
+          "anglers": 17
+        },
+        {
+          "boat": "Sport King",
+          "landing": "LA Waterfront Cruises and Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 53
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 10
+        },
+        {
+          "boat": "Thunderbird",
+          "landing": "Newport Landing",
+          "trip_type": "2.5 Day",
+          "anglers": 20
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 42
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 15
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 36
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day PM",
+          "anglers": 44
+        },
+        {
+          "boat": "Dana Pride",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Overnight",
+          "anglers": 20
+        },
+        {
+          "boat": "New San Mateo",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 13
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 18
+        },
+        {
+          "boat": "Reel Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 33
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:52:04.187075"
+    },
+    {
+      "date": "2025-09-29",
+      "status": "FAIL",
+      "source_boat_count": 10,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 11
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 50
+        },
+        {
+          "boat": "Spitfire",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Amigo",
+          "landing": "22nd Street Landing",
+          "trip_type": "1.5 Day",
+          "anglers": 15
+        },
+        {
+          "boat": "Pursuit",
+          "landing": "22nd Street Landing",
+          "trip_type": "Full Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Freelance",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 22
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 14
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 16
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:52:06.748274"
+    },
+    {
+      "date": "2025-09-30",
+      "status": "FAIL",
+      "source_boat_count": 13,
+      "database_boat_count": 0,
+      "matches": 0,
+      "mismatches": [],
+      "missing_boats": [
+        {
+          "boat": "Pacific Eagle",
+          "landing": "Ventura Harbor Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 14
+        },
+        {
+          "boat": "Aloha Spirit",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 11
+        },
+        {
+          "boat": "Speed Twin",
+          "landing": "Channel Islands Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 9
+        },
+        {
+          "boat": "Betty-O",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 4
+        },
+        {
+          "boat": "New Del Mar",
+          "landing": "Marina Del Rey Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 39
+        },
+        {
+          "boat": "El Patron",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "Full Day",
+          "anglers": 9
+        },
+        {
+          "boat": "Victory",
+          "landing": "Long Beach Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 26
+        },
+        {
+          "boat": "Blackfish",
+          "landing": "Newport Landing",
+          "trip_type": "Full Day",
+          "anglers": 6
+        },
+        {
+          "boat": "Patriot (Newport)",
+          "landing": "Newport Landing",
+          "trip_type": "3/4 Day",
+          "anglers": 25
+        },
+        {
+          "boat": "Western Pride",
+          "landing": "Newport Landing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 30
+        },
+        {
+          "boat": "Clemente",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "1/2 Day AM",
+          "anglers": 45
+        },
+        {
+          "boat": "Fury",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "2 Day",
+          "anglers": 23
+        },
+        {
+          "boat": "Sum Fun",
+          "landing": "Dana Wharf Sportfishing",
+          "trip_type": "3/4 Day",
+          "anglers": 30
+        }
+      ],
+      "extra_boats": [],
+      "field_errors": [],
+      "timestamp": "2025-10-24T00:52:09.357251"
+    }
+  ],
+  "timestamp": "2025-10-24T00:52:09.357783"
+}

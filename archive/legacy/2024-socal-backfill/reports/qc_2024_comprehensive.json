@@ -1,0 +1,391 @@
+{
+  "validation_period": "Full Year 2024",
+  "date_range": {
+    "start": "2024-01-01",
+    "end": "2024-12-31"
+  },
+  "overall_summary": {
+    "total_dates": 366,
+    "passed": 314,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 52,
+    "effective_dates": 314,
+    "pass_rate": 100.0,
+    "status": "PASS"
+  },
+  "quarterly_summaries": [
+    {
+      "quarter": "Q1",
+      "date_range": {
+        "start": "2024-01-01",
+        "end": "2024-03-31"
+      },
+      "total_dates": 91,
+      "passed": 52,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 39,
+      "effective_dates": 52,
+      "pass_rate": 100.0
+    },
+    {
+      "quarter": "Q2",
+      "date_range": {
+        "start": "2024-04-01",
+        "end": "2024-06-30"
+      },
+      "total_dates": 91,
+      "passed": 91,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "effective_dates": 91,
+      "pass_rate": 100.0
+    },
+    {
+      "quarter": "Q3",
+      "date_range": {
+        "start": "2024-07-01",
+        "end": "2024-09-30"
+      },
+      "total_dates": 92,
+      "passed": 92,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "effective_dates": 92,
+      "pass_rate": 100.0
+    },
+    {
+      "quarter": "Q4",
+      "date_range": {
+        "start": "2024-10-01",
+        "end": "2024-12-31"
+      },
+      "total_dates": 92,
+      "passed": 79,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 13,
+      "effective_dates": 79,
+      "pass_rate": 100.0
+    }
+  ],
+  "failed_dates": [],
+  "skipped_dates": [
+    {
+      "date": "2024-01-02",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-01 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-03",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-01 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-04",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-01 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-05",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-01 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-10",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-09 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-11",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-09 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-16",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-15 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-19",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-18 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-24",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-23 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-30",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-01-31",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-01",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-02",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-03",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-04",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-05",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-06",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-07",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-08",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-09",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-01-29 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-12",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-11 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-14",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-13 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-15",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-13 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-18",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-19",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-20",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-21",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-27",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-26 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-02-29",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-28 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-01",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-02-28 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-04",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-03 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-05",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-03 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-11",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-10 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-13",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-12 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-14",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-12 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-18",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-19",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-20",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-17 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-03-28",
+      "quarter": "Q1",
+      "reason": "Dock Totals duplicate - shows 2024-03-27 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-13",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-12 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-14",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-12 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-15",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-12 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-20",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-19 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-21",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-19 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-11-22",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-11-19 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-12",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-11 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-14",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-13 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-21",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-20 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-24",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-23 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-25",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-23 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-27",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-26 content",
+      "deleted_trips": 0
+    },
+    {
+      "date": "2024-12-29",
+      "quarter": "Q4",
+      "reason": "Dock Totals duplicate - shows 2024-12-28 content",
+      "deleted_trips": 0
+    }
+  ],
+  "timestamp": "2025-10-24T23:36:44.396999"
+}

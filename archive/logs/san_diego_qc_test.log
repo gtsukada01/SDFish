@@ -1,0 +1,292 @@
+2025-10-23 07:10:21,715 - INFO - ✅ Supabase connected
+2025-10-23 07:10:21,716 - INFO - 
+================================================================================
+2025-10-23 07:10:21,716 - INFO - 🔍 QC VALIDATION: 2025-10-17
+2025-10-23 07:10:21,716 - INFO - ================================================================================
+2025-10-23 07:10:21,716 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-10-17
+2025-10-23 07:10:22,414 - INFO - ✅ Fetched 35198 bytes
+2025-10-23 07:10:22,664 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-23 07:10:22,666 - INFO - ✅ Loaded 147 known boats from database
+2025-10-23 07:10:22,676 - INFO - ✅ Source date validated: 2025-10-17 matches requested 2025-10-17
+2025-10-23 07:10:22,684 - INFO - 📍 Landing header detected: Southern CaliforniaPrevious Day Next Day
+2025-10-23 07:10:22,684 - INFO - 📍 Landing header detected: Fisherman's Landing
+2025-10-23 07:10:22,685 - WARNING - 🚨 NEW BOAT DETECTED: Boat
+2025-10-23 07:10:22,685 - WARNING -    Landing: Fisherman's Landing
+2025-10-23 07:10:22,685 - WARNING -    This boat is NOT in the database - will be auto-created
+2025-10-23 07:10:22,685 - WARNING -    Manual verification recommended
+2025-10-23 07:10:22,685 - INFO -    Next lines:
+2025-10-23 07:10:22,685 - INFO -      +0: 'Dock Totals'
+2025-10-23 07:10:22,685 - INFO -      +1: 'Dolphin'
+2025-10-23 07:10:22,685 - INFO -      +2: 'Fisherman's Landing'
+2025-10-23 07:10:22,685 - INFO -      +3: 'San Diego, CA'
+2025-10-23 07:10:22,685 - INFO -    Incomplete data, skipping
+2025-10-23 07:10:22,685 - INFO - 🔍 Found boat: Dolphin at line 50 (validated against database)
+2025-10-23 07:10:22,685 - INFO -    Next lines:
+2025-10-23 07:10:22,685 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,685 - INFO -      +1: '20 Anglers1/2 Day AM'
+2025-10-23 07:10:22,685 - INFO -      +2: '163 Rockfish'
+2025-10-23 07:10:22,685 - INFO -      +3: 'Dolphin'
+2025-10-23 07:10:22,685 - INFO -    Found 20 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-23 07:10:22,685 - INFO -    Catches: '163 Rockfish'
+2025-10-23 07:10:22,686 - INFO - ✅ Parsed: Dolphin - 1 species, 20 anglers
+2025-10-23 07:10:22,686 - INFO - 🔍 Found boat: Dolphin at line 55 (validated against database)
+2025-10-23 07:10:22,686 - INFO -    Next lines:
+2025-10-23 07:10:22,686 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,686 - INFO -      +1: '26 Anglers1/2 Day PM'
+2025-10-23 07:10:22,686 - INFO -      +2: '6 Sand Bass, 59 Sculpin, 10 Sheephead, 4 Calico Bass'
+2025-10-23 07:10:22,686 - INFO -      +3: 'Islander'
+2025-10-23 07:10:22,686 - INFO -    Found 26 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-23 07:10:22,686 - INFO -    Catches: '6 Sand Bass, 59 Sculpin, 10 Sheephead, 4 Calico Bass'
+2025-10-23 07:10:22,686 - INFO - ✅ Parsed: Dolphin - 4 species, 26 anglers
+2025-10-23 07:10:22,686 - INFO - 🔍 Found boat: Islander at line 60 (validated against database)
+2025-10-23 07:10:22,686 - INFO -    Next lines:
+2025-10-23 07:10:22,686 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,686 - INFO -      +1: '17 Anglers3 Day'
+2025-10-23 07:10:22,686 - INFO -      +2: '40 Bluefin Tuna (up to 150 pounds), 34 Yellowtail, 1 Dorado, 12 Yellowfin Tuna'
+2025-10-23 07:10:22,686 - INFO -      +3: 'Lucky B Sportfishing'
+2025-10-23 07:10:22,686 - INFO -    Found 17 anglers, trip: '3 Day' at offset +1
+2025-10-23 07:10:22,686 - INFO -    Catches: '40 Bluefin Tuna (up to 150 pounds), 34 Yellowtail, 1 Dorado, 12 Yellowfin Tuna'
+2025-10-23 07:10:22,686 - INFO - ✅ Parsed: Islander - 4 species, 17 anglers
+2025-10-23 07:10:22,686 - INFO - 🔍 Found boat: Lucky B Sportfishing at line 65 (validated against database)
+2025-10-23 07:10:22,686 - INFO -    Next lines:
+2025-10-23 07:10:22,686 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,686 - INFO -      +1: '4 AnglersFull Day'
+2025-10-23 07:10:22,686 - INFO -      +2: '4 Bluefin Tuna (up to 100 pounds)'
+2025-10-23 07:10:22,686 - INFO -      +3: 'H&M Landing Fish Counts'
+2025-10-23 07:10:22,686 - INFO -    Found 4 anglers, trip: 'Full Day' at offset +1
+2025-10-23 07:10:22,686 - INFO -    Catches: '4 Bluefin Tuna (up to 100 pounds)'
+2025-10-23 07:10:22,687 - INFO - ✅ Parsed: Lucky B Sportfishing - 1 species, 4 anglers
+2025-10-23 07:10:22,687 - INFO - 📍 Landing header detected: H&M Landing
+2025-10-23 07:10:22,687 - WARNING - 🚨 NEW BOAT DETECTED: Boat
+2025-10-23 07:10:22,687 - WARNING -    Landing: H&M Landing
+2025-10-23 07:10:22,687 - WARNING -    This boat is NOT in the database - will be auto-created
+2025-10-23 07:10:22,687 - WARNING -    Manual verification recommended
+2025-10-23 07:10:22,687 - INFO -    Next lines:
+2025-10-23 07:10:22,687 - INFO -      +0: 'Dock Totals'
+2025-10-23 07:10:22,687 - INFO -      +1: 'Alicia'
+2025-10-23 07:10:22,687 - INFO -      +2: 'H&M Landing'
+2025-10-23 07:10:22,687 - INFO -      +3: 'San Diego, CA'
+2025-10-23 07:10:22,687 - INFO -    Incomplete data, skipping
+2025-10-23 07:10:22,687 - INFO - 🔍 Found boat: Alicia at line 74 (validated against database)
+2025-10-23 07:10:22,687 - INFO -    Next lines:
+2025-10-23 07:10:22,687 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,687 - INFO -      +1: '10 Anglers1/2 Day Twilight'
+2025-10-23 07:10:22,687 - INFO -      +2: '17 Spiny Lobster, 15 Rock Crab, 16 Spiny Lobster Released'
+2025-10-23 07:10:22,687 - INFO -      +3: 'Legend'
+2025-10-23 07:10:22,687 - INFO -    Found 10 anglers, trip: '1/2 Day Twilight' at offset +1
+2025-10-23 07:10:22,687 - INFO -    Catches: '17 Spiny Lobster, 15 Rock Crab, 16 Spiny Lobster Released'
+2025-10-23 07:10:22,687 - INFO - ✅ Parsed: Alicia - 2 species, 10 anglers
+2025-10-23 07:10:22,687 - INFO - 🔍 Found boat: Legend at line 79 (validated against database)
+2025-10-23 07:10:22,687 - INFO -    Next lines:
+2025-10-23 07:10:22,687 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,687 - INFO -      +1: '25 Anglers3.5 Day'
+2025-10-23 07:10:22,687 - INFO -      +2: '35 Bluefin Tuna, 6 Yellowtail, 2 Dorado, 38 Yellowfin Tuna'
+2025-10-23 07:10:22,687 - INFO -      +3: 'Ocean Odyssey'
+2025-10-23 07:10:22,687 - INFO -    Found 25 anglers, trip: '3.5 Day' at offset +1
+2025-10-23 07:10:22,687 - INFO -    Catches: '35 Bluefin Tuna, 6 Yellowtail, 2 Dorado, 38 Yellowfin Tuna'
+2025-10-23 07:10:22,687 - INFO - ✅ Parsed: Legend - 4 species, 25 anglers
+2025-10-23 07:10:22,687 - INFO - 🔍 Found boat: Ocean Odyssey at line 84 (validated against database)
+2025-10-23 07:10:22,687 - INFO -    Next lines:
+2025-10-23 07:10:22,687 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,688 - INFO -      +1: '11 Anglers1.5 Day'
+2025-10-23 07:10:22,688 - INFO -      +2: '7 Bluefin Tuna'
+2025-10-23 07:10:22,688 - INFO -      +3: 'Producer'
+2025-10-23 07:10:22,688 - INFO -    Found 11 anglers, trip: '1.5 Day' at offset +1
+2025-10-23 07:10:22,688 - INFO -    Catches: '7 Bluefin Tuna'
+2025-10-23 07:10:22,688 - INFO - ✅ Parsed: Ocean Odyssey - 1 species, 11 anglers
+2025-10-23 07:10:22,688 - INFO - 🔍 Found boat: Producer at line 89 (validated against database)
+2025-10-23 07:10:22,688 - INFO -    Next lines:
+2025-10-23 07:10:22,688 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,688 - INFO -      +1: '25 AnglersOvernightOffshore'
+2025-10-23 07:10:22,688 - INFO -      +2: '12 Bluefin Tuna, 2 Dorado Released'
+2025-10-23 07:10:22,688 - INFO -      +3: 'Ranger 85'
+2025-10-23 07:10:22,688 - INFO -    Found 25 anglers, trip: 'OvernightOffshore' at offset +1
+2025-10-23 07:10:22,688 - INFO -    Catches: '12 Bluefin Tuna, 2 Dorado Released'
+2025-10-23 07:10:22,688 - INFO - ✅ Parsed: Producer - 1 species, 25 anglers
+2025-10-23 07:10:22,688 - INFO - 🔍 Found boat: Ranger 85 at line 94 (validated against database)
+2025-10-23 07:10:22,688 - INFO -    Next lines:
+2025-10-23 07:10:22,688 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,688 - INFO -      +1: '16 Anglers2.5 Day'
+2025-10-23 07:10:22,688 - INFO -      +2: '38 Bluefin Tuna, 4 Yellowfin Tuna'
+2025-10-23 07:10:22,688 - INFO -      +3: 'Oceanside Sea Center Fish Counts'
+2025-10-23 07:10:22,688 - INFO -    Found 16 anglers, trip: '2.5 Day' at offset +1
+2025-10-23 07:10:22,688 - INFO -    Catches: '38 Bluefin Tuna, 4 Yellowfin Tuna'
+2025-10-23 07:10:22,688 - INFO - ✅ Parsed: Ranger 85 - 2 species, 16 anglers
+2025-10-23 07:10:22,688 - INFO - 📍 Landing header detected: Oceanside Sea Center
+2025-10-23 07:10:22,688 - WARNING - 🚨 NEW BOAT DETECTED: Boat
+2025-10-23 07:10:22,688 - WARNING -    Landing: Oceanside Sea Center
+2025-10-23 07:10:22,688 - WARNING -    This boat is NOT in the database - will be auto-created
+2025-10-23 07:10:22,688 - WARNING -    Manual verification recommended
+2025-10-23 07:10:22,688 - INFO -    Next lines:
+2025-10-23 07:10:22,688 - INFO -      +0: 'Dock Totals'
+2025-10-23 07:10:22,688 - INFO -      +1: 'Southern Cal'
+2025-10-23 07:10:22,688 - INFO -      +2: 'Oceanside Sea Center'
+2025-10-23 07:10:22,689 - INFO -      +3: 'Oceanside, CA'
+2025-10-23 07:10:22,689 - INFO -    Incomplete data, skipping
+2025-10-23 07:10:22,689 - INFO - 🔍 Found boat: Southern Cal at line 103 (validated against database)
+2025-10-23 07:10:22,689 - INFO -    Next lines:
+2025-10-23 07:10:22,689 - INFO -      +0: 'Oceanside, CA'
+2025-10-23 07:10:22,689 - INFO -      +1: '15 Anglers1/2 Day AM'
+2025-10-23 07:10:22,689 - INFO -      +2: '70 Rockfish'
+2025-10-23 07:10:22,689 - INFO -      +3: 'Point Loma Sportfishing Fish Counts'
+2025-10-23 07:10:22,689 - INFO -    Found 15 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-23 07:10:22,689 - INFO -    Catches: '70 Rockfish'
+2025-10-23 07:10:22,689 - INFO - ✅ Parsed: Southern Cal - 1 species, 15 anglers
+2025-10-23 07:10:22,689 - INFO - 📍 Landing header detected: Point Loma Sportfishing
+2025-10-23 07:10:22,689 - WARNING - 🚨 NEW BOAT DETECTED: Boat
+2025-10-23 07:10:22,689 - WARNING -    Landing: Point Loma Sportfishing
+2025-10-23 07:10:22,689 - WARNING -    This boat is NOT in the database - will be auto-created
+2025-10-23 07:10:22,689 - WARNING -    Manual verification recommended
+2025-10-23 07:10:22,689 - INFO -    Next lines:
+2025-10-23 07:10:22,689 - INFO -      +0: 'Dock Totals'
+2025-10-23 07:10:22,689 - INFO -      +1: 'Daily Double'
+2025-10-23 07:10:22,689 - INFO -      +2: 'Point Loma Sportfishing'
+2025-10-23 07:10:22,689 - INFO -      +3: 'San Diego, CA'
+2025-10-23 07:10:22,689 - INFO -    Incomplete data, skipping
+2025-10-23 07:10:22,689 - INFO - 🔍 Found boat: Daily Double at line 112 (validated against database)
+2025-10-23 07:10:22,689 - INFO -    Next lines:
+2025-10-23 07:10:22,689 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,689 - INFO -      +1: '25 Anglers1/2 Day AM'
+2025-10-23 07:10:22,689 - INFO -      +2: '101 Rockfish'
+2025-10-23 07:10:22,689 - INFO -      +3: 'Seaforth Sportfishing Fish Counts'
+2025-10-23 07:10:22,689 - INFO -    Found 25 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-23 07:10:22,689 - INFO -    Catches: '101 Rockfish'
+2025-10-23 07:10:22,689 - INFO - ✅ Parsed: Daily Double - 1 species, 25 anglers
+2025-10-23 07:10:22,689 - INFO - 📍 Landing header detected: Seaforth Sportfishing
+2025-10-23 07:10:22,689 - WARNING - 🚨 NEW BOAT DETECTED: Boat
+2025-10-23 07:10:22,689 - WARNING -    Landing: Seaforth Sportfishing
+2025-10-23 07:10:22,690 - WARNING -    This boat is NOT in the database - will be auto-created
+2025-10-23 07:10:22,690 - WARNING -    Manual verification recommended
+2025-10-23 07:10:22,690 - INFO -    Next lines:
+2025-10-23 07:10:22,690 - INFO -      +0: 'Dock Totals'
+2025-10-23 07:10:22,690 - INFO -      +1: 'Aztec'
+2025-10-23 07:10:22,690 - INFO -      +2: 'Seaforth Sportfishing'
+2025-10-23 07:10:22,690 - INFO -      +3: 'San Diego, CA'
+2025-10-23 07:10:22,690 - INFO -    Incomplete data, skipping
+2025-10-23 07:10:22,690 - INFO - 🔍 Found boat: Aztec at line 121 (validated against database)
+2025-10-23 07:10:22,690 - INFO -    Next lines:
+2025-10-23 07:10:22,690 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,690 - INFO -      +1: '25 Anglers3 Day'
+2025-10-23 07:10:22,690 - INFO -      +2: '36 Bluefin Tuna, 2 Sheephead, 120 Rockfish, 96 Vermilion Rockfish'
+2025-10-23 07:10:22,690 - INFO -      +3: 'El Gato Dos'
+2025-10-23 07:10:22,690 - INFO -    Found 25 anglers, trip: '3 Day' at offset +1
+2025-10-23 07:10:22,690 - INFO -    Catches: '36 Bluefin Tuna, 2 Sheephead, 120 Rockfish, 96 Vermilion Rockfish'
+2025-10-23 07:10:22,690 - INFO - ✅ Parsed: Aztec - 4 species, 25 anglers
+2025-10-23 07:10:22,690 - INFO - 🔍 Found boat: El Gato Dos at line 126 (validated against database)
+2025-10-23 07:10:22,690 - INFO -    Next lines:
+2025-10-23 07:10:22,690 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,690 - INFO -      +1: '5 Anglers3/4 Day'
+2025-10-23 07:10:22,690 - INFO -      +2: '19 Rockfish'
+2025-10-23 07:10:22,690 - INFO -      +3: 'New Seaforth'
+2025-10-23 07:10:22,690 - INFO -    Found 5 anglers, trip: '3/4 Day' at offset +1
+2025-10-23 07:10:22,690 - INFO -    Catches: '19 Rockfish'
+2025-10-23 07:10:22,690 - INFO - ✅ Parsed: El Gato Dos - 1 species, 5 anglers
+2025-10-23 07:10:22,690 - INFO - 🔍 Found boat: New Seaforth at line 131 (validated against database)
+2025-10-23 07:10:22,690 - INFO -    Next lines:
+2025-10-23 07:10:22,690 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,690 - INFO -      +1: '38 Anglers1/2 Day AM'
+2025-10-23 07:10:22,690 - INFO -      +2: '1 Bluefin Tuna (up to 80 pounds), 206 Rockfish'
+2025-10-23 07:10:22,690 - INFO -      +3: 'New Seaforth'
+2025-10-23 07:10:22,690 - INFO -    Found 38 anglers, trip: '1/2 Day AM' at offset +1
+2025-10-23 07:10:22,690 - INFO -    Catches: '1 Bluefin Tuna (up to 80 pounds), 206 Rockfish'
+2025-10-23 07:10:22,690 - INFO - ✅ Parsed: New Seaforth - 2 species, 38 anglers
+2025-10-23 07:10:22,691 - INFO - 🔍 Found boat: New Seaforth at line 136 (validated against database)
+2025-10-23 07:10:22,691 - INFO -    Next lines:
+2025-10-23 07:10:22,691 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,691 - INFO -      +1: '5 Anglers1/2 Day PM'
+2025-10-23 07:10:22,691 - INFO -      +2: '50 Rockfish'
+2025-10-23 07:10:22,691 - INFO -      +3: 'Pacific Voyager'
+2025-10-23 07:10:22,691 - INFO -    Found 5 anglers, trip: '1/2 Day PM' at offset +1
+2025-10-23 07:10:22,691 - INFO -    Catches: '50 Rockfish'
+2025-10-23 07:10:22,691 - INFO - ✅ Parsed: New Seaforth - 1 species, 5 anglers
+2025-10-23 07:10:22,691 - INFO - 🔍 Found boat: Pacific Voyager at line 141 (validated against database)
+2025-10-23 07:10:22,691 - INFO -    Next lines:
+2025-10-23 07:10:22,691 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,691 - INFO -      +1: '12 Anglers4 Day'
+2025-10-23 07:10:22,691 - INFO -      +2: '61 Bluefin Tuna, 7 Yellowtail, 2 Yellowfin Tuna'
+2025-10-23 07:10:22,691 - INFO -      +3: 'San Diego'
+2025-10-23 07:10:22,691 - INFO -    Found 12 anglers, trip: '4 Day' at offset +1
+2025-10-23 07:10:22,691 - INFO -    Catches: '61 Bluefin Tuna, 7 Yellowtail, 2 Yellowfin Tuna'
+2025-10-23 07:10:22,691 - INFO - ✅ Parsed: Pacific Voyager - 3 species, 12 anglers
+2025-10-23 07:10:22,691 - INFO - 🔍 Found boat: San Diego at line 146 (validated against database)
+2025-10-23 07:10:22,691 - INFO -    Next lines:
+2025-10-23 07:10:22,691 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,691 - INFO -      +1: '26 AnglersFull Day Offshore'
+2025-10-23 07:10:22,691 - INFO -      +2: '7 Bluefin Tuna, 6 Dorado'
+2025-10-23 07:10:22,691 - INFO -      +3: 'Tribute'
+2025-10-23 07:10:22,691 - INFO -    Found 26 anglers, trip: 'Full Day Offshore' at offset +1
+2025-10-23 07:10:22,691 - INFO -    Catches: '7 Bluefin Tuna, 6 Dorado'
+2025-10-23 07:10:22,691 - INFO - ✅ Parsed: San Diego - 2 species, 26 anglers
+2025-10-23 07:10:22,691 - INFO - 🔍 Found boat: Tribute at line 151 (validated against database)
+2025-10-23 07:10:22,691 - INFO -    Next lines:
+2025-10-23 07:10:22,691 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,691 - INFO -      +1: '19 AnglersOvernight'
+2025-10-23 07:10:22,691 - INFO -      +2: '20 Bluefin Tuna'
+2025-10-23 07:10:22,691 - INFO -      +3: 'Voyager'
+2025-10-23 07:10:22,691 - INFO -    Found 19 anglers, trip: 'Overnight' at offset +1
+2025-10-23 07:10:22,692 - INFO -    Catches: '20 Bluefin Tuna'
+2025-10-23 07:10:22,692 - INFO - ✅ Parsed: Tribute - 1 species, 19 anglers
+2025-10-23 07:10:22,692 - INFO - 🔍 Found boat: Voyager at line 156 (validated against database)
+2025-10-23 07:10:22,692 - INFO -    Next lines:
+2025-10-23 07:10:22,692 - INFO -      +0: 'San Diego, CA'
+2025-10-23 07:10:22,692 - INFO -      +1: '12 Anglers1.5 Day'
+2025-10-23 07:10:22,692 - INFO -      +2: '24 Bluefin Tuna'
+2025-10-23 07:10:22,692 - INFO -      +3: 'Previous Day Next Day'
+2025-10-23 07:10:22,692 - INFO -    Found 12 anglers, trip: '1.5 Day' at offset +1
+2025-10-23 07:10:22,692 - INFO -    Catches: '24 Bluefin Tuna'
+2025-10-23 07:10:22,692 - INFO - ✅ Parsed: Voyager - 1 species, 12 anglers
+2025-10-23 07:10:22,692 - INFO - ✅ Total trips parsed: 19
+2025-10-23 07:10:22,692 - INFO - 📊 Source page: 19 trips
+2025-10-23 07:10:22,786 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/trips?select=%2A%2Cboats%28name%29%2Clandings%28name%29%2Ccatches%28species%2Ccount%29&trip_date=eq.2025-10-17 "HTTP/2 200 OK"
+2025-10-23 07:10:22,789 - INFO - 📊 Database: 41 trips
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Dolphin
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Dolphin
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Islander
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Lucky B Sportfishing
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Alicia
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Legend
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Ocean Odyssey
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Producer
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Ranger 85
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Southern Cal
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Daily Double
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Aztec
+2025-10-23 07:10:22,789 - INFO - ✅ Match: El Gato Dos
+2025-10-23 07:10:22,789 - INFO - ✅ Match: New Seaforth
+2025-10-23 07:10:22,789 - INFO - ✅ Match: New Seaforth
+2025-10-23 07:10:22,789 - INFO - ✅ Match: Pacific Voyager
+2025-10-23 07:10:22,789 - INFO - ✅ Match: San Diego
+2025-10-23 07:10:22,790 - INFO - ✅ Match: Tribute
+2025-10-23 07:10:22,790 - INFO - ✅ Match: Voyager
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Toronado in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Amigo in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Gail Force in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Monte Carlo in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Pursuit in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Sport King in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Western Pride in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Clemente in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Dana Pride in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Fury in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Reel Fun in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Sum Fun in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Endeavor (Ventura) in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Aloha Spirit in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Estella in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Gentleman in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Island Fox in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Mirage in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Betty-O in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: New Del Mar in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Spitfire in database but not on source page
+2025-10-23 07:10:22,790 - WARNING - ⚠️  Extra: Enterprise in database but not on source page
+2025-10-23 07:10:22,790 - INFO - 
+================================================================================
+2025-10-23 07:10:22,790 - ERROR - ❌ QC FAILED: 2025-10-17
+2025-10-23 07:10:22,790 - INFO - 📊 Matches: 19/19
+2025-10-23 07:10:22,790 - INFO - ⚠️  Mismatches: 0
+2025-10-23 07:10:22,790 - INFO - ⚠️  Missing boats: 0
+2025-10-23 07:10:22,790 - INFO - ⚠️  Extra boats: 22
+2025-10-23 07:10:22,791 - INFO - ================================================================================
+
+2025-10-23 07:10:22,791 - INFO - ✅ Report saved: san_diego_qc_spot_check.json

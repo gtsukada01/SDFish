@@ -50,7 +50,7 @@ WHERE tablename = 'trips' AND indexname = 'idx_trips_hash';
 
 #### Test 1: FR-001 Source Date Validation
 ```bash
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 ```
 - ✅ Source date validated: 2025-10-17 matches requested 2025-10-17
 - ✅ Parsed 16 trips successfully
@@ -58,7 +58,7 @@ python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 #### Test 2: FR-004 Early Scraping Guard
 ```bash
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 ```
 - ✅ Blocked scraping today (10/19) at 3:55pm PT (before 5pm cutoff)
 - ✅ Clear error message: "Reports typically publish after 5pm PT"
@@ -90,7 +90,7 @@ python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 **Command**:
 ```bash
-python3 boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
+python3 scripts/python/boats_scraper.py --start-date 2025-10-18 --end-date 2025-10-18 \
   --operator "Claude Code - SPEC-010 Recovery"
 ```
 
@@ -400,13 +400,13 @@ All critical safeguards are operational:
 ### Test All Safeguards
 ```bash
 # Test normal date (should work)
-python3 boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-17 --end-date 2025-10-17 --dry-run
 
 # Test early scraping guard (should block before 5pm PT)
-python3 boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-19 --end-date 2025-10-19 --dry-run
 
 # Test future date guard (should block)
-python3 boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
+python3 scripts/python/boats_scraper.py --start-date 2025-10-25 --end-date 2025-10-25 --dry-run
 ```
 
 ### Verify Database State

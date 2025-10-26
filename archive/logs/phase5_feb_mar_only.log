@@ -1,0 +1,225 @@
+=== PHASE 5: Feb/March Missing Dates ===
+Start: Wed Oct 22 15:55:25 PDT 2025
+Dates to process: 8 total
+
+Processing February missing dates...
+2025-10-22 15:55:25,597 - INFO - ================================================================================
+2025-10-22 15:55:25,597 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:25,597 - INFO - ================================================================================
+2025-10-22 15:55:25,597 - INFO - 📅 Date range: 2025-02-06 to 2025-02-06
+2025-10-22 15:55:25,597 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:25,597 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:25,597 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:25,607 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:25,651 - INFO - ✅ Supabase connected
+2025-10-22 15:55:25,667 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:26,264 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:26,266 - INFO - ✅ Created scrape_job #18
+2025-10-22 15:55:26,266 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:26,266 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:26,266 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:26,266 - INFO - 
+================================================================================
+2025-10-22 15:55:26,266 - INFO - 📅 Processing: 2025-02-06 (1 of 1)
+2025-10-22 15:55:26,266 - INFO - ================================================================================
+2025-10-22 15:55:26,266 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-06
+2025-10-22 15:55:26,597 - INFO - ✅ Fetched 27742 bytes
+2025-10-22 15:55:26,712 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:26,713 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:26,720 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:26,720 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:26,793 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.18 "HTTP/2 200 OK"
+2025-10-22 15:55:26,866 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.18 "HTTP/2 200 OK"
+2025-10-22 15:55:26,866 - INFO - ✅ Completed scrape_job #18: FAILED (0.6s)
+2025-10-22 15:55:26,866 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:26,866 - ERROR -    Page structure may have changed - manual inspection required
+2025-10-22 15:55:27,156 - INFO - ================================================================================
+2025-10-22 15:55:27,156 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:27,156 - INFO - ================================================================================
+2025-10-22 15:55:27,156 - INFO - 📅 Date range: 2025-02-12 to 2025-02-13
+2025-10-22 15:55:27,156 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:27,156 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:27,156 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:27,166 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:27,199 - INFO - ✅ Supabase connected
+2025-10-22 15:55:27,210 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:27,397 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:27,399 - INFO - ✅ Created scrape_job #19
+2025-10-22 15:55:27,399 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:27,399 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:27,399 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:27,399 - INFO - 
+================================================================================
+2025-10-22 15:55:27,399 - INFO - 📅 Processing: 2025-02-12 (1 of 2)
+2025-10-22 15:55:27,399 - INFO - ================================================================================
+2025-10-22 15:55:27,399 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-12
+2025-10-22 15:55:27,697 - INFO - ✅ Fetched 27818 bytes
+2025-10-22 15:55:27,805 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:27,805 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:27,811 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:27,811 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:27,869 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.19 "HTTP/2 200 OK"
+2025-10-22 15:55:27,986 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.19 "HTTP/2 200 OK"
+2025-10-22 15:55:27,987 - INFO - ✅ Completed scrape_job #19: FAILED (0.4s)
+2025-10-22 15:55:27,987 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:27,987 - ERROR -    Page structure may have changed - manual inspection required
+2025-10-22 15:55:28,272 - INFO - ================================================================================
+2025-10-22 15:55:28,272 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:28,272 - INFO - ================================================================================
+2025-10-22 15:55:28,272 - INFO - 📅 Date range: 2025-02-25 to 2025-02-25
+2025-10-22 15:55:28,272 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:28,273 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:28,273 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:28,283 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:28,316 - INFO - ✅ Supabase connected
+2025-10-22 15:55:28,327 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:28,557 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:28,559 - INFO - ✅ Created scrape_job #20
+2025-10-22 15:55:28,559 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:28,559 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:28,559 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:28,559 - INFO - 
+================================================================================
+2025-10-22 15:55:28,559 - INFO - 📅 Processing: 2025-02-25 (1 of 1)
+2025-10-22 15:55:28,559 - INFO - ================================================================================
+2025-10-22 15:55:28,559 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-02-25
+2025-10-22 15:55:28,875 - INFO - ✅ Fetched 27696 bytes
+2025-10-22 15:55:28,970 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:28,970 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:28,976 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:28,976 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:29,088 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.20 "HTTP/2 200 OK"
+2025-10-22 15:55:29,157 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.20 "HTTP/2 200 OK"
+2025-10-22 15:55:29,158 - INFO - ✅ Completed scrape_job #20: FAILED (0.5s)
+2025-10-22 15:55:29,158 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:29,158 - ERROR -    Page structure may have changed - manual inspection required
+Processing March missing dates...
+2025-10-22 15:55:29,452 - INFO - ================================================================================
+2025-10-22 15:55:29,452 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:29,452 - INFO - ================================================================================
+2025-10-22 15:55:29,452 - INFO - 📅 Date range: 2025-03-03 to 2025-03-03
+2025-10-22 15:55:29,452 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:29,452 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:29,452 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:29,463 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:29,496 - INFO - ✅ Supabase connected
+2025-10-22 15:55:29,507 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:29,686 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:29,688 - INFO - ✅ Created scrape_job #21
+2025-10-22 15:55:29,688 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:29,688 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:29,688 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:29,688 - INFO - 
+================================================================================
+2025-10-22 15:55:29,688 - INFO - 📅 Processing: 2025-03-03 (1 of 1)
+2025-10-22 15:55:29,688 - INFO - ================================================================================
+2025-10-22 15:55:29,688 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-03
+2025-10-22 15:55:29,994 - INFO - ✅ Fetched 30310 bytes
+2025-10-22 15:55:30,084 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:30,085 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:30,092 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:30,092 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:30,186 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.21 "HTTP/2 200 OK"
+2025-10-22 15:55:30,267 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.21 "HTTP/2 200 OK"
+2025-10-22 15:55:30,268 - INFO - ✅ Completed scrape_job #21: FAILED (0.5s)
+2025-10-22 15:55:30,268 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:30,268 - ERROR -    Page structure may have changed - manual inspection required
+2025-10-22 15:55:30,553 - INFO - ================================================================================
+2025-10-22 15:55:30,553 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:30,553 - INFO - ================================================================================
+2025-10-22 15:55:30,553 - INFO - 📅 Date range: 2025-03-06 to 2025-03-06
+2025-10-22 15:55:30,553 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:30,553 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:30,553 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:30,563 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:30,595 - INFO - ✅ Supabase connected
+2025-10-22 15:55:30,607 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:30,756 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:30,758 - INFO - ✅ Created scrape_job #22
+2025-10-22 15:55:30,758 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:30,758 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:30,758 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:30,758 - INFO - 
+================================================================================
+2025-10-22 15:55:30,758 - INFO - 📅 Processing: 2025-03-06 (1 of 1)
+2025-10-22 15:55:30,758 - INFO - ================================================================================
+2025-10-22 15:55:30,758 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-06
+2025-10-22 15:55:31,046 - INFO - ✅ Fetched 27058 bytes
+2025-10-22 15:55:31,108 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:31,109 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:31,114 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:31,114 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:31,170 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.22 "HTTP/2 200 OK"
+2025-10-22 15:55:31,224 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.22 "HTTP/2 200 OK"
+2025-10-22 15:55:31,224 - INFO - ✅ Completed scrape_job #22: FAILED (0.4s)
+2025-10-22 15:55:31,224 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:31,224 - ERROR -    Page structure may have changed - manual inspection required
+2025-10-22 15:55:31,510 - INFO - ================================================================================
+2025-10-22 15:55:31,510 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:31,510 - INFO - ================================================================================
+2025-10-22 15:55:31,510 - INFO - 📅 Date range: 2025-03-11 to 2025-03-11
+2025-10-22 15:55:31,510 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:31,510 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:31,510 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:31,520 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:31,553 - INFO - ✅ Supabase connected
+2025-10-22 15:55:31,564 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:31,722 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:31,724 - INFO - ✅ Created scrape_job #23
+2025-10-22 15:55:31,724 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:31,724 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:31,724 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:31,724 - INFO - 
+================================================================================
+2025-10-22 15:55:31,724 - INFO - 📅 Processing: 2025-03-11 (1 of 1)
+2025-10-22 15:55:31,724 - INFO - ================================================================================
+2025-10-22 15:55:31,724 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-11
+2025-10-22 15:55:32,019 - INFO - ✅ Fetched 28735 bytes
+2025-10-22 15:55:32,098 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:32,099 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:32,105 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:32,105 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:32,157 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.23 "HTTP/2 200 OK"
+2025-10-22 15:55:32,236 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.23 "HTTP/2 200 OK"
+2025-10-22 15:55:32,236 - INFO - ✅ Completed scrape_job #23: FAILED (0.4s)
+2025-10-22 15:55:32,236 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:32,236 - ERROR -    Page structure may have changed - manual inspection required
+2025-10-22 15:55:32,536 - INFO - ================================================================================
+2025-10-22 15:55:32,536 - INFO - 🚀 Starting Boats Scraper
+2025-10-22 15:55:32,536 - INFO - ================================================================================
+2025-10-22 15:55:32,536 - INFO - 📅 Date range: 2025-03-13 to 2025-03-13
+2025-10-22 15:55:32,536 - INFO - 🔧 Dry run: False
+2025-10-22 15:55:32,536 - INFO - 🔧 Allow future: False
+2025-10-22 15:55:32,536 - INFO - 🔧 Allow early: False
+2025-10-22 15:55:32,550 - INFO - 👤 Operator: Gtsukada01
+2025-10-22 15:55:32,582 - INFO - ✅ Supabase connected
+2025-10-22 15:55:32,594 - INFO - 📅 Today (Pacific Time): 2025-10-22
+2025-10-22 15:55:32,752 - INFO - HTTP Request: POST https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs "HTTP/2 201 Created"
+2025-10-22 15:55:32,754 - INFO - ✅ Created scrape_job #24
+2025-10-22 15:55:32,754 - INFO -    Operator: Gtsukada01 (cron)
+2025-10-22 15:55:32,754 - INFO -    Version: 2.0.0-spec010
+2025-10-22 15:55:32,754 - INFO -    Git SHA: 21b46600
+2025-10-22 15:55:32,754 - INFO - 
+================================================================================
+2025-10-22 15:55:32,754 - INFO - 📅 Processing: 2025-03-13 (1 of 1)
+2025-10-22 15:55:32,754 - INFO - ================================================================================
+2025-10-22 15:55:32,754 - INFO - 🌐 Fetching: https://www.sandiegofishreports.com/dock_totals/boats.php?date=2025-03-13
+2025-10-22 15:55:33,061 - INFO - ✅ Fetched 27083 bytes
+2025-10-22 15:55:33,116 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/boats?select=id%2Cname%2Clanding_id%2Clandings%28name%29 "HTTP/2 200 OK"
+2025-10-22 15:55:33,117 - INFO - ✅ Loaded 124 known boats from database
+2025-10-22 15:55:33,122 - WARNING - ⚠️  Could not extract report date from page header
+2025-10-22 15:55:33,122 - WARNING -     This may indicate page structure has changed
+2025-10-22 15:55:33,183 - INFO - HTTP Request: GET https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?select=job_started_at&id=eq.24 "HTTP/2 200 OK"
+2025-10-22 15:55:33,242 - INFO - HTTP Request: PATCH https://ulsbtwqhwnrpkourphiq.supabase.co/rest/v1/scrape_jobs?id=eq.24 "HTTP/2 200 OK"
+2025-10-22 15:55:33,242 - INFO - ✅ Completed scrape_job #24: FAILED (0.4s)
+2025-10-22 15:55:33,242 - ERROR - ❌ Parser error: Could not parse report date from page header. Page structure may have changed. Manual inspection required.
+2025-10-22 15:55:33,242 - ERROR -    Page structure may have changed - manual inspection required
+=== PHASE 5 COMPLETE ===
+End: Wed Oct 22 15:55:33 PDT 2025
+
+Summary:
+- February: 4 dates processed
+- March: 4 dates processed
+- Total: 8 dates
+
+⏳ NEXT: Ghost data cleanup (Oct 17-31)

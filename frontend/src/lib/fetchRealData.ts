@@ -19,6 +19,8 @@ export interface FetchParams {
 export async function fetchRealCatchData(params: FetchParams): Promise<CatchRecord[]> {
   const { startDate, endDate, landing, boat, species, tripDuration, moonPhase } = params
 
+  const normalizedSpeciesTargets = (species || []).map(s => normalizeSpeciesName(s).toLowerCase())
+
   // Build query with joins
   let query = supabase
     .from('trips')
@@ -74,9 +76,10 @@ export async function fetchRealCatchData(params: FetchParams): Promise<CatchReco
       // Filter by species if specified
       let activeCatches = catches
       if (species && species.length > 0) {
-        const matchingCatches = catches.filter((c: any) =>
-          species.includes(c.species)
-        )
+    const matchingCatches = catches.filter((c: any) => {
+          const normalizedCatch = normalizeSpeciesName(c.species).toLowerCase()
+          return normalizedSpeciesTargets.includes(normalizedCatch)
+        })
         if (matchingCatches.length === 0) {
           return null // Will be filtered out
         }
@@ -299,11 +302,12 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
 export async function fetchRealSummaryMetrics(params: FetchParams): Promise<SummaryMetricsResponse> {
   const records = await fetchRealCatchData(params)
+  const summarySpeciesTargets = (params.species || []).map(s => normalizeSpeciesName(s).toLowerCase())
 
   // Filter species breakdown if species filter is active
   const getFilteredSpeciesBreakdown = (breakdown: any[]) => {
-    if (params.species && params.species.length > 0) {
-      return breakdown.filter(s => params.species!.includes(s.species))
+    if (summarySpeciesTargets.length > 0) {
+      return breakdown.filter(s => summarySpeciesTargets.includes(normalizeSpeciesName(s.species).toLowerCase()))
     }
     return breakdown
   }
@@ -365,23 +369,29 @@ export async function fetchRealSummaryMetrics(params: FetchParams): Promise<Summ
   const speciesMap = new Map<string, {
     fish: number
     boats: Set<string>
+    label: string
   }>()
 
   records.forEach(r => {
     const filteredBreakdown = getFilteredSpeciesBreakdown(r.species_breakdown)
     filteredBreakdown.forEach(s => {
-      if (!speciesMap.has(s.species)) {
-        speciesMap.set(s.species, { fish: 0, boats: new Set() })
+      const normalized = normalizeSpeciesName(s.species).toLowerCase()
+      const key = summarySpeciesTargets.length > 0 ? normalized : s.species
+      if (!speciesMap.has(key)) {
+        speciesMap.set(key, { fish: 0, boats: new Set(), label: s.species })
       }
-      const species = speciesMap.get(s.species)!
-      species.fish += s.count
-      species.boats.add(r.boat)
+      const speciesEntry = speciesMap.get(key)!
+      speciesEntry.fish += s.count
+      speciesEntry.boats.add(r.boat)
+      if (summarySpeciesTargets.length === 0) {
+        speciesEntry.label = s.species
+      }
     })
   })
 
   const perSpecies = Array.from(speciesMap.entries())
-    .map(([species, data]) => ({
-      species,
+    .map(([, data]) => ({
+      species: data.label,
       total_fish: data.fish,
       boats: data.boats.size
     }))

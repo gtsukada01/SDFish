@@ -1,0 +1,48 @@
+{
+  "date": "2025-05-15",
+  "status": "FAIL",
+  "source_boat_count": 19,
+  "database_boat_count": 26,
+  "matches": 19,
+  "mismatches": [],
+  "missing_boats": [],
+  "extra_boats": [
+    {
+      "boat": "Dolphin",
+      "landing": "Fisherman's Landing",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "Liberty",
+      "landing": "Fisherman's Landing",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "Southern Cal",
+      "landing": "Oceanside Sea Center",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "New Seaforth",
+      "landing": "Seaforth Sportfishing",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "Dolphin",
+      "landing": "Fisherman's Landing",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "Premier",
+      "landing": "H&M Landing",
+      "trip_date": "2025-05-15"
+    },
+    {
+      "boat": "New Seaforth",
+      "landing": "Seaforth Sportfishing",
+      "trip_date": "2025-05-15"
+    }
+  ],
+  "field_errors": [],
+  "timestamp": "2025-10-23T14:10:22.723188"
+}

@@ -69,7 +69,7 @@
 - ✅ April-June remediation complete (Oct 22) - 395 trips recovered across all phases
 - ✅ Full audit validated (Oct 22) - comprehensive verification shows perfect data integrity
 
-**Audit File**: `qc_2025_full_audit.json` (294 dates validated)
+**Audit File**: `archive/reports/qc/current/qc_2025_full_audit.json` (294 dates validated)
 
 ---
 
@@ -78,6 +78,12 @@
 **Status**: ✅ **PRODUCTION** - Oct 2025 complete, 2025 backfill in progress
 **File**: `scripts/python/socal_scraper.py`
 **Documentation**: [SOCAL_SCRAPER_HANDOFF_OCT22_2025.md](SOCAL_SCRAPER_HANDOFF_OCT22_2025.md)
+
+> **Python environment setup**
+> ```bash
+> export PYTHONPATH="$(pwd)/scripts/python"
+> ```
+> Add the path once per shell so the reorganized scrapers and validators resolve shared helpers.
 
 ### Two-Scraper Architecture
 
@@ -250,6 +256,11 @@ python3 socal_qc_validator.py --date $(date +%Y-%m-%d)
   - 2025: April, May, June completion summaries and updates
 
 **Technical Specs**:
+- [specs/013-file-auditing-cleanup/](specs/013-file-auditing-cleanup/) - **✅ PHASE 1-4 COMPLETE - File auditing & cleanup system** (Oct 25, 2025)
+  - AI-powered file classification (CRITICAL/ACTIVE/ARCHIVE/DELETE)
+  - Backup-first deletion with comprehensive audit trail
+  - Documentation compliance enforcement (DOCUMENTATION_STANDARDS.md)
+  - Tools: `audit_file.py`, `safe_delete.py`, `batch_audit.py`, `archive_file.py`, `cleanup_orphans.sh`
 - [specs/011-analytics-drilldown/](specs/011-analytics-drilldown/) - **✅ Phase 1 COMPLETE | Phase 2 IN PROGRESS - Analytics drilldown** (Oct 20, 2025)
 - [specs/010-pipeline-hardening/](specs/010-pipeline-hardening/) - **✅ COMPLETE - Pipeline hardening** (Phase 1+2 complete Oct 19, 2025)
 - [specs/006-scraper-accuracy-validation/](specs/006-scraper-accuracy-validation/) - QC validation standards
@@ -322,7 +333,7 @@ cat qc_nov_batch01.json | jq '.summary.pass_rate'
 - ✅ **Full 2024 Audit**: 100% pass rate (366 dates validated, 47 duplicates cleaned, Oct 22, 2025)
 - ✅ **Full 2025 Audit**: 100% pass rate (286 dates validated, Oct 22, 2025)
 - ✅ **Database Query**: 8,225 trips confirmed across 632 dates
-- 📄 **Audit Files**: `qc_2024_full_audit.json` + `qc_2025_full_audit.json`
+- 📄 **Audit Files**: `archive/reports/qc/qc_2024_full_audit.json` + `archive/reports/qc/current/qc_2025_full_audit.json`
 - 📄 **Full Report**: [COMPREHENSIVE_QC_VERIFICATION.md](archive/reports/qc/COMPREHENSIVE_QC_VERIFICATION.md)
 
 ---
@@ -357,11 +368,11 @@ This dashboard provides Southern California offshore fishing analytics with prod
 - `src/components/ui/` – shadcn component library (Button, Card, Table, Collapsible, etc.)
 
 ### Build & Config
-- `index.html` – Single React mount point (`<div id="root"></div>`)
-- `package.json` – React 18, shadcn/ui, Tailwind CSS, TanStack Table
-- `tsconfig.json` – TypeScript config with path aliases (@/*)
-- `tailwind.config.js` – Tailwind with HSL color tokens
-- `components.json` – shadcn CLI configuration
+- `frontend/index.html` – Single React mount point (`<div id="root"></div>`)
+- `frontend/package.json` – React 18, shadcn/ui, Tailwind CSS, TanStack Table
+- `frontend/tsconfig.json` – TypeScript config with path aliases (@/*)
+- `frontend/tailwind.config.js` – Tailwind with HSL color tokens
+- `frontend/components.json` – shadcn CLI configuration
 
 ### Specifications & Tests
 - `specs/` – Feature spec, migration plan, tasks, contracts
@@ -403,10 +414,10 @@ python3 scripts/python/qc_validator.py --polaris-test
 ### Quick Start
 ```bash
 # Install dependencies
-npm install
+npm --prefix frontend install
 
 # Build assets in watch mode
-npm run dev &
+npm --prefix frontend run dev &
 
 # Start HTTP server
 python3 -m http.server 3002
@@ -415,7 +426,7 @@ python3 -m http.server 3002
 
 ### Data Mode Toggle
 
-The dashboard supports two data modes (configured in `index.html`):
+The dashboard supports two data modes (configured in `frontend/index.html`):
 
 **Real Data Mode** (Production - Current):
 ```javascript
@@ -438,14 +449,14 @@ window.USE_REAL_DATA = false;  // Uses mocks.ts
 ### Development Workflow
 ```bash
 # Regenerate TypeScript types from schemas
-npm run generate:types
+npm --prefix frontend run generate:types
 
 # Watch mode (auto-rebuild on changes)
-npm run dev
+npm --prefix frontend run dev
 
 # Build for production
-npm run build
-# Output: assets/main.js (1.6MB), assets/styles.css (1.6KB)
+npm --prefix frontend run build
+# Output: frontend/assets/main.js (1.6MB), frontend/assets/styles.css (1.6KB)
 ```
 
 ### Adding shadcn Components
@@ -461,13 +472,13 @@ npx shadcn@latest add dialog
 
 ```bash
 # Contract validation (TypeScript types match JSON schemas)
-npm run test:contracts
+npm --prefix frontend run test:contracts
 
 # Playwright UI tests (desktop + mobile)
-npm run test:ui
+npm --prefix frontend run test:ui
 
 # Performance benchmarks
-npm run bench
+npm --prefix frontend run bench
 ```
 
 ### Playwright Browser Automation
@@ -522,44 +533,30 @@ npx playwright test tests/responsive.spec.ts
 
 ```
 fish-scraper/
-├── src/
-│   ├── main.tsx                 # React entry point
-│   ├── App.tsx                  # Main application
-│   ├── components/
-│   │   ├── Sidebar.tsx
-│   │   ├── Header.tsx
-│   │   ├── FilterPanel.tsx
-│   │   ├── MetricsBreakdown.tsx
-│   │   ├── CatchTable.tsx
-│   │   └── ui/                  # shadcn components
-│   │       ├── button.tsx
-│   │       ├── card.tsx
-│   │       ├── table.tsx
-│   │       ├── select.tsx
-│   │       ├── popover.tsx
-│   │       ├── calendar.tsx
-│   │       ├── collapsible.tsx
-│   │       └── ...
-│   └── lib/
-│       └── utils.ts             # cn() utility
-├── scripts/api/
-│   ├── types.ts                 # Generated TypeScript types
-│   └── mocks.ts                 # Mock API responses
-├── specs/
-│   └── 001-offshore-analytics-table/
-│       ├── spec.md
-│       ├── plan.md
-│       ├── tasks.md
-│       └── contracts/
-├── assets/
-│   ├── main.js                  # Compiled React bundle (1.6MB)
-│   └── styles.css               # Tailwind output (1.6KB)
-├── index.html                   # Single page app entry
-├── package.json
-├── tsconfig.json
-├── tailwind.config.js
-├── components.json              # shadcn config
-└── MIGRATION_STATUS.md          # Detailed migration report
+├── frontend/
+│   ├── src/                     # React app (App.tsx, components, hooks)
+│   ├── styles/                  # Tailwind source styles
+│   ├── assets/                  # Compiled bundle (main.js, styles.css)
+│   ├── components.json          # shadcn config
+│   ├── package.json             # Frontend dependencies & scripts
+│   ├── tsconfig.json            # TypeScript project config
+│   ├── tailwind.config.js       # Tailwind setup
+│   ├── postcss.config.js        # PostCSS pipeline
+│   ├── playwright.config.ts     # UI test runner config
+│   ├── vercel.json              # Hosting config
+│   ├── favicon.svg
+│   ├── index.html               # SPA entry point
+│   └── reference/index-realdata.html  # Real-data toggle example
+├── scripts/
+│   ├── python/                  # Production scrapers & validators
+│   ├── shell/                   # Operational automation wrappers
+│   ├── api/                     # API mocks & schema tooling
+│   └── serve-static.mjs         # Static web server for Playwright
+├── specs/                       # SPEC kit deliverables
+├── archive/                     # Historical reports, logs, docs
+├── logs/                        # Current scrape logs (auto-generated)
+├── actions/, notes/, risks/     # Active task tracking
+└── README.md / SOCAL_SCRAPER_HANDOFF_OCT22_2025.md
 ```
 
 ## Tech Stack
@@ -572,6 +569,12 @@ fish-scraper/
 - **Icons**: lucide-react
 - **Build**: esbuild + PostCSS
 - **Testing**: Playwright
+
+### Frontend Workspace
+
+- All Node/Tailwind tooling now lives under `frontend/`.
+- Run commands with `npm --prefix frontend …` (e.g., `npm --prefix frontend run dev`).
+- Install dependencies with `npm --prefix frontend install`.
 
 ## shadcn Components Used
 
@@ -670,7 +673,7 @@ tail -f scrape_2024_by_month.log
 **Quick Commands**:
 ```bash
 # Start dashboard
-npm run dev &
+npm --prefix frontend run dev &
 python3 -m http.server 3002  # → http://localhost:3002
 
 # QC validate any date

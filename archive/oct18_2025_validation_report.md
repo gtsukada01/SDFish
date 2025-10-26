@@ -109,8 +109,8 @@ These trips appear in your provided data but are **NOT** on the current source p
 Run QC validation for 10/17 and 10/19 to see if these trips appear on neighboring dates:
 
 ```bash
-python3 qc_validator.py --date 2025-10-17 --output qc_oct17_2025.json
-python3 qc_validator.py --date 2025-10-19 --output qc_oct19_2025.json
+python3 scripts/python/qc_validator.py --date 2025-10-17 --output qc_oct17_2025.json
+python3 scripts/python/qc_validator.py --date 2025-10-19 --output qc_oct19_2025.json
 ```
 
 #### Option 2: Historical Archive Check
@@ -186,12 +186,12 @@ This date has NOT been scraped yet. All 25 trips need to be collected:
 **IMMEDIATE:** Run scraper for 10/19/2025:
 ```bash
 cd /Users/btsukada/desktop/fishing/fish-scraper
-python3 boats_scraper.py --date 2025-10-19
+python3 scripts/python/boats_scraper.py --date 2025-10-19
 ```
 
 Then validate:
 ```bash
-python3 qc_validator.py --date 2025-10-19 --output qc_oct19_validation.json
+python3 scripts/python/qc_validator.py --date 2025-10-19 --output qc_oct19_validation.json
 ```
 
 ---
