@@ -97,7 +97,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
   // On mobile, don't show collapse functionality - Sheet handles visibility
   if (isCollapsed && !isMobile) {
     return (
-      <aside className="w-12 border-r bg-background p-2 flex flex-col gap-2">
+      <aside className="w-12 border-r bg-card p-2 flex flex-col gap-2">
         <Button
           variant="ghost"
           size="icon"
@@ -111,7 +111,7 @@ export function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, 
   }
 
   return (
-    <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-background p-3 flex flex-col gap-2 overflow-y-auto`}>
+    <aside className={`${isMobile ? 'w-full' : 'w-72 border-r'} bg-card p-3 flex flex-col gap-2 overflow-y-auto`}>
       <button
         className="w-full flex items-center justify-start h-8 px-3 text-sm font-medium"
         onClick={clearAllLandings}

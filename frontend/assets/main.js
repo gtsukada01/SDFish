@@ -39561,7 +39561,7 @@ function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, onClose
     (l) => l.includes("Ventura") || l.includes("Santa Barbara") || l.includes("Channel Islands")
   );
   if (isCollapsed && !isMobile) {
-    return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("aside", { className: "w-12 border-r bg-background p-2 flex flex-col gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime20.jsx)("aside", { className: "w-12 border-r bg-card p-2 flex flex-col gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(
       Button,
       {
         variant: "ghost",
@@ -39572,7 +39572,7 @@ function Sidebar({ selectedLandings, onLandingsChange, isMobile = false, onClose
       }
     ) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("aside", { className: `${isMobile ? "w-full" : "w-72 border-r"} bg-background p-3 flex flex-col gap-2 overflow-y-auto`, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)("aside", { className: `${isMobile ? "w-full" : "w-72 border-r"} bg-card p-3 flex flex-col gap-2 overflow-y-auto`, children: [
     /* @__PURE__ */ (0, import_jsx_runtime20.jsxs)(
       "button",
       {
@@ -52946,7 +52946,7 @@ function App() {
             /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
               Card,
               {
-                className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("species"),
                 children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -52963,7 +52963,7 @@ function App() {
             /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
               Card,
               {
-                className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("boats"),
                 children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -52982,7 +52982,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53001,7 +53001,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("boats"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53021,7 +53021,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("moon"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
@@ -53037,7 +53037,7 @@ function App() {
               /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
                 Card,
                 {
-                  className: "relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
+                  className: "relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
                   children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
                     /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [

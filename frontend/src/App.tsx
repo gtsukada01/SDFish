@@ -476,7 +476,7 @@ function App() {
                 <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
                   {/* CARD 1: Catch - Always visible */}
                   <Card
-                    className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                    className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                     onClick={() => handleMetricCardClick('species')}
                   >
                     <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
@@ -495,7 +495,7 @@ function App() {
 
                   {/* CARD 2: Trips - Always visible */}
                   <Card
-                    className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                    className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                     onClick={() => handleMetricCardClick('boats')}
                   >
                     <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
@@ -516,7 +516,7 @@ function App() {
                   {isBoatFiltered ? (
                     /* CARD 3 (Boat View): Avg Fish/Angler */
                     <Card
-                      className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                      className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('species')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
@@ -535,7 +535,7 @@ function App() {
                   ) : (
                     /* CARD 3 (Default View): Fleet */
                     <Card
-                      className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                      className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('boats')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
@@ -557,7 +557,7 @@ function App() {
                   {isBoatFiltered || isSpeciesFiltered ? (
                     /* CARD 4 (Filtered View): Best Moon Phase */
                     <Card
-                      className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                      className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('moon')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
@@ -573,7 +573,7 @@ function App() {
                   ) : (
                     /* CARD 4 (Default View): Variety */
                     <Card
-                      className="relative overflow-hidden bg-gradient-to-br from-background to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
+                      className="relative overflow-hidden bg-gradient-to-br from-white to-muted/20 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer"
                       onClick={() => handleMetricCardClick('species')}
                     >
                       <CardContent className="relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]">
