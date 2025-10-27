@@ -8,6 +8,101 @@
 **Total Database**: 13,172 trips (7,717 San Diego + 5,455 SoCal) with **100% QC validation**
 **Last Updated**: October 24, 2025 - **SoCal 2025 QC Complete - 100% Pass Rate (145/145 dates)**
 
+---
+
+## 📝 Recent Changes (Last 30 Days)
+
+**Purpose**: Coordinating changes across two teams - all recent commits in one place
+
+### Week of Oct 26, 2025 - File Cleanup & UI Polish
+
+**SPEC-013 File Auditing System - Phase 4 Complete** ✅
+- 650 files audited, 76 orphaned files deleted, 293 archived
+- Documentation compliance enforcement implemented
+- Master doc protection (README.md, DOCUMENTATION_STANDARDS.md, etc.)
+- 100% backup-first safety with complete audit trail
+- **Commits**: `27587fb5`, `ce89bf39`, `785ff5c5`
+
+**Frontend UI Refinements**:
+- Warm neutral theme implementation (2025 design trends)
+- All interactive elements solid white (removed gradients)
+- Improved metric card elevation and spacing
+- Fixed sidebar height to prevent background bleed
+- Show all months in monthly breakdown (including 0-catch months)
+- **Commits**: `16f89903`, `1354b8d1`, `d966fc72`, `7ff78ef4`, `8b4b940e`, `7aab31d6`, `d8864ec2`
+
+### Week of Oct 19-25, 2025 - Analytics & Mobile UX
+
+**Year-over-Year Metrics**:
+- YoY comparison badges on species filtering
+- Mobile-optimized percentage-only format
+- Improved arrow sizing and visual hierarchy
+- **Commits**: `7d5f6ae9`, `4c27aae3`, `bf8c6a8d`, `2fa1b473`, `339fb114`, `d937ab45`, `108b0c96`, `f4b0813c`, `0da875cf`, `5d9e62af`, `c976b4f4`, `b81ed565`
+
+**Mobile UX Improvements**:
+- Collapsing filter bar with scroll detection
+- Fixed dropdown z-index and overflow issues
+- Smooth 200ms animations for filter collapse
+- Metric card sizing upgraded to 2025 best practices
+- **Commits**: `35ac9c49`, `65500a37`, `8218af1e`, `3cc0bb91`, `775796f4`, `a57c8af9`, `cd2300e7`, `c0526ccc`, `5d806836`, `ed8d32db`
+
+**SPEC-011 Analytics Drilldown - Complete** ✅
+- Clickable metric cards with tab navigation
+- Monthly species breakdown (click to drill down)
+- Improved moon phase card styling
+- **Commits**: `e2c7d2d5`, `21b46600`, `5e280dff`, `c5d6f57f`
+
+**SPEC-010 Pipeline Hardening - Complete** ✅
+- Phase 1+2 implementation
+- Production-ready pipeline
+- **Commit**: `43966a38`
+
+### Week of Oct 14-18, 2025 - Data Quality & Dashboard
+
+**SoCal Data Quality Fix** (Oct 24):
+- Intelligent deduplication in `socal_scraper.py`
+- Prefers detailed rows with weight labels
+- QC pass rate: 78.7% → 100% (145/145 dates)
+- Re-scraped 297 trips across 14 dates
+- **Commit**: `2a64e699`
+
+**Vercel Deployment**:
+- Complete frontend source files for build
+- Build configuration optimized
+- Cache headers configured
+- **Commits**: `1267bf16`, `c1e295d2`, `8f504fc4`, `2e7e8f35`, `1eadc7da`
+
+**Dashboard Features**:
+- Species normalization and breakdown
+- Trip duration normalization
+- Clickable metric cards
+- Wave favicon added
+- Mobile filter fixes
+- **Commits**: `1b03a1cd`, `2a668bde`, `7f3c4b57`, `73dc02ff`, `5b1ba7d8`, `130f7b15`, `aa4cfce9`, `ee062859`, `03c69f4a`
+
+**Documentation & Bug Fixes**:
+- Documentation hygiene sweep (14 files archived)
+- Species bar chart aggregation fix
+- Scroll behavior improvements (jitter/flicker fixes)
+- **Commits**: `6d823bdb`, `fbbe0133`, `0378c633`, `3b9afeb4`, `b9712f7d`, `72266e18`, `90d992c9`
+
+### Earlier in October 2025
+
+**Dashboard Improvements**:
+- Layout and component redesign
+- Moon phase visualization enhancements
+- **Commits**: `9e0f73b8`
+
+---
+
+**How to Use This Changelog**:
+- Each team should review this section weekly
+- Commit hashes can be viewed: `git show <hash>`
+- Major features marked with ✅ when complete
+- Grouped by week for easier scanning
+
+---
+
 ## 🎯 NEW TEAM: START HERE
 
 ### ✅ COMPLETED: SoCal 2025 QC Validation & Data Quality Fix (Oct 24, 2025)
