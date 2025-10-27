@@ -9,17 +9,41 @@ export function cn(...inputs: ClassValue[]) {
  * Normalize species name for display grouping
  * Removes weight qualifiers and standardizes naming
  * Examples:
- * - "bluefin tuna (up to 50 pounds)" → "bluefin tuna"
- * - "bluefin tuna (up to 100 pounds)" → "bluefin tuna"
- * - "calico bass (up to 6.5 pounds)" → "calico bass"
+ * - "bluefin tuna (up to 50 pounds)" → "Bluefin Tuna"
+ * - "bluefin tuna (up to 100 pounds)" → "Bluefin Tuna"
+ * - "vermillion rockfish" → "Vermilion Rockfish"
+ * - "vermilion rockfish" → "Vermilion Rockfish"
  */
 export function normalizeSpeciesName(species: string): string {
   if (!species) return species
 
   // Remove "(up to XXX pounds)" patterns (handles both integers and decimals like 6.5)
-  const withoutWeight = species.replace(/\s*\(up to [\d.]+\s*pounds?\)/i, '').trim()
+  let normalized = species.replace(/\s*\(up to [\d.]+\s*pounds?\)/i, '').trim()
 
-  return withoutWeight
+  // Fix common spelling variants and incomplete names (case-insensitive)
+  const spellingFixes: Record<string, string> = {
+    'vermillion rockfish': 'vermilion rockfish',
+    'vermillion': 'vermilion',
+    'blacksmith': 'blacksmith perch',
+    'california yellowtail': 'yellowtail',
+    'salmon grouper': 'bocaccio'
+  }
+
+  const lowerNormalized = normalized.toLowerCase()
+  for (const [variant, correct] of Object.entries(spellingFixes)) {
+    if (lowerNormalized === variant) {
+      normalized = correct
+      break
+    }
+  }
+
+  // Capitalize first letter of each word for consistent display
+  normalized = normalized
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
+
+  return normalized
 }
 
 /**
