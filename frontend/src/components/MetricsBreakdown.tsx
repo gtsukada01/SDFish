@@ -17,17 +17,35 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
   if (mode === 'species') {
     // When species is filtered, show monthly breakdown instead
     if (isSpeciesFiltered && catchData) {
-      // Aggregate catches by month
-      const monthlyMap = new Map<string, { month: string, total_fish: number, trip_count: number }>()
+      // First, determine the full date range from catchData to show ALL months (even with 0 catches)
+      const allDates = catchData.map(trip => new Date(trip.trip_date))
+      if (allDates.length === 0) {
+        return <div className="text-sm text-muted-foreground">No data available</div>
+      }
 
+      const minDate = new Date(Math.min(...allDates.map(d => d.getTime())))
+      const maxDate = new Date(Math.max(...allDates.map(d => d.getTime())))
+
+      // Initialize ALL months in the range with 0s
+      const monthlyMap = new Map<string, { month: string, total_fish: number, trip_count: number }>()
+      const currentMonth = new Date(minDate.getFullYear(), minDate.getMonth(), 1)
+      const endMonth = new Date(maxDate.getFullYear(), maxDate.getMonth(), 1)
+
+      while (currentMonth <= endMonth) {
+        const monthKey = `${currentMonth.getFullYear()}-${String(currentMonth.getMonth() + 1).padStart(2, '0')}`
+        const monthLabel = currentMonth.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
+        monthlyMap.set(monthKey, { month: monthLabel, total_fish: 0, trip_count: 0 })
+        currentMonth.setMonth(currentMonth.getMonth() + 1)
+      }
+
+      // Now fill in actual data
       catchData.forEach(trip => {
         const date = new Date(trip.trip_date)
         const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`
-        const monthLabel = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
 
-        const current = monthlyMap.get(monthKey) || { month: monthLabel, total_fish: 0, trip_count: 0 }
+        const current = monthlyMap.get(monthKey)!
         monthlyMap.set(monthKey, {
-          month: monthLabel,
+          ...current,
           total_fish: current.total_fish + trip.total_fish,
           trip_count: current.trip_count + 1
         })
@@ -38,7 +56,7 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
         .map(([key, data]) => ({
           monthKey: key,
           ...data,
-          avg_per_trip: data.total_fish / data.trip_count
+          avg_per_trip: data.trip_count > 0 ? data.total_fish / data.trip_count : 0
         }))
         .sort((a, b) => a.monthKey.localeCompare(b.monthKey))
 
@@ -54,14 +72,17 @@ export function MetricsBreakdown({ metrics, mode = 'boats', selectedValue, onBar
             Monthly catch breakdown for selected species · Click a month to view trips
           </div>
           {monthlyData.map((monthData) => {
-            const barPercentage = (monthData.avg_per_trip / maxAvg) * 100
-            const distributionPercentage = (monthData.total_fish / totalFish) * 100
+            const barPercentage = maxAvg > 0 ? (monthData.avg_per_trip / maxAvg) * 100 : 0
+            const distributionPercentage = totalFish > 0 ? (monthData.total_fish / totalFish) * 100 : 0
 
-            // Determine if this month is a top or bottom performer
+            // Determine if this month is a top or bottom performer (only for months with catches)
             const performanceRank = sortedByPerformance.findIndex(m => m.monthKey === monthData.monthKey)
-            const isTopPerformer = performanceRank < 2
-            const isBottomPerformer = performanceRank >= sortedByPerformance.length - 2
-            const barAccent = isTopPerformer
+            const hasData = monthData.trip_count > 0
+            const isTopPerformer = hasData && performanceRank < 2
+            const isBottomPerformer = hasData && performanceRank >= sortedByPerformance.length - 2
+            const barAccent = !hasData
+              ? 'bg-muted-foreground/10'  // Very light gray for months with no catches
+              : isTopPerformer
               ? 'bg-emerald-500/20'
               : isBottomPerformer
               ? 'bg-red-500/20'
