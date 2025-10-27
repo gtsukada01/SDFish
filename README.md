@@ -63,14 +63,14 @@
 - YoY comparison badges on species filtering
 - Mobile-optimized percentage-only format
 - Improved arrow sizing and visual hierarchy
-- **Commits**: `7d5f6ae9`, `4c27aae3`, `bf8c6a8d`, `2fa1b473`, `339fb114`, `d937ab45`, `108b0c96`, `f4b0813c`, `0da875cf`, `5d9e62af`, `c976b4f4`, `b81ed565`
+- **Commits**: `7d5f6ae9`, `4c27aae3`, `bf8c6a8d`, `2fa1b473`, `339fb114`, `d937ab45`, `108b0c96`
 
 **Mobile UX Improvements**:
 - Collapsing filter bar with scroll detection
 - Fixed dropdown z-index and overflow issues
 - Smooth 200ms animations for filter collapse
 - Metric card sizing upgraded to 2025 best practices
-- **Commits**: `35ac9c49`, `65500a37`, `8218af1e`, `3cc0bb91`, `775796f4`, `a57c8af9`, `cd2300e7`, `c0526ccc`, `5d806836`, `ed8d32db`
+- **Commits**: `65500a37`, `8218af1e`, `3cc0bb91`, `775796f4`, `a57c8af9`, `cd2300e7`, `c0526ccc`, `5d806836`, `ed8d32db`
 
 **SPEC-011 Analytics Drilldown - Complete** ✅
 - Clickable metric cards with tab navigation
