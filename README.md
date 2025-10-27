@@ -14,7 +14,7 @@
 
 **Purpose**: Coordinating changes across two teams - all recent commits in one place
 
-### Week of Oct 26, 2025 - File Cleanup & UI Polish
+### Week of Oct 26, 2025 - File Cleanup & Dashboard Visual Overhaul
 
 **SPEC-013 File Auditing System - Phase 4 Complete** ✅
 - 650 files audited, 76 orphaned files deleted, 293 archived
@@ -23,13 +23,39 @@
 - 100% backup-first safety with complete audit trail
 - **Commits**: `27587fb5`, `ce89bf39`, `785ff5c5`
 
-**Frontend UI Refinements**:
-- Warm neutral theme implementation (2025 design trends)
-- All interactive elements solid white (removed gradients)
-- Improved metric card elevation and spacing
-- Fixed sidebar height to prevent background bleed
-- Show all months in monthly breakdown (including 0-catch months)
-- **Commits**: `16f89903`, `1354b8d1`, `d966fc72`, `7ff78ef4`, `8b4b940e`, `7aab31d6`, `d8864ec2`
+**Dashboard Visual Improvements - 2025 Modern Design** ✅
+
+*YOY Metrics Enhancement:*
+- Increased label sizes: 12px → 16px (mobile & desktop)
+- Replaced TrendingUp/Down icons → ArrowUpRight/ArrowDownRight (cleaner modern arrows)
+- Increased icon sizes: 16px mobile, 20px desktop
+- Better visual balance and readability
+- **Commits**: `f4b0813c`, `0da875cf`, `5d9e62af`, `c976b4f4`
+
+*Analytics Bar Graph Redesign (All 3 Tabs):*
+- **Moon Phase**: Sorted by performance (avg/trip), scaled to 100% width, green/red highlights for top/bottom
+- **Monthly**: Chronological + performance highlights, avg/trip in bars, shows ALL months including 0s
+- **Boats**: Added green/red highlights for top/bottom performers
+- Creates consistent visual language across all tabs
+- Makes 2x performance differences obvious (was underwhelming before)
+- **Commits**: `b81ed565`, `35ac9c49`, `d8864ec2`, `16f89903`
+
+*2025 Design Trends (Pantone Mocha Mousse):*
+- Warm neutral background: stone-50 (HSL 30 20% 97%) replaces pure white
+- All cards/sidebar/dropdowns: solid white backgrounds for clean contrast
+- Subtle elevation on all cards (soft shadows, no harsh borders)
+- Removed gradients for minimal aesthetic
+- "Warm neutrals replacing cool grays" trend applied
+- **Commits**: `7aab31d6`, `8b4b940e`, `7ff78ef4`, `d966fc72`, `1354b8d1`
+
+*Critical Bug Fix - Monthly Breakdown:*
+- **Issue**: Months with 0 catches didn't appear (e.g., March for White Seabass)
+- **Fix**: Initialize ALL months in date range, show "0 avg/trip" for missing data
+- **Impact**: Removes ambiguity between "no catches" vs "missing data"
+- Shows clear seasonal patterns (e.g., White Seabass season starts April, not active March)
+- **Commit**: `16f89903`
+
+**Research Sources:** Pantone 2025, shadcn/ui charts, Airbnb/Zillow filter UX, 2025 dashboard design trends
 
 ### Week of Oct 19-25, 2025 - Analytics & Mobile UX
 
