@@ -55,6 +55,12 @@
 - Shows clear seasonal patterns (e.g., White Seabass season starts April, not active March)
 - **Commit**: `16f89903`
 
+*GitHub Pages Build Fix:*
+- **Issue**: Jekyll attempting to process markdown docs, causing build failures
+- **Fix**: Added `.nojekyll` file to disable Jekyll processing
+- **Impact**: Stops GitHub Pages build errors, docs remain readable on GitHub
+- **Commits**: `e3bfffdc`, `ef2fab11`, `bffbdb6a`
+
 **Research Sources:** Pantone 2025, shadcn/ui charts, Airbnb/Zillow filter UX, 2025 dashboard design trends
 
 ### Week of Oct 19-25, 2025 - Analytics & Mobile UX
