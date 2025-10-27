@@ -24,9 +24,15 @@ export function normalizeSpeciesName(species: string): string {
   const spellingFixes: Record<string, string> = {
     'vermillion rockfish': 'vermilion rockfish',
     'vermillion': 'vermilion',
+    'red rockfish': 'vermilion rockfish',
     'blacksmith': 'blacksmith perch',
     'california yellowtail': 'yellowtail',
-    'salmon grouper': 'bocaccio'
+    'california sheephead': 'sheephead',
+    'california halibut': 'halibut',
+    'pacific mackerel': 'mackerel',
+    'spotted sand bass': 'sand bass',
+    'salmon grouper': 'bocaccio',
+    'albacore': 'albacore tuna'
   }
 
   const lowerNormalized = normalized.toLowerCase()
