@@ -35963,7 +35963,6 @@ function formatYOYChange(current, previous, compact = false) {
 // src/lib/fetchRealData.ts
 async function fetchRealCatchData(params) {
   const { startDate, endDate, landing, boat, species, tripDuration, moonPhase } = params;
-  const normalizedSpeciesTargets = (species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   let query = supabase.from("trips").select(`
       id,
       trip_date,
@@ -35999,10 +35998,9 @@ async function fetchRealCatchData(params) {
     const catches = trip.catches || [];
     let activeCatches = catches;
     if (species && species.length > 0) {
-      const matchingCatches = catches.filter((c) => {
-        const normalizedCatch = normalizeSpeciesName(c.species).toLowerCase();
-        return normalizedSpeciesTargets.includes(normalizedCatch);
-      });
+      const matchingCatches = catches.filter(
+        (c) => species.includes(c.species)
+      );
       if (matchingCatches.length === 0) {
         return null;
       }
@@ -36149,10 +36147,9 @@ async function fetchFilterOptions(filterByLanding) {
 }
 async function fetchRealSummaryMetrics(params) {
   const records = await fetchRealCatchData(params);
-  const summarySpeciesTargets = (params.species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   const getFilteredSpeciesBreakdown = (breakdown) => {
-    if (summarySpeciesTargets.length > 0) {
-      return breakdown.filter((s) => summarySpeciesTargets.includes(normalizeSpeciesName(s.species).toLowerCase()));
+    if (params.species && params.species.length > 0) {
+      return breakdown.filter((s) => params.species.includes(s.species));
     }
     return breakdown;
   };
@@ -36195,21 +36192,16 @@ async function fetchRealSummaryMetrics(params) {
   records.forEach((r2) => {
     const filteredBreakdown = getFilteredSpeciesBreakdown(r2.species_breakdown);
     filteredBreakdown.forEach((s) => {
-      const normalized = normalizeSpeciesName(s.species).toLowerCase();
-      const key = summarySpeciesTargets.length > 0 ? normalized : s.species;
-      if (!speciesMap.has(key)) {
-        speciesMap.set(key, { fish: 0, boats: /* @__PURE__ */ new Set(), label: s.species });
+      if (!speciesMap.has(s.species)) {
+        speciesMap.set(s.species, { fish: 0, boats: /* @__PURE__ */ new Set() });
       }
-      const speciesEntry = speciesMap.get(key);
-      speciesEntry.fish += s.count;
-      speciesEntry.boats.add(r2.boat);
-      if (summarySpeciesTargets.length === 0) {
-        speciesEntry.label = s.species;
-      }
+      const species = speciesMap.get(s.species);
+      species.fish += s.count;
+      species.boats.add(r2.boat);
     });
   });
-  const perSpecies = Array.from(speciesMap.entries()).map(([, data]) => ({
-    species: data.label,
+  const perSpecies = Array.from(speciesMap.entries()).map(([species, data]) => ({
+    species,
     total_fish: data.fish,
     boats: data.boats.size
   })).sort((a, b) => b.total_fish - a.total_fish);
