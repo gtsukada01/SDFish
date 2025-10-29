@@ -25704,11 +25704,11 @@ var require_react_jsx_runtime_development = __commonJS({
             return jsxWithValidation(type, props, key, false);
           }
         }
-        var jsx44 = jsxWithValidationDynamic;
-        var jsxs18 = jsxWithValidationStatic;
+        var jsx46 = jsxWithValidationDynamic;
+        var jsxs19 = jsxWithValidationStatic;
         exports.Fragment = REACT_FRAGMENT_TYPE;
-        exports.jsx = jsx44;
-        exports.jsxs = jsxs18;
+        exports.jsx = jsx46;
+        exports.jsxs = jsxs19;
       })();
     }
   }
@@ -35922,8 +35922,29 @@ function cn(...inputs) {
 }
 function normalizeSpeciesName(species) {
   if (!species) return species;
-  const withoutWeight = species.replace(/\s*\(up to [\d.]+\s*pounds?\)/i, "").trim();
-  return withoutWeight;
+  let normalized = species.replace(/\s*\(up to [\d.]+\s*pounds?\)/i, "").trim();
+  const spellingFixes = {
+    "vermillion rockfish": "vermilion rockfish",
+    "vermillion": "vermilion",
+    "red rockfish": "vermilion rockfish",
+    "blacksmith": "blacksmith perch",
+    "california yellowtail": "yellowtail",
+    "california sheephead": "sheephead",
+    "california halibut": "halibut",
+    "pacific mackerel": "mackerel",
+    "spotted sand bass": "sand bass",
+    "salmon grouper": "bocaccio",
+    "albacore": "albacore tuna"
+  };
+  const lowerNormalized = normalized.toLowerCase();
+  for (const [variant, correct] of Object.entries(spellingFixes)) {
+    if (lowerNormalized === variant) {
+      normalized = correct;
+      break;
+    }
+  }
+  normalized = normalized.split(" ").map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+  return normalized;
 }
 function groupSpeciesByNormalizedName(allSpecies) {
   const variantMap = /* @__PURE__ */ new Map();
@@ -35963,6 +35984,7 @@ function formatYOYChange(current, previous, compact = false) {
 // src/lib/fetchRealData.ts
 async function fetchRealCatchData(params) {
   const { startDate, endDate, landing, boat, species, tripDuration, moonPhase } = params;
+  const normalizedSpeciesTargets = (species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   let query = supabase.from("trips").select(`
       id,
       trip_date,
@@ -35998,9 +36020,10 @@ async function fetchRealCatchData(params) {
     const catches = trip.catches || [];
     let activeCatches = catches;
     if (species && species.length > 0) {
-      const matchingCatches = catches.filter(
-        (c) => species.includes(c.species)
-      );
+      const matchingCatches = catches.filter((c) => {
+        const normalizedCatch = normalizeSpeciesName(c.species).toLowerCase();
+        return normalizedSpeciesTargets.includes(normalizedCatch);
+      });
       if (matchingCatches.length === 0) {
         return null;
       }
@@ -36093,39 +36116,20 @@ async function fetchFilterOptions(filterByLanding) {
   const { normalizedNames, variantMap } = groupSpeciesByNormalizedName(allSpecies);
   const sortTripDurations = (a, b) => {
     const getCategory = (duration) => {
-      if (duration === "12 Hour") return 3;
-      if (duration === "10 Hour") return 2;
-      if (duration.includes("Hour")) return 1;
+      if (duration === "Lobster" || duration === "Halibut") return 6;
       if (duration.includes("1/2 Day")) return 1;
       if (duration.includes("3/4 Day")) return 2;
       if (duration.includes("Full Day")) return 3;
       if (duration.includes("Overnight")) return 4;
-      if (duration.includes("Lobster")) return 6;
       return 5;
     };
     const catA = getCategory(a);
     const catB = getCategory(b);
     if (catA !== catB) return catA - catB;
     if (catA === 1) {
-      const aIsHour = a.includes("Hour");
-      const bIsHour = b.includes("Hour");
-      if (aIsHour && bIsHour) {
-        const hoursA = parseInt(a.split(" ")[0]);
-        const hoursB = parseInt(b.split(" ")[0]);
-        return hoursA - hoursB;
-      }
-      if (aIsHour && !bIsHour) return -1;
-      if (!aIsHour && bIsHour) return 1;
       return a.localeCompare(b);
     }
-    if (catA === 2) {
-      if (a.includes("3/4 Day")) return -1;
-      if (b.includes("3/4 Day")) return 1;
-      return a.localeCompare(b);
-    }
-    if (catA === 3) {
-      if (a.includes("Full Day")) return -1;
-      if (b.includes("Full Day")) return 1;
+    if (catA === 2 || catA === 3) {
       return a.localeCompare(b);
     }
     if (catA === 5) {
@@ -36147,9 +36151,10 @@ async function fetchFilterOptions(filterByLanding) {
 }
 async function fetchRealSummaryMetrics(params) {
   const records = await fetchRealCatchData(params);
+  const summarySpeciesTargets = (params.species || []).map((s) => normalizeSpeciesName(s).toLowerCase());
   const getFilteredSpeciesBreakdown = (breakdown) => {
-    if (params.species && params.species.length > 0) {
-      return breakdown.filter((s) => params.species.includes(s.species));
+    if (summarySpeciesTargets.length > 0) {
+      return breakdown.filter((s) => summarySpeciesTargets.includes(normalizeSpeciesName(s.species).toLowerCase()));
     }
     return breakdown;
   };
@@ -36192,16 +36197,21 @@ async function fetchRealSummaryMetrics(params) {
   records.forEach((r2) => {
     const filteredBreakdown = getFilteredSpeciesBreakdown(r2.species_breakdown);
     filteredBreakdown.forEach((s) => {
-      if (!speciesMap.has(s.species)) {
-        speciesMap.set(s.species, { fish: 0, boats: /* @__PURE__ */ new Set() });
+      const normalized = normalizeSpeciesName(s.species).toLowerCase();
+      const key = summarySpeciesTargets.length > 0 ? normalized : s.species;
+      if (!speciesMap.has(key)) {
+        speciesMap.set(key, { fish: 0, boats: /* @__PURE__ */ new Set(), label: s.species });
       }
-      const species = speciesMap.get(s.species);
-      species.fish += s.count;
-      species.boats.add(r2.boat);
+      const speciesEntry = speciesMap.get(key);
+      speciesEntry.fish += s.count;
+      speciesEntry.boats.add(r2.boat);
+      if (summarySpeciesTargets.length === 0) {
+        speciesEntry.label = s.species;
+      }
     });
   });
-  const perSpecies = Array.from(speciesMap.entries()).map(([species, data]) => ({
-    species,
+  const perSpecies = Array.from(speciesMap.entries()).map(([, data]) => ({
+    species: data.label,
     total_fish: data.fish,
     boats: data.boats.size
   })).sort((a, b) => b.total_fish - a.total_fish);
@@ -49063,14 +49073,27 @@ var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
 function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, onMonthBarClick, catchData, isSpeciesFiltered }) {
   if (mode === "species") {
     if (isSpeciesFiltered && catchData) {
+      const allDates = catchData.map((trip) => new Date(trip.trip_date));
+      if (allDates.length === 0) {
+        return /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "text-sm text-muted-foreground", children: "No data available" });
+      }
+      const minDate = new Date(Math.min(...allDates.map((d) => d.getTime())));
+      const maxDate = new Date(Math.max(...allDates.map((d) => d.getTime())));
       const monthlyMap = /* @__PURE__ */ new Map();
+      const currentMonth = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+      const endMonth = new Date(maxDate.getFullYear(), maxDate.getMonth(), 1);
+      while (currentMonth <= endMonth) {
+        const monthKey = `${currentMonth.getFullYear()}-${String(currentMonth.getMonth() + 1).padStart(2, "0")}`;
+        const monthLabel = currentMonth.toLocaleDateString("en-US", { year: "numeric", month: "long" });
+        monthlyMap.set(monthKey, { month: monthLabel, total_fish: 0, trip_count: 0 });
+        currentMonth.setMonth(currentMonth.getMonth() + 1);
+      }
       catchData.forEach((trip) => {
         const date = new Date(trip.trip_date);
         const monthKey = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
-        const monthLabel = date.toLocaleDateString("en-US", { year: "numeric", month: "long" });
-        const current = monthlyMap.get(monthKey) || { month: monthLabel, total_fish: 0, trip_count: 0 };
+        const current = monthlyMap.get(monthKey);
         monthlyMap.set(monthKey, {
-          month: monthLabel,
+          ...current,
           total_fish: current.total_fish + trip.total_fish,
           trip_count: current.trip_count + 1
         });
@@ -49078,7 +49101,7 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
       const monthlyData = Array.from(monthlyMap.entries()).map(([key, data]) => ({
         monthKey: key,
         ...data,
-        avg_per_trip: data.total_fish / data.trip_count
+        avg_per_trip: data.trip_count > 0 ? data.total_fish / data.trip_count : 0
       })).sort((a, b) => a.monthKey.localeCompare(b.monthKey));
       const maxAvg = Math.max(...monthlyData.map((m2) => m2.avg_per_trip));
       const totalFish = monthlyData.reduce((sum2, m2) => sum2 + m2.total_fish, 0);
@@ -49086,12 +49109,13 @@ function MetricsBreakdown({ metrics, mode = "boats", selectedValue, onBarClick, 
       return /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)("div", { className: "space-y-2", children: [
         /* @__PURE__ */ (0, import_jsx_runtime36.jsx)("div", { className: "mb-4 text-sm text-muted-foreground", children: "Monthly catch breakdown for selected species \xB7 Click a month to view trips" }),
         monthlyData.map((monthData) => {
-          const barPercentage = monthData.avg_per_trip / maxAvg * 100;
-          const distributionPercentage = monthData.total_fish / totalFish * 100;
+          const barPercentage = maxAvg > 0 ? monthData.avg_per_trip / maxAvg * 100 : 0;
+          const distributionPercentage = totalFish > 0 ? monthData.total_fish / totalFish * 100 : 0;
           const performanceRank = sortedByPerformance.findIndex((m2) => m2.monthKey === monthData.monthKey);
-          const isTopPerformer = performanceRank < 2;
-          const isBottomPerformer = performanceRank >= sortedByPerformance.length - 2;
-          const barAccent = isTopPerformer ? "bg-emerald-500/20" : isBottomPerformer ? "bg-red-500/20" : "bg-primary/20";
+          const hasData = monthData.trip_count > 0;
+          const isTopPerformer = hasData && performanceRank < 2;
+          const isBottomPerformer = hasData && performanceRank >= sortedByPerformance.length - 2;
+          const barAccent = !hasData ? "bg-muted-foreground/10" : isTopPerformer ? "bg-emerald-500/20" : isBottomPerformer ? "bg-red-500/20" : "bg-primary/20";
           return /* @__PURE__ */ (0, import_jsx_runtime36.jsxs)(
             "div",
             {
@@ -52601,8 +52625,117 @@ function CatchTable({ data }) {
   ] });
 }
 
-// src/App.tsx
+// src/components/ui/skeleton.tsx
 var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+function Skeleton({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+    "div",
+    {
+      className: cn("animate-pulse rounded-md bg-muted", className),
+      ...props
+    }
+  );
+}
+
+// src/components/DashboardSkeleton.tsx
+var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+function DashboardSkeleton() {
+  return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex h-screen overflow-hidden bg-background", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "hidden md:flex md:w-64 md:flex-col border-r bg-card", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "p-6 border-b", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-32" }),
+        " "
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "flex-1 p-4 space-y-2", children: [1, 2, 3, 4, 5, 6, 7].map((i) => /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-10 w-full" }, i)) })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex flex-col flex-1 overflow-hidden", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "sticky top-0 z-10 border-b bg-muted/40", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "container mx-auto p-4 md:px-6 py-2", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex items-center gap-4 flex-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-full md:w-[200px]" }),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-full md:w-[200px]" }),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-full md:w-[200px]" }),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-full md:w-[200px]" }),
+        " "
+      ] }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "border-b bg-background/50 py-2", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "container mx-auto px-4 md:px-6", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex items-center gap-2 flex-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-24" }),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-32" }),
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-28" }),
+        " "
+      ] }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "flex-1 overflow-auto", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "container mx-auto p-4 md:p-6 space-y-6", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "grid gap-3 grid-cols-2 lg:grid-cols-4", children: [1, 2, 3, 4].map((i) => /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Card, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(CardHeader, { className: "flex flex-row items-center justify-between space-y-0 pb-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-20" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-4 rounded" }),
+            " "
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(CardContent, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-8 w-24 mb-1" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-3 w-32" }),
+            " "
+          ] })
+        ] }, i)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Card, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex items-center gap-4", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-32" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-32" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-32" }),
+            " "
+          ] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(CardContent, { className: "space-y-4", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "space-y-2", children: [100, 80, 120, 60, 90, 70, 110, 85].map((height, i) => /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-24" }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: `h-8 flex-1 max-w-[${height}%]` }),
+            " ",
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-12" }),
+            " "
+          ] }, i)) }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Card, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(CardHeader, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-6 w-40" }),
+            " "
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(CardContent, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("div", { className: "border-b pb-2 mb-2", children: /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "grid grid-cols-4 md:grid-cols-7 gap-2", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" })
+            ] }) }),
+            [1, 2, 3, 4, 5, 6, 7, 8].map((i) => /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)("div", { className: "grid grid-cols-4 md:grid-cols-7 gap-2 py-3 border-b", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full hidden md:block" }),
+              /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Skeleton, { className: "h-4 w-full" })
+            ] }, i))
+          ] })
+        ] })
+      ] }) })
+    ] })
+  ] });
+}
+
+// src/App.tsx
+var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
 function App() {
   const [catchData, setCatchData] = (0, import_react43.useState)([]);
   const [metrics, setMetrics] = (0, import_react43.useState)(null);
@@ -52759,12 +52892,12 @@ function App() {
     }
   }
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "container mx-auto p-6", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-center py-12", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { className: "text-muted-foreground", children: "Loading data..." }) }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(DashboardSkeleton, {});
   }
   if (error) {
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "container mx-auto p-6", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Card, { className: "border-destructive", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardTitle, { className: "text-destructive", children: "Error Loading Data" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { children: error }) })
+    return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "container mx-auto p-6", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Card, { className: "border-destructive", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CardHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CardTitle, { className: "text-destructive", children: "Error Loading Data" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { children: error }) })
     ] }) });
   }
   const handleLandingsChange = (landings) => {
@@ -52885,22 +53018,22 @@ function App() {
   const TrendBadge = ({ trend }) => {
     const Icon3 = trend.direction === "up" ? ArrowUpRight : trend.direction === "down" ? ArrowDownRight : Minus;
     const iconColor = trend.direction === "up" ? "text-emerald-600 dark:text-emerald-400" : trend.direction === "down" ? "text-red-600 dark:text-red-400" : "text-muted-foreground";
-    return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-base font-normal text-muted-foreground", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon3, { className: `h-4 w-4 md:h-5 md:w-5 flex-shrink-0 ${iconColor}` }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "md:hidden", children: trend.displayTextCompact }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "hidden md:inline", children: trend.displayText })
+    return /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex items-center justify-center gap-1 md:gap-1.5 text-base font-normal text-muted-foreground", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Icon3, { className: `h-4 w-4 md:h-5 md:w-5 flex-shrink-0 ${iconColor}` }),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "md:hidden", children: trend.displayTextCompact }),
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "hidden md:inline", children: trend.displayText })
     ] });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col h-screen overflow-hidden", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col h-screen overflow-hidden", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
       Header,
       {
         onMobileMenuClick: () => setIsSidebarOpen(true),
         onLogoClick: handleLogoClick
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-1 overflow-hidden", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Sheet, { open: isSidebarOpen, onOpenChange: setIsSidebarOpen, children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(SheetContent, { side: "left", className: "p-0 w-[280px]", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-1 overflow-hidden", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Sheet, { open: isSidebarOpen, onOpenChange: setIsSidebarOpen, children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(SheetContent, { side: "left", className: "p-0 w-[280px]", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
         Sidebar,
         {
           selectedLandings,
@@ -52909,8 +53042,8 @@ function App() {
           onClose: () => setIsSidebarOpen(false)
         }
       ) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col flex-1 overflow-hidden", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col flex-1 overflow-hidden", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
           HeaderFilters,
           {
             filters,
@@ -52920,7 +53053,7 @@ function App() {
             onToggleCollapse: () => setIsFiltersCollapsed(false)
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
           ActiveFilters,
           {
             filters,
@@ -52933,76 +53066,76 @@ function App() {
             onClearAll: handleClearAllFilters
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { ref: scrollContainerRef, className: "flex-1 overflow-auto", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "container mx-auto p-4 md:p-6 space-y-6", children: [
-          metrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "grid gap-3 grid-cols-2 lg:grid-cols-4", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { ref: scrollContainerRef, className: "flex-1 overflow-auto", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "container mx-auto p-4 md:p-6 space-y-6", children: [
+          metrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "grid gap-3 grid-cols-2 lg:grid-cols-4", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
               Card,
               {
                 className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("species"),
-                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Trophy, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Catch" })
+                children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Trophy, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Catch" })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_fish.toLocaleString() }),
-                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.catch })
+                  /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_fish.toLocaleString() }),
+                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TrendBadge, { trend: timeframeMetrics.catch })
                   ] })
                 ] })
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
               Card,
               {
                 className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                 onClick: () => handleMetricCardClick("boats"),
-                children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Anchor, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Trips" })
+                children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Anchor, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Trips" })
                   ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_trips.toLocaleString() }),
-                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.trips })
+                  /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.total_trips.toLocaleString() }),
+                    timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TrendBadge, { trend: timeframeMetrics.trips })
                   ] })
                 ] })
               }
             ),
             isBoatFiltered ? (
               /* CARD 3 (Boat View): Avg Fish/Angler */
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 Card,
                 {
                   className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Users, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Avg / Angler" })
+                  children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Users, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Avg / Angler" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: avgFishPerAngler }),
-                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.avgPerAngler })
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: avgFishPerAngler }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TrendBadge, { trend: timeframeMetrics.avgPerAngler })
                     ] })
                   ] })
                 }
               )
             ) : (
               /* CARD 3 (Default View): Fleet */
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 Card,
                 {
                   className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("boats"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Ship, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Fleet" })
+                  children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Ship, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Fleet" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_boats }),
-                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.fleet })
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_boats }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TrendBadge, { trend: timeframeMetrics.fleet })
                     ] })
                   ] })
                 }
@@ -53010,54 +53143,54 @@ function App() {
             ),
             isBoatFiltered || isSpeciesFiltered ? (
               /* CARD 4 (Filtered View): Best Moon Phase */
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 Card,
                 {
                   className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("moon"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Moon, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Moon Phase" })
+                  children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Moon, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Moon Phase" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2 mt-6", children: bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, " ") : "N/A" })
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-center text-2xl md:text-4xl font-bold tracking-tight capitalize leading-tight px-2 mt-6", children: bestMoonPhase ? bestMoonPhase.phase_name.replace(/_/g, " ") : "N/A" })
                   ] })
                 }
               )
             ) : (
               /* CARD 4 (Default View): Variety */
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 Card,
                 {
                   className: "relative overflow-hidden transition-all duration-200 hover:shadow-lg hover:scale-[1.02] hover:border-primary/20 cursor-pointer",
                   onClick: () => handleMetricCardClick("species"),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Fish, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Species" })
+                  children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardContent, { className: "relative pt-6 pb-6 flex flex-col items-center justify-center min-h-[140px]", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "absolute top-3 left-6 flex items-center gap-2", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Fish, { className: "h-5 w-5 text-muted-foreground/60 stroke-[1.5]" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("span", { className: "text-base font-medium text-muted-foreground", children: "Species" })
                     ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_species }),
-                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TrendBadge, { trend: timeframeMetrics.species })
+                    /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)("div", { className: "flex flex-col items-center justify-center gap-1 mt-6", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "text-3xl md:text-5xl font-bold tracking-tight", children: metrics.fleet.unique_species }),
+                      timeframeMetrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TrendBadge, { trend: timeframeMetrics.species })
                     ] })
                   ] })
                 }
               )
             )
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CatchTable, { data: catchData }),
-          metrics && /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Card, { ref: breakdownRef, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(CardHeader, { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardTitle, { children: "Analytics & Insights" }),
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { className: "text-sm text-muted-foreground", children: "Explore detailed breakdowns and patterns in the fishing data" })
+          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CatchTable, { data: catchData }),
+          metrics && /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Card, { ref: breakdownRef, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(CardHeader, { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CardTitle, { children: "Analytics & Insights" }),
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { className: "text-sm text-muted-foreground", children: "Explore detailed breakdowns and patterns in the fishing data" })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(Tabs2, { value: activeTab, onValueChange: setActiveTab, className: "w-full", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(TabsList2, { className: "grid w-full grid-cols-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsTrigger2, { value: "boats", children: "Boats" }),
-                /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsTrigger2, { value: "species", children: isSpeciesFiltered ? "Monthly" : "Species" }),
-                /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsTrigger2, { value: "moon", children: "Moon" })
+            /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(CardContent, { children: /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Tabs2, { value: activeTab, onValueChange: setActiveTab, className: "w-full", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(TabsList2, { className: "grid w-full grid-cols-3", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsTrigger2, { value: "boats", children: "Boats" }),
+                /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsTrigger2, { value: "species", children: isSpeciesFiltered ? "Monthly" : "Species" }),
+                /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsTrigger2, { value: "moon", children: "Moon" })
               ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsContent2, { value: "boats", className: "mt-6", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsContent2, { value: "boats", className: "mt-6", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 MetricsBreakdown,
                 {
                   metrics,
@@ -53066,7 +53199,7 @@ function App() {
                   onBarClick: handleBoatBarClick
                 }
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsContent2, { value: "species", className: "mt-6", children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsContent2, { value: "species", className: "mt-6", children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 MetricsBreakdown,
                 {
                   metrics,
@@ -53078,14 +53211,14 @@ function App() {
                   isSpeciesFiltered
                 }
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsContent2, { value: "moon", className: "mt-6", children: metrics.moon_phase && metrics.moon_phase.length > 0 ? /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(TabsContent2, { value: "moon", className: "mt-6", children: metrics.moon_phase && metrics.moon_phase.length > 0 ? /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
                 MoonPhaseBreakdown,
                 {
                   data: metrics.moon_phase,
                   selectedValue: filters.moon_phase || null,
                   onBarClick: handleMoonPhaseBarClick
                 }
-              ) : /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("p", { className: "text-muted-foreground text-center py-8", children: "No moon phase data available for the selected date range" }) })
+              ) : /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { className: "text-muted-foreground text-center py-8", children: "No moon phase data available for the selected date range" }) })
             ] }) })
           ] })
         ] }) })
@@ -53096,9 +53229,9 @@ function App() {
 var App_default = App;
 
 // src/main.tsx
-var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
 import_client.default.createRoot(document.getElementById("root")).render(
-  /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(import_react44.default.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(App_default, {}) })
+  /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(import_react44.default.StrictMode, { children: /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(App_default, {}) })
 );
 /*! Bundled license information:
 

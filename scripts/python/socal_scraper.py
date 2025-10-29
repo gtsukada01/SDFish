@@ -435,13 +435,15 @@ def fetch_page(url: str, session: requests.Session) -> Optional[str]:
 
 def normalize_trip_type(trip_type: str) -> str:
     """
-    Normalize trip type text for consistency
+    Normalize trip type text for consistency and consolidate location-specific variants
 
     Examples:
         "OvernightOffshore" -> "Overnight"
-        "FullDayOffshore" -> "Full Day Offshore"
+        "FullDayOffshore" -> "Full Day"
         "1/2DayAM" -> "1/2 Day AM"
         "1/2 Day AMLocal" -> "1/2 Day AM"
+        "Full Day Coronado Islands" -> "Full Day"
+        "3/4 Day Local" -> "3/4 Day"
     """
     # Simplify: OvernightOffshore/OvernightLocal -> just "Overnight"
     trip_type = re.sub(r'Overnight(Offshore|Local)', r'Overnight', trip_type)
@@ -456,7 +458,35 @@ def normalize_trip_type(trip_type: str) -> str:
     # Remove trailing 'Local' or 'Offshore' after time modifiers
     trip_type = re.sub(r'(AM|PM)(Local|Offshore)$', r'\1', trip_type)
 
-    return trip_type.strip()
+    # Strip location suffixes to consolidate to base durations
+    # Examples: "Full Day Offshore" -> "Full Day", "3/4 Day Local" -> "3/4 Day"
+    location_suffixes = [
+        r'\s+Offshore$',
+        r'\s+Local$',
+        r'\s+Coronado Islands$',
+        r'\s+Islands$',
+        r'\s+Island Freelance$',
+        r'\s+Mexican Waters$',
+    ]
+
+    for suffix_pattern in location_suffixes:
+        trip_type = re.sub(suffix_pattern, '', trip_type, flags=re.IGNORECASE)
+
+    # Convert hour-based durations to standard day-based durations
+    hour_conversions = {
+        '12 Hour': 'Full Day',
+        '10 Hour': '3/4 Day',
+        '8 Hour': '3/4 Day',
+        '6 Hour': '1/2 Day',
+        '4 Hour': '1/2 Day',
+        '2 Hour': '1/2 Day',
+    }
+
+    trip_type_stripped = trip_type.strip()
+    if trip_type_stripped in hour_conversions:
+        return hour_conversions[trip_type_stripped]
+
+    return trip_type_stripped
 
 def parse_trip_duration(trip_type: str) -> float:
     """
@@ -635,13 +665,70 @@ def normalize_landing_name(landing_name: str) -> str:
     normalized = landing_name.lower()
     return LANDING_NAME_ALIASES.get(normalized, landing_name)
 
-# Species name normalization (handles common name variations for same fish)
+# Species name normalization (consolidates species variants into generic categories)
 SPECIES_NAME_ALIASES = {
+    # Rockfish group
+    "chilipepper": "Rockfish",
+    "copper rockfish": "Rockfish",
+    "brown rockfish": "Rockfish",
+    "blue rockfish": "Rockfish",
+    "treefish": "Rockfish",
+
+    # Perch group
+    "blue perch": "Perch",
+    "blacksmith perch": "Perch",
+    "blacksmith": "Perch",
+    "rubberlip seaperch": "Perch",
+    "ocean perch": "Perch",
+    "opaleye": "Perch",
+    "halfmoon": "Perch",
+
+    # Croaker group
+    "white croaker": "Croaker",
+    "yellowfin croaker": "Croaker",
+    "black croaker": "Croaker",
+    "sargo": "Croaker",
+
+    # Mackerel group
+    "spanish mackerel": "Mackerel",
+    "jack mackerel": "Mackerel",
+
+    # Sole group
+    "rock sole": "Sole",
+    "petrale sole": "Sole",
+    "sand sole": "Sole",
+    "fantail sole": "Sole",
+
+    # Bass group
+    "barred sand bass": "Sand Bass",
+
+    # Whitefish group
+    "ocean whitefish": "Whitefish",
+
+    # Crab group
+    "red rock crab": "Rock Crab",
+
+    # Legacy alias
     "red snapper": "vermilion rockfish",  # Same fish, different common names
 }
 
 def normalize_species_name(species_name: str) -> str:
-    """Normalize species names to canonical form"""
+    """
+    Normalize species names to canonical form
+
+    Consolidates species variants into generic categories:
+    - Rockfish group: Chilipepper, Copper, Brown, Blue Rockfish → Rockfish
+    - Perch group: Blue Perch, Blacksmith, Opaleye, Halfmoon → Perch
+    - Croaker group: White, Yellowfin, Black Croaker, Sargo → Croaker
+    - Mackerel group: Spanish, Jack Mackerel → Mackerel
+    - Sole group: Rock, Petrale, Sand, Fantail Sole → Sole
+
+    Args:
+        species_name: Raw species name (e.g., "Chilipepper", "Jack Mackerel")
+
+    Returns:
+        Normalized species name (e.g., "Rockfish", "Mackerel")
+    """
     normalized = species_name.lower()
     return SPECIES_NAME_ALIASES.get(normalized, species_name)
 

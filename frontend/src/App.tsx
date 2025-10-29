@@ -15,6 +15,7 @@ import { ActiveFilters } from './components/ActiveFilters'
 import { MetricsBreakdown } from './components/MetricsBreakdown'
 import { MoonPhaseBreakdown } from './components/MoonPhaseBreakdown'
 import { CatchTable } from './components/CatchTable'
+import { DashboardSkeleton } from './components/DashboardSkeleton'
 import { normalizeSpeciesName, formatYOYChange } from './lib/utils'
 
 type TrendMetric = ReturnType<typeof formatYOYChange>
@@ -224,13 +225,7 @@ function App() {
     }
 
   if (isLoading) {
-    return (
-      <div className="container mx-auto p-6">
-        <div className="text-center py-12">
-          <p className="text-muted-foreground">Loading data...</p>
-        </div>
-      </div>
-    )
+    return <DashboardSkeleton />
   }
 
   if (error) {

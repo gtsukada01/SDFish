@@ -225,19 +225,18 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
   // Custom sort function for trip durations
   const sortTripDurations = (a: string, b: string): number => {
-    // Define category order: Half-Day (incl. 2/4/6 Hour), 3/4 Day, Full Day, Overnight, Multi-Day, Special
+    // Define category order: Half-Day, 3/4 Day, Full Day, Overnight, Multi-Day, Special (Lobster/Halibut)
     const getCategory = (duration: string): number => {
-      // CRITICAL: 10 Hour = 3/4 Day, 12 Hour = Full Day
-      // 2, 4, 6 Hour = Half-Day (short trips)
-      if (duration === '12 Hour') return 3 // Full day
-      if (duration === '10 Hour') return 2 // Three-quarter day
-      if (duration.includes('Hour')) return 1 // Half-day (2, 4, 6 Hour short trips)
+      // Special trip types go last
+      if (duration === 'Lobster' || duration === 'Halibut') return 6 // Special last
+
+      // Standard durations
       if (duration.includes('1/2 Day')) return 1 // Half-day trips
       if (duration.includes('3/4 Day')) return 2 // Three-quarter day
       if (duration.includes('Full Day')) return 3 // Full day
       if (duration.includes('Overnight')) return 4 // Overnight
-      if (duration.includes('Lobster')) return 6 // Special last
-      return 5 // Multi-day trips (1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5 Day)
+
+      return 5 // Multi-day trips (1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5, 7 Day, Extended)
     }
 
     const catA = getCategory(a)
@@ -248,35 +247,13 @@ export async function fetchFilterOptions(filterByLanding?: string): Promise<{
 
     // Within same category, sort by numeric value or alphabetically
     if (catA === 1) {
-      // Half-Day: hour-based first (2, 4, 6 Hour), then 1/2 Day (AM, PM, Twilight)
-      const aIsHour = a.includes('Hour')
-      const bIsHour = b.includes('Hour')
-
-      if (aIsHour && bIsHour) {
-        // Both are hour-based: sort by hour value
-        const hoursA = parseInt(a.split(' ')[0])
-        const hoursB = parseInt(b.split(' ')[0])
-        return hoursA - hoursB
-      }
-
-      if (aIsHour && !bIsHour) return -1 // Hour trips before 1/2 Day
-      if (!aIsHour && bIsHour) return 1  // 1/2 Day after Hour trips
-
-      // Both are 1/2 Day: alphabetical (AM, PM, Twilight)
+      // Half-Day: 1/2 Day (AM, PM, Twilight, plain)
+      // Alphabetical sorting: AM, PM, Twilight, then plain "1/2 Day"
       return a.localeCompare(b)
     }
 
-    if (catA === 2) {
-      // 3/4 Day: put "3/4 Day" before "10 Hour"
-      if (a.includes('3/4 Day')) return -1
-      if (b.includes('3/4 Day')) return 1
-      return a.localeCompare(b)
-    }
-
-    if (catA === 3) {
-      // Full Day: put "Full Day" before "12 Hour"
-      if (a.includes('Full Day')) return -1
-      if (b.includes('Full Day')) return 1
+    if (catA === 2 || catA === 3) {
+      // 3/4 Day or Full Day: just alphabetical (only one variant each now)
       return a.localeCompare(b)
     }
 

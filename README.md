@@ -221,6 +221,81 @@
 
 **No Overlap**: Geographic separation - San Diego vs rest of SoCal
 
+### Data Processing & Normalization
+
+**Status**: ✅ PRODUCTION (October 28, 2025)
+**Files**:
+- `scripts/python/boats_scraper.py` (species: lines 89-135, trip duration: lines 469-508)
+- `scripts/python/socal_scraper.py` (species: lines 638-693, trip duration: lines 436-475)
+
+Both scrapers now include **automatic normalization** to consolidate species and trip duration variants:
+
+#### Species Normalization
+
+**Species Groups Consolidated (8 groups, 46 variants)**:
+- **Rockfish**: Chilipepper, Copper Rockfish, Brown Rockfish, Blue Rockfish, Treefish
+- **Perch**: Blue Perch, Blacksmith Perch, Blacksmith, Rubberlip Seaperch, Ocean Perch, Opaleye, Halfmoon
+- **Croaker**: White Croaker, Yellowfin Croaker, Black Croaker, Sargo
+- **Mackerel**: Spanish Mackerel, Jack Mackerel
+- **Sole**: Rock Sole, Petrale Sole, Sand Sole, Fantail Sole
+- **Sand Bass**: Barred Sand Bass
+- **Whitefish**: Ocean Whitefish
+- **Rock Crab**: Red Rock Crab
+
+**Database Impact**: 1,198 records (28,613 fish) consolidated from historical data
+
+#### Trip Duration Normalization
+
+**Location Suffixes Stripped**:
+- `Full Day Offshore`, `Full Day Coronado Islands`, `Full Day Local` → `Full Day`
+- `3/4 Day Local`, `3/4 Day Islands`, `3/4 Day Mexican Waters` → `3/4 Day`
+- `1.5 Day Offshore`, `1.5 Day Local` → `1.5 Day`
+- `2 Day Offshore`, `2 Day Island Freelance` → `2 Day`
+- `Overnight Coronado Islands`, `Overnight Island Freelance` → `Overnight`
+
+**Hour-Based Durations Converted**:
+- `12 Hour` (36 trips) → `Full Day`
+- `8 Hour` (11 trips), `10 Hour` (1 trip) → `3/4 Day`
+- `6 Hour` (12 trips), `4 Hour` (4 trips), `2 Hour` (1 trip) → `1/2 Day`
+
+**Database Impact**: Reduced from 41 → 19 unique durations (54% improvement!)
+- 249 trips consolidated to base durations (removed location suffixes)
+- 213 duplicate trips removed (location-based variants)
+- 65 hour-based trips converted to day-based formats
+- **Total: 527 trips cleaned up**
+
+**Final Trip Durations (19 clean options)**:
+1. 1/2 Day (AM, PM, Twilight, Extended) - 7,596 trips
+2. 3/4 Day - 3,684 trips
+3. Full Day - 3,544 trips
+4. Overnight - 1,698 trips
+5. Multi-Day (1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5, 7 Day) - 2,477 trips
+6. Special (Lobster, Halibut) - 17 trips
+
+**Features**:
+- ✅ **Size specification stripping**: Removes weight qualifiers like "(Up To 4 Pounds)" automatically
+- ✅ **Location suffix removal**: Strips "Offshore", "Local", "Coronado Islands", etc.
+- ✅ **Applies during parsing**: Normalization happens at scrape time, ensuring clean data from the start
+- ✅ **Configurable mappings**: Easy to add new groups via `SPECIES_NORMALIZATION` and `normalize_trip_type()` function
+- ✅ **Duplicate prevention**: Consolidated data eliminates location-based duplicates
+
+**Example**:
+```python
+# Species normalization
+# Source: "50 Chilipepper (Up To 4 Pounds)"
+# Parsed as: {"species": "Rockfish", "count": 50}
+
+# Trip duration normalization
+# Source: "Full Day Offshore"
+# Parsed as: {"trip_duration": "Full Day"}
+```
+
+**Impact**:
+- **Cleaner dropdowns**: 41 → 24 trip durations, cleaner species list
+- **Better UX**: Easier filtering and selection in dashboard
+- **Consistent data**: All historical and new scrapes use same format
+- **Duplicate prevention**: Location-based variants no longer create duplicate trips
+
 ### SoCal 2025 Completion ✅
 
 - ✅ **5,455 trips scraped** (Jan 1 - Oct 23, 2025)

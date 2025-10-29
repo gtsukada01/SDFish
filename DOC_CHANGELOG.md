@@ -4,6 +4,107 @@
 
 ---
 
+## [2025-10-28] Species & Trip Duration Normalization Feature
+
+**Action**: Implemented automatic normalization for species and trip durations in both scrapers
+**Files Modified**:
+- `README.md` - Added "Data Processing & Normalization" section (lines 224-280)
+- `scripts/python/boats_scraper.py` - Species normalization (lines 89-135), trip duration (lines 469-508)
+- `scripts/python/socal_scraper.py` - Species normalization (lines 638-693), trip duration (lines 436-475)
+
+**Changes Made**:
+
+**1. Species Normalization**
+
+Added 8 species groups with 46 variants that auto-consolidate during scraping:
+- **Rockfish**: Chilipepper, Copper Rockfish, Brown Rockfish, Blue Rockfish, Treefish
+- **Perch**: Blue Perch, Blacksmith Perch, Blacksmith, Rubberlip Seaperch, Ocean Perch, Opaleye, Halfmoon
+- **Croaker**: White Croaker, Yellowfin Croaker, Black Croaker, Sargo
+- **Mackerel**: Spanish Mackerel, Jack Mackerel
+- **Sole**: Rock Sole, Petrale Sole, Sand Sole, Fantail Sole
+- **Sand Bass**: Barred Sand Bass
+- **Whitefish**: Ocean Whitefish
+- **Rock Crab**: Red Rock Crab
+
+**Database Impact**: 1,198 records (28,613 fish) consolidated from historical data
+- Rockfish: 70 records, 3,189 fish (including Chilipepper size variants + Treefish)
+- Perch: 992 records, 21,903 fish (including Blacksmith)
+- Croaker: 77 records, 202 fish
+- Mackerel: 31 records, 248 fish
+- Sole: 287 records, 477 fish
+- Sand Bass: 249 records, 7,762 fish (Barred Sand Bass)
+- Whitefish: 14 records, 437 fish (Ocean Whitefish + size variants)
+- Rock Crab: 3 records, 46 fish (Red Rock Crab)
+
+**2. Trip Duration Normalization**
+
+Updated `normalize_trip_type()` function in both scrapers to strip location suffixes:
+- Removes: "Offshore", "Local", "Coronado Islands", "Islands", "Island Freelance", "Mexican Waters"
+- Fixes parsing errors: Missing spaces (e.g., "Full DayCoronado Islands" → "Full Day")
+- Consolidates: Location-specific variants to base durations
+
+**Database Impact**: Reduced from 41 → 19 unique trip durations (54% improvement!)
+- 249 trips consolidated to base durations (removed location suffixes)
+- 213 duplicate trips removed (same boat/date/anglers with location-specific variant)
+- 65 hour-based trips converted to day-based formats
+- **Total affected: 527 trips cleaned up**
+
+**Examples consolidated**:
+- Full Day Offshore (115), Full Day Coronado Islands (100), Full Day Local (2) → Full Day (3,544)
+- 3/4 Day Local (16), 3/4 Day Islands (4) → 3/4 Day (3,684)
+- 1.5 Day Offshore (3), 1.5 Day Local (2) → 1.5 Day (859)
+- 12 Hour (36) → Full Day
+- 8 Hour (11), 10 Hour (1) → 3/4 Day
+- 6 Hour (12), 4 Hour (4), 2 Hour (1) → 1/2 Day
+
+**3. Scraper Implementation**
+
+**boats_scraper.py**:
+- SPECIES_NORMALIZATION dictionary with 8 groups (46 variants)
+- normalize_species_name() function with size specification stripping
+- Updated normalize_trip_type() with:
+  - Location suffix stripping (Offshore, Local, Coronado Islands, etc.)
+  - Hour-to-day conversion (12 Hour → Full Day, 8 Hour → 3/4 Day, etc.)
+- Automatic size specification stripping in parse_species_counts()
+
+**socal_scraper.py**:
+- SPECIES_NAME_ALIASES expanded from 1 → 46 entries
+- Updated normalize_trip_type() with:
+  - Location suffix stripping (same as boats_scraper)
+  - Hour-to-day conversion (same as boats_scraper)
+- Aligned with boats_scraper.py standards for consistency
+
+**Frontend Updates**:
+- `frontend/src/lib/fetchRealData.ts` - Updated trip duration sorting logic:
+  - Removed hour-based sorting (trips now consolidated)
+  - Halibut added to "Special" category (sorted last with Lobster)
+  - Simplified category logic for cleaner code
+
+**4. README.md Documentation**
+
+Added comprehensive "Data Processing & Normalization" section including:
+- All 8 species groups with complete variant lists
+- Trip duration consolidation examples
+- Database impact statistics
+- Code examples showing normalization
+- Benefits: cleaner dropdowns, better UX, duplicate prevention
+
+**Impact Summary**:
+- **Species**: Cleaner analytics, 8 consolidated groups instead of 46 variants
+- **Trip Duration**: Dropdown reduced from 41 → 19 options (54% reduction!)
+  - Location-specific variants consolidated (Offshore, Local, Coronado Islands)
+  - Hour-based converted to day-based (12 Hour → Full Day, 6 Hour → 1/2 Day)
+  - Specialty trips (Lobster, Halibut) sorted to bottom for better UX
+- **UX Improvement**: Easier filtering, no confusing location-specific duplicates
+- **Data Quality**: Eliminates fragmentation, prevents future duplicates
+- **Future-Proof**: All new scrapes automatically normalized
+
+**Rationale**: User requested consolidation of species variants and trip durations to simplify dashboard dropdowns and analytics. Location-specific trip variants (e.g., "Full Day Offshore" vs "Full Day") were causing duplicate entries and dropdown clutter. Implemented at scraper level to ensure clean data from the start, with one-time database cleanup for historical data.
+
+**Governed By**: SPEC-006 data quality standards, standard scraper data processing
+
+---
+
 ## [2025-10-26 15:00:33] Archived: post_remediation_qc.log
 
 **Action**: Moved to archive/logs/

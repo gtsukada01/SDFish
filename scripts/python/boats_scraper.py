@@ -87,6 +87,66 @@ LOG_FILE = LOG_DIR / "boats_scraper.log"
 LOG_LEVEL = logging.INFO
 
 # ============================================================================
+# SPECIES NAME NORMALIZATION
+# ============================================================================
+
+# Map specific species names to generic categories
+SPECIES_NORMALIZATION = {
+    # Rockfish group
+    'Chilipepper': 'Rockfish',
+    'Copper Rockfish': 'Rockfish',
+    'Brown Rockfish': 'Rockfish',
+    'Blue Rockfish': 'Rockfish',
+    'Treefish': 'Rockfish',
+
+    # Perch group
+    'Blue Perch': 'Perch',
+    'Blacksmith Perch': 'Perch',
+    'Blacksmith': 'Perch',
+    'Rubberlip Seaperch': 'Perch',
+    'Ocean Perch': 'Perch',
+    'Opaleye': 'Perch',
+    'Halfmoon': 'Perch',
+
+    # Croaker group
+    'White Croaker': 'Croaker',
+    'Yellowfin Croaker': 'Croaker',
+    'Black Croaker': 'Croaker',
+    'Sargo': 'Croaker',
+
+    # Mackerel group
+    'Spanish Mackerel': 'Mackerel',
+    'Jack Mackerel': 'Mackerel',
+
+    # Sole group
+    'Rock Sole': 'Sole',
+    'Petrale Sole': 'Sole',
+    'Sand Sole': 'Sole',
+    'Fantail Sole': 'Sole',
+
+    # Bass group
+    'Barred Sand Bass': 'Sand Bass',
+
+    # Whitefish group
+    'Ocean Whitefish': 'Whitefish',
+
+    # Crab group
+    'Red Rock Crab': 'Rock Crab',
+}
+
+def normalize_species_name(species: str) -> str:
+    """
+    Normalize species name to generic category if applicable
+
+    Args:
+        species: Raw species name (e.g., "Chilipepper")
+
+    Returns:
+        Normalized species name (e.g., "Rockfish")
+    """
+    return SPECIES_NORMALIZATION.get(species, species)
+
+# ============================================================================
 # LOGGING SETUP
 # ============================================================================
 
@@ -408,13 +468,15 @@ def fetch_page(url: str, session: requests.Session) -> Optional[str]:
 
 def normalize_trip_type(trip_type: str) -> str:
     """
-    Normalize trip type text for consistency
+    Normalize trip type text for consistency and consolidate location-specific variants
 
     Examples:
         "OvernightOffshore" -> "Overnight"
-        "FullDayOffshore" -> "Full Day Offshore"
+        "FullDayOffshore" -> "Full Day"
         "1/2DayAM" -> "1/2 Day AM"
         "1/2 Day AMLocal" -> "1/2 Day AM"
+        "Full Day Coronado Islands" -> "Full Day"
+        "3/4 Day Local" -> "3/4 Day"
     """
     # Simplify: OvernightOffshore/OvernightLocal -> just "Overnight"
     trip_type = re.sub(r'Overnight(Offshore|Local)', r'Overnight', trip_type)
@@ -429,7 +491,35 @@ def normalize_trip_type(trip_type: str) -> str:
     # Remove trailing 'Local' or 'Offshore' after time modifiers
     trip_type = re.sub(r'(AM|PM)(Local|Offshore)$', r'\1', trip_type)
 
-    return trip_type.strip()
+    # Strip location suffixes to consolidate to base durations
+    # Examples: "Full Day Offshore" -> "Full Day", "3/4 Day Local" -> "3/4 Day"
+    location_suffixes = [
+        r'\s+Offshore$',
+        r'\s+Local$',
+        r'\s+Coronado Islands$',
+        r'\s+Islands$',
+        r'\s+Island Freelance$',
+        r'\s+Mexican Waters$',
+    ]
+
+    for suffix_pattern in location_suffixes:
+        trip_type = re.sub(suffix_pattern, '', trip_type, flags=re.IGNORECASE)
+
+    # Convert hour-based durations to standard day-based durations
+    hour_conversions = {
+        '12 Hour': 'Full Day',
+        '10 Hour': '3/4 Day',
+        '8 Hour': '3/4 Day',
+        '6 Hour': '1/2 Day',
+        '4 Hour': '1/2 Day',
+        '2 Hour': '1/2 Day',
+    }
+
+    trip_type_stripped = trip_type.strip()
+    if trip_type_stripped in hour_conversions:
+        return hour_conversions[trip_type_stripped]
+
+    return trip_type_stripped
 
 def parse_trip_duration(trip_type: str) -> float:
     """
@@ -486,6 +576,8 @@ def parse_species_counts(text: str) -> List[Dict]:
         -> [{"species": "Spiny Lobster", "count": 28}, ...]
 
     Note: Ignores "Released" fish
+    Note: Strips size specifications like "(Up To 4 Pounds)"
+    Note: Applies species normalization (e.g., Chilipepper -> Rockfish)
     """
     catches = []
 
@@ -500,7 +592,12 @@ def parse_species_counts(text: str) -> List[Dict]:
             continue
 
         count = int(count_str)
-        species = species_raw.strip().title()
+
+        # Strip size specifications like "(Up To 4 Pounds)"
+        species = re.sub(r'\s*\([^)]*\)\s*', '', species_raw).strip().title()
+
+        # Apply species normalization (e.g., Chilipepper -> Rockfish)
+        species = normalize_species_name(species)
 
         catches.append({
             'species': species,
